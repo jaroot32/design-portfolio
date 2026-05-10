@@ -5,6 +5,7 @@ import Content from '~/components/widgets/Content.astro';
 import Features3 from '~/components/widgets/Features3.astro';
 import Steps from '~/components/widgets/Steps.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
+import Features2 from '~/components/widgets/Features2.astro';
 
 const metadata = {
   title: 'JavaScript & xAPI for eLearning',
@@ -12,38 +13,103 @@ const metadata = {
 ---
 
 <Layout metadata={metadata}>
-  <Hero tagline="Instructional Design · Capstone Project">
+  <Hero tagline="Instructional Design · Graduate Certificate Capstone">
     <Fragment slot="title">
       JavaScript & xAPI<br />
-      <span class="text-accent dark:text-white">for eLearning</span>
+      <span class="text-accent dark:text-white">for Interactive eLearning</span>
     </Fragment>
     <Fragment slot="subtitle">
-      A fully designed mini-course equipping eLearning professionals with the skills to extend authoring tools with JavaScript and capture rich learner data using xAPI.
+      A fully designed and deployed mini-course equipping eLearning professionals with the skills to extend authoring tools with JavaScript and capture rich learner data using xAPI.
     </Fragment>
   </Hero>
 
+  <!-- Project Overview -->
   <Content
     tagline="Overview"
     title="The Project"
     items={[
-      { title: 'Type', description: 'Mini-course design document — capstone for Graduate Certificate in Learning Design & Technology' },
-      { title: 'Tools', description: 'Articulate Storyline, Canvas LMS' },
+      { title: 'Type', description: 'Mini-course — capstone for Graduate Certificate in Learning Design & Technology' },
+      { title: 'Tools', description: 'Articulate Rise 360 · Canvas LMS' },
       { title: 'Role', description: 'Instructional Designer & Subject Matter Expert' },
-      { title: 'Modality', description: 'Fully online, asynchronous with optional Discord community' },
+      { title: 'Modality', description: 'Fully online, asynchronous with optional peer community' },
+      { title: 'Live Course', description: 'Hosted in Canvas LMS with Rise 360 assessments (available on request)' },
     ]}
   >
     <Fragment slot="content">
-      Many eLearning developers are proficient in authoring tools but lack the programming skills to create truly customized, data-rich experiences. This course addresses that gap by providing a practical introduction to JavaScript and xAPI — empowering eLearning professionals to extend their tools and gain deeper insights into learner behavior.
+      Many eLearning developers are proficient in authoring tools but lack the programming skills to create truly customized, data-rich experiences. This course addresses that gap — providing a practical introduction to JavaScript and xAPI that empowers eLearning professionals to extend their tools and gain deeper insight into learner behavior.
     </Fragment>
     <Fragment slot="bg">
       <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
     </Fragment>
   </Content>
 
+  <!-- Course Features -->
+  <Features2
+    tagline="Course Design"
+    title="Key Course Features"
+    subtitle="Designed for busy eLearning professionals who need practical, immediately applicable skills."
+    columns={2}
+    items={[
+      {
+        title: 'Interactive Coding Exercises',
+        description: 'Hands-on coding challenges embedded directly in the course, with real-time feedback to reinforce learning and immediate application of JavaScript concepts.',
+        icon: 'tabler:terminal-2',
+      },
+      {
+        title: 'Scenario-Based Learning Projects',
+        description: 'Mini-projects simulating real eLearning development scenarios — building a quiz, tracking learner progress with xAPI — allowing practice in authentic contexts.',
+        icon: 'tabler:scenario',
+      },
+      {
+        title: 'Multimedia Explanations',
+        description: 'Key concepts delivered through short videos, narrated animations, and annotated visuals, ensuring accessibility across different learning preferences.',
+        icon: 'tabler:video',
+      },
+      {
+        title: 'Built-In Knowledge Checks',
+        description: 'Frequent low-stakes quizzes and reflection prompts help learners self-assess their understanding before moving to the next concept.',
+        icon: 'tabler:checklist',
+      },
+    ]}
+  />
+
+  <!-- LMS & Tools -->
+  <Content
+    tagline="Platform Choice"
+    title="Why Articulate Rise 360"
+    isReversed
+    items={[
+      {
+        title: 'Interactive Blocks',
+        description: 'Drag-and-drop, matching, sorting, and quiz activities without custom coding — ideal for a course teaching coding concepts to non-programmers.',
+      },
+      {
+        title: 'SCORM / xAPI Export',
+        description: 'Exports directly to SCORM or xAPI formats, enabling real-world tracking of learner performance in an LRS — mirroring exactly what the course teaches.',
+      },
+      {
+        title: 'Responsive Design',
+        description: 'Automatically adapts to desktop, tablet, and mobile, ensuring accessibility regardless of device.',
+      },
+      {
+        title: 'Seamless LMS Integration',
+        description: 'Deployed within Canvas LMS for grading, discussions, rubrics, and peer engagement alongside the Rise content.',
+      },
+    ]}
+  >
+    <Fragment slot="content">
+      Rise 360 was selected because it directly mirrors the course content — a platform that exports xAPI data is the ideal environment for teaching learners how xAPI works.
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Target Audience -->
   <Features3
     tagline="Target Audience"
     title="Who This Course Is For"
-    subtitle="Adult learners ages 25–55 working in instructional design, eLearning development, or training — with foundational authoring tool experience and a desire to extend their technical skill set."
+    subtitle="Adult learners ages 25–55 working in instructional design, eLearning development, or training — with foundational authoring tool experience and a desire to expand their technical skill set."
     columns={3}
     items={[
       {
@@ -64,46 +130,49 @@ const metadata = {
     ]}
   />
 
+  <!-- Design Process -->
   <Steps
     tagline="Design Process"
-    title="How the Course Was Built"
+    title="ADDIE in Practice"
+    subtitle="The course was developed using the ADDIE model, with constructivist and andragogical principles shaping every phase."
     items={[
       {
-        title: 'Needs Analysis',
-        description: 'Identified the knowledge gap: eLearning professionals proficient in authoring tools but unable to create custom interactions or capture detailed learner data. Defined the target audience through demographic and psychographic analysis.',
+        title: 'Analysis',
+        description: 'Identified a clear skills gap: eLearning professionals are proficient in authoring tools but lack the programming knowledge to create custom interactions or capture detailed learner data. Defined a detailed target audience profile across demographics, prior knowledge, technical aptitude, and motivation.',
         icon: 'tabler:search',
       },
       {
-        title: 'Learning Outcomes',
-        description: 'Defined six measurable course learning outcomes using Bloom\'s Taxonomy action verbs — ranging from implementing JavaScript fundamentals to evaluating xAPI use cases across eLearning scenarios.',
-        icon: 'tabler:target',
-      },
-      {
-        title: 'Course Architecture',
-        description: 'Designed a blended, practical-application course using a hybrid RID + SAM instructional design model. Module 1 covers JavaScript fundamentals and DOM manipulation; subsequent modules build toward full xAPI integration.',
+        title: 'Design',
+        description: 'Mapped six measurable Course Learning Outcomes (CLOs) using Bloom\'s Taxonomy action verbs. Designed a three-module course structure — JavaScript Basics, DOM Manipulation, and xAPI Statements — with each module\'s objectives directly aligned to CLOs. Selected Rise 360 + Canvas as the delivery platform.',
         icon: 'tabler:layout-dashboard',
       },
       {
-        title: 'Learning Activities & Assessment',
-        description: 'Designed six activity types — interactive code-alongs, xAPI statement construction challenges, mini-projects, case study analysis, peer code review, and async discussion — each aligned to specific CLOs and assessed through observable outputs.',
-        icon: 'tabler:list-check',
+        title: 'Development',
+        description: 'Built course content in Rise 360 and Canvas, including tutorial videos, an interactive coding sandbox, a 10-question mixed-format assessment, discussion prompts, a major assignment with a detailed rubric, and a full course syllabus. Applied accessibility standards and cognitive load principles throughout.',
+        icon: 'tabler:code',
       },
       {
-        title: 'Development & Delivery',
-        description: 'Built and delivered course content in Articulate and Canvas LMS, applying accessibility standards, cognitive load theory, and constructivist design principles throughout.',
+        title: 'Implementation',
+        description: 'Piloted activities using a demo student account to verify functionality. Published the Rise 360 assessment with immediate feedback on each question. Configured Canvas with grading rubrics, participation requirements, and a clear schedule of instructional events.',
         icon: 'tabler:rocket',
+      },
+      {
+        title: 'Evaluation',
+        description: 'Designed a Kirkpatrick Level 1 survey (learner reactions via Typeform) and a Kirkpatrick Level 2 assessment (knowledge and skill mastery via Rise 360) to measure effectiveness and inform continuous improvement.',
+        icon: 'tabler:chart-dots',
       },
     ]}
   />
 
+  <!-- CLOs -->
   <Features3
     tagline="Course Learning Outcomes"
     title="By the end of this course, learners will be able to:"
     columns={2}
     items={[
       {
-        title: 'Implement JavaScript techniques',
-        description: 'Create interactive elements within online learning modules using fundamental JavaScript programming.',
+        title: 'Apply JavaScript fundamentals',
+        description: 'Use core JavaScript concepts — variables, functions, conditionals, loops — in eLearning design contexts.',
         icon: 'tabler:check',
       },
       {
@@ -113,36 +182,112 @@ const metadata = {
       },
       {
         title: 'Construct valid xAPI statements',
-        description: 'Accurately capture a range of learner interactions within eLearning experiences using proper xAPI structure.',
+        description: 'Accurately capture a range of learner interactions using proper Actor, Verb, and Object structure.',
         icon: 'tabler:check',
       },
       {
-        title: 'Integrate xAPI with JavaScript',
+        title: 'Integrate JavaScript and xAPI',
         description: 'Send xAPI statements to a Learning Record Store (LRS) from web-based eLearning content.',
         icon: 'tabler:check',
       },
       {
         title: 'Evaluate xAPI applications',
-        description: 'Assess the potential of JavaScript and xAPI to address specific challenges and enhance data collection across eLearning scenarios.',
+        description: 'Assess the potential of JavaScript and xAPI to address specific challenges and enhance data collection across scenarios.',
         icon: 'tabler:check',
       },
       {
-        title: 'Develop eLearning prototypes',
-        description: 'Build basic interactive prototypes that utilize JavaScript for dynamic behavior and xAPI for tracking learner engagement.',
+        title: 'Collaborate and reflect',
+        description: 'Engage with peers to analyze and reflect on the role of code in instructional design through discussion and peer review.',
         icon: 'tabler:check',
       },
     ]}
   />
 
+  <!-- Evaluation Strategy -->
   <Content
-    tagline="Reflection"
-    title="What I Learned"
+    tagline="Evaluation"
+    title="Measuring Learning Effectiveness"
+    items={[
+      {
+        title: 'Kirkpatrick Level 1 — Learner Reactions',
+        description: 'A Typeform survey measuring satisfaction, engagement, and perceived CLO achievement using a mix of Likert scales, multiple choice, and open-ended questions.',
+      },
+      {
+        title: 'Kirkpatrick Level 2 — Knowledge & Skill Mastery',
+        description: 'A 10-question Rise 360 assessment using multiple choice, true/false, fill-in-the-blank, and drag-and-drop questions. Passing score: 70%. Unlimited attempts. Immediate feedback on every question.',
+      },
+      {
+        title: 'Discussion Rubrics',
+        description: 'Evaluated across 5 criteria — topic knowledge, critical thinking, peer engagement, writing mechanics, and timeliness — with weighted scoring to emphasize content over compliance.',
+      },
+      {
+        title: 'Assignment Rubric',
+        description: 'xAPI statement assignment scored on accuracy, explanation depth, eLearning application relevance, organization, and submission quality.',
+      },
+    ]}
+  >
+    <Fragment slot="content">
+      Assessment was designed to close the loop between learning objectives and measurable outcomes. Each instrument generates data that can directly inform course redesign — not just a grade.
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Live Links -->
+  <Features2
+    tagline="Live Work"
+    title="See the Course in Action"
+    columns={2}
+    items={[
+      {
+        title: 'Rise 360 Assessment',
+        description: 'View the Module 2 knowledge assessment — a 10-question mixed-format quiz covering DOM manipulation and xAPI statement construction.',
+        icon: 'tabler:external-link',
+        callToAction: {
+          text: 'Open Assessment',
+          href: 'https://rise.articulate.com/share/NGQs5TQzyVdIvP23bU4pSIjSDvUoWF7w',
+          target: '_blank',
+        },
+      },
+      {
+        title: 'Canvas Course (Demo Access)',
+        description: 'The full course — including discussions, assignments, syllabus, and rubrics — is hosted in Canvas LMS. Contact me to request demo access.',
+        icon: 'tabler:school',
+        callToAction: {
+          text: 'Request Access',
+          href: '/contact',
+        },
+      },
+    ]}
+  />
+
+  <!-- Learning Theory -->
+  <Content
+    tagline="Design Rationale"
+    title="Learning Theory & Approach"
     isReversed
   >
     <Fragment slot="content">
-      <p class="mb-4">Completing this capstone helped me integrate everything from the graduate certificate program into a cohesive design process. I gained practical experience aligning learning outcomes with assessments and media, applying accessibility standards, and designing data-driven evaluation methods.</p>
-      <p class="mb-4">The most significant insight was how much design decisions — in structure, sequencing, and interaction — directly impact learner engagement and outcomes. Choosing to use a hybrid RID + SAM model, rather than pure ADDIE, allowed for more iterative development and faster feedback loops, which felt more aligned with how technical skills are actually learned.</p>
-      <p>This project reinforced my commitment to creating purposeful, inclusive learning experiences that are grounded in both learning science and practical technical craft.</p>
+      <p class="mb-4"><strong>Constructivism</strong> was the primary learning theory shaping this course. Rather than passively receiving information, learners build knowledge by doing — writing real JavaScript, constructing actual xAPI statements, and applying both to eLearning scenarios they recognize from their own work.</p>
+      <p class="mb-4"><strong>Andragogy</strong> influenced the emphasis on relevance and autonomy. Discussion prompts connect technical concepts to each learner's professional context, and assignments encourage personal application rather than generic exercises.</p>
+      <p><strong>Cognitive Load Theory</strong> guided the pacing and sequencing — breaking complex concepts into modular chunks, providing visual diagrams of xAPI anatomy, and scaffolding from simple DOM manipulation to full LRS integration across three modules.</p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Reflection -->
+  <Content
+    tagline="Reflection"
+    title="What I Learned"
+  >
+    <Fragment slot="content">
+      <p class="mb-4">Completing this capstone helped me integrate everything from the graduate certificate program into a cohesive design process — from learner analysis through deployed assessment. I gained practical experience aligning learning outcomes with assessments and media, applying accessibility standards, and designing data-driven evaluation using the Kirkpatrick framework.</p>
+      <p class="mb-4">The most significant insight was how much design decisions — in structure, sequencing, and interaction format — directly impact learner engagement and outcomes. Choosing ADDIE as the overarching model gave the project discipline and alignment, while constructivist principles kept the learning active and contextually relevant.</p>
+      <p class="mb-4">The biggest challenge was balancing technical complexity with accessibility. Some learners may be intimidated by JavaScript. Scaffolding content gradually — from simple variable declarations to full xAPI integration — and providing multiple question types and formats helped accommodate a range of prior experience levels.</p>
+      <p>If I were to extend this course, I would add advanced modules covering live LRS integration and introduce peer code review as a formal assessed activity, not just an optional discussion prompt.</p>
     </Fragment>
     <Fragment slot="bg">
       <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
