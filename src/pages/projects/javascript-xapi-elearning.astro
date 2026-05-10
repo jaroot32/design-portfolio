@@ -1,0 +1,161 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Content from '~/components/widgets/Content.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import Steps from '~/components/widgets/Steps.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'JavaScript & xAPI for eLearning',
+};
+---
+
+<Layout metadata={metadata}>
+  <Hero tagline="Instructional Design · Capstone Project">
+    <Fragment slot="title">
+      JavaScript & xAPI<br />
+      <span class="text-accent dark:text-white">for eLearning</span>
+    </Fragment>
+    <Fragment slot="subtitle">
+      A fully designed mini-course equipping eLearning professionals with the skills to extend authoring tools with JavaScript and capture rich learner data using xAPI.
+    </Fragment>
+  </Hero>
+
+  <Content
+    tagline="Overview"
+    title="The Project"
+    items={[
+      { title: 'Type', description: 'Mini-course design document — capstone for Graduate Certificate in Learning Design & Technology' },
+      { title: 'Tools', description: 'Articulate Storyline, Canvas LMS' },
+      { title: 'Role', description: 'Instructional Designer & Subject Matter Expert' },
+      { title: 'Modality', description: 'Fully online, asynchronous with optional Discord community' },
+    ]}
+  >
+    <Fragment slot="content">
+      Many eLearning developers are proficient in authoring tools but lack the programming skills to create truly customized, data-rich experiences. This course addresses that gap by providing a practical introduction to JavaScript and xAPI — empowering eLearning professionals to extend their tools and gain deeper insights into learner behavior.
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <Features3
+    tagline="Target Audience"
+    title="Who This Course Is For"
+    subtitle="Adult learners ages 25–55 working in instructional design, eLearning development, or training — with foundational authoring tool experience and a desire to extend their technical skill set."
+    columns={3}
+    items={[
+      {
+        title: 'Instructional Designers',
+        description: 'Seeking to move beyond standard authoring tool limitations and create custom, dynamic interactions.',
+        icon: 'tabler:pencil',
+      },
+      {
+        title: 'eLearning Developers',
+        description: 'Looking to capture richer learner data and build more personalized experiences through xAPI.',
+        icon: 'tabler:device-desktop',
+      },
+      {
+        title: 'Training Professionals',
+        description: 'Interested in moving beyond completion metrics to track meaningful learner behavior and outcomes.',
+        icon: 'tabler:chart-bar',
+      },
+    ]}
+  />
+
+  <Steps
+    tagline="Design Process"
+    title="How the Course Was Built"
+    items={[
+      {
+        title: 'Needs Analysis',
+        description: 'Identified the knowledge gap: eLearning professionals proficient in authoring tools but unable to create custom interactions or capture detailed learner data. Defined the target audience through demographic and psychographic analysis.',
+        icon: 'tabler:search',
+      },
+      {
+        title: 'Learning Outcomes',
+        description: 'Defined six measurable course learning outcomes using Bloom\'s Taxonomy action verbs — ranging from implementing JavaScript fundamentals to evaluating xAPI use cases across eLearning scenarios.',
+        icon: 'tabler:target',
+      },
+      {
+        title: 'Course Architecture',
+        description: 'Designed a blended, practical-application course using a hybrid RID + SAM instructional design model. Module 1 covers JavaScript fundamentals and DOM manipulation; subsequent modules build toward full xAPI integration.',
+        icon: 'tabler:layout-dashboard',
+      },
+      {
+        title: 'Learning Activities & Assessment',
+        description: 'Designed six activity types — interactive code-alongs, xAPI statement construction challenges, mini-projects, case study analysis, peer code review, and async discussion — each aligned to specific CLOs and assessed through observable outputs.',
+        icon: 'tabler:list-check',
+      },
+      {
+        title: 'Development & Delivery',
+        description: 'Built and delivered course content in Articulate and Canvas LMS, applying accessibility standards, cognitive load theory, and constructivist design principles throughout.',
+        icon: 'tabler:rocket',
+      },
+    ]}
+  />
+
+  <Features3
+    tagline="Course Learning Outcomes"
+    title="By the end of this course, learners will be able to:"
+    columns={2}
+    items={[
+      {
+        title: 'Implement JavaScript techniques',
+        description: 'Create interactive elements within online learning modules using fundamental JavaScript programming.',
+        icon: 'tabler:check',
+      },
+      {
+        title: 'Manipulate the DOM',
+        description: 'Dynamically modify eLearning content and UI elements using JavaScript in response to learner actions.',
+        icon: 'tabler:check',
+      },
+      {
+        title: 'Construct valid xAPI statements',
+        description: 'Accurately capture a range of learner interactions within eLearning experiences using proper xAPI structure.',
+        icon: 'tabler:check',
+      },
+      {
+        title: 'Integrate xAPI with JavaScript',
+        description: 'Send xAPI statements to a Learning Record Store (LRS) from web-based eLearning content.',
+        icon: 'tabler:check',
+      },
+      {
+        title: 'Evaluate xAPI applications',
+        description: 'Assess the potential of JavaScript and xAPI to address specific challenges and enhance data collection across eLearning scenarios.',
+        icon: 'tabler:check',
+      },
+      {
+        title: 'Develop eLearning prototypes',
+        description: 'Build basic interactive prototypes that utilize JavaScript for dynamic behavior and xAPI for tracking learner engagement.',
+        icon: 'tabler:check',
+      },
+    ]}
+  />
+
+  <Content
+    tagline="Reflection"
+    title="What I Learned"
+    isReversed
+  >
+    <Fragment slot="content">
+      <p class="mb-4">Completing this capstone helped me integrate everything from the graduate certificate program into a cohesive design process. I gained practical experience aligning learning outcomes with assessments and media, applying accessibility standards, and designing data-driven evaluation methods.</p>
+      <p class="mb-4">The most significant insight was how much design decisions — in structure, sequencing, and interaction — directly impact learner engagement and outcomes. Choosing to use a hybrid RID + SAM model, rather than pure ADDIE, allowed for more iterative development and faster feedback loops, which felt more aligned with how technical skills are actually learned.</p>
+      <p>This project reinforced my commitment to creating purposeful, inclusive learning experiences that are grounded in both learning science and practical technical craft.</p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <CallToAction
+    actions={[
+      { variant: 'primary', text: 'View All Projects', href: '/projects' },
+      { text: 'Get in Touch', href: '/contact' },
+    ]}
+  >
+    <Fragment slot="title">Interested in working together?</Fragment>
+    <Fragment slot="subtitle">I'm open to remote opportunities in instructional design and technical learning experience design.</Fragment>
+  </CallToAction>
+</Layout>

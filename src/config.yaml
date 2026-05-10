@@ -1,6 +1,6 @@
 site:
-  name: AstroWind
-  site: 'https://astrowind.vercel.app'
+  name: Jonathan Root
+  site: 'https://design-portfolio-jaroot32.vercel.app'
   base: '/'
   trailingSlash: false
 
@@ -9,9 +9,9 @@ site:
 # Default SEO metadata
 metadata:
   title:
-    default: AstroWind
-    template: '%s — AstroWind'
-  description: "\U0001F680 Suitable for Startups, Small Business, Sass Websites, Professional Portfolios, Marketing Websites, Landing Pages & Blogs."
+    default: Jonathan Root — Technical Learning Experience Designer
+    template: '%s — Jonathan Root'
+  description: "Technical Learning Experience Designer with 8+ years building scalable, interactive learning for software developers and eLearning professionals."
   robots:
     index: true
     follow: true

@@ -1,0 +1,38 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+
+const metadata = {
+  title: 'Projects',
+};
+---
+
+<Layout metadata={metadata}>
+  <Hero tagline="Portfolio">
+    <Fragment slot="title">
+      Selected Work
+    </Fragment>
+    <Fragment slot="subtitle">
+      A collection of instructional design, eLearning development, and technical learning projects spanning graduate coursework, professional practice, and independent development.
+    </Fragment>
+  </Hero>
+
+  <Features2
+    title="Instructional Design"
+    columns={2}
+    items={[
+      {
+        title: 'JavaScript & xAPI for eLearning',
+        description: 'A fully designed mini-course bridging the gap between JavaScript skills and xAPI understanding for eLearning professionals. Developed as the capstone for a Graduate Certificate in Learning Design & Technology.',
+        icon: 'tabler:brand-javascript',
+        callToAction: { text: 'View Case Study', href: '/projects/javascript-xapi-elearning' },
+      },
+      {
+        title: 'Chrome Extension — Udacity Career Materials Reviewer',
+        description: 'Coming soon.',
+        icon: 'tabler:puzzle',
+      },
+    ]}
+  />
+</Layout>
