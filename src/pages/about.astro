@@ -22,35 +22,18 @@ const metadata = {
     </Fragment>
   </Hero>
 
-  <Content
-    image={{
-      src: profileImage,
-      alt: 'Jonathan Root',
-    }}
-    items={[
-      {
-        title: 'Instructional Design',
-        description: 'Curriculum development, storyboarding, learning objectives, and assessment design grounded in ADDIE, SAM, and constructivist learning theory.',
-      },
-      {
-        title: 'eLearning Development',
-        description: 'Articulate Rise 360 and Storyline, custom JavaScript interactions, xAPI tracking, and LMS deployment.',
-      },
-      {
-        title: 'Front-End Web Development',
-        description: 'HTML, CSS, JavaScript, and modern frameworks applied to learning tools, portfolio sites, and interactive educational content.',
-      },
-    ]}
-  >
-    <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-4">A rare combination of technical fluency and instructional design expertise</h3>
-      <p class="mb-4">My background spans curriculum development, eLearning production, SME collaboration, and front-end web development — with eight years of experience working with organizations including Udacity, Springboard, OpenClassrooms, TCCC, UW, Boeing, Chegg Skills, LearningMate, and Masterschool.</p>
-      <p>In my current role at LearningMate I collaborate with instructional designers and project managers to create learning content for web development programs — developing storyboards, assessments, AI-driven learning activities, and Articulate Rise 360 modules aligned to learning objectives and learner personas.</p>
-    </Fragment>
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Content>
+  <!-- Bio with image background -->
+  <div class="relative w-full overflow-hidden">
+    <img src={profileImage.src} alt="Jonathan Root" class="w-full object-cover" style="max-height: 600px; object-position: center top;" />
+    <div class="absolute inset-0 bg-black/60"></div>
+    <div class="absolute inset-0 flex items-center">
+      <div class="max-w-4xl mx-auto px-6 text-white">
+        <h2 class="text-3xl md:text-4xl font-bold font-heading mb-6">A rare combination of technical fluency and instructional design expertise</h2>
+        <p class="text-lg mb-4 text-gray-200">My background spans curriculum development, eLearning production, SME collaboration, and front-end web development — with eight years of experience working with organizations including Udacity, Springboard, OpenClassrooms, TCCC, UW, Boeing, Chegg Skills, LearningMate, and Masterschool.</p>
+        <p class="text-lg text-gray-200">In my current role at LearningMate I collaborate with instructional designers and project managers to create learning content for web development programs — developing storyboards, assessments, AI-driven learning activities, and Articulate Rise 360 modules aligned to learning objectives and learner personas.</p>
+      </div>
+    </div>
+  </div>
 
   <Features3
     tagline="Experience"
