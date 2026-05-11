@@ -248,6 +248,43 @@ const metadata = {
     </Fragment>
   </Content>
 
+  <!-- Videos -->
+  <div class="max-w-7xl mx-auto px-4 md:px-8 py-12 md:py-16">
+    <div class="text-center mb-10">
+      <p class="text-base text-secondary dark:text-blue-200 font-bold tracking-wide uppercase mb-2">Course Media</p>
+      <h2 class="text-4xl md:text-5xl font-bold tracking-tighter font-heading">Videos</h2>
+    </div>
+    <div class="grid md:grid-cols-2 gap-8">
+      <div>
+        <h3 class="text-lg font-semibold mb-3">Minicourse Introduction</h3>
+        <div class="relative w-full" style="padding-top: 56.25%;">
+          <iframe
+            class="absolute inset-0 w-full h-full rounded-lg shadow-lg"
+            src="https://www.youtube.com/embed/sT9QCXRi2fs"
+            title="JavaScript & xAPI for eLearning — Minicourse Introduction"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+      <div>
+        <h3 class="text-lg font-semibold mb-3">Screencast Demo</h3>
+        <div class="relative w-full" style="padding-top: 56.25%;">
+          <iframe
+            class="absolute inset-0 w-full h-full rounded-lg shadow-lg"
+            src="https://www.youtube.com/embed/P1s90dVsLhU"
+            title="JavaScript & xAPI for eLearning — Screencast Demo"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <p class="text-sm text-muted mt-2">Licensed under CC BY 4.0</p>
+      </div>
+    </div>
+  </div>
+
   <!-- Live Links -->
   <Features2
     tagline="Live Work"
@@ -255,14 +292,9 @@ const metadata = {
     columns={2}
     items={[
       {
-        title: 'Rise 360 Assessment',
-        description: 'View the Module 2 knowledge assessment — a 10-question mixed-format quiz covering DOM manipulation and xAPI statement construction.',
+        title: 'Rise 360 Interactive Module',
+        description: 'An interactive Rise 360 module covering JavaScript and xAPI fundamentals. Link will be added once the module is re-published.',
         icon: 'tabler:external-link',
-        callToAction: {
-          text: 'Open Assessment',
-          href: 'https://rise.articulate.com/share/NGQs5TQzyVdIvP23bU4pSIjSDvUoWF7w',
-          target: '_blank',
-        },
       },
       {
         title: 'Canvas Course (Temporarily Unavailable)',
