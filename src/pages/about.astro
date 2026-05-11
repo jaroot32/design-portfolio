@@ -5,6 +5,7 @@ import Content from '~/components/widgets/Content.astro';
 import Features3 from '~/components/widgets/Features3.astro';
 import Steps2 from '~/components/widgets/Steps2.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
+import profileImage from '~/assets/images/profile.jpeg';
 
 const metadata = {
   title: 'About',
@@ -23,10 +24,8 @@ const metadata = {
 
   <Content
     image={{
-      src: '/img/profile.jpeg',
+      src: profileImage,
       alt: 'Jonathan Root',
-      width: 924,
-      height: 520,
     }}
     items={[
       {
