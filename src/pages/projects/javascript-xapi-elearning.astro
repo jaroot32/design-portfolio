@@ -331,20 +331,72 @@ const metadata = {
   />
 
   <!-- Learning Theory -->
-  <Content
-    tagline="Design Rationale"
-    title="Learning Theory & Approach"
-    isReversed
-  >
-    <Fragment slot="content">
-      <p class="mb-4"><strong>Constructivism</strong> was the primary learning theory shaping this course. Rather than passively receiving information, learners build knowledge by doing — writing real JavaScript, constructing actual xAPI statements, and applying both to eLearning scenarios they recognize from their own work.</p>
-      <p class="mb-4"><strong>Andragogy</strong> influenced the emphasis on relevance and autonomy. Discussion prompts connect technical concepts to each learner's professional context, and assignments encourage personal application rather than generic exercises.</p>
-      <p><strong>Cognitive Load Theory</strong> guided the pacing and sequencing — breaking complex concepts into modular chunks, providing visual diagrams of xAPI anatomy, and scaffolding from simple DOM manipulation to full LRS integration across three modules.</p>
-    </Fragment>
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Content>
+  <div class="max-w-7xl mx-auto px-4 md:px-8 py-12 md:py-16">
+    <div class="text-center mb-12">
+      <p class="text-base text-secondary dark:text-blue-200 font-bold tracking-wide uppercase mb-2">Design Rationale</p>
+      <h2 class="text-4xl md:text-5xl font-bold tracking-tighter font-heading mb-4">Learning Theory & Approach</h2>
+      <p class="text-xl text-muted dark:text-slate-300 max-w-3xl mx-auto">Two theories — Constructivism and Connectivism — shaped the instructional design decisions for this course, each addressing a different dimension of how technical skills are best learned.</p>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-12">
+      <!-- Constructivism -->
+      <div class="bg-blue-50 dark:bg-slate-800 rounded-xl p-8">
+        <h3 class="text-2xl font-bold font-heading mb-2">Constructivism</h3>
+        <p class="text-muted dark:text-slate-300 mb-6">Learners build knowledge actively through doing, not passive reception — directly aligned with the hands-on coding nature of this course.</p>
+
+        <h4 class="font-semibold text-green-700 dark:text-green-400 mb-2">Strengths</h4>
+        <ul class="space-y-2 mb-6 text-muted dark:text-slate-300">
+          <li class="flex gap-2"><span class="text-green-600 mt-1">✓</span> <span><strong>Active learning:</strong> Learners write, test, and debug real code — leading to deeper retention and application.</span></li>
+          <li class="flex gap-2"><span class="text-green-600 mt-1">✓</span> <span><strong>Problem-solving:</strong> Practical projects develop critical thinking essential for JavaScript and xAPI implementation.</span></li>
+        </ul>
+
+        <h4 class="font-semibold text-amber-700 dark:text-amber-400 mb-2">Limitations</h4>
+        <ul class="space-y-2 mb-6 text-muted dark:text-slate-300">
+          <li class="flex gap-2"><span class="text-amber-600 mt-1">△</span> <span><strong>Frustration risk:</strong> Coding can overwhelm beginners without adequate scaffolding and support.</span></li>
+          <li class="flex gap-2"><span class="text-amber-600 mt-1">△</span> <span><strong>Time commitment:</strong> Constructivist learning requires significant practice time, which varies by learner.</span></li>
+        </ul>
+
+        <h4 class="font-semibold mb-2">Applied in This Course</h4>
+        <ul class="space-y-1 text-muted dark:text-slate-300 text-sm">
+          <li>→ Project-based weekly coding challenges building toward a final xAPI-enabled eLearning element</li>
+          <li>→ Scaffolded exercises with templates and code snippets, reducing support as confidence grows</li>
+          <li>→ Debugging challenges where learners fix broken code</li>
+          <li>→ Peer code reviews and reflection journals</li>
+        </ul>
+      </div>
+
+      <!-- Connectivism -->
+      <div class="bg-blue-50 dark:bg-slate-800 rounded-xl p-8">
+        <h3 class="text-2xl font-bold font-heading mb-2">Connectivism</h3>
+        <p class="text-muted dark:text-slate-300 mb-6">Learning happens through networks and connections — particularly relevant for a field where knowledge is distributed across communities, documentation, and open-source resources.</p>
+
+        <h4 class="font-semibold text-green-700 dark:text-green-400 mb-2">Strengths</h4>
+        <ul class="space-y-2 mb-6 text-muted dark:text-slate-300">
+          <li class="flex gap-2"><span class="text-green-600 mt-1">✓</span> <span><strong>Community learning:</strong> Online forums and peer collaboration extend learning beyond the course boundary.</span></li>
+          <li class="flex gap-2"><span class="text-green-600 mt-1">✓</span> <span><strong>Real-world resources:</strong> Curated links to MDN, xAPI spec, and Articulate community connect learners to practitioner knowledge.</span></li>
+        </ul>
+
+        <h4 class="font-semibold text-amber-700 dark:text-amber-400 mb-2">Limitations</h4>
+        <ul class="space-y-2 mb-6 text-muted dark:text-slate-300">
+          <li class="flex gap-2"><span class="text-amber-600 mt-1">△</span> <span><strong>Information overload:</strong> Without curation, learners can become overwhelmed by the volume of available resources.</span></li>
+          <li class="flex gap-2"><span class="text-amber-600 mt-1">△</span> <span><strong>Structure dependency:</strong> Learners without self-direction may struggle in loosely structured network environments.</span></li>
+        </ul>
+
+        <h4 class="font-semibold mb-2">Applied in This Course</h4>
+        <ul class="space-y-1 text-muted dark:text-slate-300 text-sm">
+          <li>→ Curated resource lists: MDN Web Docs, xAPI specification, Articulate E-Learning Heroes</li>
+          <li>→ Optional Discord community for async peer discussion and resource sharing</li>
+          <li>→ Resource sharing activities where learners find and contribute useful tools</li>
+          <li>→ Guest speaker webinars with industry professionals</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="mt-10 bg-slate-100 dark:bg-slate-800 rounded-xl p-8 max-w-3xl mx-auto text-center">
+      <h4 class="font-bold text-lg mb-2">The Combination</h4>
+      <p class="text-muted dark:text-slate-300">By scaffolding the constructivist portion and curating the connectivist portion, the course creates a dynamic learning environment that balances hands-on practice with access to community support and real-world resources — without leaving learners lost or overwhelmed.</p>
+    </div>
+  </div>
 
   <!-- Reflection -->
   <Content
