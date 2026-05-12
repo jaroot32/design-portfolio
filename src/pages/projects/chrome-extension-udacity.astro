@@ -1,0 +1,140 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Content from '~/components/widgets/Content.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'Chrome Extension — Udacity Career Materials Reviewer',
+};
+---
+
+<Layout metadata={metadata}>
+  <Hero tagline="JavaScript · Chrome Extension API · Developer Tools">
+    <Fragment slot="title">
+      Chrome Extension —<br />
+      <span class="text-accent dark:text-white">Udacity Career Materials Reviewer</span>
+    </Fragment>
+    <Fragment slot="subtitle">
+      A custom-built Chrome extension that reduced average review time by 67% — from one hour to twenty minutes — by automating repetitive form entry for learner career material feedback.
+    </Fragment>
+  </Hero>
+
+  <!-- Problem -->
+  <Content
+    tagline="The Problem"
+    title="Repetitive data entry at scale"
+    isReversed
+  >
+    <Fragment slot="content">
+      <p class="mb-4">As a Career and Technical Instructor at Udacity, I reviewed hundreds of learner career materials — resumes, LinkedIn profiles, and cover letters — providing structured written feedback through a multi-field review form.</p>
+      <p>Every review required manually filling out a series of input fields and selecting radio buttons with the same foundational boilerplate feedback before personalizing it for the individual learner. This repetitive data entry was time consuming and slowed my ability to deliver high quality, timely feedback at scale.</p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Solution -->
+  <Content
+    tagline="The Solution"
+    title="One click. Entire form populated."
+    items={[
+      {
+        title: 'Cover Letter Button',
+        description: 'Instantly populates all form fields with the boilerplate cover letter feedback template.',
+      },
+      {
+        title: 'LinkedIn Button',
+        description: 'Loops through the review form and selects all correct radio buttons and inputs for LinkedIn profile reviews.',
+      },
+      {
+        title: 'Resume Button',
+        description: 'Fills the entire resume review form programmatically in a single click, ready for personalization.',
+      },
+    ]}
+  >
+    <Fragment slot="content">
+      <p class="mb-4">I coded a Chrome extension in JavaScript featuring three buttons — one for each career material type. When a reviewer clicks the appropriate button, the extension loops through the entire review form, programmatically selects the correct radio buttons, and populates every input field with the matching boilerplate feedback template instantly.</p>
+      <p>The reviewer then personalizes and deepens the feedback for each individual learner — without wasting time on repetitive data entry.</p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Outcome -->
+  <Features3
+    tagline="The Outcome"
+    title="67% reduction in review time"
+    subtitle="Built and deployed independently — then adopted platform-wide by Udacity's internal team."
+    columns={3}
+    items={[
+      {
+        title: '~1 hour → 20 minutes',
+        description: 'Average review time reduced from approximately one hour to twenty minutes per submission.',
+        icon: 'tabler:clock',
+      },
+      {
+        title: 'More reviews per session',
+        description: 'The time savings allowed significantly more learner submissions to be processed without sacrificing quality.',
+        icon: 'tabler:trending-up',
+      },
+      {
+        title: 'Platform-wide adoption',
+        description: "Shortly after independent deployment, Udacity's internal team developed a similar solution and rolled it out to all reviewers across the platform.",
+        icon: 'tabler:users',
+      },
+    ]}
+  />
+
+  <!-- Video -->
+  <div class="max-w-4xl mx-auto px-4 md:px-8 py-12 md:py-16">
+    <div class="text-center mb-8">
+      <p class="text-base text-secondary dark:text-blue-200 font-bold tracking-wide uppercase mb-2">Demo</p>
+      <h2 class="text-4xl md:text-5xl font-bold tracking-tighter font-heading">See It in Action</h2>
+    </div>
+    <div class="relative w-full rounded-lg shadow-lg overflow-hidden" style="padding-top: 56.25%;">
+      <iframe
+        class="absolute inset-0 w-full h-full"
+        src="https://www.youtube.com/embed/r4e8BA6eiRU"
+        title="Chrome Extension — Udacity Career Materials Reviewer Demo"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      ></iframe>
+    </div>
+  </div>
+
+  <!-- What This Demonstrates -->
+  <Content
+    tagline="Reflection"
+    title="Systems thinking applied to instructional support"
+    isReversed
+  >
+    <Fragment slot="content">
+      <p class="mb-4">This project reflects how I approach instructional support work — not just as a content problem but as a systems problem. When a workflow has friction, I look for ways to engineer it out.</p>
+      <p class="mb-4">The same thinking now informs how I approach learning technology, xAPI integration, AI-assisted curriculum production, and in-app performance support tools.</p>
+      <div class="mt-6 flex flex-wrap gap-2">
+        {['JavaScript', 'Chrome Extension API', 'HTML', 'CSS'].map(tool => (
+          <span class="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-sm font-medium px-3 py-1 rounded-full">{tool}</span>
+        ))}
+      </div>
+      <p class="text-sm text-muted mt-4">Built independently while serving as Career and Technical Instructor at Udacity.</p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <CallToAction
+    actions={[
+      { variant: 'primary', text: 'View All Projects', href: '/projects' },
+      { text: 'Get in Touch', href: '/contact' },
+    ]}
+  >
+    <Fragment slot="title">Interested in working together?</Fragment>
+    <Fragment slot="subtitle">I'm open to remote opportunities in instructional design and technical learning experience design.</Fragment>
+  </CallToAction>
+</Layout>
