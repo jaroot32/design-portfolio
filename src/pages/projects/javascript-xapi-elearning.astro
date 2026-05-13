@@ -217,6 +217,74 @@ const metadata = {
     ]}
   />
 
+  <!-- Design Document -->
+  <div class="max-w-7xl mx-auto px-4 md:px-8 py-12 md:py-16">
+    <div class="text-center mb-12">
+      <p class="text-base text-secondary dark:text-blue-200 font-bold tracking-wide uppercase mb-2">Design Document</p>
+      <h2 class="text-4xl md:text-5xl font-bold tracking-tighter font-heading mb-4">8-Week Course Design Process</h2>
+      <p class="text-xl text-muted dark:text-slate-300 max-w-3xl mx-auto">Developing this instructional design document taught me how to plan a course from the ground up — aligning objectives with measurable outcomes and ensuring every instructional choice supports learner needs. This process gave me a deeper understanding of how structure and strategy transform a concept into a complete learning experience.</p>
+    </div>
+
+    <div class="space-y-6 max-w-4xl mx-auto">
+      {[
+        {
+          week: 'Week 1',
+          title: 'Mini-course Topic',
+          content: 'Identified the core knowledge gap: eLearning professionals need JavaScript and xAPI skills to extend authoring tools and capture richer learning data. Defined the course premise — bridging the gap between JavaScript skills and xAPI understanding for eLearning professionals.'
+        },
+        {
+          week: 'Week 2',
+          title: 'Target Audience Analysis',
+          content: 'Developed a detailed learner profile: instructional designers, eLearning developers, and training professionals ages 25–55. Analyzed demographics, prior knowledge (authoring tools, basic HTML/CSS), technical aptitude, pain points, and learning goals. Concluded the ideal learner is a proactive eLearning professional seeking practical, immediately applicable skills.'
+        },
+        {
+          week: 'Week 3',
+          title: 'Course Type & Modality',
+          content: 'Selected a blended, practical application-focused course type combining asynchronous online modules with collaborative activities. Chose a primarily online, asynchronous modality with an optional Discord community — providing flexibility for working professionals while enabling peer support and resource sharing.'
+        },
+        {
+          week: 'Week 4',
+          title: 'Course Learning Outcomes (v1)',
+          content: 'Drafted six initial CLOs using Bloom\'s Taxonomy. Focused on applying JavaScript syntax, manipulating the DOM, constructing xAPI statements, sending data to an LRS, identifying use cases, and integrating both technologies into eLearning content.'
+        },
+        {
+          week: 'Week 5',
+          title: 'Learning Activities',
+          content: 'Designed six learning activities: interactive code-along sessions, xAPI statement construction challenges, "Track This Interaction" mini-projects, case study analysis, integration brainstorms, and peer code review. Each activity was aligned to specific CLOs to ensure instructional coherence.'
+        },
+        {
+          week: 'Week 6',
+          title: 'Instructional Design Model',
+          content: 'Selected a hybrid RID + SAM model over pure ADDIE — leveraging RID for rapid prototyping and early learner engagement, and SAM for iterative refinement based on stakeholder feedback. This combination balanced speed, structure, and continuous improvement for a technical skills course.'
+        },
+        {
+          week: 'Week 7',
+          title: 'CLO Revision & Module Objectives',
+          content: 'Revised all six CLOs with stronger Bloom\'s action verbs (implement, manipulate, construct, integrate, evaluate, develop) and greater specificity. Designed Module 1 learning objectives aligned to CLOs 1 and 2, with six detailed module-level objectives covering JavaScript fundamentals and DOM manipulation. Identified SMEs and key resources: MDN Web Docs, xAPI Specification (ADL), and Articulate E-Learning Heroes.'
+        },
+        {
+          week: 'Week 8',
+          title: 'Signature Assignment — Complete IDD',
+          content: 'Synthesized all prior work into a complete Instructional Design Document including course overview, knowledge gap analysis, target audience profile, course type and modality rationale, final CLOs, module objectives, learning activities, assessment strategies, SME resources, ADDIE model application, and learning theory framework (Constructivism + Cognitive Load Theory).'
+        },
+      ].map((item, i) => (
+        <div class="flex gap-6 items-start">
+          <div class="flex-shrink-0 w-24 text-right">
+            <span class="text-sm font-bold text-secondary dark:text-blue-300 uppercase tracking-wide">{item.week}</span>
+          </div>
+          <div class="flex-shrink-0 flex flex-col items-center">
+            <div class="w-4 h-4 rounded-full bg-primary mt-1"></div>
+            {i < 7 && <div class="w-0.5 bg-slate-200 dark:bg-slate-700 flex-1 mt-1" style="min-height: 3rem;"></div>}
+          </div>
+          <div class="pb-8">
+            <h3 class="text-lg font-bold font-heading mb-1">{item.title}</h3>
+            <p class="text-muted dark:text-slate-300">{item.content}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+
   <!-- Evaluation Strategy -->
   <Content
     tagline="Evaluation"
