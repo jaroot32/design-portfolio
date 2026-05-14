@@ -1,6 +1,5 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
-import Hero from '~/components/widgets/Hero.astro';
 import Content from '~/components/widgets/Content.astro';
 import Features3 from '~/components/widgets/Features3.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
@@ -13,20 +12,6 @@ const metadata = {
 ---
 
 <Layout metadata={metadata}>
-  <Hero
-    actions={[
-      { variant: 'primary', text: 'View My Work', href: '/projects' },
-      { text: 'Get in Touch', href: '/about#contact' },
-    ]}
-  >
-    <Fragment slot="title">
-      Jonathan Root
-    </Fragment>
-    <Fragment slot="subtitle">
-      Technical Learning Experience Designer with over eight years of experience building scalable learning for software developers. I work at the intersection of instructional design, web development, and digital learning.
-    </Fragment>
-  </Hero>
-
   <!-- Bio with image background -->
   <div class="relative w-full">
     <img src={profileImage.src} alt="Jonathan Root" class="w-full h-auto block" />
