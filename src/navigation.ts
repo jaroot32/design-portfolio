@@ -12,7 +12,7 @@ export const headerData = {
     },
     {
       text: 'Contact',
-      href: getPermalink('/contact'),
+      href: '/about#contact',
     },
   ],
   actions: [],
@@ -21,10 +21,10 @@ export const headerData = {
 export const footerData = {
   links: [],
   secondaryLinks: [
-    { text: 'Contact', href: getPermalink('/contact') },
+    { text: 'Contact', href: '/about#contact' },
   ],
   socialLinks: [
-    { ariaLabel: 'LinkedIn', icon: 'tabler:brand-linkedin', href: '#' },
+    { ariaLabel: 'LinkedIn', icon: 'tabler:brand-linkedin', href: 'https://www.linkedin.com/in/jonathanroot/' },
     { ariaLabel: 'Github', icon: 'tabler:brand-github', href: 'https://github.com/jaroot32' },
   ],
   footNote: `Jonathan Root · Technical Learning Experience Designer`,
