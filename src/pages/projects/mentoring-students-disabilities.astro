@@ -1,0 +1,153 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Content from '~/components/widgets/Content.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import Steps from '~/components/widgets/Steps.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'Mentoring Students with Disabilities — Guest Speaker, OpenClassrooms',
+};
+---
+
+<Layout metadata={metadata}>
+  <Hero tagline="Guest Speaker · Inclusive Design · Mentoring">
+    <Fragment slot="title">
+      Mentoring Students<br />
+      <span class="text-accent dark:text-white">with Disabilities</span>
+    </Fragment>
+    <Fragment slot="subtitle">
+      Invited as a guest speaker for an OpenClassrooms internal webinar on mentoring learners with disabilities — sharing practical strategies, case studies, and inclusive teaching approaches drawn from direct mentoring experience.
+    </Fragment>
+  </Hero>
+
+  <!-- Context -->
+  <Content
+    tagline="The Invitation"
+    title="Recognized as a Disability Friendly mentor"
+    isReversed
+  >
+    <Fragment slot="content">
+      <p class="mb-4">In June 2024, OpenClassrooms — a Paris-based online learning platform serving over 500,000 learners — invited me to speak at an internal webinar for their global mentor community on the topic of mentoring students with disabilities.</p>
+      <p class="mb-4">I was designated a <strong>Disability Friendly</strong> Web Developer Mentor at OpenClassrooms, meaning I was specifically paired with students who had declared learning disabilities — including ADHD, dyslexia, visual impairment, and chronic illness. That hands-on experience formed the basis of my contribution to the webinar.</p>
+      <p>The full webinar was organized by the OpenClassrooms Mentorship team and covered disability types, legal accommodations, inclusive platform tools, and assessment facilitation. I presented the practitioner perspective — real strategies from real sessions.</p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- What I Covered -->
+  <Features3
+    tagline="My Presentation"
+    title="What I covered"
+    subtitle="My section focused on the practical, day-to-day experience of mentoring web development students with a wide range of learning disabilities."
+    columns={2}
+    items={[
+      {
+        title: 'Mindset & Inclusion',
+        description: 'Why every learner belongs in tech — and how working with students with disabilities gives mentors a deeper sense of purpose in the learning journey.',
+        icon: 'tabler:heart',
+      },
+      {
+        title: 'Tips for Sessions',
+        description: 'Practical guidance for structuring mentoring sessions: managing personality mismatches, keeping students engaged, and knowing when to escalate to a mentor manager.',
+        icon: 'tabler:list-check',
+      },
+      {
+        title: 'Assessment Preparation',
+        description: 'How to run mock presentations, review deliverables in advance, use slideshows and live demos to reduce anxiety, and help students build confidence before assessments.',
+        icon: 'tabler:presentation',
+      },
+      {
+        title: 'Case Studies',
+        description: 'Three real case studies from my mentoring practice: structured sessions for ADHD, YouTube-based learning for possible dyslexia, and individualized learning plans for sustained progress.',
+        icon: 'tabler:file-text',
+      },
+      {
+        title: 'Assistive Technology',
+        description: 'Recommended tools including natural language audio readers, real-time transcription services, screen readers, and apps like Seeing AI and Be My Eyes.',
+        icon: 'tabler:tool',
+      },
+      {
+        title: 'Recommended Training',
+        description: 'Curated mentor training resources covering Universal Design for Learning (UDL), disability sensitivity, effective communication strategies, and assistive technology implementation.',
+        icon: 'tabler:book',
+      },
+    ]}
+  />
+
+  <!-- Case Studies -->
+  <Content
+    tagline="Case Studies"
+    title="Strategies drawn from real sessions"
+  >
+    <Fragment slot="content">
+      <div class="space-y-6">
+        <div class="border-l-4 border-accent pl-4">
+          <h3 class="font-bold text-lg mb-1">Student with ADHD — Structured Sessions</h3>
+          <p class="text-muted">Designed sessions around short, focused activities interspersed with brief breaks. The student showed improved focus and productivity, demonstrating better retention of material over time.</p>
+        </div>
+        <div class="border-l-4 border-accent pl-4">
+          <h3 class="font-bold text-lg mb-1">Student with Possible Dyslexia — Assistive Technology</h3>
+          <p class="text-muted">Incorporated YouTube video walkthroughs as a primary learning medium. The student completed projects more efficiently and with less frustration, and their deliverable quality and confidence improved.</p>
+        </div>
+        <div class="border-l-4 border-accent pl-4">
+          <h3 class="font-bold text-lg mb-1">Individualized Learning Plan — Sustained Progress</h3>
+          <p class="text-muted">Collaborated with a student to develop a tailored IEP with specific strategies and goals. Consistent support across different settings led to steady academic progress and improved self-esteem.</p>
+        </div>
+      </div>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Video -->
+  <div class="max-w-4xl mx-auto px-4 md:px-8 py-12 md:py-16">
+    <div class="text-center mb-8">
+      <p class="text-base text-secondary dark:text-blue-200 font-bold tracking-wide uppercase mb-2">Webinar Recording</p>
+      <h2 class="text-4xl md:text-5xl font-bold tracking-tighter font-heading">Watch My Presentation</h2>
+    </div>
+    <!-- TODO: Replace VIDEO_ID with the YouTube video ID once published -->
+    <div class="relative w-full rounded-lg shadow-lg overflow-hidden bg-gray-100 dark:bg-gray-800 flex items-center justify-center" style="padding-top: 56.25%;">
+      <div class="absolute inset-0 flex flex-col items-center justify-center text-center px-8">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 text-gray-400 mb-4" viewBox="0 0 24 24" fill="currentColor"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/></svg>
+        <p class="text-gray-500 dark:text-gray-400 font-medium">Video coming soon</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Reflection -->
+  <Content
+    tagline="Reflection"
+    title="Inclusive design begins with the mentor"
+    isReversed
+  >
+    <Fragment slot="content">
+      <p class="mb-4">Working with students with disabilities at OpenClassrooms reshaped how I think about learning design at every level. When a student's success depends on how well you adapt — your pacing, your tools, your communication style — you develop a much sharper instinct for what actually works in instruction.</p>
+      <p class="mb-4">The same principles that make a good mentoring session for a student with ADHD — clear structure, focused chunks, regular feedback — are the same principles that make good eLearning for everyone. Inclusive design isn't a special case. It's just good design.</p>
+      <p>Being invited to share this perspective with OpenClassrooms' global mentor community was a meaningful recognition of that work.</p>
+      <div class="mt-6 flex flex-wrap gap-2">
+        {['Inclusive Design', 'Disability Awareness', 'Differentiated Instruction', 'UDL', 'Mentoring', 'Assistive Technology', 'OpenClassrooms'].map(tag => (
+          <span class="bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 text-sm font-medium px-3 py-1 rounded-full">{tag}</span>
+        ))}
+      </div>
+      <p class="text-sm text-muted mt-4">Presented as a guest speaker at the OpenClassrooms internal webinar, June 2024.</p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <CallToAction
+    actions={[
+      { variant: 'primary', text: 'View All Projects', href: '/projects' },
+      { text: 'Get in Touch', href: '/about#contact' },
+    ]}
+  >
+    <Fragment slot="title">Interested in working together?</Fragment>
+    <Fragment slot="subtitle">I'm open to remote opportunities in instructional design and technical learning experience design.</Fragment>
+  </CallToAction>
+</Layout>

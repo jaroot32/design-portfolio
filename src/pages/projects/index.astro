@@ -2,6 +2,7 @@
 import Layout from '~/layouts/PageLayout.astro';
 import Hero from '~/components/widgets/Hero.astro';
 import Features2 from '~/components/widgets/Features2.astro';
+import Features3 from '~/components/widgets/Features3.astro';
 
 const metadata = {
   title: 'Projects',
@@ -14,7 +15,7 @@ const metadata = {
       Selected Work
     </Fragment>
     <Fragment slot="subtitle">
-      A collection of instructional design, eLearning development, and technical learning projects spanning graduate coursework, professional practice, and independent development.
+      A collection of instructional design, eLearning development, technical learning projects, and speaking engagements spanning graduate coursework, professional practice, and independent development.
     </Fragment>
   </Hero>
 
@@ -39,6 +40,19 @@ const metadata = {
         description: 'A visual synthesis of learning technology frameworks — SAMR, the Hype Cycle, and Articulate Rise 360 — designed in Canva as the Unit 1 assignment for LDTC 620 at UMGC.',
         icon: 'tabler:layout',
         callToAction: { text: 'View Project', href: '/projects/ldtc620-infographic' },
+      },
+    ]}
+  />
+
+  <Features2
+    title="Speaking & Guest Expertise"
+    columns={2}
+    items={[
+      {
+        title: 'Mentoring Students with Disabilities',
+        description: 'Invited as a guest speaker for an OpenClassrooms internal webinar, sharing practical strategies and case studies from direct experience mentoring web development students with learning disabilities.',
+        icon: 'tabler:microphone',
+        callToAction: { text: 'View Project', href: '/projects/mentoring-students-disabilities' },
       },
     ]}
   />
