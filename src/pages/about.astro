@@ -8,12 +8,18 @@ import CallToAction from '~/components/widgets/CallToAction.astro';
 import profileImage from '~/assets/images/profile.jpeg';
 
 const metadata = {
-  title: 'About',
+  title: 'Jonathan Root — Technical Learning Experience Designer',
+  ignoreTitleTemplate: true,
 };
 ---
 
 <Layout metadata={metadata}>
-  <Hero tagline="About Me">
+  <Hero
+    actions={[
+      { variant: 'primary', text: 'View My Work', href: '/projects' },
+      { text: 'Get in Touch', href: '/contact' },
+    ]}
+  >
     <Fragment slot="title">
       Jonathan Root
     </Fragment>
@@ -35,6 +41,73 @@ const metadata = {
     </div>
   </div>
 
+  <!-- What I Do -->
+  <Content
+    tagline="What I Do"
+    title="At the intersection of design, technology, and learning"
+    items={[
+      {
+        title: 'Instructional Design',
+        description: 'Designing structured, outcome-driven learning experiences grounded in established frameworks like ADDIE, SAM, and constructivist learning theory.',
+      },
+      {
+        title: 'eLearning Development',
+        description: 'Building interactive courses in Articulate Storyline and Rise 360, extended with custom JavaScript for dynamic behavior and xAPI for rich data tracking.',
+      },
+      {
+        title: 'Technical Learning Content',
+        description: 'Translating complex technical systems — APIs, developer tools, software workflows — into clear, engaging content for technical and non-technical audiences alike.',
+      },
+    ]}
+  >
+    <Fragment slot="content">
+      I work at the intersection of instructional design, web development, and digital learning — translating complex technical systems into clear, engaging, and interactive learning experiences for developers, learners, and users.
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Areas of Expertise -->
+  <Features3
+    title="Areas of Expertise"
+    subtitle="A cross-disciplinary skill set spanning design, development, and learning science."
+    columns={3}
+    items={[
+      {
+        title: 'Curriculum & Course Design',
+        description: 'Learning objectives, assessment alignment, and course architecture from concept through delivery.',
+        icon: 'tabler:layout-dashboard',
+      },
+      {
+        title: 'JavaScript for eLearning',
+        description: 'Custom interactions, DOM manipulation, and dynamic content within authoring tools and HTML-based modules.',
+        icon: 'tabler:brand-javascript',
+      },
+      {
+        title: 'xAPI & Learning Analytics',
+        description: 'Designing and implementing xAPI statements to capture rich learner behavior data beyond basic completion metrics.',
+        icon: 'tabler:chart-bar',
+      },
+      {
+        title: 'Articulate Storyline & Rise',
+        description: 'Building polished, accessible eLearning modules with advanced interactions and branching scenarios.',
+        icon: 'tabler:device-desktop',
+      },
+      {
+        title: 'Web Development',
+        description: 'HTML, CSS, and JavaScript for custom learning tools, portfolio sites, and browser-based educational applications.',
+        icon: 'tabler:code',
+      },
+      {
+        title: 'Accessibility & Inclusive Design',
+        description: 'Applying WCAG standards and Universal Design for Learning principles across all instructional materials.',
+        icon: 'tabler:accessible',
+      },
+    ]}
+  />
+
+  <!-- Organizations -->
   <Features3
     tagline="Experience"
     title="Organizations I've Worked With"
@@ -50,6 +123,7 @@ const metadata = {
     ]}
   />
 
+  <!-- Education -->
   <Steps2
     tagline="Education"
     title="Academic Background"
