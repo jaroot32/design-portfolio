@@ -4,6 +4,7 @@ import Hero from '~/components/widgets/Hero.astro';
 import Content from '~/components/widgets/Content.astro';
 import Features3 from '~/components/widgets/Features3.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
+import certImage from '~/assets/images/udacity-mentorship-certificate.png';
 
 const metadata = {
   title: 'Chrome Extension — Udacity Career Materials Reviewer',
@@ -124,10 +125,11 @@ const metadata = {
     isReversed
   >
     <Fragment slot="image">
-      <div class="flex items-center justify-center h-full py-12 px-6">
-        <blockquote class="border-l-4 border-accent pl-6">
-          <p class="text-2xl font-heading font-bold leading-snug text-gray-900 dark:text-white">"When a workflow has friction, I look for ways to engineer it out."</p>
-        </blockquote>
+      <div class="flex items-center justify-center h-full py-8">
+        <div class="w-full max-w-sm">
+          <img src={certImage.src} alt="Udacity Mentorship Nanodegree Certificate — Jonathan Root, October 2020" class="w-full rounded-lg shadow-md border border-gray-200 dark:border-gray-700" />
+          <p class="text-center text-sm text-muted mt-3">Udacity Mentorship Nanodegree · October 2020</p>
+        </div>
       </div>
     </Fragment>
     <Fragment slot="content">
