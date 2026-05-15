@@ -31,6 +31,16 @@ const metadata = {
       <p class="mb-4">As a Career and Technical Instructor at Udacity, I reviewed hundreds of learner career materials — resumes, LinkedIn profiles, and cover letters — providing structured written feedback through a multi-field review form.</p>
       <p>Every review required manually filling out a series of input fields and selecting radio buttons with the same foundational boilerplate feedback before personalizing it for the individual learner. This repetitive data entry was time consuming and slowed my ability to deliver high quality, timely feedback at scale.</p>
     </Fragment>
+    <Fragment slot="image">
+      <div class="flex items-center justify-center h-full py-12">
+        <div class="text-center">
+          <p class="text-8xl font-bold font-heading text-accent leading-none">~1 hr</p>
+          <p class="text-xl text-muted mt-3">per review, before the fix</p>
+          <p class="text-5xl font-bold font-heading text-gray-300 dark:text-gray-600 mt-6 leading-none">×100s</p>
+          <p class="text-xl text-muted mt-3">of reviews per year</p>
+        </div>
+      </div>
+    </Fragment>
     <Fragment slot="bg">
       <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
     </Fragment>
@@ -113,6 +123,13 @@ const metadata = {
     title="Systems thinking applied to instructional support"
     isReversed
   >
+    <Fragment slot="image">
+      <div class="flex items-center justify-center h-full py-12 px-6">
+        <blockquote class="border-l-4 border-accent pl-6">
+          <p class="text-2xl font-heading font-bold leading-snug text-gray-900 dark:text-white">"When a workflow has friction, I look for ways to engineer it out."</p>
+        </blockquote>
+      </div>
+    </Fragment>
     <Fragment slot="content">
       <p class="mb-4">This project reflects how I approach instructional support work — not just as a content problem but as a systems problem. When a workflow has friction, I look for ways to engineer it out.</p>
       <p class="mb-4">The same thinking now informs how I approach learning technology, xAPI integration, AI-assisted curriculum production, and in-app performance support tools.</p>
