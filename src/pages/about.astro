@@ -12,17 +12,18 @@ const metadata = {
 ---
 
 <Layout metadata={metadata}>
-  <!-- Bio with image background -->
-  <div class="relative w-full">
-    <img src={profileImage.src} alt="Jonathan Root" class="w-full h-auto block" />
-    <div class="absolute inset-0 bg-gradient-to-r from-black via-black/80 via-30% to-transparent"></div>
-    <div class="absolute inset-0 flex items-center">
-      <div class="w-full md:w-1/2 px-8 md:px-16 text-white">
-        <h2 class="text-2xl md:text-3xl font-bold font-heading mb-4">Technical depth meets instructional design craft</h2>
-        <p class="text-base md:text-lg mb-4 text-gray-200">I bring eight years of experience across curriculum development, eLearning production, SME collaboration, and front-end web development — working with organizations including Udacity, Springboard, OpenClassrooms, Boeing, Chegg Skills, LearningMate, and Masterschool. That range gives me the ability to move fluidly between design strategy and technical execution in ways most designers can't.</p>
-        <p class="text-base md:text-lg mb-4 text-gray-200">In my current role at LearningMate, I work alongside instructional designers and project managers to build learning content for web development programs — developing storyboards, assessments, AI-driven learning activities, and Articulate Rise 360 modules aligned to clear learning objectives and learner personas.</p>
-        <p class="text-base md:text-lg text-gray-200">I'm currently completing my M.S. in Learning Design and Technology at the University of Maryland Global Campus, with an expected graduation of Spring 2027.</p>
+  <!-- Bio split layout -->
+  <div class="flex flex-col md:flex-row min-h-[500px]">
+    <div class="w-full md:w-1/2 flex items-center px-8 md:px-16 py-12 bg-white dark:bg-gray-900">
+      <div>
+        <h2 class="text-2xl md:text-3xl font-bold font-heading mb-4 text-gray-900 dark:text-white">Technical depth meets instructional design craft</h2>
+        <p class="text-base md:text-lg mb-4 text-gray-700 dark:text-gray-300">I bring eight years of experience across curriculum development, eLearning production, SME collaboration, and front-end web development — working with organizations including Udacity, Springboard, OpenClassrooms, Boeing, Chegg Skills, LearningMate, and Masterschool. That range gives me the ability to move fluidly between design strategy and technical execution in ways most designers can't.</p>
+        <p class="text-base md:text-lg mb-4 text-gray-700 dark:text-gray-300">In my current role at LearningMate, I work alongside instructional designers and project managers to build learning content for web development programs — developing storyboards, assessments, AI-driven learning activities, and Articulate Rise 360 modules aligned to clear learning objectives and learner personas.</p>
+        <p class="text-base md:text-lg text-gray-700 dark:text-gray-300">I'm currently completing my M.S. in Learning Design and Technology at the University of Maryland Global Campus, with an expected graduation of Spring 2027.</p>
       </div>
+    </div>
+    <div class="w-full md:w-1/2">
+      <img src={profileImage.src} alt="Jonathan Root" class="w-full h-full object-cover" />
     </div>
   </div>
 
