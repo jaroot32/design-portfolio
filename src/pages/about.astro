@@ -3,7 +3,22 @@ import Layout from '~/layouts/PageLayout.astro';
 import Content from '~/components/widgets/Content.astro';
 import Features3 from '~/components/widgets/Features3.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
-import profileImage from '~/assets/images/profile-bust.png';
+import P1 from '~/assets/images/P1.png';
+import P2 from '~/assets/images/P2.png';
+import P3 from '~/assets/images/P3.png';
+import P4 from '~/assets/images/P4.png';
+import P5 from '~/assets/images/P5.png';
+import P6 from '~/assets/images/P6.png';
+import P7 from '~/assets/images/P7.png';
+import P8 from '~/assets/images/P8.png';
+import P9 from '~/assets/images/P9.png';
+import P10 from '~/assets/images/P10.png';
+import P11 from '~/assets/images/P11.png';
+import P12 from '~/assets/images/P12.png';
+import P13 from '~/assets/images/P13.png';
+import P14 from '~/assets/images/P14.png';
+
+const photos = [P1, P2];
 
 const metadata = {
   title: 'Jonathan Root — Technical Learning Experience Designer',
@@ -12,19 +27,6 @@ const metadata = {
 ---
 
 <Layout metadata={metadata}>
-  <!-- Bio split layout -->
-  <div class="flex flex-col md:flex-row">
-    <div class="w-full md:w-1/2 flex items-center justify-end px-6 md:px-10 py-10 bg-white dark:bg-gray-900">
-      <div class="max-w-sm">
-        <h2 class="text-3xl md:text-4xl font-bold font-heading mb-6 text-gray-900 dark:text-white">Technical depth meets instructional design craft</h2>
-        <p class="text-lg md:text-xl text-gray-700 dark:text-gray-300">Eight years building scalable learning across EdTech and enterprise with organizations including Udacity, Springboard, OpenClassrooms, Boeing, and LearningMate.</p>
-      </div>
-    </div>
-    <div class="w-full md:w-1/2 flex items-end bg-white dark:bg-gray-900">
-      <img src={profileImage.src} alt="Jonathan Root" class="w-full h-auto" />
-    </div>
-  </div>
-
   <!-- What I Do -->
   <Content
     tagline="What I Do"
@@ -44,6 +46,12 @@ const metadata = {
       },
     ]}
   >
+    <Fragment slot="image">
+      <div class="flex flex-col gap-3">
+        <img src={P5.src} alt="Teaching session" class="w-full rounded object-cover" />
+        <img src={P6.src} alt="Teaching session" class="w-full rounded object-cover" />
+      </div>
+    </Fragment>
     <Fragment slot="content">
       I work at the intersection of instructional design, web development, and digital learning — translating complex technical systems into clear, engaging, and interactive learning experiences for developers, learners, and users.
     </Fragment>
@@ -51,6 +59,20 @@ const metadata = {
       <div class="absolute inset-0 section-pattern"></div>
     </Fragment>
   </Content>
+
+  <!-- Bio split layout -->
+  <div class="mx-auto max-w-7xl p-4 md:px-8 py-12">
+    <div class="md:flex md:gap-4 items-start">
+      <div class="md:basis-1/2">
+        <h2 class="text-3xl md:text-4xl font-bold font-heading mb-6 text-gray-900 dark:text-white">Technical depth meets instructional design craft</h2>
+        <p class="text-lg md:text-xl text-gray-700 dark:text-gray-300">Eight years building scalable learning across EdTech and enterprise with organizations including Udacity, Springboard, OpenClassrooms, Boeing, and LearningMate.</p>
+      </div>
+      <div class="mt-4 md:mt-0 md:basis-1/2 flex flex-col gap-3">
+        <img src={P1.src} alt="Jonathan Root teaching online session" class="w-full object-cover rounded" />
+        <img src={P2.src} alt="Jonathan Root teaching online session" class="w-full object-cover rounded" />
+      </div>
+    </div>
+  </div>
 
   <!-- Areas of Expertise -->
   <Features3
