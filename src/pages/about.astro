@@ -62,14 +62,26 @@ const metadata = {
 
   <!-- Bio split layout -->
   <div class="mx-auto max-w-7xl p-4 md:px-8 py-12">
-    <div class="md:flex md:gap-4 items-start">
-      <div class="md:basis-1/2">
+    <div class="grid md:grid-cols-2 gap-4">
+      <div>
         <h2 class="text-3xl md:text-4xl font-bold font-heading mb-6 text-gray-900 dark:text-white">Technical depth meets instructional design craft</h2>
         <p class="text-lg md:text-xl text-gray-700 dark:text-gray-300">Eight years building scalable learning across EdTech and enterprise with organizations including Udacity, Springboard, OpenClassrooms, Boeing, and LearningMate.</p>
       </div>
-      <div class="mt-4 md:mt-0 md:basis-1/2 flex flex-col gap-3">
+      <div>
         <img src={P1.src} alt="Jonathan Root teaching online session" class="w-full object-cover rounded" />
-        <img src={P2.src} alt="Jonathan Root teaching online session" class="w-full object-cover rounded" />
+      </div>
+      <div class="relative w-full rounded-lg overflow-hidden shadow-md" style="padding-top: 56.25%;">
+        <iframe
+          class="absolute inset-0 w-full h-full"
+          src="https://www.youtube.com/embed/N9855IeKoK4"
+          title="Learn JavaScript and xAPI for eLearning"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+      </div>
+      <div>
+        <img src={P3.src} alt="Jonathan Root teaching online session" class="w-full object-cover rounded" />
       </div>
     </div>
   </div>
@@ -117,15 +129,23 @@ const metadata = {
   <Features3
     tagline="Experience"
     title="Organizations I've Worked With"
-    subtitle="Eight years across EdTech, enterprise training, and higher education."
+    subtitle="Eight years teaching the web to career changers, college students, and working professionals."
     columns={3}
     items={[
-      { title: 'Udacity', description: 'Developer education and career programs at scale.', icon: 'tabler:school' },
-      { title: 'Springboard', description: 'Curriculum and mentorship for tech career transitions.', icon: 'tabler:school' },
-      { title: 'OpenClassrooms', description: 'Online degree programs and technical learning paths.', icon: 'tabler:school' },
-      { title: 'Boeing', description: 'Enterprise technical training and compliance learning.', icon: 'tabler:school' },
-      { title: 'Chegg Skills', description: 'Skills-based learning for career readiness.', icon: 'tabler:school' },
-      { title: 'LearningMate', description: 'Web development learning content and Rise 360 production.', icon: 'tabler:school' },
+      { title: 'Udacity', description: 'Web development mentorship and project feedback for career-track learners.', icon: 'tabler:school' },
+      { title: 'Springboard', description: 'One-on-one mentorship and curriculum support for tech career changers.', icon: 'tabler:school' },
+      { title: 'OpenClassrooms', description: 'Jury Member evaluating student project defenses for online degree programs.', icon: 'tabler:school' },
+      { title: 'Boeing', description: 'Front-end web development contract for Creative Services.', icon: 'tabler:school' },
+      { title: 'Chegg Skills', description: 'Web development certification content refined and produced through LearningMate.', icon: 'tabler:school' },
+      { title: 'LearningMate', description: 'Software Development SME for web dev certification content and Loom demo production.', icon: 'tabler:school' },
+      { title: 'Masterschool', description: 'Coding bootcamp instructor for tech career training and developer education programs.', icon: 'tabler:school' },
+      { title: 'Upright Education', description: 'Teaching assistant supporting coding bootcamp instruction and curriculum delivery.', icon: 'tabler:school' },
+      { title: 'University of Washington', description: 'Bootcamp web development instruction via Trilogy Education partnership.', icon: 'tabler:school' },
+      { title: 'Tacoma Community College', description: 'Web development and technology instruction in a community college setting.', icon: 'tabler:school' },
+      { title: 'Nucamp', description: 'Coding bootcamp instructor teaching web development fundamentals.', icon: 'tabler:school' },
+      { title: 'BloomTech', description: 'Career mentor supporting learners through tech job search and outcomes.', icon: 'tabler:school' },
+      { title: 'CodeWizardsHQ', description: 'Online coding classes for kids and teens.', icon: 'tabler:school' },
+      { title: 'DeepDive Learning Academy', description: 'One-on-one apprenticeship approach to learning to code.', icon: 'tabler:school' },
     ]}
   />
 
