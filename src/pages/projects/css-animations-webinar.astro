@@ -8,25 +8,25 @@ import titleSlide from '~/assets/images/css-animations-webinar-title.jpg';
 import transformCode from '~/assets/images/css-animations-transform-code.png';
 
 const metadata = {
-  title: 'Modern CSS Animations Student Webinar — OpenClassrooms',
+  title: 'Modern Animations with SCSS/SASS Student Webinar — OpenClassrooms',
 };
 ---
 
 <Layout metadata={metadata}>
-  <Hero tagline="Guest Instructor · CSS Animations · Chrome DevTools">
+  <Hero tagline="Guest Instructor · SCSS · Animations · Chrome DevTools">
     <Fragment slot="title">
-      Modern CSS Animations —<br />
+      Modern Animations with SCSS —<br />
       <span class="text-accent dark:text-white">OpenClassrooms Student Webinar</span>
     </Fragment>
     <Fragment slot="subtitle">
-      Invited to lead a live student webinar for OpenClassrooms covering CSS transitions, @keyframes animations, the 12 principles of animation applied to the web, and using Chrome DevTools to debug and profile animation performance.
+      Invited to lead a live student webinar for OpenClassrooms covering modern CSS animations built with SCSS/SASS — including transitions, @keyframes, the 12 principles of animation applied to the web, and Chrome DevTools for debugging animation performance.
     </Fragment>
   </Hero>
 
   <!-- Context -->
   <Content
     tagline="The Webinar"
-    title="Animation principles meets browser reality"
+    title="Animation principles built with SCSS"
     isReversed
   >
     <Fragment slot="image">
@@ -35,9 +35,9 @@ const metadata = {
       </div>
     </Fragment>
     <Fragment slot="content">
-      <p class="mb-4">On December 10, 2020, I delivered a live student webinar for OpenClassrooms as part of their <em>Modern CSS Animations</em> course — extending the course content with live demos, real CodePen examples, and a Chrome DevTools deep dive into animation performance.</p>
-      <p class="mb-4">The session ran for both US learners (10:00AM PST) and European learners (19:00 CEST), and covered everything from first-principles animation theory to practical debugging techniques.</p>
-      <p>The goal wasn't just to explain CSS syntax — it was to give learners a mental model for <em>why</em> animations work the way they do in the browser, so they could confidently build and debug their own.</p>
+      <p class="mb-4">On December 10, 2020, I delivered a live student webinar for OpenClassrooms as a follow-up to the CSS & SASS session — this time focused on building modern animations using SCSS/SASS, extending the course with live CodePen demos and a Chrome DevTools deep dive into animation performance.</p>
+      <p class="mb-4">The session ran for both US learners (10:00AM PST) and European learners (19:00 CEST), covering animation theory, SCSS-powered transitions and @keyframes, and real-world debugging techniques.</p>
+      <p>The goal was to show learners how SCSS — with its nesting, variables, and BEM modifiers — makes animation code dramatically more organized and maintainable than plain CSS.</p>
     </Fragment>
     <Fragment slot="bg">
       <div class="absolute inset-0 section-pattern-b"></div>
@@ -48,7 +48,7 @@ const metadata = {
   <Features3
     tagline="The Content"
     title="What I covered"
-    subtitle="From classic animation theory to browser rendering internals — grounded in live code and real examples."
+    subtitle="Classic animation theory meets SCSS-powered implementation — grounded in live CodePen demos and real browser debugging."
     columns={3}
     items={[
       {
@@ -143,14 +143,14 @@ const metadata = {
       </div>
     </Fragment>
     <Fragment slot="content">
-      <p class="mb-4">CSS animations are one of those topics where syntax is the easy part. The harder part is understanding what happens inside the browser — which properties trigger layout recalculation, which stay on the compositor, and how to keep animations smooth across devices.</p>
-      <p class="mb-4">That's what I tried to surface in this session: not just how to write an animation, but how to think about it as a browser performance problem. The Chrome DevTools animation panel makes that visible in a way that text alone can't.</p>
+      <p class="mb-4">What makes SCSS particularly powerful for animation is the same thing that makes it powerful for any stylesheet — structure. Nesting keeps animation code tied to its component, variables make easing and duration consistent, and BEM modifiers let you create animation variants without duplicating @keyframes blocks.</p>
+      <p class="mb-4">This session was also a chance to show learners how the Chrome DevTools animation panel reveals what's actually happening under the hood — making it possible to tune timing, catch jank, and test performance across slower devices.</p>
       <div class="mt-6 flex flex-wrap gap-2">
-        {['CSS Animations', '@keyframes', 'CSS Transitions', 'Transform', 'Chrome DevTools', 'Animation Performance', 'OpenClassrooms'].map(tag => (
+        {['SCSS', 'SASS', 'CSS Animations', '@keyframes', 'CSS Transitions', 'Chrome DevTools', 'OpenClassrooms'].map(tag => (
           <span class="bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 text-sm font-medium px-3 py-1 rounded-full">{tag}</span>
         ))}
       </div>
-      <p class="text-sm text-muted mt-4">Live student webinar delivered for OpenClassrooms, December 10, 2020.</p>
+      <p class="text-sm text-muted mt-4">Live student webinar on modern animations with SCSS/SASS, delivered for OpenClassrooms, December 10, 2020.</p>
     </Fragment>
     <Fragment slot="bg">
       <div class="absolute inset-0 section-pattern"></div>
