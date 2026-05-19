@@ -1,0 +1,69 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Content from '~/components/widgets/Content.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'Recognition — Jonathan Root',
+};
+---
+
+<Layout metadata={metadata}>
+  <Hero tagline="Mentorship · Teaching · Recognition">
+    <Fragment slot="title">
+      Recognition &<br />
+      <span class="text-accent dark:text-white">Peer Feedback</span>
+    </Fragment>
+    <Fragment slot="subtitle">
+      Recognition received from EdTech platforms, students, and peers across eight years of mentorship and technical instruction.
+    </Fragment>
+  </Hero>
+
+  <!-- Springboard -->
+  <Content
+    tagline="Springboard"
+    title="Recognized during COVID-19"
+    isReversed
+  >
+    <Fragment slot="image">
+      <div class="flex items-center justify-center h-full px-6 py-8">
+        <p class="text-muted italic text-center">[ Springboard card photo — coming soon ]</p>
+      </div>
+    </Fragment>
+    <Fragment slot="content">
+      <p class="mb-4">During the COVID-19 pandemic, Springboard recognized my contributions as a mentor — supporting career-changers through an especially difficult period of remote learning and career uncertainty.</p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 section-pattern-b"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Chegg -->
+  <Content
+    tagline="Chegg Skills"
+    title="Recognition from Chegg"
+  >
+    <Fragment slot="image">
+      <div class="flex items-center justify-center h-full px-6 py-8">
+        <p class="text-muted italic text-center">[ Chegg recognition — coming soon ]</p>
+      </div>
+    </Fragment>
+    <Fragment slot="content">
+      <p class="mb-4">Placeholder for Chegg recognition content.</p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 section-pattern-e"></div>
+    </Fragment>
+  </Content>
+
+  <CallToAction
+    actions={[
+      { variant: 'primary', text: 'View All Projects', href: '/projects' },
+      { text: 'Get in Touch', href: '/about#contact' },
+    ]}
+  >
+    <Fragment slot="title">Interested in working together?</Fragment>
+    <Fragment slot="subtitle">I'm open to remote opportunities in instructional design and technical learning experience design.</Fragment>
+  </CallToAction>
+</Layout>
