@@ -1,0 +1,169 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Content from '~/components/widgets/Content.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import titleSlide from '~/assets/images/css-animations-webinar-title.jpg';
+import transformCode from '~/assets/images/css-animations-transform-code.png';
+
+const metadata = {
+  title: 'Modern CSS Animations Student Webinar — OpenClassrooms',
+};
+---
+
+<Layout metadata={metadata}>
+  <Hero tagline="Guest Instructor · CSS Animations · Chrome DevTools">
+    <Fragment slot="title">
+      Modern CSS Animations —<br />
+      <span class="text-accent dark:text-white">OpenClassrooms Student Webinar</span>
+    </Fragment>
+    <Fragment slot="subtitle">
+      Invited to lead a live student webinar for OpenClassrooms covering CSS transitions, @keyframes animations, the 12 principles of animation applied to the web, and using Chrome DevTools to debug and profile animation performance.
+    </Fragment>
+  </Hero>
+
+  <!-- Context -->
+  <Content
+    tagline="The Webinar"
+    title="Animation principles meets browser reality"
+    isReversed
+  >
+    <Fragment slot="image">
+      <div class="flex items-center justify-center h-full px-6 py-8">
+        <img src={titleSlide.src} alt="Modern CSS Animations Student Webinar — OpenClassrooms, December 10, 2020" class="w-full rounded-lg shadow-md border border-gray-200 dark:border-gray-700" />
+      </div>
+    </Fragment>
+    <Fragment slot="content">
+      <p class="mb-4">On December 10, 2020, I delivered a live student webinar for OpenClassrooms as part of their <em>Modern CSS Animations</em> course — extending the course content with live demos, real CodePen examples, and a Chrome DevTools deep dive into animation performance.</p>
+      <p class="mb-4">The session ran for both US learners (10:00AM PST) and European learners (19:00 CEST), and covered everything from first-principles animation theory to practical debugging techniques.</p>
+      <p>The goal wasn't just to explain CSS syntax — it was to give learners a mental model for <em>why</em> animations work the way they do in the browser, so they could confidently build and debug their own.</p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 section-pattern-b"></div>
+    </Fragment>
+  </Content>
+
+  <!-- What I Covered -->
+  <Features3
+    tagline="The Content"
+    title="What I covered"
+    subtitle="From classic animation theory to browser rendering internals — grounded in live code and real examples."
+    columns={3}
+    items={[
+      {
+        title: '12 Principles of Animation',
+        description: 'Introduced the classic Disney animation principles — squash and stretch, anticipation, staging, follow-through, and more — and showed how each maps to modern CSS and web animation practice.',
+        icon: 'tabler:keyframes',
+      },
+      {
+        title: 'How the Browser Renders CSS',
+        description: 'Walked through the four browser rendering steps — style, layout, paint, and composite — explaining which CSS properties trigger expensive repaints and how to write animations that stay on the compositor.',
+        icon: 'tabler:cpu',
+      },
+      {
+        title: 'CSS Transitions',
+        description: 'Covered the four ingredients of a CSS transition — the property to animate, its before and after values, duration, and a pseudo-selector trigger — with live CodePen examples showing each in action.',
+        icon: 'tabler:arrows-exchange',
+      },
+      {
+        title: '@keyframes Animations',
+        description: 'Moved beyond simple A-to-B transitions into multi-stage @keyframes animations — building a progress bar example to show how to create multiple waypoints throughout an animation sequence.',
+        icon: 'tabler:timeline',
+      },
+      {
+        title: 'CSS Transforms',
+        description: 'Demonstrated the transform property with perspective and rotateX — showing how 3D transforms work in CSS and how BEM modifiers can be used to create variants from a single base style.',
+        icon: 'tabler:3d-rotate',
+      },
+      {
+        title: 'Chrome DevTools for Animation',
+        description: 'Used the Chrome DevTools animations panel to inspect, slow down, and profile animations — showing how to find jank, identify dropped frames, and use CPU throttling to test on slower devices.',
+        icon: 'tabler:brand-chrome',
+      },
+    ]}
+  />
+
+  <!-- Live Demo -->
+  <Content
+    tagline="Live Demo"
+    title="Transforms, perspective, and BEM modifiers"
+  >
+    <Fragment slot="image">
+      <div class="flex items-center justify-center h-full px-6 py-8">
+        <img src={transformCode.src} alt="CSS transform with perspective and BEM modifier variants — live demo code" class="w-full rounded-lg shadow-md border border-gray-200 dark:border-gray-700" />
+      </div>
+    </Fragment>
+    <Fragment slot="content">
+      <p class="mb-4">One of the session's live demo highlights was combining CSS transforms with BEM-style modifier classes — using <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded text-sm">perspective()</code> and <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded text-sm">rotateX()</code> to create 3D effects and modifier variants like <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded text-sm">&--perspective75px</code> to apply different depths.</p>
+      <p class="mb-4">This reinforced the BEM naming convention from the previous webinar while introducing new CSS functionality — giving learners continuity across sessions and showing how the naming system scales into complex components.</p>
+      <p>All examples were built live in CodePen so students could fork them, experiment, and keep the reference for later.</p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 section-pattern-e"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Video -->
+  <div class="max-w-4xl mx-auto px-4 md:px-8 py-12 md:py-16">
+    <div class="text-center mb-8">
+      <p class="text-base text-secondary dark:text-blue-200 font-bold tracking-wide uppercase mb-2">Webinar Recording</p>
+      <h2 class="text-4xl md:text-5xl font-bold tracking-tighter font-heading">Watch the Session</h2>
+      <p class="text-lg text-muted mt-4">Full recording of the live Modern CSS Animations student webinar, December 10, 2020.</p>
+    </div>
+    <div class="relative w-full rounded-lg shadow-lg overflow-hidden" style="padding-top: 56.25%;">
+      <iframe
+        class="absolute inset-0 w-full h-full"
+        src="https://www.youtube.com/embed/VIDEO_ID_HERE"
+        title="Modern CSS Animations Student Webinar — OpenClassrooms"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      ></iframe>
+    </div>
+  </div>
+
+  <!-- Reflection -->
+  <Content
+    tagline="Reflection"
+    title="Teaching animation as a performance discipline"
+    isReversed
+  >
+    <Fragment slot="image">
+      <div class="flex items-center justify-center h-full py-12">
+        <div class="text-center">
+          <p class="text-8xl font-bold font-heading text-accent leading-none">2020</p>
+          <p class="text-xl text-muted mt-3">OpenClassrooms</p>
+          <div class="mt-8 space-y-2 text-sm text-muted">
+            <p class="font-semibold text-gray-700 dark:text-gray-300">Live Student Webinar</p>
+            <p>CSS Animations · @keyframes · DevTools</p>
+            <p>Global Audience — US & Europe</p>
+          </div>
+        </div>
+      </div>
+    </Fragment>
+    <Fragment slot="content">
+      <p class="mb-4">CSS animations are one of those topics where syntax is the easy part. The harder part is understanding what happens inside the browser — which properties trigger layout recalculation, which stay on the compositor, and how to keep animations smooth across devices.</p>
+      <p class="mb-4">That's what I tried to surface in this session: not just how to write an animation, but how to think about it as a browser performance problem. The Chrome DevTools animation panel makes that visible in a way that text alone can't.</p>
+      <div class="mt-6 flex flex-wrap gap-2">
+        {['CSS Animations', '@keyframes', 'CSS Transitions', 'Transform', 'Chrome DevTools', 'Animation Performance', 'OpenClassrooms'].map(tag => (
+          <span class="bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 text-sm font-medium px-3 py-1 rounded-full">{tag}</span>
+        ))}
+      </div>
+      <p class="text-sm text-muted mt-4">Live student webinar delivered for OpenClassrooms, December 10, 2020.</p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 section-pattern"></div>
+    </Fragment>
+  </Content>
+
+  <CallToAction
+    actions={[
+      { variant: 'primary', text: 'View All Projects', href: '/projects' },
+      { text: 'Get in Touch', href: '/about#contact' },
+    ]}
+  >
+    <Fragment slot="title">Interested in working together?</Fragment>
+    <Fragment slot="subtitle">I'm open to remote opportunities in instructional design and technical learning experience design.</Fragment>
+  </CallToAction>
+</Layout>
