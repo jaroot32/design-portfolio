@@ -17,6 +17,7 @@ import P11 from '~/assets/images/P11.png';
 import P12 from '~/assets/images/P12.png';
 import P13 from '~/assets/images/P13.png';
 import P14 from '~/assets/images/P14.png';
+import profileImage from '~/assets/images/profile-bust.png';
 
 const photos = [P1, P2];
 
@@ -127,7 +128,7 @@ const metadata = {
 
   <!-- Organizations -->
   <Features3
-    tagline="Experience"
+    tagline="Educator Experience"
     title="Organizations I've Worked With"
     subtitle="Eight years teaching the web to career changers, college students, and working professionals."
     columns={3}
@@ -149,8 +150,29 @@ const metadata = {
     ]}
   />
 
+  <!-- Contract Work -->
+  <Features3
+    tagline="Expertise"
+    title="Built It, Not Just Taught It"
+    subtitle="Hands-on web development across contracts, freelance, and production environments."
+    columns={3}
+    items={[
+      { title: 'Boeing', description: 'Front-end web development contract for Creative Services.', icon: 'tabler:device-desktop' },
+      { title: 'NetMotion Software', description: 'Developed a custom WordPress Gutenberg plugin using ReactJS.', icon: 'tabler:device-desktop' },
+      { title: 'Freeride Entertainment', description: 'Front-end maintenance using Jekyll, HTML, CSS, JavaScript, jQuery, Bootstrap, Barba.js, and Plyr.js.', icon: 'tabler:device-desktop' },
+      { title: 'EssenceMediacom', description: 'Serving major brand clients including Google and Target using a modern JavaScript development environment.', icon: 'tabler:device-desktop' },
+      { title: 'Udacity', description: 'Custom Chrome extension using JavaScript.', icon: 'tabler:device-desktop' },
+      { title: 'Copacino Fujikado', description: 'Applied GreenSock Animation Platform (GSAP) to create smooth, high performance JavaScript animations.', icon: 'tabler:device-desktop' },
+      { title: 'Ascendent Demolition', description: 'Developed WordPress theme using HTML, CSS, and JavaScript.', icon: 'tabler:device-desktop' },
+      { title: 'Tonkin Architecture', description: 'Developed WordPress theme using HTML, CSS, and JavaScript.', icon: 'tabler:device-desktop' },
+    ]}
+  />
+
   <!-- Contact -->
   <div id="contact" class="max-w-3xl mx-auto px-4 md:px-8 py-16 md:py-24 text-center">
+    <div class="w-full flex justify-center mb-6">
+      <img src={profileImage.src} alt="Jonathan Root" class="w-28 h-28 rounded-full object-cover shadow-md border-4 border-white dark:border-gray-700" style="object-position: 13px 20%;" />
+    </div>
     <p class="text-base text-secondary dark:text-blue-200 font-bold tracking-wide uppercase mb-2">Contact</p>
     <h2 class="text-4xl md:text-5xl font-bold tracking-tighter font-heading mb-6">Let's Connect</h2>
     <p class="text-sm text-muted italic mb-6">Resume available upon request.</p>
