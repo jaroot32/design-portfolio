@@ -17,7 +17,7 @@ const metadata = {
       <span class="text-accent dark:text-white">Chegg Skills / Thinkful</span>
     </Fragment>
     <Fragment slot="subtitle">
-      Conducted one-on-one technical support sessions for career-changing students in Thinkful's Engineering Immersion prep program — reviewing code submissions, providing graded feedback, and guiding learners through HTML, CSS, and web fundamentals.
+      Conducted one-on-one technical support sessions for career-changing students in Thinkful's Engineering Immersion prep program — reviewing HTML/CSS portfolio submissions, providing graded feedback, and live-coaching JavaScript coding challenges on Qualified.io.
     </Fragment>
   </Hero>
 
@@ -83,6 +83,11 @@ const metadata = {
         icon: 'tabler:layout',
       },
       {
+        title: 'JavaScript Assessment Coaching',
+        description: 'Guided students through live JavaScript coding challenges on Qualified.io — working through logic problems like array iteration, conditionals, and object property access in real time while the student drove the keyboard.',
+        icon: 'tabler:brand-javascript',
+      },
+      {
         title: 'Revision Guidance',
         description: 'When students submitted work that didn\'t yet meet requirements, helped them understand the gaps and create a clear plan for revision — turning failure into a learning moment rather than a discouragement.',
         icon: 'tabler:refresh',
@@ -117,6 +122,38 @@ const metadata = {
     </Fragment>
     <Fragment slot="bg">
       <div class="absolute inset-0 section-pattern-e"></div>
+    </Fragment>
+  </Content>
+
+  <!-- JavaScript Assessment -->
+  <Content
+    tagline="JavaScript Assessment"
+    title="Live coding on Qualified.io"
+    isReversed
+  >
+    <Fragment slot="image">
+      <div class="flex items-center justify-center h-full px-6 py-8">
+        <div class="w-full bg-gray-900 rounded-lg shadow-md border border-gray-700 p-5 font-mono text-sm">
+          <p class="text-gray-500 mb-3 text-xs">solution.js — Qualified.io Assessment</p>
+          <p class="text-gray-400"><span class="text-blue-400">function</span> <span class="text-yellow-300">campsiteCount</span>(<span class="text-orange-300">campgrounds</span>) {'{'}</p>
+          <p class="text-gray-400 pl-4"><span class="text-blue-400">let</span> sum = <span class="text-green-400">0</span></p>
+          <p class="text-gray-400 pl-4"><span class="text-blue-400">for</span> (<span class="text-blue-400">let</span> i = <span class="text-green-400">0</span>; i &lt; campgrounds.length; i++) {'{'}</p>
+          <p class="text-gray-400 pl-8"><span class="text-blue-400">if</span> (campgrounds[i].<span class="text-yellow-300">isReserved</span>) {'{'}</p>
+          <p class="text-gray-400 pl-12">sum += campgrounds[i].<span class="text-yellow-300">partySize</span></p>
+          <p class="text-gray-400 pl-8">{'}'}</p>
+          <p class="text-gray-400 pl-4">{'}'}</p>
+          <p class="text-gray-400 pl-4"><span class="text-blue-400">return</span> sum</p>
+          <p class="text-gray-400">{'}'}</p>
+        </div>
+      </div>
+    </Fragment>
+    <Fragment slot="content">
+      <p class="mb-4">The second half of each session often shifted into JavaScript — working through coding challenges on Qualified.io, a browser-based assessment platform used by Thinkful to evaluate students' readiness for the full engineering program.</p>
+      <p class="mb-4">In the session recorded here, the student was working through a <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded text-sm">campsiteCount</code> challenge: iterate through an array of campground objects and sum the <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded text-sm">partySize</code> for any campground where <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded text-sm">isReserved</code> is true.</p>
+      <p>The student had the loop structure right but hadn't yet connected the conditional. My role was to ask the right questions — "what property tells you whether a site is reserved?" — rather than just typing the answer, so the student arrived at the solution through their own reasoning.</p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 section-pattern-d"></div>
     </Fragment>
   </Content>
 
