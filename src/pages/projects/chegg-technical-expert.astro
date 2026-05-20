@@ -1,0 +1,186 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Content from '~/components/widgets/Content.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'Technical Expert — Chegg Skills / Thinkful',
+};
+---
+
+<Layout metadata={metadata}>
+  <Hero tagline="1:1 Student Support · Code Review · Thinkful">
+    <Fragment slot="title">
+      Technical Expert —<br />
+      <span class="text-accent dark:text-white">Chegg Skills / Thinkful</span>
+    </Fragment>
+    <Fragment slot="subtitle">
+      Conducted one-on-one technical support sessions for career-changing students in Thinkful's Engineering Immersion prep program — reviewing code submissions, providing graded feedback, and guiding learners through HTML, CSS, and web fundamentals.
+    </Fragment>
+  </Hero>
+
+  <!-- Context -->
+  <Content
+    tagline="The Role"
+    title="One-on-one support at the hardest moment"
+    isReversed
+  >
+    <Fragment slot="image">
+      <div class="flex items-center justify-center h-full py-12">
+        <div class="text-center">
+          <p class="text-8xl font-bold font-heading text-accent leading-none">1:1</p>
+          <p class="text-xl text-muted mt-3">live student sessions</p>
+          <div class="mt-8 space-y-2 text-sm text-muted">
+            <p class="font-semibold text-gray-700 dark:text-gray-300">Chegg Skills / Thinkful</p>
+            <p>Technical Expert</p>
+            <p>Engineering Immersion Prep</p>
+          </div>
+        </div>
+      </div>
+    </Fragment>
+    <Fragment slot="content">
+      <p class="mb-4">Thinkful — acquired by Chegg — offered intensive bootcamp-style programs for adults changing careers into software engineering. As a Technical Expert, I supported students enrolled in the <em>Prep Course for Engineering Immersion</em>, meeting one-on-one via Zoom to review their project submissions and troubleshoot technical challenges in real time.</p>
+      <p class="mb-4">The prep phase is where many career-changers hit their first real wall — concepts like the box model, GitHub, and web deployment feel abstract until you're actually debugging a broken layout at 11pm. My job was to be the expert on the other side of that moment.</p>
+      <p>Sessions involved reviewing student-submitted GitHub repositories, walking through live code in the browser, writing structured graded feedback, and helping students understand not just what was wrong but why — so they could apply that thinking independently going forward.</p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 section-pattern-b"></div>
+    </Fragment>
+  </Content>
+
+  <!-- What I Did -->
+  <Features3
+    tagline="The Work"
+    title="What Technical Expert sessions looked like"
+    subtitle="A consistent cycle of review, feedback, and guided problem-solving across HTML, CSS, and web development fundamentals."
+    columns={3}
+    items={[
+      {
+        title: 'GitHub Repository Review',
+        description: 'Opened each student\'s submitted GitHub repo, reviewed their code structure and commit history, and pulled up the live deployed site to evaluate against project requirements.',
+        icon: 'tabler:brand-github',
+      },
+      {
+        title: 'Graded Written Feedback',
+        description: 'Provided structured written evaluations through the Thinkful platform — assessing whether projects met technical and content requirements, and adding specific, actionable improvement notes.',
+        icon: 'tabler:file-check',
+      },
+      {
+        title: 'Live Zoom Walkthroughs',
+        description: 'Shared screens with students to walk through their submissions in real time — showing exactly where and why something wasn\'t working, and demonstrating how to approach fixing it.',
+        icon: 'tabler:video',
+      },
+      {
+        title: 'HTML & CSS Fundamentals',
+        description: 'Covered the core technical content of the prep curriculum: semantic HTML, CSS basics, the box model, web page templates, links and paths, and GitHub as a deployment tool.',
+        icon: 'tabler:code',
+      },
+      {
+        title: 'Portfolio Project Review',
+        description: 'Evaluated portfolio web pages for technical accuracy, layout quality, and requirement completion — guiding students through revision cycles until their work met the bar for the full program.',
+        icon: 'tabler:layout',
+      },
+      {
+        title: 'Revision Guidance',
+        description: 'When students submitted work that didn\'t yet meet requirements, helped them understand the gaps and create a clear plan for revision — turning failure into a learning moment rather than a discouragement.',
+        icon: 'tabler:refresh',
+      },
+    ]}
+  />
+
+  <!-- Session Example -->
+  <Content
+    tagline="In a Session"
+    title="Reviewing a portfolio submission"
+  >
+    <Fragment slot="image">
+      <div class="flex items-center justify-center h-full py-12 px-6">
+        <div class="w-full space-y-4">
+          <div class="bg-gray-50 dark:bg-gray-800 rounded-lg p-5 border border-gray-200 dark:border-gray-700">
+            <p class="text-xs font-semibold text-muted uppercase tracking-wide mb-2">Thinkful Platform — Grader Feedback</p>
+            <p class="font-semibold text-gray-800 dark:text-gray-200 mb-2">Evaluate whether the student met the technical and content requirements for this project.</p>
+            <p class="text-sm text-gray-600 dark:text-gray-400 italic">"Dear Joshua, you have put in a great effort to work on this project. Met all the technical and content requirements for this project."</p>
+          </div>
+          <div class="bg-gray-50 dark:bg-gray-800 rounded-lg p-5 border border-gray-200 dark:border-gray-700">
+            <p class="text-xs font-semibold text-muted uppercase tracking-wide mb-2">Additional Feedback</p>
+            <p class="text-sm text-gray-600 dark:text-gray-400 italic">"Prior to submitting, consider going through your app a few times. With each pass, try focusing on a specific requirement, verifying that it is met. This is a common practice amongst developers."</p>
+          </div>
+        </div>
+      </div>
+    </Fragment>
+    <Fragment slot="content">
+      <p class="mb-4">A typical session began by opening the student's submitted GitHub repository alongside the live deployed site — reviewing the code and the rendered output simultaneously, the same way a developer would approach a code review at work.</p>
+      <p class="mb-4">Feedback was both written and verbal. The structured written evaluation — submitted through the Thinkful platform — gave students a permanent reference. The live Zoom session made the feedback immediate and personal, turning abstract comments into concrete, visible changes.</p>
+      <p>The feedback above is from an actual session: a student who put in genuine effort on their portfolio, met requirements, but needed guidance on systematic self-review — a skill as important as any technical concept in the curriculum.</p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 section-pattern-e"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Video -->
+  <div class="max-w-4xl mx-auto px-4 md:px-8 py-12 md:py-16">
+    <div class="text-center mb-8">
+      <p class="text-base text-secondary dark:text-blue-200 font-bold tracking-wide uppercase mb-2">Session Recording</p>
+      <h2 class="text-4xl md:text-5xl font-bold tracking-tighter font-heading">See a Live Session</h2>
+      <p class="text-lg text-muted mt-4">A recorded one-on-one Technical Expert session reviewing an HTML & CSS portfolio submission on the Thinkful platform, October 2022.</p>
+    </div>
+    <div class="relative w-full rounded-lg shadow-lg overflow-hidden" style="padding-top: 56.25%;">
+      <iframe
+        class="absolute inset-0 w-full h-full"
+        src="https://www.youtube.com/embed/VIDEO_ID_HERE"
+        title="Technical Expert Session — HTML & CSS Portfolio Review, Chegg Skills / Thinkful"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      ></iframe>
+    </div>
+  </div>
+
+  <!-- Reflection -->
+  <Content
+    tagline="Reflection"
+    title="Feedback as a teaching tool"
+    isReversed
+  >
+    <Fragment slot="image">
+      <div class="flex items-center justify-center h-full py-12">
+        <div class="text-center">
+          <p class="text-8xl font-bold font-heading text-accent leading-none">2022</p>
+          <p class="text-xl text-muted mt-3">Chegg Skills / Thinkful</p>
+          <div class="mt-8 space-y-2 text-sm text-muted">
+            <p class="font-semibold text-gray-700 dark:text-gray-300">Technical Expert</p>
+            <p>1:1 Student Sessions · Code Review</p>
+            <p>Engineering Immersion Prep</p>
+          </div>
+        </div>
+      </div>
+    </Fragment>
+    <Fragment slot="content">
+      <p class="mb-4">The Technical Expert role refined something I'd been developing across years of bootcamp and online instruction: the ability to write feedback that teaches, not just evaluates.</p>
+      <p class="mb-4">Good feedback tells a student what to fix. Great feedback explains the principle behind the fix — so the next time they encounter a similar problem, they have a framework for solving it themselves. That's what I tried to deliver in every written evaluation and every live session.</p>
+      <p class="mb-4">It's the same principle that drives good instructional design: the goal isn't to answer the question in front of you, it's to build the learner's capacity to answer the next one on their own.</p>
+      <div class="mt-6 flex flex-wrap gap-2">
+        {['HTML', 'CSS', 'GitHub', 'Code Review', '1:1 Instruction', 'Thinkful', 'Chegg Skills', 'Technical Feedback'].map(tag => (
+          <span class="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-sm font-medium px-3 py-1 rounded-full">{tag}</span>
+        ))}
+      </div>
+      <p class="text-sm text-muted mt-4">Technical Expert, Chegg Skills / Thinkful, 2022.</p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 section-pattern"></div>
+    </Fragment>
+  </Content>
+
+  <CallToAction
+    actions={[
+      { variant: 'primary', text: 'View All Projects', href: '/projects' },
+      { text: 'Get in Touch', href: '/about#contact' },
+    ]}
+  >
+    <Fragment slot="title">Interested in working together?</Fragment>
+    <Fragment slot="subtitle">I'm open to remote opportunities in instructional design and technical learning experience design.</Fragment>
+  </CallToAction>
+</Layout>
