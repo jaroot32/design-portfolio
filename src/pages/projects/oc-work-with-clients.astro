@@ -1,0 +1,186 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Content from '~/components/widgets/Content.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'Work with Clients\' Needs — OpenClassrooms Open Study',
+};
+---
+
+<Layout metadata={metadata}>
+  <Hero tagline="Web Developer Mentor · Open Study · Student Deliverable Review · OpenClassrooms">
+    <Fragment slot="title">
+      Work with Clients' Needs —<br />
+      <span class="text-accent dark:text-white">OpenClassrooms Open Study</span>
+    </Fragment>
+    <Fragment slot="subtitle">
+      Facilitated a live Open Study session for OpenClassrooms students working through a client-facing web development project — reviewing student deliverables, providing structured feedback on WordPress theme choices and design decisions, and guiding live Q&A.
+    </Fragment>
+  </Hero>
+
+  <!-- Context -->
+  <Content
+    tagline="The Session"
+    title="Students presenting real client work"
+    isReversed
+  >
+    <Fragment slot="image">
+      <div class="flex items-center justify-center h-full py-12">
+        <div class="text-center">
+          <p class="text-7xl font-bold font-heading text-accent leading-none">Open<br/>Study</p>
+          <p class="text-xl text-muted mt-3">OpenClassrooms</p>
+          <div class="mt-8 space-y-2 text-sm text-muted">
+            <p class="font-semibold text-gray-700 dark:text-gray-300">Web Developer Mentor</p>
+            <p>Work with Clients' Needs</p>
+            <p>Live Deliverable Review · 2020</p>
+          </div>
+        </div>
+      </div>
+    </Fragment>
+    <Fragment slot="content">
+      <p class="mb-4">OpenClassrooms' "Open Study" format brings students and their mentor together live to present work in progress, receive structured feedback, and discuss challenges in real time. This session centered on a course milestone focused on <em>working with clients' needs</em> — a critical skill for web developers moving from technical execution to client-facing project work.</p>
+      <p class="mb-4">Students came having built WordPress websites for real or simulated clients. Each presented their deliverable — their theme choice, design rationale, and how their decisions mapped to the client's business requirements — and received live feedback from me as their mentor.</p>
+      <p>By 2020, I had been a Web Developer Mentor at OpenClassrooms for about a year and a half, working with students across the full path of their front-end program. This session represented one of the more advanced milestones: where students had to defend not just their code, but their thinking.</p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 section-pattern-b"></div>
+    </Fragment>
+  </Content>
+
+  <!-- What I Did -->
+  <Features3
+    tagline="The Work"
+    title="What the Open Study session involved"
+    subtitle="A structured live review where students presented client project deliverables and received direct mentor feedback on their decisions."
+    columns={3}
+    items={[
+      {
+        title: 'Deliverable Review',
+        description: 'Reviewed each student\'s project submission live — theme selection documentation, design rationale PDFs, and locally-hosted WordPress builds — evaluating how well their decisions addressed the client brief.',
+        icon: 'tabler:file-check',
+      },
+      {
+        title: 'WordPress Project Feedback',
+        description: 'Gave direct feedback on theme choices, layout decisions, and client alignment — including a chalet rental/sales site and an outdoor film festival website, each representing a distinct client context.',
+        icon: 'tabler:brand-wordpress',
+      },
+      {
+        title: 'Design Rationale Discussion',
+        description: 'Pushed students to articulate why they made each choice, not just what they built — connecting theme features like WooCommerce support or hero image design back to specific client requirements.',
+        icon: 'tabler:messages',
+      },
+      {
+        title: 'Live Q&A Facilitation',
+        description: 'Facilitated open Q&A after each student presentation — surfacing questions from the group, addressing common misconceptions, and turning individual feedback into shared learning moments.',
+        icon: 'tabler:help',
+      },
+      {
+        title: 'Client Needs Analysis',
+        description: 'Helped students think through how to analyze a client\'s business context — who their audience is, what the site needs to accomplish, and how design and technical choices either serve or undermine those goals.',
+        icon: 'tabler:search',
+      },
+      {
+        title: 'Research Guidance',
+        description: 'Guided students through researching their client\'s industry — including looking at comparable real-world sites like FilmFreeway to understand how professional platforms in the same space approach design.',
+        icon: 'tabler:world',
+      },
+    ]}
+  />
+
+  <!-- Session Example -->
+  <Content
+    tagline="In the Session"
+    title="Reviewing student deliverables live"
+  >
+    <Fragment slot="image">
+      <div class="flex items-center justify-center h-full px-6 py-8">
+        <div class="w-full space-y-4">
+          <div class="bg-gray-50 dark:bg-gray-800 rounded-lg p-5 border border-gray-200 dark:border-gray-700">
+            <p class="text-xs font-semibold text-muted uppercase tracking-wide mb-2">Deliverable 1 — Chalet Rental Website</p>
+            <p class="text-sm text-gray-700 dark:text-gray-300 font-semibold mb-1">Theme: Elixar (WordPress)</p>
+            <p class="text-sm text-gray-600 dark:text-gray-400">"A creative and flexible WordPress theme, well suited for business, portfolio, digital agency and product showcasing — with WooCommerce support for showcasing different chalets for sale and rent."</p>
+          </div>
+          <div class="bg-gray-50 dark:bg-gray-800 rounded-lg p-5 border border-gray-200 dark:border-gray-700">
+            <p class="text-xs font-semibold text-muted uppercase tracking-wide mb-2">Deliverable 2 — Film Festival Website</p>
+            <p class="text-sm text-gray-700 dark:text-gray-300 font-semibold mb-1">Watch It Outside — Boston Edition</p>
+            <p class="text-sm text-gray-600 dark:text-gray-400">"The design has a large banner at the top with a typical view of what an outdoor film festival looks like in the evening, giving the visitor a clear at first glance of what the sitting arrangement and experience would look like."</p>
+          </div>
+        </div>
+      </div>
+    </Fragment>
+    <Fragment slot="content">
+      <p class="mb-4">Each student opened their deliverable live — a PDF documenting their theme choice and rationale, alongside a locally-hosted WordPress build they had developed. The review wasn't just about whether the site looked good; it was about whether the student could explain why their choices served the client.</p>
+      <p class="mb-4">The two deliverables in this session showed the range of client contexts students navigate: a chalet rental and sales business needing e-commerce functionality, and an outdoor film festival needing to convey atmosphere and drive registrations. Each required different design thinking, different theme features, and a different understanding of what the client's audience needed at first glance.</p>
+      <p>The quotes above are drawn directly from the students' own deliverable documentation — their words, making the case for their decisions. My role was to probe, affirm where the reasoning held, and redirect where it didn't.</p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 section-pattern-e"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Video -->
+  <div class="max-w-4xl mx-auto px-4 md:px-8 py-12 md:py-16">
+    <div class="text-center mb-8">
+      <p class="text-base text-secondary dark:text-blue-200 font-bold tracking-wide uppercase mb-2">Session Recording</p>
+      <h2 class="text-4xl md:text-5xl font-bold tracking-tighter font-heading">Watch the Open Study</h2>
+      <p class="text-lg text-muted mt-4">Full recording of the live Open Study session — "Work with Clients' Needs" — OpenClassrooms, 2020.</p>
+    </div>
+    <div class="relative w-full rounded-lg shadow-lg overflow-hidden" style="padding-top: 56.25%;">
+      <iframe
+        class="absolute inset-0 w-full h-full"
+        src="https://www.youtube.com/embed/VIDEO_ID_HERE"
+        title="Work with Clients' Needs — OpenClassrooms Open Study"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      ></iframe>
+    </div>
+  </div>
+
+  <!-- Reflection -->
+  <Content
+    tagline="Reflection"
+    title="Teaching students to think like client partners"
+    isReversed
+  >
+    <Fragment slot="image">
+      <div class="flex items-center justify-center h-full py-12">
+        <div class="text-center">
+          <p class="text-8xl font-bold font-heading text-accent leading-none">2020</p>
+          <p class="text-xl text-muted mt-3">OpenClassrooms</p>
+          <div class="mt-8 space-y-2 text-sm text-muted">
+            <p class="font-semibold text-gray-700 dark:text-gray-300">Web Developer Mentor</p>
+            <p>Open Study · Deliverable Review</p>
+            <p>Work with Clients' Needs</p>
+          </div>
+        </div>
+      </div>
+    </Fragment>
+    <Fragment slot="content">
+      <p class="mb-4">The jump from "I built this" to "I built this because the client needs X" is one of the most important transitions a junior developer makes. Technical execution is learnable from documentation; understanding what a client actually needs — and making decisions that serve that need — requires a different kind of thinking entirely.</p>
+      <p class="mb-4">Open Study sessions like this one are where that thinking gets practiced out loud. Students have to defend their choices in real time, in front of peers, with a mentor who is going to ask why. That pressure is productive — it mirrors the reality of client-facing work and builds the habit of connecting every decision back to the brief.</p>
+      <div class="mt-6 flex flex-wrap gap-2">
+        {['WordPress', 'Client Work', 'Open Study', 'Deliverable Review', 'OpenClassrooms', 'Web Development', 'Mentoring', 'UX Thinking'].map(tag => (
+          <span class="bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 text-sm font-medium px-3 py-1 rounded-full">{tag}</span>
+        ))}
+      </div>
+      <p class="text-sm text-muted mt-4">Web Developer Mentor, OpenClassrooms Open Study — Work with Clients' Needs, 2020.</p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 section-pattern"></div>
+    </Fragment>
+  </Content>
+
+  <CallToAction
+    actions={[
+      { variant: 'primary', text: 'View All Projects', href: '/projects' },
+      { text: 'Get in Touch', href: '/about#contact' },
+    ]}
+  >
+    <Fragment slot="title">Interested in working together?</Fragment>
+    <Fragment slot="subtitle">I'm open to remote opportunities in instructional design and technical learning experience design.</Fragment>
+  </CallToAction>
+</Layout>
