@@ -217,6 +217,57 @@ const metadata = {
     ]}
   />
 
+  <!-- Syllabus Download -->
+  <Content
+    tagline="Course Document"
+    title="Minicourse Syllabus"
+    isReversed
+  >
+    <Fragment slot="image">
+      <div class="flex items-center justify-center h-full px-6 py-12">
+        <div class="w-full max-w-sm bg-gray-50 dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-8 text-center">
+          <div class="flex items-center justify-center w-16 h-16 mx-auto mb-4 rounded-full bg-accent/10">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9Z" />
+            </svg>
+          </div>
+          <p class="text-lg font-bold font-heading text-gray-900 dark:text-white mb-1">Course Syllabus</p>
+          <p class="text-sm text-muted mb-6">JavaScript & xAPI for Interactive eLearning<br/>PDF · 2 pages</p>
+          <a
+            href="/downloads/Minicourse_Syllabus.pdf"
+            download
+            class="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-accent text-white font-semibold text-sm hover:bg-accent/90 transition-colors"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" />
+            </svg>
+            Download Syllabus
+          </a>
+        </div>
+      </div>
+    </Fragment>
+    <Fragment slot="content">
+      <p class="mb-4">The course syllabus covers learning outcomes, module structure, grading policy, technology requirements, and the schedule of instructional events across all four modules — JavaScript Basics, DOM Manipulation, Writing xAPI Statements, and Integration & Reflection.</p>
+      <p class="mb-4">It was designed to function as a genuine course document: clear enough for a learner to understand expectations before the course begins, detailed enough to serve as a reference throughout.</p>
+      <div class="mt-6 grid grid-cols-2 gap-3 text-sm">
+        {[
+          { label: 'Discussions', value: '25%' },
+          { label: 'Major Assignment', value: '35%' },
+          { label: 'Knowledge Checks', value: '20%' },
+          { label: 'Participation', value: '20%' },
+        ].map(({ label, value }) => (
+          <div class="bg-gray-50 dark:bg-gray-800 rounded-lg p-3 border border-gray-200 dark:border-gray-700 flex justify-between items-center">
+            <span class="text-gray-600 dark:text-gray-400">{label}</span>
+            <span class="font-bold text-gray-900 dark:text-white">{value}</span>
+          </div>
+        ))}
+      </div>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 section-pattern-c"></div>
+    </Fragment>
+  </Content>
+
   <!-- Design Document -->
   <div class="max-w-7xl mx-auto px-4 md:px-8 py-12 md:py-16">
     <div class="text-center mb-12">
