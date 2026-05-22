@@ -56,6 +56,10 @@ const currentPath = `/${trimSlash(new URL(Astro.url).pathname)}`;
   {...id ? { id } : {}}
 >
   <div class="absolute inset-0"></div>
+  <!-- Scroll progress bar -->
+  <div class="absolute bottom-0 left-0 w-full h-0.5 bg-transparent z-50">
+    <div id="scroll-progress" class="h-full bg-accent transition-none origin-left" style="width: 0%"></div>
+  </div>
   <div
     class:list={[
       'relative text-default py-3 px-3 md:px-6 mx-auto w-full',
@@ -165,3 +169,20 @@ const currentPath = `/${trimSlash(new URL(Astro.url).pathname)}`;
     </div>
   </div>
 </header>
+
+<script>
+  function initScrollProgress() {
+    const bar = document.getElementById('scroll-progress');
+    if (!bar) return;
+    const update = () => {
+      const scrollTop = window.scrollY;
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const pct = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+      bar.style.width = pct + '%';
+    };
+    window.addEventListener('scroll', update, { passive: true });
+    update();
+  }
+  initScrollProgress();
+  document.addEventListener('astro:page-load', initScrollProgress);
+</script>
