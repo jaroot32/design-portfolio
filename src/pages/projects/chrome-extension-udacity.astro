@@ -6,6 +6,7 @@ import Features3 from '~/components/widgets/Features3.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 import certImage from '~/assets/images/udacity-mentorship-certificate.png';
 import annotationImg from '~/assets/images/annotation.pdf.png';
+import { Image } from 'astro:assets';
 
 const metadata = {
   title: 'Chrome Extension — Udacity Career Materials Reviewer',
@@ -69,7 +70,7 @@ const metadata = {
   >
     <Fragment slot="image">
       <div class="flex items-center justify-center h-full px-6 py-8">
-        <img src={annotationImg.src} alt="Chrome extension annotation — review form automation" class="w-full rounded-lg shadow-md border border-gray-200 dark:border-gray-700" />
+        <Image src={annotationImg} alt="Chrome extension annotation — review form automation" class="w-full rounded-lg shadow-md border border-gray-200 dark:border-gray-700" />
       </div>
     </Fragment>
     <Fragment slot="content">
@@ -130,7 +131,7 @@ const metadata = {
     <Fragment slot="image">
       <div class="flex items-center justify-center h-full py-8">
         <div class="w-full max-w-sm">
-          <img src={certImage.src} alt="Udacity Mentorship Nanodegree Certificate — Jonathan Root, October 2020" class="w-full rounded-lg shadow-md border border-gray-200 dark:border-gray-700" />
+          <Image src={certImage} alt="Udacity Mentorship Nanodegree Certificate — Jonathan Root, October 2020" class="w-full rounded-lg shadow-md border border-gray-200 dark:border-gray-700" />
           <p class="text-center text-sm text-muted mt-3">Udacity Mentorship Nanodegree · October 2020</p>
         </div>
       </div>

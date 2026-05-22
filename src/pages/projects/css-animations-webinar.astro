@@ -6,6 +6,7 @@ import Features3 from '~/components/widgets/Features3.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 import titleSlide from '~/assets/images/css-animations-webinar-title.jpg';
 import transformCode from '~/assets/images/css-animations-transform-code.png';
+import { Image } from 'astro:assets';
 
 const metadata = {
   title: 'Modern Animations with SCSS/SASS Student Webinar — OpenClassrooms',
@@ -31,7 +32,7 @@ const metadata = {
   >
     <Fragment slot="image">
       <div class="flex items-center justify-center h-full px-6 py-8">
-        <img src={titleSlide.src} alt="Modern CSS Animations Student Webinar — OpenClassrooms, December 10, 2020" class="w-full rounded-lg shadow-md border border-gray-200 dark:border-gray-700" />
+        <Image src={titleSlide} alt="Modern CSS Animations Student Webinar — OpenClassrooms, December 10, 2020" class="w-full rounded-lg shadow-md border border-gray-200 dark:border-gray-700" />
       </div>
     </Fragment>
     <Fragment slot="content">
@@ -91,7 +92,7 @@ const metadata = {
   >
     <Fragment slot="image">
       <div class="flex items-center justify-center h-full px-6 py-8">
-        <img src={transformCode.src} alt="CSS transform with perspective and BEM modifier variants — live demo code" class="w-full rounded-lg shadow-md border border-gray-200 dark:border-gray-700" />
+        <Image src={transformCode} alt="CSS transform with perspective and BEM modifier variants — live demo code" class="w-full rounded-lg shadow-md border border-gray-200 dark:border-gray-700" />
       </div>
     </Fragment>
     <Fragment slot="content">

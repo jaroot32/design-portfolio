@@ -1,5 +1,9 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
+import slideOcPriority from '~/assets/images/slide-oc-priority.png';
+import slideTipsSessions from '~/assets/images/slide-tips-for-sessions.png';
+import slideTipsAssessments from '~/assets/images/slide-tips-assessments.png';
+import { Image } from 'astro:assets';
 import Hero from '~/components/widgets/Hero.astro';
 import Content from '~/components/widgets/Content.astro';
 import Features3 from '~/components/widgets/Features3.astro';
@@ -97,10 +101,13 @@ const metadata = {
     title="Strategies drawn from real sessions"
   >
     <Fragment slot="image">
-      <div class="flex items-center justify-center h-full py-12 px-6">
+      <div class="flex items-center justify-center h-full pt-2 pb-12 px-6">
         <blockquote class="border-l-4 border-accent pl-6">
           <p class="text-2xl font-heading font-bold leading-snug text-gray-900 dark:text-white">"Anyone can work in tech and shouldn't be left out because of a disability."</p>
         </blockquote>
+      </div>
+      <div class="flex flex-col gap-4 px-6 pb-8">
+        <Image src={slideOcPriority} alt="At OpenClassrooms: Making individuals with disability a priority" class="w-full rounded-lg shadow-md border border-gray-200 dark:border-gray-700" />
       </div>
     </Fragment>
     <Fragment slot="content">
@@ -147,13 +154,11 @@ const metadata = {
   <Content
     tagline="Reflection"
     title="Inclusive design begins with the mentor"
-    isReversed
   >
     <Fragment slot="image">
-      <div class="flex items-center justify-center h-full py-12 px-6">
-        <blockquote class="border-l-4 border-accent pl-6">
-          <p class="text-2xl font-heading font-bold leading-snug text-gray-900 dark:text-white">"Inclusive design isn't a special case. It's just good design."</p>
-        </blockquote>
+      <div class="flex flex-col gap-4 px-6 pb-8">
+        <Image src={slideTipsSessions} alt="Tips for Sessions — Jonathan Root, Web Developer Mentor, Disability Friendly" class="w-full rounded-lg shadow-md border border-gray-200 dark:border-gray-700" />
+        <Image src={slideTipsAssessments} alt="Tips to Prepare for Assessments" class="w-full rounded-lg shadow-md border border-gray-200 dark:border-gray-700" />
       </div>
     </Fragment>
     <Fragment slot="content">

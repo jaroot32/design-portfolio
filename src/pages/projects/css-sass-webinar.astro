@@ -5,6 +5,7 @@ import Content from '~/components/widgets/Content.astro';
 import Features3 from '~/components/widgets/Features3.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 import mixinsSlide from '~/assets/images/sass-mixins-slide.jpg';
+import { Image } from 'astro:assets';
 import bemCode from '~/assets/images/sass-bem-code.png';
 import preprocessors from '~/assets/images/sass-preprocessors.png';
 
@@ -32,7 +33,7 @@ const metadata = {
   >
     <Fragment slot="image">
       <div class="flex items-center justify-center h-full px-6 py-8">
-        <img src={mixinsSlide.src} alt="Mixins slide — CSS and SASS Student Webinar, OpenClassrooms" class="w-full rounded-lg shadow-md border border-gray-200 dark:border-gray-700" />
+        <Image src={mixinsSlide} alt="Mixins slide — CSS and SASS Student Webinar, OpenClassrooms" class="w-full rounded-lg shadow-md border border-gray-200 dark:border-gray-700" />
       </div>
     </Fragment>
     <Fragment slot="content">
@@ -92,8 +93,8 @@ const metadata = {
   >
     <Fragment slot="image">
       <div class="flex flex-col gap-4 px-6 py-8">
-        <img src={preprocessors.src} alt="CSS preprocessors — Sass, Less, and Stylus" class="w-full rounded-lg shadow-md border border-gray-200 dark:border-gray-700" />
-        <img src={bemCode.src} alt="BEM naming convention live code example — .proj-prev__heading" class="w-full rounded-lg shadow-md border border-gray-200 dark:border-gray-700" />
+        <Image src={preprocessors} alt="CSS preprocessors — Sass, Less, and Stylus" class="w-full rounded-lg shadow-md border border-gray-200 dark:border-gray-700" />
+        <Image src={bemCode} alt="BEM naming convention live code example — .proj-prev__heading" class="w-full rounded-lg shadow-md border border-gray-200 dark:border-gray-700" />
       </div>
     </Fragment>
     <Fragment slot="content">

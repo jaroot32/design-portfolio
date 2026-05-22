@@ -4,6 +4,7 @@ import Hero from '~/components/widgets/Hero.astro';
 import Content from '~/components/widgets/Content.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 import springboardCard from '~/assets/images/springboard-recognition.png';
+import { Image } from 'astro:assets';
 
 const metadata = {
   title: 'Recognition — Jonathan Root',
@@ -29,7 +30,7 @@ const metadata = {
   >
     <Fragment slot="image">
       <div class="flex items-center justify-center h-full px-6 py-8">
-        <img src={springboardCard.src} alt="Springboard COVID-19 Scholarship recognition — handwritten card and Moleskine notebook gift" class="w-full rounded-lg shadow-md border border-gray-200 dark:border-gray-700" />
+        <Image src={springboardCard} alt="Springboard COVID-19 Scholarship recognition — handwritten card and Moleskine notebook gift" class="w-full rounded-lg shadow-md border border-gray-200 dark:border-gray-700" />
       </div>
     </Fragment>
     <Fragment slot="content">
