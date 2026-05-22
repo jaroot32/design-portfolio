@@ -1,0 +1,232 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Content from '~/components/widgets/Content.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'Social & Collaborative Learning Spaces — UMGC LDTC 620',
+};
+---
+
+<Layout metadata={metadata}>
+  <Hero tagline="Learning Theory · Emerging Technologies · UMGC LDTC 620">
+    <Fragment slot="title">
+      Social & Collaborative<br />
+      <span class="text-accent dark:text-white">Learning Spaces</span>
+    </Fragment>
+    <Fragment slot="subtitle">
+      An applied analysis of Bandura's Social Learning Theory across emerging technologies and online platforms — examining how GitHub, Slack, Discord, AI coding tools, LinkedIn Learning, and YouTube each activate the conditions adult learners need to observe, retain, and reproduce new skills.
+    </Fragment>
+  </Hero>
+
+  <!-- Context -->
+  <Content
+    tagline="The Assignment"
+    title="Learning theory meets professional tools"
+    isReversed
+  >
+    <Fragment slot="image">
+      <div class="flex items-center justify-center h-full py-12">
+        <div class="text-center">
+          <p class="text-7xl font-bold font-heading text-accent leading-none">LDTC<br/>620</p>
+          <p class="text-xl text-muted mt-3">UMGC</p>
+          <div class="mt-8 space-y-2 text-sm text-muted">
+            <p class="font-semibold text-gray-700 dark:text-gray-300">Unit 4 Assignment</p>
+            <p>Social & Collaborative Learning Spaces</p>
+            <p>Next Generation Design: Emerging Technology,</p>
+            <p>Gamification, and AI in Learning Design</p>
+          </div>
+        </div>
+      </div>
+    </Fragment>
+    <Fragment slot="content">
+      <p class="mb-4">The Unit 4 assignment for LDTC 620 — Next Generation Design: Emerging Technology, Gamification, and AI in Learning Design at UMGC — asked students to analyze how a foundational learning theory applies to emerging technologies and social platforms used in online collaborative learning environments.</p>
+      <p class="mb-4">I chose Bandura's Social Learning Theory as the analytical framework, then evaluated five platforms and tools from my own professional practice: GitHub, Slack and Discord, AI coding tools (GitHub Copilot and Claude), LinkedIn Learning, and YouTube. The analysis drew directly on experience teaching web development at the University of Washington, Chegg Skills, Udacity, OpenClassrooms, Springboard, and Upright Education.</p>
+      <p>The goal was not a theoretical overview — it was a practical design brief connecting learning science to the specific tools adult learners and instructors actually use.</p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 section-pattern-b"></div>
+    </Fragment>
+  </Content>
+
+  <!-- SLT Four Processes -->
+  <Features3
+    tagline="The Framework"
+    title="Bandura's four mediational processes"
+    subtitle="Social Learning Theory holds that people learn by observing others — but only when four conditions are met. These processes map directly onto how adults learn new tools and technologies."
+    columns={2}
+    items={[
+      {
+        title: 'Attention',
+        description: 'The learner must notice the behavior and find it worth imitating. In technical training, this means demonstrations need to be visible, relevant, and performed by a credible model — a peer, an instructor, or an expert the learner aspires to become.',
+        icon: 'tabler:eye',
+      },
+      {
+        title: 'Retention',
+        description: 'Observed behavior must be stored in memory to be recalled later. Searchable Slack threads, recorded screencasts, and GitHub commit histories all serve as external retention systems — extending what a single learning session can hold.',
+        icon: 'tabler:brain',
+      },
+      {
+        title: 'Reproduction',
+        description: 'The learner must be capable of replicating what they observed. Peer code review, hands-on exercises, and pull request workflows create the low-stakes reproduction opportunities that bridge observation and independent performance.',
+        icon: 'tabler:repeat',
+      },
+      {
+        title: 'Motivation',
+        description: 'A perceived positive outcome drives the learner to imitate the behavior. Using industry-standard tools from day one — tools that appear on job listings and employer profiles — gives learners a concrete reason to engage that extends beyond the course.',
+        icon: 'tabler:flame',
+      },
+    ]}
+  />
+
+  <!-- Technologies -->
+  <Features3
+    tagline="The Tools"
+    title="Five platforms analyzed through an SLT lens"
+    subtitle="Each tool evaluated for which observational models it activates, where it supports or limits the four mediational processes, and how it connects to real instructional practice."
+    columns={3}
+    items={[
+      {
+        title: 'GitHub',
+        description: 'Activates all three observational models simultaneously — commit histories as symbolic models, README documentation as verbal instruction, and pull request workflows as motor reproduction. Industry-authentic and motivating by design.',
+        icon: 'tabler:brand-github',
+      },
+      {
+        title: 'Slack & Discord',
+        description: 'Primary verbal instructional modeling platforms. Threaded Q&A, searchable message history, and real-time peer channels create persistent knowledge structures that support retention across a cohort. Used across Springboard and Upright Education.',
+        icon: 'tabler:message-circle',
+      },
+      {
+        title: 'AI Coding Tools',
+        description: 'GitHub Copilot and Claude function as always-available symbolic models — learners observe AI-generated code, evaluate it critically, and reproduce or refine it. The instructional design challenge: building critical evaluation alongside AI fluency.',
+        icon: 'tabler:robot',
+      },
+      {
+        title: 'LinkedIn Learning',
+        description: 'A large-scale symbolic modeling environment where professional credentialing activates motivation directly. Visible badges and peer endorsements create social proof that learning has career value — driving imitation through perceived consequence.',
+        icon: 'tabler:brand-linkedin',
+      },
+      {
+        title: 'YouTube',
+        description: 'The most accessible symbolic modeling platform in existence — and free. For technical learners, live-coding streams and code review walkthroughs deliver expert-level observational learning at scale. Comment sections add a peer verbal modeling layer.',
+        icon: 'tabler:brand-youtube',
+      },
+    ]}
+  />
+
+  <!-- Best Practices -->
+  <Content
+    tagline="Best Practices"
+    title="Designing for social learning in technical environments"
+  >
+    <Fragment slot="image">
+      <div class="flex items-center justify-center h-full px-6 py-8">
+        <div class="w-full space-y-4">
+          {[
+            {
+              num: '01',
+              label: 'Model Explicitly',
+              detail: 'Use Zoom screensharing, Loom recordings, or GitHub commits to demonstrate skills in real time before asking learners to reproduce them.',
+            },
+            {
+              num: '02',
+              label: 'Layer Your Tools',
+              detail: 'Combine platforms intentionally — GitHub for reproduction, Slack/Discord for verbal modeling, YouTube for symbolic modeling. Each tool serves a different SLT function.',
+            },
+            {
+              num: '03',
+              label: 'Build in Peer Observation',
+              detail: 'Design peer code review, discussion boards, and collaborative projects so learners observe and learn from each other, not just from the instructor.',
+            },
+            {
+              num: '04',
+              label: 'Motivate with Authenticity',
+              detail: 'Use industry-standard tools from day one. When learners know their GitHub profile is visible to employers, motivation increases — because the consequence is real.',
+            },
+          ].map(({ num, label, detail }) => (
+            <div class="bg-gray-50 dark:bg-gray-800 rounded-lg p-4 border border-gray-200 dark:border-gray-700 flex gap-4">
+              <span class="text-2xl font-bold font-heading text-accent leading-none shrink-0">{num}</span>
+              <div>
+                <p class="text-sm font-semibold text-gray-800 dark:text-gray-200 mb-1">{label}</p>
+                <p class="text-sm text-gray-600 dark:text-gray-400">{detail}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </Fragment>
+    <Fragment slot="content">
+      <p class="mb-4">The most effective online collaborative learning environments don't rely on a single platform — they layer tools so that each one handles a distinct SLT function. A learner might observe a skill on YouTube (symbolic model), ask a clarifying question in a Discord channel (verbal instruction), then reproduce it in a GitHub repository (motor reproduction) — all in one learning session.</p>
+      <p class="mb-4">This layered approach is what I've applied across every technical teaching role. At Upright Education, Discord and GitHub worked as a system: learners observed solutions in Discord and immediately reproduced them in their repositories. That combination covered all four mediational processes in a single session.</p>
+      <p>The same principle applies directly to AI tool adoption in the workplace. Employees learning to use AI in their daily workflows need the same conditions: a credible model to observe, a low-stakes environment to reproduce, and a visible reason to try.</p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 section-pattern-d"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Video -->
+  <div class="max-w-4xl mx-auto px-4 md:px-8 py-12 md:py-16">
+    <div class="text-center mb-8">
+      <p class="text-base text-secondary dark:text-blue-200 font-bold tracking-wide uppercase mb-2">Presentation Recording</p>
+      <h2 class="text-4xl md:text-5xl font-bold tracking-tighter font-heading">Watch the Presentation</h2>
+      <p class="text-lg text-muted mt-4">Full recorded presentation — "Social & Collaborative Learning Spaces: Applying Bandura's Social Learning Theory to Emerging Technologies" — UMGC LDTC 620, Unit 4.</p>
+    </div>
+    <div class="relative w-full rounded-lg shadow-lg overflow-hidden" style="padding-top: 56.25%;">
+      <iframe
+        class="absolute inset-0 w-full h-full"
+        src="https://www.youtube.com/embed/n_jvDzGZqeI"
+        title="Social & Collaborative Learning Spaces — Bandura's Social Learning Theory & Emerging Technologies | UMGC LDTC 620"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      ></iframe>
+    </div>
+  </div>
+
+  <!-- Reflection -->
+  <Content
+    tagline="Reflection"
+    title="The same theory that explains how developers learn explains how employees learn AI"
+    isReversed
+  >
+    <Fragment slot="image">
+      <div class="flex items-center justify-center h-full py-12">
+        <div class="text-center">
+          <p class="text-8xl font-bold font-heading text-accent leading-none">2026</p>
+          <p class="text-xl text-muted mt-3">UMGC</p>
+          <div class="mt-8 space-y-2 text-sm text-muted">
+            <p class="font-semibold text-gray-700 dark:text-gray-300">LDTC 620</p>
+            <p>Next Generation Design</p>
+            <p>Emerging Technology, Gamification &amp; AI</p>
+          </div>
+        </div>
+      </div>
+    </Fragment>
+    <Fragment slot="content">
+      <p class="mb-4">What this analysis reinforced for me is how consistently Bandura's framework holds across different technical learning contexts — from a beginner learning CSS positioning in a UW bootcamp classroom to an employee learning to write their first AI prompt in a corporate onboarding program. The conditions for observational learning don't change based on the tool being learned. They change based on how well the learning environment is designed to meet them.</p>
+      <p class="mb-4">AI adoption training is the current version of a familiar challenge: helping adults build fluency with a new technical tool that is evolving faster than formal curriculum can keep up with. The answer is the same as it's always been — credible models, low-stakes reproduction opportunities, peer learning structures, and authentic motivation. The platforms are different. The theory is the same.</p>
+      <div class="mt-6 flex flex-wrap gap-2">
+        {['Social Learning Theory', 'Bandura', 'Adult Learning', 'GitHub', 'AI Tools', 'Collaborative Learning', 'Online Learning Design', 'UMGC', 'LDTC 620', 'Emerging Technologies'].map(tag => (
+          <span class="bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 text-sm font-medium px-3 py-1 rounded-full">{tag}</span>
+        ))}
+      </div>
+      <p class="text-sm text-muted mt-4">UMGC LDTC 620 — Next Generation Design: Emerging Technology, Gamification, and AI in Learning Design, Unit 4, 2026.</p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 section-pattern"></div>
+    </Fragment>
+  </Content>
+
+  <CallToAction
+    actions={[
+      { variant: 'primary', text: 'View All Projects', href: '/projects' },
+      { text: 'Get in Touch', href: '/about#contact' },
+    ]}
+  >
+    <Fragment slot="title">Interested in working together?</Fragment>
+    <Fragment slot="subtitle">I'm open to remote opportunities in instructional design and technical learning experience design.</Fragment>
+  </CallToAction>
+</Layout>
