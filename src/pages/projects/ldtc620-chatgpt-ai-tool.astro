@@ -1,0 +1,256 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Content from '~/components/widgets/Content.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'ChatGPT as an AI-Powered Learning Tool — UMGC LDTC 620',
+};
+---
+
+<Layout metadata={metadata}>
+  <Hero tagline="Instructional Design · AI Tools · UMGC LDTC 620">
+    <Fragment slot="title">
+      ChatGPT as an AI-Powered<br />
+      <span class="text-accent dark:text-white">Learning Tool</span>
+    </Fragment>
+    <Fragment slot="subtitle">
+      A research-backed analysis and implementation strategy for integrating ChatGPT into technical SaaS customer education — covering tool evaluation, a phased adoption framework, and a practical AI Tool Guide for learning designers.
+    </Fragment>
+  </Hero>
+
+  <!-- Context -->
+  <Content
+    tagline="The Assignment"
+    title="Evaluating a free AI tool for learning design"
+    isReversed
+  >
+    <Fragment slot="image">
+      <div class="flex items-center justify-center h-full py-12">
+        <div class="text-center">
+          <p class="text-7xl font-bold font-heading text-accent leading-none">LDTC<br/>620</p>
+          <p class="text-xl text-muted mt-3">UMGC</p>
+          <div class="mt-8 space-y-2 text-sm text-muted">
+            <p class="font-semibold text-gray-700 dark:text-gray-300">Unit 7 Assignment</p>
+            <p>Exploring Free AI-Powered Tools</p>
+            <p>Learning Design & Technology</p>
+          </div>
+        </div>
+      </div>
+    </Fragment>
+    <Fragment slot="content">
+      <p class="mb-4">As part of LDTC 620 — Learning Design & Technology — at the University of Maryland Global Campus, the Unit 7 assignment asked students to identify and evaluate a free AI-powered tool with meaningful applications for adult learning and instructional design.</p>
+      <p class="mb-4">I chose ChatGPT, developed by OpenAI, and framed my analysis around a specific professional context: technical SaaS customer education. Rather than treating this as an abstract tool review, I designed the presentation to function as a practical adoption brief — the kind a learning design team could actually use to make a deployment decision.</p>
+      <p>The deliverable included a recorded presentation and a one-page AI Tool Guide designed as a quick reference for instructors and training coordinators.</p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 section-pattern-b"></div>
+    </Fragment>
+  </Content>
+
+  <!-- 3-Phase Framework -->
+  <Features3
+    tagline="Implementation Strategy"
+    title="A 3-phase adoption framework"
+    subtitle="A phased rollout minimizing risk while building organizational confidence — from designer-side efficiency gains to learner-facing AI support to data-informed iteration."
+    columns={3}
+    items={[
+      {
+        title: 'Phase 1 — Designer-Side Integration',
+        description: 'Start immediately with no learner-facing deployment. Use ChatGPT to generate first drafts of course outlines, learning objectives, quiz questions, and scenario scripts — reducing production time from hours to minutes.',
+        icon: 'tabler:edit',
+      },
+      {
+        title: 'Phase 2 — Learner-Facing Support',
+        description: 'Deploy a Custom GPT trained on product documentation, FAQs, and training materials — embedded in the customer portal as a 24/7 self-serve learning assistant. Learners get instant answers without requiring live support.',
+        icon: 'tabler:robot',
+      },
+      {
+        title: 'Phase 3 — Data-Informed Iteration',
+        description: 'Review ChatGPT conversation logs to identify the most common learner questions and confusion points. Use these insights to update the formal curriculum, aligned with xAPI analytics for a complete picture of learner behavior.',
+        icon: 'tabler:chart-line',
+      },
+    ]}
+  />
+
+  <!-- Educational Benefits -->
+  <Features3
+    tagline="Educational Benefits"
+    title="How ChatGPT enhances adult learning"
+    subtitle="Four capabilities that directly address the challenges of training adult learners in complex technical environments."
+    columns={2}
+    items={[
+      {
+        title: 'Personalized Just-in-Time Support',
+        description: 'Learners ask specific questions at the exact moment of confusion — without waiting for a live instructor or searching documentation. This reduces time to competency and respects the limited availability of adult learners.',
+        icon: 'tabler:clock',
+      },
+      {
+        title: 'Scenario-Based Practice at Scale',
+        description: 'Learning designers can generate realistic practice scenarios, case studies, and roleplay exercises tailored to specific user personas — developer, project manager, compliance officer — in minutes rather than days.',
+        icon: 'tabler:users',
+      },
+      {
+        title: 'Accelerated Content Production',
+        description: 'Drafting learning objectives, quiz questions, and storyboard outlines now takes minutes instead of hours. This frees instructional designers to focus on higher-order design decisions and learner experience.',
+        icon: 'tabler:bolt',
+      },
+      {
+        title: 'Custom GPT Learning Assistants',
+        description: 'Organizations can build purpose-built AI tutors trained on their own product documentation and style guides — creating a persistent learning assistant specific to their platform and learner population.',
+        icon: 'tabler:brain',
+      },
+    ]}
+  />
+
+  <!-- Challenges -->
+  <Content
+    tagline="Challenges & Limitations"
+    title="Know before you deploy"
+  >
+    <Fragment slot="image">
+      <div class="flex items-center justify-center h-full px-6 py-8">
+        <div class="w-full space-y-4">
+          {[
+            { label: 'Hallucination Risk', detail: 'All AI-generated content requires human expert review before deployment to learners.' },
+            { label: 'Data Privacy', detail: 'Free tier conversations may be used for model training. Evaluate FERPA and GDPR compliance before sharing learner data.' },
+            { label: 'Over-Reliance Risk', detail: 'Heavy AI assistance can produce shallower conceptual understanding (Kapur, 2016). Balance with productive struggle.' },
+            { label: 'Accessibility Gaps', detail: 'Text-based interface and internet dependency creates barriers for some learners. Supplement with multimodal alternatives.' },
+          ].map(({ label, detail }) => (
+            <div class="bg-gray-50 dark:bg-gray-800 rounded-lg p-4 border border-gray-200 dark:border-gray-700">
+              <p class="text-sm font-semibold text-gray-800 dark:text-gray-200 mb-1">{label}</p>
+              <p class="text-sm text-gray-600 dark:text-gray-400">{detail}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </Fragment>
+    <Fragment slot="content">
+      <p class="mb-4">Responsible AI adoption requires honestly accounting for what the tool cannot do — and building workflows that manage those risks before deployment rather than after.</p>
+      <p class="mb-4">The analysis drew on Manu Kapur's research on productive failure (2016) to address the over-reliance risk: learners who rely too heavily on AI assistance for problem-solving can develop shallower conceptual understanding than those who engage in structured productive struggle. This finding directly shaped the curriculum design recommendations — AI support and intentional challenge need to coexist in a well-designed learning program.</p>
+      <p>The final recommendation was a qualified yes: adopt ChatGPT with clear guardrails, content validation workflows, and a phased rollout beginning with designer-side integration.</p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 section-pattern-d"></div>
+    </Fragment>
+  </Content>
+
+  <!-- AI Tool Guide callout -->
+  <Content
+    tagline="Deliverable"
+    title="AI Tool Guide — a practical quick reference"
+    isReversed
+  >
+    <Fragment slot="image">
+      <div class="flex items-center justify-center h-full px-6 py-8">
+        <div class="w-full bg-gray-50 dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-6">
+          <p class="text-xs font-semibold text-muted uppercase tracking-wide mb-4">AI Tool Guide — ChatGPT for Learning Design</p>
+          <div class="grid grid-cols-2 gap-4 text-sm">
+            <div>
+              <p class="font-semibold text-gray-700 dark:text-gray-300 mb-1">Key Features</p>
+              <ul class="text-gray-600 dark:text-gray-400 space-y-1 text-xs">
+                <li>Instant content generation</li>
+                <li>Custom GPT builder</li>
+                <li>Conversational tutoring</li>
+                <li>Scenario & case study creation</li>
+                <li>API integration capability</li>
+                <li>Free tier — no credit card</li>
+              </ul>
+            </div>
+            <div>
+              <p class="font-semibold text-gray-700 dark:text-gray-300 mb-1">Use Cases</p>
+              <ul class="text-gray-600 dark:text-gray-400 space-y-1 text-xs">
+                <li>New hire & customer onboarding</li>
+                <li>Learning objective generation</li>
+                <li>Scenario creation at scale</li>
+                <li>Learner feedback analysis</li>
+                <li>Storyboard & script drafting</li>
+                <li>Multilingual support</li>
+              </ul>
+            </div>
+          </div>
+          <div class="mt-4 pt-4 border-t border-gray-200 dark:border-gray-700">
+            <p class="font-semibold text-gray-700 dark:text-gray-300 mb-1 text-sm">Best Practices</p>
+            <ul class="text-gray-600 dark:text-gray-400 space-y-1 text-xs">
+              <li>Always validate AI content against authoritative sources</li>
+              <li>Use specific, detailed prompts with learner persona and objectives</li>
+              <li>Balance AI support with productive struggle in design</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </Fragment>
+    <Fragment slot="content">
+      <p class="mb-4">The assignment required a one-page AI Tool Guide as a standalone deliverable — a practical quick reference that an instructor or training coordinator could use immediately without reading a longer report.</p>
+      <p class="mb-4">The guide summarizes key features, best practices, use cases, and limitations in a format designed for real-world reference: dense enough to be useful, scannable enough to be used under time pressure. It reflects a core instructional design principle — the job aid should match the performance context of the person who will use it.</p>
+      <p>Designing a reference document for training professionals, rather than writing for an academic audience, required a shift from comprehensive analysis to deliberate prioritization of what practitioners actually need at the point of decision.</p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 section-pattern-e"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Video -->
+  <div class="max-w-4xl mx-auto px-4 md:px-8 py-12 md:py-16">
+    <div class="text-center mb-8">
+      <p class="text-base text-secondary dark:text-blue-200 font-bold tracking-wide uppercase mb-2">Presentation Recording</p>
+      <h2 class="text-4xl md:text-5xl font-bold tracking-tighter font-heading">Watch the Presentation</h2>
+      <p class="text-lg text-muted mt-4">Full recorded presentation — "Leveraging ChatGPT as an AI-Powered Learning Tool" — UMGC LDTC 620, Unit 7.</p>
+    </div>
+    <div class="relative w-full rounded-lg shadow-lg overflow-hidden" style="padding-top: 56.25%;">
+      <iframe
+        class="absolute inset-0 w-full h-full"
+        src="https://www.youtube.com/embed/boT3Il2QYtg"
+        title="Leveraging ChatGPT as an AI-Powered Learning Tool — UMGC LDTC 620"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      ></iframe>
+    </div>
+  </div>
+
+  <!-- Reflection -->
+  <Content
+    tagline="Reflection"
+    title="AI tool training is adult learning — the skills transfer directly"
+  >
+    <Fragment slot="image">
+      <div class="flex items-center justify-center h-full py-12">
+        <div class="text-center">
+          <p class="text-8xl font-bold font-heading text-accent leading-none">2024</p>
+          <p class="text-xl text-muted mt-3">UMGC</p>
+          <div class="mt-8 space-y-2 text-sm text-muted">
+            <p class="font-semibold text-gray-700 dark:text-gray-300">LDTC 620</p>
+            <p>Learning Design & Technology</p>
+            <p>Unit 7 — AI Tool Evaluation</p>
+          </div>
+        </div>
+      </div>
+    </Fragment>
+    <Fragment slot="content">
+      <p class="mb-4">The core insight from this project is one I carry into every engagement: training adult learners to use AI tools is not a new category of work. It draws on the same principles that govern any technical skills training for adults — meeting learners where they are, reducing time to first success, designing for the moment of confusion rather than the moment of completion, and building enough structure to support independent performance.</p>
+      <p class="mb-4">What changes with AI is the pace of tool evolution and the need for learning designers to themselves become fluent users. A training program for AI adoption is only as good as the designer's ability to demonstrate what good looks like — which means practitioners need to use these tools daily, not just study them academically.</p>
+      <div class="mt-6 flex flex-wrap gap-2">
+        {['AI in Learning Design', 'ChatGPT', 'Adult Learning', 'SaaS Customer Education', 'Implementation Strategy', 'UMGC', 'LDTC 620', 'AI Adoption', 'Instructional Design'].map(tag => (
+          <span class="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-sm font-medium px-3 py-1 rounded-full">{tag}</span>
+        ))}
+      </div>
+      <p class="text-sm text-muted mt-4">UMGC LDTC 620 — Learning Design & Technology, Unit 7 Assignment, 2024.</p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 section-pattern"></div>
+    </Fragment>
+  </Content>
+
+  <CallToAction
+    actions={[
+      { variant: 'primary', text: 'View All Projects', href: '/projects' },
+      { text: 'Get in Touch', href: '/about#contact' },
+    ]}
+  >
+    <Fragment slot="title">Interested in working together?</Fragment>
+    <Fragment slot="subtitle">I'm open to remote opportunities in instructional design and technical learning experience design.</Fragment>
+  </CallToAction>
+</Layout>
