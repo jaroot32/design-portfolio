@@ -58,7 +58,7 @@ const currentPath = `/${trimSlash(new URL(Astro.url).pathname)}`;
   <div class="absolute inset-0"></div>
   <!-- Scroll progress bar -->
   <div class="absolute bottom-0 left-0 w-full h-0.5 bg-transparent z-50">
-    <div id="scroll-progress" class="h-full bg-accent transition-none origin-left" style="width: 0%"></div>
+    <div id="scroll-progress" class="h-full w-full origin-left transition-none" style="transform: scaleX(0); background: linear-gradient(to right, #ff0000, #ff7700, #ffff00, #00cc00, #0099ff, #6600ff, #cc00ff);"></div>
   </div>
   <div
     class:list={[
@@ -177,8 +177,8 @@ const currentPath = `/${trimSlash(new URL(Astro.url).pathname)}`;
     const update = () => {
       const scrollTop = window.scrollY;
       const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-      const pct = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
-      bar.style.width = pct + '%';
+      const pct = docHeight > 0 ? scrollTop / docHeight : 0;
+      bar.style.transform = `scaleX(${pct})`;
     };
     window.addEventListener('scroll', update, { passive: true });
     update();
