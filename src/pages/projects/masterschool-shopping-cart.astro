@@ -1,0 +1,158 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Content from '~/components/widgets/Content.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'Build a Shopping Cart — Masterschool Project Walkthrough',
+};
+---
+
+<Layout metadata={metadata}>
+  <Hero tagline="Mentor · Instructional Design · Loom · Masterschool · Udacity · 2022">
+    <Fragment slot="title">
+      Build a Shopping Cart —<br />
+      <span class="text-accent dark:text-white">Step-by-Step Project Walkthrough</span>
+    </Fragment>
+    <Fragment slot="subtitle">
+      Recorded a step-by-step Loom screencast walkthrough for Masterschool students working through the Build a Shopping Cart project on the Udacity platform — guiding them from project setup through to completion.
+    </Fragment>
+  </Hero>
+
+  <!-- Context -->
+  <Content
+    tagline="The Project"
+    title="Walking students through a real project, start to finish"
+    isReversed
+  >
+    <Fragment slot="image">
+      <div class="flex items-center justify-center h-full py-12">
+        <div class="text-center">
+          <p class="text-7xl font-bold font-heading text-accent leading-none">Shop<br/>ping<br/>Cart</p>
+          <p class="text-xl text-muted mt-3">Masterschool · Udacity</p>
+          <div class="mt-8 space-y-2 text-sm text-muted">
+            <p class="font-semibold text-gray-700 dark:text-gray-300">Mentor · Instructional Design</p>
+            <p>Loom Screencast Walkthrough</p>
+            <p>2022</p>
+          </div>
+        </div>
+      </div>
+    </Fragment>
+    <Fragment slot="content">
+      <p class="mb-4">Masterschool incorporated the Udacity platform into parts of their curriculum, giving students access to industry-aligned projects alongside their core bootcamp coursework. One of those projects was Build a Shopping Cart — a practical, hands-on exercise that required students to apply their development skills to a real-world feature.</p>
+      <p class="mb-4">For students navigating an unfamiliar platform and tackling a project without prior context, knowing where to start and how to move through each step is its own challenge — separate from the technical skills themselves. Getting stuck at the setup stage or unsure how to approach the project structure slows learning before it even begins.</p>
+      <p>I recorded a step-by-step Loom walkthrough that guided students through the full project — from initial setup to final completion — so they could follow along at their own pace, pause and rewind as needed, and work through the project with a clear path forward.</p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 section-pattern-b"></div>
+    </Fragment>
+  </Content>
+
+  <!-- What the guide covered -->
+  <Features3
+    tagline="The Walkthrough"
+    title="One guide, one project, from setup to completion"
+    subtitle="The walkthrough was scoped to the full Build a Shopping Cart project — giving students a clear path from the first step to the last."
+    columns={3}
+    items={[
+      {
+        title: 'Project Setup',
+        description: 'Walking students through how to access the project on the Udacity platform, understand the requirements, and get the local environment ready before writing any code.',
+        icon: 'tabler:settings',
+      },
+      {
+        title: 'Step-by-Step Build',
+        description: 'A guided walkthrough of building the shopping cart feature — covering the key steps, decisions, and implementation details students needed to complete the project successfully.',
+        icon: 'tabler:shopping-cart',
+      },
+      {
+        title: 'Project Completion',
+        description: 'Guidance on finishing the project, reviewing the requirements, and confirming everything is in place before submitting — reducing uncertainty around what "done" actually looks like.',
+        icon: 'tabler:circle-check',
+      },
+    ]}
+  />
+
+  <!-- Why screencasts for project walkthroughs -->
+  <Content
+    tagline="The Approach"
+    title="Why a screencast works better than written instructions for project work"
+  >
+    <Fragment slot="content">
+      <p class="mb-4">Written project instructions tell students what to build. A screencast shows them how to build it. For students working through a hands-on coding project on an unfamiliar platform, seeing the full workflow in motion — the setup, the decisions, the progression from step to step — removes the ambiguity that written docs often leave behind.</p>
+      <p class="mb-4">Loom walkthroughs are especially effective for project-based learning because students can pause at exactly the moment they need to catch up, replay sections they didn't fully follow, and move at their own pace without waiting for a live session.</p>
+      <p>This mirrors the approach that works in workplace AI adoption training: meet people at the moment of confusion with something specific, visual, and immediately actionable — rather than documentation they have to translate into action on their own.</p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 section-pattern-d"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Video -->
+  <div class="max-w-4xl mx-auto px-4 md:px-8 py-12 md:py-16">
+    <div class="text-center mb-10">
+      <p class="text-base text-secondary dark:text-blue-200 font-bold tracking-wide uppercase mb-2">Screencast Guide</p>
+      <h2 class="text-4xl md:text-5xl font-bold tracking-tighter font-heading">Watch the Walkthrough</h2>
+      <p class="text-lg text-muted mt-4">Step-by-step Loom guide recorded for Masterschool students working through the Build a Shopping Cart project on Udacity, 2022.</p>
+    </div>
+    <div>
+      <h3 class="text-lg font-semibold mb-3">Build a Shopping Cart — Full Project Walkthrough</h3>
+      <div class="relative w-full rounded-lg shadow-lg overflow-hidden" style="padding-top: 56.25%;">
+        <iframe
+          class="absolute inset-0 w-full h-full"
+          src="https://www.youtube.com/embed/H7ybB3nEMkY"
+          title="Step-by-Step Guide: Build a Shopping Cart — Masterschool & Udacity"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+      </div>
+    </div>
+  </div>
+
+  <!-- Reflection -->
+  <Content
+    tagline="Reflection"
+    title="Project walkthroughs are a core part of practical technical training"
+    isReversed
+  >
+    <Fragment slot="image">
+      <div class="flex items-center justify-center h-full py-12">
+        <div class="text-center">
+          <p class="text-8xl font-bold font-heading text-accent leading-none">2022</p>
+          <p class="text-xl text-muted mt-3">Masterschool · Udacity</p>
+          <div class="mt-8 space-y-2 text-sm text-muted">
+            <p class="font-semibold text-gray-700 dark:text-gray-300">Mentor · Instructional Design</p>
+            <p>Loom Screencast Walkthrough</p>
+            <p>Build a Shopping Cart</p>
+          </div>
+        </div>
+      </div>
+    </Fragment>
+    <Fragment slot="content">
+      <p class="mb-4">What this project reinforced is that learners don't just need to know what to build — they need to see how to approach it. The gap between understanding a concept and applying it to a real project is where most learners get stuck, and a step-by-step walkthrough bridges that gap in a way that written instructions rarely do.</p>
+      <p class="mb-4">Recording this guide as part of my mentoring work at Masterschool was also an exercise in instructional design under real constraints: identifying the decision points where students would most likely get confused, pacing the walkthrough to be followable without being hand-held, and keeping the content focused enough to be useful in one sitting.</p>
+      <div class="mt-6 flex flex-wrap gap-2">
+        {['Loom', 'Screencast', 'Project Walkthrough', 'Technical Onboarding', 'Async Learning', 'Udacity', 'Masterschool', 'Instructional Design', 'Adult Learning', 'JavaScript'].map(tag => (
+          <span class="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-sm font-medium px-3 py-1 rounded-full">{tag}</span>
+        ))}
+      </div>
+      <p class="text-sm text-muted mt-4">Mentor & Instructional Design, Masterschool — Build a Shopping Cart Project Walkthrough, Udacity, 2022.</p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 section-pattern"></div>
+    </Fragment>
+  </Content>
+
+  <CallToAction
+    actions={[
+      { variant: 'primary', text: 'View All Projects', href: '/projects' },
+      { text: 'Get in Touch', href: '/about#contact' },
+    ]}
+  >
+    <Fragment slot="title">Interested in working together?</Fragment>
+    <Fragment slot="subtitle">I'm open to remote opportunities in instructional design and technical learning experience design.</Fragment>
+  </CallToAction>
+</Layout>
