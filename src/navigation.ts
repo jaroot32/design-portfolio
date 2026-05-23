@@ -25,7 +25,6 @@ export const footerData = {
   ],
   socialLinks: [
     { ariaLabel: 'LinkedIn', icon: 'tabler:brand-linkedin', href: 'https://www.linkedin.com/in/jonathanroot/' },
-    { ariaLabel: 'Github', icon: 'tabler:brand-github', href: 'https://github.com/jaroot32' },
   ],
   footNote: `Jonathan Root · Technical Learning Experience Designer`,
 };
