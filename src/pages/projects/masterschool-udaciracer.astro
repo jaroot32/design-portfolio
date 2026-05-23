@@ -1,0 +1,158 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Content from '~/components/widgets/Content.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'UdaciRacer Project Walkthrough — Masterschool',
+};
+---
+
+<Layout metadata={metadata}>
+  <Hero tagline="Mentor · Live Session · JavaScript · Masterschool · Udacity · 2022">
+    <Fragment slot="title">
+      UdaciRacer —<br />
+      <span class="text-accent dark:text-white">JavaScript Project Walkthrough & Live Q&A</span>
+    </Fragment>
+    <Fragment slot="subtitle">
+      A live project walkthrough session for Masterschool students working through UdaciRacer on the Udacity curriculum — a JavaScript racing game that puts async programming, the Fetch API, and DOM manipulation into practice through a real interactive project.
+    </Fragment>
+  </Hero>
+
+  <!-- Context -->
+  <Content
+    tagline="The Session"
+    title="Async JavaScript in action through a real game project"
+    isReversed
+  >
+    <Fragment slot="image">
+      <div class="flex items-center justify-center h-full py-12">
+        <div class="text-center">
+          <p class="text-7xl font-bold font-heading text-accent leading-none">Udaci<br/>Racer</p>
+          <p class="text-xl text-muted mt-3">Masterschool · Udacity</p>
+          <div class="mt-8 space-y-2 text-sm text-muted">
+            <p class="font-semibold text-gray-700 dark:text-gray-300">Mentor · Live Session</p>
+            <p>Async JavaScript · Fetch API</p>
+            <p>March 2022</p>
+          </div>
+        </div>
+      </div>
+    </Fragment>
+    <Fragment slot="content">
+      <p class="mb-4">UdaciRacer is one of Udacity's intermediate JavaScript projects — a browser-based racing game where students build the front-end logic that connects to a provided Node.js server via API calls. It's the kind of project that takes abstract concepts like Promises, async/await, and the Fetch API and puts them in a context where they have to actually work together to produce something functional and interactive.</p>
+      <p class="mb-4">For Masterschool students working through Udacity's curriculum, this project is a significant step up in complexity. It requires understanding how to make asynchronous API calls, handle responses, update the DOM dynamically, and manage state across a running game — all at once. That's a lot of moving parts for learners who may be encountering async JavaScript seriously for the first time.</p>
+      <p>I led a live walkthrough session that guided students through the project from setup through implementation — breaking down the async patterns, explaining how the Fetch API communicates with the server, and working through the DOM manipulation needed to bring the game to life.</p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 section-pattern-b"></div>
+    </Fragment>
+  </Content>
+
+  <!-- What the session covered -->
+  <Features3
+    tagline="Session Topics"
+    title="JavaScript concepts applied to a real interactive project"
+    subtitle="UdaciRacer brought together several intermediate JavaScript concepts — the session focused on making those connections clear in the context of a working game."
+    columns={3}
+    items={[
+      {
+        title: 'Async JavaScript',
+        description: 'Breaking down how Promises and async/await work in practice — how to write asynchronous code that waits for data before continuing, and why that pattern is essential when working with APIs and real-time data.',
+        icon: 'tabler:clock-play',
+      },
+      {
+        title: 'The Fetch API',
+        description: 'How to use the Fetch API to make HTTP requests to the provided Node.js server — covering GET and POST requests, handling JSON responses, and managing errors when something goes wrong.',
+        icon: 'tabler:api',
+      },
+      {
+        title: 'DOM Manipulation',
+        description: 'Using JavaScript to dynamically update the page as the race progresses — rendering race tracks, updating player positions, and reflecting game state changes in the UI without page reloads.',
+        icon: 'tabler:code',
+      },
+      {
+        title: 'Project Setup',
+        description: 'Getting the local development environment running — starting the Node.js server, understanding the project structure, and knowing what each file is responsible for before writing any code.',
+        icon: 'tabler:terminal-2',
+      },
+      {
+        title: 'State Management',
+        description: 'Managing game state across an async, event-driven application — tracking race progress, player selections, and game outcomes in a way that stays in sync with both the server and the UI.',
+        icon: 'tabler:database',
+      },
+      {
+        title: 'Live Q&A',
+        description: 'Students asked questions throughout the session — on async patterns, debugging fetch calls, working with the API responses, and understanding how the front-end and server communicate during a live race.',
+        icon: 'tabler:message-question',
+      },
+    ]}
+  />
+
+  <!-- Video -->
+  <div class="max-w-4xl mx-auto px-4 md:px-8 py-12 md:py-16">
+    <div class="text-center mb-10">
+      <p class="text-base text-secondary dark:text-blue-200 font-bold tracking-wide uppercase mb-2">Session Recording</p>
+      <h2 class="text-4xl md:text-5xl font-bold tracking-tighter font-heading">Watch the Walkthrough</h2>
+      <p class="text-lg text-muted mt-4">Live project walkthrough and Q&A session for Masterschool students on the UdaciRacer project, March 2022.</p>
+    </div>
+    <div>
+      <h3 class="text-lg font-semibold mb-3">UdaciRacer — Async JavaScript, Fetch API & DOM Manipulation</h3>
+      <div class="relative w-full rounded-lg shadow-lg overflow-hidden" style="padding-top: 56.25%;">
+        <iframe
+          class="absolute inset-0 w-full h-full"
+          src="https://www.youtube.com/embed/VIDEO_ID_HERE"
+          title="UdaciRacer Project Walkthrough — Masterschool & Udacity"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+      </div>
+    </div>
+  </div>
+
+  <!-- Reflection -->
+  <Content
+    tagline="Reflection"
+    title="Real projects make abstract concepts concrete"
+    isReversed
+  >
+    <Fragment slot="image">
+      <div class="flex items-center justify-center h-full py-12">
+        <div class="text-center">
+          <p class="text-8xl font-bold font-heading text-accent leading-none">2022</p>
+          <p class="text-xl text-muted mt-3">Masterschool · Udacity</p>
+          <div class="mt-8 space-y-2 text-sm text-muted">
+            <p class="font-semibold text-gray-700 dark:text-gray-300">Mentor · Live Session</p>
+            <p>UdaciRacer Project</p>
+            <p>Async JavaScript · Fetch API</p>
+          </div>
+        </div>
+      </div>
+    </Fragment>
+    <Fragment slot="content">
+      <p class="mb-4">UdaciRacer is a great example of project-based learning done well. Async JavaScript is notoriously difficult to teach in the abstract — Promises, async/await, and callback patterns make conceptual sense on paper but only click into place when a learner has to use them to solve a real problem. A racing game gives them that problem in a context that's inherently motivating: something is either working or it isn't, and you can see it.</p>
+      <p class="mb-4">The live walkthrough format worked well here because the complexity of the project meant students encountered friction at different points. Some got stuck on project setup, others on the async patterns, others on wiring the Fetch responses to the DOM. A live session lets those different stuck points surface in real time and get addressed in context — which is far more effective than a student reading documentation alone and not knowing where their understanding broke down.</p>
+      <div class="mt-6 flex flex-wrap gap-2">
+        {['JavaScript', 'Async/Await', 'Fetch API', 'DOM Manipulation', 'Node.js', 'Live Session', 'Masterschool', 'Udacity', 'Project-Based Learning', 'Instructional Design', 'Adult Learning', 'Mentoring'].map(tag => (
+          <span class="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-sm font-medium px-3 py-1 rounded-full">{tag}</span>
+        ))}
+      </div>
+      <p class="text-sm text-muted mt-4">Mentor, Masterschool — UdaciRacer Project Walkthrough, Udacity Curriculum, March 2022.</p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 section-pattern"></div>
+    </Fragment>
+  </Content>
+
+  <CallToAction
+    actions={[
+      { variant: 'primary', text: 'View All Projects', href: '/projects' },
+      { text: 'Get in Touch', href: '/about#contact' },
+    ]}
+  >
+    <Fragment slot="title">Interested in working together?</Fragment>
+    <Fragment slot="subtitle">I'm open to remote opportunities in instructional design and technical learning experience design.</Fragment>
+  </CallToAction>
+</Layout>
