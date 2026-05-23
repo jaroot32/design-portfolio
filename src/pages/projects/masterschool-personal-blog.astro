@@ -1,0 +1,159 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Content from '~/components/widgets/Content.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'Personal Blog Project Walkthrough — Masterschool',
+};
+---
+
+<Layout metadata={metadata}>
+  <Hero tagline="Mentor · Live Session · CSS · Masterschool · Udacity · 2022">
+    <Fragment slot="title">
+      Personal Blog —<br />
+      <span class="text-accent dark:text-white">Project Walkthrough & Live Q&A</span>
+    </Fragment>
+    <Fragment slot="subtitle">
+      A live project walkthrough session for Masterschool students working through the Personal Blog project on the Udacity curriculum — covering CSS architecture, mobile-first responsive design, CSS Grid, and Flexbox with live Q&A throughout.
+    </Fragment>
+  </Hero>
+
+  <!-- Context -->
+  <Content
+    tagline="The Session"
+    title="Live guidance through a real CSS project, start to finish"
+    isReversed
+  >
+    <Fragment slot="image">
+      <div class="flex items-center justify-center h-full py-12">
+        <div class="text-center">
+          <p class="text-7xl font-bold font-heading text-accent leading-none">Blog</p>
+          <p class="text-xl text-muted mt-3">Masterschool · Udacity</p>
+          <div class="mt-8 space-y-2 text-sm text-muted">
+            <p class="font-semibold text-gray-700 dark:text-gray-300">Mentor · Live Session</p>
+            <p>CSS · Grid · Flexbox</p>
+            <p>January 2022</p>
+          </div>
+        </div>
+      </div>
+    </Fragment>
+    <Fragment slot="content">
+      <p class="mb-4">Masterschool incorporated Udacity's curriculum into their program, and the Personal Blog project was one of the key hands-on assignments students tackled early in the course. Building a personal blog from scratch requires students to make real decisions about CSS architecture, file organization, and responsive layout — concepts that are straightforward in theory but immediately complex when applied to a real project.</p>
+      <p class="mb-4">I led a live walkthrough session for a cohort of international students, guiding them through the project while fielding questions in real time. The session covered how to think about CSS structure before writing a single line of code, why mobile-first is the right default approach, and how to use CSS Grid and Flexbox to build flexible, responsive layouts.</p>
+      <p>The format was open and collaborative — students asked questions throughout, raised alternative approaches, and worked through common points of confusion together. That kind of live Q&A environment is where a lot of the real learning happens.</p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 section-pattern-b"></div>
+    </Fragment>
+  </Content>
+
+  <!-- What the session covered -->
+  <Features3
+    tagline="Session Topics"
+    title="CSS fundamentals applied to a real project"
+    subtitle="Each topic came up organically through the project — questions from students shaped the conversation as much as the walkthrough itself."
+    columns={3}
+    items={[
+      {
+        title: 'CSS Architecture',
+        description: 'How to structure CSS files for a multi-page project — covering the role of reset/normalize stylesheets, how to organize mobile and responsive styles, and why file structure decisions matter before you start writing rules.',
+        icon: 'tabler:folder',
+      },
+      {
+        title: 'Mobile-First Design',
+        description: 'Why mobile-first is the recommended approach and how to apply it in practice — writing base styles for mobile, then layering responsive breakpoints for tablet (768px) and desktop (1024px+) using media queries.',
+        icon: 'tabler:device-mobile',
+      },
+      {
+        title: 'CSS Grid Layout',
+        description: 'Building flexible page layouts with CSS Grid — covering grid structure, placement, and how to adapt layouts across breakpoints. Shared hands-on resources including Jen Simmons\' labs and Grid by Example for further practice.',
+        icon: 'tabler:layout-grid',
+      },
+      {
+        title: 'Flexbox',
+        description: 'Using Flexbox for component-level layout — navigation, sidebars, and content alignment. Covering when to reach for Flexbox vs. Grid and how the two work together in a real project.',
+        icon: 'tabler:layout-rows',
+      },
+      {
+        title: 'Live Q&A',
+        description: 'Students asked questions throughout — on CSS file organization, breakpoint strategy, custom images, sidebar placement, and responsive pixel values. The session was shaped as much by student questions as by the walkthrough itself.',
+        icon: 'tabler:message-question',
+      },
+      {
+        title: 'Developer Resources',
+        description: 'Shared a curated set of CSS Grid and Flexbox references during the session — including labs.jensimmons.com, gridbyexample.com, grid.malven.co, and flexbox.malven.co — giving students tools to keep learning independently.',
+        icon: 'tabler:bookmarks',
+      },
+    ]}
+  />
+
+  <!-- Video -->
+  <div class="max-w-4xl mx-auto px-4 md:px-8 py-12 md:py-16">
+    <div class="text-center mb-10">
+      <p class="text-base text-secondary dark:text-blue-200 font-bold tracking-wide uppercase mb-2">Session Recording</p>
+      <h2 class="text-4xl md:text-5xl font-bold tracking-tighter font-heading">Watch the Walkthrough</h2>
+      <p class="text-lg text-muted mt-4">Live project walkthrough and Q&A session for Masterschool students on the Udacity Personal Blog project, January 2022.</p>
+    </div>
+    <div>
+      <h3 class="text-lg font-semibold mb-3">Personal Blog Project Walkthrough — CSS, Grid & Flexbox</h3>
+      <div class="relative w-full rounded-lg shadow-lg overflow-hidden" style="padding-top: 56.25%;">
+        <iframe
+          class="absolute inset-0 w-full h-full"
+          src="https://www.youtube.com/embed/VIDEO_ID_HERE"
+          title="Personal Blog Project Walkthrough — Masterschool & Udacity"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+      </div>
+    </div>
+  </div>
+
+  <!-- Reflection -->
+  <Content
+    tagline="Reflection"
+    title="Live sessions surface the questions that written guides can't anticipate"
+    isReversed
+  >
+    <Fragment slot="image">
+      <div class="flex items-center justify-center h-full py-12">
+        <div class="text-center">
+          <p class="text-8xl font-bold font-heading text-accent leading-none">2022</p>
+          <p class="text-xl text-muted mt-3">Masterschool · Udacity</p>
+          <div class="mt-8 space-y-2 text-sm text-muted">
+            <p class="font-semibold text-gray-700 dark:text-gray-300">Mentor · Live Session</p>
+            <p>Personal Blog Project</p>
+            <p>CSS · Grid · Flexbox</p>
+          </div>
+        </div>
+      </div>
+    </Fragment>
+    <Fragment slot="content">
+      <p class="mb-4">What made this session valuable wasn't the walkthrough itself — it was the questions. Students asked about things that written project instructions never address: whether to split CSS into separate files by device size, how to think about pixel breakpoints when Apple tablets blur the line, and what "mobile-first" actually means in practice when you're staring at a blank stylesheet.</p>
+      <p class="mb-4">That's the instructional design insight embedded in live sessions: the gaps in understanding only become visible when learners have a space to ask. A well-structured walkthrough creates the conditions for those questions to surface — and the answers, given in context, are far more durable than anything a student reads in isolation.</p>
+      <p class="mb-4">The same principle applies to AI adoption training. When employees are learning to use new tools, the questions they ask in live sessions reveal exactly where the documentation falls short — and those gaps are where targeted, practical training content makes the biggest difference.</p>
+      <div class="mt-6 flex flex-wrap gap-2">
+        {['CSS', 'CSS Grid', 'Flexbox', 'Mobile-First', 'Responsive Design', 'Live Session', 'Masterschool', 'Udacity', 'Instructional Design', 'Adult Learning', 'Mentoring'].map(tag => (
+          <span class="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-sm font-medium px-3 py-1 rounded-full">{tag}</span>
+        ))}
+      </div>
+      <p class="text-sm text-muted mt-4">Mentor, Masterschool — Personal Blog Project Walkthrough, Udacity Curriculum, January 2022.</p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 section-pattern"></div>
+    </Fragment>
+  </Content>
+
+  <CallToAction
+    actions={[
+      { variant: 'primary', text: 'View All Projects', href: '/projects' },
+      { text: 'Get in Touch', href: '/about#contact' },
+    ]}
+  >
+    <Fragment slot="title">Interested in working together?</Fragment>
+    <Fragment slot="subtitle">I'm open to remote opportunities in instructional design and technical learning experience design.</Fragment>
+  </CallToAction>
+</Layout>
