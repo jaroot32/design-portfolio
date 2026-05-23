@@ -41,9 +41,9 @@ const metadata = {
       </div>
     </Fragment>
     <Fragment slot="content">
-      <p class="mb-4">UdaciRacer is one of Udacity's intermediate JavaScript projects — a browser-based racing game where students build the front-end logic that connects to a provided Node.js server via API calls. It's the kind of project that takes abstract concepts like Promises, async/await, and the Fetch API and puts them in a context where they have to actually work together to produce something functional and interactive.</p>
-      <p class="mb-4">For Masterschool students working through Udacity's curriculum, this project is a significant step up in complexity. It requires understanding how to make asynchronous API calls, handle responses, update the DOM dynamically, and manage state across a running game — all at once. That's a lot of moving parts for learners who may be encountering async JavaScript seriously for the first time.</p>
-      <p>I led a live walkthrough session that guided students through the project from setup through implementation — breaking down the async patterns, explaining how the Fetch API communicates with the server, and working through the DOM manipulation needed to bring the game to life.</p>
+      <p class="mb-4">UdaciRacer is one of Udacity's intermediate JavaScript projects — a browser-based racing game where students select a track and racer, start a race, and accelerate their car by clicking while competing against API-driven opponents. It's fun on the surface, but the underlying challenge is real: students have to build all the front-end logic that communicates with a pre-built Node.js server they can't modify.</p>
+      <p class="mb-4">The API is treated as a black box — students can't open it or change it, only make requests to its endpoints to create a race, get car stats like acceleration and top speed, and receive real-time position updates as the race runs. That pattern puts async JavaScript, Promises, and the Fetch API into a context where they have to actually work together to produce something functional.</p>
+      <p>I led a live walkthrough session that took students from cloning the starter code through getting both terminals running — one for the server, one for the front end — explaining the package.json and node_modules setup, demoing the working app, and walking through the TODO structure in the index.js file where students would write their code.</p>
     </Fragment>
     <Fragment slot="bg">
       <div class="absolute inset-0 section-pattern-b"></div>
@@ -58,33 +58,33 @@ const metadata = {
     columns={3}
     items={[
       {
-        title: 'Async JavaScript',
-        description: 'Breaking down how Promises and async/await work in practice — how to write asynchronous code that waits for data before continuing, and why that pattern is essential when working with APIs and real-time data.',
-        icon: 'tabler:clock-play',
-      },
-      {
-        title: 'The Fetch API',
-        description: 'How to use the Fetch API to make HTTP requests to the provided Node.js server — covering GET and POST requests, handling JSON responses, and managing errors when something goes wrong.',
-        icon: 'tabler:api',
-      },
-      {
-        title: 'DOM Manipulation',
-        description: 'Using JavaScript to dynamically update the page as the race progresses — rendering race tracks, updating player positions, and reflecting game state changes in the UI without page reloads.',
-        icon: 'tabler:code',
-      },
-      {
-        title: 'Project Setup',
-        description: 'Getting the local development environment running — starting the Node.js server, understanding the project structure, and knowing what each file is responsible for before writing any code.',
+        title: 'Project Setup & Two-Terminal Workflow',
+        description: 'Walking students through cloning the starter code, running npm install, and getting two terminals running side by side — one for the Node.js server (the provided API), one for the front-end app — before writing a single line of code.',
         icon: 'tabler:terminal-2',
       },
       {
-        title: 'State Management',
-        description: 'Managing game state across an async, event-driven application — tracking race progress, player selections, and game outcomes in a way that stays in sync with both the server and the UI.',
-        icon: 'tabler:database',
+        title: 'Understanding the Black Box API',
+        description: 'Explaining how the pre-built server works as a black box — students can\'t modify it, only make requests to its endpoints to create a race, retrieve car stats like acceleration and top speed, and get real-time position updates.',
+        icon: 'tabler:api',
       },
       {
-        title: 'Live Q&A',
-        description: 'Students asked questions throughout the session — on async patterns, debugging fetch calls, working with the API responses, and understanding how the front-end and server communicate during a live race.',
+        title: 'Async JavaScript & Promises',
+        description: 'Breaking down how async/await and Promises are used throughout the project — and why this pattern matters beyond UdaciRacer, particularly for React development where async patterns appear constantly.',
+        icon: 'tabler:clock-play',
+      },
+      {
+        title: 'The Three Game Views',
+        description: 'Walking through the three UI states students need to build: the racer/track selection form, the live race progress view with the accelerate button, and the final results screen that renders the race outcome.',
+        icon: 'tabler:layout-rows',
+      },
+      {
+        title: 'Starter Code & TODO Structure',
+        description: 'Orienting students to the index.js file and its TODO comments — where to write each function, how the provided code structure guides the implementation, and how to approach working through the TODOs in order.',
+        icon: 'tabler:list-check',
+      },
+      {
+        title: 'Live Demo & Q&A',
+        description: 'Demoing the fully working app — selecting a track and racer, starting the race, accelerating to compete — so students could see what they were building before they started. Questions were fielded throughout the session.',
         icon: 'tabler:message-question',
       },
     ]}
