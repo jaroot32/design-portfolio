@@ -1,0 +1,173 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Content from '~/components/widgets/Content.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'Epic React Step-by-Step Guides — Masterschool',
+};
+---
+
+<Layout metadata={metadata}>
+  <Hero tagline="Mentor · Instructional Design · Loom · Masterschool · 2022">
+    <Fragment slot="title">
+      Epic React —<br />
+      <span class="text-accent dark:text-white">Step-by-Step Student Guides</span>
+    </Fragment>
+    <Fragment slot="subtitle">
+      Tasked with creating async screencast walkthroughs for Masterschool students onboarding to Epic React — recording step-by-step Loom guides covering account verification, login, and navigating the course lessons.
+    </Fragment>
+  </Hero>
+
+  <!-- Context -->
+  <Content
+    tagline="The Project"
+    title="Getting students unblocked before the first lesson"
+    isReversed
+  >
+    <Fragment slot="image">
+      <div class="flex items-center justify-center h-full py-12">
+        <div class="text-center">
+          <p class="text-7xl font-bold font-heading text-accent leading-none">Epic<br/>React</p>
+          <p class="text-xl text-muted mt-3">Masterschool</p>
+          <div class="mt-8 space-y-2 text-sm text-muted">
+            <p class="font-semibold text-gray-700 dark:text-gray-300">Mentor · Instructional Design</p>
+            <p>Loom Screencast Walkthroughs</p>
+            <p>2022</p>
+          </div>
+        </div>
+      </div>
+    </Fragment>
+    <Fragment slot="content">
+      <p class="mb-4">At Masterschool, my role as a mentor extended beyond live support sessions into instructional design and curriculum work. One of those responsibilities was identifying where students were getting stuck before they could even start learning — and creating resources to remove those blockers independently.</p>
+      <p class="mb-4">Epic React, the advanced React training program by Kent C. Dodds, requires students to go through an account verification and setup process before accessing any lessons. For students already navigating a demanding bootcamp curriculum, that friction point — verifying an account, logging in, understanding how the lesson environment works — was a real barrier to getting started.</p>
+      <p>I recorded a series of step-by-step Loom walkthroughs that students could follow at their own pace, pause and replay as needed, and reference asynchronously without waiting for a live session.</p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 section-pattern-b"></div>
+    </Fragment>
+  </Content>
+
+  <!-- What the guides covered -->
+  <Features3
+    tagline="The Walkthroughs"
+    title="Three guides, one goal: get students into the content"
+    subtitle="Each guide was scoped to a single task — short enough to follow in one sitting, specific enough to be useful at the exact moment of confusion."
+    columns={3}
+    items={[
+      {
+        title: 'Account Verification',
+        description: 'A step-by-step walkthrough of the Epic React account verification process — covering each screen, what to click, what to expect, and how to confirm the account is active before moving on.',
+        icon: 'tabler:user-check',
+      },
+      {
+        title: 'Login Walkthrough',
+        description: 'A focused guide on logging into Epic React, including common points of confusion around authentication and how to get back in if something doesn\'t work as expected.',
+        icon: 'tabler:login',
+      },
+      {
+        title: 'Navigating the Lessons',
+        description: 'An orientation to the Epic React lesson environment — how the course is structured, where to find exercises, how to move between sections, and what the workflow looks like for a typical study session.',
+        icon: 'tabler:map',
+      },
+    ]}
+  />
+
+  <!-- Why Loom -->
+  <Content
+    tagline="The Medium"
+    title="Why Loom for step-by-step technical guides"
+  >
+    <Fragment slot="content">
+      <p class="mb-4">Loom was the right tool for this type of instructional content for the same reason screencasts work better than written docs for interface walkthroughs: the learner needs to see the cursor move, the buttons highlight, and the screens transition in real time. A numbered list of steps requires the learner to translate text into action. A screencast lets them follow along visually and pause at exactly the moment they need to catch up.</p>
+      <p class="mb-4">For an asynchronous bootcamp environment, Loom recordings also gave students access to the guides outside of mentor office hours — removing the dependency on a live session for something that could be answered with a five-minute video.</p>
+      <p>The format mirrors what effective AI tool adoption training looks like in a workplace context: short, task-specific recordings that meet employees at the moment of need, without requiring them to read documentation or wait for a scheduled session.</p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 section-pattern-d"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Videos -->
+  <div class="max-w-4xl mx-auto px-4 md:px-8 py-12 md:py-16">
+    <div class="text-center mb-10">
+      <p class="text-base text-secondary dark:text-blue-200 font-bold tracking-wide uppercase mb-2">Screencast Guides</p>
+      <h2 class="text-4xl md:text-5xl font-bold tracking-tighter font-heading">Watch the Walkthroughs</h2>
+      <p class="text-lg text-muted mt-4">Step-by-step Loom guides recorded for Masterschool students onboarding to Epic React, 2022.</p>
+    </div>
+    <div class="space-y-10">
+      <div>
+        <h3 class="text-lg font-semibold mb-3">Account Verification & Login</h3>
+        <div class="relative w-full rounded-lg shadow-lg overflow-hidden" style="padding-top: 56.25%;">
+          <iframe
+            class="absolute inset-0 w-full h-full"
+            src="https://www.youtube.com/embed/gWk_Bqiub24"
+            title="Step-by-Step Guide on How to Verify and Login to Epic React — Masterschool"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+      <div>
+        <h3 class="text-lg font-semibold mb-3">Navigating the Lessons</h3>
+        <div class="relative w-full rounded-lg shadow-lg overflow-hidden" style="padding-top: 56.25%;">
+          <iframe
+            class="absolute inset-0 w-full h-full"
+            src="https://www.youtube.com/embed/78YisiF9AHo"
+            title="How to Navigate Epic React Lessons — Masterschool"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Reflection -->
+  <Content
+    tagline="Reflection"
+    title="Step-by-step guides are a core deliverable in any technical training program"
+    isReversed
+  >
+    <Fragment slot="image">
+      <div class="flex items-center justify-center h-full py-12">
+        <div class="text-center">
+          <p class="text-8xl font-bold font-heading text-accent leading-none">2022</p>
+          <p class="text-xl text-muted mt-3">Masterschool</p>
+          <div class="mt-8 space-y-2 text-sm text-muted">
+            <p class="font-semibold text-gray-700 dark:text-gray-300">Mentor · Instructional Design</p>
+            <p>Loom Screencast Walkthroughs</p>
+            <p>Epic React Onboarding</p>
+          </div>
+        </div>
+      </div>
+    </Fragment>
+    <Fragment slot="content">
+      <p class="mb-4">What this project reinforced is something that holds across every technical training context: the most common reason learners don't engage with new tools isn't resistance — it's friction at the entry point. When getting started requires navigating an unfamiliar interface before you've seen any value from the tool, motivation drops before learning begins.</p>
+      <p class="mb-4">Removing that friction is instructional design work, even when it doesn't look like a course. A three-minute screencast that walks someone through account setup is a learning intervention. It changes behavior, reduces support burden, and gets the learner into the actual content faster. That's the same logic that drives effective AI adoption training in a workplace — meet people at the moment of confusion with something specific and immediately useful.</p>
+      <div class="mt-6 flex flex-wrap gap-2">
+        {['Loom', 'Screencast', 'Step-by-Step Guides', 'Technical Onboarding', 'Async Learning', 'Epic React', 'Masterschool', 'Instructional Design', 'Adult Learning'].map(tag => (
+          <span class="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-sm font-medium px-3 py-1 rounded-full">{tag}</span>
+        ))}
+      </div>
+      <p class="text-sm text-muted mt-4">Mentor & Instructional Design, Masterschool — Epic React Onboarding Guides, 2022.</p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 section-pattern"></div>
+    </Fragment>
+  </Content>
+
+  <CallToAction
+    actions={[
+      { variant: 'primary', text: 'View All Projects', href: '/projects' },
+      { text: 'Get in Touch', href: '/about#contact' },
+    ]}
+  >
+    <Fragment slot="title">Interested in working together?</Fragment>
+    <Fragment slot="subtitle">I'm open to remote opportunities in instructional design and technical learning experience design.</Fragment>
+  </CallToAction>
+</Layout>
