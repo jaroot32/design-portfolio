@@ -41,9 +41,9 @@ const metadata = {
       </div>
     </Fragment>
     <Fragment slot="content">
-      <p class="mb-4">OpenClassrooms' "Open Study" format brings students and their mentor together live to present work in progress, receive structured feedback, and discuss challenges in real time. This session centered on a course milestone focused on <em>working with clients' needs</em> — a critical skill for web developers moving from technical execution to client-facing project work.</p>
-      <p class="mb-4">Students came having built WordPress websites for real or simulated clients. Each presented their deliverable — their theme choice, design rationale, and how their decisions mapped to the client's business requirements — and received live feedback from me as their mentor.</p>
-      <p>By 2020, I had been a Web Developer Mentor at OpenClassrooms for about a year and a half, working with students across the full path of their front-end program. This session represented one of the more advanced milestones: where students had to defend not just their code, but their thinking.</p>
+      <p class="mb-4">OpenClassrooms' "Open Study" format brings students and their mentor together live to review real project deliverables. This session covered two client-facing projects: Project 2, building a WordPress site for a client, and Project 3, building a film festival website — both requiring students to go beyond technical execution into understanding and serving a client's actual business needs.</p>
+      <p class="mb-4">For the WordPress project, students submitted PDF documentation showing how to manage the site — covering CRUD operations (Create, Read, Update, Delete) through the WordPress dashboard — along with screenshots of admin accounts, theme selection rationale, and the CSS customizations they made. I walked through two exemplary student submissions live, pointing out what made them effective and what every student should include in their own documentation.</p>
+      <p>By 2020, I had been a Web Developer Mentor at OpenClassrooms for about a year and a half, working with students across the full stack, front end, and web developer paths. This session represented one of the more advanced milestones: where students had to defend not just their code, but their thinking about the client.</p>
     </Fragment>
     <Fragment slot="bg">
       <div class="absolute inset-0 section-pattern-b"></div>
@@ -118,6 +118,37 @@ const metadata = {
     </Fragment>
     <Fragment slot="bg">
       <div class="absolute inset-0 section-pattern-e"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Practical Advice -->
+  <Content
+    tagline="Advice from the Session"
+    title="Practical guidance shared with students"
+  >
+    <Fragment slot="content">
+      <p class="mb-6">Beyond reviewing deliverables, the session included direct practical advice to help students avoid common mistakes and get the most out of the project:</p>
+      <div class="space-y-4">
+        <div class="flex gap-3">
+          <div class="flex-shrink-0 w-6 h-6 rounded-full bg-accent text-white flex items-center justify-center text-xs font-bold mt-0.5">1</div>
+          <div><p class="font-semibold text-sm">Check that your WordPress theme is editable before committing to it.</p><p class="text-sm text-muted mt-1">Some themes lock the CSS file. Students who discovered this mid-project had to start over. Verify you can edit the theme's template files and CSS before building.</p></div>
+        </div>
+        <div class="flex gap-3">
+          <div class="flex-shrink-0 w-6 h-6 rounded-full bg-accent text-white flex items-center justify-center text-xs font-bold mt-0.5">2</div>
+          <div><p class="font-semibold text-sm">Ask your mentor for the mentor guide.</p><p class="text-sm text-muted mt-1">Each project has a mentor guide with rubric-aligned checklists that directly map to how the project reviewer will evaluate your work. If your mentor hasn't shared it, ask.</p></div>
+        </div>
+        <div class="flex gap-3">
+          <div class="flex-shrink-0 w-6 h-6 rounded-full bg-accent text-white flex items-center justify-center text-xs font-bold mt-0.5">3</div>
+          <div><p class="font-semibold text-sm">Watch the OpenClassrooms classes — they contain what you need to pass.</p><p class="text-sm text-muted mt-1">The project requirements are answered in the course material. Read between the lines and apply what the class teaches directly to the deliverables.</p></div>
+        </div>
+        <div class="flex gap-3">
+          <div class="flex-shrink-0 w-6 h-6 rounded-full bg-accent text-white flex items-center justify-center text-xs font-bold mt-0.5">4</div>
+          <div><p class="font-semibold text-sm">Use Chrome DevTools to reverse engineer inspiration sites.</p><p class="text-sm text-muted mt-1">Can't figure out how a film festival site achieved a specific layout? Right-click, inspect, and toggle CSS rules to understand how it was built — then bring that understanding to your own project.</p></div>
+        </div>
+      </div>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 section-pattern-d"></div>
     </Fragment>
   </Content>
 
