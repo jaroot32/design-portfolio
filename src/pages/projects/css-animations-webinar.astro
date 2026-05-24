@@ -36,9 +36,9 @@ const metadata = {
       </div>
     </Fragment>
     <Fragment slot="content">
-      <p class="mb-4">On December 10, 2020, I delivered a live student webinar for OpenClassrooms as a follow-up to the CSS & SASS session — this time focused on building modern animations using SCSS/SASS, extending the course with live CodePen demos and a Chrome DevTools deep dive into animation performance.</p>
-      <p class="mb-4">The session ran for both US learners (10:00AM PST) and European learners (19:00 CEST), covering animation theory, SCSS-powered transitions and @keyframes, and real-world debugging techniques.</p>
-      <p>The goal was to show learners how SCSS — with its nesting, variables, and BEM modifiers — makes animation code dramatically more organized and maintainable than plain CSS.</p>
+      <p class="mb-4">On December 10, 2020, I delivered a live student webinar for OpenClassrooms as Part 2 of the CSS & SASS series — this time focused on building modern animations using SCSS/SASS, extending the course with live CodePen demos and a Chrome DevTools deep dive into animation performance.</p>
+      <p class="mb-4">The session covered animation theory grounded in the 12 principles — using the Walt Disney/Mickey Mouse example to show how complex, believable motion is built from simple shapes and speed curves — then moved into practical CSS implementation with transitions, @keyframes, and the transform property.</p>
+      <p>One practical rule I emphasized throughout: each CSS selector can only have one transform property. Because of CSS cascading, a second transform on the same selector will cancel out the first — a common source of bugs for students just learning animations.</p>
     </Fragment>
     <Fragment slot="bg">
       <div class="absolute inset-0 section-pattern-b"></div>
@@ -102,6 +102,34 @@ const metadata = {
     </Fragment>
     <Fragment slot="bg">
       <div class="absolute inset-0 section-pattern-e"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Resources -->
+  <Content
+    tagline="Resources Shared"
+    title="Tools and libraries covered in the session"
+  >
+    <Fragment slot="content">
+      <p class="mb-4">Throughout the webinar I shared a curated set of resources to help students go deeper on CSS animations — from quick-reference cheatsheets to full animation libraries used in professional work.</p>
+      <div class="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-3">
+        {[
+          { name: 'CSS Animation Cheatsheet', description: 'A quick-reference summary of CSS animation properties and values' },
+          { name: 'Animate.css', description: 'A popular ready-to-use animation library for common effects' },
+          { name: 'Loaders.CSS', description: 'A collection of loading animations to deconstruct and learn from' },
+          { name: 'Motion UI', description: "Foundation's animation library — useful if you prefer not to write animations from scratch" },
+          { name: 'GreenSock (GSAP)', description: 'A professional JavaScript animation library — where CSS animation skills lead next' },
+          { name: 'Catch a Fire', description: 'A nonprofit platform I recommended for building real portfolio work while helping organizations' },
+        ].map(resource => (
+          <div class="p-4 rounded-lg border border-gray-200 dark:border-gray-700">
+            <p class="font-semibold text-sm text-gray-800 dark:text-gray-200">{resource.name}</p>
+            <p class="text-xs text-muted mt-1">{resource.description}</p>
+          </div>
+        ))}
+      </div>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 section-pattern-b"></div>
     </Fragment>
   </Content>
 
