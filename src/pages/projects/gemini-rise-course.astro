@@ -112,16 +112,16 @@ const metadata = {
       <h2 class="text-4xl md:text-5xl font-bold tracking-tighter font-heading">Try the Course</h2>
       <p class="text-lg text-muted mt-4">The full Rise 360 course — self-paced, interactive, with knowledge checks throughout. Best experienced on desktop.</p>
     </div>
-    <div class="relative w-full rounded-lg shadow-lg overflow-hidden border border-gray-200 dark:border-gray-700" style="padding-top: 62.5%;">
-      <iframe
-        class="absolute inset-0 w-full h-full"
-        src="/content/index.html"
-        title="Work Smarter with Gemini — Rise 360 Course"
-        frameborder="0"
-        allowfullscreen
-      ></iframe>
-    </div>
-    <p class="text-sm text-muted text-center mt-4">If the course doesn't load in the embed, <a href="/content/index.html" target="_blank" class="text-accent hover:underline">open it directly</a>.</p>
+    <a href="/content/index.html" target="_blank" rel="noopener" class="block group relative w-full rounded-xl shadow-lg overflow-hidden border border-gray-200 dark:border-gray-700">
+      <img src="/content/assets/10_creative.jpg" alt="Work Smarter with Gemini — Rise 360 Course" class="w-full object-cover" />
+      <div class="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+        <span class="bg-white text-gray-900 font-bold px-8 py-4 rounded-lg flex items-center gap-2 text-lg">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+          Launch Course
+        </span>
+      </div>
+    </a>
+    <p class="text-sm text-muted text-center mt-4">Opens in a new tab — best experienced full screen on desktop.</p>
   </div>
 
   <!-- Design Decisions -->
