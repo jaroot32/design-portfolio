@@ -174,19 +174,78 @@ const currentPath = `/${trimSlash(new URL(Astro.url).pathname)}`;
   </div>
 </header>
 
-<script>
-  function initScrollProgress() {
-    const bar = document.getElementById('scroll-progress');
-    if (!bar) return;
-    const update = () => {
-      const scrollTop = window.scrollY;
-      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-      const pct = docHeight > 0 ? scrollTop / docHeight : 0;
-      bar.style.transform = `scaleX(${pct})`;
-    };
-    window.addEventListener('scroll', update, { passive: true });
-    update();
+<style>
+  @keyframes bar-load {
+    0% {
+      transform: scaleX(0);
+    }
+    30% {
+      transform: scaleX(0.6);
+    }
+    60% {
+      transform: scaleX(0.8);
+    }
+    100% {
+      transform: scaleX(0.92);
+    }
   }
-  initScrollProgress();
-  document.addEventListener('astro:page-load', initScrollProgress);
+</style>
+
+<script>
+  let _scrollHandler: (() => void) | null = null;
+
+  function getBar(): HTMLElement | null {
+    return document.getElementById('scroll-progress');
+  }
+
+  function updateScroll() {
+    const bar = getBar();
+    if (!bar) return;
+    const total = document.documentElement.scrollHeight - window.innerHeight;
+    const pct = total > 0 ? window.scrollY / total : 0;
+    bar.style.animation = 'none';
+    bar.style.transition = 'none';
+    bar.style.transform = `scaleX(${pct})`;
+  }
+
+  function enableScrollTracking() {
+    updateScroll();
+    _scrollHandler = updateScroll;
+    window.addEventListener('scroll', _scrollHandler, { passive: true });
+  }
+
+  function disableScrollTracking() {
+    if (_scrollHandler) {
+      window.removeEventListener('scroll', _scrollHandler);
+      _scrollHandler = null;
+    }
+  }
+
+  function startLoad() {
+    const bar = getBar();
+    if (!bar) return;
+    disableScrollTracking();
+    bar.style.transition = 'none';
+    bar.style.animation = 'none';
+    bar.style.transform = 'scaleX(0)';
+    bar.getBoundingClientRect(); // flush so animation restarts cleanly
+    bar.style.animation = 'bar-load 2.5s cubic-bezier(0.05, 0.8, 0.1, 1) forwards';
+  }
+
+  function finishLoad() {
+    const bar = getBar();
+    if (!bar) return;
+    bar.style.animation = 'none';
+    bar.style.transition = 'transform 0.2s ease';
+    bar.style.transform = 'scaleX(1)';
+    setTimeout(enableScrollTracking, 220);
+  }
+
+  // Initial page load
+  startLoad();
+  window.addEventListener('load', finishLoad, { once: true });
+
+  // View Transitions (between pages)
+  document.addEventListener('astro:before-preparation', startLoad);
+  document.addEventListener('astro:page-load', finishLoad);
 </script>
