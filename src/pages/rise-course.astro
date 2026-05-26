@@ -15,7 +15,7 @@
     <script>
       // Minimal SCORM 1.2 API shim — satisfies the loadOnlyInLMS check
       // so the course renders without requiring a real LMS connection
-      window.API = {
+      (window as any).API = {
         LMSInitialize: function() { return 'true'; },
         LMSFinish: function() { return 'true'; },
         LMSGetValue: function(key) {
