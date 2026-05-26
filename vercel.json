@@ -1,6 +1,9 @@
 {
   "cleanUrls": true,
   "trailingSlash": false,
+  "rewrites": [
+    { "source": "/content/lib/sandbox/sandbox", "destination": "/content/lib/sandbox/sandbox.html" }
+  ],
   "headers": [
     {
       "source": "/_astro/(.*)",
