@@ -57,7 +57,12 @@ const currentPath = `/${trimSlash(new URL(Astro.url).pathname)}`;
 >
   <!-- Scroll progress bar -->
   <div class="absolute bottom-0 left-0 w-full h-0.5 bg-transparent z-50">
-    <div id="scroll-progress" class="h-full w-full origin-left transition-none" style="transform: scaleX(0); background: linear-gradient(to right, #ff0000, #ff7700, #ffff00, #00cc00, #0099ff, #6600ff, #cc00ff);"></div>
+    <div
+      id="scroll-progress"
+      class="h-full w-full origin-left transition-none"
+      style="transform: scaleX(0); background: linear-gradient(to right, #ff0000, #ff7700, #ffff00, #00cc00, #0099ff, #6600ff, #cc00ff);"
+    >
+    </div>
   </div>
   <div
     class:list={[

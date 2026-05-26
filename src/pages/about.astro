@@ -18,40 +18,61 @@ const metadata = {
     <div class="relative mx-auto max-w-7xl px-4 md:px-8">
       <div class="mb-10 text-center max-w-2xl mx-auto">
         <p class="text-base text-secondary dark:text-blue-200 font-bold tracking-wide uppercase mb-2">What I Do</p>
-        <h2 class="text-4xl md:text-5xl font-bold tracking-tighter font-heading mb-6">At the intersection of design, technology, and learning</h2>
+        <h2 class="text-4xl md:text-5xl font-bold tracking-tighter font-heading mb-6">
+          At the intersection of design, technology, and learning
+        </h2>
         <p class="text-lg dark:text-slate-400">
-          I've spent years helping adult learners take on unfamiliar tools, technologies, and workflows — from software development to AI — developing practical, step-by-step learning content that builds confidence and translates directly to how people work and stay productive.
+          I've spent years helping adult learners take on unfamiliar tools, technologies, and workflows — from software
+          development to AI — developing practical, step-by-step learning content that builds confidence and translates
+          directly to how people work and stay productive.
         </p>
       </div>
       <div class="grid sm:grid-cols-2 gap-8 max-w-4xl mx-auto">
-        {[
-          {
-            title: 'AI Content Creation, Writing, Review & Integration',
-            description: 'Creating, writing, reviewing, and integrating AI-generated content for accuracy, clarity, and instructional quality — ensuring outputs meet learning objectives and are appropriate for the intended audience.',
-          },
-          {
-            title: 'Instructional Design',
-            description: 'Designing structured, outcome-driven learning experiences grounded in established frameworks like ADDIE, SAM, and constructivist learning theory.',
-          },
-          {
-            title: 'eLearning Development',
-            description: 'Building interactive courses in Articulate Storyline and Rise 360, extended with custom JavaScript for dynamic behavior and xAPI for rich data tracking.',
-          },
-          {
-            title: 'Technical Learning Content',
-            description: 'Translating complex technical systems — APIs, developer tools, software workflows — into clear, engaging content for technical and non-technical audiences alike.',
-          },
-        ].map(item => (
-          <div class="flex flex-row">
-            <div class="flex justify-center flex-shrink-0">
-              <svg xmlns="http://www.w3.org/2000/svg" class="mr-2 flex h-7 w-7 items-center justify-center rounded-full bg-green-600 dark:bg-green-700 text-gray-50 p-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+        {
+          [
+            {
+              title: 'AI Content Creation, Writing, Review & Integration',
+              description:
+                'Creating, writing, reviewing, and integrating AI-generated content for accuracy, clarity, and instructional quality — ensuring outputs meet learning objectives and are appropriate for the intended audience.',
+            },
+            {
+              title: 'Instructional Design',
+              description:
+                'Designing structured, outcome-driven learning experiences grounded in established frameworks like ADDIE, SAM, and constructivist learning theory.',
+            },
+            {
+              title: 'eLearning Development',
+              description:
+                'Building interactive courses in Articulate Storyline and Rise 360, extended with custom JavaScript for dynamic behavior and xAPI for rich data tracking.',
+            },
+            {
+              title: 'Technical Learning Content',
+              description:
+                'Translating complex technical systems — APIs, developer tools, software workflows — into clear, engaging content for technical and non-technical audiences alike.',
+            },
+          ].map((item) => (
+            <div class="flex flex-row">
+              <div class="flex justify-center flex-shrink-0">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="mr-2 flex h-7 w-7 items-center justify-center rounded-full bg-green-600 dark:bg-green-700 text-gray-50 p-1"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <polyline points="20 6 9 17 4 12" />
+                </svg>
+              </div>
+              <div class="mt-0.5">
+                <h3 class="text-lg font-medium leading-6 dark:text-white ml-2">{item.title}</h3>
+                <p class="mt-3 text-muted dark:text-slate-400 ml-2">{item.description}</p>
+              </div>
             </div>
-            <div class="mt-0.5">
-              <h3 class="text-lg font-medium leading-6 dark:text-white ml-2">{item.title}</h3>
-              <p class="mt-3 text-muted dark:text-slate-400 ml-2">{item.description}</p>
-            </div>
-          </div>
-        ))}
+          ))
+        }
       </div>
     </div>
   </div>
@@ -60,41 +81,72 @@ const metadata = {
   <div class="py-16 md:py-20">
     <div class="mx-auto max-w-7xl px-4 md:px-8">
       <div class="text-center mb-10">
-        <p class="text-base text-secondary dark:text-blue-200 font-bold tracking-wide uppercase mb-2">Featured Project</p>
+        <p class="text-base text-secondary dark:text-blue-200 font-bold tracking-wide uppercase mb-2">
+          Featured Project
+        </p>
         <h2 class="text-4xl md:text-5xl font-bold tracking-tighter font-heading">Work Smarter with Gemini</h2>
-        <p class="text-lg text-muted mt-3">A practical Rise 360 course on Gemini Gem creation for a large health organization</p>
+        <p class="text-lg text-muted mt-3">
+          A practical Rise 360 course on Gemini Gem creation for a large health organization
+        </p>
       </div>
       <div class="grid md:grid-cols-2 gap-8 items-center">
-        <div class="relative w-full rounded-xl shadow-lg overflow-hidden border border-gray-200 dark:border-gray-700" style="padding-top: 62.5%;">
+        <div
+          class="relative w-full rounded-xl shadow-lg overflow-hidden border border-gray-200 dark:border-gray-700"
+          style="padding-top: 62.5%;"
+        >
           <iframe
             class="absolute inset-0 w-full h-full"
             src="/gemini-course"
             title="Work Smarter with Gemini — Rise 360 Course"
             frameborder="0"
-            allowfullscreen
-          ></iframe>
+            allowfullscreen></iframe>
         </div>
         <div>
-          <p class="text-gray-700 dark:text-gray-300 mb-4">Built as a portfolio piece after completing Gemini Gem creation training at LearningMate — a self-paced Rise 360 course designed to help employees at a large health organization build and use custom Gemini Gems for recurring tasks.</p>
+          <p class="text-gray-700 dark:text-gray-300 mb-4">
+            Built as a portfolio piece after completing Gemini Gem creation training at LearningMate — a self-paced Rise
+            360 course designed to help employees at a large health organization build and use custom Gemini Gems for
+            recurring tasks.
+          </p>
           <ul class="space-y-2 mb-8">
-            {[
-              'Built in Articulate Rise 360',
-              '3 sections · 9 lessons · knowledge checks throughout',
-              'Healthcare audience — privacy and compliance aware',
-              'Capstone: build and use a real Gemini Gem',
-              'Scoped around Gem creation, not a full Gemini survey',
-            ].map(item => (
-              <li class="flex items-start gap-2 text-sm text-gray-700 dark:text-gray-300">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-accent flex-shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                {item}
-              </li>
-            ))}
+            {
+              [
+                'Built in Articulate Rise 360',
+                '3 sections · 9 lessons · knowledge checks throughout',
+                'Healthcare audience — privacy and compliance aware',
+                'Capstone: build and use a real Gemini Gem',
+                'Scoped around Gem creation, not a full Gemini survey',
+              ].map((item) => (
+                <li class="flex items-start gap-2 text-sm text-gray-700 dark:text-gray-300">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-5 w-5 text-accent flex-shrink-0 mt-0.5"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                  {item}
+                </li>
+              ))
+            }
           </ul>
           <div class="flex flex-wrap gap-3">
-            <a href="/projects/gemini-rise-course" class="inline-flex items-center gap-2 bg-accent hover:bg-accent/90 text-white font-semibold px-6 py-3 rounded-lg transition-colors text-sm">
+            <a
+              href="/projects/gemini-rise-course"
+              class="inline-flex items-center gap-2 bg-accent hover:bg-accent/90 text-white font-semibold px-6 py-3 rounded-lg transition-colors text-sm"
+            >
               View Case Study
             </a>
-            <a href="/gemini-course" target="_blank" rel="noopener" class="inline-flex items-center gap-2 border-2 border-gray-300 dark:border-gray-600 text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-800 font-semibold px-6 py-3 rounded-lg transition-colors text-sm">
+            <a
+              href="/gemini-course"
+              target="_blank"
+              rel="noopener"
+              class="inline-flex items-center gap-2 border-2 border-gray-300 dark:border-gray-600 text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-800 font-semibold px-6 py-3 rounded-lg transition-colors text-sm"
+            >
               Open Course
             </a>
           </div>
@@ -107,8 +159,13 @@ const metadata = {
   <div class="mx-auto max-w-7xl p-4 md:px-8 py-12">
     <div class="grid md:grid-cols-2 gap-4">
       <div>
-        <h2 class="text-3xl md:text-4xl font-bold font-heading mb-6 text-gray-900 dark:text-white">Technical depth meets instructional design craft</h2>
-        <p class="text-lg md:text-xl text-gray-700 dark:text-gray-300">Eight years building scalable learning across EdTech and enterprise with organizations including Udacity, Springboard, OpenClassrooms, Boeing, and LearningMate.</p>
+        <h2 class="text-3xl md:text-4xl font-bold font-heading mb-6 text-gray-900 dark:text-white">
+          Technical depth meets instructional design craft
+        </h2>
+        <p class="text-lg md:text-xl text-gray-700 dark:text-gray-300">
+          Eight years building scalable learning across EdTech and enterprise with organizations including Udacity,
+          Springboard, OpenClassrooms, Boeing, and LearningMate.
+        </p>
       </div>
       <div>
         <img src={P1.src} alt="Jonathan Root teaching online session" class="w-full object-cover rounded" />
@@ -120,8 +177,7 @@ const metadata = {
           title="Learn JavaScript and xAPI for eLearning"
           frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
-        ></iframe>
+          allowfullscreen></iframe>
       </div>
       <div>
         <img src={P3.src} alt="Jonathan Root teaching online session" class="w-full object-cover rounded" />
@@ -137,37 +193,44 @@ const metadata = {
     items={[
       {
         title: 'AI Content Creation, Writing, Review & Integration',
-        description: 'Creating, writing, reviewing, and integrating AI-generated content for accuracy, clarity, and instructional quality — ensuring outputs meet learning objectives and are appropriate for the intended audience.',
+        description:
+          'Creating, writing, reviewing, and integrating AI-generated content for accuracy, clarity, and instructional quality — ensuring outputs meet learning objectives and are appropriate for the intended audience.',
         icon: 'tabler:sparkles',
       },
       {
         title: 'Curriculum & Course Design',
-        description: 'Learning objectives, assessment alignment, and course architecture from concept through delivery.',
+        description:
+          'Learning objectives, assessment alignment, and course architecture from concept through delivery.',
         icon: 'tabler:layout-dashboard',
       },
       {
         title: 'JavaScript for eLearning',
-        description: 'Custom interactions, DOM manipulation, and dynamic content within authoring tools and HTML-based modules.',
+        description:
+          'Custom interactions, DOM manipulation, and dynamic content within authoring tools and HTML-based modules.',
         icon: 'tabler:brand-javascript',
       },
       {
         title: 'xAPI & Learning Analytics',
-        description: 'Designing and implementing xAPI statements to capture rich learner behavior data beyond basic completion metrics.',
+        description:
+          'Designing and implementing xAPI statements to capture rich learner behavior data beyond basic completion metrics.',
         icon: 'tabler:chart-bar',
       },
       {
         title: 'Articulate Storyline & Rise',
-        description: 'Building polished, accessible eLearning modules with advanced interactions and branching scenarios.',
+        description:
+          'Building polished, accessible eLearning modules with advanced interactions and branching scenarios.',
         icon: 'tabler:device-desktop',
       },
       {
         title: 'Web Development',
-        description: 'HTML, CSS, and JavaScript for custom learning tools, portfolio sites, and browser-based educational applications.',
+        description:
+          'HTML, CSS, and JavaScript for custom learning tools, portfolio sites, and browser-based educational applications.',
         icon: 'tabler:code',
       },
       {
         title: 'Accessibility & Inclusive Design',
-        description: 'Applying WCAG standards and Universal Design for Learning principles across all instructional materials.',
+        description:
+          'Applying WCAG standards and Universal Design for Learning principles across all instructional materials.',
         icon: 'tabler:accessible',
       },
     ]}
@@ -180,20 +243,72 @@ const metadata = {
     subtitle="Eight years teaching the web to career changers, college students, and working professionals."
     columns={3}
     items={[
-      { title: 'Udacity', description: 'Web development mentorship and project feedback for career-track learners.', icon: 'tabler:school' },
-      { title: 'Springboard', description: 'One-on-one mentorship and curriculum support for tech career changers.', icon: 'tabler:school' },
-      { title: 'OpenClassrooms', description: 'Jury Member evaluating student project defenses for online degree programs.', icon: 'tabler:school' },
-      { title: 'Boeing', description: 'Front-end web development contract for Creative Services.', icon: 'tabler:school' },
-      { title: 'Chegg Skills', description: 'Web development certification content refined and produced through LearningMate.', icon: 'tabler:school' },
-      { title: 'LearningMate', description: 'Software Development SME for web dev certification content and Loom demo production.', icon: 'tabler:school' },
-      { title: 'Masterschool', description: 'Coding bootcamp instructor for tech career training and developer education programs.', icon: 'tabler:school' },
-      { title: 'Upright Education', description: 'Teaching assistant supporting coding bootcamp instruction and curriculum delivery.', icon: 'tabler:school' },
-      { title: 'University of Washington', description: 'Bootcamp web development instruction via Trilogy Education partnership.', icon: 'tabler:school' },
-      { title: 'Tacoma Community College', description: 'Web development and technology instruction in a community college setting.', icon: 'tabler:school' },
-      { title: 'Nucamp', description: 'Coding bootcamp instructor teaching web development fundamentals.', icon: 'tabler:school' },
-      { title: 'BloomTech', description: 'Career mentor supporting learners through tech job search and outcomes.', icon: 'tabler:school' },
+      {
+        title: 'Udacity',
+        description: 'Web development mentorship and project feedback for career-track learners.',
+        icon: 'tabler:school',
+      },
+      {
+        title: 'Springboard',
+        description: 'One-on-one mentorship and curriculum support for tech career changers.',
+        icon: 'tabler:school',
+      },
+      {
+        title: 'OpenClassrooms',
+        description: 'Jury Member evaluating student project defenses for online degree programs.',
+        icon: 'tabler:school',
+      },
+      {
+        title: 'Boeing',
+        description: 'Front-end web development contract for Creative Services.',
+        icon: 'tabler:school',
+      },
+      {
+        title: 'Chegg Skills',
+        description: 'Web development certification content refined and produced through LearningMate.',
+        icon: 'tabler:school',
+      },
+      {
+        title: 'LearningMate',
+        description: 'Software Development SME for web dev certification content and Loom demo production.',
+        icon: 'tabler:school',
+      },
+      {
+        title: 'Masterschool',
+        description: 'Coding bootcamp instructor for tech career training and developer education programs.',
+        icon: 'tabler:school',
+      },
+      {
+        title: 'Upright Education',
+        description: 'Teaching assistant supporting coding bootcamp instruction and curriculum delivery.',
+        icon: 'tabler:school',
+      },
+      {
+        title: 'University of Washington',
+        description: 'Bootcamp web development instruction via Trilogy Education partnership.',
+        icon: 'tabler:school',
+      },
+      {
+        title: 'Tacoma Community College',
+        description: 'Web development and technology instruction in a community college setting.',
+        icon: 'tabler:school',
+      },
+      {
+        title: 'Nucamp',
+        description: 'Coding bootcamp instructor teaching web development fundamentals.',
+        icon: 'tabler:school',
+      },
+      {
+        title: 'BloomTech',
+        description: 'Career mentor supporting learners through tech job search and outcomes.',
+        icon: 'tabler:school',
+      },
       { title: 'CodeWizardsHQ', description: 'Online coding classes for kids and teens.', icon: 'tabler:school' },
-      { title: 'DeepDive Learning Academy', description: 'One-on-one apprenticeship approach to learning to code.', icon: 'tabler:school' },
+      {
+        title: 'DeepDive Learning Academy',
+        description: 'One-on-one apprenticeship approach to learning to code.',
+        icon: 'tabler:school',
+      },
     ]}
   />
 
@@ -204,31 +319,66 @@ const metadata = {
     subtitle="Hands-on web development across contracts, freelance, and production environments."
     columns={3}
     items={[
-      { title: 'Boeing', description: 'Front-end web development contract for Creative Services.', icon: 'tabler:device-desktop' },
-      { title: 'NetMotion Software', description: 'Developed a custom WordPress Gutenberg plugin using ReactJS.', icon: 'tabler:device-desktop' },
-      { title: 'Freeride Entertainment', description: 'Front-end maintenance using Jekyll, HTML, CSS, JavaScript, jQuery, Bootstrap, Barba.js, and Plyr.js.', icon: 'tabler:device-desktop' },
-      { title: 'EssenceMediacom', description: 'Serving major brand clients including Google and Target using a modern JavaScript development environment.', icon: 'tabler:device-desktop' },
+      {
+        title: 'Boeing',
+        description: 'Front-end web development contract for Creative Services.',
+        icon: 'tabler:device-desktop',
+      },
+      {
+        title: 'NetMotion Software',
+        description: 'Developed a custom WordPress Gutenberg plugin using ReactJS.',
+        icon: 'tabler:device-desktop',
+      },
+      {
+        title: 'Freeride Entertainment',
+        description:
+          'Front-end maintenance using Jekyll, HTML, CSS, JavaScript, jQuery, Bootstrap, Barba.js, and Plyr.js.',
+        icon: 'tabler:device-desktop',
+      },
+      {
+        title: 'EssenceMediacom',
+        description:
+          'Serving major brand clients including Google and Target using a modern JavaScript development environment.',
+        icon: 'tabler:device-desktop',
+      },
       { title: 'Udacity', description: 'Custom Chrome extension using JavaScript.', icon: 'tabler:device-desktop' },
-      { title: 'Copacino Fujikado', description: 'Applied GreenSock Animation Platform (GSAP) to create smooth, high performance JavaScript animations.', icon: 'tabler:device-desktop' },
-      { title: 'Ascendent Demolition', description: 'Developed WordPress theme using HTML, CSS, and JavaScript.', icon: 'tabler:device-desktop' },
-      { title: 'Tonkin Architecture', description: 'Developed WordPress theme using HTML, CSS, and JavaScript.', icon: 'tabler:device-desktop' },
+      {
+        title: 'Copacino Fujikado',
+        description:
+          'Applied GreenSock Animation Platform (GSAP) to create smooth, high performance JavaScript animations.',
+        icon: 'tabler:device-desktop',
+      },
+      {
+        title: 'Ascendent Demolition',
+        description: 'Developed WordPress theme using HTML, CSS, and JavaScript.',
+        icon: 'tabler:device-desktop',
+      },
+      {
+        title: 'Tonkin Architecture',
+        description: 'Developed WordPress theme using HTML, CSS, and JavaScript.',
+        icon: 'tabler:device-desktop',
+      },
     ]}
   />
 
   <!-- Contact -->
   <div id="contact" class="max-w-3xl mx-auto px-4 md:px-8 py-16 md:py-24 text-center">
     <div class="w-full flex justify-center mb-6">
-      <img src={profileImage.src} alt="Jonathan Root" class="w-28 h-28 rounded-full object-cover shadow-md border-4 border-white dark:border-gray-700" style="object-position: 13px 20%;" />
+      <img
+        src={profileImage.src}
+        alt="Jonathan Root"
+        class="w-28 h-28 rounded-full object-cover shadow-md border-4 border-white dark:border-gray-700"
+        style="object-position: 13px 20%;"
+      />
     </div>
     <p class="text-base text-secondary dark:text-blue-200 font-bold tracking-wide uppercase mb-2">Contact</p>
     <h2 class="text-4xl md:text-5xl font-bold tracking-tighter font-heading mb-6">Let's Connect</h2>
     <p class="text-sm text-muted italic mb-6">Resume available upon request.</p>
     <p class="text-xl text-muted mb-4">
-      I'm actively looking for remote roles in technical instructional design, developer education, customer education, and product training at SaaS and EdTech companies.
+      I'm actively looking for remote roles in technical instructional design, developer education, customer education,
+      and product training at SaaS and EdTech companies.
     </p>
-    <p class="text-lg text-muted mb-10">
-      Reach me on LinkedIn or by email.
-    </p>
+    <p class="text-lg text-muted mb-10">Reach me on LinkedIn or by email.</p>
     <div class="flex flex-col sm:flex-row gap-4 justify-center">
       <a
         href="https://www.linkedin.com/in/jonathanroot/"
@@ -236,14 +386,29 @@ const metadata = {
         rel="noopener"
         class="inline-flex items-center justify-center gap-2 bg-accent hover:bg-accent/90 text-white font-semibold px-8 py-4 rounded-lg transition-colors"
       >
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor"
+          ><path
+            d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
+          ></path></svg
+        >
         Connect on LinkedIn
       </a>
       <a
         href="mailto:jonroot@me.com"
         class="inline-flex items-center justify-center gap-2 border-2 border-current text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-800 font-semibold px-8 py-4 rounded-lg transition-colors"
       >
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-5 w-5"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          ><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"
+          ></path></svg
+        >
         Email Me
       </a>
     </div>

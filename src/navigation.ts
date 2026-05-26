@@ -20,9 +20,7 @@ export const headerData = {
 
 export const footerData = {
   links: [],
-  secondaryLinks: [
-    { text: 'Contact', href: '/about#contact' },
-  ],
+  secondaryLinks: [{ text: 'Contact', href: '/about#contact' }],
   socialLinks: [
     { ariaLabel: 'LinkedIn', icon: 'tabler:brand-linkedin', href: 'https://www.linkedin.com/in/jonathanroot/' },
   ],

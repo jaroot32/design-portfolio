@@ -18,7 +18,8 @@ const metadata = {
       <span class="text-accent dark:text-white">Infographic</span>
     </Fragment>
     <Fragment slot="subtitle">
-      A visual synthesis of key learning technology frameworks — including SAMR, the Hype Cycle, and Articulate Rise 360 — designed in Canva as the Unit 1 assignment for LDTC 620.
+      A visual synthesis of key learning technology frameworks — including SAMR, the Hype Cycle, and Articulate Rise 360
+      — designed in Canva as the Unit 1 assignment for LDTC 620.
     </Fragment>
   </Hero>
 
@@ -30,9 +31,20 @@ const metadata = {
     image={{ src: infographicImage, alt: 'Learning Technology Infographic' }}
   >
     <Fragment slot="content">
-      <p class="mb-4">As part of LDTC 620 — a graduate course in the M.S. Learning Design and Technology program at UMGC — I was tasked with creating an infographic that synthesized foundational learning technology concepts into a clear, visually engaging deliverable.</p>
-      <p class="mb-4">The assignment challenged me to move beyond written analysis and communicate complex instructional theory through layout, hierarchy, and visual metaphor — skills that transfer directly into eLearning development and instructional communication.</p>
-      <p>I designed this infographic entirely in Canva, applying intentional color, typography, and visual structure to make the content accessible and compelling.</p>
+      <p class="mb-4">
+        As part of LDTC 620 — a graduate course in the M.S. Learning Design and Technology program at UMGC — I was
+        tasked with creating an infographic that synthesized foundational learning technology concepts into a clear,
+        visually engaging deliverable.
+      </p>
+      <p class="mb-4">
+        The assignment challenged me to move beyond written analysis and communicate complex instructional theory
+        through layout, hierarchy, and visual metaphor — skills that transfer directly into eLearning development and
+        instructional communication.
+      </p>
+      <p>
+        I designed this infographic entirely in Canva, applying intentional color, typography, and visual structure to
+        make the content accessible and compelling.
+      </p>
     </Fragment>
     <Fragment slot="bg">
       <div class="absolute inset-0 section-pattern-b"></div>
@@ -48,46 +60,63 @@ const metadata = {
     items={[
       {
         title: 'Articulate Rise 360',
-        description: 'Explored how Rise 360 transforms traditional eLearning into responsive, mobile-first experiences — and how it integrates with Bloom\'s Taxonomy to structure learning activities.',
+        description:
+          "Explored how Rise 360 transforms traditional eLearning into responsive, mobile-first experiences — and how it integrates with Bloom's Taxonomy to structure learning activities.",
         icon: 'tabler:layout',
       },
       {
         title: 'SAMR Model',
-        description: 'Illustrated the four levels of technology integration — Substitution, Augmentation, Modification, and Redefinition — and how each level changes the nature of learning tasks.',
+        description:
+          'Illustrated the four levels of technology integration — Substitution, Augmentation, Modification, and Redefinition — and how each level changes the nature of learning tasks.',
         icon: 'tabler:layers-subtract',
       },
       {
         title: 'Hype Cycle — Plateau of Productivity',
-        description: 'Applied the Gartner Hype Cycle to educational technology adoption, positioning Rise 360 within the Plateau of Productivity as a mature, trusted tool for digital learning.',
+        description:
+          'Applied the Gartner Hype Cycle to educational technology adoption, positioning Rise 360 within the Plateau of Productivity as a mature, trusted tool for digital learning.',
         icon: 'tabler:trending-up',
       },
       {
         title: 'Challenges & Solutions',
-        description: 'Addressed real-world barriers to technology integration in learning contexts — including access, training, and resistance to change — and paired each with practical instructional solutions.',
+        description:
+          'Addressed real-world barriers to technology integration in learning contexts — including access, training, and resistance to change — and paired each with practical instructional solutions.',
         icon: 'tabler:bulb',
       },
     ]}
   />
 
   <!-- Design Process -->
-  <Content
-    tagline="Design Process"
-    title="Structure, hierarchy, and intentional color"
-  >
+  <Content tagline="Design Process" title="Structure, hierarchy, and intentional color">
     <Fragment slot="image">
       <div class="flex items-center justify-center h-full py-12 px-6">
         <blockquote class="border-l-4 border-accent pl-6">
-          <p class="text-2xl font-heading font-bold leading-snug text-gray-900 dark:text-white">"Start with the learning objective and work backward to the design."</p>
+          <p class="text-2xl font-heading font-bold leading-snug text-gray-900 dark:text-white">
+            "Start with the learning objective and work backward to the design."
+          </p>
         </blockquote>
       </div>
     </Fragment>
     <Fragment slot="content">
-      <p class="mb-4">I approached this infographic the same way I approach any instructional artifact — starting with the learning objective and working backward to the design. The goal was to help a viewer understand the relationship between these frameworks in a single glance, then drill deeper through the visual hierarchy.</p>
-      <p class="mb-4">The dark-background layout with high-contrast purple and teal tones was a deliberate choice to give the piece a modern, professional aesthetic consistent with technology-focused instructional materials. Each section is visually distinct but unified through consistent typography and color language.</p>
+      <p class="mb-4">
+        I approached this infographic the same way I approach any instructional artifact — starting with the learning
+        objective and working backward to the design. The goal was to help a viewer understand the relationship between
+        these frameworks in a single glance, then drill deeper through the visual hierarchy.
+      </p>
+      <p class="mb-4">
+        The dark-background layout with high-contrast purple and teal tones was a deliberate choice to give the piece a
+        modern, professional aesthetic consistent with technology-focused instructional materials. Each section is
+        visually distinct but unified through consistent typography and color language.
+      </p>
       <div class="mt-6 flex flex-wrap gap-2">
-        {['Canva', 'Visual Hierarchy', 'Color Theory', 'Instructional Communication', 'SAMR', 'Hype Cycle'].map(tag => (
-          <span class="bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 text-sm font-medium px-3 py-1 rounded-full">{tag}</span>
-        ))}
+        {
+          ['Canva', 'Visual Hierarchy', 'Color Theory', 'Instructional Communication', 'SAMR', 'Hype Cycle'].map(
+            (tag) => (
+              <span class="bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 text-sm font-medium px-3 py-1 rounded-full">
+                {tag}
+              </span>
+            )
+          )
+        }
       </div>
     </Fragment>
     <Fragment slot="bg">
@@ -104,17 +133,20 @@ const metadata = {
     items={[
       {
         title: 'Visual Storytelling',
-        description: 'Translating abstract instructional theory into a clear, scannable visual narrative — the same skill behind effective eLearning UI and infographic-style job aids.',
+        description:
+          'Translating abstract instructional theory into a clear, scannable visual narrative — the same skill behind effective eLearning UI and infographic-style job aids.',
         icon: 'tabler:eye',
       },
       {
         title: 'Content Synthesis',
-        description: 'Distilling complex frameworks into concise, accurate summaries requires deep conceptual understanding — not just design proficiency.',
+        description:
+          'Distilling complex frameworks into concise, accurate summaries requires deep conceptual understanding — not just design proficiency.',
         icon: 'tabler:puzzle',
       },
       {
         title: 'Tool Fluency',
-        description: 'Canva is widely used in EdTech and corporate training contexts for rapid visual content creation. This project demonstrates professional-level fluency with the platform.',
+        description:
+          'Canva is widely used in EdTech and corporate training contexts for rapid visual content creation. This project demonstrates professional-level fluency with the platform.',
         icon: 'tabler:tool',
       },
     ]}
@@ -131,7 +163,21 @@ const metadata = {
       rel="noopener"
       class="inline-flex items-center gap-2 bg-accent hover:bg-accent/90 text-white font-semibold px-8 py-4 rounded-lg transition-colors"
     >
-      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="h-5 w-5"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        ><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line
+          x1="12"
+          y1="15"
+          x2="12"
+          y2="3"></line></svg
+      >
       Download PDF
     </a>
   </div>
@@ -143,6 +189,8 @@ const metadata = {
     ]}
   >
     <Fragment slot="title">Interested in working together?</Fragment>
-    <Fragment slot="subtitle">I'm open to remote opportunities in instructional design and technical learning experience design.</Fragment>
+    <Fragment slot="subtitle"
+      >I'm open to remote opportunities in instructional design and technical learning experience design.</Fragment
+    >
   </CallToAction>
 </Layout>

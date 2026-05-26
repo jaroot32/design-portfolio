@@ -20,25 +20,37 @@ const metadata = {
       <span class="text-accent dark:text-white">University of Washington</span>
     </Fragment>
     <Fragment slot="subtitle">
-      Classroom instructor for the University of Washington's web development bootcamp, delivered in partnership with Trilogy Education — teaching HTML, CSS, and JavaScript to career-changers through live coding, hands-on exercises, and real-time debugging.
+      Classroom instructor for the University of Washington's web development bootcamp, delivered in partnership with
+      Trilogy Education — teaching HTML, CSS, and JavaScript to career-changers through live coding, hands-on exercises,
+      and real-time debugging.
     </Fragment>
   </Hero>
 
   <!-- Context -->
-  <Content
-    tagline="The Role"
-    title="In-person instruction for career changers"
-    isReversed
-  >
+  <Content tagline="The Role" title="In-person instruction for career changers" isReversed>
     <Fragment slot="image">
       <div class="flex flex-col gap-4 px-6 py-8">
-        <Image src={classroomImg1} alt="Jonathan Root teaching web development at UW bootcamp" class="w-full rounded-lg shadow-md border border-gray-200 dark:border-gray-700" />
+        <Image
+          src={classroomImg1}
+          alt="Jonathan Root teaching web development at UW bootcamp"
+          class="w-full rounded-lg shadow-md border border-gray-200 dark:border-gray-700"
+        />
       </div>
     </Fragment>
     <Fragment slot="content">
-      <p class="mb-4">The University of Washington partnered with Trilogy Education to deliver an intensive in-person web development bootcamp for working adults and career-changers. As a classroom instructor, I led live sessions covering core front-end technologies — bringing concepts to life through live coding, browser-based demos, and real-time Q&A.</p>
-      <p class="mb-4">Sessions were structured around short conceptual explanations followed immediately by hands-on coding exercises — keeping learners active and engaged rather than passively watching a slide deck.</p>
-      <p>The in-person format required strong improvisational teaching skills — reading the room, adapting pace, and meeting learners where they were in the moment.</p>
+      <p class="mb-4">
+        The University of Washington partnered with Trilogy Education to deliver an intensive in-person web development
+        bootcamp for working adults and career-changers. As a classroom instructor, I led live sessions covering core
+        front-end technologies — bringing concepts to life through live coding, browser-based demos, and real-time Q&A.
+      </p>
+      <p class="mb-4">
+        Sessions were structured around short conceptual explanations followed immediately by hands-on coding exercises
+        — keeping learners active and engaged rather than passively watching a slide deck.
+      </p>
+      <p>
+        The in-person format required strong improvisational teaching skills — reading the room, adapting pace, and
+        meeting learners where they were in the moment.
+      </p>
     </Fragment>
     <Fragment slot="bg">
       <div class="absolute inset-0 section-pattern-b"></div>
@@ -54,51 +66,69 @@ const metadata = {
     items={[
       {
         title: 'CSS Positioning',
-        description: 'Teaching static, relative, absolute, fixed, and sticky positioning — using live VS Code demos and Chrome DevTools to show exactly how each value affects layout in the browser.',
+        description:
+          'Teaching static, relative, absolute, fixed, and sticky positioning — using live VS Code demos and Chrome DevTools to show exactly how each value affects layout in the browser.',
         icon: 'tabler:layout',
       },
       {
         title: 'Chrome Inspector',
-        description: 'Hands-on use of Chrome DevTools to inspect elements, debug CSS, and understand how the browser interprets and renders HTML and stylesheets in real time.',
+        description:
+          'Hands-on use of Chrome DevTools to inspect elements, debug CSS, and understand how the browser interprets and renders HTML and stylesheets in real time.',
         icon: 'tabler:brand-chrome',
       },
       {
         title: 'HTML Structure',
-        description: 'Document structure, semantic markup, and how HTML elements relate to one another in the DOM — the foundation for everything built on top.',
+        description:
+          'Document structure, semantic markup, and how HTML elements relate to one another in the DOM — the foundation for everything built on top.',
         icon: 'tabler:code',
       },
       {
         title: 'CSS Fundamentals',
-        description: 'The box model, specificity, the cascade, and how stylesheets interact — building mental models that help learners debug their own code independently.',
+        description:
+          'The box model, specificity, the cascade, and how stylesheets interact — building mental models that help learners debug their own code independently.',
         icon: 'tabler:brush',
       },
       {
         title: 'Live Coding Demos',
-        description: 'All concepts demonstrated live in VS Code projected on screen — writing code in real time, making mistakes, correcting them, and narrating the thought process throughout.',
+        description:
+          'All concepts demonstrated live in VS Code projected on screen — writing code in real time, making mistakes, correcting them, and narrating the thought process throughout.',
         icon: 'tabler:terminal-2',
       },
       {
         title: 'Real-Time Debugging',
-        description: 'Modeling how to approach broken code — using the browser inspector, reading error messages, and working through problems methodically rather than just presenting finished solutions.',
+        description:
+          'Modeling how to approach broken code — using the browser inspector, reading error messages, and working through problems methodically rather than just presenting finished solutions.',
         icon: 'tabler:bug',
       },
     ]}
   />
 
   <!-- Live Coding -->
-  <Content
-    tagline="In the Classroom"
-    title="Live code, real feedback"
-  >
+  <Content tagline="In the Classroom" title="Live code, real feedback">
     <Fragment slot="image">
       <div class="flex items-center justify-center h-full px-6 py-8">
-        <Image src={vscodeImg} alt="VS Code CSS positioning demo — UW bootcamp live coding session" class="w-full rounded-lg shadow-md border border-gray-200 dark:border-gray-700" />
+        <Image
+          src={vscodeImg}
+          alt="VS Code CSS positioning demo — UW bootcamp live coding session"
+          class="w-full rounded-lg shadow-md border border-gray-200 dark:border-gray-700"
+        />
       </div>
     </Fragment>
     <Fragment slot="content">
-      <p class="mb-4">Every session was built around live coding projected on screen. Rather than walking through pre-built examples, I wrote code from scratch in front of the class — demonstrating not just what the end result looks like, but how to think through building it.</p>
-      <p class="mb-4">For CSS positioning specifically, I paired VS Code with the Chrome Inspector side-by-side so learners could immediately see how changing a CSS property shifted an element's behavior in the browser — making abstract concepts tangible.</p>
-      <p>This approach — show the process, not just the answer — is a core part of how I design technical learning experiences today.</p>
+      <p class="mb-4">
+        Every session was built around live coding projected on screen. Rather than walking through pre-built examples,
+        I wrote code from scratch in front of the class — demonstrating not just what the end result looks like, but how
+        to think through building it.
+      </p>
+      <p class="mb-4">
+        For CSS positioning specifically, I paired VS Code with the Chrome Inspector side-by-side so learners could
+        immediately see how changing a CSS property shifted an element's behavior in the browser — making abstract
+        concepts tangible.
+      </p>
+      <p>
+        This approach — show the process, not just the answer — is a core part of how I design technical learning
+        experiences today.
+      </p>
     </Fragment>
     <Fragment slot="bg">
       <div class="absolute inset-0 section-pattern-e"></div>
@@ -108,9 +138,13 @@ const metadata = {
   <!-- Video -->
   <div class="max-w-4xl mx-auto px-4 md:px-8 py-12 md:py-16">
     <div class="text-center mb-8">
-      <p class="text-base text-secondary dark:text-blue-200 font-bold tracking-wide uppercase mb-2">Classroom Recording</p>
+      <p class="text-base text-secondary dark:text-blue-200 font-bold tracking-wide uppercase mb-2">
+        Classroom Recording
+      </p>
       <h2 class="text-4xl md:text-5xl font-bold tracking-tighter font-heading">See the Session</h2>
-      <p class="text-lg text-muted mt-4">A 3-minute excerpt from a live CSS positioning and Chrome Inspector session at the UW bootcamp, 2018.</p>
+      <p class="text-lg text-muted mt-4">
+        A 3-minute excerpt from a live CSS positioning and Chrome Inspector session at the UW bootcamp, 2018.
+      </p>
     </div>
     <div class="relative w-full rounded-lg shadow-lg overflow-hidden" style="padding-top: 56.25%;">
       <iframe
@@ -119,17 +153,12 @@ const metadata = {
         title="Web Development Bootcamp — CSS Positioning & Chrome Inspector, University of Washington"
         frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen
-      ></iframe>
+        allowfullscreen></iframe>
     </div>
   </div>
 
   <!-- Reflection -->
-  <Content
-    tagline="Reflection"
-    title="Where in-person teaching shaped my practice"
-    isReversed
-  >
+  <Content tagline="Reflection" title="Where in-person teaching shaped my practice" isReversed>
     <Fragment slot="image">
       <div class="flex items-center justify-center h-full py-12">
         <div class="text-center">
@@ -144,14 +173,36 @@ const metadata = {
       </div>
     </Fragment>
     <Fragment slot="content">
-      <p class="mb-4">Teaching in-person bootcamp sessions is where I developed the instincts that still shape how I approach learning design. When you're standing in front of a room and someone doesn't understand something, you have to figure out why — and adapt on the spot.</p>
-      <p class="mb-4">That experience made me a better instructional designer. I learned that the clearest explanation is rarely the most complete one — it's the one that meets the learner where they are, uses the right analogy at the right moment, and shows rather than tells.</p>
+      <p class="mb-4">
+        Teaching in-person bootcamp sessions is where I developed the instincts that still shape how I approach learning
+        design. When you're standing in front of a room and someone doesn't understand something, you have to figure out
+        why — and adapt on the spot.
+      </p>
+      <p class="mb-4">
+        That experience made me a better instructional designer. I learned that the clearest explanation is rarely the
+        most complete one — it's the one that meets the learner where they are, uses the right analogy at the right
+        moment, and shows rather than tells.
+      </p>
       <div class="mt-6 flex flex-wrap gap-2">
-        {['HTML', 'CSS', 'JavaScript', 'Chrome DevTools', 'Live Coding', 'Bootcamp Instruction', 'Trilogy Education'].map(tag => (
-          <span class="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-sm font-medium px-3 py-1 rounded-full">{tag}</span>
-        ))}
+        {
+          [
+            'HTML',
+            'CSS',
+            'JavaScript',
+            'Chrome DevTools',
+            'Live Coding',
+            'Bootcamp Instruction',
+            'Trilogy Education',
+          ].map((tag) => (
+            <span class="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-sm font-medium px-3 py-1 rounded-full">
+              {tag}
+            </span>
+          ))
+        }
       </div>
-      <p class="text-sm text-muted mt-4">Web development bootcamp instruction via Trilogy Education partnership, University of Washington, 2018.</p>
+      <p class="text-sm text-muted mt-4">
+        Web development bootcamp instruction via Trilogy Education partnership, University of Washington, 2018.
+      </p>
     </Fragment>
     <Fragment slot="bg">
       <div class="absolute inset-0 section-pattern"></div>
@@ -165,6 +216,8 @@ const metadata = {
     ]}
   >
     <Fragment slot="title">Interested in working together?</Fragment>
-    <Fragment slot="subtitle">I'm open to remote opportunities in instructional design and technical learning experience design.</Fragment>
+    <Fragment slot="subtitle"
+      >I'm open to remote opportunities in instructional design and technical learning experience design.</Fragment
+    >
   </CallToAction>
 </Layout>

@@ -17,16 +17,13 @@ const metadata = {
       <span class="text-accent dark:text-white">Rise 360 Portfolio Course</span>
     </Fragment>
     <Fragment slot="subtitle">
-      A self-paced Rise 360 course built as a portfolio piece — a practical, focused guide to creating Gemini Gems for employees at a large health organization, developed after completing Gemini Gem creation training at LearningMate.
+      A self-paced Rise 360 course built as a portfolio piece — a practical, focused guide to creating Gemini Gems for
+      employees at a large health organization, developed after completing Gemini Gem creation training at LearningMate.
     </Fragment>
   </Hero>
 
   <!-- Context -->
-  <Content
-    tagline="The Project"
-    title="From internal training to portfolio artifact"
-    isReversed
-  >
+  <Content tagline="The Project" title="From internal training to portfolio artifact" isReversed>
     <Fragment slot="image">
       <div class="flex items-center justify-center h-full py-12">
         <div class="text-center">
@@ -41,9 +38,22 @@ const metadata = {
       </div>
     </Fragment>
     <Fragment slot="content">
-      <p class="mb-4">As part of my role at LearningMate, I went through a Gemini Gem creation training — a structured walkthrough of how to build custom AI assistants within Google Gemini for recurring tasks. Going through that training as a learner gave me a clear view of how the content could be translated into a real workforce learning experience.</p>
-      <p class="mb-4">I used that as the starting point for this portfolio piece: a stripped-down, practical Rise 360 course designed for employees at a large health organization. Rather than covering all of Gemini's features, the course focuses specifically on what someone in a healthcare workplace setting needs to know to build and use a Gem for a task they do every week — keeping the scope tight and the application concrete.</p>
-      <p>The healthcare framing shapes the content throughout — the examples, the use cases, and the tone all reflect the context of a large, compliance-aware organization where AI adoption needs to be practical, grounded, and trustworthy.</p>
+      <p class="mb-4">
+        As part of my role at LearningMate, I went through a Gemini Gem creation training — a structured walkthrough of
+        how to build custom AI assistants within Google Gemini for recurring tasks. Going through that training as a
+        learner gave me a clear view of how the content could be translated into a real workforce learning experience.
+      </p>
+      <p class="mb-4">
+        I used that as the starting point for this portfolio piece: a stripped-down, practical Rise 360 course designed
+        for employees at a large health organization. Rather than covering all of Gemini's features, the course focuses
+        specifically on what someone in a healthcare workplace setting needs to know to build and use a Gem for a task
+        they do every week — keeping the scope tight and the application concrete.
+      </p>
+      <p>
+        The healthcare framing shapes the content throughout — the examples, the use cases, and the tone all reflect the
+        context of a large, compliance-aware organization where AI adoption needs to be practical, grounded, and
+        trustworthy.
+      </p>
     </Fragment>
     <Fragment slot="bg">
       <div class="absolute inset-0 section-pattern-b"></div>
@@ -59,47 +69,56 @@ const metadata = {
     items={[
       {
         title: 'What is Gemini and Why It Matters',
-        description: 'Introduces Gemini in a healthcare workplace context — what it is, what it\'s designed to help with, and why it\'s relevant to how staff already work. Includes an interactive element and knowledge check.',
+        description:
+          "Introduces Gemini in a healthcare workplace context — what it is, what it's designed to help with, and why it's relevant to how staff already work. Includes an interactive element and knowledge check.",
         icon: 'tabler:bulb',
       },
       {
         title: 'Your First Prompts',
-        description: 'Covers the fundamentals of prompt writing — how to structure a prompt, what makes a prompt effective, and how to iterate. Grounded in scenarios that reflect real health organization workflows.',
+        description:
+          'Covers the fundamentals of prompt writing — how to structure a prompt, what makes a prompt effective, and how to iterate. Grounded in scenarios that reflect real health organization workflows.',
         icon: 'tabler:message',
       },
       {
         title: 'Gemini in Your Daily Workflow',
-        description: 'Moves from isolated prompts to integrated practice — showing how Gemini fits into recurring tasks like drafting communications, summarizing documents, and preparing for meetings.',
+        description:
+          'Moves from isolated prompts to integrated practice — showing how Gemini fits into recurring tasks like drafting communications, summarizing documents, and preparing for meetings.',
         icon: 'tabler:briefcase',
       },
       {
         title: 'Best Practices and Getting Started',
-        description: 'Closes the first section with practical guidance — including accuracy habits, privacy and compliance considerations relevant to healthcare, and how to build confidence through low-stakes practice.',
+        description:
+          'Closes the first section with practical guidance — including accuracy habits, privacy and compliance considerations relevant to healthcare, and how to build confidence through low-stakes practice.',
         icon: 'tabler:checklist',
       },
       {
         title: 'What is a Gemini Gem?',
-        description: 'Introduces Gemini Gems — custom AI assistants built for specific recurring tasks. Covers what Gems are, when to use them, and what makes a strong Gem use case in a health organization context.',
+        description:
+          'Introduces Gemini Gems — custom AI assistants built for specific recurring tasks. Covers what Gems are, when to use them, and what makes a strong Gem use case in a health organization context.',
         icon: 'tabler:robot',
       },
       {
         title: 'Setting Up Your Weekly Status Report Gem',
-        description: 'A step-by-step walkthrough of building a real Gem — a weekly status report assistant. Covers writing the system prompt, setting instructions, and configuring the Gem for consistent output.',
+        description:
+          'A step-by-step walkthrough of building a real Gem — a weekly status report assistant. Covers writing the system prompt, setting instructions, and configuring the Gem for consistent output.',
         icon: 'tabler:settings',
       },
       {
         title: 'Testing and Refining Your Gem',
-        description: 'Covers the iteration process — how to test a Gem with real inputs, evaluate the output, and refine the system prompt when the results need adjustment.',
+        description:
+          'Covers the iteration process — how to test a Gem with real inputs, evaluate the output, and refine the system prompt when the results need adjustment.',
         icon: 'tabler:adjustments',
       },
       {
         title: 'Your Assignment',
-        description: 'A practical capstone: learners use their Gem to generate a real weekly status report with their own work context. The assignment bridges course learning and immediate on-the-job application.',
+        description:
+          'A practical capstone: learners use their Gem to generate a real weekly status report with their own work context. The assignment bridges course learning and immediate on-the-job application.',
         icon: 'tabler:clipboard-check',
       },
       {
         title: 'Reflection and Next Steps',
-        description: 'Closes the course with a reflection activity and forward-looking guidance — helping learners identify other recurring tasks where a Gem could save time and build a habit of continued AI skill development.',
+        description:
+          'Closes the course with a reflection activity and forward-looking guidance — helping learners identify other recurring tasks where a Gem could save time and build a habit of continued AI skill development.',
         icon: 'tabler:arrow-right',
       },
     ]}
@@ -108,45 +127,103 @@ const metadata = {
   <!-- Course Embed -->
   <div class="max-w-5xl mx-auto px-4 md:px-8 py-12 md:py-16">
     <div class="text-center mb-10">
-      <p class="text-base text-secondary dark:text-blue-200 font-bold tracking-wide uppercase mb-2">Interactive Course</p>
+      <p class="text-base text-secondary dark:text-blue-200 font-bold tracking-wide uppercase mb-2">
+        Interactive Course
+      </p>
       <h2 class="text-4xl md:text-5xl font-bold tracking-tighter font-heading">Try the Course</h2>
-      <p class="text-lg text-muted mt-4">The full Rise 360 course — self-paced, interactive, with knowledge checks throughout. Best experienced on desktop.</p>
+      <p class="text-lg text-muted mt-4">
+        The full Rise 360 course — self-paced, interactive, with knowledge checks throughout. Best experienced on
+        desktop.
+      </p>
     </div>
-    <div class="relative w-full rounded-lg shadow-lg overflow-hidden border border-gray-200 dark:border-gray-700" style="padding-top: 62.5%;">
+    <div
+      class="relative w-full rounded-lg shadow-lg overflow-hidden border border-gray-200 dark:border-gray-700"
+      style="padding-top: 62.5%;"
+    >
       <iframe
         class="absolute inset-0 w-full h-full"
         src="/gemini-course"
         title="Work Smarter with Gemini — Rise 360 Course"
         frameborder="0"
-        allowfullscreen
-      ></iframe>
+        allowfullscreen></iframe>
     </div>
-    <p class="text-sm text-muted text-center mt-4">If the course doesn't load in the embed, <a href="/gemini-course" target="_blank" class="text-accent hover:underline">open it directly</a>.</p>
+    <p class="text-sm text-muted text-center mt-4">
+      If the course doesn't load in the embed, <a
+        href="/gemini-course"
+        target="_blank"
+        class="text-accent hover:underline">open it directly</a
+      >.
+    </p>
   </div>
 
   <!-- Design Decisions -->
-  <Content
-    tagline="Design Approach"
-    title="What shaped the instructional design decisions"
-  >
+  <Content tagline="Design Approach" title="What shaped the instructional design decisions">
     <Fragment slot="content">
       <p class="mb-6">A few intentional choices define how this course is structured:</p>
       <div class="space-y-4">
         <div class="flex gap-3">
-          <div class="flex-shrink-0 w-6 h-6 rounded-full bg-accent text-white flex items-center justify-center text-xs font-bold mt-0.5">1</div>
-          <div><p class="font-semibold text-sm">Scope limited to Gem creation, not all of Gemini.</p><p class="text-sm text-muted mt-1">A course that tries to teach everything about Gemini ends up teaching nothing well. This course starts with just enough context to make sense of Gems, then goes deep on the one thing that changes behavior: building and using a Gem for a task you do every week.</p></div>
+          <div
+            class="flex-shrink-0 w-6 h-6 rounded-full bg-accent text-white flex items-center justify-center text-xs font-bold mt-0.5"
+          >
+            1
+          </div>
+          <div>
+            <p class="font-semibold text-sm">Scope limited to Gem creation, not all of Gemini.</p><p
+              class="text-sm text-muted mt-1"
+            >
+              A course that tries to teach everything about Gemini ends up teaching nothing well. This course starts
+              with just enough context to make sense of Gems, then goes deep on the one thing that changes behavior:
+              building and using a Gem for a task you do every week.
+            </p>
+          </div>
         </div>
         <div class="flex gap-3">
-          <div class="flex-shrink-0 w-6 h-6 rounded-full bg-accent text-white flex items-center justify-center text-xs font-bold mt-0.5">2</div>
-          <div><p class="font-semibold text-sm">Healthcare context throughout — not generic business scenarios.</p><p class="text-sm text-muted mt-1">Employees at a large health organization have a specific work context: compliance awareness, high documentation load, and recurring administrative tasks. The examples and use cases reflect that reality, which makes the content feel relevant rather than theoretical.</p></div>
+          <div
+            class="flex-shrink-0 w-6 h-6 rounded-full bg-accent text-white flex items-center justify-center text-xs font-bold mt-0.5"
+          >
+            2
+          </div>
+          <div>
+            <p class="font-semibold text-sm">Healthcare context throughout — not generic business scenarios.</p><p
+              class="text-sm text-muted mt-1"
+            >
+              Employees at a large health organization have a specific work context: compliance awareness, high
+              documentation load, and recurring administrative tasks. The examples and use cases reflect that reality,
+              which makes the content feel relevant rather than theoretical.
+            </p>
+          </div>
         </div>
         <div class="flex gap-3">
-          <div class="flex-shrink-0 w-6 h-6 rounded-full bg-accent text-white flex items-center justify-center text-xs font-bold mt-0.5">3</div>
-          <div><p class="font-semibold text-sm">Consistent lesson structure reduces cognitive load for self-paced learners.</p><p class="text-sm text-muted mt-1">Every lesson follows the same pattern — concept introduction, interactive element, applied context, knowledge check. When learners know what to expect from each lesson, they spend less mental energy navigating the course and more actually processing the content.</p></div>
+          <div
+            class="flex-shrink-0 w-6 h-6 rounded-full bg-accent text-white flex items-center justify-center text-xs font-bold mt-0.5"
+          >
+            3
+          </div>
+          <div>
+            <p class="font-semibold text-sm">
+              Consistent lesson structure reduces cognitive load for self-paced learners.
+            </p><p class="text-sm text-muted mt-1">
+              Every lesson follows the same pattern — concept introduction, interactive element, applied context,
+              knowledge check. When learners know what to expect from each lesson, they spend less mental energy
+              navigating the course and more actually processing the content.
+            </p>
+          </div>
         </div>
         <div class="flex gap-3">
-          <div class="flex-shrink-0 w-6 h-6 rounded-full bg-accent text-white flex items-center justify-center text-xs font-bold mt-0.5">4</div>
-          <div><p class="font-semibold text-sm">Ending with a real deliverable, not a final quiz.</p><p class="text-sm text-muted mt-1">The capstone assignment asks learners to use their Gem with their own actual work — a real status report, not a sample scenario. That transfer from course to job is the outcome that matters, and designing explicitly for it is what makes training stick.</p></div>
+          <div
+            class="flex-shrink-0 w-6 h-6 rounded-full bg-accent text-white flex items-center justify-center text-xs font-bold mt-0.5"
+          >
+            4
+          </div>
+          <div>
+            <p class="font-semibold text-sm">Ending with a real deliverable, not a final quiz.</p><p
+              class="text-sm text-muted mt-1"
+            >
+              The capstone assignment asks learners to use their Gem with their own actual work — a real status report,
+              not a sample scenario. That transfer from course to job is the outcome that matters, and designing
+              explicitly for it is what makes training stick.
+            </p>
+          </div>
         </div>
       </div>
     </Fragment>
@@ -156,11 +233,7 @@ const metadata = {
   </Content>
 
   <!-- Reflection -->
-  <Content
-    tagline="Reflection"
-    title="Turning a training experience into a design artifact"
-    isReversed
-  >
+  <Content tagline="Reflection" title="Turning a training experience into a design artifact" isReversed>
     <Fragment slot="image">
       <div class="flex items-center justify-center h-full py-12">
         <div class="text-center">
@@ -175,14 +248,42 @@ const metadata = {
       </div>
     </Fragment>
     <Fragment slot="content">
-      <p class="mb-4">Going through the Gem creation training at LearningMate as a learner was a useful vantage point. I noticed what made the training effective, where it left gaps, and how it could be adapted for a specific organizational context — a large health organization where employees have a clear recurring-task problem that Gems are well-suited to solve.</p>
-      <p class="mb-4">That's where this portfolio piece came from: taking a training experience, identifying what a more contextually grounded version of it would look like for a specific audience, and building it. The result is a course that's narrower in scope than the original training — by design — because a narrower scope with a concrete outcome is more likely to change behavior than a broad survey of features.</p>
+      <p class="mb-4">
+        Going through the Gem creation training at LearningMate as a learner was a useful vantage point. I noticed what
+        made the training effective, where it left gaps, and how it could be adapted for a specific organizational
+        context — a large health organization where employees have a clear recurring-task problem that Gems are
+        well-suited to solve.
+      </p>
+      <p class="mb-4">
+        That's where this portfolio piece came from: taking a training experience, identifying what a more contextually
+        grounded version of it would look like for a specific audience, and building it. The result is a course that's
+        narrower in scope than the original training — by design — because a narrower scope with a concrete outcome is
+        more likely to change behavior than a broad survey of features.
+      </p>
       <div class="mt-6 flex flex-wrap gap-2">
-        {['Rise 360', 'eLearning', 'AI Adoption', 'Google Gemini', 'Gemini Gems', 'Healthcare Learning', 'Instructional Design', 'LearningMate', 'Self-Paced Learning', 'Workplace Training'].map(tag => (
-          <span class="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-sm font-medium px-3 py-1 rounded-full">{tag}</span>
-        ))}
+        {
+          [
+            'Rise 360',
+            'eLearning',
+            'AI Adoption',
+            'Google Gemini',
+            'Gemini Gems',
+            'Healthcare Learning',
+            'Instructional Design',
+            'LearningMate',
+            'Self-Paced Learning',
+            'Workplace Training',
+          ].map((tag) => (
+            <span class="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-sm font-medium px-3 py-1 rounded-full">
+              {tag}
+            </span>
+          ))
+        }
       </div>
-      <p class="text-sm text-muted mt-4">Portfolio project — Rise 360 course on Gemini Gem creation for a large health organization. Developed following Gemini training at LearningMate.</p>
+      <p class="text-sm text-muted mt-4">
+        Portfolio project — Rise 360 course on Gemini Gem creation for a large health organization. Developed following
+        Gemini training at LearningMate.
+      </p>
     </Fragment>
     <Fragment slot="bg">
       <div class="absolute inset-0 section-pattern"></div>
@@ -196,6 +297,8 @@ const metadata = {
     ]}
   >
     <Fragment slot="title">Interested in working together?</Fragment>
-    <Fragment slot="subtitle">I'm open to remote opportunities in instructional design and technical learning experience design.</Fragment>
+    <Fragment slot="subtitle"
+      >I'm open to remote opportunities in instructional design and technical learning experience design.</Fragment
+    >
   </CallToAction>
 </Layout>

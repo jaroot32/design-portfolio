@@ -20,25 +20,39 @@ const metadata = {
       <span class="text-accent dark:text-white">OpenClassrooms Student Webinar</span>
     </Fragment>
     <Fragment slot="subtitle">
-      Invited to lead a live student webinar for OpenClassrooms covering modern CSS animations built with SCSS/SASS — including transitions, @keyframes, the 12 principles of animation applied to the web, and Chrome DevTools for debugging animation performance.
+      Invited to lead a live student webinar for OpenClassrooms covering modern CSS animations built with SCSS/SASS —
+      including transitions, @keyframes, the 12 principles of animation applied to the web, and Chrome DevTools for
+      debugging animation performance.
     </Fragment>
   </Hero>
 
   <!-- Context -->
-  <Content
-    tagline="The Webinar"
-    title="Animation principles built with SCSS"
-    isReversed
-  >
+  <Content tagline="The Webinar" title="Animation principles built with SCSS" isReversed>
     <Fragment slot="image">
       <div class="flex items-center justify-center h-full px-6 py-8">
-        <Image src={titleSlide} alt="Modern CSS Animations Student Webinar — OpenClassrooms, December 10, 2020" class="w-full rounded-lg shadow-md border border-gray-200 dark:border-gray-700" />
+        <Image
+          src={titleSlide}
+          alt="Modern CSS Animations Student Webinar — OpenClassrooms, December 10, 2020"
+          class="w-full rounded-lg shadow-md border border-gray-200 dark:border-gray-700"
+        />
       </div>
     </Fragment>
     <Fragment slot="content">
-      <p class="mb-4">On December 10, 2020, I delivered a live student webinar for OpenClassrooms as Part 2 of the CSS & SASS series — this time focused on building modern animations using SCSS/SASS, extending the course with live CodePen demos and a Chrome DevTools deep dive into animation performance.</p>
-      <p class="mb-4">The session covered animation theory grounded in the 12 principles — using the Walt Disney/Mickey Mouse example to show how complex, believable motion is built from simple shapes and speed curves — then moved into practical CSS implementation with transitions, @keyframes, and the transform property.</p>
-      <p>One practical rule I emphasized throughout: each CSS selector can only have one transform property. Because of CSS cascading, a second transform on the same selector will cancel out the first — a common source of bugs for students just learning animations.</p>
+      <p class="mb-4">
+        On December 10, 2020, I delivered a live student webinar for OpenClassrooms as Part 2 of the CSS & SASS series —
+        this time focused on building modern animations using SCSS/SASS, extending the course with live CodePen demos
+        and a Chrome DevTools deep dive into animation performance.
+      </p>
+      <p class="mb-4">
+        The session covered animation theory grounded in the 12 principles — using the Walt Disney/Mickey Mouse example
+        to show how complex, believable motion is built from simple shapes and speed curves — then moved into practical
+        CSS implementation with transitions, @keyframes, and the transform property.
+      </p>
+      <p>
+        One practical rule I emphasized throughout: each CSS selector can only have one transform property. Because of
+        CSS cascading, a second transform on the same selector will cancel out the first — a common source of bugs for
+        students just learning animations.
+      </p>
     </Fragment>
     <Fragment slot="bg">
       <div class="absolute inset-0 section-pattern-b"></div>
@@ -54,51 +68,70 @@ const metadata = {
     items={[
       {
         title: '12 Principles of Animation',
-        description: 'Introduced the classic Disney animation principles — squash and stretch, anticipation, staging, follow-through, and more — and showed how each maps to modern CSS and web animation practice.',
+        description:
+          'Introduced the classic Disney animation principles — squash and stretch, anticipation, staging, follow-through, and more — and showed how each maps to modern CSS and web animation practice.',
         icon: 'tabler:keyframes',
       },
       {
         title: 'How the Browser Renders CSS',
-        description: 'Walked through the four browser rendering steps — style, layout, paint, and composite — explaining which CSS properties trigger expensive repaints and how to write animations that stay on the compositor.',
+        description:
+          'Walked through the four browser rendering steps — style, layout, paint, and composite — explaining which CSS properties trigger expensive repaints and how to write animations that stay on the compositor.',
         icon: 'tabler:cpu',
       },
       {
         title: 'CSS Transitions',
-        description: 'Covered the four ingredients of a CSS transition — the property to animate, its before and after values, duration, and a pseudo-selector trigger — with live CodePen examples showing each in action.',
+        description:
+          'Covered the four ingredients of a CSS transition — the property to animate, its before and after values, duration, and a pseudo-selector trigger — with live CodePen examples showing each in action.',
         icon: 'tabler:arrows-exchange',
       },
       {
         title: '@keyframes Animations',
-        description: 'Moved beyond simple A-to-B transitions into multi-stage @keyframes animations — building a progress bar example to show how to create multiple waypoints throughout an animation sequence.',
+        description:
+          'Moved beyond simple A-to-B transitions into multi-stage @keyframes animations — building a progress bar example to show how to create multiple waypoints throughout an animation sequence.',
         icon: 'tabler:timeline',
       },
       {
         title: 'CSS Transforms',
-        description: 'Demonstrated the transform property with perspective and rotateX — showing how 3D transforms work in CSS and how BEM modifiers can be used to create variants from a single base style.',
+        description:
+          'Demonstrated the transform property with perspective and rotateX — showing how 3D transforms work in CSS and how BEM modifiers can be used to create variants from a single base style.',
         icon: 'tabler:3d-rotate',
       },
       {
         title: 'Chrome DevTools for Animation',
-        description: 'Used the Chrome DevTools animations panel to inspect, slow down, and profile animations — showing how to find jank, identify dropped frames, and use CPU throttling to test on slower devices.',
+        description:
+          'Used the Chrome DevTools animations panel to inspect, slow down, and profile animations — showing how to find jank, identify dropped frames, and use CPU throttling to test on slower devices.',
         icon: 'tabler:brand-chrome',
       },
     ]}
   />
 
   <!-- Live Demo -->
-  <Content
-    tagline="Live Demo"
-    title="Transforms, perspective, and BEM modifiers"
-  >
+  <Content tagline="Live Demo" title="Transforms, perspective, and BEM modifiers">
     <Fragment slot="image">
       <div class="flex items-center justify-center h-full px-6 py-8">
-        <Image src={transformCode} alt="CSS transform with perspective and BEM modifier variants — live demo code" class="w-full rounded-lg shadow-md border border-gray-200 dark:border-gray-700" />
+        <Image
+          src={transformCode}
+          alt="CSS transform with perspective and BEM modifier variants — live demo code"
+          class="w-full rounded-lg shadow-md border border-gray-200 dark:border-gray-700"
+        />
       </div>
     </Fragment>
     <Fragment slot="content">
-      <p class="mb-4">One of the session's live demo highlights was combining CSS transforms with BEM-style modifier classes — using <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded text-sm">perspective()</code> and <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded text-sm">rotateX()</code> to create 3D effects and modifier variants like <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded text-sm">&--perspective75px</code> to apply different depths.</p>
-      <p class="mb-4">This reinforced the BEM naming convention from the previous webinar while introducing new CSS functionality — giving learners continuity across sessions and showing how the naming system scales into complex components.</p>
-      <p>All examples were built live in CodePen so students could fork them, experiment, and keep the reference for later.</p>
+      <p class="mb-4">
+        One of the session's live demo highlights was combining CSS transforms with BEM-style modifier classes — using <code
+          class="bg-gray-100 dark:bg-gray-800 px-1 rounded text-sm">perspective()</code
+        > and <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded text-sm">rotateX()</code> to create 3D effects and modifier
+        variants like <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded text-sm">&--perspective75px</code> to apply
+        different depths.
+      </p>
+      <p class="mb-4">
+        This reinforced the BEM naming convention from the previous webinar while introducing new CSS functionality —
+        giving learners continuity across sessions and showing how the naming system scales into complex components.
+      </p>
+      <p>
+        All examples were built live in CodePen so students could fork them, experiment, and keep the reference for
+        later.
+      </p>
     </Fragment>
     <Fragment slot="bg">
       <div class="absolute inset-0 section-pattern-e"></div>
@@ -106,26 +139,41 @@ const metadata = {
   </Content>
 
   <!-- Resources -->
-  <Content
-    tagline="Resources Shared"
-    title="Tools and libraries covered in the session"
-  >
+  <Content tagline="Resources Shared" title="Tools and libraries covered in the session">
     <Fragment slot="content">
-      <p class="mb-4">Throughout the webinar I shared a curated set of resources to help students go deeper on CSS animations — from quick-reference cheatsheets to full animation libraries used in professional work.</p>
+      <p class="mb-4">
+        Throughout the webinar I shared a curated set of resources to help students go deeper on CSS animations — from
+        quick-reference cheatsheets to full animation libraries used in professional work.
+      </p>
       <div class="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-3">
-        {[
-          { name: 'CSS Animation Cheatsheet', description: 'A quick-reference summary of CSS animation properties and values' },
-          { name: 'Animate.css', description: 'A popular ready-to-use animation library for common effects' },
-          { name: 'Loaders.CSS', description: 'A collection of loading animations to deconstruct and learn from' },
-          { name: 'Motion UI', description: "Foundation's animation library — useful if you prefer not to write animations from scratch" },
-          { name: 'GreenSock (GSAP)', description: 'A professional JavaScript animation library — where CSS animation skills lead next' },
-          { name: 'Catch a Fire', description: 'A nonprofit platform I recommended for building real portfolio work while helping organizations' },
-        ].map(resource => (
-          <div class="p-4 rounded-lg border border-gray-200 dark:border-gray-700">
-            <p class="font-semibold text-sm text-gray-800 dark:text-gray-200">{resource.name}</p>
-            <p class="text-xs text-muted mt-1">{resource.description}</p>
-          </div>
-        ))}
+        {
+          [
+            {
+              name: 'CSS Animation Cheatsheet',
+              description: 'A quick-reference summary of CSS animation properties and values',
+            },
+            { name: 'Animate.css', description: 'A popular ready-to-use animation library for common effects' },
+            { name: 'Loaders.CSS', description: 'A collection of loading animations to deconstruct and learn from' },
+            {
+              name: 'Motion UI',
+              description: "Foundation's animation library — useful if you prefer not to write animations from scratch",
+            },
+            {
+              name: 'GreenSock (GSAP)',
+              description: 'A professional JavaScript animation library — where CSS animation skills lead next',
+            },
+            {
+              name: 'Catch a Fire',
+              description:
+                'A nonprofit platform I recommended for building real portfolio work while helping organizations',
+            },
+          ].map((resource) => (
+            <div class="p-4 rounded-lg border border-gray-200 dark:border-gray-700">
+              <p class="font-semibold text-sm text-gray-800 dark:text-gray-200">{resource.name}</p>
+              <p class="text-xs text-muted mt-1">{resource.description}</p>
+            </div>
+          ))
+        }
       </div>
     </Fragment>
     <Fragment slot="bg">
@@ -136,9 +184,13 @@ const metadata = {
   <!-- Video -->
   <div class="max-w-4xl mx-auto px-4 md:px-8 py-12 md:py-16">
     <div class="text-center mb-8">
-      <p class="text-base text-secondary dark:text-blue-200 font-bold tracking-wide uppercase mb-2">Webinar Recording</p>
+      <p class="text-base text-secondary dark:text-blue-200 font-bold tracking-wide uppercase mb-2">
+        Webinar Recording
+      </p>
       <h2 class="text-4xl md:text-5xl font-bold tracking-tighter font-heading">Watch the Session</h2>
-      <p class="text-lg text-muted mt-4">Sample recording of the live Modern CSS Animations student webinar, December 10, 2020.</p>
+      <p class="text-lg text-muted mt-4">
+        Sample recording of the live Modern CSS Animations student webinar, December 10, 2020.
+      </p>
     </div>
     <div class="relative w-full rounded-lg shadow-lg overflow-hidden" style="padding-top: 56.25%;">
       <iframe
@@ -147,17 +199,12 @@ const metadata = {
         title="Modern CSS Animations Student Webinar — OpenClassrooms"
         frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen
-      ></iframe>
+        allowfullscreen></iframe>
     </div>
   </div>
 
   <!-- Reflection -->
-  <Content
-    tagline="Reflection"
-    title="Teaching animation as a performance discipline"
-    isReversed
-  >
+  <Content tagline="Reflection" title="Teaching animation as a performance discipline" isReversed>
     <Fragment slot="image">
       <div class="flex items-center justify-center h-full py-12">
         <div class="text-center">
@@ -172,14 +219,30 @@ const metadata = {
       </div>
     </Fragment>
     <Fragment slot="content">
-      <p class="mb-4">What makes SCSS particularly powerful for animation is the same thing that makes it powerful for any stylesheet — structure. Nesting keeps animation code tied to its component, variables make easing and duration consistent, and BEM modifiers let you create animation variants without duplicating @keyframes blocks.</p>
-      <p class="mb-4">This session was also a chance to show learners how the Chrome DevTools animation panel reveals what's actually happening under the hood — making it possible to tune timing, catch jank, and test performance across slower devices.</p>
+      <p class="mb-4">
+        What makes SCSS particularly powerful for animation is the same thing that makes it powerful for any stylesheet
+        — structure. Nesting keeps animation code tied to its component, variables make easing and duration consistent,
+        and BEM modifiers let you create animation variants without duplicating @keyframes blocks.
+      </p>
+      <p class="mb-4">
+        This session was also a chance to show learners how the Chrome DevTools animation panel reveals what's actually
+        happening under the hood — making it possible to tune timing, catch jank, and test performance across slower
+        devices.
+      </p>
       <div class="mt-6 flex flex-wrap gap-2">
-        {['SCSS', 'SASS', 'CSS Animations', '@keyframes', 'CSS Transitions', 'Chrome DevTools', 'OpenClassrooms'].map(tag => (
-          <span class="bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 text-sm font-medium px-3 py-1 rounded-full">{tag}</span>
-        ))}
+        {
+          ['SCSS', 'SASS', 'CSS Animations', '@keyframes', 'CSS Transitions', 'Chrome DevTools', 'OpenClassrooms'].map(
+            (tag) => (
+              <span class="bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 text-sm font-medium px-3 py-1 rounded-full">
+                {tag}
+              </span>
+            )
+          )
+        }
       </div>
-      <p class="text-sm text-muted mt-4">Live student webinar on modern animations with SCSS/SASS, delivered for OpenClassrooms, December 10, 2020.</p>
+      <p class="text-sm text-muted mt-4">
+        Live student webinar on modern animations with SCSS/SASS, delivered for OpenClassrooms, December 10, 2020.
+      </p>
     </Fragment>
     <Fragment slot="bg">
       <div class="absolute inset-0 section-pattern"></div>
@@ -193,6 +256,8 @@ const metadata = {
     ]}
   >
     <Fragment slot="title">Interested in working together?</Fragment>
-    <Fragment slot="subtitle">I'm open to remote opportunities in instructional design and technical learning experience design.</Fragment>
+    <Fragment slot="subtitle"
+      >I'm open to remote opportunities in instructional design and technical learning experience design.</Fragment
+    >
   </CallToAction>
 </Layout>

@@ -21,25 +21,38 @@ const metadata = {
       <span class="text-accent dark:text-white">OpenClassrooms Student Webinar</span>
     </Fragment>
     <Fragment slot="subtitle">
-      Invited to lead a live student webinar for OpenClassrooms covering CSS architecture, SASS fundamentals, and the BEM naming convention — giving learners practical, real-world context for the concepts in their course.
+      Invited to lead a live student webinar for OpenClassrooms covering CSS architecture, SASS fundamentals, and the
+      BEM naming convention — giving learners practical, real-world context for the concepts in their course.
     </Fragment>
   </Hero>
 
   <!-- Context -->
-  <Content
-    tagline="The Webinar"
-    title="Bridging course content and real-world practice"
-    isReversed
-  >
+  <Content tagline="The Webinar" title="Bridging course content and real-world practice" isReversed>
     <Fragment slot="image">
       <div class="flex items-center justify-center h-full px-6 py-8">
-        <Image src={mixinsSlide} alt="Mixins slide — CSS and SASS Student Webinar, OpenClassrooms" class="w-full rounded-lg shadow-md border border-gray-200 dark:border-gray-700" />
+        <Image
+          src={mixinsSlide}
+          alt="Mixins slide — CSS and SASS Student Webinar, OpenClassrooms"
+          class="w-full rounded-lg shadow-md border border-gray-200 dark:border-gray-700"
+        />
       </div>
     </Fragment>
     <Fragment slot="content">
-      <p class="mb-4">On September 23, 2020, I delivered a live student webinar for OpenClassrooms as part of their <em>Produce Maintainable CSS with SASS</em> course — a session designed to extend the course content with hands-on explanation, live demos, and direct student Q&A.</p>
-      <p class="mb-4">The session ran simultaneously for US learners (8:30AM PST) and European learners (17:30 CEST), reflecting OpenClassrooms' global student base.</p>
-      <p>My role was to provide the practitioner perspective — not just explaining what SASS features do, but demonstrating how working developers actually use them to write cleaner, more maintainable stylesheets on real projects.</p>
+      <p class="mb-4">
+        On September 23, 2020, I delivered a live student webinar for OpenClassrooms as part of their <em
+          >Produce Maintainable CSS with SASS</em
+        > course — a session designed to extend the course content with hands-on explanation, live demos, and direct student
+        Q&A.
+      </p>
+      <p class="mb-4">
+        The session ran simultaneously for US learners (8:30AM PST) and European learners (17:30 CEST), reflecting
+        OpenClassrooms' global student base.
+      </p>
+      <p>
+        My role was to provide the practitioner perspective — not just explaining what SASS features do, but
+        demonstrating how working developers actually use them to write cleaner, more maintainable stylesheets on real
+        projects.
+      </p>
     </Fragment>
     <Fragment slot="bg">
       <div class="absolute inset-0 section-pattern-b"></div>
@@ -55,52 +68,74 @@ const metadata = {
     items={[
       {
         title: 'CSS Structure & the Cascade',
-        description: 'Reviewed how stylesheets cascade from top to bottom, how specificity affects which rules win, and how to think about organizing CSS before introducing a preprocessor.',
+        description:
+          'Reviewed how stylesheets cascade from top to bottom, how specificity affects which rules win, and how to think about organizing CSS before introducing a preprocessor.',
         icon: 'tabler:layers-intersect',
       },
       {
         title: 'The 7-1 Pattern',
-        description: 'Introduced the 7-1 architecture pattern for organizing SASS with partials — a widely-used approach for keeping large codebases manageable and scalable.',
+        description:
+          'Introduced the 7-1 architecture pattern for organizing SASS with partials — a widely-used approach for keeping large codebases manageable and scalable.',
         icon: 'tabler:folder',
       },
       {
         title: 'BEM Naming Convention',
-        description: 'Taught Block, Element, Modifier naming with live code examples — showing how BEM creates readable, self-documenting class names that scale across a codebase.',
+        description:
+          'Taught Block, Element, Modifier naming with live code examples — showing how BEM creates readable, self-documenting class names that scale across a codebase.',
         icon: 'tabler:tag',
       },
       {
         title: 'Variables',
-        description: 'Demonstrated how SASS variables eliminate magic numbers and hard-coded values — making stylesheets easier to update and maintain over time.',
+        description:
+          'Demonstrated how SASS variables eliminate magic numbers and hard-coded values — making stylesheets easier to update and maintain over time.',
         icon: 'tabler:variable',
       },
       {
         title: 'Nesting',
-        description: 'Covered SASS nesting — the most widely-used SASS feature — showing how it groups related styles and establishes visual hierarchy that mirrors the HTML structure.',
+        description:
+          'Covered SASS nesting — the most widely-used SASS feature — showing how it groups related styles and establishes visual hierarchy that mirrors the HTML structure.',
         icon: 'tabler:indent-increase',
       },
       {
         title: 'Mixins & Functions',
-        description: 'Explained mixins as reusable property bundles and introduced SASS built-in functions for color manipulation, math, and generating consistent design values.',
+        description:
+          'Explained mixins as reusable property bundles and introduced SASS built-in functions for color manipulation, math, and generating consistent design values.',
         icon: 'tabler:puzzle',
       },
     ]}
   />
 
   <!-- BEM Deep Dive -->
-  <Content
-    tagline="Live Demo"
-    title="BEM in action"
-  >
+  <Content tagline="Live Demo" title="BEM in action">
     <Fragment slot="image">
       <div class="flex flex-col gap-4 px-6 py-8">
-        <Image src={preprocessors} alt="CSS preprocessors — Sass, Less, and Stylus" class="w-full rounded-lg shadow-md border border-gray-200 dark:border-gray-700" />
-        <Image src={bemCode} alt="BEM naming convention live code example — .proj-prev__heading" class="w-full rounded-lg shadow-md border border-gray-200 dark:border-gray-700" />
+        <Image
+          src={preprocessors}
+          alt="CSS preprocessors — Sass, Less, and Stylus"
+          class="w-full rounded-lg shadow-md border border-gray-200 dark:border-gray-700"
+        />
+        <Image
+          src={bemCode}
+          alt="BEM naming convention live code example — .proj-prev__heading"
+          class="w-full rounded-lg shadow-md border border-gray-200 dark:border-gray-700"
+        />
       </div>
     </Fragment>
     <Fragment slot="content">
-      <p class="mb-4">One of the session's core topics was placing SASS in context — explaining why CSS preprocessors exist, how SASS compares to Less and Stylus, and why SASS became the industry standard.</p>
-      <p class="mb-4">From there, I walked through BEM naming live in the editor — building out a real example with blocks, elements, and modifiers so learners could see how abstract naming rules translate into actual class names like <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded text-sm">.proj-prev__heading</code> and <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded text-sm">.proj-prev--mint</code>.</p>
-      <p>Seeing the naming pattern applied to real code — rather than explained in the abstract — is what makes it click for most learners.</p>
+      <p class="mb-4">
+        One of the session's core topics was placing SASS in context — explaining why CSS preprocessors exist, how SASS
+        compares to Less and Stylus, and why SASS became the industry standard.
+      </p>
+      <p class="mb-4">
+        From there, I walked through BEM naming live in the editor — building out a real example with blocks, elements,
+        and modifiers so learners could see how abstract naming rules translate into actual class names like <code
+          class="bg-gray-100 dark:bg-gray-800 px-1 rounded text-sm">.proj-prev__heading</code
+        > and <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded text-sm">.proj-prev--mint</code>.
+      </p>
+      <p>
+        Seeing the naming pattern applied to real code — rather than explained in the abstract — is what makes it click
+        for most learners.
+      </p>
     </Fragment>
     <Fragment slot="bg">
       <div class="absolute inset-0 section-pattern-d"></div>
@@ -110,9 +145,13 @@ const metadata = {
   <!-- Video -->
   <div class="max-w-4xl mx-auto px-4 md:px-8 py-12 md:py-16">
     <div class="text-center mb-8">
-      <p class="text-base text-secondary dark:text-blue-200 font-bold tracking-wide uppercase mb-2">Webinar Recording</p>
+      <p class="text-base text-secondary dark:text-blue-200 font-bold tracking-wide uppercase mb-2">
+        Webinar Recording
+      </p>
       <h2 class="text-4xl md:text-5xl font-bold tracking-tighter font-heading">Watch the Session</h2>
-      <p class="text-lg text-muted mt-4">Sample recording of the live CSS and SASS student webinar, September 23, 2020.</p>
+      <p class="text-lg text-muted mt-4">
+        Sample recording of the live CSS and SASS student webinar, September 23, 2020.
+      </p>
     </div>
     <div class="relative w-full rounded-lg shadow-lg overflow-hidden" style="padding-top: 56.25%;">
       <iframe
@@ -121,16 +160,12 @@ const metadata = {
         title="CSS and SASS Student Webinar — OpenClassrooms"
         frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen
-      ></iframe>
+        allowfullscreen></iframe>
     </div>
   </div>
 
   <!-- Reflection -->
-  <Content
-    tagline="Reflection"
-    title="Teaching SASS as a design decision, not just syntax"
-  >
+  <Content tagline="Reflection" title="Teaching SASS as a design decision, not just syntax">
     <Fragment slot="image">
       <div class="flex items-center justify-center h-full py-12">
         <div class="text-center">
@@ -145,12 +180,25 @@ const metadata = {
       </div>
     </Fragment>
     <Fragment slot="content">
-      <p class="mb-4">The most important thing I tried to convey in this session wasn't SASS syntax — it was the <em>why</em> behind it. Any learner can look up how to declare a variable. What's harder to convey is why consistent naming, modular file structure, and reusable patterns matter at the scale of a real project.</p>
-      <p class="mb-4">That's the gap live instruction fills. It's where a practitioner can say: here's a real codebase, here's the problem we had before BEM, and here's why the team adopted it.</p>
+      <p class="mb-4">
+        The most important thing I tried to convey in this session wasn't SASS syntax — it was the <em>why</em> behind it.
+        Any learner can look up how to declare a variable. What's harder to convey is why consistent naming, modular file
+        structure, and reusable patterns matter at the scale of a real project.
+      </p>
+      <p class="mb-4">
+        That's the gap live instruction fills. It's where a practitioner can say: here's a real codebase, here's the
+        problem we had before BEM, and here's why the team adopted it.
+      </p>
       <div class="mt-6 flex flex-wrap gap-2">
-        {['CSS', 'SASS', 'BEM', '7-1 Architecture', 'CSS Preprocessors', 'OpenClassrooms', 'Live Instruction'].map(tag => (
-          <span class="bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 text-sm font-medium px-3 py-1 rounded-full">{tag}</span>
-        ))}
+        {
+          ['CSS', 'SASS', 'BEM', '7-1 Architecture', 'CSS Preprocessors', 'OpenClassrooms', 'Live Instruction'].map(
+            (tag) => (
+              <span class="bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 text-sm font-medium px-3 py-1 rounded-full">
+                {tag}
+              </span>
+            )
+          )
+        }
       </div>
       <p class="text-sm text-muted mt-4">Live student webinar delivered for OpenClassrooms, September 23, 2020.</p>
     </Fragment>
@@ -166,6 +214,8 @@ const metadata = {
     ]}
   >
     <Fragment slot="title">Interested in working together?</Fragment>
-    <Fragment slot="subtitle">I'm open to remote opportunities in instructional design and technical learning experience design.</Fragment>
+    <Fragment slot="subtitle"
+      >I'm open to remote opportunities in instructional design and technical learning experience design.</Fragment
+    >
   </CallToAction>
 </Layout>
