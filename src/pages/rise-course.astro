@@ -15,6 +15,7 @@
     <script>
       // Minimal SCORM 1.2 API shim — satisfies the loadOnlyInLMS check
       // so the course renders without requiring a real LMS connection
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       (window as any).API = {
         LMSInitialize: function() { return 'true'; },
         LMSFinish: function() { return 'true'; },
