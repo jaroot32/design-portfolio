@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Work Smarter with Gemini — Rise 360 Course</title>
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 100%; height: 100%; overflow: hidden; }
+      iframe { width: 100%; height: 100%; border: none; display: block; }
+    </style>
+    <script>
+      window.API = {
+        LMSInitialize: function() { return 'true'; },
+        LMSFinish: function() { return 'true'; },
+        LMSGetValue: function(key) {
+          if (key === 'cmi.core.lesson_status') return 'not attempted';
+          if (key === 'cmi.core.student_name') return '';
+          if (key === 'cmi.core.student_id') return '';
+          return '';
+        },
+        LMSSetValue: function() { return 'true'; },
+        LMSCommit: function() { return 'true'; },
+        LMSGetLastError: function() { return '0'; },
+        LMSGetErrorString: function() { return ''; },
+        LMSGetDiagnostic: function() { return ''; },
+      };
+    </script>
+  </head>
+  <body>
+    <iframe
+      src="/gemini-rise-course-content/index.html"
+      title="Work Smarter with Gemini — Rise 360 Course"
+      allowfullscreen
+    ></iframe>
+  </body>
+</html>
