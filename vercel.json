@@ -2,6 +2,7 @@
   "cleanUrls": true,
   "trailingSlash": false,
   "rewrites": [
+    { "source": "/content", "destination": "/content/index.html" },
     { "source": "/content/lib/sandbox/sandbox", "destination": "/content/lib/sandbox/sandbox.html" }
   ],
   "headers": [
