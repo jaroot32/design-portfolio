@@ -1,11 +1,6 @@
 {
   "cleanUrls": true,
   "trailingSlash": false,
-  "rewrites": [
-    { "source": "/rise-course", "destination": "/rise-course/index.html" },
-    { "source": "/rise-course/goodbye", "destination": "/rise-course/goodbye.html" },
-    { "source": "/rise-course/lib/sandbox/sandbox", "destination": "/rise-course/lib/sandbox/sandbox.html" }
-  ],
   "headers": [
     {
       "source": "/_astro/(.*)",
