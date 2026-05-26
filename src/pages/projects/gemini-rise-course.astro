@@ -1,0 +1,201 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Content from '~/components/widgets/Content.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'Work Smarter with Gemini — Rise 360 eLearning Course',
+};
+---
+
+<Layout metadata={metadata}>
+  <Hero tagline="Instructional Design · Rise 360 · AI Adoption · eLearning">
+    <Fragment slot="title">
+      Work Smarter with Gemini —<br />
+      <span class="text-accent dark:text-white">A Practical Guide for Business Teams</span>
+    </Fragment>
+    <Fragment slot="subtitle">
+      A self-paced Rise 360 eLearning course designed to help business teams get practical value from Google Gemini — covering AI fundamentals, prompt writing, daily workflow integration, and building custom Gemini Gems for recurring tasks.
+    </Fragment>
+  </Hero>
+
+  <!-- Context -->
+  <Content
+    tagline="The Course"
+    title="Practical AI adoption training built in Rise 360"
+    isReversed
+  >
+    <Fragment slot="image">
+      <div class="flex items-center justify-center h-full py-12">
+        <div class="text-center">
+          <p class="text-7xl font-bold font-heading text-accent leading-none">Gemini</p>
+          <p class="text-xl text-muted mt-3">Rise 360 · eLearning</p>
+          <div class="mt-8 space-y-2 text-sm text-muted">
+            <p class="font-semibold text-gray-700 dark:text-gray-300">Instructional Design · AI Adoption</p>
+            <p>Self-Paced · Knowledge Checks</p>
+            <p>3 Sections · 9 Lessons</p>
+          </div>
+        </div>
+      </div>
+    </Fragment>
+    <Fragment slot="content">
+      <p class="mb-4">Most AI adoption training stops at "here's what the tool can do." This course is built around a different question: what does someone actually need to know to use Gemini as part of how they already work? That means starting with context — why Gemini exists, what it's good at, and how it fits into a business team's day — before moving into practical skills like writing effective prompts and integrating AI into recurring workflows.</p>
+      <p class="mb-4">The course was designed in Rise 360 with a consistent lesson structure: concept introduction, an interactive element, applied context, and a knowledge check. That pattern keeps learners oriented throughout the course and gives each lesson a clear beginning and end — which matters for self-paced content where learners may dip in and out.</p>
+      <p>The third section moves from consumption to creation — guiding learners through building their own Gemini Gem for a recurring task (a weekly status report), testing it, and refining it. Ending with a real deliverable gives learners something concrete to take back to their work immediately.</p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 section-pattern-b"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Course Sections -->
+  <Features3
+    tagline="Course Structure"
+    title="Three sections, nine lessons"
+    subtitle="The course moves from foundational understanding to daily practice to a hands-on build — giving learners a complete workflow, not just an overview."
+    columns={3}
+    items={[
+      {
+        title: 'What is Gemini and Why It Matters',
+        description: 'Introduces Gemini in business context — what it is, what it\'s designed to help with, and why it\'s relevant to how teams already work. Includes an interactive element and knowledge check.',
+        icon: 'tabler:bulb',
+      },
+      {
+        title: 'Your First Prompts',
+        description: 'Covers the fundamentals of prompt writing — how to structure a prompt, what makes a prompt effective, and how to iterate when the first result isn\'t quite right. Grounded in realistic business scenarios.',
+        icon: 'tabler:message',
+      },
+      {
+        title: 'Gemini in Your Daily Workflow',
+        description: 'Moves from isolated prompts to integrated practice — showing how Gemini fits into common business tasks like drafting communications, summarizing documents, and preparing for meetings.',
+        icon: 'tabler:briefcase',
+      },
+      {
+        title: 'Best Practices and Getting Started',
+        description: 'Closes the first section with practical guidance on what to do and what to avoid — including accuracy habits, privacy considerations, and how to build confidence through low-stakes experimentation.',
+        icon: 'tabler:checklist',
+      },
+      {
+        title: 'Build Your Own AI Assistant with Gemini Gems',
+        description: 'Introduces Gemini Gems — custom AI assistants built for specific recurring tasks. Walks learners through what Gems are, when to use them, and what makes a good Gem use case.',
+        icon: 'tabler:robot',
+      },
+      {
+        title: 'Setting Up Your Weekly Status Report Gem',
+        description: 'A step-by-step walkthrough of building a real Gem — a weekly status report assistant. Covers writing the system prompt, setting instructions, and configuring the Gem for consistent, reliable output.',
+        icon: 'tabler:settings',
+      },
+      {
+        title: 'Testing and Refining Your Gem',
+        description: 'Covers the iteration process — how to test a Gem with real inputs, what to look for in the output, and how to refine the system prompt when the Gem\'s responses need adjustment.',
+        icon: 'tabler:adjustments',
+      },
+      {
+        title: 'Your Assignment',
+        description: 'A practical capstone activity: learners use their Gem to generate a real weekly status report using their own work context. The assignment bridges course learning and immediate on-the-job application.',
+        icon: 'tabler:clipboard-check',
+      },
+      {
+        title: 'Reflection and Next Steps',
+        description: 'Closes the course with a reflection activity and forward-looking guidance — helping learners identify where else they could apply Gemini Gems and build a habit of continuous AI skill development.',
+        icon: 'tabler:arrow-right',
+      },
+    ]}
+  />
+
+  <!-- Course Embed -->
+  <div class="max-w-5xl mx-auto px-4 md:px-8 py-12 md:py-16">
+    <div class="text-center mb-10">
+      <p class="text-base text-secondary dark:text-blue-200 font-bold tracking-wide uppercase mb-2">Interactive Course</p>
+      <h2 class="text-4xl md:text-5xl font-bold tracking-tighter font-heading">Try the Course</h2>
+      <p class="text-lg text-muted mt-4">The full Rise 360 course — self-paced, interactive, with knowledge checks throughout. Best experienced on desktop.</p>
+    </div>
+    <div class="relative w-full rounded-lg shadow-lg overflow-hidden border border-gray-200 dark:border-gray-700" style="padding-top: 62.5%;">
+      <iframe
+        class="absolute inset-0 w-full h-full"
+        src="/content/"
+        title="Work Smarter with Gemini — Rise 360 Course"
+        frameborder="0"
+        allowfullscreen
+      ></iframe>
+    </div>
+    <p class="text-sm text-muted text-center mt-4">If the course doesn't load in the embed, <a href="/content/" target="_blank" class="text-accent hover:underline">open it directly</a>.</p>
+  </div>
+
+  <!-- Design Decisions -->
+  <Content
+    tagline="Design Approach"
+    title="Structure that supports self-paced learning"
+  >
+    <Fragment slot="content">
+      <p class="mb-6">A few deliberate design decisions shaped how this course is built:</p>
+      <div class="space-y-4">
+        <div class="flex gap-3">
+          <div class="flex-shrink-0 w-6 h-6 rounded-full bg-accent text-white flex items-center justify-center text-xs font-bold mt-0.5">1</div>
+          <div><p class="font-semibold text-sm">Consistent lesson structure across all nine lessons.</p><p class="text-sm text-muted mt-1">Every lesson follows the same pattern: concept introduction, interactive element, applied context, knowledge check. Learners don't have to figure out where they are in a lesson — the structure is predictable, which reduces cognitive load.</p></div>
+        </div>
+        <div class="flex gap-3">
+          <div class="flex-shrink-0 w-6 h-6 rounded-full bg-accent text-white flex items-center justify-center text-xs font-bold mt-0.5">2</div>
+          <div><p class="font-semibold text-sm">Knowledge checks after every lesson, not just at the end.</p><p class="text-sm text-muted mt-1">Spacing retrieval practice throughout the course rather than saving it for a final quiz reinforces learning as it happens. Learners who complete the knowledge checks are more likely to retain the content than those who read through a course passively.</p></div>
+        </div>
+        <div class="flex gap-3">
+          <div class="flex-shrink-0 w-6 h-6 rounded-full bg-accent text-white flex items-center justify-center text-xs font-bold mt-0.5">3</div>
+          <div><p class="font-semibold text-sm">Ending with a real deliverable, not just a quiz.</p><p class="text-sm text-muted mt-1">The assignment in the final section asks learners to use their Gem with their own real work context — not a simulated scenario. That transfer from course to job is where the real learning payoff happens, and designing for it explicitly is what separates training that changes behavior from training that doesn't.</p></div>
+        </div>
+        <div class="flex gap-3">
+          <div class="flex-shrink-0 w-6 h-6 rounded-full bg-accent text-white flex items-center justify-center text-xs font-bold mt-0.5">4</div>
+          <div><p class="font-semibold text-sm">Section 2 teaches learners to build, not just use.</p><p class="text-sm text-muted mt-1">Most AI adoption training focuses on consumption. Adding a Gems section gives learners a power-user skill that has genuine leverage — once they've built one Gem for a recurring task, the pattern is reusable across every other recurring task they have.</p></div>
+        </div>
+      </div>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 section-pattern-d"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Reflection -->
+  <Content
+    tagline="Reflection"
+    title="AI adoption training that translates to real work"
+    isReversed
+  >
+    <Fragment slot="image">
+      <div class="flex items-center justify-center h-full py-12">
+        <div class="text-center">
+          <p class="text-8xl font-bold font-heading text-accent leading-none">Rise</p>
+          <p class="text-xl text-muted mt-3">Articulate Rise 360</p>
+          <div class="mt-8 space-y-2 text-sm text-muted">
+            <p class="font-semibold text-gray-700 dark:text-gray-300">Instructional Design</p>
+            <p>AI Adoption · Google Gemini</p>
+            <p>Self-Paced eLearning</p>
+          </div>
+        </div>
+      </div>
+    </Fragment>
+    <Fragment slot="content">
+      <p class="mb-4">The challenge with AI adoption training isn't getting people to understand what the tool does — it's getting them to actually use it as part of how they work. That gap between "I understand this" and "I do this" is where most training fails, and it's where instructional design decisions matter most.</p>
+      <p class="mb-4">This course is built around closing that gap deliberately: starting with relevance (why this matters for your actual job), building through practice (here's how to write a prompt, here's how to iterate), and ending with application (build something real and use it this week). That arc — from relevance to practice to application — is what gives learners the best chance of carrying the skill beyond the course.</p>
+      <div class="mt-6 flex flex-wrap gap-2">
+        {['Rise 360', 'eLearning', 'AI Adoption', 'Google Gemini', 'Instructional Design', 'Self-Paced Learning', 'Knowledge Checks', 'Gemini Gems', 'Prompt Writing', 'Workplace Learning'].map(tag => (
+          <span class="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-sm font-medium px-3 py-1 rounded-full">{tag}</span>
+        ))}
+      </div>
+      <p class="text-sm text-muted mt-4">Self-paced eLearning course built in Articulate Rise 360 — Work Smarter with Gemini: A Practical Guide for Business Teams.</p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 section-pattern"></div>
+    </Fragment>
+  </Content>
+
+  <CallToAction
+    actions={[
+      { variant: 'primary', text: 'View All Projects', href: '/projects' },
+      { text: 'Get in Touch', href: '/about#contact' },
+    ]}
+  >
+    <Fragment slot="title">Interested in working together?</Fragment>
+    <Fragment slot="subtitle">I'm open to remote opportunities in instructional design and technical learning experience design.</Fragment>
+  </CallToAction>
+</Layout>
