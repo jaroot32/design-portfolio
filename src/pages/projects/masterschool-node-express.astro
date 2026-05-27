@@ -1,0 +1,336 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Content from '~/components/widgets/Content.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'Teaching Node and Express at Masterschool',
+};
+---
+
+<Layout metadata={metadata}>
+  <Hero tagline="Live Instruction · Node.js · Express · Backend Development">
+    <Fragment slot="title">
+      Teaching Node and Express —<br />
+      <span class="text-accent dark:text-white">Masterschool Coding Bootcamp</span>
+    </Fragment>
+    <Fragment slot="subtitle">
+      A live 32-minute session introducing career-changers to server-side development with Node.js and Express — the
+      hardest conceptual shift in the bootcamp curriculum, taught with scaffolded mental models, live code demos, and
+      real-time student interaction.
+    </Fragment>
+  </Hero>
+
+  <!-- Context -->
+  <Content tagline="The Session" title="From frontend to full-stack — the hard week" isReversed>
+    <Fragment slot="image">
+      <div class="flex items-center justify-center h-full py-12">
+        <div class="text-center">
+          <p class="text-8xl font-bold font-heading text-accent leading-none">32</p>
+          <p class="text-xl text-muted mt-3">minutes · live session</p>
+          <div class="mt-8 space-y-2 text-sm text-muted">
+            <p class="font-semibold text-gray-700 dark:text-gray-300">Masterschool Coding Bootcamp</p>
+            <p>Node.js · Express · HTTP · Routing</p>
+            <p>Career-change cohort · International</p>
+          </div>
+        </div>
+      </div>
+    </Fragment>
+    <Fragment slot="content">
+      <p class="mb-4">
+        Every coding bootcamp has a moment where the curriculum stops feeling approachable. At Masterschool, that moment
+        was the backend unit — specifically the week students went from writing JavaScript in the browser to running it
+        on a server.
+      </p>
+      <p class="mb-4">
+        I opened the session with a slide that said: <em
+          >"These are the most important concepts in the entire program. Seriously. Try to learn this now."</em
+        > That wasn't hyperbole. It was an honest signal to a room of career-changers who'd spent months on HTML, CSS, React,
+        and Redux — and were now being asked to think in an entirely different direction.
+      </p>
+      <p>
+        No more visual feedback. No more browser console. Just a terminal, a port number, and a mental model they didn't
+        have yet. My job was to give them that mental model before the code made any sense.
+      </p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 section-pattern-b"></div>
+    </Fragment>
+  </Content>
+
+  <!-- What I Covered -->
+  <Features3
+    tagline="The Content"
+    title="What the session covered"
+    subtitle="A scaffolded progression from mental models to live code — building understanding before building servers."
+    columns={3}
+    items={[
+      {
+        title: 'What Node.js Actually Is',
+        description:
+          'Explained Node not as a language but as a runtime — JavaScript plus C++ — that lets developers control network sockets, filesystems, and server hardware without leaving JavaScript. Why this matters: full-stack development with one language.',
+        icon: 'tabler:brand-nodejs',
+      },
+      {
+        title: 'Servers, Clients, and HTTP',
+        description:
+          'Built precise vocabulary before touching any code: what a server is, what a client is, how they communicate via HTTP request-response cycles, and what localhost simulates during development.',
+        icon: 'tabler:server',
+      },
+      {
+        title: 'The Big Box Analogy',
+        description:
+          'Introduced the core mental model: a server is an empty box. Every module you add — a listener, a URL parser, a route handler — gives that box a new capability. Students build the server piece by piece, not all at once.',
+        icon: 'tabler:box',
+      },
+      {
+        title: 'Express.js Framework',
+        description:
+          'Explained why Express exists — raw Node server code is dense and verbose, approaching C++ in complexity. Express abstracts the boilerplate so developers can focus on application logic. Covered setup, app.use(), and middleware.',
+        icon: 'tabler:route',
+      },
+      {
+        title: 'Routing and Route Handlers',
+        description:
+          'Walked through GET and POST routes using a real Express example — a news scraper app with a home route, a saved articles route, and an API endpoint. Connected this to React Router concepts students already knew.',
+        icon: 'tabler:map-2',
+      },
+      {
+        title: 'Request Object and URL Params',
+        description:
+          'Demonstrated req.params and req.query live in the browser — showing what the full request object looks like in the console and how dynamic routes extract values from the URL for use in server-side logic.',
+        icon: 'tabler:code',
+      },
+    ]}
+  />
+
+  <!-- Approach -->
+  <Content tagline="The Approach" title="Mental models first, syntax second">
+    <Fragment slot="image">
+      <div class="flex items-center justify-center h-full py-12 px-6">
+        <div class="w-full max-w-sm space-y-3">
+          {
+            [
+              { step: '01', label: 'Vocabulary', detail: 'Server · Client · HTTP · localhost' },
+              { step: '02', label: 'Mental Model', detail: 'The Big Box analogy' },
+              { step: '03', label: 'Framework', detail: 'Why Express exists' },
+              { step: '04', label: 'Live Demo', detail: 'Real Express server with routes' },
+              { step: '05', label: 'Practice', detail: 'req.params · req.query · dynamic routes' },
+            ].map((item) => (
+              <div class="flex items-start gap-4 p-3 rounded-lg border border-gray-200 dark:border-gray-700">
+                <span class="text-accent font-bold font-heading text-lg leading-none">{item.step}</span>
+                <div>
+                  <p class="font-semibold text-sm text-gray-800 dark:text-gray-200">{item.label}</p>
+                  <p class="text-xs text-muted mt-0.5">{item.detail}</p>
+                </div>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </Fragment>
+    <Fragment slot="content">
+      <p class="mb-4">
+        The core problem with teaching Node and Express isn't the syntax — it's the abstraction. Node sits on top of
+        C++. Express sits on top of Node. By the time a student writes <code
+          class="bg-gray-100 dark:bg-gray-800 px-1 rounded text-sm">app.get('/', ...)</code
+        >, they're five layers removed from what's actually happening. That distance makes debugging feel like guesswork
+        and concepts feel like magic.
+      </p>
+      <p class="mb-4">
+        So before writing any Express, I spent time on vocabulary and mental models — making the request-response cycle
+        precise, connecting localhost to the cloud infrastructure concept students already knew abstractly, and
+        introducing the "Big Box" analogy to give them a structure for adding complexity incrementally.
+      </p>
+      <p class="mb-4">
+        The live demo wasn't polished. The sandbox had quirks. I narrated what I was doing and why, called out when
+        something looked unexpected, and showed what the request object actually looked like in the console. Students
+        learn more from watching someone reason through confusion than from watching someone perform fluency.
+      </p>
+      <p>
+        I also reminded students throughout that this material doesn't land in one session. Study groups, Slack, extra
+        sessions with the curriculum team, and direct Zoom calls were all on the table. <em
+          >"If somebody messages me with a good question, I'll bring it to the group — because if it's on your mind,
+          it's probably on someone else's mind too."</em
+        >
+      </p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 section-pattern"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Video placeholder -->
+  <div class="max-w-4xl mx-auto px-4 md:px-8 py-12 md:py-16">
+    <div class="text-center mb-8">
+      <p class="text-base text-secondary dark:text-blue-200 font-bold tracking-wide uppercase mb-2">
+        Session Recording
+      </p>
+      <h2 class="text-4xl md:text-5xl font-bold tracking-tighter font-heading">Watch the Session</h2>
+      <p class="text-lg text-muted mt-4">
+        Edited highlights from the live Node and Express session at Masterschool — including the Big Box analogy,
+        Express server setup, and live routing demo.
+      </p>
+    </div>
+    <div
+      class="relative w-full rounded-lg shadow-lg overflow-hidden bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 flex items-center justify-center"
+      style="padding-top: 56.25%;"
+    >
+      <div class="absolute inset-0 flex flex-col items-center justify-center text-center px-6">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-16 w-16 text-gray-400 dark:text-gray-500 mb-4"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.5"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <circle cx="12" cy="12" r="10"></circle>
+          <polygon points="10 8 16 12 10 16 10 8"></polygon>
+        </svg>
+        <p class="text-lg font-semibold text-gray-600 dark:text-gray-300">Video coming soon</p>
+        <p class="text-sm text-muted mt-2">Edited session highlights — in production</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bolt.new Connection -->
+  <Content tagline="Why This Matters Now" title="The Bolt.new connection" isReversed>
+    <Fragment slot="image">
+      <div class="flex items-center justify-center h-full py-12 px-6">
+        <div class="w-full max-w-xs space-y-4 text-center">
+          <div class="p-5 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900">
+            <p class="text-sm font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wide mb-2">
+              Traditional Setup
+            </p>
+            <div class="space-y-1 text-sm text-muted text-left">
+              {
+                [
+                  'Install Node.js',
+                  'npm init + npm install express',
+                  'Configure nodemon',
+                  'Set up VS Code',
+                  'Debug port conflicts',
+                  'Write your first route',
+                ].map((item) => (
+                  <p class="flex items-center gap-2">
+                    <span class="text-red-400">→</span> {item}
+                  </p>
+                ))
+              }
+            </div>
+          </div>
+          <div class="p-5 rounded-xl border border-accent/30 bg-accent/5 dark:bg-accent/10">
+            <p class="text-sm font-semibold text-accent uppercase tracking-wide mb-2">With Bolt.new</p>
+            <div class="space-y-1 text-sm text-muted text-left">
+              {
+                ['Open browser', 'Write your first route'].map((item) => (
+                  <p class="flex items-center gap-2">
+                    <span class="text-green-500">→</span> {item}
+                  </p>
+                ))
+              }
+            </div>
+          </div>
+        </div>
+      </div>
+    </Fragment>
+    <Fragment slot="content">
+      <p class="mb-4">
+        Everything I taught in that session — spinning up a Node server, configuring Express, running on localhost:3000,
+        handling routes — is what Bolt.new does automatically in a browser tab.
+      </p>
+      <p class="mb-4">
+        No install. No nodemon. No port configuration. No environment setup that takes three sessions to get right. I've
+        seen students spend an entire support session just getting their local environment running before they could
+        write a single route. That friction is real, and it's one of the biggest barriers between a learner and the
+        concept they're trying to understand.
+      </p>
+      <p class="mb-4">
+        Bolt.new eliminates it. But eliminating the setup doesn't eliminate the conceptual layer. Users still need to
+        understand what a server is doing, why their route isn't matching, what a 404 means versus a 500, and how the
+        request object works — they just need to understand it without fighting their local environment at the same
+        time.
+      </p>
+      <p>
+        Teaching this from scratch — the hard way, with career-changers under deadline pressure — gave me a precise
+        understanding of where the confusion lives and how to move people through it. That's the same muscle a customer
+        enablement role requires: not just product knowledge, but the ability to meet users where they are and get them
+        unstuck.
+      </p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 section-pattern-b"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Reflection -->
+  <Content tagline="Reflection" title="What this session taught me about developer education">
+    <Fragment slot="image">
+      <div class="flex items-center justify-center h-full py-12">
+        <div class="text-center">
+          <p class="text-8xl font-bold font-heading text-accent leading-none">32</p>
+          <p class="text-xl text-muted mt-3">minutes</p>
+          <div class="mt-8 space-y-1 text-sm text-muted">
+            <p class="font-semibold text-gray-700 dark:text-gray-300">Node · Express · HTTP · Routing</p>
+            <p>Servers · Clients · localhost · REST</p>
+            <p>req.params · req.query · Middleware</p>
+          </div>
+        </div>
+      </div>
+    </Fragment>
+    <Fragment slot="content">
+      <p class="mb-4">
+        The biggest lesson from this session is that developer education is primarily a vocabulary problem. Students
+        weren't failing to understand servers because the concepts were too hard — they were failing because the words
+        didn't have precise meaning yet. Once "server," "client," "request," and "route" meant specific things, the code
+        started making sense on its own.
+      </p>
+      <p class="mb-4">
+        The same is true for any technical product. Users who struggle with Bolt.new aren't struggling because the tool
+        is too complex — they're struggling because concepts like "environment," "deployment," or "endpoint" are still
+        fuzzy. The enablement work is getting those words precise before the demo starts.
+      </p>
+      <div class="mt-6 flex flex-wrap gap-2">
+        {
+          [
+            'Node.js',
+            'Express',
+            'HTTP',
+            'REST',
+            'Routing',
+            'Middleware',
+            'Masterschool',
+            'Live Instruction',
+            'Developer Education',
+            'Bolt.new',
+          ].map((tag) => (
+            <span class="bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 text-sm font-medium px-3 py-1 rounded-full">
+              {tag}
+            </span>
+          ))
+        }
+      </div>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 section-pattern-e"></div>
+    </Fragment>
+  </Content>
+
+  <CallToAction
+    actions={[
+      { variant: 'primary', text: 'View All Projects', href: '/projects' },
+      { text: 'Get in Touch', href: '/about#contact' },
+    ]}
+  >
+    <Fragment slot="title">Interested in working together?</Fragment>
+    <Fragment slot="subtitle"
+      >I'm open to remote opportunities in technical learning experience design, developer education, and customer
+      enablement.</Fragment
+    >
+  </CallToAction>
+</Layout>
