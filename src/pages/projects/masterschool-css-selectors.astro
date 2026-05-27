@@ -1,0 +1,248 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Content from '~/components/widgets/Content.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'CSS Selectors and the Cascade — Live Masterschool Session',
+};
+---
+
+<Layout metadata={metadata}>
+  <Hero tagline="Live Instruction · CSS · Selectors · Specificity · Masterschool">
+    <Fragment slot="title">
+      CSS Selectors and the Cascade —<br />
+      <span class="text-accent dark:text-white">Masterschool Coding Bootcamp</span>
+    </Fragment>
+    <Fragment slot="subtitle">
+      A live one-hour session introducing an international bootcamp cohort to CSS selectors, specificity, and the
+      cascade — taught with real-time Slido polls, live Replit demos, and a chat full of students answering each other's
+      questions.
+    </Fragment>
+  </Hero>
+
+  <!-- Context -->
+  <Content tagline="The Session" title="Teaching CSS to a room at different speeds" isReversed>
+    <Fragment slot="image">
+      <div class="flex items-center justify-center h-full py-12">
+        <div class="text-center">
+          <p class="text-8xl font-bold font-heading text-accent leading-none">~60</p>
+          <p class="text-xl text-muted mt-3">minutes · live session</p>
+          <div class="mt-8 space-y-2 text-sm text-muted">
+            <p class="font-semibold text-gray-700 dark:text-gray-300">Masterschool Coding Bootcamp</p>
+            <p>CSS Selectors · Specificity · The Cascade</p>
+            <p>International cohort · July 2022</p>
+          </div>
+        </div>
+      </div>
+    </Fragment>
+    <Fragment slot="content">
+      <p class="mb-4">
+        CSS fundamentals sound straightforward until you're in a live session with 30 students at completely different
+        stages. Some are answering questions confidently in the chat. Others are still setting up VS Code. One student
+        hadn't finished the HTML precourse yet.
+      </p>
+      <p class="mb-4">
+        This session covered CSS selectors, the cascade, and specificity — but the real instructional challenge was
+        keeping a wide range of learners moving together without leaving anyone behind and without slowing down the
+        students who were ready to go deeper.
+      </p>
+      <p>
+        The solution wasn't to teach to the middle. It was to build a session structure that let learners at every level
+        contribute, get answers, and leave with something useful.
+      </p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 section-pattern-b"></div>
+    </Fragment>
+  </Content>
+
+  <!-- What I Covered -->
+  <Features3
+    tagline="The Content"
+    title="What the session covered"
+    subtitle="CSS fundamentals built on precise vocabulary and live experimentation — with students answering questions alongside the instruction."
+    columns={3}
+    items={[
+      {
+        title: 'CSS Selectors',
+        description:
+          'Covered the three core selector types — element selectors (li), class selectors (.class), and ID selectors (#id) — using live Slido polls to assess prior knowledge before explaining each one. Students typed their answers directly into the chat.',
+        icon: 'tabler:selector',
+      },
+      {
+        title: 'CSS Specificity',
+        description:
+          'Explained the 1-10-100 specificity scoring system — element selectors worth 1 point, class selectors 10, ID selectors 100 — and showed how specificity determines which styles win when rules conflict on the same element.',
+        icon: 'tabler:chart-bar',
+      },
+      {
+        title: 'The Cascade',
+        description:
+          'Used the "cascading" metaphor to explain how CSS resolves conflicts — source order, specificity, and inheritance — and demonstrated live why the last rule wins when specificity is equal.',
+        icon: 'tabler:arrows-down',
+      },
+      {
+        title: 'Linking CSS to HTML',
+        description:
+          'Walked through how to link an external stylesheet using the <link> tag — addressing common errors students were hitting in real time, including file naming mismatches and path issues.',
+        icon: 'tabler:file-code',
+      },
+      {
+        title: 'VS Code Setup and Emmet',
+        description:
+          'Shared the Emmet cheat sheet and showed how to use the ! shortcut to generate HTML boilerplate — reducing setup friction so students could spend session time on CSS rather than file configuration.',
+        icon: 'tabler:brand-vscode',
+      },
+      {
+        title: 'Study Skills and Resources',
+        description:
+          'Shared the MDN CSS Selectors reference, a keyboard shortcuts guide, and the Pomodoro Technique — treating productivity and self-directed learning as part of the curriculum, not an afterthought.',
+        icon: 'tabler:book',
+      },
+    ]}
+  />
+
+  <!-- Approach -->
+  <Content tagline="The Approach" title="Socratic questions, peer answers, shared resources">
+    <Fragment slot="image">
+      <div class="flex items-center justify-center h-full py-12 px-6">
+        <div class="w-full max-w-sm space-y-3">
+          {
+            [
+              { step: '01', label: 'Poll First', detail: 'Slido polls to surface prior knowledge before explaining' },
+              { step: '02', label: 'Chat as Whiteboard', detail: 'Students type answers — everyone sees the range' },
+              { step: '03', label: 'Peer Correction', detail: "Students clarify and build on each other's answers" },
+              { step: '04', label: 'Live Demo', detail: 'Replit exercises students could fork and experiment with' },
+              { step: '05', label: 'Resource Stack', detail: 'MDN, Emmet, shortcuts, Pomodoro — a learning toolkit' },
+            ].map((item) => (
+              <div class="flex items-start gap-4 p-3 rounded-lg border border-gray-200 dark:border-gray-700">
+                <span class="text-accent font-bold font-heading text-lg leading-none">{item.step}</span>
+                <div>
+                  <p class="font-semibold text-sm text-gray-800 dark:text-gray-200">{item.label}</p>
+                  <p class="text-xs text-muted mt-0.5">{item.detail}</p>
+                </div>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </Fragment>
+    <Fragment slot="content">
+      <p class="mb-4">
+        Rather than lecturing through selector types one by one, I used Slido polls to ask students what they already
+        knew before explaining anything. When I asked "how do you select an element by ID in CSS?" the chat filled with
+        <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded text-sm">#</code>, <code
+          class="bg-gray-100 dark:bg-gray-800 px-1 rounded text-sm">#div-id</code
+        >, and <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded text-sm">#Name of the element</code> — giving me an
+        instant read on where the cohort was before I'd said a word about it.
+      </p>
+      <p class="mb-4">
+        That chat dynamic also meant students were teaching each other in real time. When someone asked about ID vs
+        class, another student answered before I did: <em>"ID is for 1 element, class is for everything."</em> When someone
+        struggled with commenting out code, two other students explained the <code
+          class="bg-gray-100 dark:bg-gray-800 px-1 rounded text-sm">/* */</code
+        > syntax and shared the keyboard shortcut. That's peer learning happening organically — not because it was engineered,
+        but because the session structure made space for it.
+      </p>
+      <p>
+        For students who were ahead, I shared deeper resources — the MDN selectors reference, the Emmet cheat sheet, the
+        Pomodoro Technique for study sessions. For students who were behind, I kept the Replit demos forkable so they
+        could catch up on the recording. No one was left with nothing to do.
+      </p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 section-pattern"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Video -->
+  <div class="max-w-4xl mx-auto px-4 md:px-8 py-12 md:py-16">
+    <div class="text-center mb-8">
+      <p class="text-base text-secondary dark:text-blue-200 font-bold tracking-wide uppercase mb-2">
+        Session Recording
+      </p>
+      <h2 class="text-4xl md:text-5xl font-bold tracking-tighter font-heading">Watch the Session</h2>
+      <p class="text-lg text-muted mt-4">
+        Edited highlights from the live CSS Selectors and the Cascade session at Masterschool, July 2022.
+      </p>
+    </div>
+    <div class="relative w-full rounded-lg shadow-lg overflow-hidden" style="padding-top: 56.25%;">
+      <iframe
+        class="absolute inset-0 w-full h-full"
+        src="https://www.youtube.com/embed/22MzXekSlPc"
+        title="CSS Selectors, Specificity & the Cascade — Live Masterschool Session"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+    </div>
+  </div>
+
+  <!-- Reflection -->
+  <Content tagline="Reflection" title="What a chat log reveals about a session" isReversed>
+    <Fragment slot="image">
+      <div class="flex items-center justify-center h-full py-12">
+        <div class="text-center">
+          <p class="text-8xl font-bold font-heading text-accent leading-none">30+</p>
+          <p class="text-xl text-muted mt-3">active participants</p>
+          <div class="mt-8 space-y-1 text-sm text-muted">
+            <p class="font-semibold text-gray-700 dark:text-gray-300">CSS Selectors · Specificity · Cascade</p>
+            <p>Slido · Replit · Emmet · MDN</p>
+            <p>International cohort · July 2022</p>
+          </div>
+        </div>
+      </div>
+    </Fragment>
+    <Fragment slot="content">
+      <p class="mb-4">
+        The Zoom chat log from this session tells a story that most recordings miss. You can see the exact moment
+        students went from uncertain to confident — the shift from "I'm totally lost" early in the session to "done,"
+        "done," "done 🙂" near the end, with students sharing their Replit links for feedback.
+      </p>
+      <p class="mb-4">
+        You can also see the peer learning network forming in real time — students helping each other with syntax,
+        sharing keyboard shortcuts, correcting each other's answers, and cheering each other on. That dynamic doesn't
+        happen by accident. It happens when a session is structured to make participation feel safe and useful.
+      </p>
+      <div class="mt-6 flex flex-wrap gap-2">
+        {
+          [
+            'CSS',
+            'Selectors',
+            'Specificity',
+            'The Cascade',
+            'Masterschool',
+            'Live Instruction',
+            'Formative Assessment',
+            'Peer Learning',
+            'Slido',
+            'Replit',
+            'Emmet',
+          ].map((tag) => (
+            <span class="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-sm font-medium px-3 py-1 rounded-full">
+              {tag}
+            </span>
+          ))
+        }
+      </div>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 section-pattern-b"></div>
+    </Fragment>
+  </Content>
+
+  <CallToAction
+    actions={[
+      { variant: 'primary', text: 'View All Projects', href: '/projects' },
+      { text: 'Get in Touch', href: '/about#contact' },
+    ]}
+  >
+    <Fragment slot="title">Interested in working together?</Fragment>
+    <Fragment slot="subtitle"
+      >I'm open to remote opportunities in technical learning experience design, developer education, and customer
+      enablement.</Fragment
+    >
+  </CallToAction>
+</Layout>

@@ -239,6 +239,203 @@ const metadata = {
     ]}
   />
 
+  <!-- Course Map -->
+  <div class="max-w-7xl mx-auto px-4 md:px-8 py-12 md:py-16">
+    <div class="text-center mb-12">
+      <p class="text-base text-secondary dark:text-blue-200 font-bold tracking-wide uppercase mb-2">
+        Data-Informed Course Map
+      </p>
+      <h2 class="text-4xl md:text-5xl font-bold tracking-tighter font-heading mb-4">Course Structure</h2>
+      <p class="text-xl text-muted dark:text-slate-300 max-w-3xl mx-auto">
+        A four-module minicourse scaffolded from JavaScript fundamentals through full xAPI integration — designed as the
+        Unit 1 Assignment for LDTC 625: Analytics and Evaluation in Learning Design at UMGC.
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-8">
+      {
+        [
+          {
+            module: 'Module 1',
+            title: 'JavaScript Basics',
+            color: 'blue',
+            objectives: [
+              'Define variables, operators, and functions in JavaScript (CLO 1)',
+              'Write simple conditional and loop structures to control eLearning behavior (CLO 1)',
+              'Connect JavaScript fundamentals to instructional design decision-making (CLO 1, CLO 5)',
+            ],
+            materials: [
+              'Introductory video lecture — JavaScript fundamentals overview',
+              'CodePen interactive coding sandbox',
+              'Instructor-created reference sheet: JavaScript syntax for eLearning developers',
+              'Canvas module readings',
+            ],
+            activity:
+              "Coding sandbox activity: Write a function that displays personalized feedback based on a learner's quiz score input. Discussion: Reflect on how JavaScript could enhance a learning experience you have designed or taken.",
+            assessment:
+              'Knowledge Check Quiz — 10 questions covering variable declaration, function syntax, conditionals, and loops. Rubric: Conceptual accuracy (50%), application to eLearning context (50%)',
+          },
+          {
+            module: 'Module 2',
+            title: 'DOM Manipulation',
+            color: 'purple',
+            objectives: [
+              'Identify DOM elements and explain how they relate to interactive eLearning design (CLO 2)',
+              'Apply DOM manipulation methods to dynamically update on-screen content (CLO 2)',
+              'Build a simple interactive eLearning interaction using DOM events (CLO 2, CLO 4)',
+            ],
+            materials: [
+              'Screencasted video walkthrough — DOM selection and manipulation',
+              'MDN Web Docs reference: Document Object Model',
+              'Instructor-provided starter code in CodePen',
+              'Annotated code examples from real eLearning interactions',
+            ],
+            activity:
+              'Hands-on DOM task: Use querySelector and addEventListener to create a click-based reveal interaction simulating a knowledge check in a real eLearning module.',
+            assessment:
+              'DOM Manipulation Assignment: Build a self-contained HTML page with at least three interactive elements using JavaScript DOM methods. Rubric: Functionality (40%), instructional purpose alignment (30%), code clarity and comments (30%)',
+          },
+          {
+            module: 'Module 3',
+            title: 'Writing xAPI Statements',
+            color: 'green',
+            objectives: [
+              'Explain the structure of an xAPI statement including actor, verb, and object (CLO 3)',
+              'Construct syntactically valid xAPI statements in JSON format for common eLearning interactions (CLO 3)',
+              'Analyze how xAPI data supports learning analytics and instructional decision-making (CLO 3, CLO 5)',
+            ],
+            materials: [
+              'xAPI specification overview at adlnet.gov',
+              'Instructor-created xAPI statement builder reference card',
+              'JSON syntax primer — formatted for non-developers',
+              'Sample xAPI statements from real LRS environments',
+              'SCORM Cloud free account for xAPI testing',
+            ],
+            activity:
+              'xAPI statement construction activity: Write three xAPI statements for a scenario-based interaction — attempted, completed, and passed. Discussion: Analyze sample statements and identify what instructional decisions the data could support.',
+            assessment:
+              'xAPI Statement Assignment: Submit five original xAPI statements in JSON format. Rubric: JSON syntax accuracy (40%), verb and object appropriateness (30%), scenario relevance and instructional alignment (30%)',
+          },
+          {
+            module: 'Module 4',
+            title: 'Integration and Reflection',
+            color: 'orange',
+            objectives: [
+              'Combine JavaScript DOM manipulation with xAPI statement firing in a single eLearning interaction (CLO 4)',
+              'Evaluate the role of learner data captured through xAPI in informing iterative instructional design (CLO 4, CLO 5)',
+              'Reflect on the implications of code-based learning analytics for the instructional design profession (CLO 5)',
+            ],
+            materials: [
+              'Instructor screencast — Integrating DOM events with xAPI statement firing',
+              'SCORM Cloud xAPI dashboard overview',
+              'ADL xAPI cookbook — free at adlnet.gov',
+              'Learner-generated examples from Modules 2 and 3',
+            ],
+            activity:
+              'Integration project: Build a complete interactive eLearning interaction that fires a valid xAPI statement when a learner completes a DOM-based activity. Publish to SCORM Cloud and verify the statement in the xAPI dashboard.',
+            assessment:
+              'Final Integration Project: Submit SCORM Cloud link showing a working xAPI-enabled interaction with at least one verified statement in the LRS. Rubric: Technical functionality (35%), xAPI statement accuracy (25%), instructional design alignment (25%), reflection depth (15%)',
+          },
+        ].map((mod) => (
+          <div class="bg-white dark:bg-slate-800 rounded-xl border border-gray-200 dark:border-gray-700 overflow-hidden">
+            <div
+              class={`px-6 py-4 ${mod.color === 'blue' ? 'bg-blue-50 dark:bg-blue-900/30 border-b border-blue-100 dark:border-blue-800' : mod.color === 'purple' ? 'bg-purple-50 dark:bg-purple-900/30 border-b border-purple-100 dark:border-purple-800' : mod.color === 'green' ? 'bg-green-50 dark:bg-green-900/30 border-b border-green-100 dark:border-green-800' : 'bg-orange-50 dark:bg-orange-900/30 border-b border-orange-100 dark:border-orange-800'}`}
+            >
+              <p
+                class={`text-xs font-bold uppercase tracking-wide mb-1 ${mod.color === 'blue' ? 'text-blue-600 dark:text-blue-400' : mod.color === 'purple' ? 'text-purple-600 dark:text-purple-400' : mod.color === 'green' ? 'text-green-600 dark:text-green-400' : 'text-orange-600 dark:text-orange-400'}`}
+              >
+                {mod.module}
+              </p>
+              <h3 class="text-xl font-bold font-heading text-gray-900 dark:text-white">{mod.title}</h3>
+            </div>
+            <div class="p-6 space-y-5">
+              <div>
+                <p class="text-xs font-bold uppercase tracking-wide text-gray-500 dark:text-gray-400 mb-2">
+                  Module Objectives
+                </p>
+                <ul class="space-y-1.5">
+                  {mod.objectives.map((obj) => (
+                    <li class="flex gap-2 text-sm text-gray-700 dark:text-gray-300">
+                      <span class="text-accent mt-0.5 flex-shrink-0">→</span>
+                      {obj}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div>
+                <p class="text-xs font-bold uppercase tracking-wide text-gray-500 dark:text-gray-400 mb-2">
+                  Learning Materials
+                </p>
+                <ul class="space-y-1">
+                  {mod.materials.map((mat) => (
+                    <li class="text-sm text-muted flex gap-2">
+                      <span class="flex-shrink-0">·</span>
+                      {mat}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div>
+                <p class="text-xs font-bold uppercase tracking-wide text-gray-500 dark:text-gray-400 mb-2">Activity</p>
+                <p class="text-sm text-gray-700 dark:text-gray-300">{mod.activity}</p>
+              </div>
+              <div class="bg-gray-50 dark:bg-slate-700/50 rounded-lg p-4">
+                <p class="text-xs font-bold uppercase tracking-wide text-gray-500 dark:text-gray-400 mb-2">
+                  Assessment
+                </p>
+                <p class="text-sm text-gray-700 dark:text-gray-300">{mod.assessment}</p>
+              </div>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+
+  <!-- Data-Informed Design -->
+  <Content tagline="LDTC 625" title="Data-Informed Design Rationale" isReversed>
+    <Fragment slot="image">
+      <div class="flex items-center justify-center h-full py-12">
+        <div class="text-center">
+          <p class="text-8xl font-bold font-heading text-accent leading-none">&lt;20%</p>
+          <p class="text-xl text-muted mt-3">of IDs confident with xAPI</p>
+          <div class="mt-8 space-y-1 text-sm text-muted">
+            <p class="font-semibold text-gray-700 dark:text-gray-300">Rustici Software, 2022</p>
+            <p>State of Learning Technology Report</p>
+            <p>The gap this course was designed to close</p>
+          </div>
+        </div>
+      </div>
+    </Fragment>
+    <Fragment slot="content">
+      <p class="mb-4">
+        The design of this minicourse was directly informed by learner needs analysis data. Survey data from the
+        instructional design community shows that while most practitioners are familiar with SCORM, fewer than 20%
+        report confidence working with xAPI despite its significantly richer data capture capabilities. This gap
+        informed the decision to scaffold xAPI content through JavaScript fundamentals first — ensuring learners develop
+        the technical foundation needed to meaningfully engage with statement construction before attempting
+        integration.
+      </p>
+      <p class="mb-4">
+        Discussion post analysis from pilot iterations also revealed that learners frequently underestimated the
+        instructional design implications of xAPI data — treating statement construction as a purely technical exercise
+        rather than a design decision. This finding directly shaped the Module 3 Discussion activity, which explicitly
+        asks learners to analyze what xAPI statements reveal about learner behavior and what instructional decisions
+        those insights could support.
+      </p>
+      <p>
+        In future iterations, xAPI statements generated by learner submissions in Module 4 — including verb patterns
+        such as attempted, completed, and passed — will serve as a primary data source for continuous improvement. This
+        mirrors the Kirkpatrick Level 2 evaluation model by connecting learner behavior data directly to instructional
+        revision cycles. The minicourse itself thus serves a dual pedagogical function: it teaches xAPI while
+        simultaneously modeling how xAPI data informs data-driven instructional design decisions.
+      </p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 section-pattern-b"></div>
+    </Fragment>
+  </Content>
+
   <!-- Syllabus Download -->
   <Content tagline="Course Document" title="Minicourse Syllabus" isReversed>
     <Fragment slot="image">
@@ -499,26 +696,51 @@ const metadata = {
     </div>
   </div>
 
-  <!-- Live Links -->
-  <Features2
-    tagline="Live Work"
-    title="See the Course in Action"
-    columns={2}
-    items={[
-      {
-        title: 'Rise 360 Interactive Module',
-        description:
-          'An interactive Rise 360 module covering JavaScript and xAPI fundamentals. Link will be added once the module is re-published.',
-        icon: 'tabler:external-link',
-      },
-      {
-        title: 'Canvas Course (Temporarily Unavailable)',
-        description:
-          'The full course — including discussions, assignments, syllabus, and rubrics — was hosted in Canvas LMS. Canvas Free-for-Teacher is currently offline due to a platform-wide security incident. Access will be restored when the platform comes back online.',
-        icon: 'tabler:school',
-      },
-    ]}
-  />
+  <!-- Live Course Embed -->
+  <div class="max-w-7xl mx-auto px-4 md:px-8 py-12 md:py-16">
+    <div class="text-center mb-8">
+      <p class="text-base text-secondary dark:text-blue-200 font-bold tracking-wide uppercase mb-2">Live Work</p>
+      <h2 class="text-4xl md:text-5xl font-bold tracking-tighter font-heading mb-4">Rise 360 Interactive Module</h2>
+      <p class="text-lg text-muted max-w-2xl mx-auto mb-4">
+        The published Rise 360 module — JavaScript Objects & xAPI for Instructional Designers — embedded directly below.
+        Use full-screen mode for the best experience.
+      </p>
+      <a
+        href="/js-xapi-content/index.html"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-flex items-center gap-2 text-sm font-semibold text-accent hover:underline"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="w-4 h-4"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          stroke-width="2"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M10 6H6a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+        </svg>
+        Open in full screen
+      </a>
+    </div>
+    <div class="rounded-xl overflow-hidden shadow-lg border border-gray-200 dark:border-gray-700">
+      <iframe
+        src="/js-xapi-content/index.html"
+        title="JavaScript Objects & xAPI for Instructional Designers — Rise 360 Module"
+        width="100%"
+        height="720"
+        style="border: none; display: block;"
+        allow="fullscreen"
+        loading="lazy"></iframe>
+    </div>
+    <p class="text-sm text-muted mt-4 text-center">
+      Canvas LMS course — including discussions, assignments, syllabus, and rubrics — available on request.
+    </p>
+  </div>
 
   <!-- Learning Theory -->
   <div class="max-w-7xl mx-auto px-4 md:px-8 py-12 md:py-16">
