@@ -1,0 +1,253 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Content from '~/components/widgets/Content.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'Intro to Epic React — Live Group Session | Masterschool',
+};
+---
+
+<Layout metadata={metadata}>
+  <Hero tagline="Live Instruction · Epic React · Onboarding · Masterschool">
+    <Fragment slot="title">
+      Intro to Epic React —<br />
+      <span class="text-accent dark:text-white">Live Group Onboarding Session</span>
+    </Fragment>
+    <Fragment slot="subtitle">
+      A live one-hour group session orienting Masterschool bootcamp students to the Epic React workshop platform —
+      watching Kent C. Dodds' welcome video together and completing every setup step live, so no one hits a wall before
+      the first exercise.
+    </Fragment>
+  </Hero>
+
+  <!-- Context -->
+  <Content tagline="The Session" title="Watch together, do together" isReversed>
+    <Fragment slot="image">
+      <div class="flex items-center justify-center h-full py-12">
+        <div class="text-center">
+          <p class="text-8xl font-bold font-heading text-accent leading-none">~60</p>
+          <p class="text-xl text-muted mt-3">minutes · live session</p>
+          <div class="mt-8 space-y-2 text-sm text-muted">
+            <p class="font-semibold text-gray-700 dark:text-gray-300">Masterschool Coding Bootcamp</p>
+            <p>Epic React · Kent C. Dodds · React Hooks</p>
+            <p>International cohort · April 2022</p>
+          </div>
+        </div>
+      </div>
+    </Fragment>
+    <Fragment slot="content">
+      <p class="mb-4">
+        Epic React is one of the most highly regarded React learning resources available — but getting set up and
+        oriented before the first exercise requires navigating GitHub, cloning a repo, running a setup script, and
+        understanding a workshop environment that's unlike anything most bootcamp students have seen before. That
+        friction is real, and it doesn't have anything to do with React.
+      </p>
+      <p class="mb-4">
+        This session was designed to eliminate it. The cohort was a week away from starting the React Hooks workshop,
+        and the goal was simple: get everyone logged in, cloned, running, and oriented — together — before they ever
+        opened an exercise file on their own.
+      </p>
+      <p>
+        Rather than describing the setup process, we watched Kent C. Dodds' welcome video as a group and did every step
+        live alongside it. That meant students weren't just passively watching — they were in their terminals, cloning
+        repos, running scripts, and asking questions in real time while the setup was still fresh.
+      </p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 section-pattern-b"></div>
+    </Fragment>
+  </Content>
+
+  <!-- What I Covered -->
+  <Features3
+    tagline="The Content"
+    title="What the session covered"
+    subtitle="Platform orientation, live setup, and troubleshooting — everything students needed before the first exercise."
+    columns={3}
+    items={[
+      {
+        title: 'License Verification and Login',
+        description:
+          'Opened by checking that every student had claimed their Epic React license and successfully logged in — catching stragglers early and walking one student through the passwordless email login flow live in the session.',
+        icon: 'tabler:login',
+      },
+      {
+        title: "Kent C. Dodds' Welcome Video",
+        description:
+          'Co-watched the official Epic React welcome video as a group — pausing to troubleshoot an audio share issue, annotating key moments in real time, and connecting the platform tour to what students already knew from Udacity.',
+        icon: 'tabler:player-play',
+      },
+      {
+        title: 'Prerequisites and Environment Check',
+        description:
+          'Covered the technical prerequisites Kent outlines — Git, Node.js, NPM, React DevTools, and Chrome — connecting them to the gap week JavaScript practice the cohort had just completed.',
+        icon: 'tabler:checklist',
+      },
+      {
+        title: 'Workshop Setup — Clone and Install',
+        description:
+          'Led the group through the three-step setup process live: git clone, cd into the repo, run the setup script. Troubleshot a "destination already exists" error in real time and walked everyone through resolving it.',
+        icon: 'tabler:terminal-2',
+      },
+      {
+        title: 'Exercise Workflow and App Tour',
+        description:
+          'Walked through the Epic React exercise environment — the split-panel layout, isolated exercise view, final comparison tab, test runner, and the emoji guide (Cody the Koala, Marty the Money Bag) that marks exercise prompts.',
+        icon: 'tabler:layout-sidebar',
+      },
+      {
+        title: 'React Hooks Repo Setup',
+        description:
+          'Closed the session by cloning the React Hooks workshop repo — the actual workshop starting the following week — so students left with everything installed and ready to run, not just oriented in theory.',
+        icon: 'tabler:brand-react',
+      },
+    ]}
+  />
+
+  <!-- Approach -->
+  <Content tagline="The Approach" title="Co-viewing as an instructional strategy">
+    <Fragment slot="image">
+      <div class="flex items-center justify-center h-full py-12 px-6">
+        <div class="w-full max-w-sm space-y-3">
+          {
+            [
+              { step: '01', label: 'Verify First', detail: 'Everyone logged in before the video starts' },
+              { step: '02', label: 'Watch Together', detail: "Kent's welcome video — shared screen, live commentary" },
+              { step: '03', label: 'Do Alongside', detail: 'Every setup step executed live in the terminal' },
+              { step: '04', label: 'Troubleshoot Live', detail: 'Errors handled in real time, not deferred' },
+              { step: '05', label: 'Leave Ready', detail: 'React Hooks repo cloned and installed before session ends' },
+            ].map((item) => (
+              <div class="flex items-start gap-4 p-3 rounded-lg border border-gray-200 dark:border-gray-700">
+                <span class="text-accent font-bold font-heading text-lg leading-none">{item.step}</span>
+                <div>
+                  <p class="font-semibold text-sm text-gray-800 dark:text-gray-200">{item.label}</p>
+                  <p class="text-xs text-muted mt-0.5">{item.detail}</p>
+                </div>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </Fragment>
+    <Fragment slot="content">
+      <p class="mb-4">
+        Showing students a setup process and having them do a setup process are two different things. This session was
+        built around the second. We watched Kent's welcome video together with the students following along in their own
+        environments — not watching passively, but executing each step as it appeared on screen.
+      </p>
+      <p class="mb-4">
+        When the audio share broke at the start of the video, I switched from screen share to browser share mid-session
+        without losing the thread. When a student hit a "destination already exists" error during the git clone, I
+        worked through it live — creating a test folder and recloning — rather than deferring it to async support. Those
+        moments of real troubleshooting in front of the group are more instructional than a smooth demo ever could be.
+      </p>
+      <p class="mb-4">
+        I also annotated the video in real time — connecting what Kent was explaining to what the cohort already knew.
+        When Kent listed the JavaScript prerequisites, I pointed back to the gap week practice they'd just completed.
+        When he covered the exercise file structure, I connected it to the React work they were already doing in
+        Udacity. The welcome video became a conversation, not a presentation.
+      </p>
+      <p>
+        The session also connects directly to the Loom screencasts I recorded for Epic React account setup and
+        navigation. Together they form a complete onboarding system: async screencasts for individual reference, live
+        group session for guided first steps.
+      </p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 section-pattern"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Video -->
+  <div class="max-w-4xl mx-auto px-4 md:px-8 py-12 md:py-16">
+    <div class="text-center mb-8">
+      <p class="text-base text-secondary dark:text-blue-200 font-bold tracking-wide uppercase mb-2">
+        Session Recording
+      </p>
+      <h2 class="text-4xl md:text-5xl font-bold tracking-tighter font-heading">Watch the Session</h2>
+      <p class="text-lg text-muted mt-4">
+        Edited highlights from the live Intro to Epic React onboarding session at Masterschool, April 2022.
+      </p>
+    </div>
+    <div class="relative w-full rounded-lg shadow-lg overflow-hidden" style="padding-top: 56.25%;">
+      <iframe
+        class="absolute inset-0 w-full h-full"
+        src="https://www.youtube.com/embed/7DOvxctvcAc"
+        title="Intro to Epic React — Live Group Setup Session | Masterschool"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+    </div>
+  </div>
+
+  <!-- Reflection -->
+  <Content tagline="Reflection" title="What onboarding actually requires" isReversed>
+    <Fragment slot="image">
+      <div class="flex items-center justify-center h-full py-12">
+        <div class="text-center">
+          <p class="text-8xl font-bold font-heading text-accent leading-none">0</p>
+          <p class="text-xl text-muted mt-3">setup errors left unresolved</p>
+          <div class="mt-8 space-y-1 text-sm text-muted">
+            <p class="font-semibold text-gray-700 dark:text-gray-300">Epic React · React Hooks Workshop</p>
+            <p>git clone · npm setup · localhost:3000</p>
+            <p>International cohort · April 2022</p>
+          </div>
+        </div>
+      </div>
+    </Fragment>
+    <Fragment slot="content">
+      <p class="mb-4">
+        Onboarding sessions are easy to underestimate. They don't feel like instruction — there's no concept being
+        taught, no skill being practiced. But the cost of skipping them is real: students who can't get their
+        environment running don't struggle with React, they struggle with npm. That's a different problem, and it drains
+        time and motivation from the actual learning.
+      </p>
+      <p class="mb-4">
+        What this session taught me is that onboarding is most effective when it's genuinely participatory. A
+        walkthrough video accomplishes something. A live session where every student is in their terminal, hitting the
+        same commands, seeing the same output — and occasionally hitting the same errors — accomplishes something
+        different. The shared experience creates a reference point that async content can't replicate.
+      </p>
+      <div class="mt-6 flex flex-wrap gap-2">
+        {
+          [
+            'Epic React',
+            'React Hooks',
+            'Onboarding',
+            'Live Instruction',
+            'Masterschool',
+            'Kent C. Dodds',
+            'Git',
+            'Node.js',
+            'VS Code',
+            'Troubleshooting',
+            'Co-viewing',
+          ].map((tag) => (
+            <span class="bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 text-sm font-medium px-3 py-1 rounded-full">
+              {tag}
+            </span>
+          ))
+        }
+      </div>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 section-pattern-b"></div>
+    </Fragment>
+  </Content>
+
+  <CallToAction
+    actions={[
+      { variant: 'primary', text: 'View All Projects', href: '/projects' },
+      { text: 'Get in Touch', href: '/about#contact' },
+    ]}
+  >
+    <Fragment slot="title">Interested in working together?</Fragment>
+    <Fragment slot="subtitle"
+      >I'm open to remote opportunities in technical learning experience design, developer education, and customer
+      enablement.</Fragment
+    >
+  </CallToAction>
+</Layout>
