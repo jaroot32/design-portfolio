@@ -1,0 +1,258 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Content from '~/components/widgets/Content.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'Landing Page Project — JavaScript DOM & Scroll Events | Masterschool',
+};
+---
+
+<Layout metadata={metadata}>
+  <Hero tagline="Live Instruction · JavaScript · DOM · Scroll Events · Masterschool">
+    <Fragment slot="title">
+      Landing Page Project —<br />
+      <span class="text-accent dark:text-white">JavaScript DOM, Scroll Events & Active States</span>
+    </Fragment>
+    <Fragment slot="subtitle">
+      A live ~32-minute open gym session with Masterschool students on the Udacity Landing Page project — covering
+      dynamic nav generation with JavaScript, getBoundingClientRect() for viewport detection, scrollIntoView() for
+      smooth scrolling, and toggling active state classes as sections come into view.
+    </Fragment>
+  </Hero>
+
+  <!-- Context -->
+  <Content tagline="The Session" title="Open gym — bring your questions" isReversed>
+    <Fragment slot="image">
+      <div class="flex items-center justify-center h-full py-12">
+        <div class="text-center">
+          <p class="text-8xl font-bold font-heading text-accent leading-none">~32</p>
+          <p class="text-xl text-muted mt-3">minutes · live session</p>
+          <div class="mt-8 space-y-2 text-sm text-muted">
+            <p class="font-semibold text-gray-700 dark:text-gray-300">Masterschool Coding Bootcamp</p>
+            <p>JavaScript · DOM · Udacity Curriculum</p>
+            <p>International cohort · Open gym format</p>
+          </div>
+        </div>
+      </div>
+    </Fragment>
+    <Fragment slot="content">
+      <p class="mb-4">
+        The Udacity Landing Page project is the point in the curriculum where JavaScript stops being abstract and starts
+        being something students have to wire up themselves. The requirement sounds straightforward — build a navigation
+        menu dynamically, scroll to sections on click, highlight the active section as you scroll — but it pulls
+        together DOM manipulation, event listeners, viewport detection, and CSS class toggling all at once.
+      </p>
+      <p class="mb-4">
+        This session ran as an open gym: no fixed agenda, students could bring whatever they were stuck on. I came with
+        content ready to share but made space for questions first. When it became clear students were just starting to
+        look at the project, I walked through the key concepts live — querying the DOM, building the nav with JavaScript
+        the same way they had built the pixel art grid, and then demoing scrollIntoView() and getBoundingClientRect() in
+        VS Code with the browser console open.
+      </p>
+      <p>
+        The session included real back-and-forth: students asked about ID naming conventions, how to select elements,
+        and whether an if statement could handle the color change logic. Those questions shaped the direction of the
+        demo.
+      </p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 section-pattern-b"></div>
+    </Fragment>
+  </Content>
+
+  <!-- What I Covered -->
+  <Features3
+    tagline="The Content"
+    title="What the session covered"
+    subtitle="Project orientation, live code demos, and Q&A — from data attributes to scroll event listeners."
+    columns={3}
+    items={[
+      {
+        title: 'HTML5 Data Attributes',
+        description:
+          'Explained the role of data attributes in the project — how they serve as unique identifiers for section elements, connecting JavaScript to specific parts of the page without relying solely on IDs.',
+        icon: 'tabler:code',
+      },
+      {
+        title: 'Dynamic Nav Generation',
+        description:
+          'Walked through building the navigation menu with JavaScript — selecting the UL element, adding a click event listener, and connecting nav items to page sections the same way students built the pixel art grid.',
+        icon: 'tabler:list',
+      },
+      {
+        title: 'getBoundingClientRect()',
+        description:
+          'Demonstrated this built-in function for detecting whether a section is in the viewport — checking top, left, right, and bottom values against window.innerWidth and innerHeight to determine what the user can currently see.',
+        icon: 'tabler:viewport-wide',
+      },
+      {
+        title: 'scrollIntoView()',
+        description:
+          'Showed how to wire up click events to scroll the page to a specific section — extracting the section number from the nav item text, getting the element by ID, and calling scrollIntoView() to trigger the animation.',
+        icon: 'tabler:arrows-down',
+      },
+      {
+        title: 'Active State Class Toggling',
+        description:
+          'Explained the add/remove active class pattern — looping through all section and nav elements, removing the active class from everything, then adding it to whichever element is currently in the viewport.',
+        icon: 'tabler:toggle-right',
+      },
+      {
+        title: 'Scroll Event Listener & position: sticky',
+        description:
+          'Added a scroll event listener to the document and debugged position: sticky live — working through why the WebKit prefix was needed and how the scroll callback ties viewport detection to the active state logic.',
+        icon: 'tabler:refresh',
+      },
+    ]}
+  />
+
+  <!-- Approach -->
+  <Content tagline="The Approach" title="Live coding with real student questions">
+    <Fragment slot="image">
+      <div class="flex items-center justify-center h-full py-12 px-6">
+        <div class="w-full max-w-sm space-y-3">
+          {
+            [
+              { step: '01', label: 'Open Gym First', detail: 'Space for student questions before diving in' },
+              { step: '02', label: 'Project Orientation', detail: 'Rubric, folder structure, data attributes' },
+              { step: '03', label: 'Live DOM Demo', detail: 'querySelector · event listeners · VS Code + console' },
+              { step: '04', label: 'Key Functions', detail: 'getBoundingClientRect · scrollIntoView · classList' },
+              { step: '05', label: 'Student Q&A', detail: 'ID naming · selectors · if statements for color logic' },
+            ].map((item) => (
+              <div class="flex items-start gap-4 p-3 rounded-lg border border-gray-200 dark:border-gray-700">
+                <span class="text-accent font-bold font-heading text-lg leading-none">{item.step}</span>
+                <div>
+                  <p class="font-semibold text-sm text-gray-800 dark:text-gray-200">{item.label}</p>
+                  <p class="text-xs text-muted mt-0.5">{item.detail}</p>
+                </div>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </Fragment>
+    <Fragment slot="content">
+      <p class="mb-4">
+        Open gym sessions work differently from structured walkthroughs. Students show up at different stages — some
+        just finished the previous project, some haven't opened the starter code yet, some are already stuck on
+        something specific. The goal is to be useful to all of them without lecturing at anyone.
+      </p>
+      <p class="mb-4">
+        I started by asking what students were working on and where they were in the curriculum. Once it was clear most
+        were just starting to look at the Landing Page project, I shared my screen and walked through the key mechanics
+        — not the whole project, but the parts most likely to cause confusion: how getBoundingClientRect() works, why
+        scrollIntoView() needs the element reference first, and how the active class pattern replaces direct style
+        manipulation.
+      </p>
+      <p class="mb-4">
+        The live debugging moment — working through why position: sticky wasn't sticking until the WebKit prefix was
+        added — was unplanned but useful. That kind of real-time troubleshooting is exactly what students need to see:
+        not a perfect demo, but how to read what the browser is telling you and iterate until it works.
+      </p>
+      <p>
+        The session closed with a reminder that a catch-up week was coming and encouragement to prioritize any
+        outstanding projects before diving into the new one. Pacing advice is part of the job.
+      </p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 section-pattern"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Video -->
+  <div class="max-w-4xl mx-auto px-4 md:px-8 py-12 md:py-16">
+    <div class="text-center mb-8">
+      <p class="text-base text-secondary dark:text-blue-200 font-bold tracking-wide uppercase mb-2">
+        Session Recording
+      </p>
+      <h2 class="text-4xl md:text-5xl font-bold tracking-tighter font-heading">Watch the Session</h2>
+      <p class="text-lg text-muted mt-4">
+        Edited highlights from the live Landing Page project open gym session at Masterschool.
+      </p>
+    </div>
+    <div class="relative w-full rounded-lg shadow-lg overflow-hidden" style="padding-top: 56.25%;">
+      <iframe
+        class="absolute inset-0 w-full h-full"
+        src="https://www.youtube.com/embed/xpYDyu_ry_A"
+        title="Landing Page Project — JavaScript DOM, Scroll Events & Active States | Masterschool"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+    </div>
+  </div>
+
+  <!-- Reflection -->
+  <Content tagline="Reflection" title="What live debugging teaches that demos can't" isReversed>
+    <Fragment slot="image">
+      <div class="flex items-center justify-center h-full py-12">
+        <div class="text-center">
+          <p class="text-8xl font-bold font-heading text-accent leading-none">3</p>
+          <p class="text-xl text-muted mt-3">DOM APIs · one project</p>
+          <div class="mt-8 space-y-1 text-sm text-muted">
+            <p class="font-semibold text-gray-700 dark:text-gray-300">
+              getBoundingClientRect · scrollIntoView · classList
+            </p>
+            <p>querySelector · addEventListener · scroll event</p>
+            <p>position: sticky · data attributes · active state</p>
+          </div>
+        </div>
+      </div>
+    </Fragment>
+    <Fragment slot="content">
+      <p class="mb-4">
+        The Landing Page project asks students to coordinate more browser APIs at once than any project before it. Each
+        one is documented — getBoundingClientRect(), scrollIntoView(), classList.add() and classList.remove() — but the
+        documentation doesn't tell you how they fit together. That's what the session was for.
+      </p>
+      <p class="mb-4">
+        The unplanned debugging moment with position: sticky ended up being one of the most useful parts. I tried it, it
+        didn't work, I talked through what might be happening, added the WebKit prefix, and it worked. Students who only
+        ever see clean demos can come to believe that experienced developers just know the right answer. Watching the
+        troubleshooting process — reading what the browser does, forming a hypothesis, testing it — is a more accurate
+        picture of how the work actually goes.
+      </p>
+      <div class="mt-6 flex flex-wrap gap-2">
+        {
+          [
+            'JavaScript',
+            'DOM Manipulation',
+            'getBoundingClientRect',
+            'scrollIntoView',
+            'classList',
+            'Event Listeners',
+            'Scroll Events',
+            'Data Attributes',
+            'position: sticky',
+            'Active State',
+            'Masterschool',
+            'Live Instruction',
+            'Open Gym',
+          ].map((tag) => (
+            <span class="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-sm font-medium px-3 py-1 rounded-full">
+              {tag}
+            </span>
+          ))
+        }
+      </div>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 section-pattern-b"></div>
+    </Fragment>
+  </Content>
+
+  <CallToAction
+    actions={[
+      { variant: 'primary', text: 'View All Projects', href: '/projects' },
+      { text: 'Get in Touch', href: '/about#contact' },
+    ]}
+  >
+    <Fragment slot="title">Interested in working together?</Fragment>
+    <Fragment slot="subtitle"
+      >I'm open to remote opportunities in technical learning experience design, developer education, and customer
+      enablement.</Fragment
+    >
+  </CallToAction>
+</Layout>
