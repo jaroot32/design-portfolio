@@ -1,0 +1,255 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Content from '~/components/widgets/Content.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'myReads Book Tracker — React Project Intro | Masterschool',
+};
+---
+
+<Layout metadata={metadata}>
+  <Hero tagline="Live Instruction · React · Hooks · BooksAPI · Masterschool">
+    <Fragment slot="title">
+      myReads Book Tracker —<br />
+      <span class="text-accent dark:text-white">React Project Introduction</span>
+    </Fragment>
+    <Fragment slot="subtitle">
+      A live ~40-minute session introducing Masterschool students to the myReads Book Tracker project — demoing the
+      finished app first, walking the project rubric, and mapping each feature to the specific React concept needed to
+      build it.
+    </Fragment>
+  </Hero>
+
+  <!-- Context -->
+  <Content tagline="The Session" title="Show the destination before the directions" isReversed>
+    <Fragment slot="image">
+      <div class="flex items-center justify-center h-full py-12">
+        <div class="text-center">
+          <p class="text-8xl font-bold font-heading text-accent leading-none">~40</p>
+          <p class="text-xl text-muted mt-3">minutes · live session</p>
+          <div class="mt-8 space-y-2 text-sm text-muted">
+            <p class="font-semibold text-gray-700 dark:text-gray-300">Masterschool Coding Bootcamp</p>
+            <p>React · Hooks · BooksAPI · Udacity Curriculum</p>
+            <p>International cohort · April 2022</p>
+          </div>
+        </div>
+      </div>
+    </Fragment>
+    <Fragment slot="content">
+      <p class="mb-4">
+        The myReads Book Tracker is a React CRUD application — students can sort books across three virtual shelves,
+        search for new books via an API, and manage their reading list. It sounds approachable until you look at it: the
+        starter code is a single undecomposed component, the API returns promises, and students have to figure out how
+        to wire useEffect, useState, and controlled form inputs together to make it all work.
+      </p>
+      <p class="mb-4">
+        The session opened with a live demo of a working version of the app. Before explaining how anything worked, I
+        showed students exactly what they were building — the shelf sorting, the search, the none/delete behavior, and
+        how books already on a shelf show their current state in the search results. Seeing the finished product first
+        gives students a mental model to build toward rather than assembling pieces with no picture of the whole.
+      </p>
+      <p>
+        From there, the session worked backward — connecting each feature students had just seen to the specific React
+        concept that makes it possible, and pointing to the exact parts of the curriculum where each concept lives.
+      </p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 section-pattern-b"></div>
+    </Fragment>
+  </Content>
+
+  <!-- What I Covered -->
+  <Features3
+    tagline="The Content"
+    title="What the session covered"
+    subtitle="Project orientation, rubric walkthrough, and concept mapping — everything students needed before writing their first line."
+    columns={3}
+    items={[
+      {
+        title: 'Live App Demo',
+        description:
+          'Opened with a working version of the finished app — showing shelf sorting, the search feature, none/delete behavior, and how books already on a shelf display their current state in search results. Destination before directions.',
+        icon: 'tabler:device-desktop',
+      },
+      {
+        title: 'Starter Code and BooksAPI',
+        description:
+          'Walked through the starter code file structure and the three BooksAPI methods — getAll, search, and update — explaining what each returns and how students would use them to power each feature of the app.',
+        icon: 'tabler:api',
+      },
+      {
+        title: 'Create React App',
+        description:
+          'Explained what Create React App includes out of the box — React, JSX, TypeScript support, live dev server, build scripts, and offline capability — and why it is the right starting point for this project.',
+        icon: 'tabler:brand-react',
+      },
+      {
+        title: 'Project Rubric Walkthrough',
+        description:
+          'Walked through the project rubric with practical advice: functional React over classes, key props on book lists, updating the README, and making sure the app installs and starts cleanly before submission.',
+        icon: 'tabler:checklist',
+      },
+      {
+        title: 'useEffect and useState for API Calls',
+        description:
+          'Mapped the search and shelf-loading features to the useEffect hook — showing how API calls fit inside the hook, how the promise chain updates state via useState, and walked through a DigitalOcean resource that demonstrates the pattern clearly.',
+        icon: 'tabler:refresh',
+      },
+      {
+        title: 'Key Concepts for the Project',
+        description:
+          'Connected each project feature to a specific React concept: map and filter together for the none/delete functionality, controlled components for both the shelf form and the search form, and lifting state for shared book data.',
+        icon: 'tabler:sitemap',
+      },
+    ]}
+  />
+
+  <!-- Approach -->
+  <Content tagline="The Approach" title="Working backward from the finished product">
+    <Fragment slot="image">
+      <div class="flex items-center justify-center h-full py-12 px-6">
+        <div class="w-full max-w-sm space-y-3">
+          {
+            [
+              { step: '01', label: 'Demo First', detail: 'Working app — see it before building it' },
+              { step: '02', label: 'Orient to Code', detail: 'File structure · BooksAPI methods · starter code' },
+              { step: '03', label: 'Walk the Rubric', detail: 'What reviewers check — no surprises at submission' },
+              { step: '04', label: 'Map to Concepts', detail: 'Each feature → specific React concept' },
+              { step: '05', label: 'Stack Resources', detail: 'Cheatsheet · DigitalOcean · Epic React hooks workshop' },
+            ].map((item) => (
+              <div class="flex items-start gap-4 p-3 rounded-lg border border-gray-200 dark:border-gray-700">
+                <span class="text-accent font-bold font-heading text-lg leading-none">{item.step}</span>
+                <div>
+                  <p class="font-semibold text-sm text-gray-800 dark:text-gray-200">{item.label}</p>
+                  <p class="text-xs text-muted mt-0.5">{item.detail}</p>
+                </div>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </Fragment>
+    <Fragment slot="content">
+      <p class="mb-4">
+        Project intro sessions are easy to get wrong. The instinct is to start with the code — open the starter files,
+        walk through the structure, explain what needs to be built. But students who don't yet have a clear picture of
+        the finished product can't make sense of the pieces. Starting with the demo inverts that order: once students
+        have seen the app working, every piece of the starter code has a place to land.
+      </p>
+      <p class="mb-4">
+        The rubric walkthrough was deliberate. Udacity project reviewers evaluate against a specific checklist, and
+        students who miss small requirements — not updating the README, missing key props on list items — get
+        resubmissions that delay their progress. Walking the rubric explicitly before students start building means
+        those requirements are in mind from the first line of code, not checked as an afterthought before submission.
+      </p>
+      <p class="mb-4">
+        When a student asked which React concepts to focus on, I mapped the answer directly to the app's features: map
+        and filter together for the none/delete functionality, useEffect for the BooksAPI calls, controlled components
+        for both forms. That's not a general React curriculum — it's a targeted reading list for this specific project.
+      </p>
+      <p>
+        I also connected the session forward to the next project — the Employee Polls Web App with Redux — so students
+        understood that the patterns they were learning here weren't isolated. Everything in the myReads project builds
+        directly toward what comes next.
+      </p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 section-pattern"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Video -->
+  <div class="max-w-4xl mx-auto px-4 md:px-8 py-12 md:py-16">
+    <div class="text-center mb-8">
+      <p class="text-base text-secondary dark:text-blue-200 font-bold tracking-wide uppercase mb-2">
+        Session Recording
+      </p>
+      <h2 class="text-4xl md:text-5xl font-bold tracking-tighter font-heading">Watch the Session</h2>
+      <p class="text-lg text-muted mt-4">
+        Edited highlights from the live myReads Book Tracker project introduction at Masterschool, April 2022.
+      </p>
+    </div>
+    <div class="relative w-full rounded-lg shadow-lg overflow-hidden" style="padding-top: 56.25%;">
+      <iframe
+        class="absolute inset-0 w-full h-full"
+        src="https://www.youtube.com/embed/ecT-FgC60LA"
+        title="myReads Book Tracker — React Project Intro and Walkthrough | Masterschool"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+    </div>
+  </div>
+
+  <!-- Reflection -->
+  <Content tagline="Reflection" title="What project intros are actually for" isReversed>
+    <Fragment slot="image">
+      <div class="flex items-center justify-center h-full py-12">
+        <div class="text-center">
+          <p class="text-8xl font-bold font-heading text-accent leading-none">2</p>
+          <p class="text-xl text-muted mt-3">forms · one shared API</p>
+          <div class="mt-8 space-y-1 text-sm text-muted">
+            <p class="font-semibold text-gray-700 dark:text-gray-300">useEffect · useState · map + filter</p>
+            <p>Controlled components · Lifting state</p>
+            <p>BooksAPI · Create React App</p>
+          </div>
+        </div>
+      </div>
+    </Fragment>
+    <Fragment slot="content">
+      <p class="mb-4">
+        The myReads project looks deceptively simple — it's just a bookshelf app. But it requires students to coordinate
+        two forms, asynchronous API calls, shared state across components, and the none/delete pattern all at once. A
+        project intro that just opens the starter code and says "here's what you need to build" leaves students with
+        pieces but no mental model for how they connect.
+      </p>
+      <p class="mb-4">
+        What this session reinforced for me is that a good project intro is really a concept map in disguise. The demo
+        isn't just motivational — it's a way of surfacing every concept students will need before they have to ask for
+        them. By the time students open their starter code after this session, they already know that the search form
+        needs useEffect, that the shelf form needs controlled component patterns, and that the delete behavior is a
+        filter call away.
+      </p>
+      <div class="mt-6 flex flex-wrap gap-2">
+        {
+          [
+            'React',
+            'Hooks',
+            'useEffect',
+            'useState',
+            'BooksAPI',
+            'Controlled Components',
+            'Lifting State',
+            'map + filter',
+            'Create React App',
+            'Masterschool',
+            'Live Instruction',
+            'Project Mentoring',
+          ].map((tag) => (
+            <span class="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-sm font-medium px-3 py-1 rounded-full">
+              {tag}
+            </span>
+          ))
+        }
+      </div>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 section-pattern-b"></div>
+    </Fragment>
+  </Content>
+
+  <CallToAction
+    actions={[
+      { variant: 'primary', text: 'View All Projects', href: '/projects' },
+      { text: 'Get in Touch', href: '/about#contact' },
+    ]}
+  >
+    <Fragment slot="title">Interested in working together?</Fragment>
+    <Fragment slot="subtitle"
+      >I'm open to remote opportunities in technical learning experience design, developer education, and customer
+      enablement.</Fragment
+    >
+  </CallToAction>
+</Layout>
