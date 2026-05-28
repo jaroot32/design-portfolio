@@ -1,0 +1,256 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Content from '~/components/widgets/Content.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'JavaScript Closures — Live Practice Session | Masterschool',
+};
+---
+
+<Layout metadata={metadata}>
+  <Hero tagline="Live Instruction · JavaScript · Closures · Masterschool">
+    <Fragment slot="title">
+      JavaScript Closures —<br />
+      <span class="text-accent dark:text-white">Live Practice Session</span>
+    </Fragment>
+    <Fragment slot="subtitle">
+      A live Q&A and coding session working through JavaScript closures — from functions returning functions to a DOM
+      font-size demo, and finally fixing the classic setTimeout loop bug using closures and IIFEs. Audience
+      participation throughout.
+    </Fragment>
+  </Hero>
+
+  <!-- Context -->
+  <Content tagline="The Session" title="Start simple. Get real." isReversed>
+    <Fragment slot="image">
+      <div class="flex items-center justify-center h-full py-12">
+        <div class="text-center">
+          <p class="text-8xl font-bold font-heading text-accent leading-none">4</p>
+          <p class="text-xl text-muted mt-3">progressively harder problems</p>
+          <div class="mt-8 space-y-2 text-sm text-muted">
+            <p class="font-semibold text-gray-700 dark:text-gray-300">Masterschool Coding Bootcamp</p>
+            <p>JavaScript · Closures · Udacity Curriculum</p>
+            <p>International cohort · Live Q&A format</p>
+          </div>
+        </div>
+      </div>
+    </Fragment>
+    <Fragment slot="content">
+      <p class="mb-4">
+        Closures are one of those JavaScript concepts that students hear about constantly before they understand them.
+        The word shows up in interviews, documentation, and error messages — but until you write a few yourself and
+        watch them work, the mental model doesn't stick. This session was built around doing exactly that: writing
+        closures live, together, with increasing complexity, and pausing to explain what was actually happening at each
+        step.
+      </p>
+      <p class="mb-4">
+        The session opened with the simplest possible closure — a function that returns a function that returns a string
+        — and used that as the foundation to introduce first-class functions in JavaScript. From there, the problems got
+        progressively harder: adding input arguments, wiring closures to DOM click events to change font size, and
+        finally diagnosing and fixing the classic setTimeout loop bug that trips up nearly every JavaScript student.
+      </p>
+      <p>
+        Students participated via chat throughout — raising their hands to answer, asking questions about syntax, and
+        testing the code live. The session was structured around the Pomodoro technique: focused 25-minute working
+        chunks with a break built in.
+      </p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 section-pattern-b"></div>
+    </Fragment>
+  </Content>
+
+  <!-- What I Covered -->
+  <Features3
+    tagline="The Content"
+    title="What the session covered"
+    subtitle="Four live coding problems — each one building on the last, from basic closures to real-world bug fixes."
+    columns={3}
+    items={[
+      {
+        title: 'First-Class Functions',
+        description:
+          'Established the conceptual foundation — in JavaScript, functions can accept other functions as parameters or return them as results. Used the term "first-class functions" and connected it to why closures are possible in the first place.',
+        icon: 'tabler:function',
+      },
+      {
+        title: 'Closures: Return a Function',
+        description:
+          'Started with the simplest closure — a function that creates and returns another function that returns "hello world." Walked through the syntax live with student input, then called and logged the result to confirm it worked.',
+        icon: 'tabler:box',
+      },
+      {
+        title: 'Closures with Input',
+        description:
+          "Extended the first example to accept a string argument — showing how the inner function retains access to the outer function's scope even after the outer function has returned. The core mechanic of closures made visible.",
+        icon: 'tabler:variable',
+      },
+      {
+        title: 'DOM Manipulation with Closures',
+        description:
+          'Wired closures to click events to change font size dynamically — toggling between sizes 24, 44, and 56 — demonstrating how closures can remember and manage state in a real browser context.',
+        icon: 'tabler:click',
+      },
+      {
+        title: 'The setTimeout Loop Bug',
+        description:
+          'Demonstrated the classic setTimeout loop problem — where every iteration logs the same value because the loop finishes before the callbacks fire. Fixed it first with a closure, then refactored to an IIFE and explained the difference.',
+        icon: 'tabler:clock',
+      },
+      {
+        title: 'Lexical Environment & IIFEs',
+        description:
+          'Explained lexical environment in plain terms — the inner function captures the value of i at the moment the outer function runs, not when the callback fires. Connected IIFEs as an alternative syntax for encapsulating that scope.',
+        icon: 'tabler:layers-intersect',
+      },
+    ]}
+  />
+
+  <!-- Approach -->
+  <Content tagline="The Approach" title="Progressive difficulty with live student participation">
+    <Fragment slot="image">
+      <div class="flex items-center justify-center h-full py-12 px-6">
+        <div class="w-full max-w-sm space-y-3">
+          {
+            [
+              { step: '01', label: 'Scaffold from Simple', detail: 'Function → returns function → returns string' },
+              { step: '02', label: 'Add Complexity', detail: 'Input arguments → closures capture outer scope' },
+              { step: '03', label: 'Make It Real', detail: 'DOM events → click to change font size' },
+              { step: '04', label: 'Fix a Classic Bug', detail: 'setTimeout loop → closure fix → IIFE refactor' },
+              { step: '05', label: 'Name the Concepts', detail: 'First-class functions · lexical environment · IIFE' },
+            ].map((item) => (
+              <div class="flex items-start gap-4 p-3 rounded-lg border border-gray-200 dark:border-gray-700">
+                <span class="text-accent font-bold font-heading text-lg leading-none">{item.step}</span>
+                <div>
+                  <p class="font-semibold text-sm text-gray-800 dark:text-gray-200">{item.label}</p>
+                  <p class="text-xs text-muted mt-0.5">{item.detail}</p>
+                </div>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </Fragment>
+    <Fragment slot="content">
+      <p class="mb-4">
+        The session was deliberately structured to build toward complexity rather than introduce it all at once.
+        Closures are easy to define and hard to internalize — the definition ("a function that retains access to its
+        outer scope") doesn't land until you've seen the behavior. Starting with the simplest possible example and then
+        asking students to predict what happens next gives the concept somewhere to attach.
+      </p>
+      <p class="mb-4">
+        Student participation was built into the structure. Instead of walking through each solution, I read out the
+        problem, gave students time to think, and invited responses via chat and raised hands. When a student started
+        answering correctly — "create function, parentheses, curly braces" — I coded exactly what they said, live, which
+        kept the session collaborative rather than a lecture.
+      </p>
+      <p class="mb-4">
+        The setTimeout example is the most important one in the set. It's the problem that makes closures click for most
+        students because it's a real bug that has a real consequence — and fixing it requires understanding what
+        closures actually do. Walking through the broken version first, then diagnosing it, then fixing it with a
+        closure, and then refactoring to an IIFE gives students three different views of the same concept.
+      </p>
+      <p>
+        The session closed with a look ahead — upcoming sessions would include a test suite so students could work
+        through problems in pairs and verify their own solutions, moving the format closer to a workshop.
+      </p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 section-pattern"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Video -->
+  <div class="max-w-4xl mx-auto px-4 md:px-8 py-12 md:py-16">
+    <div class="text-center mb-8">
+      <p class="text-base text-secondary dark:text-blue-200 font-bold tracking-wide uppercase mb-2">
+        Session Recording
+      </p>
+      <h2 class="text-4xl md:text-5xl font-bold tracking-tighter font-heading">Watch the Session</h2>
+      <p class="text-lg text-muted mt-4">
+        Edited highlights from the live JavaScript closures practice session at Masterschool.
+      </p>
+    </div>
+    <div class="relative w-full rounded-lg shadow-lg overflow-hidden" style="padding-top: 56.25%;">
+      <iframe
+        class="absolute inset-0 w-full h-full"
+        src="https://www.youtube.com/embed/W3NOCVTVrZM"
+        title="JavaScript Closures — Live Practice Session | Masterschool"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+    </div>
+  </div>
+
+  <!-- Reflection -->
+  <Content tagline="Reflection" title="Why the broken version comes first" isReversed>
+    <Fragment slot="image">
+      <div class="flex items-center justify-center h-full py-12">
+        <div class="text-center">
+          <p class="text-8xl font-bold font-heading text-accent leading-none">3</p>
+          <p class="text-xl text-muted mt-3">views of the same concept</p>
+          <div class="mt-8 space-y-1 text-sm text-muted">
+            <p class="font-semibold text-gray-700 dark:text-gray-300">Closure fix · IIFE refactor · lexical scope</p>
+            <p>Broken first · diagnose · fix</p>
+            <p>setTimeout · forEach · DOM events</p>
+          </div>
+        </div>
+      </div>
+    </Fragment>
+    <Fragment slot="content">
+      <p class="mb-4">
+        The pattern I kept coming back to in this session — show the broken version before the fix — is one of the most
+        effective things you can do when teaching a concept that's easy to memorize and hard to understand. If students
+        only ever see working closure code, they don't develop an intuition for why closures exist. The setTimeout bug
+        is a perfect teaching case because the broken behavior is surprising and the fix is satisfying.
+      </p>
+      <p class="mb-4">
+        What this session reinforced is that closures aren't really a single concept — they're a cluster of related
+        ideas (scope, first-class functions, lexical environment, IIFE syntax) that only make sense together.
+        Introducing them through a sequence of problems, rather than a definition followed by examples, lets students
+        build the mental model piece by piece.
+      </p>
+      <div class="mt-6 flex flex-wrap gap-2">
+        {
+          [
+            'JavaScript',
+            'Closures',
+            'First-Class Functions',
+            'Lexical Environment',
+            'IIFE',
+            'setTimeout',
+            'DOM Events',
+            'Live Coding',
+            'Q&A',
+            'Masterschool',
+            'Live Instruction',
+            'Progressive Difficulty',
+          ].map((tag) => (
+            <span class="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-sm font-medium px-3 py-1 rounded-full">
+              {tag}
+            </span>
+          ))
+        }
+      </div>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 section-pattern-b"></div>
+    </Fragment>
+  </Content>
+
+  <CallToAction
+    actions={[
+      { variant: 'primary', text: 'View All Projects', href: '/projects' },
+      { text: 'Get in Touch', href: '/about#contact' },
+    ]}
+  >
+    <Fragment slot="title">Interested in working together?</Fragment>
+    <Fragment slot="subtitle"
+      >I'm open to remote opportunities in technical learning experience design, developer education, and customer
+      enablement.</Fragment
+    >
+  </CallToAction>
+</Layout>
