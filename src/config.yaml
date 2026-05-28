@@ -9,9 +9,9 @@ site:
 # Default SEO metadata
 metadata:
   title:
-    default: Jonathan Root — Technical Learning Experience Designer
+    default: Jonathan Root — Learning Experience Designer
     template: '%s — Jonathan Root'
-  description: 'Technical Learning Experience Designer with 8+ years building scalable, interactive learning for software developers and eLearning professionals.'
+  description: 'Learning Experience Designer with 8+ years building scalable, interactive learning for software developers and eLearning professionals.'
   robots:
     index: true
     follow: true

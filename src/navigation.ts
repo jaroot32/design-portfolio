@@ -24,5 +24,5 @@ export const footerData = {
   socialLinks: [
     { ariaLabel: 'LinkedIn', icon: 'tabler:brand-linkedin', href: 'https://www.linkedin.com/in/jonathanroot/' },
   ],
-  footNote: `Jonathan Root · Technical Learning Experience Designer`,
+  footNote: `Jonathan Root · Learning Experience Designer`,
 };
