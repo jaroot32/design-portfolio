@@ -17,9 +17,9 @@ const metadata = {
       <span class="text-accent dark:text-white">Live Practice Session</span>
     </Fragment>
     <Fragment slot="subtitle">
-      A live Q&A and coding session working through JavaScript closures — from functions returning functions to a DOM
-      font-size demo, and finally fixing the classic setTimeout loop bug using closures and IIFEs. Audience
-      participation throughout.
+      Two live sessions working through JavaScript closures — from functions returning functions and the setTimeout loop
+      bug, to advanced stateful problems: a Hobby Tracker with cumulative cache and a Censor function that swaps words
+      in any sentence. Audience participation throughout.
     </Fragment>
   </Hero>
 
@@ -42,20 +42,21 @@ const metadata = {
       <p class="mb-4">
         Closures are one of those JavaScript concepts that students hear about constantly before they understand them.
         The word shows up in interviews, documentation, and error messages — but until you write a few yourself and
-        watch them work, the mental model doesn't stick. This session was built around doing exactly that: writing
-        closures live, together, with increasing complexity, and pausing to explain what was actually happening at each
-        step.
+        watch them work, the mental model doesn't stick. These two sessions were built around doing exactly that:
+        writing closures live, together, with increasing complexity, and pausing to explain what was actually happening
+        at each step.
       </p>
       <p class="mb-4">
-        The session opened with the simplest possible closure — a function that returns a function that returns a string
-        — and used that as the foundation to introduce first-class functions in JavaScript. From there, the problems got
-        progressively harder: adding input arguments, wiring closures to DOM click events to change font size, and
-        finally diagnosing and fixing the classic setTimeout loop bug that trips up nearly every JavaScript student.
+        The first session started with the simplest possible closure and progressed through DOM events and the classic
+        setTimeout loop bug. The second session went further — two open gym problems that required closures to do real
+        stateful work: a Hobby Tracker that accumulates hours per hobby in a cache object and resets on demand, and a
+        Censor function that stores word replacement pairs and swaps them in any sentence using Object.keys() and
+        String.replace().
       </p>
       <p>
-        Students participated via chat throughout — raising their hands to answer, asking questions about syntax, and
-        testing the code live. The session was structured around the Pomodoro technique: focused 25-minute working
-        chunks with a break built in.
+        Students participated via chat throughout — raising their hands, asking questions about syntax, and testing the
+        code live. The first session ran with the Pomodoro technique; the second was open gym format with two structured
+        problems.
       </p>
     </Fragment>
     <Fragment slot="bg">
@@ -66,8 +67,8 @@ const metadata = {
   <!-- What I Covered -->
   <Features3
     tagline="The Content"
-    title="What the session covered"
-    subtitle="Four live coding problems — each one building on the last, from basic closures to real-world bug fixes."
+    title="What the sessions covered"
+    subtitle="Six live coding problems across two sessions — from basic closures to stateful cache objects and string replacement."
     columns={3}
     items={[
       {
@@ -105,6 +106,24 @@ const metadata = {
         description:
           'Explained lexical environment in plain terms — the inner function captures the value of i at the moment the outer function runs, not when the callback fires. Connected IIFEs as an alternative syntax for encapsulating that scope.',
         icon: 'tabler:layers-intersect',
+      },
+      {
+        title: 'Hobby Tracker — Cache & Accumulation',
+        description:
+          'Built a closure that takes an array of hobbies, initializes a cache object with each as a key set to zero, and returns a function that accumulates hours per hobby. Calling it with no arguments resets all values and returns a confirmation string.',
+        icon: 'tabler:chart-bar',
+      },
+      {
+        title: 'Censor — Stored Replacement Pairs',
+        description:
+          'Built a closure that stores word replacement pairs (dogs→cats, quick→slow) in an internal object. When called with a sentence, it loops through stored keys using Object.keys() and forEach, applying String.replace() for each pair.',
+        icon: 'tabler:replace',
+      },
+      {
+        title: 'Stateful Closures in Practice',
+        description:
+          'Both problems in the second session demonstrated the same core pattern — a closure holding onto private state (a cache object) that persists across multiple calls. The inner function reads and mutates that state without exposing it.',
+        icon: 'tabler:lock',
       },
     ]}
   />
@@ -163,22 +182,44 @@ const metadata = {
     </Fragment>
   </Content>
 
-  <!-- Video -->
+  <!-- Video Part 1 -->
   <div class="max-w-4xl mx-auto px-4 md:px-8 py-12 md:py-16">
     <div class="text-center mb-8">
       <p class="text-base text-secondary dark:text-blue-200 font-bold tracking-wide uppercase mb-2">
-        Session Recording
+        Session Recording — Part 1
       </p>
-      <h2 class="text-4xl md:text-5xl font-bold tracking-tighter font-heading">Watch the Session</h2>
+      <h2 class="text-4xl md:text-5xl font-bold tracking-tighter font-heading">First-Class Functions to setTimeout</h2>
       <p class="text-lg text-muted mt-4">
-        Edited highlights from the live JavaScript closures practice session at Masterschool.
+        Basic closures, DOM events, and fixing the classic setTimeout loop bug with closures and IIFEs.
       </p>
     </div>
     <div class="relative w-full rounded-lg shadow-lg overflow-hidden" style="padding-top: 56.25%;">
       <iframe
         class="absolute inset-0 w-full h-full"
         src="https://www.youtube.com/embed/W3NOCVTVrZM"
-        title="JavaScript Closures — Live Practice Session | Masterschool"
+        title="JavaScript Closures — Live Practice Session Part 1 | Masterschool"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+    </div>
+  </div>
+
+  <!-- Video Part 2 -->
+  <div class="max-w-4xl mx-auto px-4 md:px-8 pb-12 md:pb-16">
+    <div class="text-center mb-8">
+      <p class="text-base text-secondary dark:text-blue-200 font-bold tracking-wide uppercase mb-2">
+        Session Recording — Part 2
+      </p>
+      <h2 class="text-4xl md:text-5xl font-bold tracking-tighter font-heading">Hobby Tracker & Censor</h2>
+      <p class="text-lg text-muted mt-4">
+        Two advanced open gym problems — stateful cache objects and string replacement with stored closure pairs.
+      </p>
+    </div>
+    <div class="relative w-full rounded-lg shadow-lg overflow-hidden" style="padding-top: 56.25%;">
+      <iframe
+        class="absolute inset-0 w-full h-full"
+        src="https://www.youtube.com/embed/1rkITJKaYfA"
+        title="JavaScript Closures — Hobby Tracker & Censor | Masterschool Open Gym"
         frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowfullscreen></iframe>
@@ -223,8 +264,10 @@ const metadata = {
             'IIFE',
             'setTimeout',
             'DOM Events',
+            'Cache Objects',
+            'Object.keys()',
+            'String.replace()',
             'Live Coding',
-            'Q&A',
             'Masterschool',
             'Live Instruction',
             'Progressive Difficulty',
