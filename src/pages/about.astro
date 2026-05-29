@@ -123,12 +123,19 @@ const metadata = {
         </p>
       </div>
       <div>
-        <a href="/projects/mentoring-students-disabilities">
+        <a href="/projects/mentoring-students-disabilities" class="group relative block overflow-hidden rounded">
           <img
             src={P1.src}
             alt="Jonathan Root teaching online session"
-            class="w-full object-cover rounded hover:opacity-90 transition-opacity"
+            class="w-full object-cover rounded transition-opacity duration-300 group-hover:opacity-60"
           />
+          <div
+            class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+          >
+            <span class="bg-white text-gray-900 font-semibold text-sm px-4 py-2 rounded-full shadow-md"
+              >View Case Study</span
+            >
+          </div>
         </a>
       </div>
       <div class="relative w-full rounded-lg overflow-hidden shadow-md" style="padding-top: 56.25%;">
