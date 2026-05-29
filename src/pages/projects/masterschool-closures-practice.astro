@@ -1,0 +1,278 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Content from '~/components/widgets/Content.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'JavaScript Closures — One-on-One Practice Session | Masterschool',
+};
+---
+
+<Layout metadata={metadata}>
+  <Hero tagline="Live Instruction · JavaScript · Closures · Masterschool">
+    <Fragment slot="title">
+      JavaScript Closures —<br />
+      <span class="text-accent dark:text-white">One-on-One Practice Session</span>
+    </Fragment>
+    <Fragment slot="subtitle">
+      A one-on-one Masterschool session working through six JavaScript closure practice problems live — from the
+      simplest possible closure to a complex cache function with password gating, with a live debugging moment and a
+      discussion of real-world applications like game save states.
+    </Fragment>
+  </Hero>
+
+  <!-- Context -->
+  <Content tagline="The Session" title="Six problems. One student. Full depth." isReversed>
+    <Fragment slot="image">
+      <div class="flex items-center justify-center h-full py-12">
+        <div class="text-center">
+          <p class="text-8xl font-bold font-heading text-accent leading-none">6</p>
+          <p class="text-xl text-muted mt-3">closure practice problems</p>
+          <div class="mt-8 space-y-2 text-sm text-muted">
+            <p class="font-semibold text-gray-700 dark:text-gray-300">Masterschool Coding Bootcamp</p>
+            <p>JavaScript · Closures · One-on-One Tutoring</p>
+            <p>International cohort · Post-catchup week</p>
+          </div>
+        </div>
+      </div>
+    </Fragment>
+    <Fragment slot="content">
+      <p class="mb-4">
+        Post-catchup week sessions sometimes run light on attendance. This one was just Francisco. Rather than a
+        compressed group session, that meant a full one-on-one working through six closure practice problems from the
+        Udacity curriculum — at whatever pace made sense, with space to stop, debug, and go deeper on anything that
+        wasn't landing.
+      </p>
+      <p class="mb-4">
+        The problems were sequenced to build on each other: a function that returns "Hello World," a function that
+        returns a function with an argument, a counter using IIFE to demonstrate separate instances, a closure over an
+        addByX value, the complex saveOutput problem with a cache object and password gating, and finally deDup — which
+        hit a live debugging moment that turned into a useful teaching opportunity.
+      </p>
+      <p>
+        The session closed with a look at real-world applications — game save states, callback queues — and a preview of
+        OOP JavaScript coming up in the curriculum. The one-on-one format let the session go exactly as deep as the
+        student needed on each problem.
+      </p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 section-pattern-b"></div>
+    </Fragment>
+  </Content>
+
+  <!-- What I Covered -->
+  <Features3
+    tagline="The Content"
+    title="What the session covered"
+    subtitle="Six closure problems built live — from a single return statement to stateful caches, first-class functions, and duplicate detection."
+    columns={3}
+    items={[
+      {
+        title: 'createFunction',
+        description:
+          'Started with the simplest possible closure: a function that creates and returns another function that returns "Hello World." Built it from scratch, called it, logged the result. A minimal working example before adding any complexity.',
+        icon: 'tabler:box',
+      },
+      {
+        title: 'createFunctionWithInput',
+        description:
+          'Extended the first problem to capture an outer argument — the returned function closes over the input and returns it when called. Made lexical scope visible: the inner function retained access to the outer variable after the outer function returned.',
+        icon: 'tabler:variable',
+      },
+      {
+        title: 'Counter with IIFE',
+        description:
+          "Built a counter using an IIFE to demonstrate that each invocation creates its own independent closure. Created Will's counter and Jazz's counter as separate instances — incrementing one had no effect on the other, showing scope preservation in action.",
+        icon: 'tabler:123',
+      },
+      {
+        title: 'addByX',
+        description:
+          'A closure that closes over an X value and returns a function that adds X to any argument passed in. Two layers of input — one captured at creation, one passed at call time. Used to reinforce how closures hold onto outer scope across multiple calls.',
+        icon: 'tabler:math-function',
+      },
+      {
+        title: 'saveOutput',
+        description:
+          'The most complex problem in the set: a closure that wraps any function, stores its results in a cache object, and gates repeated calls behind a password. Demonstrated passing first-class functions as arguments and using an object to persist results across calls.',
+        icon: 'tabler:database',
+      },
+      {
+        title: 'deDup — Live Debugging',
+        description:
+          "Built a deDup function that removes duplicates from an array using an object as a tracker. Hit a live debugging moment when the output wasn't matching expectations — walked through the logic step by step until the issue was found and fixed.",
+        icon: 'tabler:bug',
+      },
+      {
+        title: 'Separate Closure Instances',
+        description:
+          "The counter example made a key concept concrete: calling the outer function twice produces two independent closures, each with its own internal state. Will's counter and Jazz's counter don't share anything — the closure owns its scope.",
+        icon: 'tabler:copy',
+      },
+      {
+        title: 'First-Class Functions as Arguments',
+        description:
+          'The saveOutput problem required passing a function as an argument to another function — reinforcing first-class functions in a stateful context. The outer function stored the passed-in function and called it when needed.',
+        icon: 'tabler:function',
+      },
+      {
+        title: 'Real-World Applications',
+        description:
+          'Closed with a discussion of where closures show up outside of practice problems: game save states that persist data between sessions, callback queues in async code, and encapsulated modules. Connected the abstract concept to things Francisco had already encountered.',
+        icon: 'tabler:world',
+      },
+    ]}
+  />
+
+  <!-- Approach -->
+  <Content tagline="The Approach" title="1:1 format with progressive problem difficulty">
+    <Fragment slot="image">
+      <div class="flex items-center justify-center h-full py-12 px-6">
+        <div class="w-full max-w-sm space-y-3">
+          {
+            [
+              { step: '01', label: 'Simplest Case First', detail: 'createFunction · one return · verify it works' },
+              { step: '02', label: 'Add Outer Scope', detail: 'createFunctionWithInput · capture an argument' },
+              { step: '03', label: 'Separate Instances', detail: 'Counter · IIFE · Will vs Jazz · independent state' },
+              { step: '04', label: 'Two Input Layers', detail: 'addByX · outer capture · inner argument' },
+              { step: '05', label: 'Complex State', detail: 'saveOutput · cache + password + first-class functions' },
+              { step: '06', label: 'Debug Live', detail: 'deDup · object tracker · find and fix the issue' },
+            ].map((item) => (
+              <div class="flex items-start gap-4 p-3 rounded-lg border border-gray-200 dark:border-gray-700">
+                <span class="text-accent font-bold font-heading text-lg leading-none">{item.step}</span>
+                <div>
+                  <p class="font-semibold text-sm text-gray-800 dark:text-gray-200">{item.label}</p>
+                  <p class="text-xs text-muted mt-0.5">{item.detail}</p>
+                </div>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </Fragment>
+    <Fragment slot="content">
+      <p class="mb-4">
+        One-on-one sessions allow for a different pacing than group open gym. With a single student, it's possible to
+        slow down on any problem that isn't clicking and move quickly through what's already solid — something that a
+        group format can't do without losing half the room. This session ran at Francisco's pace throughout.
+      </p>
+      <p class="mb-4">
+        The problem sequence was chosen deliberately. Each problem introduced one new idea on top of what came before:
+        first a return, then an argument, then multiple instances, then two input layers, then a cache object, then a
+        debug. None of the jumps were large enough to lose the thread, but each one extended the mental model further.
+      </p>
+      <p class="mb-4">
+        The live debugging moment in deDup was unplanned but useful. When code doesn't produce the expected output,
+        walking through the logic line by line — asking what should happen here, what's actually happening, where the
+        two diverge — is a more durable learning experience than just showing the working solution. Francisco found the
+        issue by tracing through it.
+      </p>
+      <p>
+        The session closed with real-world framing because abstract problems land better when they have concrete
+        analogues. Closures as game save states, closures as callback holders — those connections give students
+        somewhere to put the concept before they need it on the job.
+      </p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 section-pattern"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Video -->
+  <div class="max-w-4xl mx-auto px-4 md:px-8 py-12 md:py-16">
+    <div class="text-center mb-8">
+      <p class="text-base text-secondary dark:text-blue-200 font-bold tracking-wide uppercase mb-2">
+        Session Recording
+      </p>
+      <h2 class="text-4xl md:text-5xl font-bold tracking-tighter font-heading">Watch the Session</h2>
+      <p class="text-lg text-muted mt-4">
+        One-on-one closure practice working through six problems live, including a debugging moment on deDup.
+      </p>
+    </div>
+    <div class="relative w-full rounded-lg shadow-lg overflow-hidden" style="padding-top: 56.25%;">
+      <iframe
+        class="absolute inset-0 w-full h-full"
+        src="https://www.youtube.com/embed/6HfdLFqk1-w"
+        title="JavaScript Closures — One-on-One Practice Session | Masterschool"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+    </div>
+  </div>
+
+  <!-- Reflection -->
+  <Content tagline="Reflection" title="Debugging is part of the lesson" isReversed>
+    <Fragment slot="image">
+      <div class="flex items-center justify-center h-full py-12">
+        <div class="text-center">
+          <p class="text-8xl font-bold font-heading text-accent leading-none">1</p>
+          <p class="text-xl text-muted mt-3">student · full depth</p>
+          <div class="mt-8 space-y-1 text-sm text-muted">
+            <p class="font-semibold text-gray-700 dark:text-gray-300">
+              createFunction · createFunctionWithInput · Counter
+            </p>
+            <p>addByX · saveOutput · deDup</p>
+            <p>Live debug · real-world applications · OOP preview</p>
+          </div>
+        </div>
+      </div>
+    </Fragment>
+    <Fragment slot="content">
+      <p class="mb-4">
+        The deDup debugging moment is worth noting specifically because it's what happens in real development — code
+        runs, produces the wrong result, and you have to figure out why. Modeling the debugging process out loud, in
+        front of a student, is different from showing a working solution. It demonstrates that confusion is a normal
+        part of coding, not a signal that something is wrong.
+      </p>
+      <p class="mb-4">
+        The saveOutput problem is the most instructionally dense in the set. It requires three things at once: a closure
+        over a cache object, a first-class function passed as an argument, and password-gating logic. Walking through
+        each piece in isolation before assembling them made it tractable — and Francisco had enough context from the
+        earlier problems to follow each step.
+      </p>
+      <div class="mt-6 flex flex-wrap gap-2">
+        {
+          [
+            'JavaScript',
+            'Closures',
+            'First-Class Functions',
+            'Lexical Scope',
+            'IIFE',
+            'Cache Objects',
+            'createFunction',
+            'createFunctionWithInput',
+            'addByX',
+            'saveOutput',
+            'deDup',
+            'Live Debugging',
+            'One-on-One Tutoring',
+            'Masterschool',
+            'Progressive Difficulty',
+          ].map((tag) => (
+            <span class="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-sm font-medium px-3 py-1 rounded-full">
+              {tag}
+            </span>
+          ))
+        }
+      </div>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 section-pattern-b"></div>
+    </Fragment>
+  </Content>
+
+  <CallToAction
+    actions={[
+      { variant: 'primary', text: 'View All Projects', href: '/projects' },
+      { text: 'Get in Touch', href: '/about#contact' },
+    ]}
+  >
+    <Fragment slot="title">Interested in working together?</Fragment>
+    <Fragment slot="subtitle"
+      >I'm open to remote opportunities in technical learning experience design, developer education, and customer
+      enablement.</Fragment
+    >
+  </CallToAction>
+</Layout>
