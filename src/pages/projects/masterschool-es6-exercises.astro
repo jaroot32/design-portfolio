@@ -1,0 +1,283 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Content from '~/components/widgets/Content.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'ES6 Exercises — Destructuring, Ternary, and Defensive Programming | Masterschool',
+};
+---
+
+<Layout metadata={metadata}>
+  <Hero tagline="Live Instruction · JavaScript · ES6 · Masterschool">
+    <Fragment slot="title">
+      ES6 Exercises —<br />
+      <span class="text-accent dark:text-white">Destructuring, Ternary, and Defensive Programming</span>
+    </Fragment>
+    <Fragment slot="subtitle">
+      A live exercise session working through the core ES6 feature set — object and array destructuring, arrow function
+      shorthand, default parameters, rest and spread, the ternary operator, and the nullish coalescing operator — with
+      students presenting answers live and a React preview at the close.
+    </Fragment>
+  </Hero>
+
+  <!-- Context -->
+  <Content tagline="The Session" title="Exercises first, debrief together" isReversed>
+    <Fragment slot="image">
+      <div class="flex items-center justify-center h-full py-12">
+        <div class="text-center">
+          <p class="text-8xl font-bold font-heading text-accent leading-none">9</p>
+          <p class="text-xl text-muted mt-3">ES6 exercises debriefed live</p>
+          <div class="mt-8 space-y-2 text-sm text-muted">
+            <p class="font-semibold text-gray-700 dark:text-gray-300">Masterschool Coding Bootcamp</p>
+            <p>JavaScript · ES6 · Udacity Curriculum</p>
+            <p>International cohort · Open gym format</p>
+          </div>
+        </div>
+      </div>
+    </Fragment>
+    <Fragment slot="content">
+      <p class="mb-4">
+        Students came to this session having already worked through a set of ES6 exercises on their own. The open gym
+        format put the answers in their hands first — the debrief was a chance to compare, correct, and extend what
+        they'd built, not hear it for the first time.
+      </p>
+      <p class="mb-4">
+        The session moved through nine exercise types in sequence: object destructuring, arrow function shorthand,
+        destructuring assignment, nested object destructuring, array destructuring with rest, default function
+        parameters, spread with Math.max, object spread, and the ternary operator. The nullish coalescing operator came
+        up as a natural extension of the ternary discussion.
+      </p>
+      <p>
+        Throughout, students were called on to present their answers live — which surfaced real questions, including a
+        student's alternative approach to nested destructuring that turned into a live investigation. The session closed
+        with an introduction to Epic React and Kent C. Dodds, the next phase of the curriculum.
+      </p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 section-pattern-b"></div>
+    </Fragment>
+  </Content>
+
+  <!-- What I Covered -->
+  <Features3
+    tagline="The Content"
+    title="What the session covered"
+    subtitle="Nine ES6 exercises debriefed live — students presented answers, instructor added context and connected each concept to React."
+    columns={3}
+    items={[
+      {
+        title: 'Object Destructuring',
+        description:
+          'Framed destructuring as removing repetitive syntax — instead of writing user.name and user.age repeatedly, you extract the values once and work with them directly. Connected to readability: as React applications grow, less visual noise matters more.',
+        icon: 'tabler:braces',
+      },
+      {
+        title: 'Arrow Function Shorthand',
+        description:
+          "Covered removing the function keyword from method definitions — the parentheses and curly braces already signal that it's a function, so the keyword is redundant. Showed the before and after with a method that had no body, making the change concrete.",
+        icon: 'tabler:arrow-right',
+      },
+      {
+        title: 'Destructuring Assignment',
+        description:
+          'Demonstrated const { name, age } = user as the pattern for pulling properties directly out of an object. Showed the contrast: instead of user.name everywhere, destructure once on line three and use name directly throughout. Explicitly connected this to how props destructuring works in React.',
+        icon: 'tabler:package-export',
+      },
+      {
+        title: 'Nested Object Destructuring',
+        description:
+          "Worked through destructuring an object inside an object — pointing first to the outer key, then destructuring the inner object. A student proposed an alternative approach live, which turned into a real investigation: it was a valid technique, but the exact syntax wasn't resolving as expected, so it was flagged for the answer sheet.",
+        icon: 'tabler:layers-intersect',
+      },
+      {
+        title: 'Array Destructuring and Rest',
+        description:
+          'Showed array destructuring as the counterpart to object destructuring — const [a, b, c] = source gives you the first three elements by position, with any name you choose. Extended it with rest syntax to capture remaining elements, connecting it to the behavior of .slice() but with three dots instead.',
+        icon: 'tabler:list-numbers',
+      },
+      {
+        title: 'Default Function Parameters',
+        description:
+          'Used the increment function to show why defaults matter: without a default value for the second parameter, calling increment(5) produces NaN — a bug. Adding value = 1 as the default makes the function safe to call with or without an argument. Showed both the broken and working versions.',
+        icon: 'tabler:settings-2',
+      },
+      {
+        title: 'Spread with Math.max',
+        description:
+          'Demonstrated spreading an array into Math.max — which expects individual numbers, not an array. Showed that passing the array directly produces NaN, because Math.max reads the documentation contract: a set of numbers, not a data structure. The spread operator unpacks the array before the function sees it.',
+        icon: 'tabler:arrows-maximize',
+      },
+      {
+        title: 'Object Spread',
+        description:
+          'Covered merging two objects using spread syntax — { ...obj1, ...obj2 } — as an alternative to Object.assign. Live discovery moment: when both objects share a key, the second object wins and overwrites the first. Noted that students would see Object.assign again in the Udacity Redux curriculum.',
+        icon: 'tabler:circles-relation',
+      },
+      {
+        title: 'Ternary and Nullish Coalescing',
+        description:
+          'Converted an if/else block to a ternary live — emphasizing that the return is implicit in a ternary, unlike an if statement. Extended into the nullish coalescing operator (??): if a value is null or undefined, fall back to a default. Introduced the term "defensive programming" and connected it to API data that arrives incomplete or unformatted.',
+        icon: 'tabler:question-mark',
+      },
+    ]}
+  />
+
+  <!-- Approach -->
+  <Content tagline="The Approach" title="Students present, then instructor extends">
+    <Fragment slot="image">
+      <div class="flex items-center justify-center h-full py-12 px-6">
+        <div class="w-full max-w-sm space-y-3">
+          {
+            [
+              { step: '01', label: 'Exercises First', detail: 'Students work problems before the session starts' },
+              { step: '02', label: 'Present Live', detail: 'Students share answers · group confirms or corrects' },
+              { step: '03', label: 'Add Context', detail: 'Why the pattern exists · how it shows up in React' },
+              {
+                step: '04',
+                label: 'Investigate Live',
+                detail: 'Real questions get real answers — or go on the answer sheet',
+              },
+              { step: '05', label: 'React Preview', detail: 'Epic React intro · Kent C. Dodds · next week' },
+            ].map((item) => (
+              <div class="flex items-start gap-4 p-3 rounded-lg border border-gray-200 dark:border-gray-700">
+                <span class="text-accent font-bold font-heading text-lg leading-none">{item.step}</span>
+                <div>
+                  <p class="font-semibold text-sm text-gray-800 dark:text-gray-200">{item.label}</p>
+                  <p class="text-xs text-muted mt-0.5">{item.detail}</p>
+                </div>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </Fragment>
+    <Fragment slot="content">
+      <p class="mb-4">
+        The exercise-first format changes what the session is for. Students aren't receiving new information — they're
+        checking and extending what they already built. That shifts the dynamic: they come in with something to defend
+        or revise, which is a more active relationship with the material than passive listening.
+      </p>
+      <p class="mb-4">
+        The nested destructuring moment is worth noting. A student proposed an alternative approach — putting the inner
+        key directly inside the curly braces — and it didn't resolve the way they expected. Rather than moving past it,
+        the live investigation confirmed that the technique was valid but the specific syntax needed checking. Flagging
+        it for the answer sheet is the honest move: it keeps the session moving while promising a real resolution.
+      </p>
+      <p class="mb-4">
+        Connecting every concept to React was the throughline. Destructuring maps directly to props. Ternary operators
+        are how React handles conditional rendering inside JSX. Nullish coalescing shows up when API data comes back
+        incomplete. Students were a week away from starting React, so every ES6 pattern they understood was one less
+        thing to untangle later.
+      </p>
+      <p>
+        The NaN demo before introducing default parameters is a good example of the approach throughout: show the broken
+        version first so the fix has a reason to exist. A default parameter that prevents a bug lands differently than
+        one introduced as a feature in the abstract.
+      </p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 section-pattern"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Video -->
+  <div class="max-w-4xl mx-auto px-4 md:px-8 py-12 md:py-16">
+    <div class="text-center mb-8">
+      <p class="text-base text-secondary dark:text-blue-200 font-bold tracking-wide uppercase mb-2">
+        Session Recording
+      </p>
+      <h2 class="text-4xl md:text-5xl font-bold tracking-tighter font-heading">Watch the Session</h2>
+      <p class="text-lg text-muted mt-4">
+        Live ES6 exercise debrief — destructuring, ternary, defensive programming, and a React preview.
+      </p>
+    </div>
+    <div class="relative w-full rounded-lg shadow-lg overflow-hidden" style="padding-top: 56.25%;">
+      <iframe
+        class="absolute inset-0 w-full h-full"
+        src="https://www.youtube.com/embed/_hGk6atL7RQ"
+        title="ES6 Exercises — Destructuring, Ternary, and Defensive Programming | Masterschool"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+    </div>
+  </div>
+
+  <!-- Reflection -->
+  <Content tagline="Reflection" title="Show the bug before the fix" isReversed>
+    <Fragment slot="image">
+      <div class="flex items-center justify-center h-full py-12">
+        <div class="text-center">
+          <p class="text-8xl font-bold font-heading text-accent leading-none">9</p>
+          <p class="text-xl text-muted mt-3">exercises · one session</p>
+          <div class="mt-8 space-y-1 text-sm text-muted">
+            <p class="font-semibold text-gray-700 dark:text-gray-300">Destructuring · Rest · Spread</p>
+            <p>Ternary · Nullish Coalescing · Defaults</p>
+            <p>Student answers · live investigation · React preview</p>
+          </div>
+        </div>
+      </div>
+    </Fragment>
+    <Fragment slot="content">
+      <p class="mb-4">
+        The NaN output is one of the more useful things you can produce in a session on default parameters. It appears
+        specifically because something is missing — the function received undefined where it expected a number — and it
+        tells you exactly what kind of problem to solve. Triggering it on purpose, before adding the default, gives
+        students a real error to recognize rather than an abstract rule to memorize.
+      </p>
+      <p class="mb-4">
+        The object spread key collision discovery worked the same way. The merged object came back without the expected
+        value from the first object, which opened a real question: what happens when both objects share a key? That's
+        not a gotcha — it's the actual behavior, and finding it live is more durable than reading about it in docs.
+      </p>
+      <div class="mt-6 flex flex-wrap gap-2">
+        {
+          [
+            'JavaScript',
+            'ES6',
+            'Destructuring',
+            'Arrow Functions',
+            'Default Parameters',
+            'Rest Parameters',
+            'Spread Operator',
+            'Array Destructuring',
+            'Object Destructuring',
+            'Nested Destructuring',
+            'Ternary Operator',
+            'Nullish Coalescing',
+            'Defensive Programming',
+            'Object.assign',
+            'Math.max',
+            'NaN',
+            'React Preview',
+            'Epic React',
+            'Live Instruction',
+            'Masterschool',
+          ].map((tag) => (
+            <span class="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-sm font-medium px-3 py-1 rounded-full">
+              {tag}
+            </span>
+          ))
+        }
+      </div>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 section-pattern-b"></div>
+    </Fragment>
+  </Content>
+
+  <CallToAction
+    actions={[
+      { variant: 'primary', text: 'View All Projects', href: '/projects' },
+      { text: 'Get in Touch', href: '/about#contact' },
+    ]}
+  >
+    <Fragment slot="title">Interested in working together?</Fragment>
+    <Fragment slot="subtitle"
+      >I'm open to remote opportunities in technical learning experience design, developer education, and customer
+      enablement.</Fragment
+    >
+  </CallToAction>
+</Layout>
