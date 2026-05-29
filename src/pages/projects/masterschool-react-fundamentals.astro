@@ -1,0 +1,283 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Content from '~/components/widgets/Content.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'React Fundamentals Review — Virtual DOM, JSX, Props, and Component Design | Masterschool',
+};
+---
+
+<Layout metadata={metadata}>
+  <Hero tagline="Live Instruction · React · JavaScript · Masterschool">
+    <Fragment slot="title">
+      React Fundamentals Review —<br />
+      <span class="text-accent dark:text-white">Virtual DOM, JSX, Props, and Component Design</span>
+    </Fragment>
+    <Fragment slot="subtitle">
+      A review week session using breakout rooms and full-group debrief to cover core React concepts — virtual DOM,
+      composition, one-way data flow, JSX, Babel, and declarative vs imperative code, with fill-in-the-blank exercises
+      on props, conditional rendering, list keys, and className, and a live React 18 API discovery mid-session.
+    </Fragment>
+  </Hero>
+
+  <!-- Context -->
+  <Content tagline="The Session" title="Group work, then debrief" isReversed>
+    <Fragment slot="image">
+      <div class="flex items-center justify-center h-full py-12">
+        <div class="text-center">
+          <p class="text-8xl font-bold font-heading text-accent leading-none">7</p>
+          <p class="text-xl text-muted mt-3">core concepts reviewed</p>
+          <div class="mt-8 space-y-2 text-sm text-muted">
+            <p class="font-semibold text-gray-700 dark:text-gray-300">Masterschool Coding Bootcamp</p>
+            <p>React · JSX · Component Design · Udacity Curriculum</p>
+            <p>International cohort · Review week · Breakout rooms</p>
+          </div>
+        </div>
+      </div>
+    </Fragment>
+    <Fragment slot="content">
+      <p class="mb-4">
+        Review weeks work best when students do the thinking, not just receive more content. This session opened with
+        breakout rooms — students worked in groups on a set of concept questions covering the React fundamentals they'd
+        been introduced to, and then each group brought their answers back to the full session for debrief.
+      </p>
+      <p class="mb-4">
+        The debrief format meant students heard their peers' explanations first, which are often the most useful. When
+        Nico's group described the virtual DOM as a parallel copy of the DOM that React uses to compare and patch only
+        what changed, that framing was ready to build on — the GitHub diff analogy landed because the concept was
+        already in the room.
+      </p>
+      <p>
+        The second half of the session moved into fill-in-the-blank syntax exercises covering JSX, props, conditional
+        rendering, list keys, and className. A student flagged mid-session that ReactDOM.render had been deprecated in
+        React 18 — that turned into a live look at the updated API, a good reminder that staying current is part of the
+        job.
+      </p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 section-pattern-b"></div>
+    </Fragment>
+  </Content>
+
+  <!-- What I Covered -->
+  <Features3
+    tagline="The Content"
+    title="What the session covered"
+    subtitle="Seven core React concepts reviewed through student-led group work, full-group debrief, and syntax exercises."
+    columns={3}
+    items={[
+      {
+        title: 'Virtual DOM',
+        description:
+          "Students defined the virtual DOM as a parallel JavaScript copy of the real DOM that React uses to compare versions and patch only what changed — keeping the UI fast without re-rendering the entire browser. Expanded with the GitHub diff analogy and connected it to why React was built at Facebook's scale.",
+        icon: 'tabler:layers-difference',
+      },
+      {
+        title: 'Composition',
+        description:
+          'Covered composition as the pattern of building an application from small, reusable components — each with a single purpose — that get assembled together. Connected it to the practical value of building a personal component library that travels across projects and jobs.',
+        icon: 'tabler:puzzle',
+      },
+      {
+        title: 'Component-Based Design',
+        description:
+          "Defined components as modular, reusable pieces of UI — contrasting with the older model of separate HTML, CSS, and JavaScript files. Introduced the idea of 'thinking in React': designing the UI as a tree of components first, then building each one.",
+        icon: 'tabler:components',
+      },
+      {
+        title: 'Imperative vs Declarative',
+        description:
+          'Walked through the distinction between imperative code (step-by-step instructions — addEventListener, which function to run) and declarative code (tell the system what you want, let it handle the steps). Placed React, HTML, and CSS on the declarative side, and noted that JavaScript can be both depending on how you use it.',
+        icon: 'tabler:code',
+      },
+      {
+        title: 'One-Way Data Flow',
+        description:
+          "Dominic's group answered cleanly: data flows from parent to child via props, not the other direction. Connected it to the function/parameter analogy students already knew, contrasted it with Angular's two-way binding, and previewed 'lifting state up' and the Context API as the tools for sharing state across siblings.",
+        icon: 'tabler:arrow-down',
+      },
+      {
+        title: 'JSX and Babel',
+        description:
+          'Covered JSX as HTML-like syntax that lives inside JavaScript files — allowing components to return markup directly without separating concerns across files. Nico explained why Babel is necessary: JSX is not valid JavaScript that browsers can read, so Babel transpiles it. Babel ships bundled inside create-react-app.',
+        icon: 'tabler:brand-javascript',
+      },
+      {
+        title: 'Fill-in-the-Blank Exercises',
+        description:
+          'Worked through syntax exercises covering: ReactDOM.render, array destructuring with the comma-comma pattern to skip elements, React.createElement for rendering without JSX, curly braces for JavaScript expressions inside JSX, className instead of class, passing and accessing props, and the key prop in list rendering.',
+        icon: 'tabler:forms',
+      },
+      {
+        title: 'Conditional Rendering',
+        description:
+          'Covered short-circuit evaluation with && as the React pattern for conditional rendering — if the left side is falsy, the right side never evaluates and nothing renders. Used the isLoggedIn && Profile example to show how it maps to real UI logic without needing a full if/else.',
+        icon: 'tabler:git-branch',
+      },
+      {
+        title: 'React 18 API Discovery',
+        description:
+          'A student flagged mid-session that ReactDOM.render was showing a deprecation warning in React 18. Pulled up the React docs live and walked through the updated API — ReactDOM.createRoot(element).render() — noting that the docs themselves were still in the middle of being updated, a real example of how fast the ecosystem moves.',
+        icon: 'tabler:refresh',
+      },
+    ]}
+  />
+
+  <!-- Approach -->
+  <Content tagline="The Approach" title="Students present, then instructor contextualizes">
+    <Fragment slot="image">
+      <div class="flex items-center justify-center h-full py-12 px-6">
+        <div class="w-full max-w-sm space-y-3">
+          {
+            [
+              { step: '01', label: 'Breakout Rooms', detail: 'Groups work through concept questions · ~30 minutes' },
+              { step: '02', label: 'Full-Group Debrief', detail: 'Each group presents answers live' },
+              {
+                step: '03',
+                label: 'Add Context',
+                detail: 'Analogies · connections to prior content · what comes next',
+              },
+              { step: '04', label: 'Syntax Exercises', detail: 'Fill-in-the-blank · JSX · props · rendering · keys' },
+              { step: '05', label: 'Epic React Preview', detail: 'Friday setup session · Epic React onboarding' },
+            ].map((item) => (
+              <div class="flex items-start gap-4 p-3 rounded-lg border border-gray-200 dark:border-gray-700">
+                <span class="text-accent font-bold font-heading text-lg leading-none">{item.step}</span>
+                <div>
+                  <p class="font-semibold text-sm text-gray-800 dark:text-gray-200">{item.label}</p>
+                  <p class="text-xs text-muted mt-0.5">{item.detail}</p>
+                </div>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </Fragment>
+    <Fragment slot="content">
+      <p class="mb-4">
+        The breakout room format puts the cognitive work on students before the debrief begins. Rather than hearing a
+        definition and being asked to confirm it, students had to construct their own answers in groups first. That
+        process surfaces real gaps and produces better questions — by the time the full group came back together, the
+        concepts had already been wrestled with once.
+      </p>
+      <p class="mb-4">
+        The debrief structure kept things efficient: call on a group, let them present, then add what's missing or give
+        the concept somewhere further to go. When Dominic's group had the one-way data flow answer down cold, there was
+        no need to re-explain it — just connect it to what's coming next. Lifting state up, Context, sibling
+        communication — all of that has a cleaner landing when the foundation is already student-built.
+      </p>
+      <p class="mb-4">
+        The React 18 deprecation moment is worth noting as an instructional choice: rather than glossing over the
+        student's flag, pulling up the docs live and walking through the updated API modeled something important. The
+        ecosystem changes, the docs lag sometimes, and staying current is a skill in itself.
+      </p>
+      <p>
+        The session closed with a preview of Epic React — the next phase of the curriculum — and a Friday setup session
+        to get everyone onboarded before the first exercise. Ending with what comes next keeps the momentum going rather
+        than leaving students with just a review.
+      </p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 section-pattern"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Video -->
+  <div class="max-w-4xl mx-auto px-4 md:px-8 py-12 md:py-16">
+    <div class="text-center mb-8">
+      <p class="text-base text-secondary dark:text-blue-200 font-bold tracking-wide uppercase mb-2">
+        Session Recording
+      </p>
+      <h2 class="text-4xl md:text-5xl font-bold tracking-tighter font-heading">Watch the Session</h2>
+      <p class="text-lg text-muted mt-4">
+        Review week React fundamentals — breakout rooms, full-group debrief, and fill-in-the-blank syntax exercises.
+      </p>
+    </div>
+    <div class="relative w-full rounded-lg shadow-lg overflow-hidden" style="padding-top: 56.25%;">
+      <iframe
+        class="absolute inset-0 w-full h-full"
+        src="https://www.youtube.com/embed/FI98zQwzfZk"
+        title="React Fundamentals Review — Virtual DOM, JSX, Props, and Component Design | Masterschool"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+    </div>
+  </div>
+
+  <!-- Reflection -->
+  <Content tagline="Reflection" title="Let students answer first" isReversed>
+    <Fragment slot="image">
+      <div class="flex items-center justify-center h-full py-12">
+        <div class="text-center">
+          <p class="text-8xl font-bold font-heading text-accent leading-none">2</p>
+          <p class="text-xl text-muted mt-3">formats · one session</p>
+          <div class="mt-8 space-y-1 text-sm text-muted">
+            <p class="font-semibold text-gray-700 dark:text-gray-300">Breakout rooms · full-group debrief</p>
+            <p>Concept review · syntax exercises</p>
+            <p>Student-led answers · instructor context</p>
+          </div>
+        </div>
+      </div>
+    </Fragment>
+    <Fragment slot="content">
+      <p class="mb-4">
+        Review weeks are easy to run as re-lectures — the same content, delivered again, to students who already heard
+        it once. The breakout format avoids that by making students do the work before the debrief starts. The quality
+        of the answers that came back confirmed what was solid and pointed directly at what still needed reinforcement.
+      </p>
+      <p class="mb-4">
+        The fill-in-the-blank exercises in the second half of the session served a different purpose than the concept
+        questions. Knowing what JSX is conceptually and knowing that className replaces class in JSX syntax are two
+        different things. The exercises pushed students to recall specific syntax rather than general descriptions,
+        which is closer to what they'll actually be doing in the next project.
+      </p>
+      <div class="mt-6 flex flex-wrap gap-2">
+        {
+          [
+            'React',
+            'Virtual DOM',
+            'Composition',
+            'Component-Based Design',
+            'Imperative vs Declarative',
+            'One-Way Data Flow',
+            'JSX',
+            'Babel',
+            'Props',
+            'className',
+            'Conditional Rendering',
+            'Short-Circuit Evaluation',
+            'key Prop',
+            'React.createElement',
+            'React 18',
+            'createRoot',
+            'Lifting State Up',
+            'Breakout Rooms',
+            'Masterschool',
+          ].map((tag) => (
+            <span class="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-sm font-medium px-3 py-1 rounded-full">
+              {tag}
+            </span>
+          ))
+        }
+      </div>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 section-pattern-b"></div>
+    </Fragment>
+  </Content>
+
+  <CallToAction
+    actions={[
+      { variant: 'primary', text: 'View All Projects', href: '/projects' },
+      { text: 'Get in Touch', href: '/about#contact' },
+    ]}
+  >
+    <Fragment slot="title">Interested in working together?</Fragment>
+    <Fragment slot="subtitle"
+      >I'm open to remote opportunities in technical learning experience design, developer education, and customer
+      enablement.</Fragment
+    >
+  </CallToAction>
+</Layout>
