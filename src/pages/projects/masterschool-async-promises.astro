@@ -1,0 +1,285 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Content from '~/components/widgets/Content.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'JavaScript Async — Promises, .then/.catch, and Promise.all | Masterschool',
+};
+---
+
+<Layout metadata={metadata}>
+  <Hero tagline="Live Instruction · JavaScript · Async · Masterschool">
+    <Fragment slot="title">
+      JavaScript Async —<br />
+      <span class="text-accent dark:text-white">Promises, .then/.catch, and Promise.all</span>
+    </Fragment>
+    <Fragment slot="subtitle">
+      A live open gym session working through JavaScript async patterns — promise states, executor functions, handling
+      success and failure with .then and .catch, and running concurrent promises with Promise.all, with real-time
+      student Q&A and live code built around an inventory and clothing order system.
+    </Fragment>
+  </Hero>
+
+  <!-- Context -->
+  <Content tagline="The Session" title="Review before React" isReversed>
+    <Fragment slot="image">
+      <div class="flex items-center justify-center h-full py-12">
+        <div class="text-center">
+          <p class="text-8xl font-bold font-heading text-accent leading-none">3</p>
+          <p class="text-xl text-muted mt-3">async patterns covered</p>
+          <div class="mt-8 space-y-2 text-sm text-muted">
+            <p class="font-semibold text-gray-700 dark:text-gray-300">Masterschool Coding Bootcamp</p>
+            <p>JavaScript · Promises · Async/Await · Udacity Curriculum</p>
+            <p>International cohort · Open gym format</p>
+          </div>
+        </div>
+      </div>
+    </Fragment>
+    <Fragment slot="content">
+      <p class="mb-4">
+        This session landed at a transitional moment in the cohort — the UdaciRacer project was due the next day, a
+        review week was coming, and React was on the horizon. Most students were heads-down on the project, which left a
+        small group for the open gym. That made for a more conversational session, with students answering questions
+        live rather than just watching.
+      </p>
+      <p class="mb-4">
+        The session opened with a Q&A on promise fundamentals — students defined promises, named the three states, and
+        explained async/await syntax before anything was built. That grounding exercise confirmed what was solid and
+        surfaced the pieces that needed more context before moving into code.
+      </p>
+      <p>
+        From there the session built through three async patterns in sequence: writing an executor function, chaining
+        .then and .catch handlers, and running multiple concurrent promises with Promise.all. async/await was on deck as
+        a follow-up but ran out of time — students were pointed to the exercises to try on their own.
+      </p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 section-pattern-b"></div>
+    </Fragment>
+  </Content>
+
+  <!-- What I Covered -->
+  <Features3
+    tagline="The Content"
+    title="What the session covered"
+    subtitle="Promise fundamentals through Promise.all — built live with student answers driving the pace at each step."
+    columns={3}
+    items={[
+      {
+        title: 'Promise States',
+        description:
+          'Opened with a Q&A: students defined promises as objects representing the eventual outcome of an async operation, and named all three states — pending (waiting), fulfilled (resolved value received), and rejected (failed with a reason). Added the term "settled" for any promise no longer pending.',
+        icon: 'tabler:circle-check',
+      },
+      {
+        title: 'async/await Concept',
+        description:
+          'Students explained async/await as syntax that lets you write async code in a synchronous-looking style — the function waits for a promise to resolve before continuing. Confirmed that await can only be used inside an async function and connected it to why promise chaining existed before this syntax.',
+        icon: 'tabler:clock-pause',
+      },
+      {
+        title: 'Executor Function',
+        description:
+          'Built an executor function that takes resolve and reject as parameters, checks if inventory.shirt is greater than zero, and calls the appropriate handler with a string message. Showed how the executor gets passed into the Promise constructor and drives the promise outcome.',
+        icon: 'tabler:settings',
+      },
+      {
+        title: 'orderShirt Function',
+        description:
+          'Wrapped the executor in a function that returns new Promise(executor) — demonstrating how to encapsulate promise creation in a callable function. Logged the promise object directly to show the state and result properties updating from pending to fulfilled.',
+        icon: 'tabler:shopping-cart',
+      },
+      {
+        title: 'handleSuccess and handleFailure',
+        description:
+          'Built two separate handler functions — handleSuccess logs the resolved value, handleFailure logs the rejection reason. Separated them to make the .then/.catch pattern explicit before chaining them into the promise, keeping the logic readable and reusable.',
+        icon: 'tabler:arrows-split',
+      },
+      {
+        title: '.then/.catch Chaining',
+        description:
+          'Chained checkInventory(order).then(handleSuccess).catch(handleFailure) — demonstrating how the resolved value flows into the then callback and how a rejection is caught without crashing. Showed the unhandled promise rejection error that appears when catch is missing.',
+        icon: 'tabler:link',
+      },
+      {
+        title: 'setTimeout as Async Simulation',
+        description:
+          'Explained why the provided checkInventory function wraps its logic in setTimeout — to simulate a real async operation like a server request where the response time is unknown. Connected this to the reason JavaScript is non-blocking: synchronous code runs fully before async callbacks fire.',
+        icon: 'tabler:clock',
+      },
+      {
+        title: '.every() Array Method',
+        description:
+          'Introduced .every() in the context of checking whether all items in an order array are in stock. Explained that every element must pass the condition for it to return true, and contrasted it with .some(), where only one element needs to pass.',
+        icon: 'tabler:list-check',
+      },
+      {
+        title: 'Promise.all',
+        description:
+          'Covered Promise.all as the pattern for running multiple async operations concurrently — passing an array of promises and handling all results at once. Used a real-world example: loading a page from multiple sources (header, sidebar, footer) without waiting for each one to finish before starting the next.',
+        icon: 'tabler:stack',
+      },
+    ]}
+  />
+
+  <!-- Approach -->
+  <Content tagline="The Approach" title="Q&A first, then build in sequence">
+    <Fragment slot="image">
+      <div class="flex items-center justify-center h-full py-12 px-6">
+        <div class="w-full max-w-sm space-y-3">
+          {
+            [
+              { step: '01', label: 'Define the Concepts', detail: 'Promises · states · async/await · student Q&A' },
+              {
+                step: '02',
+                label: 'Build the Executor',
+                detail: 'resolve/reject · inventory check · Promise constructor',
+              },
+              {
+                step: '03',
+                label: 'Add Handlers',
+                detail: 'handleSuccess · handleFailure · log resolved/rejected value',
+              },
+              { step: '04', label: 'Chain It', detail: '.then · .catch · unhandled rejection error demo' },
+              { step: '05', label: 'Scale Up', detail: 'Promise.all · concurrent promises · random outcomes' },
+            ].map((item) => (
+              <div class="flex items-start gap-4 p-3 rounded-lg border border-gray-200 dark:border-gray-700">
+                <span class="text-accent font-bold font-heading text-lg leading-none">{item.step}</span>
+                <div>
+                  <p class="font-semibold text-sm text-gray-800 dark:text-gray-200">{item.label}</p>
+                  <p class="text-xs text-muted mt-0.5">{item.detail}</p>
+                </div>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </Fragment>
+    <Fragment slot="content">
+      <p class="mb-4">
+        Starting with student definitions rather than a lecture slides the session into a different mode — it becomes a
+        conversation about what students already know rather than content delivery. When a student explains pending as
+        "before the promise gives back the rejection or fulfillment," that's a correct answer that came from their own
+        understanding. Building on that is more durable than overwriting it with a definition.
+      </p>
+      <p class="mb-4">
+        The inventory and clothing order system was a good vehicle for this content because it maps naturally onto the
+        real-world shape of async code: you make a request (order a shirt), you don't know immediately whether it'll
+        succeed (is it in stock?), and you handle both outcomes. Students could follow the logic without needing to
+        understand the domain deeply.
+      </p>
+      <p class="mb-4">
+        Showing the unhandled promise rejection error before introducing catch was deliberate. Seeing the error message
+        — and understanding that it appears specifically because there's no catch — gives students a reason to care
+        about error handling rather than just adding it because the pattern requires it.
+      </p>
+      <p>
+        Promise.all closed the session with the concept that matters most in production: running multiple async
+        operations concurrently instead of waiting on each one sequentially. The page loading example — header, sidebar,
+        footer arriving from different servers — gave students a concrete picture of why this pattern exists.
+      </p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 section-pattern"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Video -->
+  <div class="max-w-4xl mx-auto px-4 md:px-8 py-12 md:py-16">
+    <div class="text-center mb-8">
+      <p class="text-base text-secondary dark:text-blue-200 font-bold tracking-wide uppercase mb-2">
+        Session Recording
+      </p>
+      <h2 class="text-4xl md:text-5xl font-bold tracking-tighter font-heading">Watch the Session</h2>
+      <p class="text-lg text-muted mt-4">
+        Live open gym covering promise states, executor functions, .then/.catch chaining, and Promise.all.
+      </p>
+    </div>
+    <div class="relative w-full rounded-lg shadow-lg overflow-hidden" style="padding-top: 56.25%;">
+      <iframe
+        class="absolute inset-0 w-full h-full"
+        src="https://www.youtube.com/embed/uhZFfKOt2Ko"
+        title="JavaScript Async — Promises, .then/.catch, and Promise.all | Masterschool"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+    </div>
+  </div>
+
+  <!-- Reflection -->
+  <Content tagline="Reflection" title="Show the error before the fix" isReversed>
+    <Fragment slot="image">
+      <div class="flex items-center justify-center h-full py-12">
+        <div class="text-center">
+          <p class="text-8xl font-bold font-heading text-accent leading-none">3</p>
+          <p class="text-xl text-muted mt-3">states · patterns · real-world uses</p>
+          <div class="mt-8 space-y-1 text-sm text-muted">
+            <p class="font-semibold text-gray-700 dark:text-gray-300">Pending · Fulfilled · Rejected</p>
+            <p>Executor · .then/.catch · Promise.all</p>
+            <p>Server requests · page loading · concurrent ops</p>
+          </div>
+        </div>
+      </div>
+    </Fragment>
+    <Fragment slot="content">
+      <p class="mb-4">
+        The unhandled promise rejection error is one of the more useful things you can show in a session on promises —
+        it appears specifically because something is missing, and it tells you exactly what. Triggering it on purpose,
+        before adding the catch block, gives students a real error to recognize rather than an abstract warning about
+        always handling rejections.
+      </p>
+      <p class="mb-4">
+        Promise.all is where async programming starts to feel powerful rather than just complicated. The page loading
+        example worked because students could picture it — every web page they've seen loads multiple pieces from
+        multiple places, and now they have a mental model for how that works without each piece blocking the next.
+      </p>
+      <div class="mt-6 flex flex-wrap gap-2">
+        {
+          [
+            'JavaScript',
+            'Async',
+            'Promises',
+            'Executor Function',
+            'Pending',
+            'Fulfilled',
+            'Rejected',
+            '.then()',
+            '.catch()',
+            'Promise.all',
+            'async/await',
+            'setTimeout',
+            '.every()',
+            'Math.random()',
+            'Error Handling',
+            'Concurrency',
+            'Live Instruction',
+            'Masterschool',
+          ].map((tag) => (
+            <span class="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-sm font-medium px-3 py-1 rounded-full">
+              {tag}
+            </span>
+          ))
+        }
+      </div>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 section-pattern-b"></div>
+    </Fragment>
+  </Content>
+
+  <CallToAction
+    actions={[
+      { variant: 'primary', text: 'View All Projects', href: '/projects' },
+      { text: 'Get in Touch', href: '/about#contact' },
+    ]}
+  >
+    <Fragment slot="title">Interested in working together?</Fragment>
+    <Fragment slot="subtitle"
+      >I'm open to remote opportunities in technical learning experience design, developer education, and customer
+      enablement.</Fragment
+    >
+  </CallToAction>
+</Layout>
