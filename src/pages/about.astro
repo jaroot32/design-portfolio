@@ -138,15 +138,26 @@ const metadata = {
           </div>
         </a>
       </div>
-      <div class="relative w-full rounded-lg overflow-hidden shadow-md" style="padding-top: 56.25%;">
+      <a
+        href="/projects/javascript-xapi-elearning"
+        class="group relative block w-full rounded-lg overflow-hidden shadow-md"
+        style="padding-top: 56.25%;"
+      >
         <iframe
-          class="absolute inset-0 w-full h-full"
+          class="absolute inset-0 w-full h-full pointer-events-none"
           src="https://www.youtube.com/embed/N9855IeKoK4"
           title="Learn JavaScript and xAPI for eLearning"
           frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen></iframe>
-      </div>
+        <div
+          class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+        >
+          <span class="bg-white text-gray-900 font-semibold text-sm px-4 py-2 rounded-full shadow-md"
+            >View Case Study</span
+          >
+        </div>
+      </a>
       <div>
         <a href="/projects/chegg-technical-expert" class="group relative block overflow-hidden rounded">
           <img
