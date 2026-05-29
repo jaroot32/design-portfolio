@@ -1,0 +1,261 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Content from '~/components/widgets/Content.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'ES6 Features Open Gym | Masterschool',
+};
+---
+
+<Layout metadata={metadata}>
+  <Hero tagline="Live Instruction · JavaScript · ES6 · Masterschool">
+    <Fragment slot="title">
+      ES6 Features —<br />
+      <span class="text-accent dark:text-white">Open Gym Session</span>
+    </Fragment>
+    <Fragment slot="subtitle">
+      A live open gym session covering the core ES6 feature set: destructuring, spread, rest parameters, for...of loops,
+      arrow functions, default parameters, and template literals with live coding and real-time student Q&A.
+    </Fragment>
+  </Hero>
+
+  <!-- Context -->
+  <Content tagline="The Session" title="Review, extend, and apply" isReversed>
+    <Fragment slot="image">
+      <div class="flex items-center justify-center h-full py-12">
+        <div class="text-center">
+          <p class="text-8xl font-bold font-heading text-accent leading-none">7</p>
+          <p class="text-xl text-muted mt-3">ES6 features · one session</p>
+          <div class="mt-8 space-y-2 text-sm text-muted">
+            <p class="font-semibold text-gray-700 dark:text-gray-300">Masterschool Coding Bootcamp</p>
+            <p>JavaScript · ES6 · Udacity Curriculum</p>
+            <p>International cohort · Open gym format</p>
+          </div>
+        </div>
+      </div>
+    </Fragment>
+    <Fragment slot="content">
+      <p class="mb-4">
+        ES6 introduced a set of syntax improvements that all aim at the same problem: less repetition and cleaner access
+        to data. Destructuring, spread, and rest parameters are the core of that — three features that look different on
+        the surface but share the same goal. This session was built around making that connection visible, rather than
+        presenting each feature in isolation.
+      </p>
+      <p class="mb-4">
+        The session ran as an open gym — structured enough to cover the material, flexible enough to follow student
+        questions. I started with a quick review for students who had attended the morning session, then extended into
+        new territory: rest parameters, additional spread patterns, object destructuring inside function parameters, and
+        template literals. Students asked questions and contributed answers throughout, including a type coercion
+        discussion that turned into a live demo.
+      </p>
+      <p>
+        A NaN bug surfaced during the object destructuring demo — a missing property in the stats object — and rather
+        than cutting away, I worked through it live: reading the output, forming a hypothesis, testing the fix. That
+        kind of real-time debugging is exactly what students need to see alongside clean examples.
+      </p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 section-pattern-b"></div>
+    </Fragment>
+  </Content>
+
+  <!-- What I Covered -->
+  <Features3
+    tagline="The Content"
+    title="What the session covered"
+    subtitle="Seven ES6 features across array and object manipulation, function syntax, and string formatting — taught live with student participation."
+    columns={3}
+    items={[
+      {
+        title: 'Array Destructuring',
+        description:
+          'Demonstrated how to pull values out of an array using destructuring assignment — assigning x, y, z from a point array in one line instead of using bracket notation three times. Showed how extra commas skip elements to target specific positions.',
+        icon: 'tabler:brackets',
+      },
+      {
+        title: 'Object Destructuring',
+        description:
+          'Walked through destructuring an object to extract named properties without dot notation — pulling type, color, and carat from a gemstone object in one assignment. Extended the pattern to show destructuring directly inside a function parameter list.',
+        icon: 'tabler:braces',
+      },
+      {
+        title: 'Spread Operator — Combining Arrays',
+        description:
+          'Showed how to use the spread operator to combine two arrays into a new one without mutating the originals — a pattern that shows up frequently in functional programming and React state management. Contrasted with the + operator, which coerces arrays to strings.',
+        icon: 'tabler:arrows-split-2',
+      },
+      {
+        title: 'Spread Operator — Function Arguments',
+        description:
+          'Demonstrated spreading an array into individual function arguments — using Math.max(...values) to find the maximum in an array rather than passing each element manually. Connected the pattern to how JavaScript treats function arguments.',
+        icon: 'tabler:function',
+      },
+      {
+        title: 'Rest Parameters',
+        description:
+          'Introduced the rest parameter syntax for capturing any number of arguments into a single array inside a function. Live coded a sum function with students — initializing a total variable, iterating with for...of, and returning the result.',
+        icon: 'tabler:dots',
+      },
+      {
+        title: 'Arrow Functions and for...of Loops',
+        description:
+          'Reviewed the arrow function syntax — removing the function keyword and adding => after the parameter list — alongside the for...of loop as a cleaner alternative to traditional for loops when iterating over arrays.',
+        icon: 'tabler:arrow-right',
+      },
+      {
+        title: 'Default Parameters and Template Literals',
+        description:
+          'Covered two patterns for default parameters: inline defaults in the function signature, and using the || operator inside the function body. Closed with template literals — backticks, multi-line strings, and embedded expressions without string concatenation.',
+        icon: 'tabler:text-size',
+      },
+    ]}
+  />
+
+  <!-- Approach -->
+  <Content tagline="The Approach" title="Open gym with structured depth">
+    <Fragment slot="image">
+      <div class="flex items-center justify-center h-full py-12 px-6">
+        <div class="w-full max-w-sm space-y-3">
+          {
+            [
+              { step: '01', label: 'Quick Review', detail: 'Recap for returning students · orient new arrivals' },
+              { step: '02', label: 'Core Concepts', detail: 'Destructuring · spread · rest · for...of · arrows' },
+              { step: '03', label: 'Student Problems', detail: 'Live sum() function built with student input' },
+              { step: '04', label: 'Live Debugging', detail: 'NaN bug · read output · form hypothesis · fix' },
+              { step: '05', label: 'Q&A Throughout', detail: 'Type coercion · join() · array + operator demo' },
+            ].map((item) => (
+              <div class="flex items-start gap-4 p-3 rounded-lg border border-gray-200 dark:border-gray-700">
+                <span class="text-accent font-bold font-heading text-lg leading-none">{item.step}</span>
+                <div>
+                  <p class="font-semibold text-sm text-gray-800 dark:text-gray-200">{item.label}</p>
+                  <p class="text-xs text-muted mt-0.5">{item.detail}</p>
+                </div>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </Fragment>
+    <Fragment slot="content">
+      <p class="mb-4">
+        Open gym sessions have to work for students at different stages. Some had been in the morning session; some were
+        seeing this material for the first time. Starting with a brief review let returning students consolidate what
+        they had already seen while giving new arrivals enough context to follow along. From there, the session moved
+        forward into territory the morning session hadn't covered.
+      </p>
+      <p class="mb-4">
+        The live sum() problem was built with student input — one student suggested initializing a total variable at
+        zero, another suggested the for...of loop, another filled in the accumulation step. Coding exactly what students
+        said, rather than leading them to a pre-written answer, keeps the session collaborative and makes the solution
+        feel earned.
+      </p>
+      <p class="mb-4">
+        The type coercion moment — when a student asked whether you could concatenate two arrays with the + operator —
+        was unplanned but useful. We tried it live, saw that it coerced the arrays to strings instead of combining them,
+        and used that to reinforce why the spread operator exists. Real questions produce better teaching moments than
+        prepared examples because they reflect what students are actually confused about.
+      </p>
+      <p>
+        The session closed with a preview of the next day's topic — ES6 applied to functions — and a reminder that the
+        recording and code snippet would be posted for anyone who missed it.
+      </p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 section-pattern"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Video -->
+  <div class="max-w-4xl mx-auto px-4 md:px-8 py-12 md:py-16">
+    <div class="text-center mb-8">
+      <p class="text-base text-secondary dark:text-blue-200 font-bold tracking-wide uppercase mb-2">
+        Session Recording
+      </p>
+      <h2 class="text-4xl md:text-5xl font-bold tracking-tighter font-heading">Watch the Session</h2>
+      <p class="text-lg text-muted mt-4">Live open gym session covering ES6 features with Masterschool students.</p>
+    </div>
+    <div class="relative w-full rounded-lg shadow-lg overflow-hidden" style="padding-top: 56.25%;">
+      <iframe
+        class="absolute inset-0 w-full h-full"
+        src="https://www.youtube.com/embed/sFO2gZUbURI"
+        title="ES6 Features Open Gym | Masterschool"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+    </div>
+  </div>
+
+  <!-- Reflection -->
+  <Content tagline="Reflection" title="ES6 as a cluster, not a list" isReversed>
+    <Fragment slot="image">
+      <div class="flex items-center justify-center h-full py-12">
+        <div class="text-center">
+          <p class="text-8xl font-bold font-heading text-accent leading-none">3</p>
+          <p class="text-xl text-muted mt-3">patterns · one goal</p>
+          <div class="mt-8 space-y-1 text-sm text-muted">
+            <p class="font-semibold text-gray-700 dark:text-gray-300">Destructure · Spread · Rest</p>
+            <p>Less repetition · cleaner data access</p>
+            <p>Arrays · objects · function parameters</p>
+          </div>
+        </div>
+      </div>
+    </Fragment>
+    <Fragment slot="content">
+      <p class="mb-4">
+        The risk with teaching ES6 as a feature list is that students walk away with seven disconnected syntax patterns
+        instead of one coherent idea. Destructuring, spread, and rest parameters all solve the same problem — getting
+        data in and out of arrays and objects with less repetition — and making that explicit changes how students
+        remember and apply them.
+      </p>
+      <p class="mb-4">
+        The live debugging moment reinforced something that's easy to forget when sessions are over-prepared: students
+        learn as much from watching you read an error and work through it as they do from watching you write correct
+        code. The NaN bug wasn't planned, but it demonstrated exactly the kind of iterative troubleshooting that
+        professional development actually looks like.
+      </p>
+      <div class="mt-6 flex flex-wrap gap-2">
+        {
+          [
+            'JavaScript',
+            'ES6',
+            'Destructuring',
+            'Spread Operator',
+            'Rest Parameters',
+            'Arrow Functions',
+            'for...of Loops',
+            'Default Parameters',
+            'Template Literals',
+            'Type Coercion',
+            'Live Coding',
+            'Live Debugging',
+            'Masterschool',
+            'Open Gym',
+          ].map((tag) => (
+            <span class="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-sm font-medium px-3 py-1 rounded-full">
+              {tag}
+            </span>
+          ))
+        }
+      </div>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 section-pattern-b"></div>
+    </Fragment>
+  </Content>
+
+  <CallToAction
+    actions={[
+      { variant: 'primary', text: 'View All Projects', href: '/projects' },
+      { text: 'Get in Touch', href: '/about#contact' },
+    ]}
+  >
+    <Fragment slot="title">Interested in working together?</Fragment>
+    <Fragment slot="subtitle"
+      >I'm open to remote opportunities in technical learning experience design, developer education, and customer
+      enablement.</Fragment
+    >
+  </CallToAction>
+</Layout>
