@@ -1,0 +1,279 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Content from '~/components/widgets/Content.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'JavaScript Brain Teasers — Catchup Week Open Gym | Masterschool',
+};
+---
+
+<Layout metadata={metadata}>
+  <Hero tagline="Live Instruction · JavaScript · Problem Solving · Masterschool">
+    <Fragment slot="title">
+      JavaScript Brain Teasers —<br />
+      <span class="text-accent dark:text-white">Catchup Week Open Gym</span>
+    </Fragment>
+    <Fragment slot="subtitle">
+      A live open gym session during a catchup week covering JavaScript prototypes in response to a student question,
+      then working through two interview-style brain teasers live: a vowel frequency counter and a total uppercase
+      letter counter, with full student participation throughout.
+    </Fragment>
+  </Hero>
+
+  <!-- Context -->
+  <Content tagline="The Session" title="Student questions first, then brain teasers" isReversed>
+    <Fragment slot="image">
+      <div class="flex items-center justify-center h-full py-12">
+        <div class="text-center">
+          <p class="text-8xl font-bold font-heading text-accent leading-none">2</p>
+          <p class="text-xl text-muted mt-3">interview-style brain teasers</p>
+          <div class="mt-8 space-y-2 text-sm text-muted">
+            <p class="font-semibold text-gray-700 dark:text-gray-300">Masterschool Coding Bootcamp</p>
+            <p>JavaScript · Problem Solving · Udacity Curriculum</p>
+            <p>International cohort · Catchup week format</p>
+          </div>
+        </div>
+      </div>
+    </Fragment>
+    <Fragment slot="content">
+      <p class="mb-4">
+        Catchup weeks exist for a reason — students move through a bootcamp curriculum at different speeds, and a
+        structured pause gives everyone a chance to consolidate what they've learned before moving forward. This session
+        ran as a true open gym: no new material pushed, just space for questions, project help, and practice.
+      </p>
+      <p class="mb-4">
+        The session opened with a student question about JavaScript prototypes — something that had come up in a
+        previous session without landing clearly. Rather than redirecting to the curriculum, I walked through it live,
+        using the browser console to show the console object itself and how methods like .log are just functions on that
+        prototype. That kind of organic Q&A often produces cleaner explanations than planned content.
+      </p>
+      <p>
+        With no other project questions coming in, I moved into two interview-style brain teasers — a vowel frequency
+        counter and a total uppercase letter counter — both built live with student input. The problems were chosen to
+        put JavaScript basics together in one place: functions, loops, objects, strings, and conditionals, without
+        introducing anything new.
+      </p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 section-pattern-b"></div>
+    </Fragment>
+  </Content>
+
+  <!-- What I Covered -->
+  <Features3
+    tagline="The Content"
+    title="What the session covered"
+    subtitle="Prototypes, two brain teasers, and interview prep framing — all built live with student participation."
+    columns={3}
+    items={[
+      {
+        title: 'JavaScript Prototypes',
+        description:
+          "Explained how JavaScript's underlying API is built on prototypes — that strings, arrays, and functions are all objects at their core, each with built-in properties and methods. Connected the concept to why dot notation works: you're accessing properties on that object's prototype.",
+        icon: 'tabler:link',
+      },
+      {
+        title: 'Properties vs Methods',
+        description:
+          'Clarified the distinction between a property (a value stored on an object, like .length) and a method (a function stored on an object, like .push or .log). Demonstrated live by typing console into the browser console and inspecting the returned object.',
+        icon: 'tabler:code',
+      },
+      {
+        title: 'Vowel Frequency Counter — Setup',
+        description:
+          'Introduced the first brain teaser: given a string like "hello", return a formatted string showing how many times each vowel appears. Walked through the function shell with students — naming the parameter, setting up the call, and identifying what the function needs to return.',
+        icon: 'tabler:letter-a',
+      },
+      {
+        title: 'Object as a Counter',
+        description:
+          "Built an empty object to track vowel frequency — demonstrating the pattern of using an object's keys as variable names and its values as counts. Showed how to check if a key already exists in the object and either initialize it to 1 or increment it.",
+        icon: 'tabler:braces',
+      },
+      {
+        title: 'Nested Loops and String Comparison',
+        description:
+          'Used an outer loop to move through each character in the input string and an inner loop to check it against each vowel in a reference string — building the logic piece by piece with student suggestions at each step. Traced the execution for the word "hello" live.',
+        icon: 'tabler:repeat',
+      },
+      {
+        title: 'Total Caps — toLowerCase Detection',
+        description:
+          'Introduced the second brain teaser: count total uppercase letters across an array of strings. Key technique: arr[i][j].toLowerCase() !== arr[i][j] — if converting a character to lowercase changes it, the original must have been uppercase. Nested loops with a running count.',
+        icon: 'tabler:letter-case',
+      },
+      {
+        title: 'Building Output with Template Literals',
+        description:
+          'After building the vowel frequency object, used a for...in loop to format the result — iterating over each key, using template literals with += to build the output string incrementally. Demonstrated the pattern of starting with an empty string and accumulating into it.',
+        icon: 'tabler:text-wrap',
+      },
+      {
+        title: 'Interview Prep Framing',
+        description:
+          'Framed both problems the way a technical interview would — asking clarifying questions before writing code (is the input always lowercase?), presenting a working solution first, and then discussing how to make it more efficient. Mentioned refactoring with forEach and map as a next step.',
+        icon: 'tabler:briefcase',
+      },
+      {
+        title: 'Pair Programming Introduction',
+        description:
+          'Closed with a note on pair programming — explaining the driver/navigator model and pointing out that the session had already followed that format, with students suggesting code in chat while I drove. Mentioned bringing activities to future open gyms as a shared responsibility.',
+        icon: 'tabler:users',
+      },
+    ]}
+  />
+
+  <!-- Approach -->
+  <Content tagline="The Approach" title="Student-driven agenda with prepared backup">
+    <Fragment slot="image">
+      <div class="flex items-center justify-center h-full py-12 px-6">
+        <div class="w-full max-w-sm space-y-3">
+          {
+            [
+              { step: '01', label: 'Open Floor First', detail: 'Project questions · any concepts still unclear' },
+              { step: '02', label: 'Prototype Deep Dive', detail: 'Student question · live browser console demo' },
+              { step: '03', label: 'Brain Teaser 1', detail: 'Vowel Frequency Counter · full live build' },
+              { step: '04', label: 'Brain Teaser 2', detail: 'Total Caps · nested loops · toLowerCase technique' },
+              { step: '05', label: 'Interview Framing', detail: 'Clarify inputs · working solution · optimize' },
+            ].map((item) => (
+              <div class="flex items-start gap-4 p-3 rounded-lg border border-gray-200 dark:border-gray-700">
+                <span class="text-accent font-bold font-heading text-lg leading-none">{item.step}</span>
+                <div>
+                  <p class="font-semibold text-sm text-gray-800 dark:text-gray-200">{item.label}</p>
+                  <p class="text-xs text-muted mt-0.5">{item.detail}</p>
+                </div>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </Fragment>
+    <Fragment slot="content">
+      <p class="mb-4">
+        Catchup weeks are easy to let slide into unstructured time. The approach here was to hold space for genuine
+        student questions first — sharing screen, asking in chat, unmuting — and only move to prepared content if
+        nothing came up. When the prototype question surfaced, that became the session opener. It was a better
+        explanation than anything I had planned because the student had a specific gap that needed addressing.
+      </p>
+      <p class="mb-4">
+        The two brain teasers were chosen deliberately — not as new material, but as integration problems. Both problems
+        required the same set of tools students had already seen: functions, loops, objects, strings, and conditionals.
+        The goal wasn't to teach anything new but to put what they already knew into a context that felt like a real
+        problem.
+      </p>
+      <p class="mb-4">
+        The interview framing around both problems — ask clarifying questions before you write code, get to a working
+        solution, then talk about how to improve it — is something students rarely get exposure to before they need it.
+        Embedding that framing into an open gym problem is lower stakes than a mock interview but starts building the
+        habit.
+      </p>
+      <p>
+        One student suggested using ASCII codes to detect uppercase letters — an approach that works and shows real
+        depth of thinking. Acknowledging that kind of contribution publicly, and connecting it to how the sort function
+        likely works under the hood, rewards the kind of curiosity that makes strong developers.
+      </p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 section-pattern"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Video -->
+  <div class="max-w-4xl mx-auto px-4 md:px-8 py-12 md:py-16">
+    <div class="text-center mb-8">
+      <p class="text-base text-secondary dark:text-blue-200 font-bold tracking-wide uppercase mb-2">
+        Session Recording
+      </p>
+      <h2 class="text-4xl md:text-5xl font-bold tracking-tighter font-heading">Watch the Session</h2>
+      <p class="text-lg text-muted mt-4">
+        Live catchup week open gym covering JavaScript prototypes and two interview-style brain teasers.
+      </p>
+    </div>
+    <div class="relative w-full rounded-lg shadow-lg overflow-hidden" style="padding-top: 56.25%;">
+      <iframe
+        class="absolute inset-0 w-full h-full"
+        src="https://www.youtube.com/embed/16YA2ctY1LQ"
+        title="JavaScript Brain Teasers — Catchup Week Open Gym | Masterschool"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+    </div>
+  </div>
+
+  <!-- Reflection -->
+  <Content tagline="Reflection" title="Integration problems over isolated drills" isReversed>
+    <Fragment slot="image">
+      <div class="flex items-center justify-center h-full py-12">
+        <div class="text-center">
+          <p class="text-8xl font-bold font-heading text-accent leading-none">5</p>
+          <p class="text-xl text-muted mt-3">concepts · two problems</p>
+          <div class="mt-8 space-y-1 text-sm text-muted">
+            <p class="font-semibold text-gray-700 dark:text-gray-300">
+              Functions · Loops · Objects · Strings · Conditionals
+            </p>
+            <p>Vowel frequency · uppercase detection</p>
+            <p>Interview framing · clarify · solve · optimize</p>
+          </div>
+        </div>
+      </div>
+    </Fragment>
+    <Fragment slot="content">
+      <p class="mb-4">
+        The most useful thing about these brain teasers is that they don't introduce anything new — they require
+        students to combine what they already know. That's a different cognitive demand than learning a new concept, and
+        it's closer to what real development actually looks like. Most problems on the job aren't about knowing an
+        obscure API; they're about assembling familiar tools in the right sequence.
+      </p>
+      <p class="mb-4">
+        The prototype explanation that opened the session is a good example of why organic Q&A produces better teaching
+        moments than prepared content. The student had a specific gap — they'd heard the word but didn't have a mental
+        model for it. Showing the console object in the browser, pointing at the methods listed there, and saying "these
+        are all just functions on the prototype" gave the concept somewhere concrete to land.
+      </p>
+      <div class="mt-6 flex flex-wrap gap-2">
+        {
+          [
+            'JavaScript',
+            'Prototypes',
+            'Brain Teasers',
+            'Vowel Frequency Counter',
+            'Total Caps',
+            'Nested Loops',
+            'Objects as Counters',
+            'String Methods',
+            'toLowerCase',
+            'Template Literals',
+            'for...in Loop',
+            'Interview Prep',
+            'Pair Programming',
+            'Masterschool',
+            'Open Gym',
+          ].map((tag) => (
+            <span class="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-sm font-medium px-3 py-1 rounded-full">
+              {tag}
+            </span>
+          ))
+        }
+      </div>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 section-pattern-b"></div>
+    </Fragment>
+  </Content>
+
+  <CallToAction
+    actions={[
+      { variant: 'primary', text: 'View All Projects', href: '/projects' },
+      { text: 'Get in Touch', href: '/about#contact' },
+    ]}
+  >
+    <Fragment slot="title">Interested in working together?</Fragment>
+    <Fragment slot="subtitle"
+      >I'm open to remote opportunities in technical learning experience design, developer education, and customer
+      enablement.</Fragment
+    >
+  </CallToAction>
+</Layout>
