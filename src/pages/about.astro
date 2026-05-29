@@ -148,7 +148,20 @@ const metadata = {
           allowfullscreen></iframe>
       </div>
       <div>
-        <img src={P3.src} alt="Jonathan Root teaching online session" class="w-full object-cover rounded" />
+        <a href="/projects/chegg-technical-expert" class="group relative block overflow-hidden rounded">
+          <img
+            src={P3.src}
+            alt="Jonathan Root teaching online session"
+            class="w-full object-cover rounded transition-opacity duration-300 group-hover:opacity-60"
+          />
+          <div
+            class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+          >
+            <span class="bg-white text-gray-900 font-semibold text-sm px-4 py-2 rounded-full shadow-md"
+              >View Case Study</span
+            >
+          </div>
+        </a>
       </div>
     </div>
   </div>
