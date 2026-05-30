@@ -32,28 +32,64 @@ const {
         containerClass
       )}
     >
-      {items.map(({ title, description, icon, callToAction, classes: itemClasses = {} }) => (
-        <div
-          class={twMerge(
-            'relative flex flex-col intersect-once intersect-quarter intersect-no-queue motion-safe:md:opacity-0 motion-safe:md:intersect:animate-fade',
-            panelClass,
-            itemClasses?.panel
-          )}
-        >
-          {(icon || defaultIcon) && (
-            <Icon name={icon || defaultIcon} class={twMerge('mb-2 w-10 h-10', defaultIconClass, itemClasses?.icon)} />
-          )}
-          <div class={twMerge('text-xl font-bold', titleClass, itemClasses?.title)}>{title}</div>
-          {description && (
-            <p class={twMerge('text-muted mt-2', descriptionClass, itemClasses?.description)} set:html={description} />
-          )}
-          {callToAction && (
-            <div class="mt-2">
-              <Button {...callToAction} />
+      {items.map(({ title, description, icon, callToAction, classes: itemClasses = {} }) => {
+        const href = callToAction?.href;
+        const Tag = href ? 'a' : 'div';
+        return (
+          <Tag
+            href={href}
+            class={twMerge(
+              'group relative flex flex-col intersect-once intersect-quarter intersect-no-queue motion-safe:md:opacity-0 motion-safe:md:intersect:animate-fade',
+              href
+                ? 'rounded-xl border border-gray-200 dark:border-gray-700 p-5 hover:border-accent dark:hover:border-accent hover:shadow-md transition-all duration-200 cursor-pointer'
+                : '',
+              panelClass,
+              itemClasses?.panel
+            )}
+          >
+            {(icon || defaultIcon) && (
+              <Icon name={icon || defaultIcon} class={twMerge('mb-2 w-10 h-10', defaultIconClass, itemClasses?.icon)} />
+            )}
+            <div
+              class={twMerge(
+                'text-xl font-bold group-hover:text-accent transition-colors duration-200',
+                titleClass,
+                itemClasses?.title
+              )}
+            >
+              {title}
             </div>
-          )}
-        </div>
-      ))}
+            {description && (
+              <p
+                class={twMerge('text-muted mt-2', descriptionClass, itemClasses?.description)}
+                set:html={description}
+              />
+            )}
+            {callToAction && (
+              <div class="mt-2">
+                {href ? (
+                  <span class="inline-flex items-center gap-1 text-sm font-medium text-accent">
+                    {callToAction.text}
+                    <svg
+                      class="w-3.5 h-3.5 transition-transform duration-200 group-hover:translate-x-0.5"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path d="M5 12h14M12 5l7 7-7 7" />
+                    </svg>
+                  </span>
+                ) : (
+                  <Button {...callToAction} />
+                )}
+              </div>
+            )}
+          </Tag>
+        );
+      })}
     </div>
   )
 }
