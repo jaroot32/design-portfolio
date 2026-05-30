@@ -1,0 +1,321 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Content from '~/components/widgets/Content.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'Testing in JavaScript — Live Coding Session · Masterschool',
+};
+---
+
+<Layout metadata={metadata}>
+  <Hero tagline="Live Instruction · TDD · Jest · Masterschool">
+    <Fragment slot="title">
+      Testing in JavaScript —<br />
+      <span class="text-accent dark:text-white">Live Coding Session with Jest</span>
+    </Fragment>
+    <Fragment slot="subtitle">
+      A live group session introducing Masterschool students to test-driven development — covering the
+      red/green/refactor cycle, unit vs. integration tests, and a hands-on code-along building and passing a Jest test
+      from scratch.
+    </Fragment>
+  </Hero>
+
+  <!-- Context -->
+  <Content tagline="The Session" title="Where theory meets the terminal" isReversed>
+    <Fragment slot="image">
+      <div class="flex items-center justify-center h-full py-12">
+        <div class="text-center">
+          <p class="text-7xl font-bold font-heading text-accent leading-none">~40</p>
+          <p class="text-xl text-muted mt-3">minutes · live group session</p>
+          <div class="mt-8 space-y-2 text-sm text-muted">
+            <p class="font-semibold text-gray-700 dark:text-gray-300">Testing in JavaScript</p>
+            <p>Jest · TDD · Unit Tests · Integration Tests</p>
+            <p>Live code-along · Q&A throughout</p>
+          </div>
+        </div>
+      </div>
+    </Fragment>
+    <Fragment slot="content">
+      <p class="mb-4">
+        This session was timed to meet students at a critical transition point in the Masterschool curriculum — just
+        before the React/Redux capstone project, which introduced Jest testing for the first time. The goal was not to
+        make students testing experts; it was to give them enough conceptual grounding and hands-on exposure that they
+        would not be caught off guard when the test runner lit up red.
+      </p>
+      <p class="mb-4">
+        The session opened by surfacing a problem students already knew: manual testing is slow and incomplete. Clicking
+        through the browser, filling out forms, waiting for timers — students recognized these friction points
+        immediately from their own projects. That shared frustration became the entry point for why automated testing
+        exists.
+      </p>
+      <p>
+        From there, the session moved through vocabulary, the red/green/refactor cycle, and directly into a live
+        code-along — setting up Jest from scratch, writing a failing test, implementing the function to make it pass,
+        and reading exactly what the terminal output was communicating at each step.
+      </p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 section-pattern-b"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Learning Goals -->
+  <Features3
+    tagline="Learning Goals"
+    title="What students were meant to walk away with"
+    subtitle="Five goals shaped what to explain, what to skip, and how much time to spend on the code-along versus the conceptual framing."
+    columns={3}
+    items={[
+      {
+        title: 'Understand Testing and Why It Matters',
+        description:
+          'Frame automated testing as a programmatic way to validate expectations — not just a tool, but a shift in how you think about code quality and confidence when shipping features.',
+        icon: 'tabler:bulb',
+      },
+      {
+        title: 'Learn the Types of Tests',
+        description:
+          'Distinguish unit tests (one function in isolation) from integration tests (multiple units working together) — and understand why unit tests make up the bulk of any real test suite.',
+        icon: 'tabler:list-check',
+      },
+      {
+        title: 'Recognize the Importance of TDD',
+        description:
+          'Understand test-driven development as a methodology — not a tool or framework — that combines testing, coding, and design (refactoring) into a single disciplined cycle.',
+        icon: 'tabler:refresh',
+      },
+      {
+        title: 'Understand the Red/Green Workflow',
+        description:
+          'Internalize the loop: write the test first (it fails), write minimum code to pass it, then refactor. Understand why deliberately starting in red matters for the integrity of the process.',
+        icon: 'tabler:circle-check',
+      },
+      {
+        title: 'Read and Pass Tests',
+        description:
+          'Leave the session able to read Jest output — understand what a failing test is telling you, locate where the code needs to change, and write the implementation to make the test go green.',
+        icon: 'tabler:terminal-2',
+      },
+    ]}
+  />
+
+  <!-- Content Arc -->
+  <Content tagline="What Was Covered" title="Session content, in sequence">
+    <Fragment slot="content">
+      <div class="space-y-6">
+        {
+          [
+            {
+              step: '01',
+              title: 'The Manual Testing Problem',
+              desc: "Opened by asking students how they currently verified that their code worked. Console.log, clicking around in the browser, waiting for timers to count down — they recognized every example. The UdaciRacer project came up: just to test one function, you had to pick two cars, select a track, start the race, and wait for it to finish. That's five minutes of manual work per test run. Automated testing exists because that doesn't scale.",
+            },
+            {
+              step: '02',
+              title: 'What a Test Actually Is',
+              desc: "Framed testing as validating an expectation. Engineers crash-test cars and stress airplane wings to failure before they're trusted in the field — not because they expect failure, but because finding the breaking point in a controlled environment is the only way to build justified confidence. The same logic applies to code: the failure isn't bad, it's informative.",
+            },
+            {
+              step: '03',
+              title: 'Vocabulary: The Testing Lexicon',
+              desc: 'Covered TDD, assertion, assertion library, testing framework, red/green testing, unit test, and integration test — giving students the language to read documentation, follow the React testing workshop, and talk about testing clearly in a technical interview.',
+            },
+            {
+              step: '04',
+              title: 'Test-Driven Development and the Red/Green Cycle',
+              desc: "Introduced TDD as a methodology, not a library. Walked through the six-step cycle: think and write the test → red (fail with no implementation) → green (pass with minimum code) → green (ensure no old tests break) → refactor → repeat. Used the goal-setting analogy: writing a goal down doesn't mean you've done the work. The test is the goal; the implementation is the work.",
+            },
+            {
+              step: '05',
+              title: 'Live Code-Along: findHighestScoringStudent()',
+              desc: 'Built a Jest test suite from the terminal up — npm init, install jest as a dev dependency, create src/main.js with an empty function stub, create tests/main.test.js, configure the package.json test script, write the describe/it/expect structure, run the failing test, implement the for-loop solution to pass it. Students followed in VS Code.',
+            },
+            {
+              step: '06',
+              title: 'Jest Matchers: toBe vs. toEqual',
+              desc: 'Explained why toEqual() is required when comparing objects — each object has its own memory reference, so toBe() checks reference equality, not content equality. toEqual() recursively checks every property and value, which is what you actually want when asserting on a returned student object.',
+            },
+          ].map((item) => (
+            <div class="flex gap-4">
+              <div class="flex-shrink-0 w-10 h-10 rounded-full bg-accent/10 border border-accent/30 flex items-center justify-center">
+                <span class="text-xs font-bold text-accent">{item.step}</span>
+              </div>
+              <div>
+                <p class="font-semibold text-gray-800 dark:text-gray-200 mb-1">{item.title}</p>
+                <p class="text-sm text-muted">{item.desc}</p>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 section-pattern"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Code-Along Detail -->
+  <Content tagline="The Code-Along" title="From empty folder to passing test" isReversed>
+    <Fragment slot="image">
+      <div class="flex items-center justify-center h-full py-12 px-6">
+        <div class="w-full max-w-sm space-y-3">
+          <div class="bg-gray-900 rounded-lg p-4 font-mono text-xs text-green-400 space-y-1">
+            <p class="text-gray-500"># 1. Initialize the project</p>
+            <p>npm init -y</p>
+            <p class="text-gray-500 mt-2"># 2. Install Jest</p>
+            <p>npm install --save-dev jest</p>
+            <p class="text-gray-500 mt-2"># 3. Run the tests</p>
+            <p>npm test</p>
+          </div>
+          <div class="bg-gray-900 rounded-lg p-4 font-mono text-xs space-y-1">
+            <p class="text-red-400">FAIL tests/main.test.js</p>
+            <p class="text-gray-400 text-xs">Expected: {`{ name: "Catarina Lima", score: 9.7 }`}</p>
+            <p class="text-gray-400 text-xs">Received: undefined</p>
+            <p class="text-yellow-400 mt-2 text-xs">→ Red phase: expected</p>
+          </div>
+          <div class="bg-gray-900 rounded-lg p-4 font-mono text-xs space-y-1">
+            <p class="text-green-400">✓ should return student with highest score</p>
+            <p class="text-green-400">1 passing (1ms)</p>
+            <p class="text-yellow-400 mt-2 text-xs">→ Green phase: achieved</p>
+          </div>
+        </div>
+      </div>
+    </Fragment>
+    <Fragment slot="content">
+      <p class="mb-4">
+        The code-along centered on a single function: <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded text-sm"
+          >findHighestScoringStudent()</code
+        > — takes an array of student objects with names and scores, returns the highest scorer. Simple enough to implement
+        in a few minutes, but rich enough to demonstrate the complete TDD workflow end to end.
+      </p>
+      <p class="mb-4">
+        Students started with an empty function stub and a test written against it. Running <code
+          class="bg-gray-100 dark:bg-gray-800 px-1 rounded text-sm">npm test</code
+        > returned <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded text-sm">undefined</code> — exactly the point.
+        The test was not broken; the function had no return statement. The terminal output told them precisely what was missing.
+      </p>
+      <p class="mb-4">
+        Once the for-loop implementation landed — starting at index 1, comparing each score against the current leader,
+        updating on each higher score, returning the winner — the test went green. The checkmark in the terminal made
+        the red/green cycle concrete rather than theoretical.
+      </p>
+      <p>
+        The session closed by connecting this directly to the next step: Kent C. Dodds' React testing workshop, which
+        students would encounter in the React/Redux project. Same pattern — tests pre-written, students responsible for
+        writing the code to make them pass. This session was the on-ramp.
+      </p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 section-pattern-b"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Student Q&A -->
+  <Features3
+    tagline="Student Questions"
+    title="What the Q&A revealed"
+    subtitle="The questions students asked showed exactly where the conceptual gaps were — and which ideas had already landed."
+    columns={2}
+    items={[
+      {
+        title: 'When is testing actually worth it?',
+        description:
+          'A student asked whether a simple Hello World example warranted a test. The honest answer: even small projects benefit once they have interactive logic — forms, timers, state. The UdaciRacer project came up again: one manual test cycle took 5–10 minutes. Running that five times in a coding session adds up fast. Automated tests run in milliseconds.',
+        icon: 'tabler:help-circle',
+      },
+      {
+        title: 'How do you know when you have tested enough?',
+        description:
+          'A student introduced branch coverage — the idea that if a function has conditional logic, you need tests for every branch to achieve full coverage. Brief discussion of how Jest can report coverage percentages. Flagged as a topic the React testing workshop would go deeper on.',
+        icon: 'tabler:chart-bar',
+      },
+      {
+        title: 'Can you test UI components?',
+        description:
+          'A student asked about testing conditional rendering — components that appear or disappear based on state or button clicks. Previewed snapshot testing (does this component render?), event-firing tests (does this click handler fire?), and async component testing for API-dependent UI.',
+        icon: 'tabler:layout',
+      },
+      {
+        title: 'What about testing Redux?',
+        description:
+          'The discussion extended to Redux — reducers, actions, store updates. Pointed students toward the Kent C. Dodds workshop, which covered both React testing and React + Redux testing as structured exercises using the same red/green format introduced in this session.',
+        icon: 'tabler:brand-redux',
+      },
+    ]}
+  />
+
+  <!-- Reflection -->
+  <Content tagline="Reflection" title="What this session demonstrates" isReversed>
+    <Fragment slot="image">
+      <div class="flex items-center justify-center h-full py-12">
+        <div class="text-center">
+          <p class="text-7xl font-bold font-heading text-accent leading-none">TDD</p>
+          <p class="text-xl text-muted mt-3">methodology · not just a tool</p>
+          <div class="mt-8 space-y-1 text-sm text-muted">
+            <p class="font-semibold text-gray-700 dark:text-gray-300">Jest · Node.js · npm</p>
+            <p>Unit Testing · Integration Testing</p>
+            <p>Red / Green / Refactor</p>
+          </div>
+        </div>
+      </div>
+    </Fragment>
+    <Fragment slot="content">
+      <p class="mb-4">
+        Testing is one of those topics where students can read the documentation, follow the syntax, and still have no
+        intuition for <em>why</em> the workflow is designed the way it is. The red/green/refactor cycle only makes sense
+        once you have felt the discomfort of not knowing whether your code actually works — and recognized that starting
+        in failure is the point, not a problem to avoid.
+      </p>
+      <p class="mb-4">
+        The instructional decision here was to anchor the session in that discomfort first — surfacing the manual
+        testing frustration students already owned — before introducing the solution. By the time Jest appeared,
+        students understood the problem it was solving, not just how to install it.
+      </p>
+      <p class="mb-4">
+        The code-along format served a specific purpose: watching the terminal go from red to green is qualitatively
+        different from reading about it. Students needed to see <code
+          class="bg-gray-100 dark:bg-gray-800 px-1 rounded text-sm">undefined</code
+        > returned by a failing test, understand what it was telling them, and then experience the implementation as the
+        direct answer to what the assertion was asking for. The terminal output was the teacher; the code was the response.
+      </p>
+      <div class="mt-6 flex flex-wrap gap-2">
+        {
+          [
+            'Jest',
+            'TDD',
+            'Unit Testing',
+            'Integration Testing',
+            'Node.js',
+            'npm',
+            'JavaScript',
+            'Live Instruction',
+            'Code-Along',
+            'Masterschool',
+          ].map((tag) => (
+            <span class="bg-violet-100 dark:bg-violet-900 text-violet-800 dark:text-violet-200 text-sm font-medium px-3 py-1 rounded-full">
+              {tag}
+            </span>
+          ))
+        }
+      </div>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 section-pattern"></div>
+    </Fragment>
+  </Content>
+
+  <CallToAction
+    actions={[
+      { variant: 'primary', text: 'View All Projects', href: '/projects' },
+      { text: 'Get in Touch', href: '/about#contact' },
+    ]}
+  >
+    <Fragment slot="title">Interested in working together?</Fragment>
+    <Fragment slot="subtitle"
+      >I'm open to remote opportunities in customer education, technical instructional design, and product enablement.</Fragment
+    >
+  </CallToAction>
+</Layout>
