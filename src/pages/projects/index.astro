@@ -45,7 +45,8 @@ const metadata = {
   <!-- Sticky section nav — appears after hero scrolls away -->
   <div
     id="section-nav"
-    class="fixed top-[65px] left-0 right-0 z-40 bg-white/90 dark:bg-gray-900/90 backdrop-blur-sm border-b border-gray-200 dark:border-gray-700 opacity-0 pointer-events-none transition-opacity duration-300"
+    class="fixed left-0 right-0 z-30 bg-white/90 dark:bg-gray-900/90 backdrop-blur-sm border-b border-gray-200 dark:border-gray-700 opacity-0 pointer-events-none transition-opacity duration-300"
+    style="top: 0px"
   >
     <div class="max-w-7xl mx-auto px-4 sm:px-6 py-2 flex flex-wrap gap-2 justify-center">
       <a
@@ -339,9 +340,16 @@ const metadata = {
   />
   <script>
     function initScrollspy() {
-      const stickyNav = document.getElementById('section-nav');
+      const stickyNav = document.getElementById('section-nav') as HTMLElement | null;
       const sectionIds = ['instructional-design', 'live-instruction', 'teaching', 'speaking'];
       const heroThreshold = 320;
+
+      // Position below the sticky header (including the progress bar at its bottom)
+      const header = document.querySelector('[data-aw-sticky-header]') as HTMLElement | null;
+      if (stickyNav && header) {
+        const headerBottom = header.getBoundingClientRect().bottom;
+        stickyNav.style.top = `${headerBottom}px`;
+      }
 
       function getActiveSection() {
         let current = sectionIds[0];
