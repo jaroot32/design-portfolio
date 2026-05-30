@@ -12,12 +12,39 @@ export interface Props {
 }
 
 const { metadata } = Astro.props;
+
+const path = Astro.url.pathname;
+const isProjectPage = path.startsWith('/projects/') && path !== '/projects/' && path !== '/projects';
 ---
 
 <Layout metadata={metadata}>
   <slot name="header">
     <Header {...headerData} isSticky showToggleTheme position="right" />
   </slot>
+  {
+    isProjectPage && (
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 pt-4 pb-0">
+        <a
+          href="/projects"
+          class="inline-flex items-center gap-1.5 text-sm text-muted hover:text-accent transition-colors duration-200"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="w-4 h-4"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <polyline points="15 18 9 12 15 6" />
+          </svg>
+          All Projects
+        </a>
+      </div>
+    )
+  }
   <main>
     <slot />
   </main>
