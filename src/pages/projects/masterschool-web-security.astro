@@ -91,6 +91,34 @@ const metadata = {
     ]}
   />
 
+  <!-- CIA Triad -->
+  <Features3
+    tagline="Three Core Principles"
+    title="The foundation everything else is built on"
+    subtitle="Before diving into specific attacks, the session grounded students in the three principles that all security policies — GDPR, HIPAA, and OWASP — are designed to protect."
+    columns={3}
+    items={[
+      {
+        title: 'Confidentiality',
+        description:
+          "If you're holding people's data, you keep it protected from unauthorized access. This is the principle behind password hashing, encryption, access controls, and the legal requirement not to share patient records — even with family members — without the patient's consent.",
+        icon: 'tabler:eye-off',
+      },
+      {
+        title: 'Integrity',
+        description:
+          'The data you receive is what it actually is — not altered, not manipulated, not faked. Integrity means validating inputs, preventing injection, and ensuring that the data moving through your system is trustworthy at every step, not just at the point of entry.',
+        icon: 'tabler:check',
+      },
+      {
+        title: 'Availability',
+        description:
+          "When someone legitimately asks for their data, they can get it back within a reasonable timeframe. GDPR's right to deletion and the right to access both live here — the system has to respond, not just store.",
+        icon: 'tabler:clock-check',
+      },
+    ]}
+  />
+
   <!-- Business Case for Security -->
   <Content tagline="Why It Matters" title="Quantifying the cost of a breach">
     <Fragment slot="image">
@@ -121,7 +149,8 @@ const metadata = {
       <p class="mb-4">
         Before the OWASP content, the webinar framed security as a business decision — because that's how it actually
         gets funded. Security spending requires someone to approve a budget, and that person needs to understand the
-        tradeoff between the cost of securing an asset and the cost of losing it.
+        tradeoff between the cost of securing an asset and the cost of losing it. The analogy used: if you buy a $1,000
+        bicycle, you spend $50 on a lock. The same proportional logic applies to user data.
       </p>
       <p class="mb-4">
         The{' '}
@@ -188,7 +217,7 @@ const metadata = {
       {
         title: 'Insecure Design (2021)',
         description:
-          'New in 2021 — design-level flaws that no implementation can fix because the security controls were never designed in. Prevention: threat modeling, secure design patterns, AppSec review in the SDLC, and unit/integration tests for all critical flows.',
+          'New in 2021 — likely driven by SolarWinds, where a company trusted to secure government health and banking data was breached at the design level. No implementation fix patches a missing security control. Prevention: threat modeling, secure design patterns, AppSec review in the SDLC, and tests for every critical flow.',
         icon: 'tabler:layout-off',
       },
       {
@@ -202,6 +231,40 @@ const metadata = {
         description:
           'SSRF forces the server to make requests to unintended destinations. Prevention: sanitize and validate all client input, enforce URL schema/port/destination allow lists, disable HTTP redirections, and segment remote resource access at the network layer.',
         icon: 'tabler:server-bolt',
+      },
+    ]}
+  />
+
+  <!-- Live Session Moments -->
+  <Features3
+    tagline="What Happened Live"
+    title="The moments that made the content real"
+    subtitle="A webinar on security only lands if it gets off the slides. These were the live moments that turned the abstract into something students could feel."
+    columns={2}
+    items={[
+      {
+        title: 'The XSS Demo on Hacksplaining',
+        description:
+          'Walked through cross-site scripting live on hacksplaining.com using a bakery social media scenario — "Mal the hacker" injected a script tag into the comment field of a site called sulpbreredit.com. The first payload triggered an alert box: "the croissants are limp and sad." Then a second script showed how to steal a session cookie and send it to an external server — turning a snarky comment into a session hijack.',
+        icon: 'tabler:cookie',
+      },
+      {
+        title: 'The SQL Injection Demo That Refused to Load',
+        description:
+          'The hacksplaining SQL injection simulation wouldn\'t progress past the first screen — a real-time troubleshooting moment. Instead of pivoting away, the instructor acknowledged it openly: "if anybody knows how to get past that, let me know" and moved to the slides. The honest fumble modeled something intentional: security tooling is finicky, and debugging a demo live is part of the job.',
+        icon: 'tabler:alert-triangle',
+      },
+      {
+        title: "Sam's Exploit Database Find",
+        description:
+          'During the penetration testing section, a student named Sam dropped exploit.db in the chat — a publicly maintained database of known exploits, complete with actual code. The class explored it together live. One entry showed the exact code used to take control of a device over public Wi-Fi. The instructor\'s reaction — "oh wow" — was genuine. It reframed the hacker toolkit conversation from theory to searchable, accessible reality.',
+        icon: 'tabler:database-search',
+      },
+      {
+        title: '"Have I Been Pwned?" — Check Yourself',
+        description:
+          "Before the OWASP deep dive, students were pointed to haveibeenpwned.com — a site where you enter your email and see every data breach it appeared in. The instructor demoed it live, with MySpace appearing in the results. Several students recognized emails from accounts they'd long forgotten. The breach wasn't abstract anymore — it was a clothing store, a forum, a shoe website from 2014.",
+        icon: 'tabler:mail-search',
       },
     ]}
   />
@@ -238,8 +301,9 @@ const metadata = {
       <p class="mb-4">
         The webinar closed with a set of tools students could use to actively probe their own web applications before
         deploying them: vulnerability scanners, peach fuzzing, and penetration testing frameworks like Metasploit and
-        Burp Suite. These aren't just for security professionals — they're what developers use to verify that the code
-        they shipped doesn't have a known hole in it.
+        Burp Suite. For students who wanted to go further, Kali Linux — a security-focused Linux distribution — was
+        recommended as the environment serious penetration testers work in. These aren't just for security
+        professionals; they're what developers use to verify that the code they shipped doesn't have a known hole in it.
       </p>
       <p class="mb-4">
         Zero-day vulnerabilities — newly discovered exploits with no existing patch — are a reminder that staying
