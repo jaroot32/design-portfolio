@@ -839,6 +839,84 @@ const metadata = {
     </div>
   </div>
 
+  <!-- Bridge to Practice -->
+  <div class="max-w-7xl mx-auto px-4 md:px-8 py-12 md:py-16">
+    <div class="text-center mb-12">
+      <p class="text-base text-secondary dark:text-blue-200 font-bold tracking-wide uppercase mb-2">
+        Applied to Practice
+      </p>
+      <h2 class="text-4xl md:text-5xl font-bold tracking-tighter font-heading mb-4">
+        What this looks like in customer education
+      </h2>
+      <p class="text-xl text-muted dark:text-slate-300 max-w-3xl mx-auto">
+        Graduate rigor is most valuable when it maps to real work. Every phase of this capstone corresponds directly to
+        what customer education and product enablement teams do at scale.
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+      {
+        [
+          {
+            academic: 'Needs Analysis & Audience Profile',
+            practice: 'Customer Discovery',
+            description:
+              'Identifying that fewer than 20% of IDs felt confident with xAPI is the same skill as identifying where customers drop off, submit the most support tickets, or fail to reach activation. Both require knowing who your learner is before you design anything.',
+          },
+          {
+            academic: "CLOs Mapped to Bloom's Taxonomy",
+            practice: 'Outcome-Focused Program Design',
+            description:
+              'Writing CLOs with measurable action verbs (construct, integrate, evaluate) is the same discipline as defining customer success milestones: not "understands the product" but "has completed onboarding and created their first workflow."',
+          },
+          {
+            academic: 'ADDIE with Kirkpatrick Evaluation',
+            practice: 'Data-Informed Content Iteration',
+            description:
+              'Designing L1 surveys and L2 assessments from the start — before the course is built — mirrors the way strong customer education teams instrument their programs: you measure from day one, not as an afterthought.',
+          },
+          {
+            academic: 'xAPI Statement Design',
+            practice: 'Learning Analytics & Product Signals',
+            description:
+              'Designing xAPI statements that capture attempted, completed, and passed events is the same thinking as designing product event tracking: what behavior matters, how do we capture it, and what decision will it inform?',
+          },
+          {
+            academic: 'Rise 360 + Canvas LMS Deployment',
+            practice: 'Multi-Channel Content Delivery',
+            description:
+              'Choosing tools that work together — an authoring tool that exports to an LMS, tracks xAPI, and integrates with a gradebook — is the same judgment call as deciding how customer education content lives in Contentful, Salesforce, or a customer portal.',
+          },
+          {
+            academic: 'Graduate Certificate Evaluation Standard',
+            practice: 'External Quality Benchmark',
+            description:
+              'This course was designed and evaluated against the standards of a UMGC graduate program in Learning Design & Technology — the same rigor that makes the methodology applicable beyond a single academic context.',
+          },
+        ].map(({ academic, practice, description }) => (
+          <div class="bg-white dark:bg-slate-800 rounded-xl border border-gray-200 dark:border-gray-700 p-6">
+            <div class="flex items-start gap-3 mb-3">
+              <div class="flex-shrink-0 mt-0.5">
+                <div class="flex flex-col gap-1">
+                  <span class="text-xs font-bold text-muted uppercase tracking-wide">Academic</span>
+                  <span class="text-sm font-semibold text-gray-800 dark:text-gray-200">{academic}</span>
+                </div>
+              </div>
+              <div class="flex-shrink-0 text-accent mt-4">→</div>
+              <div class="flex-shrink-0 mt-0.5">
+                <div class="flex flex-col gap-1">
+                  <span class="text-xs font-bold text-accent uppercase tracking-wide">In Practice</span>
+                  <span class="text-sm font-semibold text-gray-800 dark:text-gray-200">{practice}</span>
+                </div>
+              </div>
+            </div>
+            <p class="text-sm text-muted border-t border-gray-100 dark:border-gray-700 pt-3">{description}</p>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+
   <!-- Reflection -->
   <Content tagline="Reflection" title="What I Learned">
     <Fragment slot="image">
@@ -886,7 +964,7 @@ const metadata = {
   >
     <Fragment slot="title">Interested in working together?</Fragment>
     <Fragment slot="subtitle"
-      >I'm open to remote opportunities in instructional design and technical learning experience design.</Fragment
+      >I'm open to remote opportunities in customer education, technical instructional design, and product enablement.</Fragment
     >
   </CallToAction>
 </Layout>

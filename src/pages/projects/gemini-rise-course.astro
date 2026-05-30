@@ -232,6 +232,110 @@ const metadata = {
     </Fragment>
   </Content>
 
+  <!-- Learning Measurement Plan -->
+  <Content tagline="Measurement Plan" title="How I'd know if it worked" isReversed>
+    <Fragment slot="image">
+      <div class="flex items-center justify-center h-full py-12 px-6">
+        <div class="w-full max-w-xs space-y-3">
+          {
+            [
+              {
+                level: 'L1',
+                label: 'Reactions',
+                detail: 'Did learners find it relevant and usable?',
+                color: 'blue',
+              },
+              {
+                level: 'L2',
+                label: 'Learning',
+                detail: 'Can they build and use a Gem correctly?',
+                color: 'green',
+              },
+              {
+                level: 'L3',
+                label: 'Behavior',
+                detail: 'Are they using Gems 30–60 days later?',
+                color: 'purple',
+              },
+              {
+                level: 'L4',
+                label: 'Results',
+                detail: 'Is recurring task time decreasing?',
+                color: 'orange',
+              },
+            ].map(({ level, label, detail, color }) => (
+              <div
+                class={`flex items-start gap-3 p-3 rounded-lg border ${color === 'blue' ? 'border-blue-200 dark:border-blue-800 bg-blue-50 dark:bg-blue-900/20' : color === 'green' ? 'border-green-200 dark:border-green-800 bg-green-50 dark:bg-green-900/20' : color === 'purple' ? 'border-purple-200 dark:border-purple-800 bg-purple-50 dark:bg-purple-900/20' : 'border-orange-200 dark:border-orange-800 bg-orange-50 dark:bg-orange-900/20'}`}
+              >
+                <span
+                  class={`text-xs font-bold px-2 py-1 rounded flex-shrink-0 ${color === 'blue' ? 'bg-blue-600 text-white' : color === 'green' ? 'bg-green-600 text-white' : color === 'purple' ? 'bg-purple-600 text-white' : 'bg-orange-600 text-white'}`}
+                >
+                  {level}
+                </span>
+                <div>
+                  <p class="text-sm font-semibold text-gray-800 dark:text-gray-200">{label}</p>
+                  <p class="text-xs text-muted mt-0.5">{detail}</p>
+                </div>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </Fragment>
+    <Fragment slot="content">
+      <p class="mb-6">
+        A course that can't be measured can't be improved. If this course were deployed inside a health organization,
+        here's how I'd close the loop — using the Kirkpatrick model as the evaluation framework:
+      </p>
+      <div class="space-y-5">
+        <div>
+          <p class="font-semibold text-sm text-gray-800 dark:text-gray-200 mb-1">
+            Level 1 — Reactions <span class="font-normal text-muted">(immediate)</span>
+          </p>
+          <p class="text-sm text-muted">
+            A 5-item post-course survey in Typeform or Google Forms measuring satisfaction, perceived relevance, and
+            confidence: <em>"I could build a Gem for a task I do this week."</em> Triggered automatically at course completion
+            in Rise 360. Baseline target: 80% of learners rating confidence at 4/5 or higher.
+          </p>
+        </div>
+        <div>
+          <p class="font-semibold text-sm text-gray-800 dark:text-gray-200 mb-1">
+            Level 2 — Learning <span class="font-normal text-muted">(built into the course)</span>
+          </p>
+          <p class="text-sm text-muted">
+            Knowledge checks are already embedded throughout. The capstone assignment — building and using a real Gem
+            with their own work — is the primary L2 evidence: learners either produce a working Gem or they don't. Any
+            knowledge check with a high failure rate signals a lesson that needs redesign.
+          </p>
+        </div>
+        <div>
+          <p class="font-semibold text-sm text-gray-800 dark:text-gray-200 mb-1">
+            Level 3 — Behavior Transfer <span class="font-normal text-muted">(30 and 60 days post-training)</span>
+          </p>
+          <p class="text-sm text-muted">
+            A brief manager check-in or self-report survey: <em
+              >"Which recurring tasks are you using a Gem for? How often?"</em
+            > This is the hardest data to collect and the most meaningful. A course that scores well on L1 and L2 but shows
+            no L3 behavior change points to a transfer problem — usually a gap between course scenarios and real work context.
+          </p>
+        </div>
+        <div>
+          <p class="font-semibold text-sm text-gray-800 dark:text-gray-200 mb-1">
+            Level 4 — Results <span class="font-normal text-muted">(organizational)</span>
+          </p>
+          <p class="text-sm text-muted">
+            Harder to attribute directly, but trackable indicators include: number of Gems created per employee at 60
+            days, self-reported time saved on administrative tasks, and overall AI tool adoption rate in the department.
+            These would require partnership with an IT or operations team to track.
+          </p>
+        </div>
+      </div>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 section-pattern"></div>
+    </Fragment>
+  </Content>
+
   <!-- Reflection -->
   <Content tagline="Reflection" title="Turning a training experience into a design artifact" isReversed>
     <Fragment slot="image">
@@ -298,7 +402,7 @@ const metadata = {
   >
     <Fragment slot="title">Interested in working together?</Fragment>
     <Fragment slot="subtitle"
-      >I'm open to remote opportunities in instructional design and technical learning experience design.</Fragment
+      >I'm open to remote opportunities in customer education, technical instructional design, and product enablement.</Fragment
     >
   </CallToAction>
 </Layout>
