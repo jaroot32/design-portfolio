@@ -1,0 +1,323 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Content from '~/components/widgets/Content.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'SME — Web Development Program · LearningMate & Chegg Skills',
+};
+---
+
+<Layout metadata={metadata}>
+  <Hero tagline="SME · Content Development · Git & GitHub · LearningMate">
+    <Fragment slot="title">
+      Technical SME —<br />
+      <span class="text-accent dark:text-white">Chegg Skills Web Dev Certification</span>
+    </Fragment>
+    <Fragment slot="subtitle">
+      An ongoing content development contract reviewing and validating course design documents for a major web
+      development certification program at Chegg Skills — bringing both technical depth and instructional design
+      judgment to content before it enters production.
+    </Fragment>
+  </Hero>
+
+  <!-- Context -->
+  <Content tagline="The Engagement" title="Where technical expertise meets instructional design" isReversed>
+    <Fragment slot="image">
+      <div class="flex items-center justify-center h-full py-12">
+        <div class="text-center">
+          <p class="text-7xl font-bold font-heading text-accent leading-none">SME</p>
+          <p class="text-xl text-muted mt-3">Subject Matter Expert</p>
+          <div class="mt-8 space-y-2 text-sm text-muted">
+            <p class="font-semibold text-gray-700 dark:text-gray-300">LearningMate · Chegg Skills</p>
+            <p>Git & GitHub · Web Development</p>
+            <p>Long-term Contract · 20 hrs/week</p>
+          </div>
+        </div>
+      </div>
+    </Fragment>
+    <Fragment slot="content">
+      <p class="mb-4">
+        LearningMate selected me as one of two to three Subject Matter Experts for a web development certification
+        program produced for Chegg Skills — a major workforce learning platform serving working professionals pursuing
+        technical career transitions.
+      </p>
+      <p class="mb-4">
+        The engagement spans two phases. In Phase 1, I reviewed course design documents — module manifests, scripts,
+        storyboards, assessments, and knowledge checks — as Instructional Designers produced them, before content
+        entered the Rise 360 development pipeline. In Phase 2, I'm moving into the recording stage: producing demo
+        videos of the technical content I reviewed.
+      </p>
+      <p>
+        The content I'm responsible for covers <strong>Git and GitHub</strong> — version control fundamentals, branching
+        workflows, pull requests, collaboration patterns, and the Git command-line interface — taught to learners who are
+        new to professional software development workflows.
+      </p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 section-pattern-b"></div>
+    </Fragment>
+  </Content>
+
+  <!-- The Dual Lens -->
+  <Content tagline="What I Bring" title="The dual-lens advantage">
+    <Fragment slot="image">
+      <div class="flex items-center justify-center h-full py-12 px-6">
+        <div class="w-full max-w-sm space-y-4">
+          <div class="p-5 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900">
+            <p class="text-xs font-bold uppercase tracking-wide text-accent mb-3">Lens 1 — Technical Accuracy</p>
+            <ul class="space-y-2 text-sm text-muted">
+              {
+                [
+                  'Is this Git command syntactically correct?',
+                  'Does this workflow reflect real professional practice?',
+                  'Are edge cases handled or glossed over?',
+                  'Would this example work in a real repository?',
+                ].map((q) => (
+                  <li class="flex gap-2">
+                    <span class="text-accent flex-shrink-0 mt-0.5">→</span>
+                    {q}
+                  </li>
+                ))
+              }
+            </ul>
+          </div>
+          <div class="p-5 rounded-xl border border-accent/30 bg-accent/5 dark:bg-accent/10">
+            <p class="text-xs font-bold uppercase tracking-wide text-accent mb-3">Lens 2 — Instructional Design</p>
+            <ul class="space-y-2 text-sm text-muted">
+              {
+                [
+                  'Is the sequence logical for a beginner?',
+                  'Does the knowledge check test the right thing?',
+                  'Is cognitive load appropriate for this stage?',
+                  'Does the example match the learning objective?',
+                ].map((q) => (
+                  <li class="flex gap-2">
+                    <span class="text-accent flex-shrink-0 mt-0.5">→</span>
+                    {q}
+                  </li>
+                ))
+              }
+            </ul>
+          </div>
+        </div>
+      </div>
+    </Fragment>
+    <Fragment slot="content">
+      <p class="mb-4">
+        Most SMEs bring one thing: deep technical knowledge. They can catch a wrong command or a missing flag. What they
+        often can't do is evaluate whether the content is <em>learnable</em> — whether the sequence makes sense for someone
+        building the skill for the first time, whether the assessment is testing the right concept, or whether the cognitive
+        load is appropriate for that point in the course.
+      </p>
+      <p class="mb-4">
+        Eight years of instructional experience changes what I look for in a review. When I read a Git module manifest,
+        I'm simultaneously checking whether <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded text-sm"
+          >git rebase</code
+        > is used correctly in the example <em>and</em> whether introducing rebase before merge conflicts have been covered
+        is the right sequencing decision.
+      </p>
+      <p>
+        That dual lens is what makes an SME with instructional design experience more useful than a technical reviewer
+        alone — and it's what I brought to the LearningMate team on this engagement.
+      </p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 section-pattern"></div>
+    </Fragment>
+  </Content>
+
+  <!-- What the Review Covers -->
+  <Features3
+    tagline="The Work"
+    title="What the review process covers"
+    subtitle="Each course design document goes through a structured review before it enters the Rise 360 development pipeline."
+    columns={3}
+    items={[
+      {
+        title: 'Module Manifests',
+        description:
+          'Reviewing the high-level content architecture — topic sequence, module scope, prerequisite dependencies, and coverage gaps. Flagging cases where important Git concepts are missing or introduced too early.',
+        icon: 'tabler:list-check',
+      },
+      {
+        title: 'Scripts & Storyboards',
+        description:
+          'Validating the technical accuracy of narration scripts and storyboard content — checking commands, output examples, workflow descriptions, and any code shown on screen against real Git behavior.',
+        icon: 'tabler:file-text',
+      },
+      {
+        title: 'Assessments & Knowledge Checks',
+        description:
+          "Reviewing quiz questions and knowledge checks for technical accuracy, correct answer validity, and alignment with the learning objective they're intended to assess. Catching questions that test trivia rather than applied understanding.",
+        icon: 'tabler:checklist',
+      },
+      {
+        title: 'Instructional Flow',
+        description:
+          'Evaluating whether the content within a lesson builds in a logical sequence — ensuring foundational Git concepts are established before branching, merging, or collaboration workflows are introduced.',
+        icon: 'tabler:arrows-sort',
+      },
+      {
+        title: 'Real-World Relevance',
+        description:
+          "Flagging examples and scenarios that don't reflect professional Git practice — ensuring learners are building habits they'll actually use on a team, not patterns that work in isolation but break in collaborative environments.",
+        icon: 'tabler:briefcase',
+      },
+      {
+        title: 'AI Tool Disclosure',
+        description:
+          'Reviewing any AI-generated content for accuracy, tone, and instructional quality — and disclosing AI tool use to the Instructional Design team as required by the engagement terms.',
+        icon: 'tabler:robot',
+      },
+    ]}
+  />
+
+  <!-- Phase 2 -->
+  <Content tagline="Phase 2" title="Moving into production" isReversed>
+    <Fragment slot="image">
+      <div class="flex items-center justify-center h-full py-12 px-6">
+        <div class="w-full max-w-xs space-y-3 text-center">
+          <div class="p-5 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900">
+            <p class="text-xs font-bold text-muted uppercase tracking-wide mb-2">Phase 1 — Complete</p>
+            <p class="text-sm font-semibold text-gray-800 dark:text-gray-200">Content Review</p>
+            <p class="text-xs text-muted mt-1">
+              Module manifests · Scripts · Storyboards · Assessments · Gemini training
+            </p>
+          </div>
+          <div class="flex items-center justify-center">
+            <svg class="w-5 h-5 text-accent" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </div>
+          <div class="p-5 rounded-xl border border-accent/40 bg-accent/5 dark:bg-accent/10">
+            <p class="text-xs font-bold text-accent uppercase tracking-wide mb-2">Phase 2 — In Progress</p>
+            <p class="text-sm font-semibold text-gray-800 dark:text-gray-200">Video Recording</p>
+            <p class="text-xs text-muted mt-1">Demo recordings · Voice narration · Git workflow screencasts</p>
+          </div>
+        </div>
+      </div>
+    </Fragment>
+    <Fragment slot="content">
+      <p class="mb-4">
+        Phase 2 moves from review into production. I'm now recording the demo videos for the Git and GitHub content I
+        reviewed — screencasts walking learners through real terminal workflows, branching strategies, pull request
+        processes, and collaborative Git patterns.
+      </p>
+      <p class="mb-4">
+        Recording content you've already reviewed is an unusual advantage: the scripts are already validated, the
+        sequence is already correct, and the examples already reflect how Git is actually used on a team. The recording
+        phase benefits directly from the rigor of the review phase.
+      </p>
+      <p>
+        This phase also includes voice narration samples and course introduction segments — building the on-camera and
+        on-mic presence that video-based learning requires.
+      </p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 section-pattern-b"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Portfolio piece plan -->
+  <Content tagline="What's Next" title="Turning this work into a public artifact">
+    <Fragment slot="content">
+      <p class="mb-4">
+        The Chegg Skills certification content is proprietary — it's a paid program and the materials can't be shared
+        publicly. That's standard for client work at this level.
+      </p>
+      <p class="mb-4">
+        What <em>can</em> be built is a standalone portfolio piece using the same content area: a publicly accessible Rise
+        360 module on Git and GitHub fundamentals — designed from scratch using a course manifest as the starting point,
+        built to demonstrate the same instructional approach I applied in the review phase.
+      </p>
+      <p class="mb-4">
+        This would include learning objectives, a structured content arc from Git basics through collaborative
+        workflows, interactive knowledge checks, and embedded demo videos. The result: a demonstrable artifact that
+        shows the depth of the Git and GitHub content work, without reproducing proprietary Chegg Skills materials.
+      </p>
+      <div class="mt-6 p-4 rounded-lg border border-accent/30 bg-accent/5 dark:bg-accent/10">
+        <p class="text-sm font-semibold text-accent mb-1">In development</p>
+        <p class="text-sm text-muted">
+          A public Rise 360 module on Git and GitHub fundamentals — coming as the next portfolio piece in this series.
+        </p>
+      </div>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 section-pattern-e"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Reflection -->
+  <Content tagline="Reflection" title="What this engagement demonstrates" isReversed>
+    <Fragment slot="image">
+      <div class="flex items-center justify-center h-full py-12">
+        <div class="text-center">
+          <p class="text-7xl font-bold font-heading text-accent leading-none">6+</p>
+          <p class="text-xl text-muted mt-3">months · ongoing</p>
+          <div class="mt-8 space-y-1 text-sm text-muted">
+            <p class="font-semibold text-gray-700 dark:text-gray-300">LearningMate · Chegg Skills</p>
+            <p>Git · GitHub · Version Control</p>
+            <p>Review · Validation · Production</p>
+          </div>
+        </div>
+      </div>
+    </Fragment>
+    <Fragment slot="content">
+      <p class="mb-4">
+        SME work at this level is the closest thing to customer education that exists outside a SaaS company: you're
+        responsible for the technical accuracy and instructional quality of content that learners will rely on to build
+        real skills. The stakes are the same — if the content is wrong or hard to follow, learners fail, and the
+        platform loses credibility.
+      </p>
+      <p class="mb-4">
+        Working inside an ID-led production process also sharpened my ability to collaborate across roles — providing
+        feedback that's specific enough to act on without rewriting the ID's work, and escalating questions that require
+        design-level decisions rather than just technical fixes.
+      </p>
+      <p class="mb-4">
+        Phase 1 also included Gemini training delivered by LearningMate — a structured introduction to building and
+        using Gemini Gems for recurring tasks. That training became the starting point for the
+        <a href="/projects/gemini-rise-course" class="text-accent hover:underline">Work Smarter with Gemini</a> Rise 360
+        portfolio piece, which adapts the training for a healthcare organizational context.
+      </p>
+      <div class="mt-6 flex flex-wrap gap-2">
+        {
+          [
+            'Git',
+            'GitHub',
+            'SME',
+            'Content Review',
+            'Chegg Skills',
+            'LearningMate',
+            'Rise 360',
+            'Instructional Design',
+            'Video Production',
+            'Web Development',
+          ].map((tag) => (
+            <span class="bg-emerald-100 dark:bg-emerald-900 text-emerald-800 dark:text-emerald-200 text-sm font-medium px-3 py-1 rounded-full">
+              {tag}
+            </span>
+          ))
+        }
+      </div>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 section-pattern"></div>
+    </Fragment>
+  </Content>
+
+  <CallToAction
+    actions={[
+      { variant: 'primary', text: 'View All Projects', href: '/projects' },
+      { text: 'Get in Touch', href: '/about#contact' },
+    ]}
+  >
+    <Fragment slot="title">Interested in working together?</Fragment>
+    <Fragment slot="subtitle"
+      >I'm open to remote opportunities in customer education, technical instructional design, and product enablement.</Fragment
+    >
+  </CallToAction>
+</Layout>
