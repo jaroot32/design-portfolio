@@ -7,6 +7,7 @@ import CallToAction from '~/components/widgets/CallToAction.astro';
 import certImage from '~/assets/images/udacity-mentorship-certificate.png';
 import annotationImg from '~/assets/images/annotation.pdf.png';
 import { Image } from 'astro:assets';
+import YouTubeEmbed from '~/components/widgets/YouTubeEmbed.astro';
 
 const metadata = {
   title: 'Chrome Extension — Udacity Career Materials Reviewer',
@@ -131,15 +132,7 @@ const metadata = {
       <p class="text-base text-secondary dark:text-blue-200 font-bold tracking-wide uppercase mb-2">Demo</p>
       <h2 class="text-4xl md:text-5xl font-bold tracking-tighter font-heading">See It in Action</h2>
     </div>
-    <div class="relative w-full rounded-lg shadow-lg overflow-hidden" style="padding-top: 56.25%;">
-      <iframe
-        class="absolute inset-0 w-full h-full"
-        src="https://www.youtube.com/embed/r4e8BA6eiRU"
-        title="Chrome Extension — Udacity Career Materials Reviewer Demo"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen></iframe>
-    </div>
+    <YouTubeEmbed id="r4e8BA6eiRU" title="Chrome Extension — Udacity Career Materials Reviewer Demo" />
   </div>
 
   <!-- What This Demonstrates -->

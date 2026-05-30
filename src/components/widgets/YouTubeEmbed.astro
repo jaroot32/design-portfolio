@@ -1,0 +1,59 @@
+---
+interface Props {
+  id: string;
+  title: string;
+}
+
+const { id, title } = Astro.props;
+---
+
+<div
+  class="yt-lite relative w-full rounded-lg shadow-lg overflow-hidden cursor-pointer bg-black"
+  style="padding-top: 56.25%;"
+  data-video-id={id}
+  data-title={title}
+>
+  <img
+    class="yt-lite-thumb absolute inset-0 w-full h-full object-cover"
+    src={`https://i.ytimg.com/vi/${id}/maxresdefault.jpg`}
+    alt={title}
+    loading="lazy"
+    onerror={`this.src='https://i.ytimg.com/vi/${id}/hqdefault.jpg'`}
+  />
+  <button class="absolute inset-0 w-full h-full flex items-center justify-center group" aria-label={`Play ${title}`}>
+    <!-- YouTube-style play button -->
+    <div
+      class="flex items-center justify-center w-[68px] h-[48px] rounded-xl shadow-lg transition-all duration-200"
+      style="background: rgba(33,33,33,0.8);"
+    >
+      <svg class="w-8 h-8 text-white ml-0.5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+        <path d="M8 5v14l11-7z"></path>
+      </svg>
+    </div>
+  </button>
+</div>
+
+<script>
+  function initYouTubeEmbeds() {
+    document.querySelectorAll<HTMLElement>('.yt-lite').forEach((el) => {
+      if (el.dataset.initialized) return;
+      el.dataset.initialized = 'true';
+
+      el.addEventListener('click', () => {
+        const id = el.dataset.videoId;
+        const title = el.dataset.title ?? '';
+        el.innerHTML = `<iframe
+          class="absolute inset-0 w-full h-full"
+          src="https://www.youtube.com/embed/${id}?autoplay=1"
+          title="${title.replace(/"/g, '&quot;')}"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>`;
+        el.style.cursor = 'default';
+      });
+    });
+  }
+
+  document.addEventListener('astro:page-load', initYouTubeEmbeds);
+</script>

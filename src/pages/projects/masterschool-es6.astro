@@ -4,6 +4,7 @@ import Hero from '~/components/widgets/Hero.astro';
 import Content from '~/components/widgets/Content.astro';
 import Features3 from '~/components/widgets/Features3.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
+import YouTubeEmbed from '~/components/widgets/YouTubeEmbed.astro';
 
 const metadata = {
   title: 'ES6 Features Open Gym | Masterschool',
@@ -180,15 +181,7 @@ const metadata = {
         parameters.
       </p>
     </div>
-    <div class="relative w-full rounded-lg shadow-lg overflow-hidden" style="padding-top: 56.25%;">
-      <iframe
-        class="absolute inset-0 w-full h-full"
-        src="https://www.youtube.com/embed/5M3Y9gP-6IM"
-        title="ES6 Features — Morning Session | Masterschool"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen></iframe>
-    </div>
+    <YouTubeEmbed id="5M3Y9gP-6IM" title="ES6 Features — Morning Session | Masterschool" />
   </div>
 
   <!-- Video Part 2 -->
@@ -203,15 +196,7 @@ const metadata = {
         coercion demo, and template literals.
       </p>
     </div>
-    <div class="relative w-full rounded-lg shadow-lg overflow-hidden" style="padding-top: 56.25%;">
-      <iframe
-        class="absolute inset-0 w-full h-full"
-        src="https://www.youtube.com/embed/sFO2gZUbURI"
-        title="ES6 Features — Evening Session | Masterschool"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen></iframe>
-    </div>
+    <YouTubeEmbed id="sFO2gZUbURI" title="ES6 Features — Evening Session | Masterschool" />
   </div>
 
   <!-- Reflection -->

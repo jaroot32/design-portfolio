@@ -4,6 +4,7 @@ import Hero from '~/components/widgets/Hero.astro';
 import Content from '~/components/widgets/Content.astro';
 import Features3 from '~/components/widgets/Features3.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
+import YouTubeEmbed from '~/components/widgets/YouTubeEmbed.astro';
 
 const metadata = {
   title: 'Build a Shopping Cart — Masterschool Project Walkthrough',
@@ -198,15 +199,7 @@ const metadata = {
     </div>
     <div>
       <h3 class="text-lg font-semibold mb-3">Build a Shopping Cart — Full Project Walkthrough</h3>
-      <div class="relative w-full rounded-lg shadow-lg overflow-hidden" style="padding-top: 56.25%;">
-        <iframe
-          class="absolute inset-0 w-full h-full"
-          src="https://www.youtube.com/embed/H7ybB3nEMkY"
-          title="Step-by-Step Guide: Build a Shopping Cart — Masterschool & Udacity"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen></iframe>
-      </div>
+      <YouTubeEmbed id="H7ybB3nEMkY" title="Step-by-Step Guide: Build a Shopping Cart — Masterschool & Udacity" />
     </div>
   </div>
 

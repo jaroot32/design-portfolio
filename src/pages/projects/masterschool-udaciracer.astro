@@ -4,6 +4,7 @@ import Hero from '~/components/widgets/Hero.astro';
 import Content from '~/components/widgets/Content.astro';
 import Features3 from '~/components/widgets/Features3.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
+import YouTubeEmbed from '~/components/widgets/YouTubeEmbed.astro';
 
 const metadata = {
   title: 'UdaciRacer Project Walkthrough — Masterschool',
@@ -122,15 +123,7 @@ const metadata = {
     </div>
     <div>
       <h3 class="text-lg font-semibold mb-3">UdaciRacer — Async JavaScript, Fetch API & DOM Manipulation</h3>
-      <div class="relative w-full rounded-lg shadow-lg overflow-hidden" style="padding-top: 56.25%;">
-        <iframe
-          class="absolute inset-0 w-full h-full"
-          src="https://www.youtube.com/embed/0no9PPMv1a4"
-          title="UdaciRacer Project Walkthrough — Masterschool & Udacity"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen></iframe>
-      </div>
+      <YouTubeEmbed id="0no9PPMv1a4" title="UdaciRacer Project Walkthrough — Masterschool & Udacity" />
     </div>
   </div>
 

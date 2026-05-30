@@ -4,6 +4,7 @@ import Hero from '~/components/widgets/Hero.astro';
 import Content from '~/components/widgets/Content.astro';
 import Features3 from '~/components/widgets/Features3.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
+import YouTubeEmbed from '~/components/widgets/YouTubeEmbed.astro';
 
 const metadata = {
   title: 'Landing Page Project — JavaScript DOM & Scroll Events | Masterschool',
@@ -173,15 +174,10 @@ const metadata = {
         Edited highlights from the live Landing Page project open gym session at Masterschool.
       </p>
     </div>
-    <div class="relative w-full rounded-lg shadow-lg overflow-hidden" style="padding-top: 56.25%;">
-      <iframe
-        class="absolute inset-0 w-full h-full"
-        src="https://www.youtube.com/embed/xpYDyu_ry_A"
-        title="Landing Page Project — JavaScript DOM, Scroll Events & Active States | Masterschool"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen></iframe>
-    </div>
+    <YouTubeEmbed
+      id="xpYDyu_ry_A"
+      title="Landing Page Project — JavaScript DOM, Scroll Events & Active States | Masterschool"
+    />
   </div>
 
   <!-- Reflection -->

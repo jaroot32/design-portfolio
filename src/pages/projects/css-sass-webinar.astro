@@ -8,6 +8,7 @@ import mixinsSlide from '~/assets/images/sass-mixins-slide.jpg';
 import { Image } from 'astro:assets';
 import bemCode from '~/assets/images/sass-bem-code.png';
 import preprocessors from '~/assets/images/sass-preprocessors.png';
+import YouTubeEmbed from '~/components/widgets/YouTubeEmbed.astro';
 
 const metadata = {
   title: 'CSS and SASS Student Webinar — OpenClassrooms',
@@ -153,15 +154,7 @@ const metadata = {
         Sample recording of the live CSS and SASS student webinar, September 23, 2020.
       </p>
     </div>
-    <div class="relative w-full rounded-lg shadow-lg overflow-hidden" style="padding-top: 56.25%;">
-      <iframe
-        class="absolute inset-0 w-full h-full"
-        src="https://www.youtube.com/embed/uZRl5YPO4X0"
-        title="CSS and SASS Student Webinar — OpenClassrooms"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen></iframe>
-    </div>
+    <YouTubeEmbed id="uZRl5YPO4X0" title="CSS and SASS Student Webinar — OpenClassrooms" />
   </div>
 
   <!-- Reflection -->

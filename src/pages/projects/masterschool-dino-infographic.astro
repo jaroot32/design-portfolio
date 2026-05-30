@@ -4,6 +4,7 @@ import Hero from '~/components/widgets/Hero.astro';
 import Content from '~/components/widgets/Content.astro';
 import Features3 from '~/components/widgets/Features3.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
+import YouTubeEmbed from '~/components/widgets/YouTubeEmbed.astro';
 
 const metadata = {
   title: 'Dinosaur Infographic Project — Live Debugging and OOP Walkthrough | Masterschool',
@@ -194,15 +195,10 @@ const metadata = {
         Live OOP support session — JSON loading, Dino constructor, IIFE form handling, and Chrome debugger in real use.
       </p>
     </div>
-    <div class="relative w-full rounded-lg shadow-lg overflow-hidden" style="padding-top: 56.25%;">
-      <iframe
-        class="absolute inset-0 w-full h-full"
-        src="https://www.youtube.com/embed/_ExxEmPhu-w"
-        title="Dinosaur Infographic Project — Live Debugging and OOP Walkthrough | Masterschool"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen></iframe>
-    </div>
+    <YouTubeEmbed
+      id="_ExxEmPhu-w"
+      title="Dinosaur Infographic Project — Live Debugging and OOP Walkthrough | Masterschool"
+    />
   </div>
 
   <!-- Reflection -->

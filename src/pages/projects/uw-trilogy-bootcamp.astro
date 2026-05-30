@@ -7,6 +7,7 @@ import CallToAction from '~/components/widgets/CallToAction.astro';
 import classroomImg1 from '~/assets/images/trilogy-classroom-1.png';
 import vscodeImg from '~/assets/images/trilogy-vscode.png';
 import { Image } from 'astro:assets';
+import YouTubeEmbed from '~/components/widgets/YouTubeEmbed.astro';
 
 const metadata = {
   title: 'Web Development Bootcamp Instruction — University of Washington / Trilogy Education',
@@ -146,15 +147,10 @@ const metadata = {
         A 3-minute excerpt from a live CSS positioning and Chrome Inspector session at the UW bootcamp, 2018.
       </p>
     </div>
-    <div class="relative w-full rounded-lg shadow-lg overflow-hidden" style="padding-top: 56.25%;">
-      <iframe
-        class="absolute inset-0 w-full h-full"
-        src="https://www.youtube.com/embed/NebdU5UbKhk"
-        title="Web Development Bootcamp — CSS Positioning & Chrome Inspector, University of Washington"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen></iframe>
-    </div>
+    <YouTubeEmbed
+      id="NebdU5UbKhk"
+      title="Web Development Bootcamp — CSS Positioning & Chrome Inspector, University of Washington"
+    />
   </div>
 
   <!-- Reflection -->
