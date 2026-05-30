@@ -2,10 +2,38 @@
 import Layout from '~/layouts/PageLayout.astro';
 import Hero from '~/components/widgets/Hero.astro';
 import Features2 from '~/components/widgets/Features2.astro';
+import { Icon } from 'astro-icon/components';
 
 const metadata = {
   title: 'Projects',
 };
+
+const featured = [
+  {
+    icon: 'tabler:sparkles',
+    title: 'Work Smarter with Gemini — Rise 360 Portfolio Course',
+    description:
+      'A self-paced Rise 360 course demonstrating modern AI tool integration for a large health organization — practical, learner-centered design built with Articulate Rise 360 after completing LearningMate training.',
+    href: '/projects/gemini-rise-course',
+    label: 'View Project',
+  },
+  {
+    icon: 'tabler:brand-javascript',
+    title: 'JavaScript & xAPI for eLearning',
+    description:
+      'A fully designed mini-course bridging JavaScript skills and xAPI for eLearning professionals — capstone for a Graduate Certificate in Learning Design & Technology, covering SCORM alternatives and statement design.',
+    href: '/projects/javascript-xapi-elearning',
+    label: 'View Case Study',
+  },
+  {
+    icon: 'tabler:puzzle',
+    title: 'Chrome Extension — Udacity Career Materials Reviewer',
+    description:
+      'A custom-built Chrome extension that cut career materials review time by 80% — from one hour to twelve minutes — by automating repetitive form entry. Built in response to a real workflow bottleneck at Udacity.',
+    href: '/projects/chrome-extension-udacity',
+    label: 'View Case Study',
+  },
+];
 ---
 
 <Layout metadata={metadata}>
@@ -75,6 +103,52 @@ const metadata = {
       >
     </div>
   </div>
+
+  <!-- Featured Work -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 py-12 md:py-16">
+    <div class="mb-10 text-center">
+      <p class="text-sm font-bold uppercase tracking-widest text-accent mb-2">Featured Work</p>
+      <h2 class="text-3xl md:text-4xl font-bold font-heading tracking-tighter">Selected highlights</h2>
+      <p class="text-muted mt-3 text-lg max-w-2xl mx-auto">
+        Three pieces that show the range — eLearning development, instructional design, and technical problem-solving.
+      </p>
+    </div>
+    <div class="grid md:grid-cols-3 gap-6">
+      {
+        featured.map((item) => (
+          <a
+            href={item.href}
+            class="group relative flex flex-col p-6 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-accent dark:hover:border-accent transition-all duration-200 shadow-sm hover:shadow-lg"
+          >
+            <span class="absolute top-4 right-4 text-xs font-semibold text-accent bg-accent/10 dark:bg-accent/20 px-2.5 py-1 rounded-full">
+              Featured
+            </span>
+            <div class="w-11 h-11 rounded-lg bg-accent/10 dark:bg-accent/20 flex items-center justify-center mb-5 shrink-0">
+              <Icon name={item.icon} class="w-6 h-6 text-accent" />
+            </div>
+            <h3 class="text-base font-bold font-heading leading-snug mb-3 pr-16 group-hover:text-accent transition-colors duration-200">
+              {item.title}
+            </h3>
+            <p class="text-sm text-muted leading-relaxed flex-1">{item.description}</p>
+            <div class="mt-5 inline-flex items-center gap-1 text-sm font-medium text-accent">
+              {item.label}
+              <svg
+                class="w-3.5 h-3.5 transition-transform duration-200 group-hover:translate-x-0.5"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+            </div>
+          </a>
+        ))
+      }
+    </div>
+  </section>
 
   <div id="instructional-design"></div>
   <Features2
