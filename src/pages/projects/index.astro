@@ -12,8 +12,8 @@ const metadata = {
   <Hero tagline="Portfolio">
     <Fragment slot="title"> Selected Work </Fragment>
     <Fragment slot="subtitle">
-      A collection of instructional design, eLearning development, technical learning projects, and speaking engagements
-      spanning graduate coursework, professional practice, and independent development.
+      A collection of instructional design, eLearning development, live instruction, and speaking engagements spanning
+      graduate coursework, professional practice, and independent development.
     </Fragment>
     <Fragment slot="bg">
       <div class="absolute inset-0 section-pattern"></div>
@@ -21,7 +21,7 @@ const metadata = {
   </Hero>
 
   <Features2
-    title="Instructional Design"
+    title="Instructional Design & eLearning"
     columns={2}
     items={[
       {
@@ -32,9 +32,16 @@ const metadata = {
         callToAction: { text: 'View Project', href: '/projects/gemini-rise-course' },
       },
       {
+        title: 'JavaScript & xAPI for eLearning',
+        description:
+          'A fully designed mini-course bridging the gap between JavaScript skills and xAPI understanding for eLearning professionals. Developed as the capstone for a Graduate Certificate in Learning Design & Technology.',
+        icon: 'tabler:brand-javascript',
+        callToAction: { text: 'View Case Study', href: '/projects/javascript-xapi-elearning' },
+      },
+      {
         title: 'ChatGPT as an AI-Powered Learning Tool',
         description:
-          'A research-backed evaluation and 3-phase implementation strategy for integrating ChatGPT into technical SaaS customer education — including a practical AI Tool Guide for learning designers. UMGC LDTC 620: Next Generation Design — Emerging Technology, Gamification, and AI in Learning Design.',
+          'A research-backed evaluation and 3-phase implementation strategy for integrating ChatGPT into technical SaaS customer education — including a practical AI Tool Guide for learning designers. UMGC LDTC 620.',
         icon: 'tabler:robot',
         callToAction: { text: 'View Case Study', href: '/projects/ldtc620-chatgpt-ai-tool' },
       },
@@ -46,18 +53,18 @@ const metadata = {
         callToAction: { text: 'View Case Study', href: '/projects/ldtc620-social-learning-tech' },
       },
       {
-        title: 'JavaScript & xAPI for eLearning',
+        title: 'Learning Technology Infographic',
         description:
-          'A fully designed mini-course bridging the gap between JavaScript skills and xAPI understanding for eLearning professionals. Developed as the capstone for a Graduate Certificate in Learning Design & Technology.',
-        icon: 'tabler:brand-javascript',
-        callToAction: { text: 'View Case Study', href: '/projects/javascript-xapi-elearning' },
+          'A visual synthesis of learning technology frameworks — SAMR, the Hype Cycle, and Articulate Rise 360 — designed in Canva as the Unit 1 assignment for LDTC 620: Next Generation Design — Emerging Technology, Gamification, and AI in Learning Design at UMGC.',
+        icon: 'tabler:layout',
+        callToAction: { text: 'View Project', href: '/projects/ldtc620-infographic' },
       },
       {
-        title: 'Intro to Epic React — Live Group Session',
+        title: 'Chrome Extension — Udacity Career Materials Reviewer',
         description:
-          "A live one-hour group onboarding session for Masterschool students — watching Kent C. Dodds' welcome video together and completing every setup step live, so no one hit a wall before the first exercise.",
-        icon: 'tabler:brand-react',
-        callToAction: { text: 'View Case Study', href: '/projects/masterschool-epic-react-intro' },
+          'A custom-built Chrome extension that reduced average career materials review time by 80% — from one hour to twenty minutes — by automating repetitive form entry at Udacity.',
+        icon: 'tabler:puzzle',
+        callToAction: { text: 'View Case Study', href: '/projects/chrome-extension-udacity' },
       },
       {
         title: 'Epic React Step-by-Step Guides — Masterschool',
@@ -67,11 +74,32 @@ const metadata = {
         callToAction: { text: 'View Case Study', href: '/projects/masterschool-epic-react' },
       },
       {
+        title: 'Build a Shopping Cart — Masterschool Project Walkthrough',
+        description:
+          'A step-by-step Loom screencast walkthrough for Masterschool students working through the Build a Shopping Cart project on the Udacity platform — guiding them from project setup through to completion.',
+        icon: 'tabler:shopping-cart',
+        callToAction: { text: 'View Case Study', href: '/projects/masterschool-shopping-cart' },
+      },
+      {
         title: 'Peer to Peer: Pair Programming with Epic React — Masterschool',
         description:
           'A live presentation delivered to Masterschool students introducing pair programming as a structured learning strategy — covering the driver/navigator model, productive struggle, and how to collaborate effectively in the Epic React Testing Workshop.',
         icon: 'tabler:users',
         callToAction: { text: 'View Case Study', href: '/projects/masterschool-pair-programming' },
+      },
+    ]}
+  />
+
+  <Features2
+    title="Live Instruction — Masterschool"
+    columns={2}
+    items={[
+      {
+        title: 'Personal Blog Project Walkthrough — Masterschool',
+        description:
+          'A live project walkthrough and Q&A session for Masterschool students on the Udacity Personal Blog project — covering CSS architecture, mobile-first responsive design, CSS Grid, and Flexbox with real-time student questions throughout.',
+        icon: 'tabler:layout-columns',
+        callToAction: { text: 'View Case Study', href: '/projects/masterschool-personal-blog' },
       },
       {
         title: 'CSS Selectors and the Cascade — Masterschool',
@@ -81,25 +109,18 @@ const metadata = {
         callToAction: { text: 'View Case Study', href: '/projects/masterschool-css-selectors' },
       },
       {
-        title: 'Teaching Node and Express — Masterschool',
-        description:
-          'A live 32-minute session introducing career-changers to server-side development with Node.js and Express — the hardest conceptual shift in the bootcamp curriculum, taught with scaffolded mental models, live code demos, and real-time student interaction.',
-        icon: 'tabler:server',
-        callToAction: { text: 'View Case Study', href: '/projects/masterschool-node-express' },
-      },
-      {
-        title: 'myReads Book Tracker — React Project Intro',
-        description:
-          'A live session introducing Masterschool students to the myReads React project — demoing the finished app first, walking the rubric, and mapping each feature to the specific React concept needed to build it.',
-        icon: 'tabler:book',
-        callToAction: { text: 'View Case Study', href: '/projects/masterschool-myreads-book-tracker' },
-      },
-      {
         title: 'Landing Page Project — JavaScript DOM & Scroll Events',
         description:
           'A live open gym session on the Udacity Landing Page project — covering dynamic nav generation, getBoundingClientRect() for viewport detection, scrollIntoView() for smooth scrolling, and toggling active state classes as sections come into view.',
         icon: 'tabler:layout-navbar',
         callToAction: { text: 'View Case Study', href: '/projects/masterschool-landing-page' },
+      },
+      {
+        title: 'JavaScript Brain Teasers — Catchup Week Open Gym | Masterschool',
+        description:
+          'A live open gym session covering JavaScript prototypes in response to a student question, then working through two interview-style brain teasers live: a vowel frequency counter and a total uppercase letter counter, with full student participation throughout.',
+        icon: 'tabler:puzzle',
+        callToAction: { text: 'View Case Study', href: '/projects/masterschool-brain-teasers' },
       },
       {
         title: 'JavaScript Closures — Live Practice Session',
@@ -116,13 +137,6 @@ const metadata = {
         callToAction: { text: 'View Case Study', href: '/projects/masterschool-closures-practice' },
       },
       {
-        title: 'JavaScript Brain Teasers — Catchup Week Open Gym | Masterschool',
-        description:
-          'A live open gym session covering JavaScript prototypes in response to a student question, then working through two interview-style brain teasers live: a vowel frequency counter and a total uppercase letter counter, with full student participation throughout.',
-        icon: 'tabler:puzzle',
-        callToAction: { text: 'View Case Study', href: '/projects/masterschool-brain-teasers' },
-      },
-      {
         title: 'ES6 Features Open Gym — Masterschool',
         description:
           'Two live open gym sessions covering the core ES6 feature set: destructuring, spread, rest parameters, for...of loops, arrow functions, default parameters, and template literals with live coding and real-time student Q&A.',
@@ -137,11 +151,11 @@ const metadata = {
         callToAction: { text: 'View Case Study', href: '/projects/masterschool-es6-exercises' },
       },
       {
-        title: 'Dinosaur Infographic — Live Debugging and OOP Walkthrough | Masterschool',
+        title: 'Node, npm, and Higher-Order Functions — Live Coding Session | Masterschool',
         description:
-          'A small-group support session for students blocked on the Udacity Dinosaur Infographic project — working through two methods for loading JSON data, building the Dino constructor live, implementing the IIFE pattern for form handling, and debugging with the Chrome debugger as students watched in real time.',
-        icon: 'tabler:bug',
-        callToAction: { text: 'View Case Study', href: '/projects/masterschool-dino-infographic' },
+          'A live session covering Node.js, npm, and module loading — then rebuilding map, forEach, filter, and reduce from scratch using plain for loops and callbacks, as preparation for understanding promises and async/await.',
+        icon: 'tabler:package',
+        callToAction: { text: 'View Case Study', href: '/projects/masterschool-npm-higher-order' },
       },
       {
         title: 'JavaScript Async — Promises, .then/.catch, and Promise.all | Masterschool',
@@ -151,18 +165,32 @@ const metadata = {
         callToAction: { text: 'View Case Study', href: '/projects/masterschool-async-promises' },
       },
       {
-        title: 'Node, npm, and Higher-Order Functions — Live Coding Session | Masterschool',
+        title: 'Dinosaur Infographic — Live Debugging and OOP Walkthrough | Masterschool',
         description:
-          'A live session covering Node.js, npm, and module loading — then rebuilding map, forEach, filter, and reduce from scratch using plain for loops and callbacks, as preparation for understanding promises and async/await.',
-        icon: 'tabler:package',
-        callToAction: { text: 'View Case Study', href: '/projects/masterschool-npm-higher-order' },
+          'A small-group support session for students blocked on the Udacity Dinosaur Infographic project — working through two methods for loading JSON data, building the Dino constructor live, implementing the IIFE pattern for form handling, and debugging with the Chrome debugger as students watched in real time.',
+        icon: 'tabler:bug',
+        callToAction: { text: 'View Case Study', href: '/projects/masterschool-dino-infographic' },
       },
       {
-        title: 'Redux and State Management — Group Review and Q&A | Masterschool',
+        title: 'Teaching Node and Express — Masterschool',
         description:
-          'A group review session covering Redux fundamentals — the three core principles, the full action/dispatch/reducer flow, middleware, useReducer, and the Context API — using breakout rooms for collaborative Q&A followed by a full-group debrief.',
-        icon: 'tabler:box',
-        callToAction: { text: 'View Case Study', href: '/projects/masterschool-redux' },
+          'A live 32-minute session introducing career-changers to server-side development with Node.js and Express — the hardest conceptual shift in the bootcamp curriculum, taught with scaffolded mental models, live code demos, and real-time student interaction.',
+        icon: 'tabler:server',
+        callToAction: { text: 'View Case Study', href: '/projects/masterschool-node-express' },
+      },
+      {
+        title: 'Intro to Epic React — Live Group Session',
+        description:
+          "A live one-hour group onboarding session for Masterschool students — watching Kent C. Dodds' welcome video together and completing every setup step live, so no one hit a wall before the first exercise.",
+        icon: 'tabler:brand-react',
+        callToAction: { text: 'View Case Study', href: '/projects/masterschool-epic-react-intro' },
+      },
+      {
+        title: 'myReads Book Tracker — React Project Intro',
+        description:
+          'A live session introducing Masterschool students to the myReads React project — demoing the finished app first, walking the rubric, and mapping each feature to the specific React concept needed to build it.',
+        icon: 'tabler:book',
+        callToAction: { text: 'View Case Study', href: '/projects/masterschool-myreads-book-tracker' },
       },
       {
         title: 'React Fundamentals Review — Virtual DOM, JSX, Props, and Component Design | Masterschool',
@@ -179,32 +207,11 @@ const metadata = {
         callToAction: { text: 'View Case Study', href: '/projects/masterschool-udaciracer' },
       },
       {
-        title: 'Personal Blog Project Walkthrough — Masterschool',
+        title: 'Redux and State Management — Group Review and Q&A | Masterschool',
         description:
-          'A live project walkthrough and Q&A session for Masterschool students on the Udacity Personal Blog project — covering CSS architecture, mobile-first responsive design, CSS Grid, and Flexbox with real-time student questions throughout.',
-        icon: 'tabler:layout-columns',
-        callToAction: { text: 'View Case Study', href: '/projects/masterschool-personal-blog' },
-      },
-      {
-        title: 'Build a Shopping Cart — Masterschool Project Walkthrough',
-        description:
-          'A step-by-step Loom screencast walkthrough for Masterschool students working through the Build a Shopping Cart project on the Udacity platform — guiding them from project setup through to completion.',
-        icon: 'tabler:shopping-cart',
-        callToAction: { text: 'View Case Study', href: '/projects/masterschool-shopping-cart' },
-      },
-      {
-        title: 'Chrome Extension — Udacity Career Materials Reviewer',
-        description:
-          'A custom-built Chrome extension that reduced average career materials review time by 80% — from one hour to twenty minutes — by automating repetitive form entry at Udacity.',
-        icon: 'tabler:puzzle',
-        callToAction: { text: 'View Case Study', href: '/projects/chrome-extension-udacity' },
-      },
-      {
-        title: 'Learning Technology Infographic',
-        description:
-          'A visual synthesis of learning technology frameworks — SAMR, the Hype Cycle, and Articulate Rise 360 — designed in Canva as the Unit 1 assignment for LDTC 620: Next Generation Design — Emerging Technology, Gamification, and AI in Learning Design at UMGC.',
-        icon: 'tabler:layout',
-        callToAction: { text: 'View Project', href: '/projects/ldtc620-infographic' },
+          'A group review session covering Redux fundamentals — the three core principles, the full action/dispatch/reducer flow, middleware, useReducer, and the Context API — using breakout rooms for collaborative Q&A followed by a full-group debrief.',
+        icon: 'tabler:box',
+        callToAction: { text: 'View Case Study', href: '/projects/masterschool-redux' },
       },
     ]}
   />
