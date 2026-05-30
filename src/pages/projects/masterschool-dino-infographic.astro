@@ -62,6 +62,52 @@ const metadata = {
     </Fragment>
   </Content>
 
+  <!-- OOJ Conceptual Foundation -->
+  <Features3
+    tagline="Object-Oriented JavaScript"
+    title="The conceptual layer before the project"
+    subtitle="Before debugging the assignment, students needed a shared mental model for how JavaScript handles objects and inheritance — which is different from every class-based language they may have encountered before."
+    columns={3}
+    items={[
+      {
+        title: 'Prototypal vs. Classical Inheritance',
+        description:
+          'JavaScript does not use class-based inheritance like Java or C++. It uses prototypal inheritance — objects link directly to other objects through a prototype chain, rather than inheriting from a class blueprint. ES6 class syntax is syntactical sugar over this same mechanism, not a replacement for it.',
+        icon: 'tabler:sitemap',
+      },
+      {
+        title: 'The Prototype Chain',
+        description:
+          'Every JavaScript object has a private link to another object called its prototype. That prototype has its own prototype, and so on — until an object with a null prototype is reached. When the engine looks up a property or method, it walks this chain until it finds it or reaches the end.',
+        icon: 'tabler:link',
+      },
+      {
+        title: 'Inheritance, Simply Put',
+        description:
+          'Inheritance means one object gets access to the properties and methods of another. In JavaScript, this happens automatically through the prototype chain — no explicit copying of properties required. The engine checks the chain at lookup time, not at creation time.',
+        icon: 'tabler:arrows-transfer-down',
+      },
+      {
+        title: 'Object Literals',
+        description:
+          "The simplest way to create an object: use curly braces {}. Useful for one-off data structures and config objects. Doesn't support reuse through prototypal inheritance without Object.create().",
+        icon: 'tabler:braces',
+      },
+      {
+        title: 'Constructor Functions and ES6 Classes',
+        description:
+          "Constructor functions use the new keyword to create object instances, and .prototype to add shared methods. ES6 class syntax does the same thing with cleaner grammar — which is why it's called syntactical sugar. React uses this syntax for class components.",
+        icon: 'tabler:package',
+      },
+      {
+        title: 'Object.create() for Prototypal Inheritance',
+        description:
+          'Object.create() lets you set the prototype of a new object explicitly — the most direct expression of prototypal inheritance in JavaScript. Useful when you want an object to inherit from another without the constructor function pattern.',
+        icon: 'tabler:share',
+      },
+    ]}
+  />
+
   <!-- What I Covered -->
   <Features3
     tagline="The Content"
