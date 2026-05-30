@@ -134,27 +134,27 @@ const metadata = {
     </Fragment>
     <Fragment slot="content">
       <p class="mb-4">
-        Every flexbox property was demonstrated live in CodePen — not shown on a slide, not described abstractly. I
-        kept the same starting point for the whole session: one container div with five colored child divs. That
-        consistency let students focus on what <em>changed</em> when each new property was applied, rather than
-        reorienting to a new example every few minutes.
+        Every flexbox property was demonstrated live in CodePen — not shown on a slide, not described abstractly. I kept
+        the same starting point for the whole session: one container div with five colored child divs. That consistency
+        let students focus on what <em>changed</em> when each new property was applied, rather than reorienting to a new
+        example every few minutes.
       </p>
       <p class="mb-4">
         The structure also made Q&A natural. When a student asked about the <code
           class="bg-gray-100 dark:bg-gray-800 px-1 rounded text-sm">gap</code
-        > property, I could answer it live in the same CodePen they'd been watching. When another student asked about
-        grid-template-areas, I could explain why that was grid's territory — and why that distinction matters.
+        > property, I could answer it live in the same CodePen they'd been watching. When another student asked about grid-template-areas,
+        I could explain why that was grid's territory — and why that distinction matters.
       </p>
       <p class="mb-4">
         One of the best moments came when a student named Mustafan noticed that a width override on the child elements
-        was preventing <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded text-sm">flex-grow</code> from working
-        correctly. He suggested removing it before I did. That kind of active problem-solving — students debugging live
-        code alongside the instructor — is the outcome I'm building toward with every demo.
+        was preventing <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded text-sm">flex-grow</code> from working correctly.
+        He suggested removing it before I did. That kind of active problem-solving — students debugging live code alongside
+        the instructor — is the outcome I'm building toward with every demo.
       </p>
       <p>
         I closed by tying everything back to the deadline: <em
-          >"You have two days on the blog project. Use flex-direction, justify-content, and align-items. That's
-          honestly most of what you need."</em
+          >"You have two days on the blog project. Use flex-direction, justify-content, and align-items. That's honestly
+          most of what you need."</em
         > Specificity over comprehensiveness — meet students where the pressure is.
       </p>
     </Fragment>
@@ -173,7 +173,7 @@ const metadata = {
               {
                 student: 'Mustafan',
                 question: 'What if we remove the width override?',
-                insight: 'Identified why flex-grow wasn\'t distributing space — a real debugging insight.',
+                insight: "Identified why flex-grow wasn't distributing space — a real debugging insight.",
               },
               {
                 student: 'Student',
@@ -210,14 +210,14 @@ const metadata = {
       <p class="mb-4">
         Mustafan's contribution during the <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded text-sm"
           >flex-grow</code
-        > demo is a good example of what engaged learning looks like. He didn't wait to be called on — he connected
-        what he saw on screen to something he'd been thinking about and offered a solution. I confirmed it live, which
-        reinforced both the concept and the pattern of students trusting their own reasoning.
+        > demo is a good example of what engaged learning looks like. He didn't wait to be called on — he connected what
+        he saw on screen to something he'd been thinking about and offered a solution. I confirmed it live, which reinforced
+        both the concept and the pattern of students trusting their own reasoning.
       </p>
       <p>
-        The grid-template-areas question was equally useful. It gave me the chance to distinguish flexbox (one-dimensional
-        — row <em>or</em> column) from CSS Grid (two-dimensional — rows <em>and</em> columns simultaneously) in a
-        way that was motivated by actual student curiosity rather than a slide I'd planned to show.
+        The grid-template-areas question was equally useful. It gave me the chance to distinguish flexbox
+        (one-dimensional — row <em>or</em> column) from CSS Grid (two-dimensional — rows <em>and</em> columns simultaneously)
+        in a way that was motivated by actual student curiosity rather than a slide I'd planned to show.
       </p>
     </Fragment>
     <Fragment slot="bg">
@@ -258,21 +258,21 @@ const metadata = {
     <Fragment slot="content">
       <p class="mb-4">
         CSS layout is hard to teach because it's spatially abstract. Students can memorize
-        <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded text-sm">justify-content: space-between</code> without
-        being able to predict what it will do on a screen they haven't seen. The only fix is showing it — running the
-        demo, changing the value, watching what moves.
+        <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded text-sm">justify-content: space-between</code> without being
+        able to predict what it will do on a screen they haven't seen. The only fix is showing it — running the demo, changing
+        the value, watching what moves.
       </p>
       <p class="mb-4">
         That's why every flexbox property in this session was introduced by changing one line in a live CodePen, not by
-        describing it. The visual before-and-after is the explanation. The words just anchor what the student is
-        already seeing.
+        describing it. The visual before-and-after is the explanation. The words just anchor what the student is already
+        seeing.
       </p>
       <p class="mb-4">
         Mobile-first thinking adds another layer: it asks students to invert the order they naturally want to work in.
         Most beginners start with desktop and add complexity for mobile. Mobile-first asks them to start with
         constraints and expand — a harder cognitive lift, but one that pays off in cleaner, more maintainable CSS.
-        Making that argument explicit, with a historical frame, gives students a reason to adopt the pattern rather
-        than just comply with it.
+        Making that argument explicit, with a historical frame, gives students a reason to adopt the pattern rather than
+        just comply with it.
       </p>
       <div class="mt-6 flex flex-wrap gap-2">
         {
