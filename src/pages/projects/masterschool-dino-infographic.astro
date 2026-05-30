@@ -1,0 +1,284 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Content from '~/components/widgets/Content.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'Dinosaur Infographic Project — Live Debugging and OOP Walkthrough | Masterschool',
+};
+---
+
+<Layout metadata={metadata}>
+  <Hero tagline="Live Instruction · JavaScript · OOP · Masterschool">
+    <Fragment slot="title">
+      Dinosaur Infographic —<br />
+      <span class="text-accent dark:text-white">Live Debugging and OOP Walkthrough</span>
+    </Fragment>
+    <Fragment slot="subtitle">
+      A small-group support session for Masterschool students blocked on the Udacity Dinosaur Infographic project —
+      working through two methods for loading JSON data, building the Dino constructor live, implementing the IIFE
+      pattern for form handling, and debugging with the Chrome debugger as students watched in real time.
+    </Fragment>
+  </Hero>
+
+  <!-- Context -->
+  <Content tagline="The Session" title="Show your screen and we'll get you unblocked" isReversed>
+    <Fragment slot="image">
+      <div class="flex items-center justify-center h-full py-12">
+        <div class="text-center">
+          <p class="text-8xl font-bold font-heading text-accent leading-none">2</p>
+          <p class="text-xl text-muted mt-3">methods to load JSON data</p>
+          <div class="mt-8 space-y-2 text-sm text-muted">
+            <p class="font-semibold text-gray-700 dark:text-gray-300">Masterschool Coding Bootcamp</p>
+            <p>JavaScript · OOP · Udacity Curriculum</p>
+            <p>International cohort · Small group · Office hours format</p>
+          </div>
+        </div>
+      </div>
+    </Fragment>
+    <Fragment slot="content">
+      <p class="mb-4">
+        This session was specifically for students who hadn't yet passed the Udacity Dinosaur Infographic project — a
+        JavaScript OOP assignment requiring constructor functions, JSON data loading, DOM manipulation, form handling,
+        and comparison logic. Students who had already passed were welcome to stay and help. Julia did exactly that.
+      </p>
+      <p class="mb-4">
+        Rather than delivering new content, the format was simple: share your screen, show where you're blocked, and
+        work through it together. Abdullah was blocked on loading the JSON file into the app. Vijay hadn't started yet
+        but had a specific question about how importing objects worked. The session adapted in real time to what was
+        actually in front of students.
+      </p>
+      <p>
+        From there the session moved into a live walkthrough — building out the Dino constructor, the HTML rendering
+        function, the IIFE for form data, and the comparison logic — with the Chrome debugger open when things didn't
+        work as expected. Getting stuck and unstuck live was part of the point.
+      </p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 section-pattern-b"></div>
+    </Fragment>
+  </Content>
+
+  <!-- What I Covered -->
+  <Features3
+    tagline="The Content"
+    title="What the session covered"
+    subtitle="From JSON loading to comparison logic — built live with students watching, with real debugging moments throughout."
+    columns={3}
+    items={[
+      {
+        title: 'Two Methods to Load JSON',
+        description:
+          'Demonstrated both approaches: the import method (convert .json to .js, assign to a variable, export default, import in app.js, add type="module" to the script tag) and the fetch method (fetch the file, chain .then(res => res.json()), then pass the data where needed). Showed each resolving in the console.',
+        icon: 'tabler:file-import',
+      },
+      {
+        title: 'Dino Constructor Function',
+        description:
+          'Built the Dino constructor live — taking a destructured object with diet, fact, height, species, weight, when, and where — and using the this keyword to assign each property. Confirmed that the constructor can also be written as a class, which one student asked about.',
+        icon: 'tabler:puzzle',
+      },
+      {
+        title: 'Image Method and .toLowerCase()',
+        description:
+          "Added an img() method to the constructor that builds the image path using this.species.toLowerCase() + '.png' — because the species names in the JSON are uppercase (Triceratops) but the image filenames are lowercase (triceratops.png). The mismatch would silently break the image source without this step.",
+        icon: 'tabler:photo',
+      },
+      {
+        title: 'Render Method with Template Literals',
+        description:
+          'Built a render() method that returns an HTML div using template literals — inserting species, height, diet, when, where, and the image source. Students contributed answers for which properties to insert at each step. Emphasized that the HTML structure and styling choices were up to each student.',
+        icon: 'tabler:code',
+      },
+      {
+        title: 'htmlDinos Function and Looping',
+        description:
+          'Wrote a function that takes the dinos array, loops through it, instantiates new Dino() for each object, and pushes the resulting HTML node to an output array. Hit a real bug live — the array was coming back empty — and worked through it with the Chrome debugger before finding and fixing the issue.',
+        icon: 'tabler:refresh',
+      },
+      {
+        title: 'IIFE for Form Data',
+        description:
+          'Showed the IIFE pattern as the way to grab and save references to form fields — document.getElementById() calls inside an immediately invoked function expression that returns a function, which when called returns an object with all the filled-in values. Connected it back to the module pattern and closures covered earlier in the program.',
+        icon: 'tabler:brackets',
+      },
+      {
+        title: 'String to Number Conversion',
+        description:
+          'Demonstrated that form input values always come back as strings — even when the user types a number. Showed the Number() constructor as the fix and walked through where to apply it: before doing multiplication or comparison, not after. Confirmed it live by logging the type of a grabbed form value.',
+        icon: 'tabler:123',
+      },
+      {
+        title: 'Compare Object IIFE',
+        description:
+          'Sketched out the comparison logic: another IIFE that returns an object exposing comparison methods (compareWeight, etc.). Each method takes the dinos array and the human object, loops through, counts how many dinosaurs the human outweighs, and returns the count — which gets added as a property on the human tile before rendering.',
+        icon: 'tabler:math-equal-lower',
+      },
+      {
+        title: 'Chrome Debugger in Real Use',
+        description:
+          "Used the Chrome debugger — not as a demo, but because the code wasn't working. Set a breakpoint inside the htmlDinos function, stepped through, and watched the empty array problem reveal itself. Closed with the reminder that getting stuck is normal and that the debugger and console.log are the actual tools professionals use.",
+        icon: 'tabler:bug',
+      },
+    ]}
+  />
+
+  <!-- Approach -->
+  <Content tagline="The Approach" title="Screen share first, then build together">
+    <Fragment slot="image">
+      <div class="flex items-center justify-center h-full py-12 px-6">
+        <div class="w-full max-w-sm space-y-3">
+          {
+            [
+              { step: '01', label: 'Check In', detail: "Each student shares where they are · what's blocking them" },
+              { step: '02', label: 'Screen Share', detail: "Look at the actual code · errors · what's been tried" },
+              { step: '03', label: 'Live Walkthrough', detail: 'Two JSON methods · Dino constructor · render · IIFE' },
+              {
+                step: '04',
+                label: 'Debug Live',
+                detail: 'Chrome debugger open · empty array issue · traced and fixed',
+              },
+              { step: '05', label: 'Next Steps', detail: 'Comparison logic · human tile · Slack if blocked again' },
+            ].map((item) => (
+              <div class="flex items-start gap-4 p-3 rounded-lg border border-gray-200 dark:border-gray-700">
+                <span class="text-accent font-bold font-heading text-lg leading-none">{item.step}</span>
+                <div>
+                  <p class="font-semibold text-sm text-gray-800 dark:text-gray-200">{item.label}</p>
+                  <p class="text-xs text-muted mt-0.5">{item.detail}</p>
+                </div>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </Fragment>
+    <Fragment slot="content">
+      <p class="mb-4">
+        A support session structured around student blockers is a different kind of facilitation than a lecture. The
+        goal isn't to deliver content — it's to diagnose what's actually stopping each person and find the smallest
+        intervention that gets them moving again. Asking Abdullah to share his screen rather than describe the problem
+        was that intervention. Seeing the code, the errors, and what he'd tried was more useful than any explanation.
+      </p>
+      <p class="mb-4">
+        The two JSON loading approaches served different students. The import method is cleaner if students are
+        comfortable with modules. The fetch approach is more aligned with what they'd been doing all month — promises,
+        .then chaining, async data. Showing both gave students a choice and surfaced why each one exists.
+      </p>
+      <p class="mb-4">
+        The live debugging moment with the empty array was unplanned but useful. The code looked right. The console
+        wasn't giving a useful error. Opening the debugger and stepping through line by line was the only way to see
+        what was actually happening — and that's a more honest picture of how debugging works than a tutorial where
+        every example resolves cleanly on the first try.
+      </p>
+      <p>
+        Julia attending after already passing the project was a good signal. The session closed with a reminder that
+        getting blocked for hours without reaching out isn't necessary — Slack, office hours, and one-on-one support are
+        there specifically for moments like this.
+      </p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 section-pattern"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Video -->
+  <div class="max-w-4xl mx-auto px-4 md:px-8 py-12 md:py-16">
+    <div class="text-center mb-8">
+      <p class="text-base text-secondary dark:text-blue-200 font-bold tracking-wide uppercase mb-2">
+        Session Recording
+      </p>
+      <h2 class="text-4xl md:text-5xl font-bold tracking-tighter font-heading">Watch the Session</h2>
+      <p class="text-lg text-muted mt-4">
+        Live OOP support session — JSON loading, Dino constructor, IIFE form handling, and Chrome debugger in real use.
+      </p>
+    </div>
+    <div class="relative w-full rounded-lg shadow-lg overflow-hidden" style="padding-top: 56.25%;">
+      <iframe
+        class="absolute inset-0 w-full h-full"
+        src="https://www.youtube.com/embed/_ExxEmPhu-w"
+        title="Dinosaur Infographic Project — Live Debugging and OOP Walkthrough | Masterschool"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+    </div>
+  </div>
+
+  <!-- Reflection -->
+  <Content tagline="Reflection" title="Getting stuck is part of it — show that" isReversed>
+    <Fragment slot="image">
+      <div class="flex items-center justify-center h-full py-12">
+        <div class="text-center">
+          <p class="text-8xl font-bold font-heading text-accent leading-none">9</p>
+          <p class="text-xl text-muted mt-3">concepts covered in one session</p>
+          <div class="mt-8 space-y-1 text-sm text-muted">
+            <p class="font-semibold text-gray-700 dark:text-gray-300">OOP · Constructor Functions · IIFE</p>
+            <p>JSON loading · DOM manipulation · Debugging</p>
+            <p>Small group · Office hours · Live unblocking</p>
+          </div>
+        </div>
+      </div>
+    </Fragment>
+    <Fragment slot="content">
+      <p class="mb-4">
+        The empty array bug was the most instructive moment in the session. The function looked right. Nothing in the
+        console pointed directly at the problem. Opening the debugger and stepping through was the only path forward —
+        and doing that live, with students watching, modeled something that polished tutorial videos can't: what it
+        actually looks like to investigate code that isn't working.
+      </p>
+      <p class="mb-4">
+        The .toLowerCase() detail is a good example of the kind of gap that derails projects without generating an
+        obvious error. The image just doesn't load. There's no red squiggly line, no exception thrown. Understanding why
+        — that the species name in the JSON is capitalized but the filename isn't — requires reading both the data and
+        the file system together, not just the code in front of you.
+      </p>
+      <div class="mt-6 flex flex-wrap gap-2">
+        {
+          [
+            'JavaScript',
+            'OOP',
+            'Constructor Functions',
+            'IIFE',
+            'JSON',
+            'Fetch API',
+            'ES Modules',
+            'import/export',
+            'this Keyword',
+            'Template Literals',
+            'DOM Manipulation',
+            'Chrome Debugger',
+            'Type Coercion',
+            'String to Number',
+            'Array Methods',
+            'Module Pattern',
+            'Closures',
+            'Live Debugging',
+            'Office Hours',
+            'Masterschool',
+          ].map((tag) => (
+            <span class="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-sm font-medium px-3 py-1 rounded-full">
+              {tag}
+            </span>
+          ))
+        }
+      </div>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 section-pattern-b"></div>
+    </Fragment>
+  </Content>
+
+  <CallToAction
+    actions={[
+      { variant: 'primary', text: 'View All Projects', href: '/projects' },
+      { text: 'Get in Touch', href: '/about#contact' },
+    ]}
+  >
+    <Fragment slot="title">Interested in working together?</Fragment>
+    <Fragment slot="subtitle"
+      >I'm open to remote opportunities in technical learning experience design, developer education, and customer
+      enablement.</Fragment
+    >
+  </CallToAction>
+</Layout>
