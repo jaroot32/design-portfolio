@@ -1,0 +1,335 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Content from '~/components/widgets/Content.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'Web Application Security — OWASP and Common Attacks | Masterschool',
+};
+---
+
+<Layout metadata={metadata}>
+  <Hero tagline="Live Instruction · OWASP · Web Security · Masterschool">
+    <Fragment slot="title">
+      Common Security Attacks —<br />
+      <span class="text-accent dark:text-white">Securing Web Apps with OWASP</span>
+    </Fragment>
+    <Fragment slot="subtitle">
+      A live webinar introducing Masterschool students to the OWASP Top Ten — covering injection attacks, broken
+      authentication, data exposure, XSS/CSRF, broken access control, and three new 2021 additions, with a focus on why
+      each vulnerability exists and how to prevent it.
+    </Fragment>
+  </Hero>
+
+  <!-- Context -->
+  <Content tagline="The Webinar" title="Security as a programming discipline, not an afterthought" isReversed>
+    <Fragment slot="image">
+      <div class="flex items-center justify-center h-full py-12">
+        <div class="text-center">
+          <p class="text-7xl font-bold font-heading text-accent leading-none">10</p>
+          <p class="text-xl text-muted mt-3">OWASP Top Ten attack categories</p>
+          <div class="mt-8 space-y-2 text-sm text-muted">
+            <p class="font-semibold text-gray-700 dark:text-gray-300">Web Application Security</p>
+            <p>OWASP · GDPR · HIPAA · Secure SDLC</p>
+            <p>Live webinar · Masterschool Coding Bootcamp</p>
+          </div>
+        </div>
+      </div>
+    </Fragment>
+    <Fragment slot="content">
+      <p class="mb-4">
+        Security is one of the most undercovered topics in web development bootcamps — not because it's unimportant, but
+        because it's easy to treat as someone else's problem. The goal of this webinar was to make it concrete and
+        personal: web application vulnerabilities are not exotic edge cases. Eighty percent of data breaches on web
+        applications trace back to poor coding practices that developers write themselves.
+      </p>
+      <p class="mb-4">
+        The session opened with the 2012 Yahoo breach — 450,000 user passwords exposed publicly due to poor database
+        security configuration — as a real-world stake. From there, it moved through risk quantification, regulatory
+        context, and a structured walkthrough of the OWASP Top Ten: what each attack looks like, how it happens, and
+        what code-level prevention looks like.
+      </p>
+      <p>
+        Students were also pointed toward{' '}
+        <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded text-sm">hacksplaining.com</code> — an interactive site where
+        they could try out each attack category in a sandboxed environment, turning the conceptual walkthrough into something
+        they could feel from both sides.
+      </p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 section-pattern-b"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Learning Objectives -->
+  <Features3
+    tagline="Learning Objectives"
+    title="What students were meant to walk away with"
+    subtitle="Three goals shaped what to cover and how to frame it — moving from awareness to understanding to hands-on exploration."
+    columns={3}
+    items={[
+      {
+        title: 'Understand Secure Programming',
+        description:
+          'Frame security not as a specialized discipline but as a baseline responsibility — the kind of vulnerabilities that cause data breaches are introduced by developers writing ordinary code without thinking about how it can be exploited.',
+        icon: 'tabler:shield-check',
+      },
+      {
+        title: 'Understand OWASP',
+        description:
+          'Learn what the Open Web Application Security Project is, why it matters as a shared industry standard, and how its Top Ten list organizes the most common and impactful vulnerability categories in web applications.',
+        icon: 'tabler:list-numbers',
+      },
+      {
+        title: 'Try Out Attacks Hands-On',
+        description:
+          'Use hacksplaining.com to experience each attack category interactively — not just reading about SQL injection or XSS, but attempting it in a safe environment to understand what the attacker actually does.',
+        icon: 'tabler:bug',
+      },
+    ]}
+  />
+
+  <!-- Business Case for Security -->
+  <Content tagline="Why It Matters" title="Quantifying the cost of a breach">
+    <Fragment slot="image">
+      <div class="flex items-center justify-center h-full py-12 px-6">
+        <div class="w-full max-w-sm space-y-3">
+          <div class="bg-gray-900 rounded-lg p-4 font-mono text-xs space-y-3">
+            <div>
+              <p class="text-gray-500 mb-1"># Single Loss Expectancy</p>
+              <p class="text-green-400">SLE = NAV × EF</p>
+              <p class="text-gray-300">$20 = $100 × .2</p>
+              <p class="text-gray-500 text-xs mt-1">asset value × 20% breach likelihood</p>
+            </div>
+            <div class="border-t border-gray-700 pt-3">
+              <p class="text-gray-500 mb-1"># Annualized Loss Expectancy</p>
+              <p class="text-green-400">ALE = SLE × ARO</p>
+              <p class="text-gray-300">$40 = $20 × 2</p>
+              <p class="text-gray-500 text-xs mt-1">expected loss × annual occurrence rate</p>
+            </div>
+            <div class="border-t border-gray-700 pt-3">
+              <p class="text-yellow-400 text-xs">→ Securing the asset costs $5/yr.</p>
+              <p class="text-yellow-400 text-xs">→ Not securing it costs $40/yr.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </Fragment>
+    <Fragment slot="content">
+      <p class="mb-4">
+        Before the OWASP content, the webinar framed security as a business decision — because that's how it actually
+        gets funded. Security spending requires someone to approve a budget, and that person needs to understand the
+        tradeoff between the cost of securing an asset and the cost of losing it.
+      </p>
+      <p class="mb-4">
+        The{' '}
+        <strong>Annualized Loss Expectancy (ALE)</strong> formula makes that tradeoff concrete: multiply the asset value
+        by the probability of a breach to get a Single Loss Expectancy, then multiply by how many times that breach might
+        occur in a year. If a $100 asset has a 20% breach likelihood and might be compromised twice a year, the expected
+        annual loss is $40. If it costs $5 to secure it, the math is obvious.
+      </p>
+      <p class="mb-4">
+        Students also learned that compliance with security regulations — GDPR, HIPAA, and OWASP — is not
+        self-certified. Companies hire third-party vendors to assess and certify compliance, a process that can take
+        months for larger organizations. And the person ultimately responsible for funding that process?
+      </p>
+      <p class="font-semibold text-gray-800 dark:text-gray-200">The CEO.</p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 section-pattern"></div>
+    </Fragment>
+  </Content>
+
+  <!-- OWASP Attack Categories -->
+  <Features3
+    tagline="OWASP Top Ten"
+    title="Attack categories covered — and how to prevent them"
+    subtitle="Each category included what the attack looks like, how it's executed, and the concrete prevention strategies a developer can implement."
+    columns={3}
+    items={[
+      {
+        title: 'Injection',
+        description:
+          'Attackers inject code, scripts, or commands through any input field in the application. Prevention: input validation, prepared statements, ORMs like pg or Knex that obfuscate raw SQL, and the OWASP ESAPI library.',
+        icon: 'tabler:code-dots',
+      },
+      {
+        title: 'Broken Authentication',
+        description:
+          'Session hijacking lets an unauthorized user gain access to sensitive data by intercepting or guessing authentication tokens. Prevention: JWT for stateless auth, input validation, limiting login attempts, short session expiry, and secure cookie configuration.',
+        icon: 'tabler:lock-open',
+      },
+      {
+        title: 'Sensitive Data in Transit',
+        description:
+          'HTTP traffic is unencrypted — Man-in-the-Middle (MITM) attacks on public WiFi can intercept everything. Prevention: HTTPS everywhere (including pages without sensitive data), secure cookie headers, CORS, and TLS encryption via the Node.js HTTPS module.',
+        icon: 'tabler:wifi-off',
+      },
+      {
+        title: 'Sensitive Data at Rest',
+        description:
+          "Database contents must be secured with strong hashing — Argon2, Scrypt, Bcrypt, or PBKDF2. SHA and MD5 alone are insufficient. Data masking, anonymization, and GDPR-compliant pseudonymisation reduce what's exposed if a breach occurs.",
+        icon: 'tabler:database-lock',
+      },
+      {
+        title: 'Broken Access Control',
+        description:
+          "Pages that should require authentication often don't — and attackers exploit URL patterns to access privileged routes directly (IDOR). Prevention: authenticate every page, use indirect object references, customize error codes, and prevent null byte attacks.",
+        icon: 'tabler:door-enter',
+      },
+      {
+        title: 'Cross-Site Scripting (XSS/CSRF)',
+        description:
+          'XSS injects scripts into a web app to take over browser sessions and steal cookies. CSRF uses social-engineered links to perform transactions without the user knowing. Prevention: input validation, input encoding, and the HttpOnly cookie flag.',
+        icon: 'tabler:script',
+      },
+      {
+        title: 'Insecure Design (2021)',
+        description:
+          'New in 2021 — design-level flaws that no implementation can fix because the security controls were never designed in. Prevention: threat modeling, secure design patterns, AppSec review in the SDLC, and unit/integration tests for all critical flows.',
+        icon: 'tabler:layout-off',
+      },
+      {
+        title: 'Software & Data Integrity Failures (2021)',
+        description:
+          'Assumptions about software updates and CI/CD pipelines without integrity verification. Prevention: digital signatures, vetting npm/Maven repositories, OWASP Dependency Check, and CI/CD pipeline access controls.',
+        icon: 'tabler:git-branch',
+      },
+      {
+        title: 'Server-Side Request Forgery (2021)',
+        description:
+          'SSRF forces the server to make requests to unintended destinations. Prevention: sanitize and validate all client input, enforce URL schema/port/destination allow lists, disable HTTP redirections, and segment remote resource access at the network layer.',
+        icon: 'tabler:server-bolt',
+      },
+    ]}
+  />
+
+  <!-- Secure SDLC -->
+  <Content tagline="Beyond the Attack" title="Building security into the development lifecycle" isReversed>
+    <Fragment slot="image">
+      <div class="flex items-center justify-center h-full py-12 px-6">
+        <div class="w-full max-w-xs space-y-3">
+          {
+            [
+              { phase: 'Plan', note: 'Threat modeling · security requirements' },
+              { phase: 'Design', note: 'Secure design patterns · architecture review' },
+              { phase: 'Develop', note: 'Secure coding practices · peer review' },
+              { phase: 'Test', note: 'Penetration testing · vulnerability scanning' },
+              { phase: 'Deploy', note: 'Config hardening · CI/CD integrity checks' },
+              { phase: 'Maintain', note: 'Patch zero-days · monitor and log' },
+            ].map((item) => (
+              <div class="flex items-center gap-3 p-2 rounded-lg border border-gray-200 dark:border-gray-700">
+                <span class="flex-shrink-0 w-20 text-xs font-bold text-accent text-right">{item.phase}</span>
+                <span class="text-xs text-muted">{item.note}</span>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </Fragment>
+    <Fragment slot="content">
+      <p class="mb-4">
+        Traditional software development lifecycles treat security as a final step — a QA pass before release. The
+        Secure SDLC (SSDLC) treats it as a property of every phase. The cost of fixing a security flaw discovered in
+        production is orders of magnitude higher than catching it during design or development.
+      </p>
+      <p class="mb-4">
+        The webinar closed with a set of tools students could use to actively probe their own web applications before
+        deploying them: vulnerability scanners, peach fuzzing, and penetration testing frameworks like Metasploit and
+        Burp Suite. These aren't just for security professionals — they're what developers use to verify that the code
+        they shipped doesn't have a known hole in it.
+      </p>
+      <p class="mb-4">
+        Zero-day vulnerabilities — newly discovered exploits with no existing patch — are a reminder that staying
+        current on security updates is itself a security practice. Components with known vulnerabilities are item #9 on
+        the OWASP Top Ten for exactly this reason.
+      </p>
+      <p>
+        The session closed with a challenge: research the SolarWinds breach, look up one recent CVE, and consider
+        whether a Cyber Security specialization or certification might be worth pursuing alongside web development.
+      </p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 section-pattern-b"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Reflection -->
+  <Content tagline="Reflection" title="What this session demonstrates">
+    <Fragment slot="image">
+      <div class="flex items-center justify-center h-full py-12">
+        <div class="text-center">
+          <p class="text-7xl font-bold font-heading text-accent leading-none">80%</p>
+          <p class="text-xl text-muted mt-3">of breaches traceable to poor coding</p>
+          <div class="mt-8 space-y-1 text-sm text-muted">
+            <p class="font-semibold text-gray-700 dark:text-gray-300">OWASP · GDPR · HIPAA · Secure SDLC</p>
+            <p>Injection · XSS · CSRF · MITM · Broken Auth</p>
+            <p>Risk Quantification · Business Case</p>
+          </div>
+        </div>
+      </div>
+    </Fragment>
+    <Fragment slot="content">
+      <p class="mb-4">
+        Security content fails when it's taught as a list of things to memorize. The OWASP Top Ten is only useful if
+        students understand why each vulnerability exists — the structural gap in the code or the design that makes it
+        possible, and what the attacker is actually doing when they exploit it.
+      </p>
+      <p class="mb-4">
+        The instructional decision here was to frame each attack category as a failure mode of code that students
+        already knew how to write — not exotic, adversarial techniques, but the natural consequence of building without
+        asking "what happens if someone puts something unexpected here?" That question reframes security from paranoia
+        to craft.
+      </p>
+      <p class="mb-4">
+        The ALE formula served a specific purpose: giving students the language to explain security decisions to a
+        non-technical stakeholder. Bootcamp graduates who can quantify risk and connect it to business outcomes are more
+        useful to teams than those who can only recite attack names.
+      </p>
+      <div class="mt-6 flex flex-wrap gap-2">
+        {
+          [
+            'OWASP',
+            'Web Security',
+            'SQL Injection',
+            'XSS',
+            'CSRF',
+            'MITM',
+            'JWT',
+            'HTTPS',
+            'Broken Auth',
+            'GDPR',
+            'HIPAA',
+            'Bcrypt',
+            'Secure SDLC',
+            'Penetration Testing',
+            'Risk Quantification',
+            'Live Instruction',
+            'Masterschool',
+          ].map((tag) => (
+            <span class="bg-red-100 dark:bg-red-900 text-red-800 dark:text-red-200 text-sm font-medium px-3 py-1 rounded-full">
+              {tag}
+            </span>
+          ))
+        }
+      </div>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 section-pattern"></div>
+    </Fragment>
+  </Content>
+
+  <CallToAction
+    actions={[
+      { variant: 'primary', text: 'View All Projects', href: '/projects' },
+      { text: 'Get in Touch', href: '/about#contact' },
+    ]}
+  >
+    <Fragment slot="title">Interested in working together?</Fragment>
+    <Fragment slot="subtitle"
+      >I'm open to remote opportunities in customer education, technical instructional design, and product enablement.</Fragment
+    >
+  </CallToAction>
+</Layout>
