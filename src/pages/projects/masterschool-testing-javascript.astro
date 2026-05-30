@@ -4,6 +4,7 @@ import Hero from '~/components/widgets/Hero.astro';
 import Content from '~/components/widgets/Content.astro';
 import Features3 from '~/components/widgets/Features3.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
+import YouTubeEmbed from '~/components/widgets/YouTubeEmbed.astro';
 
 const metadata = {
   title: 'Testing in JavaScript — Live Coding Session · Masterschool',
@@ -246,6 +247,11 @@ const metadata = {
       },
     ]}
   />
+
+  <!-- Video -->
+  <div class="max-w-4xl mx-auto px-4 pb-12">
+    <YouTubeEmbed id="6HLtpSOB1aY" title="Testing in JavaScript with Jest | TDD, Red/Green Workflow & Unit Tests" />
+  </div>
 
   <!-- Reflection -->
   <Content tagline="Reflection" title="What this session demonstrates" isReversed>
