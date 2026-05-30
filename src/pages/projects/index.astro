@@ -42,6 +42,39 @@ const metadata = {
     </Fragment>
   </Hero>
 
+  <!-- Sticky section nav — appears after hero scrolls away -->
+  <div
+    id="section-nav"
+    class="fixed top-[65px] left-0 right-0 z-40 bg-white/90 dark:bg-gray-900/90 backdrop-blur-sm border-b border-gray-200 dark:border-gray-700 opacity-0 pointer-events-none transition-opacity duration-300"
+  >
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-2 flex flex-wrap gap-2 justify-center">
+      <a
+        data-section="instructional-design"
+        href="#instructional-design"
+        class="section-spy-btn inline-block border border-gray-400 dark:border-gray-500 text-gray-600 dark:text-gray-400 text-xs font-medium px-3 py-1 rounded-full transition-colors duration-200"
+        >Instructional Design & eLearning</a
+      >
+      <a
+        data-section="live-instruction"
+        href="#live-instruction"
+        class="section-spy-btn inline-block border border-gray-400 dark:border-gray-500 text-gray-600 dark:text-gray-400 text-xs font-medium px-3 py-1 rounded-full transition-colors duration-200"
+        >Live Instruction — Masterschool</a
+      >
+      <a
+        data-section="teaching"
+        href="#teaching"
+        class="section-spy-btn inline-block border border-gray-400 dark:border-gray-500 text-gray-600 dark:text-gray-400 text-xs font-medium px-3 py-1 rounded-full transition-colors duration-200"
+        >Teaching & Instruction</a
+      >
+      <a
+        data-section="speaking"
+        href="#speaking"
+        class="section-spy-btn inline-block border border-gray-400 dark:border-gray-500 text-gray-600 dark:text-gray-400 text-xs font-medium px-3 py-1 rounded-full transition-colors duration-200"
+        >Speaking & Guest Expertise</a
+      >
+    </div>
+  </div>
+
   <div id="instructional-design"></div>
   <Features2
     title="Instructional Design & eLearning"
@@ -304,4 +337,44 @@ const metadata = {
       },
     ]}
   />
+  <script>
+    function initScrollspy() {
+      const stickyNav = document.getElementById('section-nav');
+      const sectionIds = ['instructional-design', 'live-instruction', 'teaching', 'speaking'];
+      const heroThreshold = 320;
+
+      function getActiveSection() {
+        let current = sectionIds[0];
+        for (const id of sectionIds) {
+          const el = document.getElementById(id);
+          if (el && el.getBoundingClientRect().top <= 90) current = id;
+        }
+        return current;
+      }
+
+      function updateNav() {
+        if (!stickyNav) return;
+        const scrolled = window.scrollY > heroThreshold;
+        stickyNav.classList.toggle('opacity-0', !scrolled);
+        stickyNav.classList.toggle('pointer-events-none', !scrolled);
+
+        const active = getActiveSection();
+        document.querySelectorAll('.section-spy-btn').forEach((btn) => {
+          const isActive = btn.getAttribute('data-section') === active;
+          btn.classList.toggle('bg-accent', isActive);
+          btn.classList.toggle('text-white', isActive);
+          btn.classList.toggle('border-accent', isActive);
+          btn.classList.toggle('text-gray-600', !isActive);
+          btn.classList.toggle('dark:text-gray-400', !isActive);
+          btn.classList.toggle('border-gray-400', !isActive);
+          btn.classList.toggle('dark:border-gray-500', !isActive);
+        });
+      }
+
+      window.addEventListener('scroll', updateNav, { passive: true });
+      updateNav();
+    }
+
+    document.addEventListener('astro:page-load', initScrollspy);
+  </script>
 </Layout>
