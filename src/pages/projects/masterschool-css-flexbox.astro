@@ -1,0 +1,313 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Content from '~/components/widgets/Content.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import YouTubeEmbed from '~/components/widgets/YouTubeEmbed.astro';
+
+const metadata = {
+  title: 'CSS Flexbox & Responsive Design — Masterschool Live Coding Session',
+};
+---
+
+<Layout metadata={metadata}>
+  <Hero tagline="Live Instruction · CSS · Flexbox · Responsive Design">
+    <Fragment slot="title">
+      CSS Flexbox & Responsive Design —<br />
+      <span class="text-accent dark:text-white">Masterschool Coding Bootcamp</span>
+    </Fragment>
+    <Fragment slot="subtitle">
+      A live 57-minute session teaching career-changers how to build responsive layouts with CSS Flexbox — covering
+      every major parent and child property, mobile-first design thinking, and media queries, all through live CodePen
+      demos with real-time student Q&A.
+    </Fragment>
+  </Hero>
+
+  <!-- Context -->
+  <Content tagline="The Session" title="The layout problem every beginner hits" isReversed>
+    <Fragment slot="image">
+      <div class="flex items-center justify-center h-full py-12">
+        <div class="text-center">
+          <p class="text-8xl font-bold font-heading text-accent leading-none">57</p>
+          <p class="text-xl text-muted mt-3">minutes · live session</p>
+          <div class="mt-8 space-y-2 text-sm text-muted">
+            <p class="font-semibold text-gray-700 dark:text-gray-300">Masterschool Coding Bootcamp</p>
+            <p>CSS · Flexbox · Media Queries</p>
+            <p>Career-change cohort · International</p>
+          </div>
+        </div>
+      </div>
+    </Fragment>
+    <Fragment slot="content">
+      <p class="mb-4">
+        This session landed at exactly the right moment in the curriculum. Students had a Personal Blog project due in
+        two days and were still fighting with layouts — trying to position elements that refused to go where they
+        wanted, unsure why their CSS wasn't behaving the way they expected.
+      </p>
+      <p class="mb-4">
+        Flexbox was the answer, but it requires a mental model shift. Before flexbox, developers used floats and the
+        clearfix hack — workarounds layered on top of a layout model never designed for modern UI. I opened the session
+        with that history deliberately: knowing <em>why</em> flexbox exists makes the properties make sense.
+      </p>
+      <p>
+        I framed the whole session around one goal: by the end, students should be able to look at any UI layout and
+        identify which flexbox properties would build it — and know exactly where to put them.
+      </p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 section-pattern-b"></div>
+    </Fragment>
+  </Content>
+
+  <!-- What I Covered -->
+  <Features3
+    tagline="The Content"
+    title="What the session covered"
+    subtitle="From viewport fundamentals to nested flex containers — a scaffolded progression through the full flexbox model."
+    columns={3}
+    items={[
+      {
+        title: 'Viewport & Responsive Foundations',
+        description:
+          'Covered the meta viewport tag, the difference between innerWidth and clientHeight, and what "above the fold" means in practice — establishing the conceptual ground before any layout code was written.',
+        icon: 'tabler:device-mobile',
+      },
+      {
+        title: 'Mobile-First Design Thinking',
+        description:
+          'Explained why mobile-first is a performance and efficiency strategy, not just a trend: starting small means writing less CSS for larger breakpoints. Contrasted with the clearfix era to show what problem flexbox actually solved.',
+        icon: 'tabler:layout-grid',
+      },
+      {
+        title: 'Flexbox Parent Properties',
+        description:
+          'Live-coded all major container properties — display: flex, flex-direction (row/column), justify-content (center, space-around, space-between, space-evenly), align-items, and flex-wrap — showing each in action on a container with five colored child divs.',
+        icon: 'tabler:box-align-top-left',
+      },
+      {
+        title: 'Flexbox Child Properties',
+        description:
+          'Covered flex-grow, flex-shrink, flex-basis (and the flex shorthand), order, and align-self — with emphasis on how flex-grow distributes remaining space and how flex-shrink controls overflow behavior.',
+        icon: 'tabler:box-align-bottom-right',
+      },
+      {
+        title: 'Media Queries & Breakpoints',
+        description:
+          'Demonstrated min-width breakpoints for switching flex-direction at specific viewport sizes — making layouts that stack vertically on mobile and align horizontally on wider screens with minimal code.',
+        icon: 'tabler:arrows-horizontal',
+      },
+      {
+        title: 'Nested Flex Containers',
+        description:
+          'Showed how flex children can themselves become flex parents — the pattern behind most real-world layouts. Students asked about gap, column-gap, and grid-template-areas, which became live teaching moments.',
+        icon: 'tabler:layout-rows',
+      },
+    ]}
+  />
+
+  <!-- Approach -->
+  <Content tagline="The Approach" title="Live demos, not slides">
+    <Fragment slot="image">
+      <div class="flex items-center justify-center h-full py-12 px-6">
+        <div class="w-full max-w-sm space-y-3">
+          {
+            [
+              { step: '01', label: 'Context', detail: 'Why floats failed — the history before flexbox' },
+              { step: '02', label: 'Setup', detail: 'Container + 5 colored divs in CodePen' },
+              { step: '03', label: 'Parent Properties', detail: 'justify-content · align-items · flex-wrap' },
+              { step: '04', label: 'Child Properties', detail: 'flex-grow · flex-shrink · order · align-self' },
+              { step: '05', label: 'Responsive', detail: 'Media queries + mobile-first direction switching' },
+              { step: '06', label: 'Nesting', detail: 'Children becoming parents — real-world patterns' },
+            ].map((item) => (
+              <div class="flex items-start gap-4 p-3 rounded-lg border border-gray-200 dark:border-gray-700">
+                <span class="text-accent font-bold font-heading text-lg leading-none">{item.step}</span>
+                <div>
+                  <p class="font-semibold text-sm text-gray-800 dark:text-gray-200">{item.label}</p>
+                  <p class="text-xs text-muted mt-0.5">{item.detail}</p>
+                </div>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </Fragment>
+    <Fragment slot="content">
+      <p class="mb-4">
+        Every flexbox property was demonstrated live in CodePen — not shown on a slide, not described abstractly. I
+        kept the same starting point for the whole session: one container div with five colored child divs. That
+        consistency let students focus on what <em>changed</em> when each new property was applied, rather than
+        reorienting to a new example every few minutes.
+      </p>
+      <p class="mb-4">
+        The structure also made Q&A natural. When a student asked about the <code
+          class="bg-gray-100 dark:bg-gray-800 px-1 rounded text-sm">gap</code
+        > property, I could answer it live in the same CodePen they'd been watching. When another student asked about
+        grid-template-areas, I could explain why that was grid's territory — and why that distinction matters.
+      </p>
+      <p class="mb-4">
+        One of the best moments came when a student named Mustafan noticed that a width override on the child elements
+        was preventing <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded text-sm">flex-grow</code> from working
+        correctly. He suggested removing it before I did. That kind of active problem-solving — students debugging live
+        code alongside the instructor — is the outcome I'm building toward with every demo.
+      </p>
+      <p>
+        I closed by tying everything back to the deadline: <em
+          >"You have two days on the blog project. Use flex-direction, justify-content, and align-items. That's
+          honestly most of what you need."</em
+        > Specificity over comprehensiveness — meet students where the pressure is.
+      </p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 section-pattern"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Student Interaction -->
+  <Content tagline="Student Interaction" title="Questions that became teaching moments" isReversed>
+    <Fragment slot="image">
+      <div class="flex items-center justify-center h-full py-12 px-6">
+        <div class="w-full max-w-xs space-y-4">
+          {
+            [
+              {
+                student: 'Mustafan',
+                question: 'What if we remove the width override?',
+                insight: 'Identified why flex-grow wasn\'t distributing space — a real debugging insight.',
+              },
+              {
+                student: 'Student',
+                question: 'What about gap vs. column-gap?',
+                insight: 'Led to a live demo of gap as the combined shorthand for row-gap and column-gap.',
+              },
+              {
+                student: 'Student',
+                question: 'Can the number of columns change with grid-template-areas?',
+                insight: 'Distinguished flexbox from CSS Grid and clarified when each tool is the right choice.',
+              },
+              {
+                student: 'Student',
+                question: 'What if the height is auto?',
+                insight: 'Demonstrated how align-items: stretch behaves differently when height is explicit vs. auto.',
+              },
+            ].map((item) => (
+              <div class="p-4 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900">
+                <p class="text-xs font-semibold text-accent uppercase tracking-wide mb-1">{item.student}</p>
+                <p class="text-sm font-medium text-gray-800 dark:text-gray-200 italic mb-2">"{item.question}"</p>
+                <p class="text-xs text-muted">{item.insight}</p>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </Fragment>
+    <Fragment slot="content">
+      <p class="mb-4">
+        Live sessions succeed or fail on the quality of student interaction — and this cohort brought strong questions.
+        The chat was active throughout, and the questions weren't just clarification requests: students were actively
+        testing the model, pushing on edge cases, and noticing things.
+      </p>
+      <p class="mb-4">
+        Mustafan's contribution during the <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded text-sm"
+          >flex-grow</code
+        > demo is a good example of what engaged learning looks like. He didn't wait to be called on — he connected
+        what he saw on screen to something he'd been thinking about and offered a solution. I confirmed it live, which
+        reinforced both the concept and the pattern of students trusting their own reasoning.
+      </p>
+      <p>
+        The grid-template-areas question was equally useful. It gave me the chance to distinguish flexbox (one-dimensional
+        — row <em>or</em> column) from CSS Grid (two-dimensional — rows <em>and</em> columns simultaneously) in a
+        way that was motivated by actual student curiosity rather than a slide I'd planned to show.
+      </p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 section-pattern-b"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Video -->
+  <div class="max-w-4xl mx-auto px-4 md:px-8 py-12 md:py-16">
+    <div class="text-center mb-8">
+      <p class="text-base text-secondary dark:text-blue-200 font-bold tracking-wide uppercase mb-2">
+        Session Recording
+      </p>
+      <h2 class="text-4xl md:text-5xl font-bold tracking-tighter font-heading">Watch the Session</h2>
+      <p class="text-lg text-muted mt-4">
+        Full recording of the live CSS Flexbox & Responsive Design session at Masterschool — including live CodePen
+        demos, mobile-first design principles, and student Q&A throughout.
+      </p>
+    </div>
+    <YouTubeEmbed id="vw-9i7_GFaw" title="CSS Flexbox & Responsive Design — Masterschool Live Coding Session" />
+  </div>
+
+  <!-- Reflection -->
+  <Content tagline="Reflection" title="Why layout is the hardest concept to teach">
+    <Fragment slot="image">
+      <div class="flex items-center justify-center h-full py-12">
+        <div class="text-center">
+          <p class="text-8xl font-bold font-heading text-accent leading-none">57</p>
+          <p class="text-xl text-muted mt-3">minutes</p>
+          <div class="mt-8 space-y-1 text-sm text-muted">
+            <p class="font-semibold text-gray-700 dark:text-gray-300">CSS · Flexbox · Responsive Design</p>
+            <p>justify-content · align-items · flex-grow</p>
+            <p>Mobile-First · Media Queries · Nesting</p>
+          </div>
+        </div>
+      </div>
+    </Fragment>
+    <Fragment slot="content">
+      <p class="mb-4">
+        CSS layout is hard to teach because it's spatially abstract. Students can memorize
+        <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded text-sm">justify-content: space-between</code> without
+        being able to predict what it will do on a screen they haven't seen. The only fix is showing it — running the
+        demo, changing the value, watching what moves.
+      </p>
+      <p class="mb-4">
+        That's why every flexbox property in this session was introduced by changing one line in a live CodePen, not by
+        describing it. The visual before-and-after is the explanation. The words just anchor what the student is
+        already seeing.
+      </p>
+      <p class="mb-4">
+        Mobile-first thinking adds another layer: it asks students to invert the order they naturally want to work in.
+        Most beginners start with desktop and add complexity for mobile. Mobile-first asks them to start with
+        constraints and expand — a harder cognitive lift, but one that pays off in cleaner, more maintainable CSS.
+        Making that argument explicit, with a historical frame, gives students a reason to adopt the pattern rather
+        than just comply with it.
+      </p>
+      <div class="mt-6 flex flex-wrap gap-2">
+        {
+          [
+            'CSS Flexbox',
+            'Responsive Design',
+            'Mobile-First',
+            'Media Queries',
+            'CodePen',
+            'Live Instruction',
+            'Masterschool',
+            'Career Education',
+          ].map((tag) => (
+            <span class="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-sm font-medium px-3 py-1 rounded-full">
+              {tag}
+            </span>
+          ))
+        }
+      </div>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 section-pattern-e"></div>
+    </Fragment>
+  </Content>
+
+  <CallToAction
+    actions={[
+      { variant: 'primary', text: 'View All Projects', href: '/projects' },
+      { text: 'Get in Touch', href: '/about#contact' },
+    ]}
+  >
+    <Fragment slot="title">Interested in working together?</Fragment>
+    <Fragment slot="subtitle"
+      >I'm open to remote opportunities in technical learning experience design, developer education, and customer
+      enablement.</Fragment
+    >
+  </CallToAction>
+</Layout>

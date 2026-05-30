@@ -130,23 +130,50 @@ const metadata = {
   </div>
 
   <!-- Bio split layout -->
-  <div class="mx-auto max-w-7xl p-4 md:px-8 py-12">
-    <div class="grid md:grid-cols-2 gap-4">
+  <div class="mx-auto max-w-7xl px-4 md:px-8 py-12 md:py-16">
+    <div class="grid md:grid-cols-2 gap-10 items-start">
+
+      <!-- Left: text + stats -->
       <div>
+        <p class="text-base text-secondary dark:text-blue-200 font-bold tracking-wide uppercase mb-3">Background</p>
         <h2 class="text-3xl md:text-4xl font-bold font-heading mb-6 text-gray-900 dark:text-white">
           Technical depth meets instructional design craft
         </h2>
-        <p class="text-lg md:text-xl text-gray-700 dark:text-gray-300">
-          Eight years building scalable learning across EdTech and enterprise with organizations including Udacity,
-          Springboard, OpenClassrooms, Boeing, and LearningMate.
+        <p class="text-lg text-gray-700 dark:text-gray-300 mb-4">
+          I design learning that earns its place — practical, technically grounded content that helps people <em
+            >do the thing</em
+          >, not just know about it.
         </p>
+        <p class="text-lg text-gray-700 dark:text-gray-300 mb-8">
+          Over eight years I've worked across every layer of the stack: curriculum design, code, interactive courseware,
+          and live instruction for career-changers at global bootcamps and enterprise clients.
+        </p>
+        <div class="grid grid-cols-3 gap-4 border-t border-gray-200 dark:border-gray-700 pt-8">
+          {
+            [
+              { stat: '8', label: 'Years in EdTech & enterprise learning' },
+              { stat: '14+', label: 'Organizations worked with' },
+              { stat: 'M.S.', label: 'Learning Design & Technology' },
+            ].map(({ stat, label }) => (
+              <div>
+                <p class="text-3xl md:text-4xl font-bold font-heading text-accent leading-none">{stat}</p>
+                <p class="text-sm text-muted mt-2 leading-snug">{label}</p>
+              </div>
+            ))
+          }
+        </div>
       </div>
-      <div>
-        <a href="/projects/mentoring-students-disabilities" class="group relative block overflow-hidden rounded">
+
+      <!-- Right: media bento -->
+      <div class="space-y-3">
+        <a
+          href="/projects/mentoring-students-disabilities"
+          class="group relative block overflow-hidden rounded-xl aspect-video bg-gray-100 dark:bg-gray-800"
+        >
           <img
             src={P1.src}
-            alt="Jonathan Root teaching online session"
-            class="w-full object-cover rounded transition-opacity duration-300 group-hover:opacity-60"
+            alt="Jonathan Root leading a live webinar on mentoring students with disabilities for OpenClassrooms"
+            class="w-full h-full object-cover transition-opacity duration-300 group-hover:opacity-60"
           />
           <div
             class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
@@ -156,43 +183,55 @@ const metadata = {
             >
           </div>
         </a>
-      </div>
-      <a
-        href="/projects/javascript-xapi-elearning"
-        class="group relative block w-full rounded-lg overflow-hidden shadow-md"
-        style="padding-top: 56.25%;"
-      >
-        <iframe
-          class="absolute inset-0 w-full h-full pointer-events-none"
-          src="https://www.youtube.com/embed/N9855IeKoK4"
-          title="Learn JavaScript and xAPI for eLearning"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen></iframe>
-        <div
-          class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-        >
-          <span class="bg-white text-gray-900 font-semibold text-sm px-4 py-2 rounded-full shadow-md"
-            >View Case Study</span
+        <div class="grid grid-cols-2 gap-3">
+          <a
+            href="/projects/javascript-xapi-elearning"
+            class="group relative block overflow-hidden rounded-xl aspect-video bg-gray-100 dark:bg-gray-800"
           >
+            <img
+              src="https://i.ytimg.com/vi/N9855IeKoK4/maxresdefault.jpg"
+              alt="JavaScript and xAPI for eLearning — course overview video"
+              class="w-full h-full object-cover transition-opacity duration-300 group-hover:opacity-60"
+              onerror="this.src='https://i.ytimg.com/vi/N9855IeKoK4/hqdefault.jpg'"
+            />
+            <div class="absolute inset-0 flex items-center justify-center">
+              <div
+                class="w-12 h-8 flex items-center justify-center rounded-lg group-hover:opacity-0 transition-opacity duration-300"
+                style="background: rgba(33,33,33,0.8);"
+              >
+                <svg class="w-4 h-4 text-white" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M8 5v14l11-7z"></path>
+                </svg>
+              </div>
+            </div>
+            <div
+              class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+            >
+              <span class="bg-white text-gray-900 font-semibold text-sm px-4 py-2 rounded-full shadow-md"
+                >View Case Study</span
+              >
+            </div>
+          </a>
+          <a
+            href="/projects/chegg-technical-expert"
+            class="group relative block overflow-hidden rounded-xl aspect-video bg-gray-100 dark:bg-gray-800"
+          >
+            <img
+              src={P3.src}
+              alt="One-on-one technical expert session at Chegg Skills — live code review via Zoom"
+              class="w-full h-full object-cover transition-opacity duration-300 group-hover:opacity-60"
+            />
+            <div
+              class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+            >
+              <span class="bg-white text-gray-900 font-semibold text-sm px-4 py-2 rounded-full shadow-md"
+                >View Case Study</span
+              >
+            </div>
+          </a>
         </div>
-      </a>
-      <div>
-        <a href="/projects/chegg-technical-expert" class="group relative block overflow-hidden rounded">
-          <img
-            src={P3.src}
-            alt="Jonathan Root teaching online session"
-            class="w-full object-cover rounded transition-opacity duration-300 group-hover:opacity-60"
-          />
-          <div
-            class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-          >
-            <span class="bg-white text-gray-900 font-semibold text-sm px-4 py-2 rounded-full shadow-md"
-              >View Case Study</span
-            >
-          </div>
-        </a>
       </div>
+
     </div>
   </div>
 
