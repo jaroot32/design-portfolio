@@ -51,40 +51,40 @@ const isProjectPage = path.startsWith('/projects/') && path !== '/projects/' && 
   <slot name="footer">
     <Footer {...footerData} />
   </slot>
-</Layout>
 
-<!-- Back to top button -->
-<button
-  id="back-to-top"
-  aria-label="Back to top"
-  class="fixed bottom-6 right-6 z-50 p-3 rounded-full bg-accent text-white shadow-lg opacity-0 pointer-events-none transition-opacity duration-300"
->
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    class="w-5 h-5"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    stroke-width="2.5"
-    stroke-linecap="round"
-    stroke-linejoin="round"
+  <!-- Back to top button -->
+  <button
+    id="back-to-top"
+    aria-label="Back to top"
+    class="fixed bottom-6 right-6 z-50 p-3 rounded-full bg-accent text-white shadow-lg opacity-0 pointer-events-none transition-opacity duration-300"
   >
-    <polyline points="18 15 12 9 6 15"></polyline>
-  </svg>
-</button>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      class="w-5 h-5"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2.5"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    >
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </button>
 
-<script>
-  const btn = document.getElementById('back-to-top');
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 400) {
-      btn?.classList.remove('opacity-0', 'pointer-events-none');
-      btn?.classList.add('opacity-100');
-    } else {
-      btn?.classList.add('opacity-0', 'pointer-events-none');
-      btn?.classList.remove('opacity-100');
-    }
-  });
-  btn?.addEventListener('click', () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  });
-</script>
+  <script>
+    const btn = document.getElementById('back-to-top');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 400) {
+        btn?.classList.remove('opacity-0', 'pointer-events-none');
+        btn?.classList.add('opacity-100');
+      } else {
+        btn?.classList.add('opacity-0', 'pointer-events-none');
+        btn?.classList.remove('opacity-100');
+      }
+    });
+    btn?.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  </script>
+</Layout>
