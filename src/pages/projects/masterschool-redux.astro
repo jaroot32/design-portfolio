@@ -1,0 +1,289 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Content from '~/components/widgets/Content.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'Redux and State Management — Group Review and Q&A | Masterschool',
+};
+---
+
+<Layout metadata={metadata}>
+  <Hero tagline="Live Instruction · Redux · React · State Management · Masterschool">
+    <Fragment slot="title">
+      Redux and State Management —<br />
+      <span class="text-accent dark:text-white">Group Review and Q&A</span>
+    </Fragment>
+    <Fragment slot="subtitle">
+      A group review session covering Redux fundamentals — the three core principles, the full action/dispatch/reducer
+      flow, middleware, and how useReducer and the Context API fit into the state management landscape — using breakout
+      rooms for collaborative Q&A followed by a full-group debrief.
+    </Fragment>
+  </Hero>
+
+  <!-- Context -->
+  <Content tagline="The Session" title="Answer it first, then we'll build on it together" isReversed>
+    <Fragment slot="image">
+      <div class="flex items-center justify-center h-full py-12">
+        <div class="text-center">
+          <p class="text-8xl font-bold font-heading text-accent leading-none">3</p>
+          <p class="text-xl text-muted mt-3">core principles of Redux</p>
+          <div class="mt-8 space-y-2 text-sm text-muted">
+            <p class="font-semibold text-gray-700 dark:text-gray-300">Masterschool Coding Bootcamp</p>
+            <p>Redux · React · State Management</p>
+            <p>International cohort · Breakout rooms · Group debrief</p>
+          </div>
+        </div>
+      </div>
+    </Fragment>
+    <Fragment slot="content">
+      <p class="mb-4">
+        The session was structured in two halves. For the first thirty minutes, students worked together in a breakout
+        room answering a set of Redux Q&A questions — what is Redux, what is a store, what is a reducer, what is
+        middleware — building a shared document before the group reconvened. Students: Bertrand, Nico, Samuel, and
+        Renee, who had already passed the myReads project and was moving ahead of the cohort.
+      </p>
+      <p class="mb-4">
+        The debrief moved through each question in sequence — confirming definitions, adding context the students hadn't
+        surfaced, and connecting every concept to the Udacity Redux project they were about to start. Redux was framed
+        clearly: learn it because the project requires it, and because it's still widely used. Understanding hooks and
+        Context came after, as a window into where React state management was heading.
+      </p>
+      <p>
+        The session closed with a practical recommendation: stick to the Udacity curriculum and Redux for the deadline,
+        then explore useReducer and useContext via the Epic React Advanced Hooks workshop — and watch Kent C. Dodds'
+        writing on React Query for where the field has landed since.
+      </p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 section-pattern-b"></div>
+    </Fragment>
+  </Content>
+
+  <!-- What I Covered -->
+  <Features3
+    tagline="The Content"
+    title="What the session covered"
+    subtitle="From Redux fundamentals to the Context API — every concept defined by students first, then extended in the full-group debrief."
+    columns={3}
+    items={[
+      {
+        title: 'What Is Redux',
+        description:
+          'Framed Redux as an independent state management library based on the Flux architecture — its core idea being that state is lifted out of individual components and placed in a single global object (the store) that can be read and updated through a defined set of methods. Confirmed that it works with Vanilla JS and any JavaScript framework because it is a standalone library.',
+        icon: 'tabler:box',
+      },
+      {
+        title: 'Three Principles of Redux',
+        description:
+          'Worked through all three: single source of truth (one store, no competing component-level truths), state is read-only (you cannot mutate the store directly — you dispatch an action), and state changes happen only through pure functions (reducers). Each principle was confirmed and elaborated on from student answers before moving forward.',
+        icon: 'tabler:list-check',
+      },
+      {
+        title: 'Pure Functions and Why They Matter',
+        description:
+          "Defined a pure function as one that takes in data, returns a predictable output for that input, has a single purpose, and produces no side effects. Connected it directly to the reducer: the reducer is a pure function — it takes the previous state and an action, and returns a new state without ever mutating the previous one. That's what makes Redux behavior predictable.",
+        icon: 'tabler:math-function',
+      },
+      {
+        title: 'The Redux Flow: Store, Action, Dispatch, Reducer',
+        description:
+          'Defined all four core concepts in sequence. The store is the object that holds application state. An action is a JavaScript object that describes what changed. Dispatch sends the action to the reducer. The reducer is a pure function that takes the previous state and the action and returns a new state — without touching the old one. Introduced the phrase: Redux is just a predictable state container.',
+        icon: 'tabler:arrow-right-square',
+      },
+      {
+        title: 'Redux Middleware',
+        description:
+          'Described middleware as code that sits between the action and the dispatcher — a place to intercept, log, or transform actions before they reach the reducer, and a hook for extending Redux with third-party integrations. Framed it as the layer that lets Redux handle async operations and side effects without breaking its core principles.',
+        icon: 'tabler:stack-middle',
+      },
+      {
+        title: 'When to Use Redux',
+        description:
+          "Discussed the honest tradeoff: Redux is valuable when an application grows to hundreds of components and shared state becomes unmanageable. For a simple e-commerce site or a library app, it's overkill. For the Udacity Redux project, it's required — and it's good for the resume. Introduced the alternatives: MobX, XState, Recoil, and React Query, noting Kent Dodds' preference for React Query as of the recording.",
+        icon: 'tabler:scale',
+      },
+      {
+        title: 'The useReducer Hook',
+        description:
+          "Positioned useReducer as the middle ground between useState and a full Redux setup. When an application's state logic is getting complex but doesn't yet need the full Redux infrastructure, useReducer provides the same action/reducer pattern inside React itself — without adding an external library. Covered via the Epic React Advanced Hooks workshop that the cohort had access to.",
+        icon: 'tabler:refresh',
+      },
+      {
+        title: 'Context API and useContext',
+        description:
+          'Defined the Context API as a React-native mechanism for passing data to child components without prop drilling — wrapping part of the application in a Provider and consuming that data anywhere inside it without chaining props down through every intermediate component. useContext is the hook that lets functional components access it.',
+        icon: 'tabler:topology-star',
+      },
+      {
+        title: 'When to Use Context — and When Not To',
+        description:
+          "Covered both sides: use Context when data needs to reach a large portion of the application and prop-passing is becoming unmanageable. Don't use it when data is only needed by one component or its immediate children — the boilerplate cost isn't worth it if a simple prop would work. Student Q&A surfaced the distinction between Context (for passing props) and state (for managing and updating data). Closed with the combination: Context + reducers together for maximum scalability.",
+        icon: 'tabler:question-mark',
+      },
+    ]}
+  />
+
+  <!-- Approach -->
+  <Content tagline="The Approach" title="Breakout rooms first, debrief together">
+    <Fragment slot="image">
+      <div class="flex items-center justify-center h-full py-12 px-6">
+        <div class="w-full max-w-sm space-y-3">
+          {
+            [
+              { step: '01', label: 'Breakout Room', detail: 'Students answer Redux Q&A questions together' },
+              { step: '02', label: 'Full-Group Debrief', detail: 'Review answers · confirm · extend as a master doc' },
+              {
+                step: '03',
+                label: 'Instructor Adds Context',
+                detail: 'Alternatives · tradeoffs · what the project requires',
+              },
+              { step: '04', label: 'Student Q&A', detail: 'Context vs. state distinction · live clarification' },
+              { step: '05', label: 'Recommendations', detail: 'Redux now · hooks next · React Query longer term' },
+            ].map((item) => (
+              <div class="flex items-start gap-4 p-3 rounded-lg border border-gray-200 dark:border-gray-700">
+                <span class="text-accent font-bold font-heading text-lg leading-none">{item.step}</span>
+                <div>
+                  <p class="font-semibold text-sm text-gray-800 dark:text-gray-200">{item.label}</p>
+                  <p class="text-xs text-muted mt-0.5">{item.detail}</p>
+                </div>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </Fragment>
+    <Fragment slot="content">
+      <p class="mb-4">
+        The breakout room format changes the dynamic of a review session. Students arrive at the debrief having already
+        committed to answers — which means the discussion is about confirming, revising, or extending what they built,
+        not hearing it for the first time. That's a more active relationship with the material, and it surfaces
+        misunderstandings that would stay invisible in a straight lecture.
+      </p>
+      <p class="mb-4">
+        The Redux terminology is dense. Store, action, dispatch, reducer, middleware — five distinct concepts that work
+        together in a single flow. Having students write definitions in their own words first, even imprecise ones,
+        gives the debrief something to work with. Confirming a partially right answer is more instructive than
+        presenting the correct one cold.
+      </p>
+      <p class="mb-4">
+        Framing the state management landscape honestly was important here. Students were about to start the Udacity
+        Redux project — the primary motivation for the session. But Redux is not the end of the story: useReducer and
+        useContext exist, React Query is gaining ground, and the Epic React Advanced Hooks workshop covers the hooks
+        path in depth. Giving students an accurate map of the terrain — rather than treating Redux as the only answer —
+        helps them make better decisions as their careers progress.
+      </p>
+      <p>
+        Renee's question about the difference between context and state was the most useful moment of the Q&A. The
+        distinction is easy to blur: context is a mechanism for passing data, not for managing or updating it. Reducers
+        handle the update logic. Using them together is what makes large React applications maintainable.
+      </p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 section-pattern"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Video -->
+  <div class="max-w-4xl mx-auto px-4 md:px-8 py-12 md:py-16">
+    <div class="text-center mb-8">
+      <p class="text-base text-secondary dark:text-blue-200 font-bold tracking-wide uppercase mb-2">
+        Session Recording
+      </p>
+      <h2 class="text-4xl md:text-5xl font-bold tracking-tighter font-heading">Watch the Session</h2>
+      <p class="text-lg text-muted mt-4">
+        Redux and state management group review — breakout room Q&A, full-group debrief, and the Context API.
+      </p>
+    </div>
+    <div class="relative w-full rounded-lg shadow-lg overflow-hidden" style="padding-top: 56.25%;">
+      <iframe
+        class="absolute inset-0 w-full h-full"
+        src="https://www.youtube.com/embed/BE1y7xkzEds"
+        title="Redux and State Management — Group Review and Q&A | Masterschool"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+    </div>
+  </div>
+
+  <!-- Reflection -->
+  <Content tagline="Reflection" title="Five concepts, one flow — get the terminology right" isReversed>
+    <Fragment slot="image">
+      <div class="flex items-center justify-center h-full py-12">
+        <div class="text-center">
+          <p class="text-8xl font-bold font-heading text-accent leading-none">5</p>
+          <p class="text-xl text-muted mt-3">core Redux concepts defined</p>
+          <div class="mt-8 space-y-1 text-sm text-muted">
+            <p class="font-semibold text-gray-700 dark:text-gray-300">
+              Store · Action · Dispatch · Reducer · Middleware
+            </p>
+            <p>Three principles · Context API · useReducer</p>
+            <p>Breakout rooms · Group debrief · Masterschool</p>
+          </div>
+        </div>
+      </div>
+    </Fragment>
+    <Fragment slot="content">
+      <p class="mb-4">
+        Redux introduces a lot of vocabulary fast. Store, action, dispatch, reducer, middleware — five concepts that
+        each mean something specific and work together in a fixed sequence. Getting that sequence right in students'
+        heads before they start the project is more valuable than any amount of time spent on API syntax. The syntax
+        changes; the mental model doesn't.
+      </p>
+      <p class="mb-4">
+        The context versus state question that came up at the end is a real conceptual gap — and it's one that a lecture
+        wouldn't have surfaced. Renee asked it because she'd spent time on the breakout questions and still wasn't sure
+        where the line was. That's the kind of question that gets answered once and sticks, because it came from genuine
+        confusion rather than passive listening.
+      </p>
+      <div class="mt-6 flex flex-wrap gap-2">
+        {
+          [
+            'Redux',
+            'State Management',
+            'Flux Architecture',
+            'Store',
+            'Action',
+            'Dispatch',
+            'Reducer',
+            'Middleware',
+            'Pure Functions',
+            'useReducer',
+            'Context API',
+            'useContext',
+            'Prop Drilling',
+            'React Hooks',
+            'React Query',
+            'MobX',
+            'XState',
+            'Breakout Rooms',
+            'Group Debrief',
+            'Masterschool',
+          ].map((tag) => (
+            <span class="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-sm font-medium px-3 py-1 rounded-full">
+              {tag}
+            </span>
+          ))
+        }
+      </div>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 section-pattern-b"></div>
+    </Fragment>
+  </Content>
+
+  <CallToAction
+    actions={[
+      { variant: 'primary', text: 'View All Projects', href: '/projects' },
+      { text: 'Get in Touch', href: '/about#contact' },
+    ]}
+  >
+    <Fragment slot="title">Interested in working together?</Fragment>
+    <Fragment slot="subtitle"
+      >I'm open to remote opportunities in technical learning experience design, developer education, and customer
+      enablement.</Fragment
+    >
+  </CallToAction>
+</Layout>
