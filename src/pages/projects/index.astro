@@ -429,8 +429,9 @@ const featured = [
       <p class="text-sm font-bold uppercase tracking-widest text-accent mb-2">1:1 Sessions</p>
       <h2 class="text-3xl md:text-4xl font-bold font-heading tracking-tighter">One on One Skills Training</h2>
       <p class="text-muted mt-3 text-lg max-w-2xl">
-        20+ recorded 1:1 sessions from the Thinkful Engineering Immersion Prep program — organized by topic. Each
-        category is a growing archive of screen-shares, walkthroughs, and coaching conversations.
+        20+ recorded 1:1 sessions from two programs — Thinkful Engineering Immersion Prep (Chegg Skills) and
+        OpenClassrooms Web Developer Mentoring for Guild Education students. Organized by topic across screen-shares,
+        live walkthroughs, and coaching conversations.
       </p>
     </div>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
@@ -438,6 +439,7 @@ const featured = [
         [
           {
             icon: 'tabler:terminal',
+            program: 'Chegg Skills / Thinkful',
             title: 'Terminal & Command Line',
             subtitle: 'Filesystem · Shell Navigation · Unix Commands',
             description:
@@ -452,6 +454,7 @@ const featured = [
           },
           {
             icon: 'tabler:git-branch',
+            program: 'Chegg Skills / Thinkful',
             title: 'Git & Version Control',
             subtitle: 'Git Config · GitHub · Terminal Workflow',
             description:
@@ -466,6 +469,7 @@ const featured = [
           },
           {
             icon: 'tabler:user-check',
+            program: 'Chegg Skills / Thinkful',
             title: 'Interview & Career Prep',
             subtitle: 'Assessment Coaching · Program Strategy · Confidence',
             description:
@@ -480,6 +484,7 @@ const featured = [
           },
           {
             icon: 'tabler:bug',
+            program: 'Chegg Skills / Thinkful',
             title: 'VS Code & Debugging',
             subtitle: 'Debugger · Breakpoints · DevTools · Node.js',
             description:
@@ -493,7 +498,23 @@ const featured = [
             href: '/projects/chegg-technical-expert',
           },
           {
+            icon: 'tabler:devices',
+            program: 'OpenClassrooms / Guild',
+            title: 'CSS Responsive Design',
+            subtitle: 'Flexbox · Media Queries · Mobile Layout · Breakpoints',
+            description:
+              'Live 1:1 sessions with Guild Education students working through responsive design — flex-wrap mechanics, desktop-first max-width media queries, and building stacked mobile layouts with flex-direction column and width resets inside breakpoints.',
+            tags: [
+              { label: 'flex-wrap · flex-direction', color: 'bg-teal-900/60 text-teal-200' },
+              { label: 'max-width media queries', color: 'bg-teal-900/60 text-teal-200' },
+              { label: '320px · 375px · 768px', color: 'bg-teal-900/60 text-teal-200' },
+            ],
+            count: '1+',
+            href: '/projects/oc-work-with-clients',
+          },
+          {
             icon: 'tabler:clock',
+            program: '',
             title: 'More Categories Coming',
             subtitle: 'JavaScript · HTML & CSS · Code Review · and more',
             description:
@@ -548,6 +569,9 @@ const featured = [
             <div class="md:w-24 bg-gray-800/60 border-t md:border-t-0 md:border-l border-gray-700 flex flex-col items-center justify-center p-4 gap-1 shrink-0">
               <p class="text-4xl font-bold font-heading text-accent leading-none">{cat.count}</p>
               <p class="text-gray-400 text-xs font-medium text-center">sessions</p>
+              {cat.program && (
+                <p class="text-gray-500 text-[10px] font-medium text-center leading-tight mt-2">{cat.program}</p>
+              )}
             </div>
           </a>
         ))
