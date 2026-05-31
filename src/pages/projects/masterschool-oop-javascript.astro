@@ -1,0 +1,306 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Content from '~/components/widgets/Content.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import YouTubeEmbed from '~/components/widgets/YouTubeEmbed.astro';
+
+const metadata = {
+  title: 'Object-Oriented JavaScript — Live Instruction | Masterschool',
+};
+---
+
+<Layout metadata={metadata}>
+  <Hero tagline="Live Instruction · JavaScript · OOP · Masterschool">
+    <Fragment slot="title">
+      Object-Oriented JavaScript —<br />
+      <span class="text-accent dark:text-white">Prototypes, Closures & Modules</span>
+    </Fragment>
+    <Fragment slot="subtitle">
+      A live Masterschool group session covering object-oriented JavaScript from the ground up — four ways to create
+      objects, prototypical inheritance, ES6 class syntax, closures via IIFEs, and the Revealing Module Pattern. Closes
+      with a direct connection to how these concepts appear in React.
+    </Fragment>
+  </Hero>
+
+  <!-- Context -->
+  <Content tagline="The Session" title="Covering the same ground four different ways." isReversed>
+    <Fragment slot="image">
+      <div class="flex items-center justify-center h-full py-12">
+        <div class="text-center">
+          <p class="text-8xl font-bold font-heading text-accent leading-none">4</p>
+          <p class="text-xl text-muted mt-3">ways to create an object</p>
+          <div class="mt-8 space-y-2 text-sm text-muted">
+            <p class="font-semibold text-gray-700 dark:text-gray-300">Masterschool Coding Bootcamp</p>
+            <p>JavaScript · OOP · Closures · Revealing Module Pattern</p>
+            <p>International cohort · Live Q&A format</p>
+          </div>
+        </div>
+      </div>
+    </Fragment>
+    <Fragment slot="content">
+      <p class="mb-4">
+        This session filled in for the regular instructor and built on the previous day's introduction to
+        object-oriented JavaScript. Rather than repeat the same examples, I expanded the coverage — adding more
+        approaches to object creation, working through the prototype chain with live browser demos, and introducing two
+        new topics: closures through the lens of scope, and the Revealing Module Pattern as a practical application of
+        both.
+      </p>
+      <p class="mb-4">
+        The core question the session kept returning to was <em>why</em> — why does JavaScript use prototypical inheritance
+        instead of classical inheritance? Why would you choose a factory function over a constructor? Why does a closure
+        let you keep state between calls when a regular function can't? Answering those questions with running code, not
+        just slides, is what makes them stick.
+      </p>
+      <p>
+        Students participated throughout — asking about the prototype chain, raising edge cases, and testing syntax
+        live. The session closed by pulling up the React documentation to show how class-based components use the exact
+        same <code>extends</code> pattern we'd just written.
+      </p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 section-pattern-b"></div>
+    </Fragment>
+  </Content>
+
+  <!-- What I Covered -->
+  <Features3
+    tagline="The Content"
+    title="What the session covered"
+    subtitle="From JavaScript's origin story to the Revealing Module Pattern — a full arc through object-oriented and functional concepts."
+    columns={3}
+    items={[
+      {
+        title: 'JavaScript Origins',
+        description:
+          'Opened with a brief history of JavaScript and how major technologies (TypeScript, React, Angular, Bootstrap) emerged from companies solving their own problems. Framed the language as a living solution, not a fixed rulebook.',
+        icon: 'tabler:history',
+      },
+      {
+        title: 'Prototypical Inheritance',
+        description:
+          "Explained why JavaScript doesn't use classical inheritance — it has one construct (the object) and a prototype chain. Walked through how property lookup traverses the chain, what happens when a property isn't found, and why null terminates it.",
+        icon: 'tabler:git-branch',
+      },
+      {
+        title: 'Object Literals',
+        description:
+          'Started with the simplest approach — declaring an object directly with curly braces and attaching properties and methods with dot notation. Established the baseline before showing more complex patterns.',
+        icon: 'tabler:braces',
+      },
+      {
+        title: 'Factory Functions',
+        description:
+          'Showed how a regular function can return an object without the new keyword. Demonstrated a makePerson factory that accepts name and age as arguments and returns a new object each time — a clean pattern with no constructor syntax.',
+        icon: 'tabler:package',
+      },
+      {
+        title: 'Object.create()',
+        description:
+          'Demonstrated Object.create() with a personStore prototype object — creating a Sandra object that inherits methods like greet() from the store. Showed the prototype chain live in the browser console to make inheritance visible.',
+        icon: 'tabler:link',
+      },
+      {
+        title: 'Constructor Functions & new',
+        description:
+          'Walked through the constructor function pattern — capitalizing the function name by convention, using this to attach properties, and calling it with new. Added a method via dot prototype to illustrate how shared methods attach to the prototype.',
+        icon: 'tabler:code',
+      },
+      {
+        title: 'ES6 Class Syntax',
+        description:
+          'Introduced class syntax as syntactic sugar over constructor functions — the same prototype behavior underneath, dressed up to feel familiar to developers coming from Java or Python. Covered constructor(), method definitions, extends, and super.',
+        icon: 'tabler:diamond',
+      },
+      {
+        title: 'Scope & the Window Object',
+        description:
+          'Explained scope in terms of variable lifetime — local variables exist while a function runs, global variables persist until the browser window closes. Opened the window object in the console to show how global variables become properties on it.',
+        icon: 'tabler:world',
+      },
+      {
+        title: 'Closures via IIFE',
+        description:
+          'Demonstrated why a simple counter function resets to zero every call (scope gets discarded), then fixed it with a closure — an immediately invoked function expression that keeps the counter variable alive across multiple calls.',
+        icon: 'tabler:lock',
+      },
+      {
+        title: 'Revealing Module Pattern',
+        description:
+          'Built a revealing module from scratch: private variables and methods declared inside an IIFE, with only a selected subset returned as a public object. Showed that trying to access private members from outside returns undefined — encapsulation in practice.',
+        icon: 'tabler:box',
+      },
+      {
+        title: 'React Class Components',
+        description:
+          'Pulled up the React documentation to show how class-based components extend React.Component — the same extends and super(props) pattern students had just written. Connected OOP fundamentals directly to a real-world framework.',
+        icon: 'tabler:brand-react',
+      },
+      {
+        title: 'instanceof & typeof',
+        description:
+          'Ran instanceof checks on created objects — showing that an Animal instance returns true for both Animal and Person class when chaining extends. Used typeof to show that a class is a function under the hood, reinforcing the syntactic sugar point.',
+        icon: 'tabler:search',
+      },
+    ]}
+  />
+
+  <!-- Approach -->
+  <Content tagline="The Approach" title="Four patterns. One concept. Multiple angles.">
+    <Fragment slot="image">
+      <div class="flex items-center justify-center h-full py-12 px-6">
+        <div class="w-full max-w-sm space-y-3">
+          {
+            [
+              { step: '01', label: 'Object Literals', detail: 'The baseline — direct declaration, dot notation' },
+              { step: '02', label: 'Factory Functions', detail: 'Return an object — no new, no this' },
+              { step: '03', label: 'Object.create()', detail: 'Set the prototype explicitly — live chain in console' },
+              { step: '04', label: 'Constructor + new', detail: 'this keyword — dot prototype for shared methods' },
+              { step: '05', label: 'ES6 Classes', detail: 'Syntactic sugar — extends, super, instanceof' },
+              { step: '06', label: 'Closures & Modules', detail: 'IIFE → private state → Revealing Module Pattern' },
+            ].map((item) => (
+              <div class="flex items-start gap-4 p-3 rounded-lg border border-gray-200 dark:border-gray-700">
+                <span class="text-accent font-bold font-heading text-lg leading-none">{item.step}</span>
+                <div>
+                  <p class="font-semibold text-sm text-gray-800 dark:text-gray-200">{item.label}</p>
+                  <p class="text-xs text-muted mt-0.5">{item.detail}</p>
+                </div>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </Fragment>
+    <Fragment slot="content">
+      <p class="mb-4">
+        The structure of the session reflects a deliberate instructional decision: when there are multiple ways to do
+        the same thing in JavaScript, teaching them side by side — rather than committing to one — builds a more
+        resilient mental model. Students who only learn ES6 class syntax are often confused when they encounter
+        constructor functions in older codebases or prototype-based examples in documentation.
+      </p>
+      <p class="mb-4">
+        Each pattern was shown with the same example — a person object with a name, an age, and a greet method — so
+        students could compare them directly without having to track new domain concepts at the same time. The question
+        "how would we do this with Object.create()?" lands differently when students have already done it with a factory
+        function.
+      </p>
+      <p class="mb-4">
+        The session built toward the Revealing Module Pattern not as an advanced topic bolted on at the end, but as a
+        natural destination. Once students understood closures (scope that persists), and objects (a way to organize and
+        expose functionality), the module pattern was the logical next step: use a closure to protect state, and return
+        an object to expose only what the outside world needs.
+      </p>
+      <p>
+        Closing with React documentation was intentional. Abstract JavaScript concepts are easier to motivate when
+        students can see exactly where they show up in the frameworks they're about to learn.
+      </p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 section-pattern"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Video -->
+  <div class="max-w-4xl mx-auto px-4 md:px-8 py-12 md:py-16">
+    <div class="text-center mb-8">
+      <p class="text-base text-secondary dark:text-blue-200 font-bold tracking-wide uppercase mb-2">
+        Session Recording
+      </p>
+      <h2 class="text-4xl md:text-5xl font-bold tracking-tighter font-heading">
+        Object-Oriented JavaScript — Live Session
+      </h2>
+      <p class="text-lg text-muted mt-4">
+        Prototypes, four object creation patterns, ES6 classes, closures, and the Revealing Module Pattern — with live
+        browser demos and student Q&A throughout.
+      </p>
+    </div>
+    <YouTubeEmbed
+      id="jTMHsgcH-es"
+      title="Object-Oriented JavaScript: Prototypes, Closures & the Revealing Module Pattern | Masterschool"
+    />
+  </div>
+
+  <!-- Reflection -->
+  <Content tagline="Reflection" title="Why JavaScript's object model is worth teaching four times." isReversed>
+    <Fragment slot="image">
+      <div class="flex items-center justify-center h-full py-12">
+        <div class="text-center">
+          <p class="text-8xl font-bold font-heading text-accent leading-none">1</p>
+          <p class="text-xl text-muted mt-3">concept — object creation</p>
+          <div class="mt-8 space-y-1 text-sm text-muted">
+            <p class="font-semibold text-gray-700 dark:text-gray-300">
+              Object literal · Factory function · Object.create()
+            </p>
+            <p>Constructor + new · ES6 class</p>
+            <p>All roads lead to the prototype chain</p>
+          </div>
+        </div>
+      </div>
+    </Fragment>
+    <Fragment slot="content">
+      <p class="mb-4">
+        JavaScript's object model is one of the things that most distinguishes it from the languages many developers
+        learned first. Classical inheritance — classes, subclasses, instantiation — is intuitive because it maps onto
+        how we think about categories in the real world. Prototypical inheritance doesn't map onto anything most people
+        have seen before. You have to teach it by showing it.
+      </p>
+      <p class="mb-4">
+        That's what this session was designed to do: show the prototype chain in action, in the browser, on objects
+        students could inspect themselves. The moment when a student looks at a Sandra object in the console and sees
+        her own properties alongside an inherited greet function on the prototype is worth more than any diagram.
+      </p>
+      <p class="mb-4">
+        The Revealing Module Pattern was the most rewarding part to teach because it requires everything that came
+        before. You have to understand scope to understand why the counter resets. You have to understand closures to
+        understand why an IIFE preserves state. You have to understand objects to understand why returning one from an
+        IIFE gives you controlled access to that state. It's a concept that doesn't make sense in isolation — and that
+        makes it a good test of whether the rest of the session actually landed.
+      </p>
+      <div class="mt-6 flex flex-wrap gap-2">
+        {
+          [
+            'JavaScript',
+            'OOP',
+            'Prototypical Inheritance',
+            'Object Literals',
+            'Factory Functions',
+            'Object.create()',
+            'Constructor Functions',
+            'ES6 Classes',
+            'extends & super',
+            'instanceof',
+            'Scope',
+            'Closures',
+            'IIFE',
+            'Revealing Module Pattern',
+            'React',
+            'Live Coding',
+            'Masterschool',
+            'Live Instruction',
+          ].map((tag) => (
+            <span class="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-sm font-medium px-3 py-1 rounded-full">
+              {tag}
+            </span>
+          ))
+        }
+      </div>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 section-pattern-b"></div>
+    </Fragment>
+  </Content>
+
+  <CallToAction
+    actions={[
+      { variant: 'primary', text: 'View All Projects', href: '/projects' },
+      { text: 'Get in Touch', href: '/about#contact' },
+    ]}
+  >
+    <Fragment slot="title">Interested in working together?</Fragment>
+    <Fragment slot="subtitle">
+      I'm open to remote opportunities in technical learning experience design, developer education, and customer
+      enablement.
+    </Fragment>
+  </CallToAction>
+</Layout>
