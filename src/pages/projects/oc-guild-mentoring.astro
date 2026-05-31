@@ -1,0 +1,257 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Content from '~/components/widgets/Content.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import YouTubeEmbed from '~/components/widgets/YouTubeEmbed.astro';
+
+const metadata = {
+  title: 'CSS Responsive Design — OpenClassrooms 1:1 Guild Mentoring',
+};
+---
+
+<Layout metadata={metadata}>
+  <Hero tagline="1:1 Mentoring · CSS · Responsive Design · OpenClassrooms · Guild Education">
+    <Fragment slot="title">
+      OpenClassrooms 1:1 Mentoring —<br />
+      <span class="text-accent dark:text-white">Guild Education Students</span>
+    </Fragment>
+    <Fragment slot="subtitle">
+      Live one-on-one mentoring sessions with working adults enrolled in OpenClassrooms through Guild Education —
+      helping students through real project blockers, from CSS layout issues to responsive design, the night before a
+      project review.
+    </Fragment>
+  </Hero>
+
+  <!-- Context -->
+  <Content tagline="The Program" title="Working adults, real deadlines, real stakes." isReversed>
+    <Fragment slot="image">
+      <div class="flex items-center justify-center h-full py-12">
+        <div class="text-center">
+          <p class="text-7xl font-bold font-heading text-accent leading-none">Guild<br />Ed.</p>
+          <p class="text-xl text-muted mt-3">OpenClassrooms</p>
+          <div class="mt-8 space-y-2 text-sm text-muted">
+            <p class="font-semibold text-gray-700 dark:text-gray-300">Web Developer Mentor</p>
+            <p>1:1 Student Mentoring</p>
+            <p>Guild Education Partnership</p>
+          </div>
+        </div>
+      </div>
+    </Fragment>
+    <Fragment slot="content">
+      <p class="mb-4">
+        Guild Education partners with employers to offer education benefits to their workforce — giving working adults
+        access to degree programs, certificates, and bootcamps tuition-free through their employer. OpenClassrooms was
+        one of those partners. The students I mentored were employees at companies like Walmart, Chipotle, and Disney
+        who were upskilling into web development while working full-time.
+      </p>
+      <p class="mb-4">
+        That context matters. These weren't traditional students with unlimited time to iterate. They were balancing
+        shifts, family, and a structured program with real project review deadlines — often reaching out the night
+        before a submission because something wasn't working and they needed it solved now. The sessions had to be
+        direct, efficient, and leave students capable of finishing the work themselves.
+      </p>
+      <p>
+        As a Web Developer Mentor at OpenClassrooms, I held regular 1:1 sessions with each student — reviewing their
+        code, unblocking technical issues, and coaching them through the concepts they'd need to pass their project
+        reviews.
+      </p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 section-pattern-b"></div>
+    </Fragment>
+  </Content>
+
+  <!-- What I Did -->
+  <Features3
+    tagline="The Work"
+    title="What 1:1 mentoring sessions involved"
+    subtitle="Real project blockers, live in the browser — from flexbox layout to responsive breakpoints, solved together."
+    columns={3}
+    items={[
+      {
+        title: 'Live Code Review',
+        description:
+          'Reviewed student code in real time — opening their project in the browser, inspecting the CSS in DevTools, and identifying exactly what was causing the layout to break before writing a single line of fix.',
+        icon: 'tabler:code',
+      },
+      {
+        title: 'Flexbox Layout',
+        description:
+          'Explained flex-wrap behavior and why child element widths must exceed 100% to trigger row wrapping — then applied flex-direction column to restack accommodation and activity card grids for mobile.',
+        icon: 'tabler:layout-columns',
+      },
+      {
+        title: 'Media Query Strategy',
+        description:
+          'Walked through desktop-first max-width media queries — explaining breakpoint logic, why you only specify width (not height), and how to layer mobile, larger-phone, and tablet targets inside separate query blocks.',
+        icon: 'tabler:devices',
+      },
+      {
+        title: 'Chrome DevTools Debugging',
+        description:
+          'Used the responsive view in Chrome DevTools to read current viewport dimensions, find the natural breakpoint where the layout collapsed, and test CSS changes live before writing them into the stylesheet.',
+        icon: 'tabler:zoom-code',
+      },
+      {
+        title: 'Project Review Coaching',
+        description:
+          "Helped students understand what the reviewer was looking for — not pixel-perfect cross-device support, but demonstrated understanding of the concept. Coached how to present work confidently with what they'd built.",
+        icon: 'tabler:presentation',
+      },
+      {
+        title: 'CSS Naming Conventions',
+        description:
+          "Flagged lowercase file naming as a developer convention worth following — the kind of detail some reviewers notice and others don't, but that signals professional awareness regardless.",
+        icon: 'tabler:typography',
+      },
+    ]}
+  />
+
+  <!-- Session breakdown -->
+  <Content tagline="Inside a Session" title="The night before the review.">
+    <Fragment slot="image">
+      <div class="flex items-center justify-center h-full py-12 px-6">
+        <div class="w-full max-w-sm space-y-3">
+          {
+            [
+              {
+                step: '01',
+                label: 'Find the break point',
+                detail: 'Resize in DevTools → read the pixel width → set max-width',
+              },
+              { step: '02', label: 'Stack the cards', detail: 'flex-direction: column inside the media query' },
+              { step: '03', label: 'Reset the widths', detail: 'width: 100% on child elements — remove fixed widths' },
+              { step: '04', label: 'Clean up spacing', detail: 'margin: 0, padding: 0 — strip what breaks the column' },
+              { step: '05', label: 'Add the next breakpoint', detail: 'min-width: 321px up to 768px → tablet layout' },
+              {
+                step: '06',
+                label: 'Coach the presentation',
+                detail: 'Demo each view — show you understand the concept',
+              },
+            ].map((item) => (
+              <div class="flex items-start gap-4 p-3 rounded-lg border border-gray-200 dark:border-gray-700">
+                <span class="text-accent font-bold font-heading text-lg leading-none">{item.step}</span>
+                <div>
+                  <p class="font-semibold text-sm text-gray-800 dark:text-gray-200">{item.label}</p>
+                  <p class="text-xs text-muted mt-0.5">{item.detail}</p>
+                </div>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </Fragment>
+    <Fragment slot="content">
+      <p class="mb-4">
+        The session recorded here was a typical Guild mentoring call — a student had a project review at noon the next
+        day and had just realized responsive design wasn't done. They'd watched the one OpenClassrooms video on media
+        queries, tried to follow W3Schools, and found the two explanations contradictory. They weren't wrong: the
+        approaches are different, and the course hadn't given them enough to connect the dots.
+      </p>
+      <p class="mb-4">
+        Rather than explain it abstractly, we opened their project, found the breakpoint where the layout collapsed, and
+        wrote the first media query together — live, in their stylesheet. Twenty lines of CSS later, they had a working
+        mobile layout. The session closed with a walkthrough of how to present it to the reviewer: click through each
+        view, explain what you did and why, and demonstrate that you understand the concept even if every device size
+        isn't covered.
+      </p>
+      <p>
+        That reframe — from "I need to cover every device" to "I need to demonstrate I understand the concept" — is
+        often the most valuable thing a mentor can offer the night before a deadline.
+      </p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 section-pattern"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Video -->
+  <div class="max-w-4xl mx-auto px-4 md:px-8 py-12 md:py-16">
+    <div class="text-center mb-8">
+      <p class="text-base text-secondary dark:text-blue-200 font-bold tracking-wide uppercase mb-2">
+        Session Recording
+      </p>
+      <h2 class="text-4xl md:text-5xl font-bold tracking-tighter font-heading">
+        CSS Responsive Design: Flexbox & Media Queries
+      </h2>
+      <p class="text-lg text-muted mt-4">
+        A live 1:1 mentoring session — flexbox wrap, desktop-first media queries, and a mobile layout built from scratch
+        the night before a project review.
+      </p>
+    </div>
+    <YouTubeEmbed
+      id="hg5jzX0-kxs"
+      title="CSS Responsive Design: Flexbox & Media Queries — OpenClassrooms 1:1 Guild Mentoring Session"
+    />
+  </div>
+
+  <!-- Reflection -->
+  <Content tagline="Reflection" title="What working adults need from a mentor." isReversed>
+    <Fragment slot="image">
+      <div class="flex items-center justify-center h-full py-12">
+        <div class="text-center">
+          <p class="text-8xl font-bold font-heading text-accent leading-none">~20</p>
+          <p class="text-xl text-muted mt-3">lines of CSS</p>
+          <div class="mt-8 space-y-1 text-sm text-muted">
+            <p class="font-semibold text-gray-700 dark:text-gray-300">mobile · larger phone · tablet</p>
+            <p>flex-direction column · width resets</p>
+            <p>max-width breakpoints · margin cleanup</p>
+          </div>
+        </div>
+      </div>
+    </Fragment>
+    <Fragment slot="content">
+      <p class="mb-4">
+        Guild Education students are different from traditional coding bootcamp students in one important way: they
+        already have jobs. The stakes of failing a project review aren't just academic — for many of them, this
+        education is tied to employer support, career advancement goals, and a significant personal investment of time
+        outside of work hours. That changes what good mentoring looks like.
+      </p>
+      <p class="mb-4">
+        It means being direct about what the reviewer actually cares about versus what the student is anxious about. It
+        means solving the specific problem in front of you instead of teaching the full topic. It means giving students
+        language to talk about their work confidently — "I understand the concept, here's how I applied it" — rather
+        than leaving them to guess how a reviewer will interpret incomplete coverage.
+      </p>
+      <div class="mt-6 flex flex-wrap gap-2">
+        {
+          [
+            'CSS',
+            'Flexbox',
+            'Responsive Design',
+            'Media Queries',
+            'Chrome DevTools',
+            'Mobile Layout',
+            'Breakpoints',
+            'OpenClassrooms',
+            'Guild Education',
+            '1:1 Mentoring',
+            'Desktop-First',
+          ].map((tag) => (
+            <span class="bg-teal-100 dark:bg-teal-900 text-teal-800 dark:text-teal-200 text-sm font-medium px-3 py-1 rounded-full">
+              {tag}
+            </span>
+          ))
+        }
+      </div>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 section-pattern-b"></div>
+    </Fragment>
+  </Content>
+
+  <CallToAction
+    actions={[
+      { variant: 'primary', text: 'View All Projects', href: '/projects' },
+      { text: 'Get in Touch', href: '/about#contact' },
+    ]}
+  >
+    <Fragment slot="title">Interested in working together?</Fragment>
+    <Fragment slot="subtitle">
+      I'm open to remote opportunities in technical learning experience design, developer education, and customer
+      enablement.
+    </Fragment>
+  </CallToAction>
+</Layout>
