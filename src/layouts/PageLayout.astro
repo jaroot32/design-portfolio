@@ -23,7 +23,7 @@ const isProjectPage = path.startsWith('/projects/') && path !== '/projects/' && 
   </slot>
   {
     isProjectPage && (
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 pt-4 pb-0">
+      <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 pt-4 pb-0">
         <a
           href="/projects"
           class="inline-flex items-center gap-1.5 text-sm text-muted hover:text-accent transition-colors duration-200"
