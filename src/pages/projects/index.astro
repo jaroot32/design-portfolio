@@ -520,15 +520,17 @@ const featured = [
               data-group={item.group}
               class="live-card group relative flex flex-col p-6 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-accent dark:hover:border-accent transition-all duration-200 shadow-sm hover:shadow-lg"
             >
-              <div class="flex items-start justify-between mb-5 gap-3">
+              <span class={`absolute top-4 right-4 text-xs font-semibold px-2.5 py-1 rounded-full ${gm.style}`}>
+                {gm.label}
+              </span>
+              <div class="flex items-center gap-3 mb-3 pr-28">
                 <div class="w-11 h-11 rounded-lg bg-accent/10 dark:bg-accent/20 flex items-center justify-center shrink-0">
                   <Icon name={item.icon} class="w-6 h-6 text-accent" />
                 </div>
-                <span class={`text-xs font-semibold px-2.5 py-1 rounded-full shrink-0 ${gm.style}`}>{gm.label}</span>
+                <h3 class="text-base font-bold font-heading leading-snug group-hover:text-accent transition-colors duration-200">
+                  {item.title}
+                </h3>
               </div>
-              <h3 class="text-base font-bold font-heading leading-snug mb-3 group-hover:text-accent transition-colors duration-200">
-                {item.title}
-              </h3>
               <p class="text-sm text-muted leading-relaxed flex-1">{item.description}</p>
               <div class="mt-5 inline-flex items-center gap-1 text-sm font-medium text-accent">
                 View Case Study
