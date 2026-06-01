@@ -1,5 +1,8 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Content from '~/components/widgets/Content.astro';
+import Features3 from '~/components/widgets/Features3.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 
 const metadata = {
@@ -104,32 +107,119 @@ const gallerySessions = sessions.slice(1);
 ---
 
 <Layout metadata={metadata}>
-  <!-- Header -->
-  <div class="max-w-6xl mx-auto px-4 md:px-8 pt-12 md:pt-16 pb-4">
-    <p class="text-sm font-bold uppercase tracking-widest text-accent mb-3">1:1 Sessions</p>
-    <h1 class="text-4xl md:text-5xl font-bold tracking-tighter font-heading mb-4">Recorded Mentoring Sessions</h1>
-    <p class="text-lg text-muted max-w-2xl">
-      One-on-one sessions from Chegg Skills / Thinkful and OpenClassrooms / Guild Education — technical walkthroughs,
-      live debugging, and coaching conversations with career-changing students.
-    </p>
-    <div class="flex flex-wrap gap-2 mt-5">
-      <span
-        class="text-xs font-semibold px-3 py-1 rounded-full bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200"
-        >Technical</span
-      >
-      <span
-        class="text-xs font-semibold px-3 py-1 rounded-full bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200"
-        >Coaching</span
-      >
-      <span
-        class="text-xs font-semibold px-3 py-1 rounded-full bg-teal-100 dark:bg-teal-900 text-teal-800 dark:text-teal-200"
-        >OpenClassrooms</span
-      >
-    </div>
-  </div>
+  <Hero tagline="1:1 Student Support · Live Code Review · Career Coaching">
+    <Fragment slot="title">
+      1:1 Mentoring &amp; Technical Expert —<br />
+      <span class="text-accent dark:text-white">Chegg Skills &amp; OpenClassrooms</span>
+    </Fragment>
+    <Fragment slot="subtitle">
+      Recorded one-on-one sessions from two programs — Thinkful Engineering Immersion Prep (Chegg Skills) and
+      OpenClassrooms Web Developer Mentoring for Guild Education students. Technical walkthroughs, live debugging, and
+      coaching conversations with career-changing adults.
+    </Fragment>
+  </Hero>
+
+  <!-- The Programs -->
+  <Content tagline="The Programs" title="Two programs, one consistent role." isReversed>
+    <Fragment slot="image">
+      <div class="flex items-center justify-center h-full py-12">
+        <div class="text-center space-y-6">
+          <div>
+            <p class="text-4xl font-bold font-heading text-accent leading-none">Chegg</p>
+            <p class="text-sm text-muted mt-1">Skills / Thinkful</p>
+          </div>
+          <div class="w-px h-8 bg-gray-300 dark:bg-gray-600 mx-auto"></div>
+          <div>
+            <p class="text-4xl font-bold font-heading text-accent leading-none">OC</p>
+            <p class="text-sm text-muted mt-1">OpenClassrooms / Guild Ed.</p>
+          </div>
+          <div class="mt-6 space-y-1 text-sm text-muted">
+            <p class="font-semibold text-gray-700 dark:text-gray-300">Technical Expert · Web Developer Mentor</p>
+            <p>1:1 Sessions · Live Code Review</p>
+            <p>Career-Changing Adults</p>
+          </div>
+        </div>
+      </div>
+    </Fragment>
+    <Fragment slot="content">
+      <p class="mb-4">
+        As a Technical Expert at Chegg Skills (Thinkful), I supported students enrolled in the Engineering Immersion
+        Prep program — meeting one-on-one via Zoom to review GitHub submissions, write graded feedback, and troubleshoot
+        technical blockers in real time. The students were career-changers hitting their first real wall with developer
+        tooling, terminal navigation, and JavaScript fundamentals.
+      </p>
+      <p class="mb-4">
+        As a Web Developer Mentor at OpenClassrooms, I held regular 1:1 sessions with Guild Education students — working
+        adults at companies like Walmart, Chipotle, and Disney who were upskilling into web development while working
+        full-time. They often reached out the night before a project review deadline. The sessions had to be direct,
+        efficient, and leave them capable of finishing the work independently.
+      </p>
+      <p>
+        Both roles required the same thing: show up to someone's specific problem, solve it live, and make sure they
+        understand what happened — not just that it works now.
+      </p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 section-pattern-b"></div>
+    </Fragment>
+  </Content>
+
+  <!-- The Work -->
+  <Features3
+    tagline="The Work"
+    title="What 1:1 sessions involved"
+    subtitle="Every session started with the student's actual problem — open in the browser, live in the code editor, with a deadline attached."
+    columns={3}
+    items={[
+      {
+        title: 'Live Code Review',
+        description:
+          'Opened student repos and shared screens to review code in real time — reading the error, identifying the root cause, and explaining the fix before touching a single line.',
+        icon: 'tabler:code',
+      },
+      {
+        title: 'JavaScript Debugging',
+        description:
+          'Worked through JS logic errors live — bracket notation vs. dot notation, array vs. object methods, accumulator patterns, closures, and event delegation on dynamically created elements.',
+        icon: 'tabler:brand-javascript',
+      },
+      {
+        title: 'CSS & Responsive Design',
+        description:
+          'Debugged flexbox layout issues, built mobile-first media queries from scratch, explained flex-wrap behavior, and coached students through presenting their responsive work to reviewers.',
+        icon: 'tabler:layout-columns',
+      },
+      {
+        title: 'Developer Tooling',
+        description:
+          'Walked through VS Code setup, Chrome DevTools, the Run & Debug panel, Live Server, terminal navigation, git config, and the full workflow from local file to GitHub Pages.',
+        icon: 'tabler:tools',
+      },
+      {
+        title: 'Project Review Coaching',
+        description:
+          "Helped students reframe what reviewers actually care about — demonstrated understanding of a concept, not pixel-perfect coverage. Coached how to present work confidently with what they'd built.",
+        icon: 'tabler:presentation',
+      },
+      {
+        title: 'Study Strategy & Mindset',
+        description:
+          'Addressed the non-technical blockers: when to stop debugging solo and ask for help, how to structure study time around a full-time job, and how to keep momentum when the material feels impossible.',
+        icon: 'tabler:brain',
+      },
+    ]}
+  />
 
   <!-- Sessions -->
-  <div class="max-w-6xl mx-auto px-4 md:px-8 py-10">
+  <div class="max-w-6xl mx-auto px-4 md:px-8 py-12 md:py-16">
+    <div class="text-center mb-10">
+      <p class="text-base text-secondary dark:text-blue-200 font-bold tracking-wide uppercase mb-2">Sessions</p>
+      <h2 class="text-4xl md:text-5xl font-bold tracking-tighter font-heading">Recorded 1:1 Sessions</h2>
+      <p class="text-lg text-muted mt-4">
+        A growing collection of recorded sessions across both programs. Click any session to watch.
+      </p>
+    </div>
+
     <!-- Featured session -->
     <button
       data-video-id={featuredSession.id}
@@ -192,11 +282,11 @@ const gallerySessions = sessions.slice(1);
               </div>
             </div>
             <div class="mt-2 px-1">
-              <div class="flex items-center gap-1.5">
+              <div class="flex items-center gap-1.5 flex-wrap">
                 <span class={`text-xs font-semibold px-2 py-0.5 rounded-full ${session.typeColor}`}>
                   {session.type}
                 </span>
-                <span class="text-[10px] text-muted truncate">{session.program}</span>
+                <span class="text-[10px] text-muted">{session.program}</span>
               </div>
               <p class="text-sm font-semibold text-gray-800 dark:text-gray-200 mt-1 leading-snug line-clamp-2 group-hover:text-accent transition-colors">
                 {session.title}
