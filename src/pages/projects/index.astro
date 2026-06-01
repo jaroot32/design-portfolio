@@ -211,15 +211,15 @@ const liveInstruction = [
 
 const groupMeta: Record<string, { label: string; style: string }> = {
   'open-gym': {
-    label: 'Open Gym',
+    label: 'Open Gym Practice & Review',
     style: 'bg-amber-50 dark:bg-amber-900/20 text-amber-700 dark:text-amber-400',
   },
   project: {
-    label: 'Project Walkthrough',
+    label: 'Project Walkthroughs',
     style: 'bg-emerald-50 dark:bg-emerald-900/20 text-emerald-700 dark:text-emerald-400',
   },
   'deep-dive': {
-    label: 'Concept Deep Dive',
+    label: 'Concept Introduction & Deep Dive',
     style: 'bg-violet-50 dark:bg-violet-900/20 text-violet-700 dark:text-violet-400',
   },
 };
@@ -494,9 +494,9 @@ const featured = [
       {
         [
           { label: 'All Formats', value: 'all' },
-          { label: 'Open Gym', value: 'open-gym' },
-          { label: 'Project Walkthrough', value: 'project' },
-          { label: 'Concept Deep Dive', value: 'deep-dive' },
+          { label: 'Open Gym Practice & Review', value: 'open-gym' },
+          { label: 'Project Walkthroughs', value: 'project' },
+          { label: 'Concept Introduction & Deep Dive', value: 'deep-dive' },
         ].map((f) => (
           <button
             data-filter={f.value}
