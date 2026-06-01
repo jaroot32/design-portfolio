@@ -8,6 +8,28 @@ import CallToAction from '~/components/widgets/CallToAction.astro';
 const metadata = {
   title: 'CSS Responsive Design — OpenClassrooms 1:1 Guild Mentoring',
 };
+
+const sessions = [
+  {
+    id: 'hg5jzX0-kxs',
+    type: 'Technical',
+    typeColor: 'bg-teal-100 dark:bg-teal-900 text-teal-800 dark:text-teal-200',
+    title: 'CSS Responsive Design: Flexbox & Media Queries',
+    description:
+      'Flexbox wrap behavior, desktop-first media queries, and a mobile layout built from scratch the night before a project review — with live DevTools debugging throughout.',
+  },
+  {
+    id: '9yzL3Ays6rM',
+    type: 'Technical',
+    typeColor: 'bg-teal-100 dark:bg-teal-900 text-teal-800 dark:text-teal-200',
+    title: 'Cart Delete: Event Delegation, getAttribute & Local Storage Splice',
+    description:
+      'Debugged a shopping cart delete button that removed items from the DOM but not from local storage — working through event delegation, why dot notation fails on data attributes, getAttribute() as the fix, and using splice() to remove the matched item from the local storage cart array.',
+  },
+];
+
+const featuredSession = sessions[0];
+const gallerySessions = sessions.slice(1);
 ---
 
 <Layout metadata={metadata}>
@@ -176,59 +198,81 @@ const metadata = {
         OpenClassrooms Web Developer path.
       </p>
     </div>
-    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-      {
-        [
-          {
-            id: 'hg5jzX0-kxs',
-            type: 'Technical',
-            typeColor: 'bg-teal-100 dark:bg-teal-900 text-teal-800 dark:text-teal-200',
-            title: 'CSS Responsive Design: Flexbox & Media Queries',
-            description:
-              'Flexbox wrap behavior, desktop-first media queries, and a mobile layout built from scratch the night before a project review — with live DevTools debugging throughout.',
-          },
-          {
-            id: '9yzL3Ays6rM',
-            type: 'Technical',
-            typeColor: 'bg-teal-100 dark:bg-teal-900 text-teal-800 dark:text-teal-200',
-            title: 'Cart Delete: Event Delegation, getAttribute & Local Storage Splice',
-            description:
-              'Debugged a shopping cart delete button that removed items from the DOM but not from local storage — working through event delegation, why dot notation fails on data attributes, getAttribute() as the fix, and using splice() to remove the matched item from the local storage cart array.',
-          },
-        ].map((session) => (
-          <button
-            data-video-id={session.id}
-            class="group session-card text-left flex flex-col rounded-xl border border-gray-200 dark:border-gray-700 hover:border-accent dark:hover:border-accent transition-colors cursor-pointer w-full overflow-hidden"
+
+    <!-- Featured session -->
+    <button
+      data-video-id={featuredSession.id}
+      class="group session-card text-left flex flex-col md:flex-row rounded-xl border border-gray-200 dark:border-gray-700 hover:border-accent dark:hover:border-accent transition-colors cursor-pointer w-full overflow-hidden mb-6"
+    >
+      <div class="relative w-full md:w-3/5 aspect-video flex-shrink-0 bg-gray-100 dark:bg-gray-800">
+        <img
+          src={`https://img.youtube.com/vi/${featuredSession.id}/hqdefault.jpg`}
+          alt={featuredSession.title}
+          class="w-full h-full object-cover"
+          loading="lazy"
+        />
+        <div
+          class="absolute inset-0 flex items-center justify-center bg-black/10 group-hover:bg-black/25 transition-colors"
+        >
+          <div
+            class="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform"
           >
-            <div class="relative aspect-video w-full bg-gray-100 dark:bg-gray-800">
-              <img
-                src={`https://img.youtube.com/vi/${session.id}/hqdefault.jpg`}
-                alt={session.title}
-                class="w-full h-full object-cover"
-                loading="lazy"
-              />
-              <div class="absolute inset-0 flex items-center justify-center bg-black/10 group-hover:bg-black/25 transition-colors">
-                <div class="w-14 h-14 bg-red-600 rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
-                  <svg class="h-6 w-6 text-white ml-1" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M8 5v14l11-7z" />
-                  </svg>
+            <svg class="h-7 w-7 text-white ml-1" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M8 5v14l11-7z"></path>
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div class="p-6 flex flex-col justify-center">
+        <div class="mb-3">
+          <span class={`text-xs font-semibold px-3 py-1 rounded-full ${featuredSession.typeColor}`}
+            >{featuredSession.type}</span
+          >
+        </div>
+        <p
+          class="font-semibold text-lg text-gray-800 dark:text-gray-200 mb-3 group-hover:text-accent transition-colors leading-snug"
+        >
+          {featuredSession.title}
+        </p>
+        <p class="text-sm text-muted leading-relaxed">{featuredSession.description}</p>
+        <p class="text-xs text-accent mt-4 font-medium">Watch Session →</p>
+      </div>
+    </button>
+
+    <!-- Session gallery -->
+    {
+      gallerySessions.length > 0 && (
+        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+          {gallerySessions.map((session) => (
+            <button data-video-id={session.id} class="group session-card text-left cursor-pointer">
+              <div class="relative aspect-video w-full rounded-xl overflow-hidden border border-gray-200 dark:border-gray-700 group-hover:border-accent dark:group-hover:border-accent transition-colors bg-gray-100 dark:bg-gray-800">
+                <img
+                  src={`https://img.youtube.com/vi/${session.id}/hqdefault.jpg`}
+                  alt={session.title}
+                  class="w-full h-full object-cover"
+                  loading="lazy"
+                />
+                <div class="absolute inset-0 flex items-center justify-center bg-black/10 group-hover:bg-black/25 transition-colors">
+                  <div class="w-10 h-10 bg-red-600 rounded-full flex items-center justify-center shadow-md group-hover:scale-110 transition-transform">
+                    <svg class="h-4 w-4 text-white ml-0.5" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M8 5v14l11-7z" />
+                    </svg>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="p-6 flex flex-col flex-1">
-              <div class="mb-3">
-                <span class={`text-xs font-semibold px-3 py-1 rounded-full ${session.typeColor}`}>{session.type}</span>
+              <div class="mt-2 px-1">
+                <span class={`text-xs font-semibold px-2 py-0.5 rounded-full ${session.typeColor}`}>
+                  {session.type}
+                </span>
+                <p class="text-sm font-semibold text-gray-800 dark:text-gray-200 mt-1 leading-snug line-clamp-2 group-hover:text-accent transition-colors">
+                  {session.title}
+                </p>
               </div>
-              <p class="font-semibold text-gray-800 dark:text-gray-200 mb-2 group-hover:text-accent transition-colors">
-                {session.title}
-              </p>
-              <p class="text-sm text-muted leading-relaxed">{session.description}</p>
-              <p class="text-xs text-accent mt-4 font-medium">Watch Session →</p>
-            </div>
-          </button>
-        ))
-      }
-    </div>
+            </button>
+          ))}
+        </div>
+      )
+    }
   </div>
 
   <!-- Video Modal -->
