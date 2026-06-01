@@ -4,6 +4,7 @@ import Hero from '~/components/widgets/Hero.astro';
 import Content from '~/components/widgets/Content.astro';
 import Features3 from '~/components/widgets/Features3.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
+import RelatedContent from '~/components/widgets/RelatedContent.astro';
 import YouTubeEmbed from '~/components/widgets/YouTubeEmbed.astro';
 
 const metadata = {
@@ -232,6 +233,18 @@ const metadata = {
       <div class="absolute inset-0 section-pattern-b"></div>
     </Fragment>
   </Content>
+
+  <RelatedContent
+    items={[
+      {
+        tagline: 'React Foundations',
+        title: 'React Fundamentals Review — Virtual DOM, JSX, Props & Component Design',
+        description:
+          'The session that came before: a thorough review of React fundamentals — the virtual DOM, JSX, props, component composition, and the design decisions that determine when to split components — before the myReads project begins.',
+        href: '/projects/masterschool-react-fundamentals',
+      },
+    ]}
+  />
 
   <CallToAction
     actions={[

@@ -4,6 +4,7 @@ import Hero from '~/components/widgets/Hero.astro';
 import Content from '~/components/widgets/Content.astro';
 import Features3 from '~/components/widgets/Features3.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
+import RelatedContent from '~/components/widgets/RelatedContent.astro';
 import infographicImage from '~/assets/images/ldtc620-infographic.png';
 
 const metadata = {
@@ -181,6 +182,26 @@ const metadata = {
       Download PDF
     </a>
   </div>
+
+  <RelatedContent
+    heading="More from LDTC 620"
+    items={[
+      {
+        tagline: 'AI Learning Tool',
+        title: 'ChatGPT as an AI-Powered Learning Tool — UMGC LDTC 620',
+        description:
+          'An analysis of ChatGPT as a learning tool — evaluating its potential for personalized instruction, formative feedback, and learner scaffolding within formal educational contexts.',
+        href: '/projects/ldtc620-chatgpt-ai-tool',
+      },
+      {
+        tagline: 'Social & Collaborative Learning',
+        title: 'Social & Collaborative Learning Spaces — UMGC LDTC 620',
+        description:
+          'An exploration of social and collaborative learning technologies — analyzing how platforms support peer interaction, knowledge construction, and community-based learning in formal and informal settings.',
+        href: '/projects/ldtc620-social-learning-tech',
+      },
+    ]}
+  />
 
   <CallToAction
     actions={[

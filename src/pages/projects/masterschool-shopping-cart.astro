@@ -4,6 +4,7 @@ import Hero from '~/components/widgets/Hero.astro';
 import Content from '~/components/widgets/Content.astro';
 import Features3 from '~/components/widgets/Features3.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
+import RelatedContent from '~/components/widgets/RelatedContent.astro';
 import YouTubeEmbed from '~/components/widgets/YouTubeEmbed.astro';
 
 const metadata = {
@@ -260,6 +261,18 @@ const metadata = {
       <div class="absolute inset-0 section-pattern"></div>
     </Fragment>
   </Content>
+
+  <RelatedContent
+    items={[
+      {
+        tagline: 'State Management Foundation',
+        title: 'Redux and State Management — Group Review and Q&A',
+        description:
+          'The session that sets up the shopping cart project: a group review of Redux concepts — the store, actions, reducers, and dispatch — so students have a working mental model before they wire state into the cart UI.',
+        href: '/projects/masterschool-redux',
+      },
+    ]}
+  />
 
   <CallToAction
     actions={[

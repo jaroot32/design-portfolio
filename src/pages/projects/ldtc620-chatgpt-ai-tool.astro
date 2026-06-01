@@ -4,6 +4,7 @@ import Hero from '~/components/widgets/Hero.astro';
 import Content from '~/components/widgets/Content.astro';
 import Features3 from '~/components/widgets/Features3.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
+import RelatedContent from '~/components/widgets/RelatedContent.astro';
 import YouTubeEmbed from '~/components/widgets/YouTubeEmbed.astro';
 
 const metadata = {
@@ -317,6 +318,26 @@ const metadata = {
       <div class="absolute inset-0 section-pattern"></div>
     </Fragment>
   </Content>
+
+  <RelatedContent
+    heading="More from LDTC 620"
+    items={[
+      {
+        tagline: 'Learning Technology Infographic',
+        title: 'Learning Technology Infographic — LDTC 620',
+        description:
+          'A visual comparison of learning technology tools — synthesizing research into a single designed artifact that communicates trade-offs across platforms for different instructional contexts.',
+        href: '/projects/ldtc620-infographic',
+      },
+      {
+        tagline: 'Social & Collaborative Learning',
+        title: 'Social & Collaborative Learning Spaces — UMGC LDTC 620',
+        description:
+          'An exploration of social and collaborative learning technologies — analyzing how platforms support peer interaction, knowledge construction, and community-based learning in formal and informal settings.',
+        href: '/projects/ldtc620-social-learning-tech',
+      },
+    ]}
+  />
 
   <CallToAction
     actions={[

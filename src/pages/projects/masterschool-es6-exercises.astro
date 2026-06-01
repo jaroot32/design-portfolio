@@ -4,6 +4,7 @@ import Hero from '~/components/widgets/Hero.astro';
 import Content from '~/components/widgets/Content.astro';
 import Features3 from '~/components/widgets/Features3.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
+import RelatedContent from '~/components/widgets/RelatedContent.astro';
 import YouTubeEmbed from '~/components/widgets/YouTubeEmbed.astro';
 
 const metadata = {
@@ -263,6 +264,18 @@ const metadata = {
       <div class="absolute inset-0 section-pattern-b"></div>
     </Fragment>
   </Content>
+
+  <RelatedContent
+    items={[
+      {
+        tagline: 'Open Gym Session',
+        title: 'ES6 Features Open Gym — Masterschool',
+        description:
+          'The session that introduced the feature set: destructuring, spread, rest, for...of loops, arrow functions, default parameters, and template literals — taught live with real-time student Q&A before the exercises.',
+        href: '/projects/masterschool-es6',
+      },
+    ]}
+  />
 
   <CallToAction
     actions={[

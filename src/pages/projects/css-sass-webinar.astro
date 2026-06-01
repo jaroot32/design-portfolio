@@ -4,6 +4,7 @@ import Hero from '~/components/widgets/Hero.astro';
 import Content from '~/components/widgets/Content.astro';
 import Features3 from '~/components/widgets/Features3.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
+import RelatedContent from '~/components/widgets/RelatedContent.astro';
 import mixinsSlide from '~/assets/images/sass-mixins-slide.jpg';
 import { Image } from 'astro:assets';
 import bemCode from '~/assets/images/sass-bem-code.png';
@@ -199,6 +200,19 @@ const metadata = {
       <div class="absolute inset-0 section-pattern"></div>
     </Fragment>
   </Content>
+
+  <RelatedContent
+    heading="More OpenClassrooms webinars"
+    items={[
+      {
+        tagline: 'Student Webinar',
+        title: 'Modern Animations with SCSS/SASS — OpenClassrooms',
+        description:
+          'A student webinar covering CSS animations with SCSS/SASS — transitions, @keyframes, the 12 principles of animation applied to the web, and Chrome DevTools profiling — for the same OpenClassrooms cohort.',
+        href: '/projects/css-animations-webinar',
+      },
+    ]}
+  />
 
   <CallToAction
     actions={[

@@ -4,6 +4,7 @@ import Hero from '~/components/widgets/Hero.astro';
 import Content from '~/components/widgets/Content.astro';
 import Features3 from '~/components/widgets/Features3.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
+import RelatedContent from '~/components/widgets/RelatedContent.astro';
 import YouTubeEmbed from '~/components/widgets/YouTubeEmbed.astro';
 
 const metadata = {
@@ -230,6 +231,19 @@ const metadata = {
       <div class="absolute inset-0 section-pattern-b"></div>
     </Fragment>
   </Content>
+
+  <RelatedContent
+    heading="More from this project"
+    items={[
+      {
+        tagline: 'Step-by-Step Guides',
+        title: 'Epic React Step-by-Step Guides — Masterschool',
+        description:
+          'The companion resource: written step-by-step walkthroughs for the Epic React workshop exercises — created so students could work through the material at their own pace after the live session.',
+        href: '/projects/masterschool-epic-react',
+      },
+    ]}
+  />
 
   <CallToAction
     actions={[

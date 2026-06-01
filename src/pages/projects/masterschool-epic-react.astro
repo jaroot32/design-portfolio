@@ -4,6 +4,7 @@ import Hero from '~/components/widgets/Hero.astro';
 import Content from '~/components/widgets/Content.astro';
 import Features3 from '~/components/widgets/Features3.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
+import RelatedContent from '~/components/widgets/RelatedContent.astro';
 import YouTubeEmbed from '~/components/widgets/YouTubeEmbed.astro';
 
 const metadata = {
@@ -225,6 +226,19 @@ const metadata = {
       <div class="absolute inset-0 section-pattern"></div>
     </Fragment>
   </Content>
+
+  <RelatedContent
+    heading="More from this project"
+    items={[
+      {
+        tagline: 'Live Group Session',
+        title: 'Intro to Epic React — Live Group Session',
+        description:
+          "The live session that launched this project: orienting students to Kent C. Dodds' Epic React workshop, covering the prerequisites, setup, and what students could expect before opening the exercises.",
+        href: '/projects/masterschool-epic-react-intro',
+      },
+    ]}
+  />
 
   <CallToAction
     actions={[

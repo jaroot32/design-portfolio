@@ -4,6 +4,7 @@ import Hero from '~/components/widgets/Hero.astro';
 import Content from '~/components/widgets/Content.astro';
 import Features3 from '~/components/widgets/Features3.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
+import RelatedContent from '~/components/widgets/RelatedContent.astro';
 import YouTubeEmbed from '~/components/widgets/YouTubeEmbed.astro';
 
 const metadata = {
@@ -283,6 +284,26 @@ const metadata = {
       <div class="absolute inset-0 section-pattern"></div>
     </Fragment>
   </Content>
+
+  <RelatedContent
+    heading="More from LDTC 620"
+    items={[
+      {
+        tagline: 'AI Learning Tool',
+        title: 'ChatGPT as an AI-Powered Learning Tool — UMGC LDTC 620',
+        description:
+          'An analysis of ChatGPT as a learning tool — evaluating its potential for personalized instruction, formative feedback, and learner scaffolding within formal educational contexts.',
+        href: '/projects/ldtc620-chatgpt-ai-tool',
+      },
+      {
+        tagline: 'Learning Technology Infographic',
+        title: 'Learning Technology Infographic — LDTC 620',
+        description:
+          'A visual comparison of learning technology tools — synthesizing research into a single designed artifact that communicates trade-offs across platforms for different instructional contexts.',
+        href: '/projects/ldtc620-infographic',
+      },
+    ]}
+  />
 
   <CallToAction
     actions={[

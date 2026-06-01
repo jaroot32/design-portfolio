@@ -5,6 +5,7 @@ import Content from '~/components/widgets/Content.astro';
 import Features3 from '~/components/widgets/Features3.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 import YouTubeEmbed from '~/components/widgets/YouTubeEmbed.astro';
+import RelatedContent from '~/components/widgets/RelatedContent.astro';
 
 const metadata = {
   title: 'Dinosaur Infographic Project Intro — OOP, Constructor Functions & DOM Integration | Masterschool',
@@ -209,6 +210,19 @@ const metadata = {
       <div class="absolute inset-0 section-pattern"></div>
     </Fragment>
   </Content>
+
+  <RelatedContent
+    heading="More from this project"
+    items={[
+      {
+        tagline: 'Live Debugging Session',
+        title: 'Dinosaur Infographic — Live Debugging and OOP Walkthrough',
+        description:
+          'The follow-up session: students come back with a half-built app and real bugs. Covers prototypal inheritance, constructor functions, JSON loading, and the full render pipeline — with live debugging moments throughout.',
+        href: '/projects/masterschool-dino-infographic',
+      },
+    ]}
+  />
 
   <CallToAction
     actions={[

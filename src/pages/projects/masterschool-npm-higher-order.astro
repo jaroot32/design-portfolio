@@ -4,6 +4,7 @@ import Hero from '~/components/widgets/Hero.astro';
 import Content from '~/components/widgets/Content.astro';
 import Features3 from '~/components/widgets/Features3.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
+import RelatedContent from '~/components/widgets/RelatedContent.astro';
 import YouTubeEmbed from '~/components/widgets/YouTubeEmbed.astro';
 
 const metadata = {
@@ -259,6 +260,18 @@ const metadata = {
       <div class="absolute inset-0 section-pattern-b"></div>
     </Fragment>
   </Content>
+
+  <RelatedContent
+    items={[
+      {
+        tagline: 'Next Step: Express',
+        title: 'Teaching Node and Express at Masterschool',
+        description:
+          'The session that builds on this one: taking the Node fundamentals and higher-order functions into Express — routing, middleware, request/response cycles, and building a basic REST API live with students.',
+        href: '/projects/masterschool-node-express',
+      },
+    ]}
+  />
 
   <CallToAction
     actions={[

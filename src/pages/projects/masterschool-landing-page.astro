@@ -4,6 +4,7 @@ import Hero from '~/components/widgets/Hero.astro';
 import Content from '~/components/widgets/Content.astro';
 import Features3 from '~/components/widgets/Features3.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
+import RelatedContent from '~/components/widgets/RelatedContent.astro';
 import YouTubeEmbed from '~/components/widgets/YouTubeEmbed.astro';
 
 const metadata = {
@@ -238,6 +239,19 @@ const metadata = {
       <div class="absolute inset-0 section-pattern-b"></div>
     </Fragment>
   </Content>
+
+  <RelatedContent
+    heading="More Udacity project walkthroughs"
+    items={[
+      {
+        tagline: 'CSS & Responsive Design',
+        title: 'Personal Blog Project Walkthrough — Masterschool',
+        description:
+          'The other major Udacity frontend project: a live walkthrough covering CSS architecture, mobile-first responsive design, CSS Grid, and Flexbox — with real-time student questions throughout.',
+        href: '/projects/masterschool-personal-blog',
+      },
+    ]}
+  />
 
   <CallToAction
     actions={[

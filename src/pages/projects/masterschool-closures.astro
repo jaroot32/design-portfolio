@@ -5,6 +5,7 @@ import Content from '~/components/widgets/Content.astro';
 import Features3 from '~/components/widgets/Features3.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 import YouTubeEmbed from '~/components/widgets/YouTubeEmbed.astro';
+import RelatedContent from '~/components/widgets/RelatedContent.astro';
 
 const metadata = {
   title: 'JavaScript Closures — Live Practice Session | Masterschool',
@@ -268,6 +269,18 @@ const metadata = {
       <div class="absolute inset-0 section-pattern-b"></div>
     </Fragment>
   </Content>
+
+  <RelatedContent
+    items={[
+      {
+        tagline: '1:1 Practice Session',
+        title: 'JavaScript Closures — One-on-One Practice Session',
+        description:
+          'Six closure exercises worked through live in a 1:1 session: createFunction, createFunctionWithInput, counter instances, addByX, saveOutput with password gating, and deDup — including a real debugging moment mid-session.',
+        href: '/projects/masterschool-closures-practice',
+      },
+    ]}
+  />
 
   <CallToAction
     actions={[

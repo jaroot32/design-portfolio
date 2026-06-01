@@ -5,6 +5,7 @@ import Content from '~/components/widgets/Content.astro';
 import Features3 from '~/components/widgets/Features3.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 import YouTubeEmbed from '~/components/widgets/YouTubeEmbed.astro';
+import RelatedContent from '~/components/widgets/RelatedContent.astro';
 
 const metadata = {
   title: 'Dinosaur Infographic Project — Live Debugging and OOP Walkthrough | Masterschool',
@@ -310,6 +311,19 @@ const metadata = {
       <div class="absolute inset-0 section-pattern-b"></div>
     </Fragment>
   </Content>
+
+  <RelatedContent
+    heading="More from this project"
+    items={[
+      {
+        tagline: 'Project Kickoff Session',
+        title: 'Dinosaur Infographic — Project Intro & OOP Walkthrough',
+        description:
+          'The session that came first: demoing the finished app, walking the rubric, explaining two JSON loading strategies, and mapping OOP patterns to the project requirements before students wrote a single line.',
+        href: '/projects/masterschool-dino-intro',
+      },
+    ]}
+  />
 
   <CallToAction
     actions={[

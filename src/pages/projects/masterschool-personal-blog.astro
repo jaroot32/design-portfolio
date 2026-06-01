@@ -4,6 +4,7 @@ import Hero from '~/components/widgets/Hero.astro';
 import Content from '~/components/widgets/Content.astro';
 import Features3 from '~/components/widgets/Features3.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
+import RelatedContent from '~/components/widgets/RelatedContent.astro';
 import YouTubeEmbed from '~/components/widgets/YouTubeEmbed.astro';
 
 const metadata = {
@@ -192,6 +193,19 @@ const metadata = {
       <div class="absolute inset-0 section-pattern"></div>
     </Fragment>
   </Content>
+
+  <RelatedContent
+    heading="More Udacity project walkthroughs"
+    items={[
+      {
+        tagline: 'JavaScript DOM & Events',
+        title: 'Landing Page Project — JavaScript DOM & Scroll Events',
+        description:
+          'The next major Udacity frontend project: dynamic nav generation, getBoundingClientRect() for viewport detection, scrollIntoView() for smooth scrolling, and toggling active state classes as sections enter view.',
+        href: '/projects/masterschool-landing-page',
+      },
+    ]}
+  />
 
   <CallToAction
     actions={[
