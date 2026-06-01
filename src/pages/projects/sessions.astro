@@ -1,0 +1,303 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: '1:1 Recorded Sessions — Chegg Skills & OpenClassrooms',
+};
+
+const sessions = [
+  {
+    id: 'IT-0RH_gg1A',
+    type: 'Technical',
+    program: 'Chegg Skills / Thinkful',
+    typeColor: 'bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200',
+    title: 'Git Setup & DevTools Walkthrough',
+    description:
+      'Chrome DevTools dark theme, git config setup, terminal navigation — working through the tooling that the curriculum assumed was already in place.',
+  },
+  {
+    id: '8ctHJsPHJPI',
+    type: 'Coaching',
+    program: 'Chegg Skills / Thinkful',
+    typeColor: 'bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200',
+    title: 'Pre-Assessment Debrief',
+    description:
+      'Student completed the JavaScript take-home in an hour. Session shifted to program overview, early exit patterns, ES6 preview, and strategy for the gap before the December cohort.',
+  },
+  {
+    id: 'yCdyMUm9uFM',
+    type: 'Technical',
+    program: 'Chegg Skills / Thinkful',
+    typeColor: 'bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200',
+    title: 'Terminal Fundamentals: Filesystem Navigation & Unix Commands',
+    description:
+      'Core terminal skills from scratch — navigating with pwd, ls, and cd, then creating and organizing files using mkdir, touch, cp, and mv. Includes the -R recursive flag and when to use it.',
+  },
+  {
+    id: 'wDZ0r0OVWZU',
+    type: 'Technical',
+    program: 'Chegg Skills / Thinkful',
+    typeColor: 'bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200',
+    title: 'VS Code Debugger Troubleshooting: Run & Debug with Node.js',
+    description:
+      "Live troubleshooting when the VS Code debugger wouldn't show the Node.js environment selector. Covers the debug panel, JavaScript vs. Node.js debug terminal, and an alternative workflow using Live Server + Chrome DevTools with breakpoints.",
+  },
+  {
+    id: 'Cs5r5mmTi70',
+    type: 'Coaching',
+    program: 'Chegg Skills / Thinkful',
+    typeColor: 'bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200',
+    title: 'HTML Revision Debrief & Campgrounds Challenge: Accumulator Pattern on Qualified.io',
+    description:
+      'Reviewed a rejected HTML revision — identified it as a link mix-up, not a code issue — then walked through the evaluation structure before working the campgroundCapacity challenge live on Qualified.io. Covers accumulator pattern, isReserved conditionals, and the habit of reading problem instructions before writing code.',
+  },
+  {
+    id: '_-l_H577SCY',
+    type: 'Technical',
+    program: 'Chegg Skills / Thinkful',
+    typeColor: 'bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200',
+    title: 'CSS Flexbox Portfolio Review: Layout, Image Sizing & GitHub Pages',
+    description:
+      'Reviewed a submitted CSS/Flexbox portfolio project — covering flexbox vs. HTML tables, wrapping images in div containers for better sizing control, and using max-width/max-height together to maintain circular image proportions. Student successfully pushed to GitHub Pages from terminal using git.',
+  },
+  {
+    id: 'X_EIuFFDH_w',
+    type: 'Technical',
+    program: 'Chegg Skills / Thinkful',
+    typeColor: 'bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200',
+    title: 'JavaScript Plagiarism Checker: Bracket Notation & `.includes()` on Array of Objects',
+    description:
+      'Debugged a JavaScript plagiarism detection function — working through why `.push()` fails on an object, how to access nested string properties with bracket notation (`answers[i].response`), and using `.includes(checkText)` to detect matching text. Includes a conversation on the 20–30 minute debugging limit before reaching out for help.',
+  },
+  {
+    id: '1bJ9dDXjbXs',
+    type: 'Coaching',
+    program: 'Chegg Skills / Thinkful',
+    typeColor: 'bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200',
+    title: 'Prep Program Orientation: JS Roadmap, VS Code & Free Learning Resources',
+    description:
+      'First session with a new student entering the Thinkful prep program — setting expectations for JavaScript fundamentals, framing problem-solving as the core skill, and building a supplemental resource stack. Covers Live Server in VS Code, when to use Replit vs. a local editor, and free practice options including freeCodeCamp and SoloLearn.',
+  },
+  {
+    id: 'hg5jzX0-kxs',
+    type: 'Technical',
+    program: 'OpenClassrooms / Guild',
+    typeColor: 'bg-teal-100 dark:bg-teal-900 text-teal-800 dark:text-teal-200',
+    title: 'CSS Responsive Design: Flexbox & Media Queries',
+    description:
+      'Flexbox wrap behavior, desktop-first media queries, and a mobile layout built from scratch the night before a project review — with live DevTools debugging throughout.',
+  },
+  {
+    id: '9yzL3Ays6rM',
+    type: 'Technical',
+    program: 'OpenClassrooms / Guild',
+    typeColor: 'bg-teal-100 dark:bg-teal-900 text-teal-800 dark:text-teal-200',
+    title: 'Cart Delete: Event Delegation, getAttribute & Local Storage Splice',
+    description:
+      'Debugged a shopping cart delete button that removed items from the DOM but not from local storage — working through event delegation, why dot notation fails on data attributes, getAttribute() as the fix, and using splice() to remove the matched item from the local storage cart array.',
+  },
+];
+
+const featuredSession = sessions[0];
+const gallerySessions = sessions.slice(1);
+---
+
+<Layout metadata={metadata}>
+  <!-- Header -->
+  <div class="max-w-6xl mx-auto px-4 md:px-8 pt-12 md:pt-16 pb-4">
+    <p class="text-sm font-bold uppercase tracking-widest text-accent mb-3">1:1 Sessions</p>
+    <h1 class="text-4xl md:text-5xl font-bold tracking-tighter font-heading mb-4">Recorded Mentoring Sessions</h1>
+    <p class="text-lg text-muted max-w-2xl">
+      One-on-one sessions from Chegg Skills / Thinkful and OpenClassrooms / Guild Education — technical walkthroughs,
+      live debugging, and coaching conversations with career-changing students.
+    </p>
+    <div class="flex flex-wrap gap-2 mt-5">
+      <span
+        class="text-xs font-semibold px-3 py-1 rounded-full bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200"
+        >Technical</span
+      >
+      <span
+        class="text-xs font-semibold px-3 py-1 rounded-full bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200"
+        >Coaching</span
+      >
+      <span
+        class="text-xs font-semibold px-3 py-1 rounded-full bg-teal-100 dark:bg-teal-900 text-teal-800 dark:text-teal-200"
+        >OpenClassrooms</span
+      >
+    </div>
+  </div>
+
+  <!-- Sessions -->
+  <div class="max-w-6xl mx-auto px-4 md:px-8 py-10">
+    <!-- Featured session -->
+    <button
+      data-video-id={featuredSession.id}
+      class="group session-card text-left flex flex-col md:flex-row rounded-xl border border-gray-200 dark:border-gray-700 hover:border-accent dark:hover:border-accent transition-colors cursor-pointer w-full overflow-hidden mb-6"
+    >
+      <div class="relative w-full md:w-3/5 aspect-video flex-shrink-0 bg-gray-100 dark:bg-gray-800">
+        <img
+          src={`https://img.youtube.com/vi/${featuredSession.id}/hqdefault.jpg`}
+          alt={featuredSession.title}
+          class="w-full h-full object-cover"
+          loading="lazy"
+        />
+        <div
+          class="absolute inset-0 flex items-center justify-center bg-black/10 group-hover:bg-black/25 transition-colors"
+        >
+          <div
+            class="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform"
+          >
+            <svg class="h-7 w-7 text-white ml-1" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M8 5v14l11-7z"></path>
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div class="p-6 flex flex-col justify-center">
+        <div class="flex items-center gap-2 mb-3">
+          <span class={`text-xs font-semibold px-3 py-1 rounded-full ${featuredSession.typeColor}`}
+            >{featuredSession.type}</span
+          >
+          <span class="text-xs text-muted">{featuredSession.program}</span>
+        </div>
+        <p
+          class="font-semibold text-lg text-gray-800 dark:text-gray-200 mb-3 group-hover:text-accent transition-colors leading-snug"
+        >
+          {featuredSession.title}
+        </p>
+        <p class="text-sm text-muted leading-relaxed">{featuredSession.description}</p>
+        <p class="text-xs text-accent mt-4 font-medium">Watch Session →</p>
+      </div>
+    </button>
+
+    <!-- Session gallery -->
+    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+      {
+        gallerySessions.map((session) => (
+          <button data-video-id={session.id} class="group session-card text-left cursor-pointer">
+            <div class="relative aspect-video w-full rounded-xl overflow-hidden border border-gray-200 dark:border-gray-700 group-hover:border-accent dark:group-hover:border-accent transition-colors bg-gray-100 dark:bg-gray-800">
+              <img
+                src={`https://img.youtube.com/vi/${session.id}/hqdefault.jpg`}
+                alt={session.title}
+                class="w-full h-full object-cover"
+                loading="lazy"
+              />
+              <div class="absolute inset-0 flex items-center justify-center bg-black/10 group-hover:bg-black/25 transition-colors">
+                <div class="w-10 h-10 bg-red-600 rounded-full flex items-center justify-center shadow-md group-hover:scale-110 transition-transform">
+                  <svg class="h-4 w-4 text-white ml-0.5" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M8 5v14l11-7z" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div class="mt-2 px-1">
+              <div class="flex items-center gap-1.5">
+                <span class={`text-xs font-semibold px-2 py-0.5 rounded-full ${session.typeColor}`}>
+                  {session.type}
+                </span>
+                <span class="text-[10px] text-muted truncate">{session.program}</span>
+              </div>
+              <p class="text-sm font-semibold text-gray-800 dark:text-gray-200 mt-1 leading-snug line-clamp-2 group-hover:text-accent transition-colors">
+                {session.title}
+              </p>
+            </div>
+          </button>
+        ))
+      }
+    </div>
+  </div>
+
+  <!-- Video Modal -->
+  <div
+    id="session-modal"
+    class="fixed inset-0 z-50 hidden items-center justify-center bg-black/80 backdrop-blur-sm p-4"
+    role="dialog"
+    aria-modal="true"
+    aria-label="Session video"
+  >
+    <div class="relative w-full max-w-4xl">
+      <button
+        id="modal-close"
+        class="absolute -top-10 right-0 flex items-center gap-2 text-white/80 hover:text-white text-sm font-medium transition-colors"
+        aria-label="Close video"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-4 w-4"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          stroke-width="2"
+        >
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+        Close
+      </button>
+      <div class="aspect-video w-full rounded-xl overflow-hidden shadow-2xl">
+        <iframe
+          id="modal-iframe"
+          src=""
+          class="w-full h-full"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function initSessionModal() {
+      const modal = document.getElementById('session-modal');
+      const iframe = document.getElementById('modal-iframe') as HTMLIFrameElement | null;
+      const closeBtn = document.getElementById('modal-close');
+
+      function openModal(videoId: string) {
+        if (!modal || !iframe) return;
+        iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeModal() {
+        if (!modal || !iframe) return;
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+        iframe.src = '';
+        document.body.style.overflow = '';
+      }
+
+      document.querySelectorAll('.session-card').forEach((btn) => {
+        btn.addEventListener('click', () => {
+          const videoId = btn.getAttribute('data-video-id');
+          if (videoId) openModal(videoId);
+        });
+      });
+
+      closeBtn?.addEventListener('click', closeModal);
+
+      modal?.addEventListener('click', (e) => {
+        if (e.target === modal) closeModal();
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') closeModal();
+      });
+    }
+
+    document.addEventListener('astro:page-load', initSessionModal);
+  </script>
+
+  <CallToAction
+    actions={[
+      { variant: 'primary', text: 'View All Projects', href: '/projects' },
+      { text: 'Get in Touch', href: '/about#contact' },
+    ]}
+  >
+    <Fragment slot="title">Interested in working together?</Fragment>
+    <Fragment slot="subtitle">
+      I'm open to remote opportunities in technical learning experience design, developer education, and customer
+      enablement.
+    </Fragment>
+  </CallToAction>
+</Layout>

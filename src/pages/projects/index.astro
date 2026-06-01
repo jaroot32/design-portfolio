@@ -429,154 +429,61 @@ const featured = [
       <p class="text-sm font-bold uppercase tracking-widest text-accent mb-2">1:1 Sessions</p>
       <h2 class="text-3xl md:text-4xl font-bold font-heading tracking-tighter">One on One Skills Training</h2>
       <p class="text-muted mt-3 text-lg max-w-2xl">
-        20+ recorded 1:1 sessions from two programs — Thinkful Engineering Immersion Prep (Chegg Skills) and
-        OpenClassrooms Web Developer Mentoring for Guild Education students. Organized by topic across screen-shares,
-        live walkthroughs, and coaching conversations.
+        Recorded 1:1 sessions from Chegg Skills / Thinkful and OpenClassrooms / Guild Education — technical
+        walkthroughs, live debugging, and coaching conversations with career-changing students.
       </p>
     </div>
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
-      {
-        [
-          {
-            icon: 'tabler:terminal',
-            program: 'Chegg Skills / Thinkful',
-            title: 'Terminal & Command Line',
-            subtitle: 'Filesystem · Shell Navigation · Unix Commands',
-            description:
-              'Working through terminal fundamentals live — pwd, ls, mkdir, cd, touch, cp, mv, and the recursive flag — explaining the command line as a text-based alternative to point-and-click file management.',
-            tags: [
-              { label: 'pwd · ls · cd', color: 'bg-blue-900/60 text-blue-200' },
-              { label: 'mkdir · touch · cp · mv', color: 'bg-blue-900/60 text-blue-200' },
-              { label: 'Recursive flag (-R)', color: 'bg-blue-900/60 text-blue-200' },
-            ],
-            count: '1+',
-            href: '/projects/chegg-technical-expert',
-          },
-          {
-            icon: 'tabler:git-branch',
-            program: 'Chegg Skills / Thinkful',
-            title: 'Git & Version Control',
-            subtitle: 'Git Config · GitHub · Terminal Workflow',
-            description:
-              'Setting up Git from scratch — configuring user.name and user.email, verifying with git config --list, setting the default branch to main, and navigating the filesystem to locate project files.',
-            tags: [
-              { label: 'git config', color: 'bg-purple-900/60 text-purple-200' },
-              { label: 'git config --list', color: 'bg-purple-900/60 text-purple-200' },
-              { label: 'DevTools dark theme', color: 'bg-purple-900/60 text-purple-200' },
-            ],
-            count: '1+',
-            href: '/projects/chegg-technical-expert',
-          },
-          {
-            icon: 'tabler:user-check',
-            program: 'Chegg Skills / Thinkful',
-            title: 'Interview & Career Prep',
-            subtitle: 'Assessment Coaching · Program Strategy · Confidence',
-            description:
-              'Coaching conversations the week before the program assessment — debriefing the JavaScript take-home, previewing the full-stack curriculum, and mapping a strategy for the gap before the cohort start date.',
-            tags: [
-              { label: 'Pre-assessment debrief', color: 'bg-green-900/60 text-green-200' },
-              { label: 'ES6 preview', color: 'bg-green-900/60 text-green-200' },
-              { label: 'Program overview', color: 'bg-green-900/60 text-green-200' },
-            ],
-            count: '1+',
-            href: '/projects/chegg-technical-expert',
-          },
-          {
-            icon: 'tabler:bug',
-            program: 'Chegg Skills / Thinkful',
-            title: 'VS Code & Debugging',
-            subtitle: 'Debugger · Breakpoints · DevTools · Node.js',
-            description:
-              'Live troubleshooting sessions inside VS Code — diagnosing debugger setup issues, navigating the debug panel, and using Chrome DevTools as an alternative for JavaScript step-through debugging.',
-            tags: [
-              { label: 'Run & Debug', color: 'bg-orange-900/60 text-orange-200' },
-              { label: 'Node.js environment', color: 'bg-orange-900/60 text-orange-200' },
-              { label: 'Chrome DevTools', color: 'bg-orange-900/60 text-orange-200' },
-            ],
-            count: '1+',
-            href: '/projects/chegg-technical-expert',
-          },
-          {
-            icon: 'tabler:devices',
-            program: 'OpenClassrooms / Guild',
-            title: 'CSS Responsive Design',
-            subtitle: 'Flexbox · Media Queries · Mobile Layout · Breakpoints',
-            description:
-              'Live 1:1 sessions with Guild Education students working through responsive design — flex-wrap mechanics, desktop-first max-width media queries, and building stacked mobile layouts with flex-direction column and width resets inside breakpoints.',
-            tags: [
-              { label: 'flex-wrap · flex-direction', color: 'bg-teal-900/60 text-teal-200' },
-              { label: 'max-width media queries', color: 'bg-teal-900/60 text-teal-200' },
-              { label: '320px · 375px · 768px', color: 'bg-teal-900/60 text-teal-200' },
-            ],
-            count: '1+',
-            href: '/projects/oc-guild-mentoring',
-          },
-          {
-            icon: 'tabler:clock',
-            program: '',
-            title: 'More Categories Coming',
-            subtitle: 'JavaScript · HTML & CSS · Code Review · and more',
-            description:
-              'Additional session categories are being cataloged — JavaScript fundamentals, HTML & CSS review, live code walkthroughs, and more from the full archive of 20+ recorded sessions.',
-            tags: [
-              { label: 'JavaScript', color: 'bg-gray-700/80 text-gray-300' },
-              { label: 'HTML & CSS', color: 'bg-gray-700/80 text-gray-300' },
-              { label: 'Code Review', color: 'bg-gray-700/80 text-gray-300' },
-            ],
-            count: '20+',
-            href: '/projects/chegg-technical-expert',
-          },
-        ].map((cat) => (
-          <a
-            href={cat.href}
-            class="group relative flex flex-col md:flex-row items-stretch rounded-2xl overflow-hidden border border-gray-700 hover:border-accent transition-colors duration-300 bg-gray-900 shadow-xl"
+    <a
+      href="/projects/sessions"
+      class="group relative flex flex-col md:flex-row items-stretch rounded-2xl overflow-hidden border border-gray-700 hover:border-accent transition-colors duration-300 bg-gray-900 shadow-xl"
+    >
+      <div class="flex-1 p-7 flex flex-col justify-between">
+        <div>
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-10 h-10 rounded-xl bg-accent/20 flex items-center justify-center shrink-0">
+              <Icon name="tabler:video" class="w-5 h-5 text-accent" />
+            </div>
+            <div>
+              <p class="font-bold text-white text-base leading-tight">1:1 Mentoring Sessions</p>
+              <p class="text-gray-400 text-xs mt-0.5">Chegg Skills · Thinkful · OpenClassrooms · Guild Education</p>
+            </div>
+          </div>
+          <p class="text-gray-300 text-sm leading-relaxed">
+            One-on-one recorded sessions covering JavaScript debugging, CSS layout, terminal fundamentals, VS Code
+            setup, and coaching conversations — with career-changing students across two bootcamp programs.
+          </p>
+          <div class="flex flex-wrap gap-2 mt-4">
+            <span class="text-xs font-semibold px-3 py-1 rounded-full bg-blue-900/60 text-blue-200">Technical</span>
+            <span class="text-xs font-semibold px-3 py-1 rounded-full bg-green-900/60 text-green-200">Coaching</span>
+            <span class="text-xs font-semibold px-3 py-1 rounded-full bg-teal-900/60 text-teal-200">OpenClassrooms</span
+            >
+          </div>
+        </div>
+        <div
+          class="mt-6 inline-flex items-center gap-2 text-sm font-medium text-accent group-hover:gap-3 transition-all duration-200"
+        >
+          <Icon name="tabler:player-play" class="w-4 h-4" />
+          View Sessions
+          <svg
+            class="w-3.5 h-3.5"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
           >
-            <div class="flex-1 p-7 flex flex-col justify-between">
-              <div>
-                <div class="flex items-center gap-3 mb-4">
-                  <div class="w-10 h-10 rounded-xl bg-accent/20 flex items-center justify-center shrink-0">
-                    <Icon name={cat.icon} class="w-5 h-5 text-accent" />
-                  </div>
-                  <div>
-                    <p class="font-bold text-white text-base leading-tight">{cat.title}</p>
-                    <p class="text-gray-400 text-xs mt-0.5">{cat.subtitle}</p>
-                  </div>
-                </div>
-                <p class="text-gray-300 text-sm leading-relaxed">{cat.description}</p>
-                <div class="flex flex-wrap gap-2 mt-4">
-                  {cat.tags.map((tag) => (
-                    <span class={`text-xs font-semibold px-3 py-1 rounded-full ${tag.color}`}>{tag.label}</span>
-                  ))}
-                </div>
-              </div>
-              <div class="mt-6 inline-flex items-center gap-2 text-sm font-medium text-accent group-hover:gap-3 transition-all duration-200">
-                <Icon name="tabler:player-play" class="w-4 h-4" />
-                View Sessions
-                <svg
-                  class="w-3.5 h-3.5"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path d="M5 12h14M12 5l7 7-7 7" />
-                </svg>
-              </div>
-            </div>
-            <div class="md:w-24 bg-gray-800/60 border-t md:border-t-0 md:border-l border-gray-700 flex flex-col items-center justify-center p-4 gap-1 shrink-0">
-              <p class="text-4xl font-bold font-heading text-accent leading-none">{cat.count}</p>
-              <p class="text-gray-400 text-xs font-medium text-center">sessions</p>
-              {cat.program && (
-                <p class="text-gray-500 text-[10px] font-medium text-center leading-tight mt-2">{cat.program}</p>
-              )}
-            </div>
-          </a>
-        ))
-      }
-    </div>
+            <path d="M5 12h14M12 5l7 7-7 7"></path>
+          </svg>
+        </div>
+      </div>
+      <div
+        class="md:w-24 bg-gray-800/60 border-t md:border-t-0 md:border-l border-gray-700 flex flex-col items-center justify-center p-4 gap-1 shrink-0"
+      >
+        <p class="text-4xl font-bold font-heading text-accent leading-none">10+</p>
+        <p class="text-gray-400 text-xs font-medium text-center">sessions</p>
+      </div>
+    </a>
   </section>
 
   <div id="speaking"></div>
