@@ -47,17 +47,22 @@ const {
               itemClasses?.panel
             )}
           >
-            {(icon || defaultIcon) && (
-              <Icon name={icon || defaultIcon} class={twMerge('mb-2 w-10 h-10', defaultIconClass, itemClasses?.icon)} />
-            )}
-            <div
-              class={twMerge(
-                'text-xl font-bold group-hover:text-accent transition-colors duration-200',
-                titleClass,
-                itemClasses?.title
+            <div class="flex items-center gap-3 mb-3">
+              {(icon || defaultIcon) && (
+                <Icon
+                  name={icon || defaultIcon}
+                  class={twMerge('w-10 h-10 shrink-0', defaultIconClass, 'mb-0', itemClasses?.icon)}
+                />
               )}
-            >
-              {title}
+              <div
+                class={twMerge(
+                  'text-xl font-bold group-hover:text-accent transition-colors duration-200',
+                  titleClass,
+                  itemClasses?.title
+                )}
+              >
+                {title}
+              </div>
             </div>
             {description && (
               <p
