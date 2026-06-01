@@ -19,8 +19,8 @@ metadata:
     site_name: Jonathan Root
     images:
       - url: '~/assets/images/default.png'
-        width: 1200
-        height: 628
+        width: 1600
+        height: 600
     type: website
   twitter:
     cardType: summary_large_image
