@@ -466,21 +466,21 @@ const featured = [
       </p>
     </div>
 
-    <!-- Topic filter buttons -->
+    <!-- Filter buttons -->
     <div class="flex flex-wrap gap-2 justify-center mb-3">
       {
         [
-          { label: 'All Topics', value: 'all' },
-          { label: 'JavaScript', value: 'javascript' },
-          { label: 'CSS', value: 'css' },
-          { label: 'React', value: 'react' },
-          { label: 'Node & Backend', value: 'node' },
-          { label: 'Projects', value: 'projects' },
-          { label: 'Security', value: 'security' },
+          { label: 'All', value: 'all', type: 'all' },
+          { label: 'JavaScript', value: 'javascript', type: 'topic' },
+          { label: 'CSS', value: 'css', type: 'topic' },
+          { label: 'React', value: 'react', type: 'topic' },
+          { label: 'Node & Backend', value: 'node', type: 'topic' },
+          { label: 'Projects', value: 'projects', type: 'topic' },
+          { label: 'Security', value: 'security', type: 'topic' },
         ].map((f) => (
           <button
             data-filter={f.value}
-            data-type="topic"
+            data-type={f.type}
             class={`filter-btn px-4 py-1.5 rounded-full text-sm font-semibold border transition-colors duration-200 ${f.value === 'all' ? 'bg-accent text-white border-accent' : 'border-gray-300 dark:border-gray-600 text-gray-600 dark:text-gray-400 hover:border-accent hover:text-accent'}`}
           >
             {f.label}
@@ -493,15 +493,14 @@ const featured = [
     <div class="flex flex-wrap gap-2 justify-center mb-10">
       {
         [
-          { label: 'All Formats', value: 'all' },
-          { label: 'Open Gym Practice & Review', value: 'open-gym' },
-          { label: 'Project Walkthroughs', value: 'project' },
-          { label: 'Concept Introduction & Deep Dive', value: 'deep-dive' },
+          { label: 'Open Gym Practice & Review', value: 'open-gym', type: 'group' },
+          { label: 'Project Walkthroughs', value: 'project', type: 'group' },
+          { label: 'Concept Introduction & Deep Dive', value: 'deep-dive', type: 'group' },
         ].map((f) => (
           <button
             data-filter={f.value}
-            data-type="group"
-            class={`filter-btn px-4 py-1.5 rounded-full text-sm font-semibold border transition-colors duration-200 ${f.value === 'all' ? 'bg-accent text-white border-accent' : 'border-gray-300 dark:border-gray-600 text-gray-600 dark:text-gray-400 hover:border-accent hover:text-accent'}`}
+            data-type={f.type}
+            class="filter-btn px-4 py-1.5 rounded-full text-sm font-semibold border transition-colors duration-200 border-gray-300 dark:border-gray-600 text-gray-600 dark:text-gray-400 hover:border-accent hover:text-accent"
           >
             {f.label}
           </button>
@@ -557,53 +556,42 @@ const featured = [
 
   <script>
     function initLiveFilter() {
-      const topicBtns = document.querySelectorAll<HTMLButtonElement>('.filter-btn[data-type="topic"]');
-      const groupBtns = document.querySelectorAll<HTMLButtonElement>('.filter-btn[data-type="group"]');
+      const allBtns = document.querySelectorAll<HTMLButtonElement>('.filter-btn');
       const cards = document.querySelectorAll<HTMLElement>('.live-card');
       const empty = document.getElementById('live-empty');
-
-      let activeTopic = 'all';
-      let activeGroup = 'all';
 
       const activeClasses = ['bg-accent', 'text-white', 'border-accent'];
       const inactiveClasses = ['border-gray-300', 'dark:border-gray-600', 'text-gray-600', 'dark:text-gray-400'];
 
-      function setActive(btn: HTMLButtonElement, siblings: NodeListOf<HTMLButtonElement>) {
-        siblings.forEach((b) => {
-          b.classList.remove(...activeClasses);
-          b.classList.add(...inactiveClasses);
-        });
-        btn.classList.add(...activeClasses);
-        btn.classList.remove(...inactiveClasses);
-      }
-
-      function applyFilters() {
-        let visible = 0;
-        cards.forEach((card) => {
-          const tags = card.dataset.tags ?? '';
-          const group = card.dataset.group ?? '';
-          const topicMatch = activeTopic === 'all' || tags.includes(activeTopic);
-          const groupMatch = activeGroup === 'all' || group === activeGroup;
-          const show = topicMatch && groupMatch;
-          card.style.display = show ? '' : 'none';
-          if (show) visible++;
-        });
-        if (empty) empty.classList.toggle('hidden', visible > 0);
-      }
-
-      topicBtns.forEach((btn) => {
+      allBtns.forEach((btn) => {
         btn.addEventListener('click', () => {
-          activeTopic = btn.dataset.filter ?? 'all';
-          setActive(btn, topicBtns);
-          applyFilters();
-        });
-      });
+          const filter = btn.dataset.filter ?? 'all';
+          const type = btn.dataset.type ?? 'all';
 
-      groupBtns.forEach((btn) => {
-        btn.addEventListener('click', () => {
-          activeGroup = btn.dataset.filter ?? 'all';
-          setActive(btn, groupBtns);
-          applyFilters();
+          // Deactivate every button, then activate just this one
+          allBtns.forEach((b) => {
+            b.classList.remove(...activeClasses);
+            b.classList.add(...inactiveClasses);
+          });
+          btn.classList.add(...activeClasses);
+          btn.classList.remove(...inactiveClasses);
+
+          // Show/hide cards
+          let visible = 0;
+          cards.forEach((card) => {
+            let show = false;
+            if (filter === 'all') {
+              show = true;
+            } else if (type === 'topic') {
+              show = (card.dataset.tags ?? '').includes(filter);
+            } else if (type === 'group') {
+              show = (card.dataset.group ?? '') === filter;
+            }
+            card.style.display = show ? '' : 'none';
+            if (show) visible++;
+          });
+
+          if (empty) empty.classList.toggle('hidden', visible > 0);
         });
       });
     }
