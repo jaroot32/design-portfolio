@@ -16,6 +16,7 @@ const liveInstruction = [
       'A live project walkthrough and Q&A session for Masterschool students on the Udacity Personal Blog project — covering CSS architecture, mobile-first responsive design, CSS Grid, and Flexbox with real-time student questions throughout.',
     href: '/projects/masterschool-personal-blog',
     tags: ['css', 'projects'],
+    group: 'project',
   },
   {
     icon: 'tabler:layout-columns',
@@ -24,6 +25,7 @@ const liveInstruction = [
       'A live 57-minute session teaching career-changers how to build responsive layouts with CSS Flexbox — covering every major parent and child property, mobile-first design thinking, and media queries through live CodePen demos with active student Q&A.',
     href: '/projects/masterschool-css-flexbox',
     tags: ['css'],
+    group: 'open-gym',
   },
   {
     icon: 'tabler:test-pipe',
@@ -32,6 +34,7 @@ const liveInstruction = [
       'A live group session introducing Masterschool students to test-driven development — covering the red/green/refactor cycle, unit vs. integration tests, and a hands-on code-along building and passing a Jest test from scratch before the React/Redux capstone.',
     href: '/projects/masterschool-testing-javascript',
     tags: ['javascript'],
+    group: 'deep-dive',
   },
   {
     icon: 'tabler:brand-css3',
@@ -40,6 +43,7 @@ const liveInstruction = [
       "A live one-hour session introducing an international bootcamp cohort to CSS selectors, specificity, and the cascade — taught with real-time Slido polls, live Replit demos, and a chat full of students answering each other's questions.",
     href: '/projects/masterschool-css-selectors',
     tags: ['css'],
+    group: 'deep-dive',
   },
   {
     icon: 'tabler:layout-navbar',
@@ -48,6 +52,7 @@ const liveInstruction = [
       'A live open gym session on the Udacity Landing Page project — covering dynamic nav generation, getBoundingClientRect() for viewport detection, scrollIntoView() for smooth scrolling, and toggling active state classes as sections come into view.',
     href: '/projects/masterschool-landing-page',
     tags: ['javascript', 'projects'],
+    group: 'project',
   },
   {
     icon: 'tabler:puzzle',
@@ -56,6 +61,7 @@ const liveInstruction = [
       'A live open gym session covering JavaScript prototypes in response to a student question, then working through two interview-style brain teasers live: a vowel frequency counter and a total uppercase letter counter, with full student participation throughout.',
     href: '/projects/masterschool-brain-teasers',
     tags: ['javascript'],
+    group: 'open-gym',
   },
   {
     icon: 'tabler:circles-relation',
@@ -64,6 +70,7 @@ const liveInstruction = [
       'A live group session covering four ways to create objects (object literals, factory functions, Object.create(), constructor functions, and ES6 class syntax), prototypical inheritance, scope, closures via IIFEs, and the Revealing Module Pattern — closing with a direct connection to React class components.',
     href: '/projects/masterschool-oop-javascript',
     tags: ['javascript'],
+    group: 'deep-dive',
   },
   {
     icon: 'tabler:brackets',
@@ -72,6 +79,7 @@ const liveInstruction = [
       'A live Q&A and coding session working through JavaScript closures — from functions returning functions to a DOM font-size demo, and fixing the classic setTimeout loop bug using closures and IIFEs. Audience participation throughout.',
     href: '/projects/masterschool-closures',
     tags: ['javascript'],
+    group: 'open-gym',
   },
   {
     icon: 'tabler:user',
@@ -80,6 +88,7 @@ const liveInstruction = [
       'A one-on-one Masterschool session working through six closure practice problems live: createFunction, createFunctionWithInput, a counter with separate IIFE instances, addByX, the complex saveOutput cache with password gating, and deDup with a live debugging moment.',
     href: '/projects/masterschool-closures-practice',
     tags: ['javascript'],
+    group: 'open-gym',
   },
   {
     icon: 'tabler:bolt',
@@ -88,6 +97,7 @@ const liveInstruction = [
       'Two live open gym sessions covering the core ES6 feature set: destructuring, spread, rest parameters, for...of loops, arrow functions, default parameters, and template literals with live coding and real-time student Q&A.',
     href: '/projects/masterschool-es6',
     tags: ['javascript'],
+    group: 'open-gym',
   },
   {
     icon: 'tabler:bolt',
@@ -96,6 +106,7 @@ const liveInstruction = [
       'A live exercise session working through ES6 problems with students presenting answers live — object and array destructuring, arrow function shorthand, default parameters, rest and spread, the ternary operator, and the nullish coalescing operator, with a React preview at the close.',
     href: '/projects/masterschool-es6-exercises',
     tags: ['javascript'],
+    group: 'open-gym',
   },
   {
     icon: 'tabler:package',
@@ -104,6 +115,7 @@ const liveInstruction = [
       'A live session covering Node.js, npm, and module loading — then rebuilding map, forEach, filter, and reduce from scratch using plain for loops and callbacks, as preparation for understanding promises and async/await.',
     href: '/projects/masterschool-npm-higher-order',
     tags: ['javascript', 'node'],
+    group: 'deep-dive',
   },
   {
     icon: 'tabler:clock-pause',
@@ -112,6 +124,7 @@ const liveInstruction = [
       'A live open gym session working through JavaScript async patterns — promise states, executor functions, handling success and failure with .then and .catch, and running concurrent promises with Promise.all, with real-time student Q&A and live code.',
     href: '/projects/masterschool-async-promises',
     tags: ['javascript'],
+    group: 'open-gym',
   },
   {
     icon: 'tabler:layout-grid',
@@ -120,6 +133,7 @@ const liveInstruction = [
       'A live project kickoff session for the Udacity Dinosaur Infographic assignment — demoing the finished app, walking the rubric, and mapping the build strategy to OOP concepts. Covers loading JSON via import vs. Fetch API, constructor functions vs. ES6 classes, IIFE and the Revealing Module Pattern, three comparison methods, tile generation, and version control with GitHub.',
     href: '/projects/masterschool-dino-intro',
     tags: ['javascript', 'projects'],
+    group: 'project',
   },
   {
     icon: 'tabler:bug',
@@ -128,6 +142,7 @@ const liveInstruction = [
       'A small-group support session for students blocked on the Udacity Dinosaur Infographic project — working through two methods for loading JSON data, building the Dino constructor live, implementing the IIFE pattern for form handling, and debugging with the Chrome debugger as students watched in real time.',
     href: '/projects/masterschool-dino-infographic',
     tags: ['javascript', 'projects'],
+    group: 'project',
   },
   {
     icon: 'tabler:server',
@@ -136,6 +151,7 @@ const liveInstruction = [
       'A live 32-minute session introducing career-changers to server-side development with Node.js and Express — the hardest conceptual shift in the bootcamp curriculum, taught with scaffolded mental models, live code demos, and real-time student interaction.',
     href: '/projects/masterschool-node-express',
     tags: ['node'],
+    group: 'deep-dive',
   },
   {
     icon: 'tabler:brand-react',
@@ -144,6 +160,7 @@ const liveInstruction = [
       "A live one-hour group onboarding session for Masterschool students — watching Kent C. Dodds' welcome video together and completing every setup step live, so no one hit a wall before the first exercise.",
     href: '/projects/masterschool-epic-react-intro',
     tags: ['react'],
+    group: 'project',
   },
   {
     icon: 'tabler:book',
@@ -152,6 +169,7 @@ const liveInstruction = [
       'A live session introducing Masterschool students to the myReads React project — demoing the finished app first, walking the rubric, and mapping each feature to the specific React concept needed to build it.',
     href: '/projects/masterschool-myreads-book-tracker',
     tags: ['react', 'projects'],
+    group: 'project',
   },
   {
     icon: 'tabler:brand-react',
@@ -160,6 +178,7 @@ const liveInstruction = [
       'A review week session using breakout rooms and full-group debrief to cover core React concepts — virtual DOM, composition, one-way data flow, JSX, Babel, and declarative vs imperative code, with fill-in-the-blank exercises on props, conditional rendering, list keys, and className.',
     href: '/projects/masterschool-react-fundamentals',
     tags: ['react'],
+    group: 'deep-dive',
   },
   {
     icon: 'tabler:rocket',
@@ -168,6 +187,7 @@ const liveInstruction = [
       'A live project walkthrough and Q&A session for Masterschool students on the UdaciRacer JavaScript racing game — covering async programming, the Fetch API, DOM manipulation, and working with a Node.js server.',
     href: '/projects/masterschool-udaciracer',
     tags: ['javascript', 'projects'],
+    group: 'project',
   },
   {
     icon: 'tabler:box',
@@ -176,6 +196,7 @@ const liveInstruction = [
       'A group review session covering Redux fundamentals — the three core principles, the full action/dispatch/reducer flow, middleware, useReducer, and the Context API — using breakout rooms for collaborative Q&A followed by a full-group debrief.',
     href: '/projects/masterschool-redux',
     tags: ['react'],
+    group: 'deep-dive',
   },
   {
     icon: 'tabler:shield-lock',
@@ -184,8 +205,24 @@ const liveInstruction = [
       'A live webinar introducing Masterschool students to the OWASP Top Ten — injection, broken authentication, XSS/CSRF, broken access control, data exposure, and three new 2021 categories — with a business-case framing using the ALE risk formula and hands-on exploration via hacksplaining.com.',
     href: '/projects/masterschool-web-security',
     tags: ['security'],
+    group: 'deep-dive',
   },
 ];
+
+const groupMeta: Record<string, { label: string; style: string }> = {
+  'open-gym': {
+    label: 'Open Gym',
+    style: 'bg-amber-50 dark:bg-amber-900/20 text-amber-700 dark:text-amber-400',
+  },
+  project: {
+    label: 'Project Walkthrough',
+    style: 'bg-emerald-50 dark:bg-emerald-900/20 text-emerald-700 dark:text-emerald-400',
+  },
+  'deep-dive': {
+    label: 'Concept Deep Dive',
+    style: 'bg-violet-50 dark:bg-violet-900/20 text-violet-700 dark:text-violet-400',
+  },
+};
 
 const featured = [
   {
@@ -429,11 +466,11 @@ const featured = [
       </p>
     </div>
 
-    <!-- Filter buttons -->
-    <div class="flex flex-wrap gap-2 justify-center mb-10">
+    <!-- Topic filter buttons -->
+    <div class="flex flex-wrap gap-2 justify-center mb-3">
       {
         [
-          { label: 'All', value: 'all' },
+          { label: 'All Topics', value: 'all' },
           { label: 'JavaScript', value: 'javascript' },
           { label: 'CSS', value: 'css' },
           { label: 'React', value: 'react' },
@@ -443,6 +480,27 @@ const featured = [
         ].map((f) => (
           <button
             data-filter={f.value}
+            data-type="topic"
+            class={`filter-btn px-4 py-1.5 rounded-full text-sm font-semibold border transition-colors duration-200 ${f.value === 'all' ? 'bg-accent text-white border-accent' : 'border-gray-300 dark:border-gray-600 text-gray-600 dark:text-gray-400 hover:border-accent hover:text-accent'}`}
+          >
+            {f.label}
+          </button>
+        ))
+      }
+    </div>
+
+    <!-- Format filter buttons -->
+    <div class="flex flex-wrap gap-2 justify-center mb-10">
+      {
+        [
+          { label: 'All Formats', value: 'all' },
+          { label: 'Open Gym', value: 'open-gym' },
+          { label: 'Project Walkthrough', value: 'project' },
+          { label: 'Concept Deep Dive', value: 'deep-dive' },
+        ].map((f) => (
+          <button
+            data-filter={f.value}
+            data-type="group"
             class={`filter-btn px-4 py-1.5 rounded-full text-sm font-semibold border transition-colors duration-200 ${f.value === 'all' ? 'bg-accent text-white border-accent' : 'border-gray-300 dark:border-gray-600 text-gray-600 dark:text-gray-400 hover:border-accent hover:text-accent'}`}
           >
             {f.label}
@@ -454,35 +512,42 @@ const featured = [
     <!-- Card grid -->
     <div id="live-grid" class="grid md:grid-cols-2 gap-6">
       {
-        liveInstruction.map((item) => (
-          <a
-            href={item.href}
-            data-tags={item.tags.join(' ')}
-            class="live-card group relative flex flex-col p-6 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-accent dark:hover:border-accent transition-all duration-200 shadow-sm hover:shadow-lg"
-          >
-            <div class="w-11 h-11 rounded-lg bg-accent/10 dark:bg-accent/20 flex items-center justify-center mb-5 shrink-0">
-              <Icon name={item.icon} class="w-6 h-6 text-accent" />
-            </div>
-            <h3 class="text-base font-bold font-heading leading-snug mb-3 group-hover:text-accent transition-colors duration-200">
-              {item.title}
-            </h3>
-            <p class="text-sm text-muted leading-relaxed flex-1">{item.description}</p>
-            <div class="mt-5 inline-flex items-center gap-1 text-sm font-medium text-accent">
-              View Case Study
-              <svg
-                class="w-3.5 h-3.5 transition-transform duration-200 group-hover:translate-x-0.5"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <path d="M5 12h14M12 5l7 7-7 7" />
-              </svg>
-            </div>
-          </a>
-        ))
+        liveInstruction.map((item) => {
+          const gm = groupMeta[item.group];
+          return (
+            <a
+              href={item.href}
+              data-tags={item.tags.join(' ')}
+              data-group={item.group}
+              class="live-card group relative flex flex-col p-6 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-accent dark:hover:border-accent transition-all duration-200 shadow-sm hover:shadow-lg"
+            >
+              <div class="flex items-start justify-between mb-5 gap-3">
+                <div class="w-11 h-11 rounded-lg bg-accent/10 dark:bg-accent/20 flex items-center justify-center shrink-0">
+                  <Icon name={item.icon} class="w-6 h-6 text-accent" />
+                </div>
+                <span class={`text-xs font-semibold px-2.5 py-1 rounded-full shrink-0 ${gm.style}`}>{gm.label}</span>
+              </div>
+              <h3 class="text-base font-bold font-heading leading-snug mb-3 group-hover:text-accent transition-colors duration-200">
+                {item.title}
+              </h3>
+              <p class="text-sm text-muted leading-relaxed flex-1">{item.description}</p>
+              <div class="mt-5 inline-flex items-center gap-1 text-sm font-medium text-accent">
+                View Case Study
+                <svg
+                  class="w-3.5 h-3.5 transition-transform duration-200 group-hover:translate-x-0.5"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M5 12h14M12 5l7 7-7 7" />
+                </svg>
+              </div>
+            </a>
+          );
+        })
       }
     </div>
 
@@ -492,32 +557,53 @@ const featured = [
 
   <script>
     function initLiveFilter() {
-      const buttons = document.querySelectorAll<HTMLButtonElement>('.filter-btn');
+      const topicBtns = document.querySelectorAll<HTMLButtonElement>('.filter-btn[data-type="topic"]');
+      const groupBtns = document.querySelectorAll<HTMLButtonElement>('.filter-btn[data-type="group"]');
       const cards = document.querySelectorAll<HTMLElement>('.live-card');
       const empty = document.getElementById('live-empty');
 
-      buttons.forEach((btn) => {
+      let activeTopic = 'all';
+      let activeGroup = 'all';
+
+      const activeClasses = ['bg-accent', 'text-white', 'border-accent'];
+      const inactiveClasses = ['border-gray-300', 'dark:border-gray-600', 'text-gray-600', 'dark:text-gray-400'];
+
+      function setActive(btn: HTMLButtonElement, siblings: NodeListOf<HTMLButtonElement>) {
+        siblings.forEach((b) => {
+          b.classList.remove(...activeClasses);
+          b.classList.add(...inactiveClasses);
+        });
+        btn.classList.add(...activeClasses);
+        btn.classList.remove(...inactiveClasses);
+      }
+
+      function applyFilters() {
+        let visible = 0;
+        cards.forEach((card) => {
+          const tags = card.dataset.tags ?? '';
+          const group = card.dataset.group ?? '';
+          const topicMatch = activeTopic === 'all' || tags.includes(activeTopic);
+          const groupMatch = activeGroup === 'all' || group === activeGroup;
+          const show = topicMatch && groupMatch;
+          card.style.display = show ? '' : 'none';
+          if (show) visible++;
+        });
+        if (empty) empty.classList.toggle('hidden', visible > 0);
+      }
+
+      topicBtns.forEach((btn) => {
         btn.addEventListener('click', () => {
-          const filter = btn.dataset.filter ?? 'all';
+          activeTopic = btn.dataset.filter ?? 'all';
+          setActive(btn, topicBtns);
+          applyFilters();
+        });
+      });
 
-          // Update button styles
-          buttons.forEach((b) => {
-            b.classList.remove('bg-accent', 'text-white', 'border-accent');
-            b.classList.add('border-gray-300', 'dark:border-gray-600', 'text-gray-600', 'dark:text-gray-400');
-          });
-          btn.classList.add('bg-accent', 'text-white', 'border-accent');
-          btn.classList.remove('border-gray-300', 'dark:border-gray-600', 'text-gray-600', 'dark:text-gray-400');
-
-          // Show/hide cards
-          let visible = 0;
-          cards.forEach((card) => {
-            const tags = card.dataset.tags ?? '';
-            const show = filter === 'all' || tags.includes(filter);
-            card.style.display = show ? '' : 'none';
-            if (show) visible++;
-          });
-
-          if (empty) empty.classList.toggle('hidden', visible > 0);
+      groupBtns.forEach((btn) => {
+        btn.addEventListener('click', () => {
+          activeGroup = btn.dataset.filter ?? 'all';
+          setActive(btn, groupBtns);
+          applyFilters();
         });
       });
     }
