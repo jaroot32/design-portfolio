@@ -8,6 +8,185 @@ const metadata = {
   title: 'Projects',
 };
 
+const liveInstruction = [
+  {
+    icon: 'tabler:layout-columns',
+    title: 'Personal Blog Project Walkthrough — Masterschool',
+    description:
+      'A live project walkthrough and Q&A session for Masterschool students on the Udacity Personal Blog project — covering CSS architecture, mobile-first responsive design, CSS Grid, and Flexbox with real-time student questions throughout.',
+    href: '/projects/masterschool-personal-blog',
+    tags: ['css', 'projects'],
+  },
+  {
+    icon: 'tabler:layout-columns',
+    title: 'CSS Flexbox & Responsive Design — Masterschool',
+    description:
+      'A live 57-minute session teaching career-changers how to build responsive layouts with CSS Flexbox — covering every major parent and child property, mobile-first design thinking, and media queries through live CodePen demos with active student Q&A.',
+    href: '/projects/masterschool-css-flexbox',
+    tags: ['css'],
+  },
+  {
+    icon: 'tabler:test-pipe',
+    title: 'Testing in JavaScript — Live Coding Session with Jest',
+    description:
+      'A live group session introducing Masterschool students to test-driven development — covering the red/green/refactor cycle, unit vs. integration tests, and a hands-on code-along building and passing a Jest test from scratch before the React/Redux capstone.',
+    href: '/projects/masterschool-testing-javascript',
+    tags: ['javascript'],
+  },
+  {
+    icon: 'tabler:brand-css3',
+    title: 'CSS Selectors and the Cascade — Masterschool',
+    description:
+      "A live one-hour session introducing an international bootcamp cohort to CSS selectors, specificity, and the cascade — taught with real-time Slido polls, live Replit demos, and a chat full of students answering each other's questions.",
+    href: '/projects/masterschool-css-selectors',
+    tags: ['css'],
+  },
+  {
+    icon: 'tabler:layout-navbar',
+    title: 'Landing Page Project — JavaScript DOM & Scroll Events',
+    description:
+      'A live open gym session on the Udacity Landing Page project — covering dynamic nav generation, getBoundingClientRect() for viewport detection, scrollIntoView() for smooth scrolling, and toggling active state classes as sections come into view.',
+    href: '/projects/masterschool-landing-page',
+    tags: ['javascript', 'projects'],
+  },
+  {
+    icon: 'tabler:puzzle',
+    title: 'JavaScript Brain Teasers — Catchup Week Open Gym | Masterschool',
+    description:
+      'A live open gym session covering JavaScript prototypes in response to a student question, then working through two interview-style brain teasers live: a vowel frequency counter and a total uppercase letter counter, with full student participation throughout.',
+    href: '/projects/masterschool-brain-teasers',
+    tags: ['javascript'],
+  },
+  {
+    icon: 'tabler:circles-relation',
+    title: 'Object-Oriented JavaScript — Prototypes, Closures & the Revealing Module Pattern | Masterschool',
+    description:
+      'A live group session covering four ways to create objects (object literals, factory functions, Object.create(), constructor functions, and ES6 class syntax), prototypical inheritance, scope, closures via IIFEs, and the Revealing Module Pattern — closing with a direct connection to React class components.',
+    href: '/projects/masterschool-oop-javascript',
+    tags: ['javascript'],
+  },
+  {
+    icon: 'tabler:brackets',
+    title: 'JavaScript Closures — Live Practice Session',
+    description:
+      'A live Q&A and coding session working through JavaScript closures — from functions returning functions to a DOM font-size demo, and fixing the classic setTimeout loop bug using closures and IIFEs. Audience participation throughout.',
+    href: '/projects/masterschool-closures',
+    tags: ['javascript'],
+  },
+  {
+    icon: 'tabler:user',
+    title: 'JavaScript Closures — One-on-One Practice Session | Masterschool',
+    description:
+      'A one-on-one Masterschool session working through six closure practice problems live: createFunction, createFunctionWithInput, a counter with separate IIFE instances, addByX, the complex saveOutput cache with password gating, and deDup with a live debugging moment.',
+    href: '/projects/masterschool-closures-practice',
+    tags: ['javascript'],
+  },
+  {
+    icon: 'tabler:bolt',
+    title: 'ES6 Features Open Gym — Masterschool',
+    description:
+      'Two live open gym sessions covering the core ES6 feature set: destructuring, spread, rest parameters, for...of loops, arrow functions, default parameters, and template literals with live coding and real-time student Q&A.',
+    href: '/projects/masterschool-es6',
+    tags: ['javascript'],
+  },
+  {
+    icon: 'tabler:bolt',
+    title: 'ES6 Exercises — Destructuring, Ternary, and Defensive Programming | Masterschool',
+    description:
+      'A live exercise session working through ES6 problems with students presenting answers live — object and array destructuring, arrow function shorthand, default parameters, rest and spread, the ternary operator, and the nullish coalescing operator, with a React preview at the close.',
+    href: '/projects/masterschool-es6-exercises',
+    tags: ['javascript'],
+  },
+  {
+    icon: 'tabler:package',
+    title: 'Node, npm, and Higher-Order Functions — Live Coding Session | Masterschool',
+    description:
+      'A live session covering Node.js, npm, and module loading — then rebuilding map, forEach, filter, and reduce from scratch using plain for loops and callbacks, as preparation for understanding promises and async/await.',
+    href: '/projects/masterschool-npm-higher-order',
+    tags: ['javascript', 'node'],
+  },
+  {
+    icon: 'tabler:clock-pause',
+    title: 'JavaScript Async — Promises, .then/.catch, and Promise.all | Masterschool',
+    description:
+      'A live open gym session working through JavaScript async patterns — promise states, executor functions, handling success and failure with .then and .catch, and running concurrent promises with Promise.all, with real-time student Q&A and live code.',
+    href: '/projects/masterschool-async-promises',
+    tags: ['javascript'],
+  },
+  {
+    icon: 'tabler:layout-grid',
+    title: 'Dinosaur Infographic Project Intro — OOP, Constructor Functions & DOM Integration | Masterschool',
+    description:
+      'A live project kickoff session for the Udacity Dinosaur Infographic assignment — demoing the finished app, walking the rubric, and mapping the build strategy to OOP concepts. Covers loading JSON via import vs. Fetch API, constructor functions vs. ES6 classes, IIFE and the Revealing Module Pattern, three comparison methods, tile generation, and version control with GitHub.',
+    href: '/projects/masterschool-dino-intro',
+    tags: ['javascript', 'projects'],
+  },
+  {
+    icon: 'tabler:bug',
+    title: 'Dinosaur Infographic — Live Debugging and OOP Walkthrough | Masterschool',
+    description:
+      'A small-group support session for students blocked on the Udacity Dinosaur Infographic project — working through two methods for loading JSON data, building the Dino constructor live, implementing the IIFE pattern for form handling, and debugging with the Chrome debugger as students watched in real time.',
+    href: '/projects/masterschool-dino-infographic',
+    tags: ['javascript', 'projects'],
+  },
+  {
+    icon: 'tabler:server',
+    title: 'Teaching Node and Express — Masterschool',
+    description:
+      'A live 32-minute session introducing career-changers to server-side development with Node.js and Express — the hardest conceptual shift in the bootcamp curriculum, taught with scaffolded mental models, live code demos, and real-time student interaction.',
+    href: '/projects/masterschool-node-express',
+    tags: ['node'],
+  },
+  {
+    icon: 'tabler:brand-react',
+    title: 'Intro to Epic React — Live Group Session',
+    description:
+      "A live one-hour group onboarding session for Masterschool students — watching Kent C. Dodds' welcome video together and completing every setup step live, so no one hit a wall before the first exercise.",
+    href: '/projects/masterschool-epic-react-intro',
+    tags: ['react'],
+  },
+  {
+    icon: 'tabler:book',
+    title: 'myReads Book Tracker — React Project Intro',
+    description:
+      'A live session introducing Masterschool students to the myReads React project — demoing the finished app first, walking the rubric, and mapping each feature to the specific React concept needed to build it.',
+    href: '/projects/masterschool-myreads-book-tracker',
+    tags: ['react', 'projects'],
+  },
+  {
+    icon: 'tabler:brand-react',
+    title: 'React Fundamentals Review — Virtual DOM, JSX, Props, and Component Design | Masterschool',
+    description:
+      'A review week session using breakout rooms and full-group debrief to cover core React concepts — virtual DOM, composition, one-way data flow, JSX, Babel, and declarative vs imperative code, with fill-in-the-blank exercises on props, conditional rendering, list keys, and className.',
+    href: '/projects/masterschool-react-fundamentals',
+    tags: ['react'],
+  },
+  {
+    icon: 'tabler:rocket',
+    title: 'UdaciRacer Project Walkthrough — Masterschool',
+    description:
+      'A live project walkthrough and Q&A session for Masterschool students on the UdaciRacer JavaScript racing game — covering async programming, the Fetch API, DOM manipulation, and working with a Node.js server.',
+    href: '/projects/masterschool-udaciracer',
+    tags: ['javascript', 'projects'],
+  },
+  {
+    icon: 'tabler:box',
+    title: 'Redux and State Management — Group Review and Q&A | Masterschool',
+    description:
+      'A group review session covering Redux fundamentals — the three core principles, the full action/dispatch/reducer flow, middleware, useReducer, and the Context API — using breakout rooms for collaborative Q&A followed by a full-group debrief.',
+    href: '/projects/masterschool-redux',
+    tags: ['react'],
+  },
+  {
+    icon: 'tabler:shield-lock',
+    title: 'Common Security Attacks — Securing Web Apps with OWASP | Masterschool',
+    description:
+      'A live webinar introducing Masterschool students to the OWASP Top Ten — injection, broken authentication, XSS/CSRF, broken access control, data exposure, and three new 2021 categories — with a business-case framing using the ALE risk formula and hands-on exploration via hacksplaining.com.',
+    href: '/projects/masterschool-web-security',
+    tags: ['security'],
+  },
+];
+
 const featured = [
   {
     icon: 'tabler:sparkles',
@@ -240,166 +419,111 @@ const featured = [
   />
 
   <div id="live-instruction"></div>
-  <Features2
-    title="Remote Live Instruction"
-    columns={2}
-    items={[
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 py-12 md:py-16">
+    <div class="mb-8 text-center">
+      <p class="text-sm font-bold uppercase tracking-widest text-accent mb-2">Masterschool · Udacity Curriculum</p>
+      <h2 class="text-3xl md:text-4xl font-bold font-heading tracking-tighter">Remote Live Instruction</h2>
+      <p class="text-muted mt-3 text-lg max-w-2xl mx-auto">
+        22 recorded sessions across JavaScript, CSS, React, Node, and web security — taught live to international
+        bootcamp cohorts.
+      </p>
+    </div>
+
+    <!-- Filter buttons -->
+    <div class="flex flex-wrap gap-2 justify-center mb-10">
       {
-        title: 'Personal Blog Project Walkthrough — Masterschool',
-        description:
-          'A live project walkthrough and Q&A session for Masterschool students on the Udacity Personal Blog project — covering CSS architecture, mobile-first responsive design, CSS Grid, and Flexbox with real-time student questions throughout.',
-        icon: 'tabler:layout-columns',
-        callToAction: { text: 'View Case Study', href: '/projects/masterschool-personal-blog' },
-      },
+        [
+          { label: 'All', value: 'all' },
+          { label: 'JavaScript', value: 'javascript' },
+          { label: 'CSS', value: 'css' },
+          { label: 'React', value: 'react' },
+          { label: 'Node & Backend', value: 'node' },
+          { label: 'Projects', value: 'projects' },
+          { label: 'Security', value: 'security' },
+        ].map((f) => (
+          <button
+            data-filter={f.value}
+            class={`filter-btn px-4 py-1.5 rounded-full text-sm font-semibold border transition-colors duration-200 ${f.value === 'all' ? 'bg-accent text-white border-accent' : 'border-gray-300 dark:border-gray-600 text-gray-600 dark:text-gray-400 hover:border-accent hover:text-accent'}`}
+          >
+            {f.label}
+          </button>
+        ))
+      }
+    </div>
+
+    <!-- Card grid -->
+    <div id="live-grid" class="grid md:grid-cols-2 gap-6">
       {
-        title: 'CSS Flexbox & Responsive Design — Masterschool',
-        description:
-          'A live 57-minute session teaching career-changers how to build responsive layouts with CSS Flexbox — covering every major parent and child property, mobile-first design thinking, and media queries through live CodePen demos with active student Q&A.',
-        icon: 'tabler:layout-columns',
-        callToAction: { text: 'View Case Study', href: '/projects/masterschool-css-flexbox' },
-      },
-      {
-        title: 'Testing in JavaScript — Live Coding Session with Jest',
-        description:
-          'A live group session introducing Masterschool students to test-driven development — covering the red/green/refactor cycle, unit vs. integration tests, and a hands-on code-along building and passing a Jest test from scratch before the React/Redux capstone.',
-        icon: 'tabler:test-pipe',
-        callToAction: { text: 'View Case Study', href: '/projects/masterschool-testing-javascript' },
-      },
-      {
-        title: 'CSS Selectors and the Cascade — Masterschool',
-        description:
-          "A live one-hour session introducing an international bootcamp cohort to CSS selectors, specificity, and the cascade — taught with real-time Slido polls, live Replit demos, and a chat full of students answering each other's questions.",
-        icon: 'tabler:brand-css3',
-        callToAction: { text: 'View Case Study', href: '/projects/masterschool-css-selectors' },
-      },
-      {
-        title: 'Landing Page Project — JavaScript DOM & Scroll Events',
-        description:
-          'A live open gym session on the Udacity Landing Page project — covering dynamic nav generation, getBoundingClientRect() for viewport detection, scrollIntoView() for smooth scrolling, and toggling active state classes as sections come into view.',
-        icon: 'tabler:layout-navbar',
-        callToAction: { text: 'View Case Study', href: '/projects/masterschool-landing-page' },
-      },
-      {
-        title: 'JavaScript Brain Teasers — Catchup Week Open Gym | Masterschool',
-        description:
-          'A live open gym session covering JavaScript prototypes in response to a student question, then working through two interview-style brain teasers live: a vowel frequency counter and a total uppercase letter counter, with full student participation throughout.',
-        icon: 'tabler:puzzle',
-        callToAction: { text: 'View Case Study', href: '/projects/masterschool-brain-teasers' },
-      },
-      {
-        title: 'Object-Oriented JavaScript — Prototypes, Closures & the Revealing Module Pattern | Masterschool',
-        description:
-          'A live group session covering four ways to create objects (object literals, factory functions, Object.create(), constructor functions, and ES6 class syntax), prototypical inheritance, scope, closures via IIFEs, and the Revealing Module Pattern — closing with a direct connection to React class components.',
-        icon: 'tabler:circles-relation',
-        callToAction: { text: 'View Case Study', href: '/projects/masterschool-oop-javascript' },
-      },
-      {
-        title: 'JavaScript Closures — Live Practice Session',
-        description:
-          'A live Q&A and coding session working through JavaScript closures — from functions returning functions to a DOM font-size demo, and fixing the classic setTimeout loop bug using closures and IIFEs. Audience participation throughout.',
-        icon: 'tabler:brackets',
-        callToAction: { text: 'View Case Study', href: '/projects/masterschool-closures' },
-      },
-      {
-        title: 'JavaScript Closures — One-on-One Practice Session | Masterschool',
-        description:
-          'A one-on-one Masterschool session working through six closure practice problems live: createFunction, createFunctionWithInput, a counter with separate IIFE instances, addByX, the complex saveOutput cache with password gating, and deDup with a live debugging moment.',
-        icon: 'tabler:user',
-        callToAction: { text: 'View Case Study', href: '/projects/masterschool-closures-practice' },
-      },
-      {
-        title: 'ES6 Features Open Gym — Masterschool',
-        description:
-          'Two live open gym sessions covering the core ES6 feature set: destructuring, spread, rest parameters, for...of loops, arrow functions, default parameters, and template literals with live coding and real-time student Q&A.',
-        icon: 'tabler:bolt',
-        callToAction: { text: 'View Case Study', href: '/projects/masterschool-es6' },
-      },
-      {
-        title: 'ES6 Exercises — Destructuring, Ternary, and Defensive Programming | Masterschool',
-        description:
-          'A live exercise session working through ES6 problems with students presenting answers live — object and array destructuring, arrow function shorthand, default parameters, rest and spread, the ternary operator, and the nullish coalescing operator, with a React preview at the close.',
-        icon: 'tabler:bolt',
-        callToAction: { text: 'View Case Study', href: '/projects/masterschool-es6-exercises' },
-      },
-      {
-        title: 'Node, npm, and Higher-Order Functions — Live Coding Session | Masterschool',
-        description:
-          'A live session covering Node.js, npm, and module loading — then rebuilding map, forEach, filter, and reduce from scratch using plain for loops and callbacks, as preparation for understanding promises and async/await.',
-        icon: 'tabler:package',
-        callToAction: { text: 'View Case Study', href: '/projects/masterschool-npm-higher-order' },
-      },
-      {
-        title: 'JavaScript Async — Promises, .then/.catch, and Promise.all | Masterschool',
-        description:
-          'A live open gym session working through JavaScript async patterns — promise states, executor functions, handling success and failure with .then and .catch, and running concurrent promises with Promise.all, with real-time student Q&A and live code.',
-        icon: 'tabler:clock-pause',
-        callToAction: { text: 'View Case Study', href: '/projects/masterschool-async-promises' },
-      },
-      {
-        title: 'Dinosaur Infographic Project Intro — OOP, Constructor Functions & DOM Integration | Masterschool',
-        description:
-          'A live project kickoff session for the Udacity Dinosaur Infographic assignment — demoing the finished app, walking the rubric, and mapping the build strategy to OOP concepts. Covers loading JSON via import vs. Fetch API, constructor functions vs. ES6 classes, IIFE and the Revealing Module Pattern, three comparison methods, tile generation, and version control with GitHub.',
-        icon: 'tabler:layout-grid',
-        callToAction: { text: 'View Case Study', href: '/projects/masterschool-dino-intro' },
-      },
-      {
-        title: 'Dinosaur Infographic — Live Debugging and OOP Walkthrough | Masterschool',
-        description:
-          'A small-group support session for students blocked on the Udacity Dinosaur Infographic project — working through two methods for loading JSON data, building the Dino constructor live, implementing the IIFE pattern for form handling, and debugging with the Chrome debugger as students watched in real time.',
-        icon: 'tabler:bug',
-        callToAction: { text: 'View Case Study', href: '/projects/masterschool-dino-infographic' },
-      },
-      {
-        title: 'Teaching Node and Express — Masterschool',
-        description:
-          'A live 32-minute session introducing career-changers to server-side development with Node.js and Express — the hardest conceptual shift in the bootcamp curriculum, taught with scaffolded mental models, live code demos, and real-time student interaction.',
-        icon: 'tabler:server',
-        callToAction: { text: 'View Case Study', href: '/projects/masterschool-node-express' },
-      },
-      {
-        title: 'Intro to Epic React — Live Group Session',
-        description:
-          "A live one-hour group onboarding session for Masterschool students — watching Kent C. Dodds' welcome video together and completing every setup step live, so no one hit a wall before the first exercise.",
-        icon: 'tabler:brand-react',
-        callToAction: { text: 'View Case Study', href: '/projects/masterschool-epic-react-intro' },
-      },
-      {
-        title: 'myReads Book Tracker — React Project Intro',
-        description:
-          'A live session introducing Masterschool students to the myReads React project — demoing the finished app first, walking the rubric, and mapping each feature to the specific React concept needed to build it.',
-        icon: 'tabler:book',
-        callToAction: { text: 'View Case Study', href: '/projects/masterschool-myreads-book-tracker' },
-      },
-      {
-        title: 'React Fundamentals Review — Virtual DOM, JSX, Props, and Component Design | Masterschool',
-        description:
-          'A review week session using breakout rooms and full-group debrief to cover core React concepts — virtual DOM, composition, one-way data flow, JSX, Babel, and declarative vs imperative code, with fill-in-the-blank exercises on props, conditional rendering, list keys, and className.',
-        icon: 'tabler:brand-react',
-        callToAction: { text: 'View Case Study', href: '/projects/masterschool-react-fundamentals' },
-      },
-      {
-        title: 'UdaciRacer Project Walkthrough — Masterschool',
-        description:
-          'A live project walkthrough and Q&A session for Masterschool students on the UdaciRacer JavaScript racing game — covering async programming, the Fetch API, DOM manipulation, and working with a Node.js server.',
-        icon: 'tabler:rocket',
-        callToAction: { text: 'View Case Study', href: '/projects/masterschool-udaciracer' },
-      },
-      {
-        title: 'Redux and State Management — Group Review and Q&A | Masterschool',
-        description:
-          'A group review session covering Redux fundamentals — the three core principles, the full action/dispatch/reducer flow, middleware, useReducer, and the Context API — using breakout rooms for collaborative Q&A followed by a full-group debrief.',
-        icon: 'tabler:box',
-        callToAction: { text: 'View Case Study', href: '/projects/masterschool-redux' },
-      },
-      {
-        title: 'Common Security Attacks — Securing Web Apps with OWASP | Masterschool',
-        description:
-          'A live webinar introducing Masterschool students to the OWASP Top Ten — injection, broken authentication, XSS/CSRF, broken access control, data exposure, and three new 2021 categories — with a business-case framing using the ALE risk formula and hands-on exploration via hacksplaining.com.',
-        icon: 'tabler:shield-lock',
-        callToAction: { text: 'View Case Study', href: '/projects/masterschool-web-security' },
-      },
-    ]}
-  />
+        liveInstruction.map((item) => (
+          <a
+            href={item.href}
+            data-tags={item.tags.join(' ')}
+            class="live-card group relative flex flex-col p-6 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-accent dark:hover:border-accent transition-all duration-200 shadow-sm hover:shadow-lg"
+          >
+            <div class="w-11 h-11 rounded-lg bg-accent/10 dark:bg-accent/20 flex items-center justify-center mb-5 shrink-0">
+              <Icon name={item.icon} class="w-6 h-6 text-accent" />
+            </div>
+            <h3 class="text-base font-bold font-heading leading-snug mb-3 group-hover:text-accent transition-colors duration-200">
+              {item.title}
+            </h3>
+            <p class="text-sm text-muted leading-relaxed flex-1">{item.description}</p>
+            <div class="mt-5 inline-flex items-center gap-1 text-sm font-medium text-accent">
+              View Case Study
+              <svg
+                class="w-3.5 h-3.5 transition-transform duration-200 group-hover:translate-x-0.5"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+            </div>
+          </a>
+        ))
+      }
+    </div>
+
+    <!-- Empty state -->
+    <p id="live-empty" class="hidden text-center text-muted py-12">No sessions match that filter.</p>
+  </section>
+
+  <script>
+    function initLiveFilter() {
+      const buttons = document.querySelectorAll<HTMLButtonElement>('.filter-btn');
+      const cards = document.querySelectorAll<HTMLElement>('.live-card');
+      const empty = document.getElementById('live-empty');
+
+      buttons.forEach((btn) => {
+        btn.addEventListener('click', () => {
+          const filter = btn.dataset.filter ?? 'all';
+
+          // Update button styles
+          buttons.forEach((b) => {
+            b.classList.remove('bg-accent', 'text-white', 'border-accent');
+            b.classList.add('border-gray-300', 'dark:border-gray-600', 'text-gray-600', 'dark:text-gray-400');
+          });
+          btn.classList.add('bg-accent', 'text-white', 'border-accent');
+          btn.classList.remove('border-gray-300', 'dark:border-gray-600', 'text-gray-600', 'dark:text-gray-400');
+
+          // Show/hide cards
+          let visible = 0;
+          cards.forEach((card) => {
+            const tags = card.dataset.tags ?? '';
+            const show = filter === 'all' || tags.includes(filter);
+            card.style.display = show ? '' : 'none';
+            if (show) visible++;
+          });
+
+          if (empty) empty.classList.toggle('hidden', visible > 0);
+        });
+      });
+    }
+
+    document.addEventListener('astro:page-load', initLiveFilter);
+  </script>
 
   <div id="teaching"></div>
   <Features2
