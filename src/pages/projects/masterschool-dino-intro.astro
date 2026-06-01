@@ -1,0 +1,225 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Content from '~/components/widgets/Content.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import YouTubeEmbed from '~/components/widgets/YouTubeEmbed.astro';
+
+const metadata = {
+  title: 'Dinosaur Infographic Project Intro — OOP, Constructor Functions & DOM Integration | Masterschool',
+};
+---
+
+<Layout metadata={metadata}>
+  <Hero tagline="Live Instruction · JavaScript · OOP · Masterschool">
+    <Fragment slot="title">
+      Dinosaur Infographic —<br />
+      <span class="text-accent dark:text-white">Project Intro &amp; OOP Walkthrough</span>
+    </Fragment>
+    <Fragment slot="subtitle">
+      A live project kickoff session for Masterschool students starting the Udacity Dinosaur Infographic assignment —
+      demoing the finished app, walking the rubric, and mapping the build strategy to OOP concepts covered in the
+      curriculum.
+    </Fragment>
+  </Hero>
+
+  <!-- Context -->
+  <Content tagline="The Session" title="Start with the finished product, then work backward" isReversed>
+    <Fragment slot="image">
+      <div class="flex items-center justify-center h-full py-12">
+        <div class="text-center">
+          <p class="text-8xl font-bold font-heading text-accent leading-none">9</p>
+          <p class="text-xl text-muted mt-3">tiles · 7 dinos, 1 human, 1 bird</p>
+          <div class="mt-8 space-y-2 text-sm text-muted">
+            <p class="font-semibold text-gray-700 dark:text-gray-300">Masterschool Coding Bootcamp</p>
+            <p>JavaScript · OOP · Udacity Curriculum</p>
+            <p>International cohort · Group session · Project intro format</p>
+          </div>
+        </div>
+      </div>
+    </Fragment>
+    <Fragment slot="content">
+      <p class="mb-4">
+        The Dinosaur Infographic project is one of the first real-world OOP assignments in the Udacity curriculum — it
+        requires students to build constructor functions or classes, load external JSON data, manipulate the DOM, handle
+        form input, and implement comparison logic across an array of objects, all in one project.
+      </p>
+      <p class="mb-4">
+        Rather than diving straight into the rubric, the session opened by demoing a completed version of the app in the
+        browser — showing students what they were building before explaining how to build it. Seeing the form input, the
+        tile layout, and the comparison results (you weigh less than seven dinosaurs) gave the abstract requirements a
+        concrete target.
+      </p>
+      <p>
+        From there the session walked the rubric, the starter code structure, the two approaches to loading JSON data,
+        and the OOP patterns students could use — connecting each requirement back to concepts they'd already covered in
+        the program.
+      </p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 section-pattern-b"></div>
+    </Fragment>
+  </Content>
+
+  <!-- What I Covered -->
+  <Features3
+    tagline="The Content"
+    title="What the session covered"
+    subtitle="From demoing the finished app to walking the starter code — a complete orientation before students wrote a single line."
+    columns={3}
+    items={[
+      {
+        title: 'Demo First, Rubric Second',
+        description:
+          'Opened by showing a completed version of the Dinosaur Infographic in the browser — the form, the 3×3 tile grid, and the comparison outputs (weight, height, diet). Seeing the end result before reading the rubric gave students a concrete mental model for every requirement that followed.',
+        icon: 'tabler:eye',
+      },
+      {
+        title: 'Two Methods to Load JSON',
+        description:
+          'Covered both approaches: converting the .json file to a .js module and using ES6 import, or requesting the file asynchronously with the Fetch API. Fetch was flagged as a preview of async JavaScript coming later in the program — students could use import now and revisit fetch once they got there.',
+        icon: 'tabler:file-import',
+      },
+      {
+        title: 'Constructor Functions vs. ES6 Classes',
+        description:
+          'Explained that both produce the same result — constructor functions with .prototype and ES6 class syntax are two ways to write the same thing. Recommended constructor functions or classes over object literals for this project, since the rubric requires at least nine object instances to be created.',
+        icon: 'tabler:package',
+      },
+      {
+        title: 'IIFE and the Revealing Module Pattern',
+        description:
+          'Connected the project requirement to use an IIFE back to the Revealing Module Pattern covered earlier in the program — using an immediately invoked function expression to encapsulate DOM references and expose only what the submit handler needs. Mapped the pattern to the comparison logic and tile generation.',
+        icon: 'tabler:brackets',
+      },
+      {
+        title: 'Three Comparison Methods',
+        description:
+          'Walked through the three required methods: comparing user weight to each dinosaur, comparing height, and comparing diet. Each method loops through the dino array, runs a conditional, increments a counter, and returns a string — simple conditionals, but the rubric expects at least three of them.',
+        icon: 'tabler:math-equal-lower',
+      },
+      {
+        title: 'Tile Generation and DOM Appending',
+        description:
+          'Explained how to generate each tile dynamically in JavaScript — creating an element, setting innerHTML with species name, image, and comparison fact, then appending to the grid. Noted that image filenames match species names lowercased, so .toLowerCase() is needed when constructing the image src.',
+        icon: 'tabler:layout-grid',
+      },
+      {
+        title: 'Rubric Checklist Walkthrough',
+        description:
+          'Walked through each rubric item: no console errors on submit, form hidden after submit, nine tiles rendered, facts changing on refresh, at least one constructor or class, at least three comparison methods, human object populated from form data, and the pigeon always appearing last.',
+        icon: 'tabler:checklist',
+      },
+      {
+        title: 'JSHint as a Code Quality Tool',
+        description:
+          'Introduced jshint.com as a linter students could paste their code into for feedback before submission — catching issues the console might not surface directly. Framed it as a complement to console.log and the debugger, not a replacement.',
+        icon: 'tabler:bug',
+      },
+      {
+        title: 'Version Control with GitHub',
+        description:
+          'Encouraged students to use GitHub for this project — clone the starter repo, work locally, push to a new repository on their account when done. Clarified the difference between cloning (copying to your machine) and forking (contributing back to the original), since students often confuse the two.',
+        icon: 'tabler:brand-github',
+      },
+    ]}
+  />
+
+  <!-- Video -->
+  <div class="max-w-4xl mx-auto px-4 md:px-8 py-12 md:py-16">
+    <div class="text-center mb-8">
+      <p class="text-base text-secondary dark:text-blue-200 font-bold tracking-wide uppercase mb-2">
+        Session Recording
+      </p>
+      <h2 class="text-4xl md:text-5xl font-bold tracking-tighter font-heading">Watch the Session</h2>
+      <p class="text-lg text-muted mt-4">
+        Live project intro — demoing the finished app, walking the rubric, and mapping OOP patterns to project
+        requirements.
+      </p>
+    </div>
+    <YouTubeEmbed
+      id="W3T-v2t4FF0"
+      title="Dinosaur Infographic Project Intro — OOP, Constructor Functions & DOM Integration | Masterschool"
+    />
+  </div>
+
+  <!-- Approach -->
+  <Content tagline="Reflection" title="A demo is worth a thousand requirement descriptions" isReversed>
+    <Fragment slot="image">
+      <div class="flex items-center justify-center h-full py-12">
+        <div class="text-center">
+          <p class="text-8xl font-bold font-heading text-accent leading-none">3</p>
+          <p class="text-xl text-muted mt-3">required comparison methods</p>
+          <div class="mt-8 space-y-1 text-sm text-muted">
+            <p class="font-semibold text-gray-700 dark:text-gray-300">Weight · Height · Diet</p>
+            <p>Constructor Functions · IIFE · DOM</p>
+            <p>JSON loading · GitHub · JSHint</p>
+          </div>
+        </div>
+      </div>
+    </Fragment>
+    <Fragment slot="content">
+      <p class="mb-4">
+        Starting with a demo rather than the rubric changes the orientation of the session. Students move from "what
+        does this require?" to "how do I build what I just saw?" — which is a more concrete starting point, especially
+        for a project that combines several concepts at once.
+      </p>
+      <p class="mb-4">
+        The two JSON loading approaches came up early because it's a common first blocker. Students who get stuck
+        importing the data before writing any logic can spend hours on setup. Addressing it upfront — with both options
+        and a clear recommendation for which to use given their current knowledge — removes that blocker before it
+        happens.
+      </p>
+      <p class="mb-4">
+        Connecting the IIFE requirement back to the Revealing Module Pattern the cohort had already covered is an
+        example of the kind of bridge that makes requirements feel familiar rather than arbitrary. Students had already
+        built something with this pattern — the project was asking them to use it again, in a new context.
+      </p>
+      <div class="mt-6 flex flex-wrap gap-2">
+        {
+          [
+            'JavaScript',
+            'OOP',
+            'Constructor Functions',
+            'ES6 Classes',
+            'IIFE',
+            'Revealing Module Pattern',
+            'JSON',
+            'Fetch API',
+            'ES Modules',
+            'import/export',
+            'DOM Manipulation',
+            'Template Literals',
+            'Array Methods',
+            'GitHub',
+            'JSHint',
+            'Project Intro',
+            'Masterschool',
+            'Udacity',
+          ].map((tag) => (
+            <span class="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-sm font-medium px-3 py-1 rounded-full">
+              {tag}
+            </span>
+          ))
+        }
+      </div>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 section-pattern"></div>
+    </Fragment>
+  </Content>
+
+  <CallToAction
+    actions={[
+      { variant: 'primary', text: 'View All Projects', href: '/projects' },
+      { text: 'Get in Touch', href: '/about#contact' },
+    ]}
+  >
+    <Fragment slot="title">Interested in working together?</Fragment>
+    <Fragment slot="subtitle"
+      >I'm open to remote opportunities in technical learning experience design, developer education, and customer
+      enablement.</Fragment
+    >
+  </CallToAction>
+</Layout>
