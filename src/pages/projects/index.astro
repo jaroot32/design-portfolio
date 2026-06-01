@@ -429,54 +429,34 @@ const featured = [
     <div class="flex justify-center">
       <a
         href="/projects/sessions"
-        class="group relative flex flex-col md:flex-row items-stretch rounded-2xl overflow-hidden border border-gray-700 hover:border-accent transition-colors duration-300 bg-gray-900 shadow-xl w-full max-w-2xl"
+        class="group relative flex flex-col p-6 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-accent dark:hover:border-accent transition-all duration-200 shadow-sm hover:shadow-lg cursor-pointer w-full max-w-2xl"
       >
-        <div class="flex-1 p-7 flex flex-col justify-between">
-          <div>
-            <div class="flex items-center gap-3 mb-4">
-              <div class="w-10 h-10 rounded-xl bg-accent/20 flex items-center justify-center shrink-0">
-                <Icon name="tabler:video" class="w-5 h-5 text-accent" />
-              </div>
-              <div>
-                <p class="font-bold text-white text-base leading-tight">1:1 Mentoring Sessions</p>
-                <p class="text-gray-400 text-xs mt-0.5">Chegg Skills · Thinkful · OpenClassrooms · Guild Education</p>
-              </div>
-            </div>
-            <p class="text-gray-300 text-sm leading-relaxed">
-              One-on-one recorded sessions covering JavaScript debugging, CSS layout, terminal fundamentals, VS Code
-              setup, and coaching conversations — with career-changing students across two bootcamp programs.
-            </p>
-            <div class="flex flex-wrap gap-2 mt-4">
-              <span class="text-xs font-semibold px-3 py-1 rounded-full bg-blue-900/60 text-blue-200">Technical</span>
-              <span class="text-xs font-semibold px-3 py-1 rounded-full bg-green-900/60 text-green-200">Coaching</span>
-              <span class="text-xs font-semibold px-3 py-1 rounded-full bg-teal-900/60 text-teal-200"
-                >OpenClassrooms</span
-              >
-            </div>
-          </div>
-          <div
-            class="mt-6 inline-flex items-center gap-2 text-sm font-medium text-accent group-hover:gap-3 transition-all duration-200"
-          >
-            <Icon name="tabler:player-play" class="w-4 h-4" />
-            View Sessions
-            <svg
-              class="w-3.5 h-3.5"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2.5"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <path d="M5 12h14M12 5l7 7-7 7"></path>
-            </svg>
-          </div>
+        <div class="w-11 h-11 rounded-lg bg-accent/10 dark:bg-accent/20 flex items-center justify-center mb-5 shrink-0">
+          <Icon name="tabler:video" class="w-6 h-6 text-accent" />
         </div>
-        <div
-          class="md:w-24 bg-gray-800/60 border-t md:border-t-0 md:border-l border-gray-700 flex flex-col items-center justify-center p-4 gap-1 shrink-0"
+        <h3
+          class="text-base font-bold font-heading leading-snug mb-3 group-hover:text-accent transition-colors duration-200"
         >
-          <p class="text-4xl font-bold font-heading text-accent leading-none">10+</p>
-          <p class="text-gray-400 text-xs font-medium text-center">sessions</p>
+          1:1 Mentoring Sessions
+        </h3>
+        <p class="text-sm text-muted leading-relaxed flex-1">
+          One-on-one recorded sessions covering JavaScript debugging, CSS layout, terminal fundamentals, VS Code setup,
+          and coaching conversations — with career-changing students across Chegg Skills / Thinkful and OpenClassrooms /
+          Guild Education.
+        </p>
+        <div class="mt-5 inline-flex items-center gap-1 text-sm font-medium text-accent">
+          View Sessions
+          <svg
+            class="w-3.5 h-3.5 transition-transform duration-200 group-hover:translate-x-0.5"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M5 12h14M12 5l7 7-7 7"></path>
+          </svg>
         </div>
       </a>
     </div>
