@@ -18,9 +18,9 @@ metadata:
   openGraph:
     site_name: Jonathan Root
     images:
-      - url: '~/assets/images/default.png'
-        width: 1600
-        height: 600
+      - url: '~/assets/images/og-default.png'
+        width: 1200
+        height: 630
     type: website
   twitter:
     cardType: summary_large_image
