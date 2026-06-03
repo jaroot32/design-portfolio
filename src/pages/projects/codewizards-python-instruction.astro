@@ -1,0 +1,326 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Content from '~/components/widgets/Content.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'Python Instruction for K-12 — CodeWizards HQ',
+};
+---
+
+<Layout metadata={metadata}>
+  <Hero tagline="Live Instruction · Python · K-12 · CodeWizards HQ">
+    <Fragment slot="title">
+      Teaching Python to Middle &amp; High School Students —<br />
+      <span class="text-accent dark:text-white">CodeWizards HQ</span>
+    </Fragment>
+    <Fragment slot="subtitle">
+      Live virtual Python instruction for middle and high school students across international cohorts — scaffolded
+      project-based sessions, real-time debugging, and Socratic facilitation designed to build independent
+      problem-solving habits from the start.
+    </Fragment>
+  </Hero>
+
+  <!-- Context -->
+  <Content tagline="The Role" title="Python instructor for K-12 learners" isReversed>
+    <Fragment slot="image">
+      <div class="flex items-center justify-center h-full py-12">
+        <div class="text-center">
+          <p class="text-7xl font-bold font-heading text-accent leading-none">Python</p>
+          <p class="text-xl text-muted mt-3">K-12 · CodeWizards HQ</p>
+          <div class="mt-8 space-y-2 text-sm text-muted">
+            <p class="font-semibold text-gray-700 dark:text-gray-300">Live Virtual · International</p>
+            <p>Middle &amp; High School Students</p>
+            <p>Project-Based · Scaffolded</p>
+          </div>
+        </div>
+      </div>
+    </Fragment>
+    <Fragment slot="content">
+      <p class="mb-4">
+        CodeWizards HQ is a coding education platform for middle and high school students — structured around live
+        virtual sessions, project-based curriculum, and a gamified learning environment that keeps younger learners
+        engaged across cohorts in multiple countries.
+      </p>
+      <p class="mb-4">
+        As a Python instructor, I lead live sessions for small international cohorts — students in the US, South Africa,
+        and beyond — working through a sequenced Python curriculum that builds from variables and user input to modules,
+        string operations, and interactive graphical applications. Sessions are 60–90 minutes, virtual, and built around
+        a project students code live alongside instruction.
+      </p>
+      <p>
+        The K-12 context shapes everything: pacing, analogy selection, how errors are handled, and how much time is
+        spent not just on the code but on the underlying mental model. The goal isn't just to get the program working —
+        it's to build the habit of thinking like a programmer.
+      </p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 section-pattern-b"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Session Spotlight -->
+  <Content tagline="Session Spotlight" title="Lesson 3 — Modules and Strings: The Wizard Adventure Shop">
+    <Fragment slot="content">
+      <p class="mb-4">
+        This session introduces two major Python concepts — <strong>modules</strong> and <strong
+          >string operations</strong
+        > — through a single cohesive project: building a Wizard Adventure Shop, an interactive program that displays items,
+        takes user input, and calculates a total cost.
+      </p>
+      <p class="mb-4">
+        The project is scaffolded across four steps, each one introducing a new concept by creating a real need for it:
+      </p>
+      <div class="space-y-3 mb-4">
+        <div class="flex gap-3">
+          <div
+            class="flex-shrink-0 w-6 h-6 rounded-full bg-accent text-white flex items-center justify-center text-xs font-bold mt-0.5"
+          >
+            1
+          </div>
+          <div>
+            <p class="font-semibold text-sm">Add the shop title and background</p>
+            <p class="text-sm text-muted mt-0.5">
+              Import the WizardLib module, add a background image, and position the shop title using library functions —
+              introducing the concept of modules as pre-built tools.
+            </p>
+          </div>
+        </div>
+        <div class="flex gap-3">
+          <div
+            class="flex-shrink-0 w-6 h-6 rounded-full bg-accent text-white flex items-center justify-center text-xs font-bold mt-0.5"
+          >
+            2
+          </div>
+          <div>
+            <p class="font-semibold text-sm">Display how many items the user wants</p>
+            <p class="text-sm text-muted mt-0.5">
+              Capture user input, build a receipt string using string concatenation and f-string interpolation —
+              introducing the cleaner syntax and why it matters as programs grow.
+            </p>
+          </div>
+        </div>
+        <div class="flex gap-3">
+          <div
+            class="flex-shrink-0 w-6 h-6 rounded-full bg-accent text-white flex items-center justify-center text-xs font-bold mt-0.5"
+          >
+            3
+          </div>
+          <div>
+            <p class="font-semibold text-sm">Calculate the cost of each item</p>
+            <p class="text-sm text-muted mt-0.5">
+              Create price variables, multiply by quantity, and update the receipt — introducing arithmetic operations
+              and data type conversion from string to integer.
+            </p>
+          </div>
+        </div>
+        <div class="flex gap-3">
+          <div
+            class="flex-shrink-0 w-6 h-6 rounded-full bg-accent text-white flex items-center justify-center text-xs font-bold mt-0.5"
+          >
+            4
+          </div>
+          <div>
+            <p class="font-semibold text-sm">Display the total</p>
+            <p class="text-sm text-muted mt-0.5">
+              Add a grand total calculation and display it using a multi-line f-string — completing the shop and
+              connecting every concept introduced across the session.
+            </p>
+          </div>
+        </div>
+      </div>
+      <p>Both students completed all four steps and had a working Wizard Adventure Shop by end of session.</p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 section-pattern-d"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Facilitation Approach -->
+  <Features3
+    tagline="Facilitation Approach"
+    title="How the session was designed to teach"
+    subtitle="A few deliberate moves that show up throughout this session and define the instructional approach."
+    columns={3}
+    items={[
+      {
+        title: 'Socratic questioning before answers',
+        description:
+          'When students hit errors, the first move was a question: "What does the error say? How do we fix it?" — guiding them toward the diagnosis rather than handing it over. Students who find the answer themselves retain it.',
+        icon: 'tabler:help',
+      },
+      {
+        title: 'Multiple analogies until one lands',
+        description:
+          'To explain Python modules, three analogies were tried in sequence: building a house without making the bricks, furniture assembly, and using a hammer without forging it. Different mental models work for different learners.',
+        icon: 'tabler:bulb',
+      },
+      {
+        title: 'Scaffolded work blocks',
+        description:
+          'Each step was given 5 minutes of independent work time before regrouping. Students who finished early got bonus prompts; students who hit errors shared their screen for live debugging with the group watching.',
+        icon: 'tabler:clock',
+      },
+      {
+        title: 'Error as a teaching moment',
+        description:
+          "Both students hit the same type conversion error independently: can't multiply sequence by non-int. Rather than preventing the error, the curriculum surfaces it — and the session used it to teach int() conversion in context.",
+        icon: 'tabler:bug',
+      },
+      {
+        title: 'Real-world framing throughout',
+        description:
+          "The Wizard Shop is framed as a basic version of an Amazon or eBay cart — a real-world anchor that makes the abstract (variables, multiplication, string output) feel like it's connected to something that actually exists.",
+        icon: 'tabler:world',
+      },
+      {
+        title: 'International cohort, adapted delivery',
+        description:
+          'Students in Texas and South Africa in the same session — different time zones, different contexts. Delivery pacing and check-ins accounted for connection lag, and prize restrictions for international students were noted and addressed.',
+        icon: 'tabler:globe',
+      },
+    ]}
+  />
+
+  <!-- Video Section -->
+  <div class="max-w-5xl mx-auto px-4 md:px-8 py-12 md:py-16">
+    <div class="text-center mb-10">
+      <p class="text-base text-secondary dark:text-blue-200 font-bold tracking-wide uppercase mb-2">
+        Session Recording
+      </p>
+      <h2 class="text-4xl md:text-5xl font-bold tracking-tighter font-heading">Watch the Session</h2>
+      <p class="text-lg text-muted mt-4">
+        A full recording of Lesson 3 — Modules and Strings: The Wizard Adventure Shop.
+      </p>
+    </div>
+    <div
+      class="relative w-full rounded-lg shadow-lg overflow-hidden border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 flex items-center justify-center"
+      style="min-height: 360px;"
+    >
+      <div class="text-center px-8 py-16">
+        <div
+          class="w-16 h-16 rounded-full bg-accent/10 dark:bg-accent/20 flex items-center justify-center mx-auto mb-5"
+        >
+          <svg class="w-8 h-8 text-accent" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M8 5v14l11-7z"></path>
+          </svg>
+        </div>
+        <p class="text-2xl font-bold font-heading text-gray-800 dark:text-gray-200 mb-2">Video Coming Soon</p>
+        <p class="text-muted text-base max-w-md mx-auto">
+          The session recording is being prepared for publication. Check back shortly.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Concepts Covered -->
+  <Content tagline="Curriculum Coverage" title="Concepts taught in Lesson 3" isReversed>
+    <Fragment slot="image">
+      <div class="flex items-center justify-center h-full py-12 px-6">
+        <div class="w-full max-w-xs space-y-3">
+          {
+            [
+              { label: 'Python Modules', detail: 'Importing and using WizardLib', color: 'blue' },
+              { label: 'String Concatenation', detail: 'Combining strings with the + operator', color: 'green' },
+              { label: 'F-String Interpolation', detail: 'Cleaner variable insertion in strings', color: 'purple' },
+              { label: 'Data Type Conversion', detail: 'str() and int() functions', color: 'orange' },
+              { label: 'User Input', detail: 'Capturing and using input() values', color: 'blue' },
+              { label: 'Arithmetic Operations', detail: 'Multiplication for cost calculation', color: 'green' },
+              { label: 'Multi-line Strings', detail: 'Triple-quote strings for formatted output', color: 'purple' },
+            ].map(({ label, detail, color }) => (
+              <div
+                class={`flex items-start gap-3 p-2.5 rounded-lg border ${color === 'blue' ? 'border-blue-200 dark:border-blue-800 bg-blue-50 dark:bg-blue-900/20' : color === 'green' ? 'border-green-200 dark:border-green-800 bg-green-50 dark:bg-green-900/20' : color === 'purple' ? 'border-purple-200 dark:border-purple-800 bg-purple-50 dark:bg-purple-900/20' : 'border-orange-200 dark:border-orange-800 bg-orange-50 dark:bg-orange-900/20'}`}
+              >
+                <div>
+                  <p class="text-sm font-semibold text-gray-800 dark:text-gray-200">{label}</p>
+                  <p class="text-xs text-muted mt-0.5">{detail}</p>
+                </div>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </Fragment>
+    <Fragment slot="content">
+      <p class="mb-4">
+        Lesson 3 sits at a pivotal point in the CodeWizards HQ Python sequence — the first session where students move
+        beyond basic math and variables into using external libraries and managing data types carefully.
+      </p>
+      <p class="mb-4">
+        The hardest moment in the lesson is the type conversion error. Input functions in Python always return a string,
+        but students try to multiply it by a number — and Python throws a type error. This is an intentional friction
+        point in the curriculum: the error teaches the concept more durably than explaining it in advance ever could.
+      </p>
+      <p class="mb-4">
+        Both students hit this error independently in the session. Walking them through the diagnosis — reading the
+        error message, understanding why strings can't be multiplied, and wrapping the input in int() — is where the
+        real learning happened.
+      </p>
+      <p>
+        By the end of the session, both students had built a working Wizard Adventure Shop that accepted user input,
+        calculated item costs, and displayed a formatted receipt — a complete, runnable application built from scratch
+        in 75 minutes.
+      </p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 section-pattern"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Reflection -->
+  <Content tagline="Reflection" title="What K-12 instruction adds to the practice">
+    <Fragment slot="content">
+      <p class="mb-4">
+        Teaching Python to middle and high school students is a different discipline than teaching adult career-changers
+        — the stakes feel different, the patience required is different, and the design of analogies matters more. A
+        25-year-old career-changer can tolerate ambiguity and abstract framing for longer. A 13-year-old needs a
+        concrete mental model in the first 60 seconds or you've lost them.
+      </p>
+      <p class="mb-4">
+        The CodeWizards HQ experience has sharpened two things specifically: analogy selection and error tolerance. On
+        analogies — testing three different framings for the same concept live in a session, watching which one produces
+        a visible "oh" moment, is fast feedback that most curriculum work never delivers. On error tolerance — building
+        sessions where errors are expected, surfaced, and used rather than avoided has changed how I think about
+        assessment design at every level.
+      </p>
+      <div class="mt-6 flex flex-wrap gap-2">
+        {
+          [
+            'Python',
+            'K-12 Instruction',
+            'Live Facilitation',
+            'CodeWizards HQ',
+            'Project-Based Learning',
+            'Adaptive Teaching',
+            'Socratic Method',
+            'International Cohorts',
+            'Error-Driven Learning',
+            'Middle School',
+            'High School',
+          ].map((tag) => (
+            <span class="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-sm font-medium px-3 py-1 rounded-full">
+              {tag}
+            </span>
+          ))
+        }
+      </div>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 section-pattern-b"></div>
+    </Fragment>
+  </Content>
+
+  <CallToAction
+    actions={[
+      { variant: 'primary', text: 'View All Projects', href: '/projects' },
+      { text: 'Get in Touch', href: '/about#contact' },
+    ]}
+  >
+    <Fragment slot="title">Interested in working together?</Fragment>
+    <Fragment slot="subtitle"
+      >I'm open to remote opportunities in customer education, technical instructional design, and product enablement.</Fragment
+    >
+  </CallToAction>
+</Layout>
