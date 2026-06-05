@@ -1,0 +1,212 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Content from '~/components/widgets/Content.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+
+const metadata = {
+  title: 'The Enrollment Drop-Off Problem — Storyline Branching Scenario',
+};
+---
+
+<Layout metadata={metadata}>
+  <Hero tagline="Instructional Design · Articulate Storyline 360 · A/B Testing · GrowthBook SDK">
+    <Fragment slot="title">
+      The Enrollment Drop-Off Problem —<br />
+      <span class="text-accent dark:text-white">A Branching Scenario for Launchpath Academy</span>
+    </Fragment>
+    <Fragment slot="subtitle">
+      A corporate instructional design portfolio piece following the full design process — needs analysis, learning
+      objectives, storyboard, and a Storyline 360 branching scenario built around A/B testing with GrowthBook SDK.
+    </Fragment>
+  </Hero>
+
+  <!-- Context -->
+  <Content tagline="The Problem" title="34% of learners never complete enrollment" isReversed>
+    <Fragment slot="image">
+      <div class="flex items-center justify-center h-full py-12">
+        <div class="text-center">
+          <p class="text-7xl font-bold font-heading text-accent leading-none">34%</p>
+          <p class="text-xl text-muted mt-3">Enrollment Drop-Off Rate</p>
+          <div class="mt-8 space-y-2 text-sm text-muted">
+            <p class="font-semibold text-gray-700 dark:text-gray-300">Launchpath Academy · SaaS EdTech</p>
+            <p>GrowthBook SDK · A/B Testing</p>
+            <p>Articulate Storyline 360</p>
+          </div>
+        </div>
+      </div>
+    </Fragment>
+    <Fragment slot="content">
+      <p class="mb-4">
+        Launchpath Academy is a growing SaaS edtech company whose revenue is directly tied to learner enrollment
+        completion rates. Analytics revealed that 34% of learners who reached the enrollment confirmation page abandoned
+        the process — a significant and measurable business problem.
+      </p>
+      <p class="mb-4">
+        The suspected cause: CTA button copy reading "Complete Enrollment" felt final and intimidating rather than
+        motivating. But the team had no evidence-based process for testing this hypothesis — they were making product
+        decisions based on gut instinct rather than data.
+      </p>
+      <p>
+        This module was designed to close that gap — giving L&D and product team members the knowledge and skills to
+        design, implement, and interpret a proper A/B test using GrowthBook SDK.
+      </p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 section-pattern-b"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Design Process -->
+  <Features3
+    tagline="Design Process"
+    title="From problem to published module"
+    subtitle="Following a full instructional design process — analysis, design, development, and evaluation planning."
+    columns={3}
+    items={[
+      {
+        title: 'Needs Analysis',
+        description:
+          'Identified the performance gap, root cause, and audience profile before writing a single learning objective. The 34% drop-off was a symptom — the root cause was a knowledge and skill gap in evidence-based product decision-making.',
+        icon: 'tabler:search',
+      },
+      {
+        title: 'Learning Objectives',
+        description:
+          "Four objectives written to Bloom's Taxonomy — progressing from Knowledge (define a testable hypothesis) through Application (configure GrowthBook) to Analysis (interpret results) and Synthesis (connect to business outcomes).",
+        icon: 'tabler:target',
+      },
+      {
+        title: 'Storyboard',
+        description:
+          'A full slide-by-slide storyboard documented before building — mapping each decision point, branching path, consequence screen, and debrief to specific learning objectives.',
+        icon: 'tabler:layout-board',
+      },
+      {
+        title: 'Branching Scenario',
+        description:
+          'Built in Articulate Storyline 360 — three decision points mirroring the real A/B testing workflow. Wrong answers produce realistic consequence screens, not grade penalties. Learning from failure is more durable.',
+        icon: 'tabler:git-branch',
+      },
+      {
+        title: 'GrowthBook SDK Integration',
+        description:
+          'Decision 2 surfaces real GrowthBook SDK code — making the scenario concrete and tool-specific. Learners see what implementation actually looks like, not an abstraction.',
+        icon: 'tabler:code',
+      },
+      {
+        title: 'Kirkpatrick Evaluation',
+        description:
+          'Evaluation planned across all four levels — from post-module confidence ratings (Level 1) through behavioral follow-up on real product decisions (Level 3) to enrollment completion rate improvement (Level 4).',
+        icon: 'tabler:chart-bar',
+      },
+    ]}
+  />
+
+  <!-- Module Embed -->
+  <div class="max-w-5xl mx-auto px-4 md:px-8 py-12 md:py-16">
+    <div class="text-center mb-10">
+      <p class="text-base text-secondary dark:text-blue-200 font-bold tracking-wide uppercase mb-2">Storyline Module</p>
+      <h2 class="text-4xl md:text-5xl font-bold tracking-tighter font-heading">Take the Scenario</h2>
+      <p class="text-lg text-muted mt-4">
+        A branching Storyline 360 scenario — three decisions, real consequences, and a debrief connecting A/B testing to
+        business outcomes at Launchpath Academy.
+      </p>
+    </div>
+    <div
+      class="relative w-full rounded-lg shadow-lg overflow-hidden border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 flex items-center justify-center"
+      style="min-height: 360px;"
+    >
+      <div class="text-center px-8 py-16">
+        <div
+          class="w-16 h-16 rounded-full bg-accent/10 dark:bg-accent/20 flex items-center justify-center mx-auto mb-5"
+        >
+          <svg class="w-8 h-8 text-accent" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M8 5v14l11-7z"></path>
+          </svg>
+        </div>
+        <p class="text-2xl font-bold font-heading text-gray-800 dark:text-gray-200 mb-2">Module Coming Soon</p>
+        <p class="text-muted text-base max-w-md mx-auto">
+          The Storyline module is currently in development. Check back shortly.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Learning Objectives -->
+  <Content tagline="Learning Design" title="Objectives written to Bloom's Taxonomy" isReversed>
+    <Fragment slot="image">
+      <div class="flex items-center justify-center h-full py-12 px-6">
+        <div class="w-full max-w-xs space-y-3">
+          {
+            [
+              {
+                label: 'Define a testable hypothesis',
+                detail: 'Knowledge — framing the right question',
+                color: 'blue',
+              },
+              { label: 'Configure the experiment', detail: 'Application — GrowthBook SDK setup', color: 'green' },
+              { label: 'Interpret the results', detail: 'Analysis — p-value and lift percentage', color: 'purple' },
+              { label: 'Connect to business outcomes', detail: 'Synthesis — data-driven decisions', color: 'orange' },
+            ].map(({ label, detail, color }) => (
+              <div
+                class={`flex items-start gap-3 p-2.5 rounded-lg border ${color === 'blue' ? 'border-blue-200 dark:border-blue-800 bg-blue-50 dark:bg-blue-900/20' : color === 'green' ? 'border-green-200 dark:border-green-800 bg-green-50 dark:bg-green-900/20' : color === 'purple' ? 'border-purple-200 dark:border-purple-800 bg-purple-50 dark:bg-purple-900/20' : 'border-orange-200 dark:border-orange-800 bg-orange-50 dark:bg-orange-900/20'}`}
+              >
+                <div>
+                  <p class="text-sm font-semibold text-gray-800 dark:text-gray-200">{label}</p>
+                  <p class="text-xs text-muted mt-0.5">{detail}</p>
+                </div>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </Fragment>
+    <Fragment slot="content">
+      <p class="mb-4">
+        The four learning objectives follow a deliberate Bloom's Taxonomy progression — starting with defining a
+        testable hypothesis (Knowledge), moving through configuring a real GrowthBook experiment (Application),
+        interpreting statistical results (Analysis), and synthesizing the experience into a business decision
+        (Synthesis).
+      </p>
+      <p class="mb-4">
+        The most common failure mode in A/B testing isn't the implementation — it's the interpretation. Teams either
+        ship too early (misreading noise as signal) or wait too long (not recognizing a clear win). Decision 3 is
+        designed specifically to build that judgment.
+      </p>
+      <p>
+        Evaluation is planned across all four Kirkpatrick levels — from immediate confidence ratings through behavioral
+        follow-up to measurable improvement in Launchpath Academy's enrollment completion rate.
+      </p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 section-pattern"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Tags -->
+  <div class="max-w-4xl mx-auto px-4 md:px-8 pb-16">
+    <div class="flex flex-wrap gap-2">
+      {
+        [
+          'Articulate Storyline 360',
+          'Branching Scenario',
+          'Needs Analysis',
+          "Bloom's Taxonomy",
+          'Kirkpatrick Model',
+          'GrowthBook SDK',
+          'A/B Testing',
+          'Corporate ID',
+          'Instructional Design',
+          'ADDIE Process',
+          'Storyboard',
+          'SaaS EdTech',
+        ].map((tag) => (
+          <span class="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-sm font-medium px-3 py-1 rounded-full">
+            {tag}
+          </span>
+        ))
+      }
+    </div>
+  </div>
+</Layout>
