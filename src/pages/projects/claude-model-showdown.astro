@@ -75,7 +75,7 @@ const metadata = {
     >
       <iframe
         class="absolute inset-0 w-full h-full"
-        src="/claude-model-showdown"
+        src="/claude-model-showdown-content/index.html"
         title="Claude Model Showdown — Engineering A/B Tests with Haiku, Sonnet, and Opus"
         frameborder="0"
         allowfullscreen></iframe>
@@ -214,3 +214,22 @@ const metadata = {
     </div>
   </div>
 </Layout>
+
+<script>
+  // SCORM 1.2 shim — allows Rise 360 course to render outside an LMS
+  (window as any).API = {
+    LMSInitialize: () => 'true',
+    LMSFinish: () => 'true',
+    LMSGetValue: (key: string) => {
+      if (key === 'cmi.core.lesson_status') return 'not attempted';
+      if (key === 'cmi.core.student_name') return '';
+      if (key === 'cmi.core.student_id') return '';
+      return '';
+    },
+    LMSSetValue: () => 'true',
+    LMSCommit: () => 'true',
+    LMSGetLastError: () => '0',
+    LMSGetErrorString: () => '',
+    LMSGetDiagnostic: () => '',
+  };
+</script>
