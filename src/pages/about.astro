@@ -65,62 +65,36 @@ const metadata = {
     <div class="mx-auto max-w-7xl px-4 md:px-8">
       <div class="text-center mb-10">
         <p class="text-base text-secondary dark:text-blue-200 font-bold tracking-wide uppercase mb-2">
-          Featured Project
+          Featured Projects
         </p>
-        <h2 class="text-4xl md:text-5xl font-bold tracking-tighter font-heading">Work Smarter with Gemini</h2>
+        <h2 class="text-4xl md:text-5xl font-bold tracking-tighter font-heading">Rise 360 Portfolio Courses</h2>
         <p class="text-lg text-muted mt-3">
-          A practical Rise 360 course on Gemini Gem creation for a large health organization
+          Two interactive Rise 360 courses built as portfolio pieces — AI platform adoption and enterprise model
+          selection.
         </p>
       </div>
-      <div class="grid md:grid-cols-2 gap-8 items-center">
-        <div
-          class="relative w-full rounded-xl shadow-lg overflow-hidden border border-gray-200 dark:border-gray-700"
-          style="padding-top: 62.5%;"
-        >
-          <iframe
-            class="absolute inset-0 w-full h-full"
-            src="/gemini-course"
-            title="Work Smarter with Gemini — Rise 360 Course"
-            frameborder="0"
-            allowfullscreen></iframe>
-        </div>
+      <div class="grid md:grid-cols-2 gap-10">
+        <!-- Gemini Course -->
         <div>
-          <p class="text-gray-700 dark:text-gray-300 mb-4">
-            Built as a portfolio piece after completing Gemini Gem creation training at LearningMate — a self-paced Rise
-            360 course designed to help employees at a large health organization build and use custom Gemini Gems for
-            recurring tasks.
+          <h3 class="text-xl font-bold font-heading mb-2 text-gray-900 dark:text-white">Work Smarter with Gemini</h3>
+          <p class="text-sm text-muted mb-4">
+            A practical Rise 360 course on Gemini Gem creation for a large health organization
           </p>
-          <ul class="space-y-2 mb-8">
-            {
-              [
-                'Built in Articulate Rise 360',
-                '3 sections · 9 lessons · knowledge checks throughout',
-                'Healthcare audience — privacy and compliance aware',
-                'Capstone: build and use a real Gemini Gem',
-                'Scoped around Gem creation, not a full Gemini survey',
-              ].map((item) => (
-                <li class="flex items-start gap-2 text-sm text-gray-700 dark:text-gray-300">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    class="h-5 w-5 text-accent flex-shrink-0 mt-0.5"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <polyline points="20 6 9 17 4 12" />
-                  </svg>
-                  {item}
-                </li>
-              ))
-            }
-          </ul>
+          <div
+            class="relative w-full rounded-xl shadow-lg overflow-hidden border border-gray-200 dark:border-gray-700 mb-4"
+            style="padding-top: 62.5%;"
+          >
+            <iframe
+              class="absolute inset-0 w-full h-full"
+              src="/gemini-course"
+              title="Work Smarter with Gemini — Rise 360 Course"
+              frameborder="0"
+              allowfullscreen></iframe>
+          </div>
           <div class="flex flex-wrap gap-3">
             <a
               href="/projects/gemini-rise-course"
-              class="inline-flex items-center gap-2 bg-accent hover:bg-accent/90 text-white font-semibold px-6 py-3 rounded-lg transition-colors text-sm"
+              class="inline-flex items-center gap-2 bg-accent hover:bg-accent/90 text-white font-semibold px-5 py-2.5 rounded-lg transition-colors text-sm"
             >
               View Case Study
             </a>
@@ -128,7 +102,41 @@ const metadata = {
               href="/gemini-course"
               target="_blank"
               rel="noopener"
-              class="inline-flex items-center gap-2 border-2 border-gray-300 dark:border-gray-600 text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-800 font-semibold px-6 py-3 rounded-lg transition-colors text-sm"
+              class="inline-flex items-center gap-2 border-2 border-gray-300 dark:border-gray-600 text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-800 font-semibold px-5 py-2.5 rounded-lg transition-colors text-sm"
+            >
+              Open Course
+            </a>
+          </div>
+        </div>
+        <!-- Claude Model Showdown -->
+        <div>
+          <h3 class="text-xl font-bold font-heading mb-2 text-gray-900 dark:text-white">Claude Model Showdown</h3>
+          <p class="text-sm text-muted mb-4">
+            Engineering A/B Tests with Haiku, Sonnet, and Opus — scenario-based for enterprise engineering teams
+          </p>
+          <div
+            class="relative w-full rounded-xl shadow-lg overflow-hidden border border-gray-200 dark:border-gray-700 mb-4"
+            style="padding-top: 62.5%;"
+          >
+            <iframe
+              class="absolute inset-0 w-full h-full"
+              src="/claude-model-showdown"
+              title="Claude Model Showdown — Rise 360 Course"
+              frameborder="0"
+              allowfullscreen></iframe>
+          </div>
+          <div class="flex flex-wrap gap-3">
+            <a
+              href="/projects/claude-model-showdown"
+              class="inline-flex items-center gap-2 bg-accent hover:bg-accent/90 text-white font-semibold px-5 py-2.5 rounded-lg transition-colors text-sm"
+            >
+              View Case Study
+            </a>
+            <a
+              href="/claude-model-showdown"
+              target="_blank"
+              rel="noopener"
+              class="inline-flex items-center gap-2 border-2 border-gray-300 dark:border-gray-600 text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-800 font-semibold px-5 py-2.5 rounded-lg transition-colors text-sm"
             >
               Open Course
             </a>
