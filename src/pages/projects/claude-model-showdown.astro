@@ -1,0 +1,216 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Content from '~/components/widgets/Content.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+
+const metadata = {
+  title: 'Claude Model Showdown — Rise 360 Course',
+};
+---
+
+<Layout metadata={metadata}>
+  <Hero tagline="Instructional Design · Rise 360 · AI Platform Fluency · Enterprise Engineering">
+    <Fragment slot="title">
+      Claude Model Showdown —<br />
+      <span class="text-accent dark:text-white">Engineering A/B Tests with Haiku, Sonnet, and Opus</span>
+    </Fragment>
+    <Fragment slot="subtitle">
+      A scenario-driven Rise 360 course for professional software engineers — built to demonstrate Claude model
+      selection expertise, discovery-based facilitation design, and hands-on instructional design craft for enterprise
+      AI training contexts.
+    </Fragment>
+  </Hero>
+
+  <!-- Context -->
+  <Content tagline="The Project" title="Designing for engineers, not learners" isReversed>
+    <Fragment slot="image">
+      <div class="flex items-center justify-center h-full py-12">
+        <div class="text-center">
+          <p class="text-7xl font-bold font-heading text-accent leading-none">Claude</p>
+          <p class="text-xl text-muted mt-3">Rise 360 · Enterprise AI</p>
+          <div class="mt-8 space-y-2 text-sm text-muted">
+            <p class="font-semibold text-gray-700 dark:text-gray-300">Scenario-Based · Discovery-Driven</p>
+            <p>Haiku · Sonnet · Opus</p>
+            <p>3 Lessons · GrowthBook SDK Context</p>
+          </div>
+        </div>
+      </div>
+    </Fragment>
+    <Fragment slot="content">
+      <p class="mb-4">
+        This course was built as a portfolio piece targeting enterprise AI engineering workshop facilitation —
+        specifically the Specialist Coach role in Anthropic's Claude platform workshop program. The audience is
+        professional software engineers who need to make real model selection decisions in production environments.
+      </p>
+      <p class="mb-4">
+        The design challenge was clear: engineers don't respond to lecture-based training. They need to be put in a
+        scenario, given constraints, and forced to make decisions with consequences. The course puts the learner in the
+        role of an engineering team lead running an A/B test with GrowthBook — and makes them choose which Claude model
+        to deploy at each stage of the experiment.
+      </p>
+      <p>
+        Every decision has a right answer grounded in real tradeoffs — speed vs. accuracy, cost vs. capability,
+        statistical rigor vs. iteration speed. The debrief connects those technical choices to business outcomes.
+      </p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 section-pattern-b"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Course Embed -->
+  <div class="max-w-5xl mx-auto px-4 md:px-8 py-12 md:py-16">
+    <div class="text-center mb-10">
+      <p class="text-base text-secondary dark:text-blue-200 font-bold tracking-wide uppercase mb-2">Live Course</p>
+      <h2 class="text-4xl md:text-5xl font-bold tracking-tighter font-heading">Take the Course</h2>
+      <p class="text-lg text-muted mt-4">
+        A fully interactive Rise 360 experience — three scenario-based decisions, real consequences, and a debrief
+        connecting model selection to business outcomes.
+      </p>
+    </div>
+    <div
+      class="relative w-full rounded-lg shadow-lg overflow-hidden border border-gray-200 dark:border-gray-700"
+      style="padding-top: 62.5%;"
+    >
+      <iframe
+        class="absolute inset-0 w-full h-full"
+        src="/claude-model-showdown"
+        title="Claude Model Showdown — Engineering A/B Tests with Haiku, Sonnet, and Opus"
+        frameborder="0"
+        allowfullscreen></iframe>
+    </div>
+  </div>
+
+  <!-- Design Decisions -->
+  <Features3
+    tagline="Instructional Design"
+    title="Why the course is built the way it is"
+    subtitle="Design decisions made deliberately — each one tied to the audience, the context, and the learning objective."
+    columns={3}
+    items={[
+      {
+        title: 'Scenario-based from the first block',
+        description:
+          'Engineers disengage from abstract content immediately. The course puts the learner in a named role with real stakes before introducing any conceptual content — context first, theory second.',
+        icon: 'tabler:user-check',
+      },
+      {
+        title: 'Three-decision arc mirrors real engineering judgment',
+        description:
+          "Each decision reflects a real phase of an A/B experiment: prototype, scale, report. The model choice changes at each phase because the constraints change — that's the learning.",
+        icon: 'tabler:git-branch',
+      },
+      {
+        title: "Bloom's Taxonomy progression",
+        description:
+          'Lesson 1 builds knowledge (model differences). Lesson 2 requires evaluation (tradeoff decisions under constraints). Lesson 3 demands synthesis (connecting technical choices to business outcomes).',
+        icon: 'tabler:layers-intersect',
+      },
+      {
+        title: 'Consequences, not grades',
+        description:
+          "Wrong answers don't produce a red X — they produce a realistic consequence screen explaining what actually happens when you choose the wrong model. Learning from failure is more durable than being told the answer.",
+        icon: 'tabler:alert-triangle',
+      },
+      {
+        title: 'GrowthBook SDK as real-world anchor',
+        description:
+          "Abstract model comparison becomes concrete when it's tied to a real engineering tool. GrowthBook gives the scenario stakes — the model selection decision has real consequences inside a real workflow.",
+        icon: 'tabler:flask',
+      },
+      {
+        title: 'Debrief connects technical to business',
+        description:
+          "The final lesson doesn't just review answers — it explicitly connects each model choice to cost, speed, statistical reliability, and executive-level reporting. Technical decisions have business consequences.",
+        icon: 'tabler:chart-bar',
+      },
+    ]}
+  />
+
+  <!-- Learning Objectives -->
+  <Content tagline="Learning Design" title="What this course teaches and why" isReversed>
+    <Fragment slot="image">
+      <div class="flex items-center justify-center h-full py-12 px-6">
+        <div class="w-full max-w-xs space-y-3">
+          {
+            [
+              {
+                label: 'Identify model differences',
+                detail: 'Haiku, Sonnet, Opus — speed, cost, capability',
+                color: 'blue',
+              },
+              {
+                label: 'Evaluate tradeoffs',
+                detail: 'Cost vs. accuracy vs. statistical significance',
+                color: 'purple',
+              },
+              { label: 'Apply in context', detail: 'GrowthBook SDK A/B testing scenario', color: 'green' },
+              {
+                label: 'Synthesize outcomes',
+                detail: 'Connect technical decisions to business impact',
+                color: 'orange',
+              },
+            ].map(({ label, detail, color }) => (
+              <div
+                class={`flex items-start gap-3 p-2.5 rounded-lg border ${color === 'blue' ? 'border-blue-200 dark:border-blue-800 bg-blue-50 dark:bg-blue-900/20' : color === 'green' ? 'border-green-200 dark:border-green-800 bg-green-50 dark:bg-green-900/20' : color === 'purple' ? 'border-purple-200 dark:border-purple-800 bg-purple-50 dark:bg-purple-900/20' : 'border-orange-200 dark:border-orange-800 bg-orange-50 dark:bg-orange-900/20'}`}
+              >
+                <div>
+                  <p class="text-sm font-semibold text-gray-800 dark:text-gray-200">{label}</p>
+                  <p class="text-xs text-muted mt-0.5">{detail}</p>
+                </div>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </Fragment>
+    <Fragment slot="content">
+      <p class="mb-4">
+        The four learning objectives follow a deliberate Bloom's Taxonomy progression — from identifying and recalling
+        model characteristics, through evaluating tradeoffs under real constraints, to applying that judgment in a
+        simulated engineering workflow, and finally synthesizing the experience into business-level insight.
+      </p>
+      <p class="mb-4">
+        The hardest objective to teach is the last one: connecting a model selection decision to a business outcome.
+        Most engineers are comfortable in the technical layer but less practiced at translating that into the language
+        leadership cares about — cost, reliability, speed to insight. The debrief lesson is designed specifically to
+        build that bridge.
+      </p>
+      <p>
+        This course was built using Articulate Rise 360 with AI-assisted content generation — directed with a strategic
+        brief tied to a real enterprise training context, then evaluated and refined for accuracy, instructional
+        coherence, and audience fit.
+      </p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 section-pattern"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Tags -->
+  <div class="max-w-4xl mx-auto px-4 md:px-8 pb-16">
+    <div class="flex flex-wrap gap-2">
+      {
+        [
+          'Articulate Rise 360',
+          'Claude AI',
+          'Haiku · Sonnet · Opus',
+          'Scenario-Based Learning',
+          'Enterprise AI Training',
+          'GrowthBook SDK',
+          'A/B Testing',
+          'Instructional Design',
+          'Discovery-Based Learning',
+          'AI Platform Fluency',
+          "Bloom's Taxonomy",
+          'Developer Education',
+        ].map((tag) => (
+          <span class="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-sm font-medium px-3 py-1 rounded-full">
+            {tag}
+          </span>
+        ))
+      }
+    </div>
+  </div>
+</Layout>
