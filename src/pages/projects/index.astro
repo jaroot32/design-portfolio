@@ -285,41 +285,27 @@ const featured = [
             </linearGradient>
           </defs>
           <!-- connecting lines -->
-          <g stroke-width="0.18" fill="none" opacity="0.7" stroke-dasharray="2 2">
-            <line x1="16" y1="13" x2="25" y2="9" stroke="url(#lg1)">
-              <animate attributeName="stroke-dashoffset" values="0;-4" dur="3s" repeatCount="indefinite"></animate>
-            </line>
-            <line x1="25" y1="9" x2="29" y2="18" stroke="url(#lg1)">
-              <animate attributeName="stroke-dashoffset" values="0;-4" dur="3.6s" repeatCount="indefinite"></animate>
-            </line>
-            <line x1="29" y1="18" x2="11" y2="22" stroke="url(#lg1)">
-              <animate attributeName="stroke-dashoffset" values="0;-4" dur="4.2s" repeatCount="indefinite"></animate>
-            </line>
-            <line x1="29" y1="18" x2="54" y2="42" stroke="url(#lg2)">
-              <animate attributeName="stroke-dashoffset" values="0;-4" dur="5s" repeatCount="indefinite"></animate>
-            </line>
-            <line x1="54" y1="42" x2="45" y2="47" stroke="url(#lg2)">
-              <animate attributeName="stroke-dashoffset" values="0;-4" dur="3.4s" repeatCount="indefinite"></animate>
-            </line>
-            <line x1="54" y1="42" x2="72" y2="23" stroke="url(#lg2)">
-              <animate attributeName="stroke-dashoffset" values="0;-4" dur="4.6s" repeatCount="indefinite"></animate>
-            </line>
-            <line x1="72" y1="23" x2="83" y2="15" stroke="url(#lg2)">
-              <animate attributeName="stroke-dashoffset" values="0;-4" dur="3.2s" repeatCount="indefinite"></animate>
-            </line>
-            <line x1="72" y1="23" x2="90" y2="9" stroke="url(#lg2)">
-              <animate attributeName="stroke-dashoffset" values="0;-4" dur="4s" repeatCount="indefinite"></animate>
-            </line>
-            <line x1="22" y1="25" x2="36" y2="43" stroke="url(#lg3)">
-              <animate attributeName="stroke-dashoffset" values="0;-4" dur="4.8s" repeatCount="indefinite"></animate>
-            </line>
-            <line x1="36" y1="43" x2="45" y2="47" stroke="url(#lg3)">
-              <animate attributeName="stroke-dashoffset" values="0;-4" dur="3.8s" repeatCount="indefinite"></animate>
-            </line>
-            <line x1="61" y1="46" x2="54" y2="42" stroke="url(#lg2)">
-              <animate attributeName="stroke-dashoffset" values="0;-4" dur="4.4s" repeatCount="indefinite"></animate>
-            </line>
-          </g>
+          <!-- faint base route -->
+          <path
+            d="M16 13 L25 9 L29 18 L54 42 L61 46 L45 47 L36 43 L72 23 L83 15 L90 9"
+            fill="none"
+            stroke="url(#lg2)"
+            stroke-width="0.12"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            opacity="0.25"></path>
+          <!-- single connection traveling orb to orb -->
+          <path
+            d="M16 13 L25 9 L29 18 L54 42 L61 46 L45 47 L36 43 L72 23 L83 15 L90 9"
+            fill="none"
+            stroke="url(#lg2)"
+            stroke-width="0.35"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-dasharray="7 168"
+          >
+            <animate attributeName="stroke-dashoffset" values="175;0" dur="6s" repeatCount="indefinite"></animate>
+          </path>
           <!-- purple splash -->
           <g fill="#9333ea">
             <animateTransform
