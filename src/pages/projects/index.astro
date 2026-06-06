@@ -271,40 +271,36 @@ const featured = [
           aria-hidden="true"
         >
           <defs>
-            <linearGradient id="lg1" x1="0" y1="0" x2="1" y2="1">
+            <linearGradient id="comet" x1="0" y1="0" x2="1" y2="1">
               <stop offset="0" stop-color="#9333ea"></stop>
-              <stop offset="1" stop-color="#db2777"></stop>
-            </linearGradient>
-            <linearGradient id="lg2" x1="0" y1="0" x2="1" y2="1">
-              <stop offset="0" stop-color="#db2777"></stop>
+              <stop offset="0.35" stop-color="#ec4899"></stop>
+              <stop offset="0.7" stop-color="#f43f5e"></stop>
               <stop offset="1" stop-color="#4f46e5"></stop>
             </linearGradient>
-            <linearGradient id="lg3" x1="0" y1="0" x2="1" y2="1">
-              <stop offset="0" stop-color="#4f46e5"></stop>
-              <stop offset="1" stop-color="#9333ea"></stop>
-            </linearGradient>
           </defs>
-          <!-- connecting lines -->
-          <!-- faint base route -->
+          <!-- comet: a colorful connection with a trailing tail -->
           <path
             d="M16 13 L25 9 L29 18 L54 42 L61 46 L45 47 L36 43 L72 23 L83 15 L90 9"
             fill="none"
-            stroke="url(#lg2)"
-            stroke-width="0.12"
+            stroke="url(#comet)"
+            stroke-width="0.18"
             stroke-linecap="round"
             stroke-linejoin="round"
-            opacity="0.25"></path>
-          <!-- single connection traveling orb to orb -->
-          <path
-            d="M16 13 L25 9 L29 18 L54 42 L61 46 L45 47 L36 43 L72 23 L83 15 L90 9"
-            fill="none"
-            stroke="url(#lg2)"
-            stroke-width="0.35"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-dasharray="7 168"
+            stroke-dasharray="55 130"
+            opacity="0.4"
           >
-            <animate attributeName="stroke-dashoffset" values="175;0" dur="6s" repeatCount="indefinite"></animate>
+            <animate attributeName="stroke-dashoffset" values="185;-30" dur="13s" repeatCount="indefinite"></animate>
+          </path>
+          <path
+            d="M16 13 L25 9 L29 18 L54 42 L61 46 L45 47 L36 43 L72 23 L83 15 L90 9"
+            fill="none"
+            stroke="url(#comet)"
+            stroke-width="0.4"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-dasharray="28 157"
+          >
+            <animate attributeName="stroke-dashoffset" values="185;0" dur="13s" repeatCount="indefinite"></animate>
           </path>
           <!-- purple splash -->
           <g fill="#9333ea">
