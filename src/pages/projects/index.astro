@@ -264,20 +264,16 @@ const featured = [
   <Hero tagline="Portfolio">
     <Fragment slot="bg">
       <div class="absolute inset-0 overflow-hidden pointer-events-none">
-        <!-- Dark mode: bold neon glows -->
-        <div class="hidden dark:block absolute top-10 left-[12%] w-80 h-80 rounded-full blur-3xl" style="background:rgba(240,4,127,0.55);">
-        </div>
-        <div class="hidden dark:block absolute top-1/3 right-[12%] w-80 h-80 rounded-full blur-3xl" style="background:rgba(0,212,255,0.50);">
-        </div>
-        <div class="hidden dark:block absolute bottom-4 left-1/3 w-80 h-80 rounded-full blur-3xl" style="background:rgba(57,255,20,0.40);">
-        </div>
-        <!-- Light mode: visible neon glows -->
-        <div class="block dark:hidden absolute top-10 left-[12%] w-80 h-80 rounded-full blur-3xl" style="background:rgba(240,4,127,0.18);">
-        </div>
-        <div class="block dark:hidden absolute top-1/3 right-[12%] w-80 h-80 rounded-full blur-3xl" style="background:rgba(0,212,255,0.16);">
-        </div>
-        <div class="block dark:hidden absolute bottom-4 left-1/3 w-80 h-80 rounded-full blur-3xl" style="background:rgba(57,255,20,0.14);">
-        </div>
+        <!-- Dark mode: bold glows -->
+        <div class="hidden dark:block absolute top-10 left-[12%] w-80 h-80 rounded-full blur-3xl" style="background:rgba(255,0,128,0.55);"></div>
+        <div class="hidden dark:block absolute top-1/3 right-[12%] w-80 h-80 rounded-full blur-3xl" style="background:rgba(0,68,255,0.50);"></div>
+        <div class="hidden dark:block absolute bottom-4 left-1/3 w-80 h-80 rounded-full blur-3xl" style="background:rgba(136,0,204,0.45);"></div>
+        <div class="hidden dark:block absolute top-1/2 left-1/2 w-72 h-72 rounded-full blur-3xl" style="background:rgba(255,102,0,0.40);"></div>
+        <!-- Light mode: visible glows -->
+        <div class="block dark:hidden absolute top-10 left-[12%] w-80 h-80 rounded-full blur-3xl" style="background:rgba(255,0,128,0.18);"></div>
+        <div class="block dark:hidden absolute top-1/3 right-[12%] w-80 h-80 rounded-full blur-3xl" style="background:rgba(0,68,255,0.16);"></div>
+        <div class="block dark:hidden absolute bottom-4 left-1/3 w-80 h-80 rounded-full blur-3xl" style="background:rgba(136,0,204,0.14);"></div>
+        <div class="block dark:hidden absolute top-1/2 left-1/2 w-72 h-72 rounded-full blur-3xl" style="background:rgba(255,102,0,0.12);"></div>
         <!-- Paint splashes + comets (both modes) -->
         <svg
           class="block absolute inset-0 w-full h-full opacity-100"
@@ -287,10 +283,11 @@ const featured = [
         >
           <defs>
             <linearGradient id="comet" x1="0" y1="0" x2="1" y2="1">
-              <stop offset="0" stop-color="#f0047f"></stop>
-              <stop offset="0.35" stop-color="#ffe600"></stop>
-              <stop offset="0.7" stop-color="#00d4ff"></stop>
-              <stop offset="1" stop-color="#7b2fff"></stop>
+              <stop offset="0" stop-color="#FFD000"></stop>
+              <stop offset="0.25" stop-color="#FF6600"></stop>
+              <stop offset="0.5" stop-color="#FF0080"></stop>
+              <stop offset="0.75" stop-color="#8800CC"></stop>
+              <stop offset="1" stop-color="#0044FF"></stop>
             </linearGradient>
           </defs>
           <!-- comet: a colorful connection with a trailing tail -->
@@ -365,8 +362,8 @@ const featured = [
           >
             <animate attributeName="stroke-dashoffset" values="52;0" dur="13s" repeatCount="indefinite"></animate>
           </path>
-          <!-- pink splash -->
-          <g fill="#f0047f" opacity="0.85">
+          <!-- magenta splash -->
+          <g fill="#FF0080" opacity="0.90">
             <animateTransform
               attributeName="transform"
               type="translate"
@@ -382,8 +379,8 @@ const featured = [
             <circle cx="22" cy="25" r="2.4"></circle>
             <circle cx="4" cy="15" r="1.4"></circle>
           </g>
-          <!-- cyan splash -->
-          <g fill="#00d4ff" opacity="0.85">
+          <!-- blue splash -->
+          <g fill="#0044FF" opacity="0.90">
             <animateTransform
               attributeName="transform"
               type="translate"
@@ -399,8 +396,8 @@ const featured = [
             <circle cx="76" cy="6" r="1.8"></circle>
             <circle cx="97" cy="19" r="1.4"></circle>
           </g>
-          <!-- green orbs -->
-          <g fill="#39ff14" opacity="0.85">
+          <!-- red orbs -->
+          <g fill="#FF1500" opacity="0.90">
             <animateTransform
               attributeName="transform"
               type="translate"
@@ -416,8 +413,8 @@ const featured = [
             <circle cx="94" cy="46" r="2.2"></circle>
             <circle cx="79" cy="40" r="1.8"></circle>
           </g>
-          <!-- yellow orbs — new -->
-          <g fill="#ffe600" opacity="0.80">
+          <!-- yellow/orange orbs -->
+          <g fill="#FFD000" opacity="0.88">
             <animateTransform
               attributeName="transform"
               type="translate"
@@ -429,8 +426,8 @@ const featured = [
             <circle cx="57" cy="8" r="2.0"></circle>
             <circle cx="48" cy="2" r="1.5"></circle>
           </g>
-          <!-- purple orbs — new -->
-          <g fill="#7b2fff" opacity="0.80">
+          <!-- purple orbs -->
+          <g fill="#8800CC" opacity="0.88">
             <animateTransform
               attributeName="transform"
               type="translate"
