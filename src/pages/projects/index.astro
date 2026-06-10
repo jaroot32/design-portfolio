@@ -265,15 +265,15 @@ const featured = [
     <Fragment slot="bg">
       <div class="absolute inset-0 overflow-hidden pointer-events-none">
         <!-- Dark mode: bold glows -->
-        <div class="hidden dark:block absolute top-10 left-[12%] w-80 h-80 rounded-full blur-3xl" style="background:rgba(255,0,128,0.55);"></div>
-        <div class="hidden dark:block absolute top-1/3 right-[12%] w-80 h-80 rounded-full blur-3xl" style="background:rgba(0,68,255,0.50);"></div>
-        <div class="hidden dark:block absolute bottom-4 left-1/3 w-80 h-80 rounded-full blur-3xl" style="background:rgba(136,0,204,0.45);"></div>
-        <div class="hidden dark:block absolute top-1/2 left-1/2 w-72 h-72 rounded-full blur-3xl" style="background:rgba(255,102,0,0.40);"></div>
+        <div class="hidden dark:block absolute top-10 left-[12%] w-80 h-80 rounded-full blur-3xl" style="background:#FD2201; opacity:0.45;"></div>
+        <div class="hidden dark:block absolute top-1/3 right-[12%] w-80 h-80 rounded-full blur-3xl" style="background:#04A7EC; opacity:0.45;"></div>
+        <div class="hidden dark:block absolute bottom-4 left-1/3 w-80 h-80 rounded-full blur-3xl" style="background:#8E18D0; opacity:0.40;"></div>
+        <div class="hidden dark:block absolute top-1/2 left-1/2 w-72 h-72 rounded-full blur-3xl" style="background:#11E484; opacity:0.35;"></div>
         <!-- Light mode: visible glows -->
-        <div class="block dark:hidden absolute top-10 left-[12%] w-80 h-80 rounded-full blur-3xl" style="background:rgba(255,0,128,0.18);"></div>
-        <div class="block dark:hidden absolute top-1/3 right-[12%] w-80 h-80 rounded-full blur-3xl" style="background:rgba(0,68,255,0.16);"></div>
-        <div class="block dark:hidden absolute bottom-4 left-1/3 w-80 h-80 rounded-full blur-3xl" style="background:rgba(136,0,204,0.14);"></div>
-        <div class="block dark:hidden absolute top-1/2 left-1/2 w-72 h-72 rounded-full blur-3xl" style="background:rgba(255,102,0,0.12);"></div>
+        <div class="block dark:hidden absolute top-10 left-[12%] w-80 h-80 rounded-full blur-3xl" style="background:#FD2201; opacity:0.15;"></div>
+        <div class="block dark:hidden absolute top-1/3 right-[12%] w-80 h-80 rounded-full blur-3xl" style="background:#04A7EC; opacity:0.14;"></div>
+        <div class="block dark:hidden absolute bottom-4 left-1/3 w-80 h-80 rounded-full blur-3xl" style="background:#8E18D0; opacity:0.12;"></div>
+        <div class="block dark:hidden absolute top-1/2 left-1/2 w-72 h-72 rounded-full blur-3xl" style="background:#11E484; opacity:0.10;"></div>
         <!-- Paint splashes + comets (both modes) -->
         <svg
           class="block absolute inset-0 w-full h-full opacity-100"
@@ -283,11 +283,13 @@ const featured = [
         >
           <defs>
             <linearGradient id="comet" x1="0" y1="0" x2="1" y2="1">
-              <stop offset="0" stop-color="#FFD000"></stop>
-              <stop offset="0.25" stop-color="#FF6600"></stop>
-              <stop offset="0.5" stop-color="#FF0080"></stop>
-              <stop offset="0.75" stop-color="#8800CC"></stop>
-              <stop offset="1" stop-color="#0044FF"></stop>
+              <stop offset="0" stop-color="#FCE004"></stop>
+              <stop offset="0.2" stop-color="#83DB1F"></stop>
+              <stop offset="0.4" stop-color="#11E484"></stop>
+              <stop offset="0.6" stop-color="#01E5FF"></stop>
+              <stop offset="0.75" stop-color="#04A7EC"></stop>
+              <stop offset="0.88" stop-color="#9E28D3"></stop>
+              <stop offset="1" stop-color="#F319F1"></stop>
             </linearGradient>
           </defs>
           <!-- comet: a colorful connection with a trailing tail -->
@@ -362,8 +364,8 @@ const featured = [
           >
             <animate attributeName="stroke-dashoffset" values="52;0" dur="13s" repeatCount="indefinite"></animate>
           </path>
-          <!-- magenta splash -->
-          <g fill="#FF0080" opacity="0.90">
+          <!-- red splash -->
+          <g fill="#FD2201" opacity="0.90">
             <animateTransform
               attributeName="transform"
               type="translate"
@@ -379,8 +381,8 @@ const featured = [
             <circle cx="22" cy="25" r="2.4"></circle>
             <circle cx="4" cy="15" r="1.4"></circle>
           </g>
-          <!-- blue splash -->
-          <g fill="#0044FF" opacity="0.90">
+          <!-- cyan splash -->
+          <g fill="#01E5FF" opacity="0.90">
             <animateTransform
               attributeName="transform"
               type="translate"
@@ -396,8 +398,8 @@ const featured = [
             <circle cx="76" cy="6" r="1.8"></circle>
             <circle cx="97" cy="19" r="1.4"></circle>
           </g>
-          <!-- red orbs -->
-          <g fill="#FF1500" opacity="0.90">
+          <!-- green orbs -->
+          <g fill="#11E484" opacity="0.90">
             <animateTransform
               attributeName="transform"
               type="translate"
@@ -413,8 +415,8 @@ const featured = [
             <circle cx="94" cy="46" r="2.2"></circle>
             <circle cx="79" cy="40" r="1.8"></circle>
           </g>
-          <!-- yellow/orange orbs -->
-          <g fill="#FFD000" opacity="0.88">
+          <!-- yellow orbs -->
+          <g fill="#FCE004" opacity="0.90">
             <animateTransform
               attributeName="transform"
               type="translate"
@@ -427,7 +429,7 @@ const featured = [
             <circle cx="48" cy="2" r="1.5"></circle>
           </g>
           <!-- purple orbs -->
-          <g fill="#8800CC" opacity="0.88">
+          <g fill="#9E28D3" opacity="0.90">
             <animateTransform
               attributeName="transform"
               type="translate"
@@ -439,9 +441,6 @@ const featured = [
             <circle cx="43" cy="47" r="2.0"></circle>
           </g>
         </svg>
-        <!-- Veil to soften splashes so text pops -->
-        <div class="block dark:hidden absolute inset-0 bg-white/85"></div>
-        <div class="hidden dark:block absolute inset-0 bg-gray-950/75"></div>
       </div>
     </Fragment>
     <Fragment slot="title">
