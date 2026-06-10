@@ -187,9 +187,13 @@ const metadata = {
   <!-- AIDA Slide Outline -->
   <div class="max-w-5xl mx-auto px-4 md:px-8 py-12 md:py-16">
     <div class="text-center mb-10">
-      <p class="text-base text-secondary dark:text-blue-200 font-bold tracking-wide uppercase mb-2">Instructional Arc</p>
+      <p class="text-base text-secondary dark:text-blue-200 font-bold tracking-wide uppercase mb-2">
+        Instructional Arc
+      </p>
       <h2 class="text-4xl md:text-5xl font-bold tracking-tighter font-heading">10 Slides. AIDA Structure.</h2>
-      <p class="text-lg text-muted mt-4 max-w-2xl mx-auto">Each slide maps to a deliberate phase of the AIDA model — moving the learner from hooked to invested to capable.</p>
+      <p class="text-lg text-muted mt-4 max-w-2xl mx-auto">
+        Each slide maps to a deliberate phase of the AIDA model — moving the learner from hooked to invested to capable.
+      </p>
     </div>
     <div class="overflow-x-auto rounded-lg border border-gray-200 dark:border-gray-700 shadow-sm">
       <table class="w-full text-sm text-left">
@@ -203,26 +207,98 @@ const metadata = {
           </tr>
         </thead>
         <tbody class="divide-y divide-gray-200 dark:divide-gray-700">
-          {[
-            { num: '1', phase: 'Attention', phaseColor: 'text-pink-600 dark:text-pink-400', title: 'The Enrollment Drop-Off Problem', content: 'Role framing, 34% drop-off stat, hypothesis, CTA to begin.', interaction: 'Animated entry, single CTA' },
-            { num: '2', phase: 'Interest', phaseColor: 'text-blue-600 dark:text-blue-400', title: 'The Full Picture', content: '1,000 visitors → 660 completions. $169,660/month left on the table. VP deadline.', interaction: 'Animated funnel build, stat reveal' },
-            { num: '3', phase: 'Interest', phaseColor: 'text-blue-600 dark:text-blue-400', title: 'Why This Matters', content: 'What a 10% improvement means in dollars. Evidence vs. gut instinct.', interaction: 'Before/after comparison' },
-            { num: '4', phase: 'Desire', phaseColor: 'text-green-600 dark:text-green-400', title: "There's a Better Way", content: 'Introduce A/B testing as the right tool. GrowthBook SDK introduced.', interaction: 'Click-to-reveal key terms' },
-            { num: '5', phase: 'Desire', phaseColor: 'text-green-600 dark:text-green-400', title: 'What Good Looks Like', content: 'Variant A vs. Variant B side-by-side. What the test will measure.', interaction: 'Side-by-side variant display' },
-            { num: '6', phase: 'Action', phaseColor: 'text-orange-600 dark:text-orange-400', title: 'Decision 1: Form a Hypothesis', content: 'Choose the best hypothesis from 3 options. One is testable — two are not.', interaction: 'Branching multiple choice' },
-            { num: '7', phase: 'Action', phaseColor: 'text-orange-600 dark:text-orange-400', title: 'Decision 2: Configure the Test', content: 'Set traffic split and variant structure in a simulated GrowthBook UI.', interaction: 'Simulated UI — click correct element' },
-            { num: '8', phase: 'Action', phaseColor: 'text-orange-600 dark:text-orange-400', title: 'Results Are In', content: 'Variant B wins. p=0.03, lift +12%. Data revealed with animated chart.', interaction: 'Animated data/chart reveal' },
-            { num: '9', phase: 'Action', phaseColor: 'text-orange-600 dark:text-orange-400', title: 'Decision 3: What Do You Do?', content: 'Ship it, run longer, or test something else? Three paths, three consequences.', interaction: 'Branching — 3 paths with consequences' },
-            { num: '10', phase: 'Action', phaseColor: 'text-orange-600 dark:text-orange-400', title: 'Debrief', content: "Connect decisions to objectives. Key takeaway. Kirkpatrick L1 confidence rating.", interaction: 'Reflection + Likert rating scale' },
-          ].map(({ num, phase, phaseColor, title, content, interaction }) => (
-            <tr class="bg-white dark:bg-gray-900 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
-              <td class="px-4 py-3 font-bold text-gray-400">{num}</td>
-              <td class={`px-4 py-3 font-semibold text-sm ${phaseColor}`}>{phase}</td>
-              <td class="px-4 py-3 font-semibold text-gray-800 dark:text-gray-200">{title}</td>
-              <td class="px-4 py-3 text-gray-600 dark:text-gray-400">{content}</td>
-              <td class="px-4 py-3 text-gray-500 dark:text-gray-400 italic text-xs">{interaction}</td>
-            </tr>
-          ))}
+          {
+            [
+              {
+                num: '1',
+                phase: 'Attention',
+                phaseColor: 'text-pink-600 dark:text-pink-400',
+                title: 'The Enrollment Drop-Off Problem',
+                content: 'Role framing, 34% drop-off stat, hypothesis, CTA to begin.',
+                interaction: 'Animated entry, single CTA',
+              },
+              {
+                num: '2',
+                phase: 'Interest',
+                phaseColor: 'text-blue-600 dark:text-blue-400',
+                title: 'The Full Picture',
+                content: '1,000 visitors → 660 completions. $169,660/month left on the table. VP deadline.',
+                interaction: 'Animated funnel build, stat reveal',
+              },
+              {
+                num: '3',
+                phase: 'Interest',
+                phaseColor: 'text-blue-600 dark:text-blue-400',
+                title: 'Why This Matters',
+                content: 'What a 10% improvement means in dollars. Evidence vs. gut instinct.',
+                interaction: 'Before/after comparison',
+              },
+              {
+                num: '4',
+                phase: 'Desire',
+                phaseColor: 'text-green-600 dark:text-green-400',
+                title: "There's a Better Way",
+                content: 'Introduce A/B testing as the right tool. GrowthBook SDK introduced.',
+                interaction: 'Click-to-reveal key terms',
+              },
+              {
+                num: '5',
+                phase: 'Desire',
+                phaseColor: 'text-green-600 dark:text-green-400',
+                title: 'What Good Looks Like',
+                content: 'Variant A vs. Variant B side-by-side. What the test will measure.',
+                interaction: 'Side-by-side variant display',
+              },
+              {
+                num: '6',
+                phase: 'Action',
+                phaseColor: 'text-orange-600 dark:text-orange-400',
+                title: 'Decision 1: Form a Hypothesis',
+                content: 'Choose the best hypothesis from 3 options. One is testable — two are not.',
+                interaction: 'Branching multiple choice',
+              },
+              {
+                num: '7',
+                phase: 'Action',
+                phaseColor: 'text-orange-600 dark:text-orange-400',
+                title: 'Decision 2: Configure the Test',
+                content: 'Set traffic split and variant structure in a simulated GrowthBook UI.',
+                interaction: 'Simulated UI — click correct element',
+              },
+              {
+                num: '8',
+                phase: 'Action',
+                phaseColor: 'text-orange-600 dark:text-orange-400',
+                title: 'Results Are In',
+                content: 'Variant B wins. p=0.03, lift +12%. Data revealed with animated chart.',
+                interaction: 'Animated data/chart reveal',
+              },
+              {
+                num: '9',
+                phase: 'Action',
+                phaseColor: 'text-orange-600 dark:text-orange-400',
+                title: 'Decision 3: What Do You Do?',
+                content: 'Ship it, run longer, or test something else? Three paths, three consequences.',
+                interaction: 'Branching — 3 paths with consequences',
+              },
+              {
+                num: '10',
+                phase: 'Action',
+                phaseColor: 'text-orange-600 dark:text-orange-400',
+                title: 'Debrief',
+                content: 'Connect decisions to objectives. Key takeaway. Kirkpatrick L1 confidence rating.',
+                interaction: 'Reflection + Likert rating scale',
+              },
+            ].map(({ num, phase, phaseColor, title, content, interaction }) => (
+              <tr class="bg-white dark:bg-gray-900 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+                <td class="px-4 py-3 font-bold text-gray-400">{num}</td>
+                <td class={`px-4 py-3 font-semibold text-sm ${phaseColor}`}>{phase}</td>
+                <td class="px-4 py-3 font-semibold text-gray-800 dark:text-gray-200">{title}</td>
+                <td class="px-4 py-3 text-gray-600 dark:text-gray-400">{content}</td>
+                <td class="px-4 py-3 text-gray-500 dark:text-gray-400 italic text-xs">{interaction}</td>
+              </tr>
+            ))
+          }
         </tbody>
       </table>
     </div>
@@ -231,9 +307,14 @@ const metadata = {
   <!-- Process Documents -->
   <div class="max-w-5xl mx-auto px-4 md:px-8 py-12 md:py-16 bg-purple-50 dark:bg-purple-900/10 rounded-2xl mb-12">
     <div class="text-center mb-10">
-      <p class="text-base text-secondary dark:text-blue-200 font-bold tracking-wide uppercase mb-2">Process Artifacts</p>
+      <p class="text-base text-secondary dark:text-blue-200 font-bold tracking-wide uppercase mb-2">
+        Process Artifacts
+      </p>
       <h2 class="text-4xl md:text-5xl font-bold tracking-tighter font-heading">Full ID Process. Documented.</h2>
-      <p class="text-lg text-muted mt-4 max-w-2xl mx-auto">This project follows a complete instructional design process — analysis through evaluation. Download the artifacts below.</p>
+      <p class="text-lg text-muted mt-4 max-w-2xl mx-auto">
+        This project follows a complete instructional design process — analysis through evaluation. Download the
+        artifacts below.
+      </p>
     </div>
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
       <a
@@ -242,12 +323,26 @@ const metadata = {
         class="flex flex-col items-center gap-3 p-6 rounded-xl border-2 border-purple-200 dark:border-purple-700 bg-white dark:bg-gray-900 hover:border-purple-500 hover:shadow-md transition-all group"
       >
         <div class="w-12 h-12 rounded-full bg-purple-100 dark:bg-purple-900/40 flex items-center justify-center">
-          <svg class="w-6 h-6 text-purple-700 dark:text-purple-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+          <svg
+            class="w-6 h-6 text-purple-700 dark:text-purple-300"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+            ></path>
           </svg>
         </div>
         <div class="text-center">
-          <p class="font-semibold text-gray-800 dark:text-gray-200 group-hover:text-purple-700 dark:group-hover:text-purple-300">Design Document</p>
+          <p
+            class="font-semibold text-gray-800 dark:text-gray-200 group-hover:text-purple-700 dark:group-hover:text-purple-300"
+          >
+            Design Document
+          </p>
           <p class="text-xs text-muted mt-1">Needs analysis, objectives, AIDA arc, branching logic, evaluation plan</p>
         </div>
         <span class="text-xs font-medium text-purple-600 dark:text-purple-400 mt-auto">Download .docx</span>
@@ -258,12 +353,26 @@ const metadata = {
         class="flex flex-col items-center gap-3 p-6 rounded-xl border-2 border-purple-200 dark:border-purple-700 bg-white dark:bg-gray-900 hover:border-purple-500 hover:shadow-md transition-all group"
       >
         <div class="w-12 h-12 rounded-full bg-purple-100 dark:bg-purple-900/40 flex items-center justify-center">
-          <svg class="w-6 h-6 text-purple-700 dark:text-purple-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z" />
+          <svg
+            class="w-6 h-6 text-purple-700 dark:text-purple-300"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"
+            ></path>
           </svg>
         </div>
         <div class="text-center">
-          <p class="font-semibold text-gray-800 dark:text-gray-200 group-hover:text-purple-700 dark:group-hover:text-purple-300">Storyboard</p>
+          <p
+            class="font-semibold text-gray-800 dark:text-gray-200 group-hover:text-purple-700 dark:group-hover:text-purple-300"
+          >
+            Storyboard
+          </p>
           <p class="text-xs text-muted mt-1">Slide-by-slide script, visuals, narration, and branching notes</p>
         </div>
         <span class="text-xs font-medium text-purple-600 dark:text-purple-400 mt-auto">Download .docx</span>
@@ -274,12 +383,26 @@ const metadata = {
         class="flex flex-col items-center gap-3 p-6 rounded-xl border-2 border-purple-200 dark:border-purple-700 bg-white dark:bg-gray-900 hover:border-purple-500 hover:shadow-md transition-all group"
       >
         <div class="w-12 h-12 rounded-full bg-purple-100 dark:bg-purple-900/40 flex items-center justify-center">
-          <svg class="w-6 h-6 text-purple-700 dark:text-purple-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" />
+          <svg
+            class="w-6 h-6 text-purple-700 dark:text-purple-300"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"
+            ></path>
           </svg>
         </div>
         <div class="text-center">
-          <p class="font-semibold text-gray-800 dark:text-gray-200 group-hover:text-purple-700 dark:group-hover:text-purple-300">Style Guide</p>
+          <p
+            class="font-semibold text-gray-800 dark:text-gray-200 group-hover:text-purple-700 dark:group-hover:text-purple-300"
+          >
+            Style Guide
+          </p>
           <p class="text-xs text-muted mt-1">Colors, typography, tone, animation standards, and variable reference</p>
         </div>
         <span class="text-xs font-medium text-purple-600 dark:text-purple-400 mt-auto">Download .docx</span>

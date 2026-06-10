@@ -17,8 +17,9 @@ const metadata = {
     </Fragment>
     <Fragment slot="subtitle">
       A published microlearning Byte designed for Rumie-Learn — a free global learning library reaching learners across
-      180+ countries. A 9-step, under-10-minute experience built around practical strategies for managing travel anxiety,
-      written for a global mixed-literacy audience and refined through a structured two-tier peer review process.
+      180+ countries. A 9-step, under-10-minute experience built around practical strategies for managing travel
+      anxiety, written for a global mixed-literacy audience and refined through a structured two-tier peer review
+      process.
     </Fragment>
   </Hero>
 
@@ -46,9 +47,9 @@ const metadata = {
         worldwide, including those in low-connectivity environments.
       </p>
       <p class="mb-4">
-        <em>How I Dealt with Travel Anxiety</em> was designed as a first-person, empathy-driven Byte for adult learners
-        navigating travel-related stress. The topic was selected to reach a universally relatable knowledge gap — one
-        that shows up across every audience demographic Rumie serves.
+        <em>How I Dealt with Travel Anxiety</em> was designed as a first-person, empathy-driven Byte for adult learners navigating
+        travel-related stress. The topic was selected to reach a universally relatable knowledge gap — one that shows up
+        across every audience demographic Rumie serves.
       </p>
       <p>
         The Byte passed through two editorial peer reviews and a final edit review before publication — a structured QA
@@ -97,14 +98,18 @@ const metadata = {
   <!-- Assessment Sample -->
   <div class="max-w-3xl mx-auto px-4 md:px-8 py-12 md:py-16">
     <div class="text-center mb-10">
-      <p class="text-base text-secondary dark:text-blue-200 font-bold tracking-wide uppercase mb-2">Assessment Design</p>
+      <p class="text-base text-secondary dark:text-blue-200 font-bold tracking-wide uppercase mb-2">
+        Assessment Design
+      </p>
       <h2 class="text-4xl md:text-5xl font-bold tracking-tighter font-heading">Scenario-Based Knowledge Check</h2>
       <p class="text-lg text-muted mt-4 max-w-2xl mx-auto">
         Written to require application, not recall — the learner must use the Byte's content to navigate a realistic,
         pressured moment.
       </p>
     </div>
-    <div class="rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 shadow-sm overflow-hidden">
+    <div
+      class="rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 shadow-sm overflow-hidden"
+    >
       <div class="bg-accent/10 dark:bg-accent/20 px-6 py-4 border-b border-gray-200 dark:border-gray-700">
         <p class="text-sm font-semibold text-accent uppercase tracking-wide">Quiz Question</p>
         <p class="text-sm text-muted mt-1">
@@ -125,9 +130,21 @@ const metadata = {
                 text: 'Start packing now and make a checklist of anything you still need to bring.',
                 correct: true,
               },
-              { letter: 'B', text: 'Call the airline to ask if you can change your flight to another day.', correct: false },
-              { letter: 'C', text: 'Decide to pack light and figure out what you need when you arrive.', correct: false },
-              { letter: 'D', text: 'Go to bed and pack in the morning when you\'re feeling less stressed.', correct: false },
+              {
+                letter: 'B',
+                text: 'Call the airline to ask if you can change your flight to another day.',
+                correct: false,
+              },
+              {
+                letter: 'C',
+                text: 'Decide to pack light and figure out what you need when you arrive.',
+                correct: false,
+              },
+              {
+                letter: 'D',
+                text: "Go to bed and pack in the morning when you're feeling less stressed.",
+                correct: false,
+              },
             ].map(({ letter, text, correct }) => (
               <div
                 class={`flex items-start gap-3 p-3 rounded-lg border ${correct ? 'border-green-300 dark:border-green-700 bg-green-50 dark:bg-green-900/20' : 'border-gray-200 dark:border-gray-700'}`}
@@ -137,7 +154,9 @@ const metadata = {
                 >
                   {letter}
                 </span>
-                <p class={`text-sm mt-0.5 ${correct ? 'text-green-800 dark:text-green-200 font-medium' : 'text-gray-600 dark:text-gray-400'}`}>
+                <p
+                  class={`text-sm mt-0.5 ${correct ? 'text-green-800 dark:text-green-200 font-medium' : 'text-gray-600 dark:text-gray-400'}`}
+                >
                   {text}
                 </p>
               </div>
@@ -200,13 +219,13 @@ const metadata = {
         workflows in corporate instructional design — including Quality Matters standards used in higher education.
       </p>
       <p class="mb-4">
-        <strong>Tier 1</strong> focuses on content and structure: does the Byte fulfill its stated learning objective?
-        Is the flow logical — big picture before supporting details? Does the assessment require application rather than
-        simple recall?
+        <strong>Tier 1</strong> focuses on content and structure: does the Byte fulfill its stated learning objective? Is
+        the flow logical — big picture before supporting details? Does the assessment require application rather than simple
+        recall?
       </p>
       <p class="mb-4">
-        <strong>Tier 2</strong> addresses language and format: are sentences concise and direct? Is bold text used
-        meaningfully? Do visuals complement rather than distract from the content?
+        <strong>Tier 2</strong> addresses language and format: are sentences concise and direct? Is bold text used meaningfully?
+        Do visuals complement rather than distract from the content?
       </p>
       <p>
         Feedback was managed across two platforms — ClickUp for overarching comments and Rumie-Build for step-specific
@@ -223,9 +242,7 @@ const metadata = {
     <div class="text-center mb-10">
       <p class="text-base text-secondary dark:text-blue-200 font-bold tracking-wide uppercase mb-2">The Byte</p>
       <h2 class="text-4xl md:text-5xl font-bold tracking-tighter font-heading">Take the Byte on Rumie-Learn</h2>
-      <p class="text-lg text-muted mt-4">
-        Free, globally distributed, under 10 minutes.
-      </p>
+      <p class="text-lg text-muted mt-4">Free, globally distributed, under 10 minutes.</p>
     </div>
     <div
       class="relative w-full rounded-lg shadow-lg overflow-hidden border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 flex items-center justify-center"
