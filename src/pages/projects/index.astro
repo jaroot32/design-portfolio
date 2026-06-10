@@ -299,52 +299,52 @@ const featured = [
           </path>
         </svg>
 
-        <!-- Orbs SVG — renders on top of lines -->
+        <!-- Orbs SVG — renders on top of lines, each orb its own color -->
         <svg
           class="block absolute inset-0 w-full h-full"
           viewBox="0 0 100 50"
           preserveAspectRatio="xMidYMid slice"
           aria-hidden="true"
         >
-          <!-- magenta — top left, 4 orbs -->
-          <g fill="#e31c51" opacity="1">
+          <!-- top left cluster -->
+          <g>
             <animateTransform attributeName="transform" type="translate" values="0 0; 1.4 -0.9; -0.7 0.7; 0 0" dur="17s" repeatCount="indefinite"></animateTransform>
-            <circle cx="16" cy="13" r="4.5"></circle>
-            <circle cx="25" cy="9" r="3.5"></circle>
-            <circle cx="11" cy="22" r="4.0"></circle>
-            <circle cx="29" cy="18" r="2.8"></circle>
+            <circle cx="16" cy="13" r="4.5" fill="#FF6B00"></circle>
+            <circle cx="25" cy="9"  r="3.5" fill="#FFD000"></circle>
+            <circle cx="11" cy="22" r="4.0" fill="#e31c51"></circle>
+            <circle cx="29" cy="18" r="2.8" fill="#8B17D3"></circle>
           </g>
-          <!-- coral — top right, 4 orbs -->
-          <g fill="#fe1201" opacity="1">
+          <!-- top right cluster -->
+          <g>
             <animateTransform attributeName="transform" type="translate" values="0 0; -1.1 0.8; 0.9 -0.6; 0 0" dur="21s" repeatCount="indefinite"></animateTransform>
-            <circle cx="83" cy="15" r="4.5"></circle>
-            <circle cx="90" cy="9" r="3.5"></circle>
-            <circle cx="72" cy="23" r="3.8"></circle>
-            <circle cx="94" cy="4" r="2.0"></circle>
+            <circle cx="83" cy="15" r="4.5" fill="#fe1201"></circle>
+            <circle cx="90" cy="9"  r="3.5" fill="#38c755"></circle>
+            <circle cx="72" cy="23" r="3.8" fill="#00BBFF"></circle>
+            <circle cx="94" cy="4"  r="2.0" fill="#FF1493"></circle>
           </g>
-          <!-- purple — bottom left, 2 orbs -->
-          <g fill="#8B17D3" opacity="1">
+          <!-- bottom left cluster -->
+          <g>
             <animateTransform attributeName="transform" type="translate" values="0 0; 0.7 -0.6; -0.6 0.5; 0 0" dur="14s" repeatCount="indefinite"></animateTransform>
-            <circle cx="11" cy="40" r="4.0"></circle>
-            <circle cx="17" cy="45" r="3.0"></circle>
+            <circle cx="11" cy="40" r="4.0" fill="#a1c837"></circle>
+            <circle cx="17" cy="45" r="3.0" fill="#FF4500"></circle>
           </g>
-          <!-- purple — bottom right, 2 orbs -->
-          <g fill="#8B17D3" opacity="1">
+          <!-- bottom right cluster -->
+          <g>
             <animateTransform attributeName="transform" type="translate" values="0 0; -0.7 0.6; 0.6 -0.5; 0 0" dur="14s" repeatCount="indefinite"></animateTransform>
-            <circle cx="89" cy="40" r="4.0"></circle>
-            <circle cx="83" cy="45" r="3.0"></circle>
+            <circle cx="89" cy="40" r="4.0" fill="#00CED1"></circle>
+            <circle cx="83" cy="45" r="3.0" fill="#6600CC"></circle>
           </g>
-          <!-- yellow-green — top center, 2 orbs -->
-          <g fill="#a1c837" opacity="1">
+          <!-- top center cluster -->
+          <g>
             <animateTransform attributeName="transform" type="translate" values="0 0; -0.8 0.9; 0.6 -0.7; 0 0" dur="19s" repeatCount="indefinite"></animateTransform>
-            <circle cx="50" cy="5" r="3.5"></circle>
-            <circle cx="44" cy="10" r="2.5"></circle>
+            <circle cx="50" cy="5"  r="3.5" fill="#e94974"></circle>
+            <circle cx="44" cy="10" r="2.5" fill="#FCE004"></circle>
           </g>
-          <!-- light magenta — bottom center, 2 orbs -->
-          <g fill="#e94974" opacity="1">
+          <!-- bottom center cluster -->
+          <g>
             <animateTransform attributeName="transform" type="translate" values="0 0; 1.0 -0.8; -0.9 0.6; 0 0" dur="23s" repeatCount="indefinite"></animateTransform>
-            <circle cx="50" cy="45" r="3.5"></circle>
-            <circle cx="57" cy="42" r="2.5"></circle>
+            <circle cx="50" cy="45" r="3.5" fill="#83DB1F"></circle>
+            <circle cx="57" cy="42" r="2.5" fill="#9E28D3"></circle>
           </g>
         </svg>
       </div>
