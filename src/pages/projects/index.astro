@@ -264,16 +264,23 @@ const featured = [
   <Hero tagline="Portfolio">
     <Fragment slot="bg">
       <div class="absolute inset-0 overflow-hidden pointer-events-none">
-        <!-- Dark mode: soft glowing spotlights -->
-        <div class="hidden dark:block absolute top-10 left-[12%] w-72 h-72 rounded-full blur-3xl" style="background:rgba(240,4,127,0.22);">
+        <!-- Dark mode: bold neon glows -->
+        <div class="hidden dark:block absolute top-10 left-[12%] w-80 h-80 rounded-full blur-3xl" style="background:rgba(240,4,127,0.55);">
         </div>
-        <div class="hidden dark:block absolute top-1/3 right-[12%] w-72 h-72 rounded-full blur-3xl" style="background:rgba(0,212,255,0.20);">
+        <div class="hidden dark:block absolute top-1/3 right-[12%] w-80 h-80 rounded-full blur-3xl" style="background:rgba(0,212,255,0.50);">
         </div>
-        <div class="hidden dark:block absolute bottom-4 left-1/3 w-72 h-72 rounded-full blur-3xl" style="background:rgba(57,255,20,0.15);">
+        <div class="hidden dark:block absolute bottom-4 left-1/3 w-80 h-80 rounded-full blur-3xl" style="background:rgba(57,255,20,0.40);">
+        </div>
+        <!-- Light mode: visible neon glows -->
+        <div class="block dark:hidden absolute top-10 left-[12%] w-80 h-80 rounded-full blur-3xl" style="background:rgba(240,4,127,0.18);">
+        </div>
+        <div class="block dark:hidden absolute top-1/3 right-[12%] w-80 h-80 rounded-full blur-3xl" style="background:rgba(0,212,255,0.16);">
+        </div>
+        <div class="block dark:hidden absolute bottom-4 left-1/3 w-80 h-80 rounded-full blur-3xl" style="background:rgba(57,255,20,0.14);">
         </div>
         <!-- Paint splashes + comets (both modes) -->
         <svg
-          class="block absolute inset-0 w-full h-full opacity-70 blur-[0.5px]"
+          class="block absolute inset-0 w-full h-full opacity-100"
           viewBox="0 0 100 50"
           preserveAspectRatio="xMidYMid slice"
           aria-hidden="true"
@@ -291,11 +298,11 @@ const featured = [
             d="M11 22 L16 13 L25 9 L33 6 L29 18 L22 25"
             fill="none"
             stroke="url(#comet)"
-            stroke-width="0.15"
+            stroke-width="0.35"
             stroke-linecap="round"
             stroke-linejoin="round"
             stroke-dasharray="24 40"
-            opacity="0.4"
+            opacity="0.9"
           >
             <animate attributeName="stroke-dashoffset" values="66;-8" dur="9s" repeatCount="indefinite"></animate>
           </path>
@@ -303,7 +310,7 @@ const featured = [
             d="M11 22 L16 13 L25 9 L33 6 L29 18 L22 25"
             fill="none"
             stroke="url(#comet)"
-            stroke-width="0.18"
+            stroke-width="0.4"
             stroke-linecap="round"
             stroke-linejoin="round"
             stroke-dasharray="13 47"
@@ -319,7 +326,7 @@ const featured = [
             stroke-linecap="round"
             stroke-linejoin="round"
             stroke-dasharray="26 36"
-            opacity="0.4"
+            opacity="0.9"
           >
             <animate attributeName="stroke-dashoffset" values="66;-8" dur="11s" repeatCount="indefinite"></animate>
           </path>
@@ -359,55 +366,80 @@ const featured = [
             <animate attributeName="stroke-dashoffset" values="52;0" dur="13s" repeatCount="indefinite"></animate>
           </path>
           <!-- pink splash -->
-          <g fill="#f0047f">
+          <g fill="#f0047f" opacity="0.85">
             <animateTransform
               attributeName="transform"
               type="translate"
               values="0 0; 1.4 -0.9; -0.7 0.7; 0 0"
               dur="17s"
               repeatCount="indefinite"></animateTransform>
-            <circle cx="16" cy="13" r="3.2"></circle>
-            <circle cx="25" cy="9" r="2.4"></circle>
-            <circle cx="11" cy="22" r="2.8"></circle>
-            <circle cx="29" cy="18" r="1.8"></circle>
-            <circle cx="33" cy="6" r="1.3"></circle>
-            <circle cx="7" cy="30" r="1"></circle>
-            <circle cx="22" cy="25" r="1.5"></circle>
-            <circle cx="4" cy="15" r="0.8"></circle>
+            <circle cx="16" cy="13" r="4.5"></circle>
+            <circle cx="25" cy="9" r="3.5"></circle>
+            <circle cx="11" cy="22" r="4.0"></circle>
+            <circle cx="29" cy="18" r="2.8"></circle>
+            <circle cx="33" cy="6" r="2.2"></circle>
+            <circle cx="7" cy="30" r="1.8"></circle>
+            <circle cx="22" cy="25" r="2.4"></circle>
+            <circle cx="4" cy="15" r="1.4"></circle>
           </g>
           <!-- cyan splash -->
-          <g fill="#00d4ff">
+          <g fill="#00d4ff" opacity="0.85">
             <animateTransform
               attributeName="transform"
               type="translate"
               values="0 0; -1.1 0.8; 0.9 -0.6; 0 0"
               dur="21s"
               repeatCount="indefinite"></animateTransform>
-            <circle cx="83" cy="15" r="3.2"></circle>
-            <circle cx="72" cy="23" r="2.6"></circle>
-            <circle cx="90" cy="9" r="2.4"></circle>
-            <circle cx="64" cy="30" r="1.6"></circle>
-            <circle cx="94" cy="4" r="1.2"></circle>
-            <circle cx="86" cy="27" r="1.4"></circle>
-            <circle cx="76" cy="6" r="1"></circle>
-            <circle cx="97" cy="19" r="0.8"></circle>
+            <circle cx="83" cy="15" r="4.5"></circle>
+            <circle cx="72" cy="23" r="3.8"></circle>
+            <circle cx="90" cy="9" r="3.5"></circle>
+            <circle cx="64" cy="30" r="2.6"></circle>
+            <circle cx="94" cy="4" r="2.0"></circle>
+            <circle cx="86" cy="27" r="2.2"></circle>
+            <circle cx="76" cy="6" r="1.8"></circle>
+            <circle cx="97" cy="19" r="1.4"></circle>
           </g>
-          <!-- green: scattered small orbs (framing the buttons, left + right) -->
-          <g fill="#39ff14">
+          <!-- green orbs -->
+          <g fill="#39ff14" opacity="0.85">
             <animateTransform
               attributeName="transform"
               type="translate"
               values="0 0; 0.7 -0.6; -0.6 0.5; 0 0"
               dur="14s"
               repeatCount="indefinite"></animateTransform>
-            <circle cx="11" cy="40" r="2.8"></circle>
-            <circle cx="17" cy="45" r="2"></circle>
-            <circle cx="6" cy="46" r="1.4"></circle>
-            <circle cx="21" cy="40" r="1.1"></circle>
-            <circle cx="89" cy="40" r="2.8"></circle>
-            <circle cx="83" cy="45" r="2"></circle>
-            <circle cx="94" cy="46" r="1.4"></circle>
-            <circle cx="79" cy="40" r="1.1"></circle>
+            <circle cx="11" cy="40" r="4.0"></circle>
+            <circle cx="17" cy="45" r="3.0"></circle>
+            <circle cx="6" cy="46" r="2.2"></circle>
+            <circle cx="21" cy="40" r="1.8"></circle>
+            <circle cx="89" cy="40" r="4.0"></circle>
+            <circle cx="83" cy="45" r="3.0"></circle>
+            <circle cx="94" cy="46" r="2.2"></circle>
+            <circle cx="79" cy="40" r="1.8"></circle>
+          </g>
+          <!-- yellow orbs — new -->
+          <g fill="#ffe600" opacity="0.80">
+            <animateTransform
+              attributeName="transform"
+              type="translate"
+              values="0 0; -0.8 0.9; 0.6 -0.7; 0 0"
+              dur="19s"
+              repeatCount="indefinite"></animateTransform>
+            <circle cx="50" cy="5" r="3.5"></circle>
+            <circle cx="44" cy="10" r="2.5"></circle>
+            <circle cx="57" cy="8" r="2.0"></circle>
+            <circle cx="48" cy="2" r="1.5"></circle>
+          </g>
+          <!-- purple orbs — new -->
+          <g fill="#7b2fff" opacity="0.80">
+            <animateTransform
+              attributeName="transform"
+              type="translate"
+              values="0 0; 1.0 -0.8; -0.9 0.6; 0 0"
+              dur="23s"
+              repeatCount="indefinite"></animateTransform>
+            <circle cx="50" cy="45" r="3.5"></circle>
+            <circle cx="56" cy="48" r="2.5"></circle>
+            <circle cx="43" cy="47" r="2.0"></circle>
           </g>
         </svg>
         <!-- Veil to soften splashes so text pops -->
