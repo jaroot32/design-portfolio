@@ -14,10 +14,17 @@ const metadata = {
 
 <Layout metadata={metadata}>
   <!-- What I Do -->
-  <div
-    class="relative py-16 md:py-20"
-    style={`background-image: url('${splashHero.src}'); background-repeat: round; background-size: cover; background-position: left; min-height: 71vh;`}
-  >
+  <div class="relative py-16 md:py-20 hero-section" style="min-height: 71vh;">
+    <style define:vars={{ splashHeroSrc: `url('${splashHero.src}')` }}>
+      @media (min-width: 768px) {
+        .hero-section {
+          background-image: var(--splashHeroSrc);
+          background-repeat: round;
+          background-size: cover;
+          background-position: left;
+        }
+      }
+    </style>
 
     <!-- Veils to keep text readable -->
     <div class="absolute inset-0 pointer-events-none block dark:hidden bg-white/88" aria-hidden="true"></div>
