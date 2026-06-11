@@ -16,8 +16,12 @@ const metadata = {
   <!-- What I Do -->
   <div
     class="relative py-16 md:py-20"
-    style={`background-image: url('${splashHero.src}'); background-repeat: no-repeat; background-size: cover; background-position: center center; min-height: 100vh;`}
+    style={`background-image: url('${splashHero.src}'); background-repeat: round; background-size: cover; background-position: left; min-height: 71vh;`}
   >
+
+    <!-- Veils to keep text readable -->
+    <div class="absolute inset-0 pointer-events-none block dark:hidden bg-white/88" aria-hidden="true"></div>
+    <div class="absolute inset-0 pointer-events-none hidden dark:block bg-gray-950/82" aria-hidden="true"></div>
 
     <div class="relative mx-auto max-w-7xl px-4 md:px-8">
       <div class="mb-10 text-center max-w-2xl mx-auto">
