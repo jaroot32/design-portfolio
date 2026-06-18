@@ -182,7 +182,9 @@ const metadata = {
       </div>
 
       <!-- Rumie Byte — full-width card below the 2-column grid -->
-      <div class="mt-10 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 shadow-sm p-8 flex flex-col md:flex-row gap-8 items-start">
+      <div
+        class="mt-10 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 shadow-sm p-8 flex flex-col md:flex-row gap-8 items-start"
+      >
         <div class="flex-1">
           <p class="text-xs font-bold uppercase tracking-widest text-accent mb-2">Microlearning · OER · Published</p>
           <h3 class="text-xl font-bold font-heading mb-2 text-gray-900 dark:text-white">
@@ -190,7 +192,7 @@ const metadata = {
           </h3>
           <p class="text-sm text-muted mb-5">
             A published microlearning Byte on Rumie-Learn — a free global OER platform reaching learners across 180+
-            countries. A 9-step, under-10-minute experience built for a mixed-literacy global audience and refined
+            countries. A 4-step, under-10-minute experience built for a mixed-literacy global audience and refined
             through a structured two-tier peer review process.
           </p>
           <div class="flex flex-wrap gap-3">
@@ -211,17 +213,19 @@ const metadata = {
           </div>
         </div>
         <div class="w-full md:w-72 shrink-0 space-y-3 text-sm">
-          {[
-            { label: 'Platform', value: 'Rumie-Learn (OER)' },
-            { label: 'Format', value: '9 steps · under 10 min' },
-            { label: 'Audience', value: 'Global · 180+ countries' },
-            { label: 'Review', value: 'Two-tier peer review · Published' },
-          ].map(({ label, value }) => (
-            <div class="flex items-start gap-3 p-3 rounded-lg border border-gray-200 dark:border-gray-700">
-              <p class="font-semibold text-gray-700 dark:text-gray-300 w-20 shrink-0">{label}</p>
-              <p class="text-muted">{value}</p>
-            </div>
-          ))}
+          {
+            [
+              { label: 'Platform', value: 'Rumie-Learn (OER)' },
+              { label: 'Format', value: '9 steps · under 10 min' },
+              { label: 'Audience', value: 'Global · 180+ countries' },
+              { label: 'Review', value: 'Two-tier peer review · Published' },
+            ].map(({ label, value }) => (
+              <div class="flex items-start gap-3 p-3 rounded-lg border border-gray-200 dark:border-gray-700">
+                <p class="font-semibold text-gray-700 dark:text-gray-300 w-20 shrink-0">{label}</p>
+                <p class="text-muted">{value}</p>
+              </div>
+            ))
+          }
         </div>
       </div>
     </div>

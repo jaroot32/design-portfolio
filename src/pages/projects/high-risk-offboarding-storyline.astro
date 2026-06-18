@@ -1,0 +1,752 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Content from '~/components/widgets/Content.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+
+const metadata = {
+  title: 'The High-Risk Offboarding — Storyline Branching Scenario',
+};
+---
+
+<Layout metadata={metadata}>
+  <Hero tagline="Instructional Design · Articulate Storyline 360 · Branching Scenario · JavaScript Integration">
+    <Fragment slot="title">
+      The High-Risk Offboarding —<br />
+      <span class="text-accent dark:text-white">A Compliance Scenario for HR & IT Leaders</span>
+    </Fragment>
+    <Fragment slot="subtitle">
+      A corporate instructional design portfolio piece following the full design process — needs analysis, learning
+      objectives, content map, and a Storyline 360 branching scenario with custom JavaScript-generated audit reporting.
+    </Fragment>
+  </Hero>
+
+  <!-- Context -->
+  <Content tagline="The Problem" title="One misstep costs millions — and most teams don't train for it" isReversed>
+    <Fragment slot="image">
+      <div class="flex items-center justify-center h-full py-12">
+        <div class="text-center">
+          <p class="text-7xl font-bold font-heading text-accent leading-none">$4.99M</p>
+          <p class="text-xl text-muted mt-3">Average Malicious Insider Breach Cost</p>
+          <div class="mt-8 space-y-2 text-sm text-muted">
+            <p class="font-semibold text-gray-700 dark:text-gray-300">IBM Cost of a Data Breach Report 2024</p>
+            <p>292 days average containment timeline</p>
+            <p>Articulate Storyline 360 · JavaScript</p>
+          </div>
+        </div>
+      </div>
+    </Fragment>
+    <Fragment slot="content">
+      <p class="mb-4">
+        When a senior employee with privileged system access is terminated, organizations face two simultaneous threats:
+        a data security window and a legal liability window. Most compliance training addresses these as separate policy
+        topics — a list of steps to memorize, not decisions to practice.
+      </p>
+      <p class="mb-4">
+        The cost of getting it wrong is measurable. A malicious insider breach costs an average of $4.99 million and
+        takes 292 days to contain. A single mishandled conversation can trigger wrongful termination litigation worth
+        hundreds of thousands in legal fees — before a verdict is reached.
+      </p>
+      <p>
+        This module was designed to close that gap — placing HR Managers and IT Directors inside a high-stakes
+        offboarding scenario where every decision has a tracked, realistic consequence.
+      </p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 section-pattern-b"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Design Process -->
+  <Features3
+    tagline="Design Process"
+    title="From business problem to branching scenario"
+    subtitle="Following the full instructional design process — analysis, objectives, content map, build, and evaluation planning."
+    columns={3}
+    items={[
+      {
+        title: 'Needs Analysis',
+        description:
+          'Identified the performance gap and root cause before writing a single objective. The financial and legal exposure from poor offboarding execution is a knowledge and skill gap — not a policy awareness problem. Scenario-based practice was the right intervention.',
+        icon: 'tabler:search',
+      },
+      {
+        title: 'Learning Objectives',
+        description:
+          "Four objectives written to Bloom's Taxonomy — progressing from sequencing access revocation (Application) through applying compliant conversation techniques (Application) to interpreting a dynamic audit report (Analysis).",
+        icon: 'tabler:target',
+      },
+      {
+        title: 'Content Map',
+        description:
+          'A full 14-slide content map documented before building — mapping each decision point, branching path, variable trigger, consequence screen, and debrief to specific learning objectives.',
+        icon: 'tabler:layout-board',
+      },
+      {
+        title: 'Branching Architecture',
+        description:
+          'Three decision points track distinct risk categories: data security (access timing), legal compliance (conversation tone), and chain of custody (hardware retrieval). Wrong answers produce realistic consequence screens with sourced financial data — not grade penalties.',
+        icon: 'tabler:git-branch',
+      },
+      {
+        title: 'JavaScript Integration',
+        description:
+          "Four Storyline variables — isAccessRevoked, conversationTone, hardwareSecured, and riskScore — are read by a custom JavaScript trigger at the end of the module. The trigger generates a dynamic, personalized Offboarding Audit Report based on the learner's exact decision path.",
+        icon: 'tabler:code',
+      },
+      {
+        title: 'Source Content Synthesis',
+        description:
+          'Consequence screens and dialogue are grounded in real industry data synthesized via NotebookLM — IBM breach cost figures, SHRM employment law guidelines, and IT security deprovisioning protocols. The $4.99M figure and 292-day containment timeline are sourced, not invented.',
+        icon: 'tabler:database',
+      },
+    ]}
+  />
+
+  <!-- Module Embed -->
+  <div class="max-w-5xl mx-auto px-4 md:px-8 py-12 md:py-16">
+    <div class="text-center mb-10">
+      <p class="text-base text-secondary dark:text-blue-200 font-bold tracking-wide uppercase mb-2">Storyline Module</p>
+      <h2 class="text-4xl md:text-5xl font-bold tracking-tighter font-heading">Take the Scenario</h2>
+      <p class="text-lg text-muted mt-4">
+        A branching Storyline 360 scenario — three decisions, real consequences, and a JavaScript-generated audit report
+        personalized to your exact decision path.
+      </p>
+    </div>
+    <div
+      class="relative w-full rounded-lg shadow-lg overflow-hidden border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 flex items-center justify-center"
+      style="min-height: 360px;"
+    >
+      <div class="text-center px-8 py-16">
+        <div
+          class="w-16 h-16 rounded-full bg-accent/10 dark:bg-accent/20 flex items-center justify-center mx-auto mb-5"
+        >
+          <svg class="w-8 h-8 text-accent" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M8 5v14l11-7z"></path>
+          </svg>
+        </div>
+        <p class="text-2xl font-bold font-heading text-gray-800 dark:text-gray-200 mb-2">Module Coming Soon</p>
+        <p class="text-muted text-base max-w-md mx-auto">
+          The Storyline module is currently in development. Check back shortly.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Learning Objectives -->
+  <Content tagline="Learning Design" title="Objectives written to Bloom's Taxonomy" isReversed>
+    <Fragment slot="image">
+      <div class="flex items-center justify-center h-full py-12 px-6">
+        <div class="w-full max-w-xs space-y-3">
+          {
+            [
+              {
+                label: 'Sequence access revocation and meeting timing',
+                detail: 'Application — prevent the data exfiltration window',
+                color: 'blue',
+              },
+              {
+                label: 'Apply legally compliant conversation techniques',
+                detail: 'Application — reduce wrongful termination exposure',
+                color: 'green',
+              },
+              {
+                label: 'Execute hardware retrieval protocol',
+                detail: 'Application — maintain chain of custody',
+                color: 'purple',
+              },
+              {
+                label: 'Interpret a post-offboarding risk audit',
+                detail: 'Analysis — evaluate decision quality and financial exposure',
+                color: 'orange',
+              },
+            ].map(({ label, detail, color }) => (
+              <div
+                class={`flex items-start gap-3 p-2.5 rounded-lg border ${color === 'blue' ? 'border-blue-200 dark:border-blue-800 bg-blue-50 dark:bg-blue-900/20' : color === 'green' ? 'border-green-200 dark:border-green-800 bg-green-50 dark:bg-green-900/20' : color === 'purple' ? 'border-purple-200 dark:border-purple-800 bg-purple-50 dark:bg-purple-900/20' : 'border-orange-200 dark:border-orange-800 bg-orange-50 dark:bg-orange-900/20'}`}
+              >
+                <div>
+                  <p class="text-sm font-semibold text-gray-800 dark:text-gray-200">{label}</p>
+                  <p class="text-xs text-muted mt-0.5">{detail}</p>
+                </div>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </Fragment>
+    <Fragment slot="content">
+      <p class="mb-4">
+        The four learning objectives follow a deliberate Bloom's Taxonomy progression — three at the Application level
+        (sequencing, communicating, executing) and one at Analysis (interpreting the audit report output). All four tie
+        directly to measurable on-the-job performance, not policy recall.
+      </p>
+      <p class="mb-4">
+        The most common failure mode in high-risk offboarding isn't ignorance of policy — it's sequence and tone. HR
+        Managers know they need to revoke access. They don't always know that the 15-minute window before the meeting is
+        when the breach happens. Decisions 1 and 2 are designed specifically to build that judgment.
+      </p>
+      <p>
+        The JavaScript audit report at the end of the module connects all three decisions to a single financial exposure
+        figure — making the consequence of each choice concrete and cumulative.
+      </p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 section-pattern"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Branching Diagram -->
+  <div class="max-w-5xl mx-auto px-4 md:px-8 py-12 md:py-16">
+    <div class="text-center mb-10">
+      <p class="text-base text-secondary dark:text-blue-200 font-bold tracking-wide uppercase mb-2">
+        Branching Architecture
+      </p>
+      <h2 class="text-4xl md:text-5xl font-bold tracking-tighter font-heading">Three Decisions. Nine Paths.</h2>
+      <p class="text-lg text-muted mt-4 max-w-2xl mx-auto">
+        Every choice triggers a variable update and routes to a distinct consequence or confirmation screen before
+        converging at the JavaScript-generated audit report.
+      </p>
+    </div>
+    <div class="rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 p-4 overflow-x-auto">
+      <svg
+        viewBox="0 0 820 620"
+        xmlns="http://www.w3.org/2000/svg"
+        role="img"
+        style="width:100%;max-width:820px;display:block;margin:0 auto;"
+        font-family="Arial, sans-serif"
+      >
+        <title>High-Risk Offboarding Branching Diagram</title>
+        <desc
+          >A flowchart showing three decision points with branching consequence and correct paths leading to a
+          JavaScript-generated audit report.</desc
+        >
+        <defs>
+          <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"
+            ><path d="M0,0 L0,6 L8,3 z" fill="#6b7280"></path></marker
+          >
+          <marker id="arrow-red" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"
+            ><path d="M0,0 L0,6 L8,3 z" fill="#dc2626"></path></marker
+          >
+          <marker id="arrow-green" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"
+            ><path d="M0,0 L0,6 L8,3 z" fill="#16a34a"></path></marker
+          >
+          <marker id="arrow-amber" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"
+            ><path d="M0,0 L0,6 L8,3 z" fill="#d97706"></path></marker
+          >
+        </defs>
+        <!-- START -->
+        <rect x="310" y="10" width="200" height="44" rx="8" fill="#7c3aed"></rect>
+        <text x="410" y="28" text-anchor="middle" fill="white" font-size="11" font-weight="bold">SLIDE 1–2</text>
+        <text x="410" y="44" text-anchor="middle" fill="white" font-size="11">Hook + Meet Marcus</text>
+        <line x1="410" y1="54" x2="410" y2="78" stroke="#6b7280" stroke-width="1.5" marker-end="url(#arrow)"></line>
+        <!-- DECISION 1 -->
+        <rect x="285" y="80" width="250" height="48" rx="8" fill="#1e3a5f"></rect>
+        <text x="410" y="99" text-anchor="middle" fill="white" font-size="11" font-weight="bold"
+          >DECISION 1 — SLIDE 3</text
+        >
+        <text x="410" y="116" text-anchor="middle" fill="#93c5fd" font-size="10">Access Timing</text>
+        <line x1="285" y1="104" x2="130" y2="104" stroke="#dc2626" stroke-width="1.5"></line>
+        <line x1="130" y1="104" x2="130" y2="178" stroke="#dc2626" stroke-width="1.5" marker-end="url(#arrow-red)"
+        ></line>
+        <text x="200" y="98" text-anchor="middle" fill="#dc2626" font-size="9">Choice A</text>
+        <line x1="410" y1="128" x2="410" y2="178" stroke="#d97706" stroke-width="1.5" marker-end="url(#arrow-amber)"
+        ></line>
+        <text x="425" y="160" fill="#d97706" font-size="9">Choice B</text>
+        <line x1="535" y1="104" x2="680" y2="104" stroke="#16a34a" stroke-width="1.5"></line>
+        <line x1="680" y1="104" x2="680" y2="178" stroke="#16a34a" stroke-width="1.5" marker-end="url(#arrow-green)"
+        ></line>
+        <text x="600" y="98" text-anchor="middle" fill="#16a34a" font-size="9">Choice C ✓</text>
+        <!-- D1 Consequences -->
+        <rect x="50" y="180" width="160" height="52" rx="6" fill="#fef2f2" stroke="#dc2626" stroke-width="1.5"></rect>
+        <text x="130" y="198" text-anchor="middle" fill="#dc2626" font-size="10" font-weight="bold">DATA BREACH</text>
+        <text x="130" y="212" text-anchor="middle" fill="#7f1d1d" font-size="9">$4.99M · 292 days</text>
+        <text x="130" y="224" text-anchor="middle" fill="#9ca3af" font-size="9">Slide 4 → Try Again</text>
+        <path
+          d="M50,206 C20,206 20,104 285,104"
+          stroke="#dc2626"
+          stroke-width="1"
+          stroke-dasharray="4,3"
+          fill="none"
+          marker-end="url(#arrow-red)"></path>
+        <rect x="330" y="180" width="160" height="52" rx="6" fill="#fffbeb" stroke="#d97706" stroke-width="1.5"></rect>
+        <text x="410" y="198" text-anchor="middle" fill="#d97706" font-size="10" font-weight="bold">EMAIL WARNING</text>
+        <text x="410" y="212" text-anchor="middle" fill="#78350f" font-size="9">riskScore +20</text>
+        <text x="410" y="224" text-anchor="middle" fill="#9ca3af" font-size="9">Slide 5 → continues</text>
+        <rect x="600" y="180" width="160" height="52" rx="6" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.5"></rect>
+        <text x="680" y="198" text-anchor="middle" fill="#16a34a" font-size="10" font-weight="bold">SYNCHRONIZED ✓</text
+        >
+        <text x="680" y="212" text-anchor="middle" fill="#14532d" font-size="9">IT locks all access</text>
+        <text x="680" y="224" text-anchor="middle" fill="#9ca3af" font-size="9">Slide 6 → continues</text>
+        <!-- D1 → D2 -->
+        <line x1="410" y1="232" x2="410" y2="268" stroke="#d97706" stroke-width="1.5" marker-end="url(#arrow-amber)"
+        ></line>
+        <line x1="680" y1="232" x2="680" y2="260" stroke="#16a34a" stroke-width="1.5"></line>
+        <line x1="680" y1="260" x2="535" y2="268" stroke="#16a34a" stroke-width="1.5" marker-end="url(#arrow-green)"
+        ></line>
+        <!-- DECISION 2 -->
+        <rect x="285" y="270" width="250" height="48" rx="8" fill="#1e3a5f"></rect>
+        <text x="410" y="289" text-anchor="middle" fill="white" font-size="11" font-weight="bold"
+          >DECISION 2 — SLIDE 7</text
+        >
+        <text x="410" y="306" text-anchor="middle" fill="#93c5fd" font-size="10">Conversation Tone</text>
+        <line x1="285" y1="294" x2="130" y2="294" stroke="#dc2626" stroke-width="1.5"></line>
+        <line x1="130" y1="294" x2="130" y2="368" stroke="#dc2626" stroke-width="1.5" marker-end="url(#arrow-red)"
+        ></line>
+        <text x="200" y="288" text-anchor="middle" fill="#dc2626" font-size="9">Choice A</text>
+        <line x1="535" y1="294" x2="680" y2="294" stroke="#16a34a" stroke-width="1.5"></line>
+        <line x1="680" y1="294" x2="680" y2="368" stroke="#16a34a" stroke-width="1.5" marker-end="url(#arrow-green)"
+        ></line>
+        <text x="600" y="288" text-anchor="middle" fill="#16a34a" font-size="9">Choice B ✓</text>
+        <line x1="410" y1="318" x2="410" y2="368" stroke="#d97706" stroke-width="1.5" marker-end="url(#arrow-amber)"
+        ></line>
+        <text x="425" y="350" fill="#d97706" font-size="9">Choice C</text>
+        <!-- D2 Consequences -->
+        <rect x="50" y="370" width="160" height="52" rx="6" fill="#fef2f2" stroke="#dc2626" stroke-width="1.5"></rect>
+        <text x="130" y="388" text-anchor="middle" fill="#dc2626" font-size="10" font-weight="bold"
+          >LEGAL RETALIATION</text
+        >
+        <text x="130" y="402" text-anchor="middle" fill="#7f1d1d" font-size="9">$180,000 claim</text>
+        <text x="130" y="414" text-anchor="middle" fill="#9ca3af" font-size="9">Slide 8 → Try Again</text>
+        <path
+          d="M50,396 C20,396 20,294 285,294"
+          stroke="#dc2626"
+          stroke-width="1"
+          stroke-dasharray="4,3"
+          fill="none"
+          marker-end="url(#arrow-red)"></path>
+        <rect x="330" y="370" width="160" height="52" rx="6" fill="#fffbeb" stroke="#d97706" stroke-width="1.5"></rect>
+        <text x="410" y="388" text-anchor="middle" fill="#d97706" font-size="10" font-weight="bold">AMBIGUITY RISK</text
+        >
+        <text x="410" y="402" text-anchor="middle" fill="#78350f" font-size="9">riskScore +15</text>
+        <text x="410" y="414" text-anchor="middle" fill="#9ca3af" font-size="9">Slide 10 → continues</text>
+        <rect x="600" y="370" width="160" height="52" rx="6" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.5"></rect>
+        <text x="680" y="388" text-anchor="middle" fill="#16a34a" font-size="10" font-weight="bold">COMPLIANT ✓</text>
+        <text x="680" y="402" text-anchor="middle" fill="#14532d" font-size="9">Severance signed</text>
+        <text x="680" y="414" text-anchor="middle" fill="#9ca3af" font-size="9">Slide 9 → continues</text>
+        <!-- D2 → D3 -->
+        <line x1="410" y1="422" x2="410" y2="458" stroke="#d97706" stroke-width="1.5" marker-end="url(#arrow-amber)"
+        ></line>
+        <line x1="680" y1="422" x2="680" y2="450" stroke="#16a34a" stroke-width="1.5"></line>
+        <line x1="680" y1="450" x2="535" y2="458" stroke="#16a34a" stroke-width="1.5" marker-end="url(#arrow-green)"
+        ></line>
+        <!-- DECISION 3 -->
+        <rect x="285" y="460" width="250" height="48" rx="8" fill="#1e3a5f"></rect>
+        <text x="410" y="479" text-anchor="middle" fill="white" font-size="11" font-weight="bold"
+          >DECISION 3 — SLIDE 11</text
+        >
+        <text x="410" y="496" text-anchor="middle" fill="#93c5fd" font-size="10">Hardware Retrieval</text>
+        <line x1="535" y1="484" x2="620" y2="484" stroke="#16a34a" stroke-width="1.5"></line>
+        <line x1="620" y1="484" x2="620" y2="548" stroke="#16a34a" stroke-width="1.5" marker-end="url(#arrow-green)"
+        ></line>
+        <text x="572" y="478" text-anchor="middle" fill="#16a34a" font-size="9">Choice A ✓</text>
+        <line x1="285" y1="484" x2="200" y2="484" stroke="#dc2626" stroke-width="1.5"></line>
+        <line x1="200" y1="484" x2="200" y2="548" stroke="#dc2626" stroke-width="1.5" marker-end="url(#arrow-red)"
+        ></line>
+        <text x="238" y="478" text-anchor="middle" fill="#dc2626" font-size="9">Choice B</text>
+        <!-- D3 Consequences -->
+        <rect x="110" y="550" width="180" height="44" rx="6" fill="#fef2f2" stroke="#dc2626" stroke-width="1.5"></rect>
+        <text x="200" y="568" text-anchor="middle" fill="#dc2626" font-size="10" font-weight="bold"
+          >CHAIN OF CUSTODY</text
+        >
+        <text x="200" y="582" text-anchor="middle" fill="#7f1d1d" font-size="9">Slide 13 · riskScore +25</text>
+        <rect x="530" y="550" width="180" height="44" rx="6" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.5"></rect>
+        <text x="620" y="568" text-anchor="middle" fill="#16a34a" font-size="10" font-weight="bold"
+          >HARDWARE SECURED ✓</text
+        >
+        <text x="620" y="582" text-anchor="middle" fill="#14532d" font-size="9">Slide 12 · forensic hold</text>
+        <!-- Both → Audit -->
+        <line x1="200" y1="594" x2="200" y2="610" stroke="#6b7280" stroke-width="1.5"></line>
+        <line x1="200" y1="610" x2="380" y2="610" stroke="#6b7280" stroke-width="1.5" marker-end="url(#arrow)"></line>
+        <line x1="620" y1="594" x2="620" y2="610" stroke="#6b7280" stroke-width="1.5"></line>
+        <line x1="620" y1="610" x2="440" y2="610" stroke="#6b7280" stroke-width="1.5" marker-end="url(#arrow)"></line>
+        <!-- AUDIT REPORT -->
+        <rect x="310" y="590" width="200" height="26" rx="6" fill="#7c3aed"></rect>
+        <text x="410" y="608" text-anchor="middle" fill="white" font-size="11" font-weight="bold"
+          >AUDIT REPORT — SLIDE 14</text
+        >
+        <!-- LEGEND -->
+        <rect x="10" y="10" width="130" height="80" rx="6" fill="none" stroke="#e5e7eb" stroke-width="1"></rect>
+        <text x="20" y="26" fill="#6b7280" font-size="9" font-weight="bold">LEGEND</text>
+        <rect x="20" y="34" width="10" height="10" rx="2" fill="#dc2626"></rect>
+        <text x="36" y="43" fill="#374151" font-size="9">Consequence</text>
+        <rect x="20" y="50" width="10" height="10" rx="2" fill="#d97706"></rect>
+        <text x="36" y="59" fill="#374151" font-size="9">Warning / Risk</text>
+        <rect x="20" y="66" width="10" height="10" rx="2" fill="#16a34a"></rect>
+        <text x="36" y="75" fill="#374151" font-size="9">Correct Path</text>
+        <line x1="20" y1="84" x2="30" y2="84" stroke="#dc2626" stroke-width="1" stroke-dasharray="3,2"></line>
+        <text x="36" y="88" fill="#374151" font-size="9">Try Again</text>
+      </svg>
+    </div>
+  </div>
+
+  <!-- Slide Outline -->
+  <div class="max-w-5xl mx-auto px-4 md:px-8 py-12 md:py-16">
+    <div class="text-center mb-10">
+      <p class="text-base text-secondary dark:text-blue-200 font-bold tracking-wide uppercase mb-2">
+        Instructional Arc
+      </p>
+      <h2 class="text-4xl md:text-5xl font-bold tracking-tighter font-heading">
+        14 Slides. 3 Decisions. 1 Audit Report.
+      </h2>
+      <p class="text-lg text-muted mt-4 max-w-2xl mx-auto">
+        Each slide maps to a deliberate phase — Hook, Setup, Decision, Consequence, or Debrief — moving the learner from
+        framing to action to personalized reflection.
+      </p>
+    </div>
+    <div class="overflow-x-auto rounded-lg border border-gray-200 dark:border-gray-700 shadow-sm">
+      <table class="w-full text-sm text-left">
+        <thead>
+          <tr class="bg-purple-900 text-white">
+            <th class="px-4 py-3 font-semibold w-10">#</th>
+            <th class="px-4 py-3 font-semibold w-28">Phase</th>
+            <th class="px-4 py-3 font-semibold w-44">Slide Title</th>
+            <th class="px-4 py-3 font-semibold">Content Summary</th>
+            <th class="px-4 py-3 font-semibold w-48">Interaction</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-gray-200 dark:divide-gray-700">
+          {
+            [
+              {
+                num: '1',
+                phase: 'Hook',
+                phaseColor: 'text-pink-600 dark:text-pink-400',
+                title: 'The High-Risk Offboarding',
+                content: 'Role framing, stakes line, single CTA to begin.',
+                interaction: 'Title card, Begin button',
+              },
+              {
+                num: '2',
+                phase: 'Setup',
+                phaseColor: 'text-blue-600 dark:text-blue-400',
+                title: 'Meet Marcus Webb',
+                content:
+                  'Senior DevOps Engineer, 8 years, root access to GitHub, AWS, and all client databases. Meeting in 30 minutes.',
+                interaction: 'Character card with image',
+              },
+              {
+                num: '3',
+                phase: 'Decision',
+                phaseColor: 'text-green-600 dark:text-green-400',
+                title: 'Decision 1: Access Timing',
+                content:
+                  "It's 9:00 AM. Meeting at 9:30. What do you do first? Three choices: conference room, email IT, or coordinate simultaneous revocation.",
+                interaction: 'Branching multiple choice — sets isAccessRevoked + riskScore',
+              },
+              {
+                num: '4',
+                phase: 'Consequence',
+                phaseColor: 'text-red-600 dark:text-red-400',
+                title: 'Consequence: Data Breach',
+                content:
+                  'Marcus forks 47 repos from his phone during the meeting. DATA BREACH ALERT — $4.99M average cost, 292-day containment.',
+                interaction: 'Consequence screen — Try Again',
+              },
+              {
+                num: '5',
+                phase: 'Consequence',
+                phaseColor: 'text-yellow-600 dark:text-yellow-400',
+                title: 'Consequence: Email Warning',
+                content: 'IT email unread. Access window stays open through the meeting.',
+                interaction: 'Warning screen — proceed with elevated riskScore',
+              },
+              {
+                num: '6',
+                phase: 'Decision',
+                phaseColor: 'text-green-600 dark:text-green-400',
+                title: 'Access Synchronized',
+                content:
+                  'IT confirms 9:30 AM revocation. Correct deprovisioning order displayed: IdP/SSO → AWS → GitHub → VPN → API tokens → Slack/Email → Badge.',
+                interaction: 'Confirmation screen — proceed',
+              },
+              {
+                num: '7',
+                phase: 'Decision',
+                phaseColor: 'text-green-600 dark:text-green-400',
+                title: 'Decision 2: The Conversation',
+                content:
+                  "Marcus enters. He's tense. Three conversation openers — aggressive, legally compliant, or vague and reversible.",
+                interaction: 'Branching multiple choice — sets conversationTone + riskScore',
+              },
+              {
+                num: '8',
+                phase: 'Consequence',
+                phaseColor: 'text-red-600 dark:text-red-400',
+                title: 'Consequence: Legal Retaliation',
+                content:
+                  'Marcus challenges the reason. No documentation exists. Vague justification reads as pretext. ATTORNEY LETTER — $180,000 claim.',
+                interaction: 'Consequence screen — Try Again',
+              },
+              {
+                num: '9',
+                phase: 'Decision',
+                phaseColor: 'text-green-600 dark:text-green-400',
+                title: 'Correct: Compliant Conversation',
+                content: 'Marcus is upset but composed. Severance signed.',
+                interaction: 'Confirmation screen — proceed',
+              },
+              {
+                num: '10',
+                phase: 'Consequence',
+                phaseColor: 'text-yellow-600 dark:text-yellow-400',
+                title: 'Consequence: Ambiguity Risk',
+                content: 'Marcus leaves uncertain. No severance signed. Attorney follow-up three days later.',
+                interaction: 'Warning screen — proceed with elevated riskScore',
+              },
+              {
+                num: '11',
+                phase: 'Decision',
+                phaseColor: 'text-green-600 dark:text-green-400',
+                title: 'Decision 3: Hardware Retrieval',
+                content: 'Marcus says he left his laptop at his desk. Collect now or allow drop-off tomorrow?',
+                interaction: 'Branching multiple choice — sets hardwareSecured + riskScore',
+              },
+              {
+                num: '12',
+                phase: 'Decision',
+                phaseColor: 'text-green-600 dark:text-green-400',
+                title: 'Hardware Secured',
+                content: 'Device collected, serial numbers documented, forensic hold initiated for 90 days.',
+                interaction: 'Confirmation screen — proceed to audit',
+              },
+              {
+                num: '13',
+                phase: 'Consequence',
+                phaseColor: 'text-red-600 dark:text-red-400',
+                title: 'Consequence: Chain of Custody Broken',
+                content:
+                  'Laptop returned next day. Forensic imaging inadmissible. Evidence of exfiltration cannot be used in legal proceedings.',
+                interaction: 'Consequence screen — proceed to audit',
+              },
+              {
+                num: '14',
+                phase: 'Debrief',
+                phaseColor: 'text-orange-600 dark:text-orange-400',
+                title: 'Offboarding Audit Report',
+                content:
+                  'JavaScript reads all four variables and generates a personalized audit report — color-coded risk level, decision log, financial exposure estimate, and pass/fail per category.',
+                interaction: 'JavaScript trigger — dynamic output',
+              },
+            ].map(({ num, phase, phaseColor, title, content, interaction }) => (
+              <tr class="bg-white dark:bg-gray-900 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+                <td class="px-4 py-3 font-bold text-gray-400">{num}</td>
+                <td class={`px-4 py-3 font-semibold text-sm ${phaseColor}`}>{phase}</td>
+                <td class="px-4 py-3 font-semibold text-gray-800 dark:text-gray-200">{title}</td>
+                <td class="px-4 py-3 text-gray-600 dark:text-gray-400">{content}</td>
+                <td class="px-4 py-3 text-gray-500 dark:text-gray-400 italic text-xs">{interaction}</td>
+              </tr>
+            ))
+          }
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- JavaScript Variables -->
+  <div class="max-w-5xl mx-auto px-4 md:px-8 py-12 md:py-16">
+    <div class="text-center mb-10">
+      <p class="text-base text-secondary dark:text-blue-200 font-bold tracking-wide uppercase mb-2">Technical Design</p>
+      <h2 class="text-4xl md:text-5xl font-bold tracking-tighter font-heading">Variables + JavaScript</h2>
+      <p class="text-lg text-muted mt-4 max-w-2xl mx-auto">
+        Four Storyline variables track every decision. A custom JavaScript trigger reads them at the end and generates a
+        dynamic audit report — no two learners see the same output.
+      </p>
+    </div>
+    <div class="overflow-x-auto rounded-lg border border-gray-200 dark:border-gray-700 shadow-sm mb-8">
+      <table class="w-full text-sm text-left">
+        <thead>
+          <tr class="bg-purple-900 text-white">
+            <th class="px-4 py-3 font-semibold">Variable</th>
+            <th class="px-4 py-3 font-semibold">Type</th>
+            <th class="px-4 py-3 font-semibold">Default</th>
+            <th class="px-4 py-3 font-semibold">Tracks</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-gray-200 dark:divide-gray-700">
+          {
+            [
+              {
+                name: 'isAccessRevoked',
+                type: 'True/False',
+                default: 'False',
+                tracks: 'Whether access was revoked before the meeting',
+              },
+              {
+                name: 'conversationTone',
+                type: 'Number',
+                default: '0',
+                tracks: '0 = compliant, 1 = vague/risky, 2 = aggressive',
+              },
+              {
+                name: 'hardwareSecured',
+                type: 'True/False',
+                default: 'False',
+                tracks: 'Whether hardware was collected during the meeting',
+              },
+              {
+                name: 'riskScore',
+                type: 'Number',
+                default: '0',
+                tracks: 'Cumulative risk score — increments at each wrong decision',
+              },
+            ].map(({ name, type, default: def, tracks }) => (
+              <tr class="bg-white dark:bg-gray-900 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+                <td class="px-4 py-3 font-mono text-sm text-accent font-semibold">{name}</td>
+                <td class="px-4 py-3 text-gray-600 dark:text-gray-400">{type}</td>
+                <td class="px-4 py-3 text-gray-600 dark:text-gray-400">{def}</td>
+                <td class="px-4 py-3 text-gray-600 dark:text-gray-400">{tracks}</td>
+              </tr>
+            ))
+          }
+        </tbody>
+      </table>
+    </div>
+    <div class="rounded-lg border border-gray-200 dark:border-gray-700 bg-gray-900 p-6">
+      <p class="text-xs text-gray-400 font-mono mb-3">// Audit Report trigger — fires on Slide 14 timeline start</p>
+      <pre
+        class="text-sm text-green-400 font-mono overflow-x-auto"><code>{`const player = GetPlayer();
+const accessRevoked = player.GetVar("isAccessRevoked");
+const tone = player.GetVar("conversationTone");
+const hardware = player.GetVar("hardwareSecured");
+const risk = player.GetVar("riskScore");
+
+// Generates personalized audit output based on all four variables`}</code></pre>
+    </div>
+  </div>
+
+  <!-- Process Documents -->
+  <div class="max-w-5xl mx-auto px-4 md:px-8 py-12 md:py-16 bg-purple-50 dark:bg-purple-900/10 rounded-2xl mb-12">
+    <div class="text-center mb-10">
+      <p class="text-base text-secondary dark:text-blue-200 font-bold tracking-wide uppercase mb-2">
+        Process Artifacts
+      </p>
+      <h2 class="text-4xl md:text-5xl font-bold tracking-tighter font-heading">Full ID Process. Documented.</h2>
+      <p class="text-lg text-muted mt-4 max-w-2xl mx-auto">
+        This project follows a complete instructional design process — analysis through evaluation. Download the
+        artifacts below.
+      </p>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <a
+        href="/docs/High-Risk-Offboarding-Design-Document.docx"
+        download
+        class="flex flex-col items-center gap-3 p-6 rounded-xl border-2 border-purple-200 dark:border-purple-700 bg-white dark:bg-gray-900 hover:border-purple-500 hover:shadow-md transition-all group"
+      >
+        <div class="w-12 h-12 rounded-full bg-purple-100 dark:bg-purple-900/40 flex items-center justify-center">
+          <svg
+            class="w-6 h-6 text-purple-700 dark:text-purple-300"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+            ></path>
+          </svg>
+        </div>
+        <div class="text-center">
+          <p
+            class="font-semibold text-gray-800 dark:text-gray-200 group-hover:text-purple-700 dark:group-hover:text-purple-300"
+          >
+            Design Document
+          </p>
+          <p class="text-xs text-muted mt-1">
+            Needs analysis, objectives, content map, branching logic, variable reference
+          </p>
+        </div>
+        <span class="text-xs font-medium text-purple-600 dark:text-purple-400 mt-auto">Download .docx</span>
+      </a>
+      <a
+        href="/docs/High-Risk-Offboarding-Storyboard.docx"
+        download
+        class="flex flex-col items-center gap-3 p-6 rounded-xl border-2 border-purple-200 dark:border-purple-700 bg-white dark:bg-gray-900 hover:border-purple-500 hover:shadow-md transition-all group"
+      >
+        <div class="w-12 h-12 rounded-full bg-purple-100 dark:bg-purple-900/40 flex items-center justify-center">
+          <svg
+            class="w-6 h-6 text-purple-700 dark:text-purple-300"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"
+            ></path>
+          </svg>
+        </div>
+        <div class="text-center">
+          <p
+            class="font-semibold text-gray-800 dark:text-gray-200 group-hover:text-purple-700 dark:group-hover:text-purple-300"
+          >
+            Storyboard
+          </p>
+          <p class="text-xs text-muted mt-1">Slide-by-slide script, branching logic, dialogue, and variable triggers</p>
+        </div>
+        <span class="text-xs font-medium text-purple-600 dark:text-purple-400 mt-auto">Download .docx</span>
+      </a>
+      <a
+        href="/docs/High-Risk-Offboarding-Style-Guide.docx"
+        download
+        class="flex flex-col items-center gap-3 p-6 rounded-xl border-2 border-purple-200 dark:border-purple-700 bg-white dark:bg-gray-900 hover:border-purple-500 hover:shadow-md transition-all group"
+      >
+        <div class="w-12 h-12 rounded-full bg-purple-100 dark:bg-purple-900/40 flex items-center justify-center">
+          <svg
+            class="w-6 h-6 text-purple-700 dark:text-purple-300"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"
+            ></path>
+          </svg>
+        </div>
+        <div class="text-center">
+          <p
+            class="font-semibold text-gray-800 dark:text-gray-200 group-hover:text-purple-700 dark:group-hover:text-purple-300"
+          >
+            Style Guide
+          </p>
+          <p class="text-xs text-muted mt-1">Colors, typography, tone, animation standards, and variable reference</p>
+        </div>
+        <span class="text-xs font-medium text-purple-600 dark:text-purple-400 mt-auto">Download .docx</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- Tags -->
+  <div class="max-w-4xl mx-auto px-4 md:px-8 pb-16">
+    <div class="flex flex-wrap gap-2">
+      {
+        [
+          'Articulate Storyline 360',
+          'Branching Scenario',
+          'JavaScript Integration',
+          'Needs Analysis',
+          "Bloom's Taxonomy",
+          'Compliance Training',
+          'HR Training',
+          'Corporate ID',
+          'Instructional Design',
+          'Content Map',
+          'Storyboard',
+          'NotebookLM',
+          'Variables',
+          'Scenario-Based Learning',
+        ].map((tag) => (
+          <span class="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-sm font-medium px-3 py-1 rounded-full">
+            {tag}
+          </span>
+        ))
+      }
+    </div>
+  </div>
+</Layout>
