@@ -105,10 +105,9 @@ const metadata = {
         <p class="text-base text-secondary dark:text-blue-200 font-bold tracking-wide uppercase mb-2">
           Featured Projects
         </p>
-        <h2 class="text-4xl md:text-5xl font-bold tracking-tighter font-heading">Rise 360 Portfolio Courses</h2>
+        <h2 class="text-4xl md:text-5xl font-bold tracking-tighter font-heading">Selected Work</h2>
         <p class="text-lg text-muted mt-3">
-          Two interactive Rise 360 courses built as portfolio pieces — AI platform adoption and enterprise model
-          selection.
+          Rise 360 courses, microlearning, and branching scenarios — built as portfolio pieces across eLearning formats.
         </p>
       </div>
       <div class="grid md:grid-cols-2 gap-10 items-start">
@@ -179,6 +178,50 @@ const metadata = {
               Open Course
             </a>
           </div>
+        </div>
+      </div>
+
+      <!-- Rumie Byte — full-width card below the 2-column grid -->
+      <div class="mt-10 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 shadow-sm p-8 flex flex-col md:flex-row gap-8 items-start">
+        <div class="flex-1">
+          <p class="text-xs font-bold uppercase tracking-widest text-accent mb-2">Microlearning · OER · Published</p>
+          <h3 class="text-xl font-bold font-heading mb-2 text-gray-900 dark:text-white">
+            How I Dealt with Travel Anxiety — Rumie Byte
+          </h3>
+          <p class="text-sm text-muted mb-5">
+            A published microlearning Byte on Rumie-Learn — a free global OER platform reaching learners across 180+
+            countries. A 9-step, under-10-minute experience built for a mixed-literacy global audience and refined
+            through a structured two-tier peer review process.
+          </p>
+          <div class="flex flex-wrap gap-3">
+            <a
+              href="/projects/rumie-travel-anxiety-byte"
+              class="inline-flex items-center gap-2 bg-accent hover:bg-accent/90 text-white font-semibold px-5 py-2.5 rounded-lg transition-colors text-sm"
+            >
+              View Project
+            </a>
+            <a
+              href="https://learn.rumie.org/jR/bytes/how-i-dealt-with-travel-anxiety-in-4-healthy-steps/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center gap-2 border-2 border-gray-300 dark:border-gray-600 text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-800 font-semibold px-5 py-2.5 rounded-lg transition-colors text-sm"
+            >
+              Take the Byte
+            </a>
+          </div>
+        </div>
+        <div class="w-full md:w-72 shrink-0 space-y-3 text-sm">
+          {[
+            { label: 'Platform', value: 'Rumie-Learn (OER)' },
+            { label: 'Format', value: '9 steps · under 10 min' },
+            { label: 'Audience', value: 'Global · 180+ countries' },
+            { label: 'Review', value: 'Two-tier peer review · Published' },
+          ].map(({ label, value }) => (
+            <div class="flex items-start gap-3 p-3 rounded-lg border border-gray-200 dark:border-gray-700">
+              <p class="font-semibold text-gray-700 dark:text-gray-300 w-20 shrink-0">{label}</p>
+              <p class="text-muted">{value}</p>
+            </div>
+          ))}
         </div>
       </div>
     </div>

@@ -237,31 +237,52 @@ const metadata = {
     </Fragment>
   </Content>
 
-  <!-- Live Byte Placeholder -->
+  <!-- Live Byte -->
   <div class="max-w-5xl mx-auto px-4 md:px-8 py-12 md:py-16">
     <div class="text-center mb-10">
       <p class="text-base text-secondary dark:text-blue-200 font-bold tracking-wide uppercase mb-2">The Byte</p>
-      <h2 class="text-4xl md:text-5xl font-bold tracking-tighter font-heading">Take the Byte on Rumie-Learn</h2>
+      <h2 class="text-4xl md:text-5xl font-bold tracking-tighter font-heading">Published on Rumie-Learn</h2>
       <p class="text-lg text-muted mt-4">Free, globally distributed, under 10 minutes.</p>
     </div>
-    <div
-      class="relative w-full rounded-lg shadow-lg overflow-hidden border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 flex items-center justify-center"
-      style="min-height: 360px;"
-    >
-      <div class="text-center px-8 py-16">
-        <div
-          class="w-16 h-16 rounded-full bg-accent/10 dark:bg-accent/20 flex items-center justify-center mx-auto mb-5"
-        >
-          <svg class="w-8 h-8 text-accent" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M8 5v14l11-7z"></path>
-          </svg>
-        </div>
-        <p class="text-2xl font-bold font-heading text-gray-800 dark:text-gray-200 mb-2">Byte Link Coming Soon</p>
-        <p class="text-muted text-base max-w-md mx-auto">
-          The Byte is currently in final review. The live Rumie-Learn link and author page will appear here once
-          published.
-        </p>
+
+    <!-- CTA buttons -->
+    <div class="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+      <a
+        href="https://learn.rumie.org/jR/bytes/how-i-dealt-with-travel-anxiety-in-4-healthy-steps/"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg bg-accent text-white font-semibold text-base hover:bg-accent/90 transition-colors shadow-sm"
+      >
+        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg>
+        Take the Byte on Rumie-Learn
+      </a>
+      <a
+        href="/documents/how-i-dealt-with-travel-anxiety-in-4-healthy-steps.pdf"
+        download
+        class="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 font-semibold text-base hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors"
+      >
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+        Download PDF
+      </a>
+    </div>
+
+    <!-- PDF embed -->
+    <div class="rounded-xl border border-gray-200 dark:border-gray-700 overflow-hidden shadow-lg">
+      <div class="bg-gray-100 dark:bg-gray-800 px-5 py-3 border-b border-gray-200 dark:border-gray-700 flex items-center justify-between">
+        <p class="text-sm font-semibold text-gray-700 dark:text-gray-300">How I Dealt with Travel Anxiety — Byte PDF</p>
+        <a
+          href="/documents/how-i-dealt-with-travel-anxiety-in-4-healthy-steps.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-xs text-accent hover:underline"
+        >Open in new tab</a>
       </div>
+      <iframe
+        src="/documents/how-i-dealt-with-travel-anxiety-in-4-healthy-steps.pdf"
+        class="w-full"
+        style="height: 700px;"
+        title="How I Dealt with Travel Anxiety — Rumie Byte PDF"
+      ></iframe>
     </div>
   </div>
 
