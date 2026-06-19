@@ -224,6 +224,18 @@ const groupMeta: Record<string, { label: string; style: string }> = {
   },
 };
 
+const devOnlyIdItems = import.meta.env.DEV
+  ? [
+      {
+        title: 'The Enrollment Drop-Off Problem — Storyline Branching Scenario',
+        description:
+          "A full corporate ID portfolio piece following the complete design process — needs analysis, Bloom's objectives, storyboard, and a Storyline 360 branching scenario built around A/B testing with GrowthBook SDK for Launchpath Academy.",
+        icon: 'tabler:git-branch',
+        callToAction: { text: 'View Case Study', href: '/projects/launchpath-ab-testing-storyline' },
+      },
+    ]
+  : [];
+
 const featured = [
   {
     icon: 'tabler:robot',
@@ -676,6 +688,7 @@ const featured = [
         icon: 'tabler:shield-lock',
         callToAction: { text: 'View Case Study', href: '/projects/high-risk-offboarding-storyline' },
       },
+      ...devOnlyIdItems,
     ]}
   />
 
