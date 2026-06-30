@@ -235,41 +235,6 @@ const devOnlyIdItems = import.meta.env.DEV
       },
     ]
   : [];
-
-const featured = [
-  {
-    icon: 'tabler:shield-lock',
-    title: 'The High-Risk Offboarding — Storyline Branching Scenario',
-    description:
-      "A compliance branching scenario for HR and IT leaders — three decisions tracking data security, legal compliance, and chain of custody, with a custom JavaScript-generated audit report personalized to the learner's exact decision path.",
-    href: '/projects/high-risk-offboarding-storyline',
-    label: 'View Case Study',
-  },
-  {
-    icon: 'tabler:robot',
-    title: 'Claude Model Showdown — Engineering A/B Tests with Haiku, Sonnet, and Opus',
-    description:
-      'A scenario-driven Rise 360 course for professional software engineers — three branching decisions, real consequences, and a debrief connecting Claude model selection to business outcomes. Built for enterprise AI workshop facilitation contexts.',
-    href: '/projects/claude-model-showdown',
-    label: 'View Case Study',
-  },
-  {
-    icon: 'tabler:puzzle',
-    title: 'Chrome Extension — Udacity Career Materials Reviewer',
-    description:
-      'A custom-built Chrome extension that cut career materials review time by 80% — from one hour to twelve minutes — by automating repetitive form entry. Built in response to a real workflow bottleneck at Udacity.',
-    href: '/projects/chrome-extension-udacity',
-    label: 'View Case Study',
-  },
-  {
-    icon: 'tabler:world',
-    title: 'How I Dealt with Travel Anxiety — Rumie Microlearning Byte',
-    description:
-      'A published microlearning Byte on Rumie-Learn — a free global OER platform reaching learners across 180+ countries. A 4-step, under-10-minute experience built for a mixed-literacy global audience and refined through a structured two-tier peer review process.',
-    href: '/projects/rumie-travel-anxiety-byte',
-    label: 'View Project',
-  },
-];
 ---
 
 <Layout metadata={metadata}>
@@ -547,40 +512,185 @@ const featured = [
         and global microlearning.
       </p>
     </div>
-    <div class="grid md:grid-cols-2 gap-6">
-      {
-        featured.map((item) => (
+
+    <!-- High-Risk Offboarding — full-width, leads -->
+    <div class="mb-10 flex flex-col">
+      <div class="flex items-center gap-3 mb-2">
+        <span class="text-xs font-semibold text-white bg-accent px-2.5 py-1 rounded-full">Featured</span>
+        <h3 class="text-xl font-bold font-heading text-gray-900 dark:text-white">The High-Risk Offboarding</h3>
+      </div>
+      <p class="text-sm text-muted mb-4">
+        A compliance branching scenario for HR and IT leaders — three decisions, real consequences, and a
+        JavaScript-generated audit report personalized to your exact decision path.
+      </p>
+      <div
+        class="relative w-full rounded-xl shadow-lg overflow-hidden border border-gray-200 dark:border-gray-700 mb-4"
+        style="padding-top: 62.5%;"
+      >
+        <iframe
+          class="absolute inset-0 w-full h-full"
+          src="/high-risk-offboarding-content/story.html"
+          title="The High-Risk Offboarding — Storyline Branching Scenario"
+          frameborder="0"
+          allowfullscreen></iframe>
+      </div>
+      <div class="flex flex-wrap gap-3">
+        <a
+          href="/projects/high-risk-offboarding-storyline"
+          class="inline-flex items-center gap-2 bg-accent hover:bg-accent/90 text-white font-semibold px-5 py-2.5 rounded-lg transition-colors text-sm"
+        >
+          View Case Study
+        </a>
+      </div>
+    </div>
+
+    <!-- Gemini + Claude Showdown — 2-column -->
+    <div class="grid md:grid-cols-2 gap-10 items-start mb-10">
+      <div class="flex flex-col">
+        <div class="flex items-center gap-3 mb-2">
+          <span class="text-xs font-semibold text-white bg-accent px-2.5 py-1 rounded-full">Featured</span>
+          <h3 class="text-xl font-bold font-heading text-gray-900 dark:text-white">Claude Model Showdown</h3>
+        </div>
+        <p class="text-sm text-muted mb-4 min-h-[2.5rem]">
+          Engineering A/B Tests with Haiku, Sonnet, and Opus — scenario-based for enterprise engineering teams.
+        </p>
+        <div
+          class="relative w-full rounded-xl shadow-lg overflow-hidden border border-gray-200 dark:border-gray-700 mb-4"
+          style="padding-top: 62.5%;"
+        >
+          <iframe
+            class="absolute inset-0 w-full h-full"
+            src="/claude-model-showdown"
+            title="Claude Model Showdown — Rise 360 Course"
+            frameborder="0"
+            allowfullscreen></iframe>
+        </div>
+        <div class="flex flex-wrap gap-3">
           <a
-            href={item.href}
-            class="group relative flex flex-col p-6 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-accent dark:hover:border-accent transition-all duration-200 shadow-sm hover:shadow-lg cursor-pointer"
+            href="/projects/claude-model-showdown"
+            class="inline-flex items-center gap-2 bg-accent hover:bg-accent/90 text-white font-semibold px-5 py-2.5 rounded-lg transition-colors text-sm"
           >
-            <span class="absolute top-4 right-4 text-xs font-semibold text-white bg-accent px-2.5 py-1 rounded-full">
-              Featured
-            </span>
-            <div class="w-11 h-11 rounded-lg bg-accent/20 dark:bg-accent/40 flex items-center justify-center mb-5 shrink-0 -mt-2">
-              <Icon name={item.icon} class="w-6 h-6 text-accent" />
-            </div>
-            <h3 class="text-base font-bold font-heading leading-snug mb-3 pr-16 group-hover:text-accent transition-colors duration-200">
-              {item.title}
-            </h3>
-            <p class="text-sm text-muted leading-relaxed flex-1">{item.description}</p>
-            <div class="mt-5 inline-flex items-center gap-1 text-sm font-medium text-accent">
-              {item.label}
-              <svg
-                class="w-3.5 h-3.5 transition-transform duration-200 group-hover:translate-x-0.5"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <path d="M5 12h14M12 5l7 7-7 7" />
-              </svg>
-            </div>
+            View Case Study
           </a>
-        ))
-      }
+          <a
+            href="/claude-model-showdown"
+            target="_blank"
+            rel="noopener"
+            class="inline-flex items-center gap-2 border-2 border-gray-300 dark:border-gray-600 text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-800 font-semibold px-5 py-2.5 rounded-lg transition-colors text-sm"
+          >
+            Open Course
+          </a>
+        </div>
+      </div>
+      <div class="flex flex-col">
+        <div class="flex items-center gap-3 mb-2">
+          <span class="text-xs font-semibold text-white bg-accent px-2.5 py-1 rounded-full">Featured</span>
+          <h3 class="text-xl font-bold font-heading text-gray-900 dark:text-white">Work Smarter with Gemini</h3>
+        </div>
+        <p class="text-sm text-muted mb-4 min-h-[2.5rem]">
+          A practical Rise 360 course on Gemini Gem creation for a large health organization.
+        </p>
+        <div
+          class="relative w-full rounded-xl shadow-lg overflow-hidden border border-gray-200 dark:border-gray-700 mb-4"
+          style="padding-top: 62.5%;"
+        >
+          <iframe
+            class="absolute inset-0 w-full h-full"
+            src="/gemini-course"
+            title="Work Smarter with Gemini — Rise 360 Course"
+            frameborder="0"
+            allowfullscreen></iframe>
+        </div>
+        <div class="flex flex-wrap gap-3">
+          <a
+            href="/projects/gemini-rise-course"
+            class="inline-flex items-center gap-2 bg-accent hover:bg-accent/90 text-white font-semibold px-5 py-2.5 rounded-lg transition-colors text-sm"
+          >
+            View Case Study
+          </a>
+          <a
+            href="/gemini-course"
+            target="_blank"
+            rel="noopener"
+            class="inline-flex items-center gap-2 border-2 border-gray-300 dark:border-gray-600 text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-800 font-semibold px-5 py-2.5 rounded-lg transition-colors text-sm"
+          >
+            Open Course
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Chrome Extension + Rumie — 2-column info cards -->
+    <div class="grid md:grid-cols-2 gap-6">
+      <a
+        href="/projects/chrome-extension-udacity"
+        class="group flex flex-col p-6 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-accent dark:hover:border-accent transition-all duration-200 shadow-sm hover:shadow-lg"
+      >
+        <span class="text-xs font-semibold text-white bg-accent px-2.5 py-1 rounded-full self-start mb-4">
+          Featured
+        </span>
+        <div class="w-11 h-11 rounded-lg bg-accent/20 dark:bg-accent/40 flex items-center justify-center mb-4 shrink-0">
+          <Icon name="tabler:puzzle" class="w-6 h-6 text-accent" />
+        </div>
+        <h3
+          class="text-base font-bold font-heading leading-snug mb-3 group-hover:text-accent transition-colors duration-200"
+        >
+          Chrome Extension — Udacity Career Materials Reviewer
+        </h3>
+        <p class="text-sm text-muted leading-relaxed flex-1">
+          A custom-built Chrome extension that cut career materials review time by 80% — from one hour to twelve minutes
+          — by automating repetitive form entry. Built in response to a real workflow bottleneck at Udacity.
+        </p>
+        <div class="mt-5 inline-flex items-center gap-1 text-sm font-medium text-accent">
+          View Case Study
+          <svg
+            class="w-3.5 h-3.5 transition-transform duration-200 group-hover:translate-x-0.5"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M5 12h14M12 5l7 7-7 7"></path>
+          </svg>
+        </div>
+      </a>
+      <a
+        href="/projects/rumie-travel-anxiety-byte"
+        class="group flex flex-col p-6 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-accent dark:hover:border-accent transition-all duration-200 shadow-sm hover:shadow-lg"
+      >
+        <span class="text-xs font-semibold text-white bg-accent px-2.5 py-1 rounded-full self-start mb-4">
+          Featured
+        </span>
+        <div class="w-11 h-11 rounded-lg bg-accent/20 dark:bg-accent/40 flex items-center justify-center mb-4 shrink-0">
+          <Icon name="tabler:world" class="w-6 h-6 text-accent" />
+        </div>
+        <h3
+          class="text-base font-bold font-heading leading-snug mb-3 group-hover:text-accent transition-colors duration-200"
+        >
+          How I Dealt with Travel Anxiety — Rumie Microlearning Byte
+        </h3>
+        <p class="text-sm text-muted leading-relaxed flex-1">
+          A published microlearning Byte on Rumie-Learn — a free global OER platform reaching learners across 180+
+          countries. A 4-step, under-10-minute experience built for a mixed-literacy global audience and refined through
+          a structured two-tier peer review process.
+        </p>
+        <div class="mt-5 inline-flex items-center gap-1 text-sm font-medium text-accent">
+          View Project
+          <svg
+            class="w-3.5 h-3.5 transition-transform duration-200 group-hover:translate-x-0.5"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M5 12h14M12 5l7 7-7 7"></path>
+          </svg>
+        </div>
+      </a>
     </div>
   </section>
 
