@@ -14,8 +14,16 @@ const metadata = {
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{metadata.title}</title>
     <style>
-      * { box-sizing: border-box; margin: 0; padding: 0; }
-      body { font-family: 'Georgia', serif; background: #ffffff; color: #1a1a1a; }
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font-family: 'Georgia', serif;
+        background: #ffffff;
+        color: #1a1a1a;
+      }
       nav {
         display: flex;
         justify-content: space-between;
@@ -31,8 +39,14 @@ const metadata = {
         color: #1a1a1a;
         text-decoration: none;
       }
-      nav .logo span { color: #2563eb; }
-      nav ul { list-style: none; display: flex; gap: 2rem; }
+      nav .logo span {
+        color: #2563eb;
+      }
+      nav ul {
+        list-style: none;
+        display: flex;
+        gap: 2rem;
+      }
       nav ul a {
         text-decoration: none;
         color: #444;
@@ -40,7 +54,9 @@ const metadata = {
         font-size: 0.9rem;
         letter-spacing: 0.03em;
       }
-      nav ul a:hover { color: #2563eb; }
+      nav ul a:hover {
+        color: #2563eb;
+      }
       .page-header {
         max-width: 860px;
         margin: 0 auto;
@@ -79,7 +95,12 @@ const metadata = {
         grid-template-columns: 1fr 2fr;
         gap: 3rem;
       }
-      @media (max-width: 640px) { .service { grid-template-columns: 1fr; gap: 1rem; } }
+      @media (max-width: 640px) {
+        .service {
+          grid-template-columns: 1fr;
+          gap: 1rem;
+        }
+      }
       .service-label {
         font-family: 'Arial', sans-serif;
         font-size: 0.78rem;
@@ -164,7 +185,10 @@ const metadata = {
     <div class="page-header">
       <p class="eyebrow">What We Build</p>
       <h1>Services</h1>
-      <p>We design and develop technical learning experiences across four core practice areas. All engagements are project-based and delivered through Root Branch Learning Studio LLC.</p>
+      <p>
+        We design and develop technical learning experiences across four core practice areas. All engagements are
+        project-based and delivered through Root Branch Learning Studio LLC.
+      </p>
     </div>
 
     <div class="services">
@@ -172,7 +196,11 @@ const metadata = {
         <div class="service-label">01</div>
         <div class="service-content">
           <h2>eLearning Development</h2>
-          <p>Custom Articulate Storyline 360 and Rise 360 courses built to your learning objectives. We handle everything from storyboarding to SCORM packaging — including custom JavaScript interactions, branching scenarios, and consequence-driven simulations that go beyond template-level work.</p>
+          <p>
+            Custom Articulate Storyline 360 and Rise 360 courses built to your learning objectives. We handle everything
+            from storyboarding to SCORM packaging — including custom JavaScript interactions, branching scenarios, and
+            consequence-driven simulations that go beyond template-level work.
+          </p>
           <div class="service-tags">
             <span class="tag">Articulate Storyline 360</span>
             <span class="tag">Rise 360</span>
@@ -187,7 +215,11 @@ const metadata = {
         <div class="service-label">02</div>
         <div class="service-content">
           <h2>Technical Training for Developer Audiences</h2>
-          <p>Onboarding, platform adoption, and upskilling curriculum designed specifically for software engineers and technical users. We've taught full-stack development and built AI-assisted developer curriculum — we understand how developers learn and what makes technical training actually stick.</p>
+          <p>
+            Onboarding, platform adoption, and upskilling curriculum designed specifically for software engineers and
+            technical users. We've taught full-stack development and built AI-assisted developer curriculum — we
+            understand how developers learn and what makes technical training actually stick.
+          </p>
           <div class="service-tags">
             <span class="tag">Developer Onboarding</span>
             <span class="tag">Platform Adoption</span>
@@ -202,7 +234,11 @@ const metadata = {
         <div class="service-label">03</div>
         <div class="service-content">
           <h2>AI-Native Curriculum Design</h2>
-          <p>End-to-end curriculum development using an AI-assisted production pipeline — Claude, Gemini, and NotebookLM integrated at every stage to synthesize SME content, generate practice scenarios, QA modules, and maintain consistency across iterative release cycles. Faster production without sacrificing instructional quality.</p>
+          <p>
+            End-to-end curriculum development using an AI-assisted production pipeline — Claude, Gemini, and NotebookLM
+            integrated at every stage to synthesize SME content, generate practice scenarios, QA modules, and maintain
+            consistency across iterative release cycles. Faster production without sacrificing instructional quality.
+          </p>
           <div class="service-tags">
             <span class="tag">AI Workflow Integration</span>
             <span class="tag">Rapid Development</span>
@@ -217,7 +253,11 @@ const metadata = {
         <div class="service-label">04</div>
         <div class="service-content">
           <h2>FinTech & Financial Services Training</h2>
-          <p>Compliance training, financial product onboarding, and regulatory curriculum for teams operating in high-stakes financial environments. Our accounting background and financial domain knowledge means we can work directly from source material without the lengthy SME handholding that general ID agencies require.</p>
+          <p>
+            Compliance training, financial product onboarding, and regulatory curriculum for teams operating in
+            high-stakes financial environments. Our accounting background and financial domain knowledge means we can
+            work directly from source material without the lengthy SME handholding that general ID agencies require.
+          </p>
           <div class="service-tags">
             <span class="tag">Compliance Training</span>
             <span class="tag">Financial Product Onboarding</span>

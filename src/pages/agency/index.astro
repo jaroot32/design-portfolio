@@ -14,8 +14,16 @@ const metadata = {
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{metadata.title}</title>
     <style>
-      * { box-sizing: border-box; margin: 0; padding: 0; }
-      body { font-family: 'Georgia', serif; background: #ffffff; color: #1a1a1a; }
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font-family: 'Georgia', serif;
+        background: #ffffff;
+        color: #1a1a1a;
+      }
       nav {
         display: flex;
         justify-content: space-between;
@@ -31,7 +39,9 @@ const metadata = {
         color: #1a1a1a;
         text-decoration: none;
       }
-      nav .logo span { color: #2563eb; }
+      nav .logo span {
+        color: #2563eb;
+      }
       nav ul {
         list-style: none;
         display: flex;
@@ -44,7 +54,9 @@ const metadata = {
         font-size: 0.9rem;
         letter-spacing: 0.03em;
       }
-      nav ul a:hover { color: #2563eb; }
+      nav ul a:hover {
+        color: #2563eb;
+      }
       .hero {
         max-width: 860px;
         margin: 0 auto;
@@ -67,7 +79,10 @@ const metadata = {
         margin-bottom: 1.5rem;
         letter-spacing: -0.01em;
       }
-      .hero h1 em { font-style: italic; color: #2563eb; }
+      .hero h1 em {
+        font-style: italic;
+        color: #2563eb;
+      }
       .hero p {
         font-family: 'Arial', sans-serif;
         font-size: 1.1rem;
@@ -76,7 +91,11 @@ const metadata = {
         max-width: 620px;
         margin-bottom: 2.5rem;
       }
-      .cta-row { display: flex; gap: 1rem; flex-wrap: wrap; }
+      .cta-row {
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+      }
       .btn-primary {
         background: #2563eb;
         color: #fff;
@@ -127,7 +146,11 @@ const metadata = {
         grid-template-columns: 1fr 1fr;
         gap: 2rem;
       }
-      @media (max-width: 640px) { .niche-grid { grid-template-columns: 1fr; } }
+      @media (max-width: 640px) {
+        .niche-grid {
+          grid-template-columns: 1fr;
+        }
+      }
       .niche-card {
         border: 1px solid #e5e5e5;
         padding: 2rem;
@@ -163,7 +186,11 @@ const metadata = {
         grid-template-columns: 1fr 1fr 1fr;
         gap: 2rem;
       }
-      @media (max-width: 768px) { .why-list { grid-template-columns: 1fr; } }
+      @media (max-width: 768px) {
+        .why-list {
+          grid-template-columns: 1fr;
+        }
+      }
       .why-item h4 {
         font-size: 0.95rem;
         font-weight: bold;
@@ -202,8 +229,9 @@ const metadata = {
       <p class="eyebrow">Boutique L&D Agency</p>
       <h1>Technical training for teams building <em>complex things.</em></h1>
       <p>
-        Root Branch Learning Studio designs and develops eLearning for FinTech, SaaS, and software engineering audiences.
-        We specialize in the training that's hardest to build — branching scenarios, developer onboarding, AI adoption curriculum, and technical upskilling at scale.
+        Root Branch Learning Studio designs and develops eLearning for FinTech, SaaS, and software engineering
+        audiences. We specialize in the training that's hardest to build — branching scenarios, developer onboarding, AI
+        adoption curriculum, and technical upskilling at scale.
       </p>
       <div class="cta-row">
         <a href="/agency/work-with-us" class="btn-primary">Start a Project</a>
@@ -215,15 +243,26 @@ const metadata = {
 
     <section class="niches">
       <h2>Two domains. Deep expertise.</h2>
-      <p class="sub">Most agencies go wide. We go deep in the two areas where training is most technically complex and most consequential.</p>
+      <p class="sub">
+        Most agencies go wide. We go deep in the two areas where training is most technically complex and most
+        consequential.
+      </p>
       <div class="niche-grid">
         <div class="niche-card">
           <h3>FinTech & Financial Services</h3>
-          <p>Compliance training, financial product onboarding, and regulatory curriculum for teams who can't afford to get it wrong. Our accounting and financial domain knowledge means we don't just design the training — we understand the content.</p>
+          <p>
+            Compliance training, financial product onboarding, and regulatory curriculum for teams who can't afford to
+            get it wrong. Our accounting and financial domain knowledge means we don't just design the training — we
+            understand the content.
+          </p>
         </div>
         <div class="niche-card">
           <h3>Technical & Software Engineering Training</h3>
-          <p>Developer onboarding, platform adoption, and upskilling curriculum for software engineering audiences. We've taught full-stack development and built AI-assisted developer training — we speak the language of the people you're training.</p>
+          <p>
+            Developer onboarding, platform adoption, and upskilling curriculum for software engineering audiences. We've
+            taught full-stack development and built AI-assisted developer training — we speak the language of the people
+            you're training.
+          </p>
         </div>
       </div>
     </section>
@@ -234,15 +273,24 @@ const metadata = {
         <div class="why-list">
           <div class="why-item">
             <h4>We code.</h4>
-            <p>Four years of frontend development means we build custom interactions, JavaScript logic, and technical simulations that most ID agencies can't touch.</p>
+            <p>
+              Four years of frontend development means we build custom interactions, JavaScript logic, and technical
+              simulations that most ID agencies can't touch.
+            </p>
           </div>
           <div class="why-item">
             <h4>We use AI natively.</h4>
-            <p>Claude, Gemini, and NotebookLM are woven into our production workflow — not as a gimmick, but to deliver faster and iterate more efficiently than traditional agencies.</p>
+            <p>
+              Claude, Gemini, and NotebookLM are woven into our production workflow — not as a gimmick, but to deliver
+              faster and iterate more efficiently than traditional agencies.
+            </p>
           </div>
           <div class="why-item">
             <h4>We measure outcomes.</h4>
-            <p>We design for behavior change and adoption metrics, not course completions. Our work is tied to the results that matter to your business.</p>
+            <p>
+              We design for behavior change and adoption metrics, not course completions. Our work is tied to the
+              results that matter to your business.
+            </p>
           </div>
         </div>
       </div>

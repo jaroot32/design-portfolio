@@ -30,7 +30,9 @@ const metadata = {
           <p class="text-7xl font-bold font-heading text-accent leading-none">68%</p>
           <p class="text-xl text-muted mt-3">of API security incidents involve improper credential handling</p>
           <div class="mt-8 space-y-2 text-sm text-muted">
-            <p class="font-semibold text-gray-700 dark:text-gray-300">Salt Security State of API Security Report 2024</p>
+            <p class="font-semibold text-gray-700 dark:text-gray-300">
+              Salt Security State of API Security Report 2024
+            </p>
             <p>Average cost of an API breach: $6.1M</p>
             <p>Articulate Storyline 360 · JavaScript</p>
           </div>
@@ -40,15 +42,15 @@ const metadata = {
     <Fragment slot="content">
       <p class="mb-4">
         New developers joining technical teams spend their first weeks reading API documentation — passively absorbing
-        endpoint references, authentication schemas, and rate limit tables. No one practices the actual decisions.
-        The first time they encounter a 401 Unauthorized or a 429 Too Many Requests, it's in production, with real
+        endpoint references, authentication schemas, and rate limit tables. No one practices the actual decisions. The
+        first time they encounter a 401 Unauthorized or a 429 Too Many Requests, it's in production, with real
         consequences.
       </p>
       <p class="mb-4">
         The cost of poor API hygiene compounds fast. An API key exposed in a URL query parameter shows up in server
-        logs, browser history, and HTTP referrer headers. Hard-coded credentials committed to a shared repository
-        become a breach waiting for a bad actor. Tight retry loops on rate-limited endpoints escalate to IP bans
-        that take down entire integration pipelines.
+        logs, browser history, and HTTP referrer headers. Hard-coded credentials committed to a shared repository become
+        a breach waiting for a bad actor. Tight retry loops on rate-limited endpoints escalate to IP bans that take down
+        entire integration pipelines.
       </p>
       <p>
         This module places developers inside a realistic first-day integration scenario — three decisions, real
@@ -172,20 +174,19 @@ const metadata = {
     </Fragment>
     <Fragment slot="content">
       <p class="mb-4">
-        The four learning objectives follow a deliberate Bloom's Taxonomy progression — two at Application
-        (selecting, implementing), one at Analysis (evaluating a strategy), and one at Evaluation (interpreting
-        the audit output). All four tie directly to measurable developer performance on the first day of API
-        integration work.
+        The four learning objectives follow a deliberate Bloom's Taxonomy progression — two at Application (selecting,
+        implementing), one at Analysis (evaluating a strategy), and one at Evaluation (interpreting the audit output).
+        All four tie directly to measurable developer performance on the first day of API integration work.
       </p>
       <p class="mb-4">
-        The most common failure mode for new developers is not ignorance of REST conventions — they know what
-        GET and POST mean. The gap is judgment: which authentication pattern is actually secure, what happens
-        when you ignore a 500 error, and why retrying 200 times in two seconds is worse than waiting. Decisions
-        1 through 3 are designed to build exactly that judgment.
+        The most common failure mode for new developers is not ignorance of REST conventions — they know what GET and
+        POST mean. The gap is judgment: which authentication pattern is actually secure, what happens when you ignore a
+        500 error, and why retrying 200 times in two seconds is worse than waiting. Decisions 1 through 3 are designed
+        to build exactly that judgment.
       </p>
       <p>
-        The JavaScript audit report at the end of the module connects all three decisions to a production-risk
-        rating — making the consequence of each choice concrete before the developer faces it in a real codebase.
+        The JavaScript audit report at the end of the module connects all three decisions to a production-risk rating —
+        making the consequence of each choice concrete before the developer faces it in a real codebase.
       </p>
     </Fragment>
     <Fragment slot="bg">
@@ -214,16 +215,23 @@ const metadata = {
         font-family="Arial, sans-serif"
       >
         <title>REST API Developer Simulation Branching Diagram</title>
-        <desc>A flowchart showing three API integration decision points with branching consequence and correct paths leading to a JavaScript-generated audit report.</desc>
+        <desc
+          >A flowchart showing three API integration decision points with branching consequence and correct paths
+          leading to a JavaScript-generated audit report.</desc
+        >
         <defs>
           <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"
-            ><path d="M0,0 L0,6 L8,3 z" fill="#6b7280"></path></marker>
+            ><path d="M0,0 L0,6 L8,3 z" fill="#6b7280"></path></marker
+          >
           <marker id="arrow-red" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"
-            ><path d="M0,0 L0,6 L8,3 z" fill="#dc2626"></path></marker>
+            ><path d="M0,0 L0,6 L8,3 z" fill="#dc2626"></path></marker
+          >
           <marker id="arrow-green" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"
-            ><path d="M0,0 L0,6 L8,3 z" fill="#16a34a"></path></marker>
+            ><path d="M0,0 L0,6 L8,3 z" fill="#16a34a"></path></marker
+          >
           <marker id="arrow-amber" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"
-            ><path d="M0,0 L0,6 L8,3 z" fill="#d97706"></path></marker>
+            ><path d="M0,0 L0,6 L8,3 z" fill="#d97706"></path></marker
+          >
         </defs>
         <!-- START -->
         <rect x="310" y="10" width="200" height="44" rx="8" fill="#0f766e"></rect>
@@ -232,54 +240,82 @@ const metadata = {
         <line x1="410" y1="54" x2="410" y2="78" stroke="#6b7280" stroke-width="1.5" marker-end="url(#arrow)"></line>
         <!-- DECISION 1 -->
         <rect x="285" y="80" width="250" height="48" rx="8" fill="#134e4a"></rect>
-        <text x="410" y="99" text-anchor="middle" fill="white" font-size="11" font-weight="bold">DECISION 1 — SLIDE 3</text>
+        <text x="410" y="99" text-anchor="middle" fill="white" font-size="11" font-weight="bold"
+          >DECISION 1 — SLIDE 3</text
+        >
         <text x="410" y="116" text-anchor="middle" fill="#99f6e4" font-size="10">Authentication Method</text>
         <line x1="285" y1="104" x2="130" y2="104" stroke="#dc2626" stroke-width="1.5"></line>
-        <line x1="130" y1="104" x2="130" y2="178" stroke="#dc2626" stroke-width="1.5" marker-end="url(#arrow-red)"></line>
+        <line x1="130" y1="104" x2="130" y2="178" stroke="#dc2626" stroke-width="1.5" marker-end="url(#arrow-red)"
+        ></line>
         <text x="200" y="98" text-anchor="middle" fill="#dc2626" font-size="9">Choice A</text>
-        <line x1="410" y1="128" x2="410" y2="178" stroke="#d97706" stroke-width="1.5" marker-end="url(#arrow-amber)"></line>
+        <line x1="410" y1="128" x2="410" y2="178" stroke="#d97706" stroke-width="1.5" marker-end="url(#arrow-amber)"
+        ></line>
         <text x="425" y="160" fill="#d97706" font-size="9">Choice B</text>
         <line x1="535" y1="104" x2="680" y2="104" stroke="#16a34a" stroke-width="1.5"></line>
-        <line x1="680" y1="104" x2="680" y2="178" stroke="#16a34a" stroke-width="1.5" marker-end="url(#arrow-green)"></line>
+        <line x1="680" y1="104" x2="680" y2="178" stroke="#16a34a" stroke-width="1.5" marker-end="url(#arrow-green)"
+        ></line>
         <text x="600" y="98" text-anchor="middle" fill="#16a34a" font-size="9">Choice C ✓</text>
         <!-- D1 Consequences -->
         <rect x="50" y="180" width="160" height="52" rx="6" fill="#fef2f2" stroke="#dc2626" stroke-width="1.5"></rect>
         <text x="130" y="198" text-anchor="middle" fill="#dc2626" font-size="10" font-weight="bold">KEY IN URL</text>
         <text x="130" y="212" text-anchor="middle" fill="#7f1d1d" font-size="9">Exposed in logs · $6.1M risk</text>
         <text x="130" y="224" text-anchor="middle" fill="#9ca3af" font-size="9">Slide 4 → Try Again</text>
-        <path d="M50,206 C20,206 20,104 285,104" stroke="#dc2626" stroke-width="1" stroke-dasharray="4,3" fill="none" marker-end="url(#arrow-red)"></path>
+        <path
+          d="M50,206 C20,206 20,104 285,104"
+          stroke="#dc2626"
+          stroke-width="1"
+          stroke-dasharray="4,3"
+          fill="none"
+          marker-end="url(#arrow-red)"></path>
         <rect x="330" y="180" width="160" height="52" rx="6" fill="#fffbeb" stroke="#d97706" stroke-width="1.5"></rect>
-        <text x="410" y="198" text-anchor="middle" fill="#d97706" font-size="10" font-weight="bold">KEY HARD-CODED</text>
+        <text x="410" y="198" text-anchor="middle" fill="#d97706" font-size="10" font-weight="bold">KEY HARD-CODED</text
+        >
         <text x="410" y="212" text-anchor="middle" fill="#78350f" font-size="9">integrationScore +20</text>
         <text x="410" y="224" text-anchor="middle" fill="#9ca3af" font-size="9">Slide 5 → continues</text>
         <rect x="600" y="180" width="160" height="52" rx="6" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.5"></rect>
-        <text x="680" y="198" text-anchor="middle" fill="#16a34a" font-size="10" font-weight="bold">SECURE HEADER ✓</text>
+        <text x="680" y="198" text-anchor="middle" fill="#16a34a" font-size="10" font-weight="bold"
+          >SECURE HEADER ✓</text
+        >
         <text x="680" y="212" text-anchor="middle" fill="#14532d" font-size="9">Env variable · zero exposure</text>
         <text x="680" y="224" text-anchor="middle" fill="#9ca3af" font-size="9">Slide 6 → continues</text>
         <!-- D1 → D2 -->
-        <line x1="410" y1="232" x2="410" y2="268" stroke="#d97706" stroke-width="1.5" marker-end="url(#arrow-amber)"></line>
+        <line x1="410" y1="232" x2="410" y2="268" stroke="#d97706" stroke-width="1.5" marker-end="url(#arrow-amber)"
+        ></line>
         <line x1="680" y1="232" x2="680" y2="260" stroke="#16a34a" stroke-width="1.5"></line>
-        <line x1="680" y1="260" x2="535" y2="268" stroke="#16a34a" stroke-width="1.5" marker-end="url(#arrow-green)"></line>
+        <line x1="680" y1="260" x2="535" y2="268" stroke="#16a34a" stroke-width="1.5" marker-end="url(#arrow-green)"
+        ></line>
         <!-- DECISION 2 -->
         <rect x="285" y="270" width="250" height="48" rx="8" fill="#134e4a"></rect>
-        <text x="410" y="289" text-anchor="middle" fill="white" font-size="11" font-weight="bold">DECISION 2 — SLIDE 7</text>
+        <text x="410" y="289" text-anchor="middle" fill="white" font-size="11" font-weight="bold"
+          >DECISION 2 — SLIDE 7</text
+        >
         <text x="410" y="306" text-anchor="middle" fill="#99f6e4" font-size="10">Error Handling Strategy</text>
         <line x1="285" y1="294" x2="130" y2="294" stroke="#dc2626" stroke-width="1.5"></line>
-        <line x1="130" y1="294" x2="130" y2="368" stroke="#dc2626" stroke-width="1.5" marker-end="url(#arrow-red)"></line>
+        <line x1="130" y1="294" x2="130" y2="368" stroke="#dc2626" stroke-width="1.5" marker-end="url(#arrow-red)"
+        ></line>
         <text x="200" y="288" text-anchor="middle" fill="#dc2626" font-size="9">Choice A</text>
         <line x1="535" y1="294" x2="680" y2="294" stroke="#16a34a" stroke-width="1.5"></line>
-        <line x1="680" y1="294" x2="680" y2="368" stroke="#16a34a" stroke-width="1.5" marker-end="url(#arrow-green)"></line>
+        <line x1="680" y1="294" x2="680" y2="368" stroke="#16a34a" stroke-width="1.5" marker-end="url(#arrow-green)"
+        ></line>
         <text x="600" y="288" text-anchor="middle" fill="#16a34a" font-size="9">Choice B ✓</text>
-        <line x1="410" y1="318" x2="410" y2="368" stroke="#d97706" stroke-width="1.5" marker-end="url(#arrow-amber)"></line>
+        <line x1="410" y1="318" x2="410" y2="368" stroke="#d97706" stroke-width="1.5" marker-end="url(#arrow-amber)"
+        ></line>
         <text x="425" y="350" fill="#d97706" font-size="9">Choice C</text>
         <!-- D2 Consequences -->
         <rect x="50" y="370" width="160" height="52" rx="6" fill="#fef2f2" stroke="#dc2626" stroke-width="1.5"></rect>
         <text x="130" y="388" text-anchor="middle" fill="#dc2626" font-size="10" font-weight="bold">PROD CRASH</text>
         <text x="130" y="402" text-anchor="middle" fill="#7f1d1d" font-size="9">Unhandled 500 · pipeline down</text>
         <text x="130" y="414" text-anchor="middle" fill="#9ca3af" font-size="9">Slide 8 → Try Again</text>
-        <path d="M50,396 C20,396 20,294 285,294" stroke="#dc2626" stroke-width="1" stroke-dasharray="4,3" fill="none" marker-end="url(#arrow-red)"></path>
+        <path
+          d="M50,396 C20,396 20,294 285,294"
+          stroke="#dc2626"
+          stroke-width="1"
+          stroke-dasharray="4,3"
+          fill="none"
+          marker-end="url(#arrow-red)"></path>
         <rect x="330" y="370" width="160" height="52" rx="6" fill="#fffbeb" stroke="#d97706" stroke-width="1.5"></rect>
-        <text x="410" y="388" text-anchor="middle" fill="#d97706" font-size="10" font-weight="bold">SILENT FAILURE</text>
+        <text x="410" y="388" text-anchor="middle" fill="#d97706" font-size="10" font-weight="bold">SILENT FAILURE</text
+        >
         <text x="410" y="402" text-anchor="middle" fill="#78350f" font-size="9">integrationScore +15</text>
         <text x="410" y="414" text-anchor="middle" fill="#9ca3af" font-size="9">Slide 10 → continues</text>
         <rect x="600" y="370" width="160" height="52" rx="6" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.5"></rect>
@@ -287,25 +323,33 @@ const metadata = {
         <text x="680" y="402" text-anchor="middle" fill="#14532d" font-size="9">Try/catch · status codes checked</text>
         <text x="680" y="414" text-anchor="middle" fill="#9ca3af" font-size="9">Slide 9 → continues</text>
         <!-- D2 → D3 -->
-        <line x1="410" y1="422" x2="410" y2="458" stroke="#d97706" stroke-width="1.5" marker-end="url(#arrow-amber)"></line>
+        <line x1="410" y1="422" x2="410" y2="458" stroke="#d97706" stroke-width="1.5" marker-end="url(#arrow-amber)"
+        ></line>
         <line x1="680" y1="422" x2="680" y2="450" stroke="#16a34a" stroke-width="1.5"></line>
-        <line x1="680" y1="450" x2="535" y2="458" stroke="#16a34a" stroke-width="1.5" marker-end="url(#arrow-green)"></line>
+        <line x1="680" y1="450" x2="535" y2="458" stroke="#16a34a" stroke-width="1.5" marker-end="url(#arrow-green)"
+        ></line>
         <!-- DECISION 3 -->
         <rect x="285" y="460" width="250" height="48" rx="8" fill="#134e4a"></rect>
-        <text x="410" y="479" text-anchor="middle" fill="white" font-size="11" font-weight="bold">DECISION 3 — SLIDE 11</text>
+        <text x="410" y="479" text-anchor="middle" fill="white" font-size="11" font-weight="bold"
+          >DECISION 3 — SLIDE 11</text
+        >
         <text x="410" y="496" text-anchor="middle" fill="#99f6e4" font-size="10">Rate Limit Response</text>
         <line x1="535" y1="484" x2="620" y2="484" stroke="#16a34a" stroke-width="1.5"></line>
-        <line x1="620" y1="484" x2="620" y2="548" stroke="#16a34a" stroke-width="1.5" marker-end="url(#arrow-green)"></line>
+        <line x1="620" y1="484" x2="620" y2="548" stroke="#16a34a" stroke-width="1.5" marker-end="url(#arrow-green)"
+        ></line>
         <text x="572" y="478" text-anchor="middle" fill="#16a34a" font-size="9">Choice A ✓</text>
         <line x1="285" y1="484" x2="200" y2="484" stroke="#dc2626" stroke-width="1.5"></line>
-        <line x1="200" y1="484" x2="200" y2="548" stroke="#dc2626" stroke-width="1.5" marker-end="url(#arrow-red)"></line>
+        <line x1="200" y1="484" x2="200" y2="548" stroke="#dc2626" stroke-width="1.5" marker-end="url(#arrow-red)"
+        ></line>
         <text x="238" y="478" text-anchor="middle" fill="#dc2626" font-size="9">Choice B</text>
         <!-- D3 Consequences -->
         <rect x="110" y="550" width="180" height="44" rx="6" fill="#fef2f2" stroke="#dc2626" stroke-width="1.5"></rect>
         <text x="200" y="568" text-anchor="middle" fill="#dc2626" font-size="10" font-weight="bold">IP BANNED</text>
         <text x="200" y="582" text-anchor="middle" fill="#7f1d1d" font-size="9">Slide 13 · integrationScore +25</text>
         <rect x="530" y="550" width="180" height="44" rx="6" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.5"></rect>
-        <text x="620" y="568" text-anchor="middle" fill="#16a34a" font-size="10" font-weight="bold">BACKOFF IMPL. ✓</text>
+        <text x="620" y="568" text-anchor="middle" fill="#16a34a" font-size="10" font-weight="bold"
+          >BACKOFF IMPL. ✓</text
+        >
         <text x="620" y="582" text-anchor="middle" fill="#14532d" font-size="9">Slide 12 · pipeline stable</text>
         <!-- Both → Audit -->
         <line x1="200" y1="594" x2="200" y2="610" stroke="#6b7280" stroke-width="1.5"></line>
@@ -314,7 +358,9 @@ const metadata = {
         <line x1="620" y1="610" x2="440" y2="610" stroke="#6b7280" stroke-width="1.5" marker-end="url(#arrow)"></line>
         <!-- AUDIT REPORT -->
         <rect x="310" y="590" width="200" height="26" rx="6" fill="#0f766e"></rect>
-        <text x="410" y="608" text-anchor="middle" fill="white" font-size="11" font-weight="bold">AUDIT REPORT — SLIDE 14</text>
+        <text x="410" y="608" text-anchor="middle" fill="white" font-size="11" font-weight="bold"
+          >AUDIT REPORT — SLIDE 14</text
+        >
         <!-- LEGEND -->
         <rect x="10" y="10" width="130" height="80" rx="6" fill="none" stroke="#e5e7eb" stroke-width="1"></rect>
         <text x="20" y="26" fill="#6b7280" font-size="9" font-weight="bold">LEGEND</text>
@@ -363,7 +409,8 @@ const metadata = {
                 phase: 'Hook',
                 phaseColor: 'text-pink-600 dark:text-pink-400',
                 title: 'Your First API Call',
-                content: 'Day 5. The payment processing API is live. The tech lead just dropped the docs in Slack. It\'s your job to integrate it.',
+                content:
+                  "Day 5. The payment processing API is live. The tech lead just dropped the docs in Slack. It's your job to integrate it.",
                 interaction: 'Title card, Begin button',
               },
               {
@@ -371,7 +418,8 @@ const metadata = {
                 phase: 'Setup',
                 phaseColor: 'text-blue-600 dark:text-blue-400',
                 title: 'Meet Alex Chen',
-                content: 'Junior Backend Developer, first week on the FinTech team. Task: integrate the internal payment API into the checkout flow. API key just landed in email.',
+                content:
+                  'Junior Backend Developer, first week on the FinTech team. Task: integrate the internal payment API into the checkout flow. API key just landed in email.',
                 interaction: 'Character card with role context',
               },
               {
@@ -379,7 +427,8 @@ const metadata = {
                 phase: 'Decision',
                 phaseColor: 'text-green-600 dark:text-green-400',
                 title: 'Decision 1: Authentication',
-                content: 'You have the API key. Three ways to pass it: as a URL query parameter, hard-coded in the source file, or in an Authorization header via environment variable.',
+                content:
+                  'You have the API key. Three ways to pass it: as a URL query parameter, hard-coded in the source file, or in an Authorization header via environment variable.',
                 interaction: 'Branching multiple choice — sets authMethod + integrationScore',
               },
               {
@@ -387,7 +436,8 @@ const metadata = {
                 phase: 'Consequence',
                 phaseColor: 'text-red-600 dark:text-red-400',
                 title: 'Consequence: Key Exposed in Logs',
-                content: 'URL query parameters are logged by every proxy, load balancer, and browser history tool in the stack. The key appears in three separate server logs within 30 seconds. SECURITY INCIDENT — $6.1M average API breach cost.',
+                content:
+                  'URL query parameters are logged by every proxy, load balancer, and browser history tool in the stack. The key appears in three separate server logs within 30 seconds. SECURITY INCIDENT — $6.1M average API breach cost.',
                 interaction: 'Consequence screen — Try Again',
               },
               {
@@ -395,7 +445,8 @@ const metadata = {
                 phase: 'Consequence',
                 phaseColor: 'text-yellow-600 dark:text-yellow-400',
                 title: 'Consequence: Key in Source Code',
-                content: 'Hard-coded credentials committed to the shared repo. One git push and the key is in version history forever. integrationScore +20.',
+                content:
+                  'Hard-coded credentials committed to the shared repo. One git push and the key is in version history forever. integrationScore +20.',
                 interaction: 'Warning screen — proceed with elevated integrationScore',
               },
               {
@@ -403,7 +454,8 @@ const metadata = {
                 phase: 'Decision',
                 phaseColor: 'text-green-600 dark:text-green-400',
                 title: 'Secure Header Auth',
-                content: 'Authorization: Bearer stored in an environment variable. Key never touches source code or URLs. Correct authentication pattern confirmed with security checklist.',
+                content:
+                  'Authorization: Bearer stored in an environment variable. Key never touches source code or URLs. Correct authentication pattern confirmed with security checklist.',
                 interaction: 'Confirmation screen — proceed',
               },
               {
@@ -411,7 +463,8 @@ const metadata = {
                 phase: 'Decision',
                 phaseColor: 'text-green-600 dark:text-green-400',
                 title: 'Decision 2: Error Handling',
-                content: 'First test call returns a 500 Internal Server Error. Three choices: no error handling (assume it was a fluke), log errors but don\'t handle them, or implement try/catch with status code checks.',
+                content:
+                  "First test call returns a 500 Internal Server Error. Three choices: no error handling (assume it was a fluke), log errors but don't handle them, or implement try/catch with status code checks.",
                 interaction: 'Branching multiple choice — sets errorHandling + integrationScore',
               },
               {
@@ -419,7 +472,8 @@ const metadata = {
                 phase: 'Consequence',
                 phaseColor: 'text-red-600 dark:text-red-400',
                 title: 'Consequence: Production Crash',
-                content: 'No error handling means the next 500 crashes the entire checkout flow. Unhandled promise rejection takes down the pipeline. CRITICAL ERROR — 3 hours of downtime.',
+                content:
+                  'No error handling means the next 500 crashes the entire checkout flow. Unhandled promise rejection takes down the pipeline. CRITICAL ERROR — 3 hours of downtime.',
                 interaction: 'Consequence screen — Try Again',
               },
               {
@@ -427,7 +481,8 @@ const metadata = {
                 phase: 'Decision',
                 phaseColor: 'text-green-600 dark:text-green-400',
                 title: 'Resilient Error Handling',
-                content: 'Try/catch with specific status code checks: 401 triggers token refresh, 429 triggers backoff, 5xx triggers retry with limit. Integration stays stable under failure conditions.',
+                content:
+                  'Try/catch with specific status code checks: 401 triggers token refresh, 429 triggers backoff, 5xx triggers retry with limit. Integration stays stable under failure conditions.',
                 interaction: 'Confirmation screen — proceed',
               },
               {
@@ -435,7 +490,8 @@ const metadata = {
                 phase: 'Consequence',
                 phaseColor: 'text-yellow-600 dark:text-yellow-400',
                 title: 'Consequence: Silent Failure',
-                content: 'Errors are logged but not handled. The integration appears to work, but 12% of requests silently fail. Nobody knows until a user complains three days later.',
+                content:
+                  'Errors are logged but not handled. The integration appears to work, but 12% of requests silently fail. Nobody knows until a user complains three days later.',
                 interaction: 'Warning screen — proceed with elevated integrationScore',
               },
               {
@@ -443,7 +499,8 @@ const metadata = {
                 phase: 'Decision',
                 phaseColor: 'text-green-600 dark:text-green-400',
                 title: 'Decision 3: Rate Limit Response',
-                content: 'The API returns a 429 Too Many Requests. Two choices: retry immediately in a loop until it succeeds, or implement exponential backoff with a Retry-After header check.',
+                content:
+                  'The API returns a 429 Too Many Requests. Two choices: retry immediately in a loop until it succeeds, or implement exponential backoff with a Retry-After header check.',
                 interaction: 'Branching multiple choice — sets rateLimitStrategy + integrationScore',
               },
               {
@@ -451,7 +508,8 @@ const metadata = {
                 phase: 'Decision',
                 phaseColor: 'text-green-600 dark:text-green-400',
                 title: 'Exponential Backoff Implemented',
-                content: 'Retry-After header parsed, backoff intervals set at 1s, 2s, 4s. Pipeline stays within rate limits and integration passes API gateway validation.',
+                content:
+                  'Retry-After header parsed, backoff intervals set at 1s, 2s, 4s. Pipeline stays within rate limits and integration passes API gateway validation.',
                 interaction: 'Confirmation screen — proceed to audit',
               },
               {
@@ -459,7 +517,8 @@ const metadata = {
                 phase: 'Consequence',
                 phaseColor: 'text-red-600 dark:text-red-400',
                 title: 'Consequence: IP Banned',
-                content: 'Tight retry loop fires 300 requests in 10 seconds. API gateway flags the IP for abuse. Team is locked out of the payment API for 24 hours. integrationScore +25.',
+                content:
+                  'Tight retry loop fires 300 requests in 10 seconds. API gateway flags the IP for abuse. Team is locked out of the payment API for 24 hours. integrationScore +25.',
                 interaction: 'Consequence screen — proceed to audit',
               },
               {
@@ -467,7 +526,8 @@ const metadata = {
                 phase: 'Debrief',
                 phaseColor: 'text-orange-600 dark:text-orange-400',
                 title: 'API Integration Audit Report',
-                content: 'JavaScript reads all four variables and generates a personalized report — color-coded production risk rating, decision log, security assessment, and recommended remediation steps based on the developer\'s exact decision path.',
+                content:
+                  "JavaScript reads all four variables and generates a personalized report — color-coded production risk rating, decision log, security assessment, and recommended remediation steps based on the developer's exact decision path.",
                 interaction: 'JavaScript trigger — dynamic output',
               },
             ].map(({ num, phase, phaseColor, title, content, interaction }) => (
@@ -546,7 +606,8 @@ const metadata = {
     </div>
     <div class="rounded-lg border border-gray-200 dark:border-gray-700 bg-gray-900 p-6">
       <p class="text-xs text-gray-400 font-mono mb-3">// Audit Report trigger — fires on Slide 14 timeline start</p>
-      <pre class="text-sm text-green-400 font-mono overflow-x-auto"><code>{`const player = GetPlayer();
+      <pre
+        class="text-sm text-green-400 font-mono overflow-x-auto"><code>{`const player = GetPlayer();
 const auth = player.GetVar("authMethod");
 const errors = player.GetVar("errorHandling");
 const rateLimit = player.GetVar("rateLimitStrategy");
@@ -575,13 +636,29 @@ const score = player.GetVar("integrationScore");
         class="flex flex-col items-center gap-3 p-6 rounded-xl border-2 border-teal-200 dark:border-teal-700 bg-white dark:bg-gray-900 hover:border-teal-500 hover:shadow-md transition-all group"
       >
         <div class="w-12 h-12 rounded-full bg-teal-100 dark:bg-teal-900/40 flex items-center justify-center">
-          <svg class="w-6 h-6 text-teal-700 dark:text-teal-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+          <svg
+            class="w-6 h-6 text-teal-700 dark:text-teal-300"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+            ></path>
           </svg>
         </div>
         <div class="text-center">
-          <p class="font-semibold text-gray-800 dark:text-gray-200 group-hover:text-teal-700 dark:group-hover:text-teal-300">Design Document</p>
-          <p class="text-xs text-muted mt-1">Needs analysis, objectives, content map, branching logic, variable reference</p>
+          <p
+            class="font-semibold text-gray-800 dark:text-gray-200 group-hover:text-teal-700 dark:group-hover:text-teal-300"
+          >
+            Design Document
+          </p>
+          <p class="text-xs text-muted mt-1">
+            Needs analysis, objectives, content map, branching logic, variable reference
+          </p>
         </div>
         <span class="text-xs font-medium text-teal-600 dark:text-teal-400 mt-auto">Download .docx</span>
       </a>
@@ -591,12 +668,26 @@ const score = player.GetVar("integrationScore");
         class="flex flex-col items-center gap-3 p-6 rounded-xl border-2 border-teal-200 dark:border-teal-700 bg-white dark:bg-gray-900 hover:border-teal-500 hover:shadow-md transition-all group"
       >
         <div class="w-12 h-12 rounded-full bg-teal-100 dark:bg-teal-900/40 flex items-center justify-center">
-          <svg class="w-6 h-6 text-teal-700 dark:text-teal-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"></path>
+          <svg
+            class="w-6 h-6 text-teal-700 dark:text-teal-300"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"
+            ></path>
           </svg>
         </div>
         <div class="text-center">
-          <p class="font-semibold text-gray-800 dark:text-gray-200 group-hover:text-teal-700 dark:group-hover:text-teal-300">Storyboard</p>
+          <p
+            class="font-semibold text-gray-800 dark:text-gray-200 group-hover:text-teal-700 dark:group-hover:text-teal-300"
+          >
+            Storyboard
+          </p>
           <p class="text-xs text-muted mt-1">Slide-by-slide script, branching logic, dialogue, and variable triggers</p>
         </div>
         <span class="text-xs font-medium text-teal-600 dark:text-teal-400 mt-auto">Download .docx</span>
@@ -607,12 +698,26 @@ const score = player.GetVar("integrationScore");
         class="flex flex-col items-center gap-3 p-6 rounded-xl border-2 border-teal-200 dark:border-teal-700 bg-white dark:bg-gray-900 hover:border-teal-500 hover:shadow-md transition-all group"
       >
         <div class="w-12 h-12 rounded-full bg-teal-100 dark:bg-teal-900/40 flex items-center justify-center">
-          <svg class="w-6 h-6 text-teal-700 dark:text-teal-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.485 8.485M7 17h.01"></path>
+          <svg
+            class="w-6 h-6 text-teal-700 dark:text-teal-300"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.485 8.485M7 17h.01"
+            ></path>
           </svg>
         </div>
         <div class="text-center">
-          <p class="font-semibold text-gray-800 dark:text-gray-200 group-hover:text-teal-700 dark:group-hover:text-teal-300">Style Guide</p>
+          <p
+            class="font-semibold text-gray-800 dark:text-gray-200 group-hover:text-teal-700 dark:group-hover:text-teal-300"
+          >
+            Style Guide
+          </p>
           <p class="text-xs text-muted mt-1">Colors, typography, tone, animation standards, and variable reference</p>
         </div>
         <span class="text-xs font-medium text-teal-600 dark:text-teal-400 mt-auto">Download .docx</span>
@@ -628,19 +733,31 @@ const score = player.GetVar("integrationScore");
         <ul class="space-y-4 text-gray-700 dark:text-gray-300">
           <li class="flex gap-3">
             <span class="text-accent font-bold mt-0.5">01</span>
-            <p>Completed a full end-to-end portfolio piece targeting developer audiences — needs analysis through deployed Storyline module — demonstrating technical ID capability beyond HR and compliance content.</p>
+            <p>
+              Completed a full end-to-end portfolio piece targeting developer audiences — needs analysis through
+              deployed Storyline module — demonstrating technical ID capability beyond HR and compliance content.
+            </p>
           </li>
           <li class="flex gap-3">
             <span class="text-accent font-bold mt-0.5">02</span>
-            <p>Custom JavaScript audit report generates a unique debrief for each of eight possible decision paths, surfacing specific remediation steps for each combination of choices.</p>
+            <p>
+              Custom JavaScript audit report generates a unique debrief for each of eight possible decision paths,
+              surfacing specific remediation steps for each combination of choices.
+            </p>
           </li>
           <li class="flex gap-3">
             <span class="text-accent font-bold mt-0.5">03</span>
-            <p>Technical consequence framing sourced from Salt Security and OWASP API Security Top 10 grounds developer decisions in real organizational risk rather than abstract best-practice language.</p>
+            <p>
+              Technical consequence framing sourced from Salt Security and OWASP API Security Top 10 grounds developer
+              decisions in real organizational risk rather than abstract best-practice language.
+            </p>
           </li>
           <li class="flex gap-3">
             <span class="text-accent font-bold mt-0.5">04</span>
-            <p>Module directly addresses the developer onboarding gap identified in CapeTalent technical assessment — moving from documentation-first to decision-practice-first learning design.</p>
+            <p>
+              Module directly addresses the developer onboarding gap identified in CapeTalent technical assessment —
+              moving from documentation-first to decision-practice-first learning design.
+            </p>
           </li>
         </ul>
       </div>
@@ -649,19 +766,31 @@ const score = player.GetVar("integrationScore");
         <ul class="space-y-4 text-gray-700 dark:text-gray-300">
           <li class="flex gap-3">
             <span class="text-accent font-bold mt-0.5">01</span>
-            <p>Developer audiences respond to consequence realism at a technical level — the "key in logs" consequence needed to be specific (which logs, how fast, what an attacker can do with it) to land as a real threat.</p>
+            <p>
+              Developer audiences respond to consequence realism at a technical level — the "key in logs" consequence
+              needed to be specific (which logs, how fast, what an attacker can do with it) to land as a real threat.
+            </p>
           </li>
           <li class="flex gap-3">
             <span class="text-accent font-bold mt-0.5">02</span>
-            <p>Three variables gave enough personalization depth without branching explosion. A fourth (environment selection: staging vs prod) was scoped out to keep the module under 20 minutes.</p>
+            <p>
+              Three variables gave enough personalization depth without branching explosion. A fourth (environment
+              selection: staging vs prod) was scoped out to keep the module under 20 minutes.
+            </p>
           </li>
           <li class="flex gap-3">
             <span class="text-accent font-bold mt-0.5">03</span>
-            <p>Next iteration would add a live code editor interaction on Decision 2 — learners write the actual try/catch block rather than selecting from multiple choice options.</p>
+            <p>
+              Next iteration would add a live code editor interaction on Decision 2 — learners write the actual
+              try/catch block rather than selecting from multiple choice options.
+            </p>
           </li>
           <li class="flex gap-3">
             <span class="text-accent font-bold mt-0.5">04</span>
-            <p>A facilitator debrief guide pairing this module with a code review session would extend its value for technical onboarding programs running developer cohorts.</p>
+            <p>
+              A facilitator debrief guide pairing this module with a code review session would extend its value for
+              technical onboarding programs running developer cohorts.
+            </p>
           </li>
         </ul>
       </div>

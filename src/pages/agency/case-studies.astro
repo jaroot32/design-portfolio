@@ -14,8 +14,16 @@ const metadata = {
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{metadata.title}</title>
     <style>
-      * { box-sizing: border-box; margin: 0; padding: 0; }
-      body { font-family: 'Georgia', serif; background: #ffffff; color: #1a1a1a; }
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font-family: 'Georgia', serif;
+        background: #ffffff;
+        color: #1a1a1a;
+      }
       nav {
         display: flex;
         justify-content: space-between;
@@ -31,8 +39,14 @@ const metadata = {
         color: #1a1a1a;
         text-decoration: none;
       }
-      nav .logo span { color: #2563eb; }
-      nav ul { list-style: none; display: flex; gap: 2rem; }
+      nav .logo span {
+        color: #2563eb;
+      }
+      nav ul {
+        list-style: none;
+        display: flex;
+        gap: 2rem;
+      }
       nav ul a {
         text-decoration: none;
         color: #444;
@@ -40,7 +54,9 @@ const metadata = {
         font-size: 0.9rem;
         letter-spacing: 0.03em;
       }
-      nav ul a:hover { color: #2563eb; }
+      nav ul a:hover {
+        color: #2563eb;
+      }
       .page-header {
         max-width: 860px;
         margin: 0 auto;
@@ -79,8 +95,15 @@ const metadata = {
         grid-template-columns: 1fr 2fr;
         gap: 3rem;
       }
-      @media (max-width: 640px) { .case-study { grid-template-columns: 1fr; gap: 1.5rem; } }
-      .cs-meta { padding-top: 0.25rem; }
+      @media (max-width: 640px) {
+        .case-study {
+          grid-template-columns: 1fr;
+          gap: 1.5rem;
+        }
+      }
+      .cs-meta {
+        padding-top: 0.25rem;
+      }
       .cs-tag {
         font-family: 'Arial', sans-serif;
         font-size: 0.75rem;
@@ -122,7 +145,9 @@ const metadata = {
         margin-top: 1rem;
         line-height: 1.6;
       }
-      .cs-result strong { color: #2563eb; }
+      .cs-result strong {
+        color: #2563eb;
+      }
       .coming-soon {
         border-top: 1px solid #e5e5e5;
         padding: 3rem 0;
@@ -182,7 +207,10 @@ const metadata = {
     <div class="page-header">
       <p class="eyebrow">Selected Work</p>
       <h1>Case Studies</h1>
-      <p>A selection of projects across FinTech, SaaS, and technical training. Each project is measured by adoption outcomes and behavior change — not course completions.</p>
+      <p>
+        A selection of projects across FinTech, SaaS, and technical training. Each project is measured by adoption
+        outcomes and behavior change — not course completions.
+      </p>
     </div>
 
     <div class="case-studies">
@@ -193,10 +221,19 @@ const metadata = {
         </div>
         <div class="cs-content">
           <h2>High-Risk Employee Offboarding — Branching Scenario</h2>
-          <p>HR managers at financial organizations face high-stakes offboarding decisions where wrong choices carry real legal and financial consequences. Traditional policy training wasn't changing behavior — managers knew the rules but still made the wrong call under pressure.</p>
-          <p>We designed a consequence-driven branching scenario in Articulate Storyline 360 with custom JavaScript trigger logic. Wrong decisions produce sourced financial impact screens — real breach cost data tied to each specific choice — before the learner can retry. The discomfort is intentional. That's the learning.</p>
+          <p>
+            HR managers at financial organizations face high-stakes offboarding decisions where wrong choices carry real
+            legal and financial consequences. Traditional policy training wasn't changing behavior — managers knew the
+            rules but still made the wrong call under pressure.
+          </p>
+          <p>
+            We designed a consequence-driven branching scenario in Articulate Storyline 360 with custom JavaScript
+            trigger logic. Wrong decisions produce sourced financial impact screens — real breach cost data tied to each
+            specific choice — before the learner can retry. The discomfort is intentional. That's the learning.
+          </p>
           <div class="cs-result">
-            <strong>Result:</strong> Learners experience the financial consequence of their decision before seeing the correct path — producing lasting behavior change rather than policy memorization.
+            <strong>Result:</strong> Learners experience the financial consequence of their decision before seeing the correct
+            path — producing lasting behavior change rather than policy memorization.
           </div>
         </div>
       </div>
@@ -208,17 +245,25 @@ const metadata = {
         </div>
         <div class="cs-content">
           <h2>AI-Assisted Developer Curriculum — Chegg Skills</h2>
-          <p>Chegg Skills needed to modernize their Web Development certification program to incorporate AI-assisted development workflows — teaching developers not just how to code, but how to work alongside AI tools productively.</p>
-          <p>We served as Subject Matter Expert and curriculum designer — creating AI Activity Briefs, Blended AI Activities, demo media scripts, storyboards, knowledge checks, and live lessons integrated across Articulate Rise 360 and Contentful CMS. The curriculum teaches developers how to become AI-assisted engineers, not just prompt writers.</p>
+          <p>
+            Chegg Skills needed to modernize their Web Development certification program to incorporate AI-assisted
+            development workflows — teaching developers not just how to code, but how to work alongside AI tools
+            productively.
+          </p>
+          <p>
+            We served as Subject Matter Expert and curriculum designer — creating AI Activity Briefs, Blended AI
+            Activities, demo media scripts, storyboards, knowledge checks, and live lessons integrated across Articulate
+            Rise 360 and Contentful CMS. The curriculum teaches developers how to become AI-assisted engineers, not just
+            prompt writers.
+          </p>
           <div class="cs-result">
-            <strong>Result:</strong> Full CGG15 Web Development certification curriculum redesigned around AI-native developer workflows, deployed at scale across Chegg Skills' enterprise client base.
+            <strong>Result:</strong> Full CGG15 Web Development certification curriculum redesigned around AI-native developer
+            workflows, deployed at scale across Chegg Skills' enterprise client base.
           </div>
         </div>
       </div>
 
-      <div class="coming-soon">
-        Additional case studies coming soon as client engagements are completed.
-      </div>
+      <div class="coming-soon">Additional case studies coming soon as client engagements are completed.</div>
     </div>
 
     <div class="cta-band">

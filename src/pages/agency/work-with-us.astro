@@ -14,8 +14,16 @@ const metadata = {
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{metadata.title}</title>
     <style>
-      * { box-sizing: border-box; margin: 0; padding: 0; }
-      body { font-family: 'Georgia', serif; background: #ffffff; color: #1a1a1a; }
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font-family: 'Georgia', serif;
+        background: #ffffff;
+        color: #1a1a1a;
+      }
       nav {
         display: flex;
         justify-content: space-between;
@@ -31,8 +39,14 @@ const metadata = {
         color: #1a1a1a;
         text-decoration: none;
       }
-      nav .logo span { color: #2563eb; }
-      nav ul { list-style: none; display: flex; gap: 2rem; }
+      nav .logo span {
+        color: #2563eb;
+      }
+      nav ul {
+        list-style: none;
+        display: flex;
+        gap: 2rem;
+      }
       nav ul a {
         text-decoration: none;
         color: #444;
@@ -40,7 +54,9 @@ const metadata = {
         font-size: 0.9rem;
         letter-spacing: 0.03em;
       }
-      nav ul a:hover { color: #2563eb; }
+      nav ul a:hover {
+        color: #2563eb;
+      }
       .page-wrap {
         max-width: 860px;
         margin: 0 auto;
@@ -50,7 +66,12 @@ const metadata = {
         gap: 5rem;
         align-items: start;
       }
-      @media (max-width: 700px) { .page-wrap { grid-template-columns: 1fr; gap: 3rem; } }
+      @media (max-width: 700px) {
+        .page-wrap {
+          grid-template-columns: 1fr;
+          gap: 3rem;
+        }
+      }
       .eyebrow {
         font-family: 'Arial', sans-serif;
         font-size: 0.78rem;
@@ -129,7 +150,9 @@ const metadata = {
         text-decoration: none;
         margin-bottom: 1.5rem;
       }
-      .contact-card a.email-link:hover { background: #1d4ed8; }
+      .contact-card a.email-link:hover {
+        background: #1d4ed8;
+      }
       .what-to-include h3 {
         font-family: 'Arial', sans-serif;
         font-size: 0.78rem;
@@ -174,8 +197,14 @@ const metadata = {
       <div class="left">
         <p class="eyebrow">Get Started</p>
         <h1>Let's build something that works.</h1>
-        <p>We take on a small number of projects at a time to ensure focused, high-quality delivery. If your project is a fit, we'll respond within one business day to schedule a scoping call.</p>
-        <p>All engagements begin with a paid discovery phase so we can scope your project accurately before committing to a full development timeline.</p>
+        <p>
+          We take on a small number of projects at a time to ensure focused, high-quality delivery. If your project is a
+          fit, we'll respond within one business day to schedule a scoping call.
+        </p>
+        <p>
+          All engagements begin with a paid discovery phase so we can scope your project accurately before committing to
+          a full development timeline.
+        </p>
 
         <div class="detail-list">
           <div class="detail-item">
