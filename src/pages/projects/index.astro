@@ -238,27 +238,19 @@ const devOnlyIdItems = import.meta.env.DEV
 
 const featured = [
   {
+    icon: 'tabler:shield-lock',
+    title: 'The High-Risk Offboarding — Storyline Branching Scenario',
+    description:
+      "A compliance branching scenario for HR and IT leaders — three decisions tracking data security, legal compliance, and chain of custody, with a custom JavaScript-generated audit report personalized to the learner's exact decision path.",
+    href: '/projects/high-risk-offboarding-storyline',
+    label: 'View Case Study',
+  },
+  {
     icon: 'tabler:robot',
     title: 'Claude Model Showdown — Engineering A/B Tests with Haiku, Sonnet, and Opus',
     description:
       'A scenario-driven Rise 360 course for professional software engineers — three branching decisions, real consequences, and a debrief connecting Claude model selection to business outcomes. Built for enterprise AI workshop facilitation contexts.',
     href: '/projects/claude-model-showdown',
-    label: 'View Case Study',
-  },
-  {
-    icon: 'tabler:sparkles',
-    title: 'Work Smarter with Gemini — Rise 360 Portfolio Course',
-    description:
-      'A self-paced Rise 360 course demonstrating modern AI tool integration for a large health organization — practical, learner-centered design built with Articulate Rise 360 after completing LearningMate training.',
-    href: '/projects/gemini-rise-course',
-    label: 'View Project',
-  },
-  {
-    icon: 'tabler:brand-javascript',
-    title: 'JavaScript & xAPI for eLearning',
-    description:
-      'A fully designed mini-course bridging JavaScript skills and xAPI for eLearning professionals — capstone for a Graduate Certificate in Learning Design & Technology, covering SCORM alternatives and statement design.',
-    href: '/projects/javascript-xapi-elearning',
     label: 'View Case Study',
   },
   {
@@ -276,14 +268,6 @@ const featured = [
       'A published microlearning Byte on Rumie-Learn — a free global OER platform reaching learners across 180+ countries. A 4-step, under-10-minute experience built for a mixed-literacy global audience and refined through a structured two-tier peer review process.',
     href: '/projects/rumie-travel-anxiety-byte',
     label: 'View Project',
-  },
-  {
-    icon: 'tabler:shield-lock',
-    title: 'The High-Risk Offboarding — Storyline Branching Scenario',
-    description:
-      "A compliance branching scenario for HR and IT leaders — three decisions tracking data security, legal compliance, and chain of custody, with a custom JavaScript-generated audit report personalized to the learner's exact decision path.",
-    href: '/projects/high-risk-offboarding-storyline',
-    label: 'View Case Study',
   },
 ];
 ---
@@ -559,10 +543,10 @@ const featured = [
       <p class="text-sm font-bold uppercase tracking-widest text-accent mb-2">Featured Work</p>
       <h2 class="text-3xl md:text-4xl font-bold font-heading tracking-tighter">Selected highlights</h2>
       <p class="text-muted mt-3 text-lg max-w-2xl mx-auto">
-        Three pieces that show the range — eLearning development, instructional design, and technical problem-solving.
+        Four pieces that show the range — Storyline development, AI-native curriculum design, technical problem-solving, and global microlearning.
       </p>
     </div>
-    <div class="grid md:grid-cols-3 gap-6">
+    <div class="grid md:grid-cols-2 gap-6">
       {
         featured.map((item) => (
           <a
@@ -605,11 +589,25 @@ const featured = [
     columns={2}
     items={[
       {
+        title: 'The High-Risk Offboarding — Storyline Branching Scenario',
+        description:
+          "A compliance branching scenario for HR and IT leaders — three decisions tracking data security, legal compliance, and chain of custody, with a custom JavaScript-generated audit report personalized to the learner's exact decision path.",
+        icon: 'tabler:shield-lock',
+        callToAction: { text: 'View Case Study', href: '/projects/high-risk-offboarding-storyline' },
+      },
+      {
         title: 'SME — Chegg Skills Web Development Certification',
         description:
           'An ongoing SME contract with LearningMate reviewing and validating course design documents — module manifests, scripts, storyboards, and assessments — for a Git and GitHub certification program at Chegg Skills, bringing both technical and instructional design judgment to content before it enters Rise 360 production.',
         icon: 'tabler:git-branch',
         callToAction: { text: 'View Case Study', href: '/projects/learningmate-chegg-skills-sme' },
+      },
+      {
+        title: 'How I Dealt with Travel Anxiety — Rumie Microlearning Byte',
+        description:
+          'A published microlearning Byte on Rumie-Learn — a free global OER platform reaching learners across 180+ countries. A 4-step, under-10-minute experience built for a mixed-literacy global audience and refined through a structured two-tier peer review process.',
+        icon: 'tabler:world',
+        callToAction: { text: 'View Project', href: '/projects/rumie-travel-anxiety-byte' },
       },
       {
         title: 'Work Smarter with Gemini — Rise 360 Portfolio Course',
@@ -626,67 +624,11 @@ const featured = [
         callToAction: { text: 'View Case Study', href: '/projects/javascript-xapi-elearning' },
       },
       {
-        title: 'ChatGPT as an AI-Powered Learning Tool',
-        description:
-          'A research-backed evaluation and 3-phase implementation strategy for integrating ChatGPT into technical SaaS customer education — including a practical AI Tool Guide for learning designers. UMGC LDTC 620.',
-        icon: 'tabler:robot',
-        callToAction: { text: 'View Case Study', href: '/projects/ldtc620-chatgpt-ai-tool' },
-      },
-      {
-        title: 'Social & Collaborative Learning Spaces',
-        description:
-          "An applied analysis of Bandura's Social Learning Theory across GitHub, Slack, Discord, AI coding tools, LinkedIn Learning, and YouTube — examining how each platform activates the conditions adult learners need to observe, retain, and reproduce new technical skills. UMGC LDTC 620.",
-        icon: 'tabler:users',
-        callToAction: { text: 'View Case Study', href: '/projects/ldtc620-social-learning-tech' },
-      },
-      {
-        title: 'Learning Technology Infographic',
-        description:
-          'A visual synthesis of learning technology frameworks — SAMR, the Hype Cycle, and Articulate Rise 360 — designed in Canva as the Unit 1 assignment for LDTC 620: Next Generation Design — Emerging Technology, Gamification, and AI in Learning Design at UMGC.',
-        icon: 'tabler:layout',
-        callToAction: { text: 'View Project', href: '/projects/ldtc620-infographic' },
-      },
-      {
         title: 'Chrome Extension — Udacity Career Materials Reviewer',
         description:
           'A custom-built Chrome extension that reduced average career materials review time by 80% — from one hour to twenty minutes — by automating repetitive form entry at Udacity.',
         icon: 'tabler:puzzle',
         callToAction: { text: 'View Case Study', href: '/projects/chrome-extension-udacity' },
-      },
-      {
-        title: 'Epic React Step-by-Step Guides — Masterschool',
-        description:
-          'Recorded a series of Loom screencast walkthroughs for Masterschool students onboarding to Epic React — covering account verification, login, and navigating the lesson environment to remove friction before the first lesson.',
-        icon: 'tabler:video',
-        callToAction: { text: 'View Case Study', href: '/projects/masterschool-epic-react' },
-      },
-      {
-        title: 'Build a Shopping Cart — Masterschool Project Walkthrough',
-        description:
-          'A step-by-step Loom screencast walkthrough for Masterschool students working through the Build a Shopping Cart project on the Udacity platform — guiding them from project setup through to completion.',
-        icon: 'tabler:shopping-cart',
-        callToAction: { text: 'View Case Study', href: '/projects/masterschool-shopping-cart' },
-      },
-      {
-        title: 'Peer to Peer: Pair Programming with Epic React — Masterschool',
-        description:
-          'A live presentation delivered to Masterschool students introducing pair programming as a structured learning strategy — covering the driver/navigator model, productive struggle, and how to collaborate effectively in the Epic React Testing Workshop.',
-        icon: 'tabler:users',
-        callToAction: { text: 'View Case Study', href: '/projects/masterschool-pair-programming' },
-      },
-      {
-        title: 'How I Dealt with Travel Anxiety — Rumie Microlearning Byte',
-        description:
-          'A published microlearning Byte on Rumie-Learn — a free global OER platform reaching learners across 180+ countries. A 4-step, under-10-minute experience built for a mixed-literacy global audience and refined through a structured two-tier peer review process.',
-        icon: 'tabler:world',
-        callToAction: { text: 'View Project', href: '/projects/rumie-travel-anxiety-byte' },
-      },
-      {
-        title: 'The High-Risk Offboarding — Storyline Branching Scenario',
-        description:
-          "A compliance branching scenario for HR and IT leaders — three decisions tracking data security, legal compliance, and chain of custody, with a custom JavaScript-generated audit report personalized to the learner's exact decision path.",
-        icon: 'tabler:shield-lock',
-        callToAction: { text: 'View Case Study', href: '/projects/high-risk-offboarding-storyline' },
       },
       ...devOnlyIdItems,
     ]}

@@ -1,0 +1,224 @@
+---
+if (!import.meta.env.DEV) return Astro.redirect('/404');
+
+const metadata = {
+  title: 'Work With Us — Root Branch Learning Studio',
+  ignoreTitleTemplate: true,
+};
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{metadata.title}</title>
+    <style>
+      * { box-sizing: border-box; margin: 0; padding: 0; }
+      body { font-family: 'Georgia', serif; background: #ffffff; color: #1a1a1a; }
+      nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1.5rem 3rem;
+        border-bottom: 1px solid #e5e5e5;
+      }
+      nav .logo {
+        font-family: 'Georgia', serif;
+        font-size: 1.1rem;
+        font-weight: normal;
+        letter-spacing: 0.02em;
+        color: #1a1a1a;
+        text-decoration: none;
+      }
+      nav .logo span { color: #2563eb; }
+      nav ul { list-style: none; display: flex; gap: 2rem; }
+      nav ul a {
+        text-decoration: none;
+        color: #444;
+        font-family: 'Arial', sans-serif;
+        font-size: 0.9rem;
+        letter-spacing: 0.03em;
+      }
+      nav ul a:hover { color: #2563eb; }
+      .page-wrap {
+        max-width: 860px;
+        margin: 0 auto;
+        padding: 5rem 2rem 6rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 5rem;
+        align-items: start;
+      }
+      @media (max-width: 700px) { .page-wrap { grid-template-columns: 1fr; gap: 3rem; } }
+      .eyebrow {
+        font-family: 'Arial', sans-serif;
+        font-size: 0.78rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: #2563eb;
+        margin-bottom: 1rem;
+      }
+      .left h1 {
+        font-size: clamp(1.8rem, 4vw, 2.4rem);
+        font-weight: normal;
+        color: #111;
+        margin-bottom: 1.5rem;
+        line-height: 1.25;
+      }
+      .left p {
+        font-family: 'Arial', sans-serif;
+        font-size: 0.95rem;
+        color: #666;
+        line-height: 1.75;
+        margin-bottom: 1.25rem;
+      }
+      .detail-list {
+        margin-top: 2rem;
+        border-top: 1px solid #e5e5e5;
+      }
+      .detail-item {
+        padding: 1rem 0;
+        border-bottom: 1px solid #e5e5e5;
+        display: flex;
+        gap: 1rem;
+      }
+      .detail-label {
+        font-family: 'Arial', sans-serif;
+        font-size: 0.78rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: #999;
+        min-width: 100px;
+        padding-top: 0.1rem;
+      }
+      .detail-value {
+        font-family: 'Arial', sans-serif;
+        font-size: 0.9rem;
+        color: #444;
+        line-height: 1.5;
+      }
+      .contact-card {
+        background: #f8f9fc;
+        padding: 2.5rem;
+        position: sticky;
+        top: 2rem;
+      }
+      .contact-card h2 {
+        font-size: 1.2rem;
+        font-weight: normal;
+        color: #111;
+        margin-bottom: 0.5rem;
+      }
+      .contact-card p {
+        font-family: 'Arial', sans-serif;
+        font-size: 0.88rem;
+        color: #666;
+        line-height: 1.65;
+        margin-bottom: 2rem;
+      }
+      .contact-card a.email-link {
+        display: block;
+        background: #2563eb;
+        color: #fff;
+        text-align: center;
+        padding: 0.9rem 1rem;
+        font-family: 'Arial', sans-serif;
+        font-size: 0.9rem;
+        letter-spacing: 0.04em;
+        text-decoration: none;
+        margin-bottom: 1.5rem;
+      }
+      .contact-card a.email-link:hover { background: #1d4ed8; }
+      .what-to-include h3 {
+        font-family: 'Arial', sans-serif;
+        font-size: 0.78rem;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: #999;
+        margin-bottom: 0.75rem;
+      }
+      .what-to-include ul {
+        list-style: none;
+        font-family: 'Arial', sans-serif;
+        font-size: 0.88rem;
+        color: #555;
+        line-height: 1.8;
+      }
+      .what-to-include ul li::before {
+        content: '→ ';
+        color: #2563eb;
+      }
+      footer {
+        border-top: 1px solid #e5e5e5;
+        padding: 2rem 3rem;
+        font-family: 'Arial', sans-serif;
+        font-size: 0.8rem;
+        color: #999;
+        display: flex;
+        justify-content: space-between;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <a href="/agency" class="logo">Root Branch <span>Learning Studio</span></a>
+      <ul>
+        <li><a href="/agency/services">Services</a></li>
+        <li><a href="/agency/case-studies">Work</a></li>
+        <li><a href="/agency/work-with-us">Work With Us</a></li>
+      </ul>
+    </nav>
+
+    <div class="page-wrap">
+      <div class="left">
+        <p class="eyebrow">Get Started</p>
+        <h1>Let's build something that works.</h1>
+        <p>We take on a small number of projects at a time to ensure focused, high-quality delivery. If your project is a fit, we'll respond within one business day to schedule a scoping call.</p>
+        <p>All engagements begin with a paid discovery phase so we can scope your project accurately before committing to a full development timeline.</p>
+
+        <div class="detail-list">
+          <div class="detail-item">
+            <span class="detail-label">Rates</span>
+            <span class="detail-value">$65–$125/hr depending on engagement type and scope</span>
+          </div>
+          <div class="detail-item">
+            <span class="detail-label">Structure</span>
+            <span class="detail-value">Project-based or retainer. C2C and 1099 accepted.</span>
+          </div>
+          <div class="detail-item">
+            <span class="detail-label">Timeline</span>
+            <span class="detail-value">Most projects begin within 2–4 weeks of scoping</span>
+          </div>
+          <div class="detail-item">
+            <span class="detail-label">Location</span>
+            <span class="detail-value">Fully remote. U.S.-based clients preferred.</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="right">
+        <div class="contact-card">
+          <h2>Start the conversation</h2>
+          <p>Send us a brief overview of your project and we'll follow up to schedule a scoping call.</p>
+          <a href="mailto:hello@rootbranchlearning.com" class="email-link">hello@rootbranchlearning.com</a>
+          <div class="what-to-include">
+            <h3>What to include</h3>
+            <ul>
+              <li>Your organization and industry</li>
+              <li>What you're trying to build</li>
+              <li>Your target audience</li>
+              <li>Rough timeline and budget range</li>
+              <li>Any tools or LMS requirements</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <span>© 2026 Root Branch Learning Studio</span>
+      <span>rootbranchlearning.com</span>
+    </footer>
+  </body>
+</html>

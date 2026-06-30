@@ -1,0 +1,256 @@
+---
+if (!import.meta.env.DEV) return Astro.redirect('/404');
+
+const metadata = {
+  title: 'Root Branch Learning Studio',
+  ignoreTitleTemplate: true,
+};
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{metadata.title}</title>
+    <style>
+      * { box-sizing: border-box; margin: 0; padding: 0; }
+      body { font-family: 'Georgia', serif; background: #ffffff; color: #1a1a1a; }
+      nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1.5rem 3rem;
+        border-bottom: 1px solid #e5e5e5;
+      }
+      nav .logo {
+        font-family: 'Georgia', serif;
+        font-size: 1.1rem;
+        font-weight: normal;
+        letter-spacing: 0.02em;
+        color: #1a1a1a;
+        text-decoration: none;
+      }
+      nav .logo span { color: #2563eb; }
+      nav ul {
+        list-style: none;
+        display: flex;
+        gap: 2rem;
+      }
+      nav ul a {
+        text-decoration: none;
+        color: #444;
+        font-family: 'Arial', sans-serif;
+        font-size: 0.9rem;
+        letter-spacing: 0.03em;
+      }
+      nav ul a:hover { color: #2563eb; }
+      .hero {
+        max-width: 860px;
+        margin: 0 auto;
+        padding: 6rem 2rem 5rem;
+        text-align: left;
+      }
+      .eyebrow {
+        font-family: 'Arial', sans-serif;
+        font-size: 0.78rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: #2563eb;
+        margin-bottom: 1.5rem;
+      }
+      .hero h1 {
+        font-size: clamp(2.2rem, 5vw, 3.4rem);
+        font-weight: normal;
+        line-height: 1.2;
+        color: #111;
+        margin-bottom: 1.5rem;
+        letter-spacing: -0.01em;
+      }
+      .hero h1 em { font-style: italic; color: #2563eb; }
+      .hero p {
+        font-family: 'Arial', sans-serif;
+        font-size: 1.1rem;
+        line-height: 1.75;
+        color: #555;
+        max-width: 620px;
+        margin-bottom: 2.5rem;
+      }
+      .cta-row { display: flex; gap: 1rem; flex-wrap: wrap; }
+      .btn-primary {
+        background: #2563eb;
+        color: #fff;
+        padding: 0.85rem 2rem;
+        font-family: 'Arial', sans-serif;
+        font-size: 0.9rem;
+        letter-spacing: 0.04em;
+        text-decoration: none;
+        border: none;
+        cursor: pointer;
+      }
+      .btn-secondary {
+        background: transparent;
+        color: #2563eb;
+        padding: 0.85rem 2rem;
+        font-family: 'Arial', sans-serif;
+        font-size: 0.9rem;
+        letter-spacing: 0.04em;
+        text-decoration: none;
+        border: 1px solid #2563eb;
+      }
+      .divider {
+        border: none;
+        border-top: 1px solid #e5e5e5;
+        max-width: 860px;
+        margin: 0 auto;
+      }
+      .niches {
+        max-width: 860px;
+        margin: 0 auto;
+        padding: 5rem 2rem;
+      }
+      .niches h2 {
+        font-size: 1.6rem;
+        font-weight: normal;
+        margin-bottom: 0.75rem;
+        color: #111;
+      }
+      .niches .sub {
+        font-family: 'Arial', sans-serif;
+        font-size: 0.95rem;
+        color: #666;
+        margin-bottom: 3rem;
+        line-height: 1.6;
+      }
+      .niche-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+      }
+      @media (max-width: 640px) { .niche-grid { grid-template-columns: 1fr; } }
+      .niche-card {
+        border: 1px solid #e5e5e5;
+        padding: 2rem;
+      }
+      .niche-card h3 {
+        font-size: 1.05rem;
+        font-weight: normal;
+        margin-bottom: 0.75rem;
+        color: #111;
+      }
+      .niche-card p {
+        font-family: 'Arial', sans-serif;
+        font-size: 0.9rem;
+        color: #666;
+        line-height: 1.65;
+      }
+      .why {
+        background: #f8f9fc;
+        padding: 5rem 2rem;
+      }
+      .why-inner {
+        max-width: 860px;
+        margin: 0 auto;
+      }
+      .why h2 {
+        font-size: 1.6rem;
+        font-weight: normal;
+        margin-bottom: 3rem;
+        color: #111;
+      }
+      .why-list {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 2rem;
+      }
+      @media (max-width: 768px) { .why-list { grid-template-columns: 1fr; } }
+      .why-item h4 {
+        font-size: 0.95rem;
+        font-weight: bold;
+        font-family: 'Arial', sans-serif;
+        margin-bottom: 0.5rem;
+        color: #111;
+      }
+      .why-item p {
+        font-family: 'Arial', sans-serif;
+        font-size: 0.88rem;
+        color: #666;
+        line-height: 1.65;
+      }
+      footer {
+        border-top: 1px solid #e5e5e5;
+        padding: 2rem 3rem;
+        font-family: 'Arial', sans-serif;
+        font-size: 0.8rem;
+        color: #999;
+        display: flex;
+        justify-content: space-between;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <a href="/agency" class="logo">Root Branch <span>Learning Studio</span></a>
+      <ul>
+        <li><a href="/agency/services">Services</a></li>
+        <li><a href="/agency/case-studies">Work</a></li>
+        <li><a href="/agency/work-with-us">Work With Us</a></li>
+      </ul>
+    </nav>
+
+    <section class="hero">
+      <p class="eyebrow">Boutique L&D Agency</p>
+      <h1>Technical training for teams building <em>complex things.</em></h1>
+      <p>
+        Root Branch Learning Studio designs and develops eLearning for FinTech, SaaS, and software engineering audiences.
+        We specialize in the training that's hardest to build — branching scenarios, developer onboarding, AI adoption curriculum, and technical upskilling at scale.
+      </p>
+      <div class="cta-row">
+        <a href="/agency/work-with-us" class="btn-primary">Start a Project</a>
+        <a href="/agency/case-studies" class="btn-secondary">See Our Work</a>
+      </div>
+    </section>
+
+    <hr class="divider" />
+
+    <section class="niches">
+      <h2>Two domains. Deep expertise.</h2>
+      <p class="sub">Most agencies go wide. We go deep in the two areas where training is most technically complex and most consequential.</p>
+      <div class="niche-grid">
+        <div class="niche-card">
+          <h3>FinTech & Financial Services</h3>
+          <p>Compliance training, financial product onboarding, and regulatory curriculum for teams who can't afford to get it wrong. Our accounting and financial domain knowledge means we don't just design the training — we understand the content.</p>
+        </div>
+        <div class="niche-card">
+          <h3>Technical & Software Engineering Training</h3>
+          <p>Developer onboarding, platform adoption, and upskilling curriculum for software engineering audiences. We've taught full-stack development and built AI-assisted developer training — we speak the language of the people you're training.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="why">
+      <div class="why-inner">
+        <h2>Why Root Branch</h2>
+        <div class="why-list">
+          <div class="why-item">
+            <h4>We code.</h4>
+            <p>Four years of frontend development means we build custom interactions, JavaScript logic, and technical simulations that most ID agencies can't touch.</p>
+          </div>
+          <div class="why-item">
+            <h4>We use AI natively.</h4>
+            <p>Claude, Gemini, and NotebookLM are woven into our production workflow — not as a gimmick, but to deliver faster and iterate more efficiently than traditional agencies.</p>
+          </div>
+          <div class="why-item">
+            <h4>We measure outcomes.</h4>
+            <p>We design for behavior change and adoption metrics, not course completions. Our work is tied to the results that matter to your business.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <span>© 2026 Root Branch Learning Studio</span>
+      <span>rootbranchlearning.com</span>
+    </footer>
+  </body>
+</html>
