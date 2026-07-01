@@ -1,3 +1,870 @@
 ---
-return Astro.redirect('/about', 301);
+import Layout from '~/layouts/PageLayout.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import P1 from '~/assets/images/P1.png';
+import P3 from '~/assets/images/P3.png';
+import profileImage from '~/assets/images/profile-bust.png';
+import splashHero from '~/assets/images/splash-hero.png';
+
+const metadata = {
+  title: 'Jonathan Root — Learning Experience Designer',
+  ignoreTitleTemplate: true,
+};
 ---
+
+<Layout metadata={metadata}>
+  <!-- What I Do -->
+  <div class="relative py-16 md:py-20 hero-section" style="min-height: 71vh;">
+    <style define:vars={{ splashHeroSrc: `url('${splashHero.src}')` }}>
+      @media (min-width: 768px) {
+        .hero-section {
+          background-image: var(--splashHeroSrc);
+          background-repeat: round;
+          background-size: cover;
+          background-position: left;
+        }
+      }
+    </style>
+
+    <!-- Veils to keep text readable -->
+    <div class="absolute inset-0 pointer-events-none block dark:hidden bg-white/88" aria-hidden="true"></div>
+    <div class="absolute inset-0 pointer-events-none hidden dark:block bg-gray-950/82" aria-hidden="true"></div>
+
+    <div class="relative mx-auto max-w-7xl px-4 md:px-8">
+      <div class="mb-10 text-center max-w-2xl mx-auto">
+        <p class="text-base text-secondary font-bold tracking-wide uppercase mb-2">What I Do</p>
+        <h2 class="text-4xl md:text-5xl font-bold tracking-tighter font-heading mb-6">
+          <span
+            class="inline-block bg-gradient-to-r from-purple-500 via-pink-500 to-indigo-500 bg-clip-text text-transparent pb-[0.1em]"
+            >I help people learn.</span
+          >
+        </h2>
+        <p class="text-lg md:text-xl text-gray-800 mb-6 text-justify">
+          Great products are built by many people in different roles, and I value every one of them. In the classroom I
+          worked alongside TAs, fellow instructors, program leads, and student success managers to help learners
+          succeed. At LearningMate I contribute under a senior instructional designer, a project manager, and the ID I'm
+          paired with. I respect that structure and do my best work inside it, contributing where I'm needed and
+          learning from the people around me.
+        </p>
+        <blockquote
+          class="my-8 border-l-4 border-accent pl-5 text-left text-xl md:text-2xl font-semibold italic text-gray-900"
+        >
+          I design and develop the interactive courseware that makes learning work.
+        </blockquote>
+        <p class="text-lg md:text-xl text-gray-800 mb-4 text-justify">
+          Eight years collaborating with product, design, and subject-matter teams, working at the intersection of
+          software development adult education, live instruction, and instructional design.
+        </p>
+        <p class="text-lg md:text-xl text-gray-800 mb-4 text-justify">
+          Now I design the learning itself: the structure, the sequence, the moment a concept clicks.
+        </p>
+        <p class="text-lg md:text-xl text-gray-800 mb-4 text-center">
+          I want my work to move people from knowing to doing.
+        </p>
+        <div class="mt-8 flex flex-col items-center gap-4">
+          <a
+            href="/projects"
+            class="inline-flex items-center gap-2 px-6 py-3 rounded-md bg-accent text-white font-semibold text-base hover:bg-accent/90 transition-colors duration-200 shadow-md"
+          >
+            See My Work
+          </a>
+          <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-green-100 border border-green-200">
+            <span class="relative flex h-2 w-2">
+              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-500 opacity-75"></span>
+              <span class="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
+            </span>
+            <span class="text-xs font-semibold text-green-800 tracking-wide">Open to remote opportunities</span>
+          </div>
+          <a
+            href="#featured"
+            aria-label="Scroll down to see featured work"
+            class="mt-6 text-muted hover:text-accent transition-colors"
+          >
+            <svg
+              class="w-7 h-7 animate-bounce"
+              style="animation-duration: 2.8s;"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="m6 9 6 6 6-6"></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Featured Project -->
+  <div id="featured" class="py-16 md:py-20 scroll-mt-20">
+    <div class="mx-auto max-w-7xl px-4 md:px-8">
+      <div class="text-center mb-10">
+        <p class="text-base text-secondary dark:text-blue-200 font-bold tracking-wide uppercase mb-2">
+          Featured Projects
+        </p>
+        <h2 class="text-4xl md:text-5xl font-bold tracking-tighter font-heading">Selected Work</h2>
+        <p class="text-lg text-muted mt-3">
+          Rise 360 courses, microlearning, and branching scenarios — built as portfolio pieces across eLearning formats.
+        </p>
+      </div>
+      <!-- High-Risk Offboarding — full-width, featured first -->
+      <div class="mb-12 flex flex-col">
+        <h3 class="text-xl font-bold font-heading mb-2 text-gray-900 dark:text-white">The High-Risk Offboarding</h3>
+        <p class="text-sm text-muted mb-4">
+          A compliance branching scenario for HR and IT leaders — three decisions, real consequences, and a
+          JavaScript-generated audit report personalized to your exact decision path
+        </p>
+        <div
+          class="relative w-full rounded-xl shadow-lg overflow-hidden border border-gray-200 dark:border-gray-700 mb-4"
+          style="padding-top: 62.5%;"
+        >
+          <iframe
+            class="absolute inset-0 w-full h-full"
+            src="/high-risk-offboarding-content/story.html"
+            title="The High-Risk Offboarding — Storyline Branching Scenario"
+            frameborder="0"
+            allowfullscreen></iframe>
+        </div>
+        <div class="flex flex-wrap gap-3">
+          <a
+            href="/projects/high-risk-offboarding-storyline"
+            class="inline-flex items-center gap-2 bg-accent hover:bg-accent/90 text-white font-semibold px-5 py-2.5 rounded-lg transition-colors text-sm"
+          >
+            View Case Study
+          </a>
+        </div>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-10 items-start">
+        <!-- Gemini Course -->
+        <div class="flex flex-col">
+          <h3 class="text-xl font-bold font-heading mb-2 text-gray-900 dark:text-white">Work Smarter with Gemini</h3>
+          <p class="text-sm text-muted mb-4 min-h-[2.5rem]">
+            A practical Rise 360 course on Gemini Gem creation for a large health organization
+          </p>
+          <div
+            class="relative w-full rounded-xl shadow-lg overflow-hidden border border-gray-200 dark:border-gray-700 mb-4"
+            style="padding-top: 62.5%;"
+          >
+            <iframe
+              class="absolute inset-0 w-full h-full"
+              src="/gemini-course"
+              title="Work Smarter with Gemini — Rise 360 Course"
+              frameborder="0"
+              allowfullscreen></iframe>
+          </div>
+          <div class="flex flex-wrap gap-3">
+            <a
+              href="/projects/gemini-rise-course"
+              class="inline-flex items-center gap-2 bg-accent hover:bg-accent/90 text-white font-semibold px-5 py-2.5 rounded-lg transition-colors text-sm"
+            >
+              View Case Study
+            </a>
+            <a
+              href="/gemini-course"
+              target="_blank"
+              rel="noopener"
+              class="inline-flex items-center gap-2 border-2 border-gray-300 dark:border-gray-600 text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-800 font-semibold px-5 py-2.5 rounded-lg transition-colors text-sm"
+            >
+              Open Course
+            </a>
+          </div>
+        </div>
+        <!-- Claude Model Showdown -->
+        <div class="flex flex-col">
+          <h3 class="text-xl font-bold font-heading mb-2 text-gray-900 dark:text-white">Claude Model Showdown</h3>
+          <p class="text-sm text-muted mb-4 min-h-[2.5rem]">
+            Engineering A/B Tests with Haiku, Sonnet, and Opus — scenario-based for enterprise engineering teams
+          </p>
+          <div
+            class="relative w-full rounded-xl shadow-lg overflow-hidden border border-gray-200 dark:border-gray-700 mb-4"
+            style="padding-top: 62.5%;"
+          >
+            <iframe
+              class="absolute inset-0 w-full h-full"
+              src="/claude-model-showdown"
+              title="Claude Model Showdown — Rise 360 Course"
+              frameborder="0"
+              allowfullscreen></iframe>
+          </div>
+          <div class="flex flex-wrap gap-3">
+            <a
+              href="/projects/claude-model-showdown"
+              class="inline-flex items-center gap-2 bg-accent hover:bg-accent/90 text-white font-semibold px-5 py-2.5 rounded-lg transition-colors text-sm"
+            >
+              View Case Study
+            </a>
+            <a
+              href="/claude-model-showdown"
+              target="_blank"
+              rel="noopener"
+              class="inline-flex items-center gap-2 border-2 border-gray-300 dark:border-gray-600 text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-800 font-semibold px-5 py-2.5 rounded-lg transition-colors text-sm"
+            >
+              Open Course
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Rumie Byte — full-width card below the 2-column grid -->
+      <div
+        class="mt-10 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 shadow-sm p-8 flex flex-col md:flex-row gap-8 items-start"
+      >
+        <div class="flex-1">
+          <p class="text-xs font-bold uppercase tracking-widest text-accent mb-2">Microlearning · OER · Published</p>
+          <h3 class="text-xl font-bold font-heading mb-2 text-gray-900 dark:text-white">
+            How I Dealt with Travel Anxiety — Rumie Byte
+          </h3>
+          <p class="text-sm text-muted mb-5">
+            A published microlearning Byte on Rumie-Learn — a free global OER platform reaching learners across 180+
+            countries. A 4-step, under-10-minute experience built for a mixed-literacy global audience and refined
+            through a structured two-tier peer review process.
+          </p>
+          <div class="flex flex-wrap gap-3">
+            <a
+              href="/projects/rumie-travel-anxiety-byte"
+              class="inline-flex items-center gap-2 bg-accent hover:bg-accent/90 text-white font-semibold px-5 py-2.5 rounded-lg transition-colors text-sm"
+            >
+              View Project
+            </a>
+            <a
+              href="https://learn.rumie.org/jR/bytes/how-i-dealt-with-travel-anxiety-in-4-healthy-steps/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center gap-2 border-2 border-gray-300 dark:border-gray-600 text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-800 font-semibold px-5 py-2.5 rounded-lg transition-colors text-sm"
+            >
+              Take the Byte
+            </a>
+          </div>
+        </div>
+        <div class="w-full md:w-72 shrink-0 space-y-3 text-sm">
+          {
+            [
+              { label: 'Platform', value: 'Rumie-Learn (OER)' },
+              { label: 'Format', value: '4 steps · under 10 min' },
+              { label: 'Audience', value: 'Global · 180+ countries' },
+              { label: 'Review', value: 'Two-tier peer review · Published' },
+            ].map(({ label, value }) => (
+              <div class="flex items-start gap-3 p-3 rounded-lg border border-gray-200 dark:border-gray-700">
+                <p class="font-semibold text-gray-700 dark:text-gray-300 w-20 shrink-0">{label}</p>
+                <p class="text-muted">{value}</p>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bio split layout -->
+  <div class="mx-auto max-w-7xl px-4 md:px-8 py-12 md:py-16">
+    <div class="grid md:grid-cols-2 gap-10 items-start">
+      <!-- Left: text + stats -->
+      <div>
+        <p class="text-base text-secondary dark:text-blue-200 font-bold tracking-wide uppercase mb-3">Background</p>
+        <h2 class="text-3xl md:text-4xl font-bold font-heading mb-6 text-gray-900 dark:text-white">
+          Technical depth meets instructional design craft
+        </h2>
+        <p class="text-lg text-gray-700 dark:text-gray-300 mb-4">
+          I design learning that earns its place — practical, technically grounded content that helps people <em
+            >do the thing</em
+          >, not just know about it.
+        </p>
+        <p class="text-lg text-gray-700 dark:text-gray-300 mb-8">
+          Over eight years I've worked across every layer of the stack: curriculum design, code, interactive courseware,
+          and live instruction for career-changers at global bootcamps and enterprise clients.
+        </p>
+        <p class="text-lg text-gray-700 dark:text-gray-300 mb-8">
+          I understand the technology well enough to build it, have taught it to hundreds, and now I'm part of an
+          instructional design team working on scaling learning to potentially thousands. I contribute where I'm needed,
+          glad to follow the team's lead, quick to learn its systems, and focused on turning complex content into
+          learning that actually works.
+        </p>
+        <div class="grid grid-cols-3 gap-4 border-t border-gray-200 dark:border-gray-700 pt-8">
+          {
+            [
+              { stat: '8', label: 'Years in Technical Adult Education & Instructional Design' },
+              { stat: '14+', label: 'Organizations worked with' },
+              { stat: 'M.S.', label: 'Learning Design & Technology' },
+            ].map(({ stat, label }) => (
+              <div>
+                <p class="text-3xl md:text-4xl font-bold font-heading text-accent leading-none">{stat}</p>
+                <p class="text-sm text-muted mt-2 leading-snug">{label}</p>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+
+      <!-- Right: media bento -->
+      <div class="space-y-3">
+        <a
+          href="/projects/mentoring-students-disabilities"
+          class="group relative block overflow-hidden rounded-xl aspect-video bg-gray-100 dark:bg-gray-800"
+        >
+          <img
+            src={P1.src}
+            alt="Jonathan Root leading a live webinar on mentoring students with disabilities for OpenClassrooms"
+            class="w-full h-full object-cover transition-opacity duration-300 group-hover:opacity-60"
+          />
+          <div
+            class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+          >
+            <span class="bg-white text-gray-900 font-semibold text-sm px-4 py-2 rounded-full shadow-md"
+              >View Case Study</span
+            >
+          </div>
+        </a>
+        <div class="grid grid-cols-2 gap-3">
+          <a
+            href="/projects/javascript-xapi-elearning"
+            class="group relative block overflow-hidden rounded-xl aspect-video bg-gray-100 dark:bg-gray-800"
+          >
+            <img
+              src="https://i.ytimg.com/vi/N9855IeKoK4/maxresdefault.jpg"
+              alt="JavaScript and xAPI for eLearning — course overview video"
+              class="w-full h-full object-cover transition-opacity duration-300 group-hover:opacity-60"
+              onerror="this.src='https://i.ytimg.com/vi/N9855IeKoK4/hqdefault.jpg'"
+            />
+            <div class="absolute inset-0 flex items-center justify-center">
+              <div
+                class="w-12 h-8 flex items-center justify-center rounded-lg group-hover:opacity-0 transition-opacity duration-300"
+                style="background: rgba(33,33,33,0.8);"
+              >
+                <svg class="w-4 h-4 text-white" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M8 5v14l11-7z"></path>
+                </svg>
+              </div>
+            </div>
+            <div
+              class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+            >
+              <span class="bg-white text-gray-900 font-semibold text-sm px-4 py-2 rounded-full shadow-md"
+                >View Case Study</span
+              >
+            </div>
+          </a>
+          <a
+            href="/projects/chegg-technical-expert"
+            class="group relative block overflow-hidden rounded-xl aspect-video bg-gray-100 dark:bg-gray-800"
+          >
+            <img
+              src={P3.src}
+              alt="One-on-one technical expert session at Chegg Skills — live code review via Zoom"
+              class="w-full h-full object-cover transition-opacity duration-300 group-hover:opacity-60"
+            />
+            <div
+              class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+            >
+              <span class="bg-white text-gray-900 font-semibold text-sm px-4 py-2 rounded-full shadow-md"
+                >View Case Study</span
+              >
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Areas of Expertise -->
+  <Features3
+    tagline="Skill Set"
+    title="Areas of Expertise"
+    subtitle="A cross-disciplinary skill set spanning design, development, and learning science."
+    columns={3}
+    items={[
+      {
+        title: 'AI Content Creation',
+        description:
+          'Creating, writing, reviewing, and integrating AI-generated content for accuracy, clarity, and instructional quality — ensuring outputs meet learning objectives.',
+        icon: 'tabler:sparkles',
+      },
+      {
+        title: 'Instructional Design',
+        description:
+          'Designing structured, outcome-driven learning experiences grounded in established frameworks like ADDIE, SAM, and constructivist learning theory.',
+        icon: 'tabler:clipboard-list',
+      },
+      {
+        title: 'eLearning Development',
+        description:
+          'Building interactive courses in Articulate Storyline and Rise 360, extended with custom JavaScript for dynamic behavior and xAPI for rich data tracking.',
+        icon: 'tabler:device-laptop',
+      },
+      {
+        title: 'Technical Learning Content',
+        description:
+          'Translating complex technical systems — APIs, developer tools, software workflows — into clear, engaging content for technical and non-technical audiences alike.',
+        icon: 'tabler:file-description',
+      },
+      {
+        title: 'Curriculum & Course Design',
+        description:
+          'Learning objectives, assessment alignment, and course architecture from concept through delivery.',
+        icon: 'tabler:layout-dashboard',
+      },
+      {
+        title: 'JavaScript for eLearning',
+        description:
+          'Custom interactions, DOM manipulation, and dynamic content within authoring tools and HTML-based modules.',
+        icon: 'tabler:brand-javascript',
+      },
+      {
+        title: 'xAPI & Learning Analytics',
+        description:
+          'Designing and implementing xAPI statements to capture rich learner behavior data beyond basic completion metrics.',
+        icon: 'tabler:chart-bar',
+      },
+      {
+        title: 'Web Development',
+        description:
+          'HTML, CSS, and JavaScript for custom learning tools, portfolio sites, and browser-based educational applications.',
+        icon: 'tabler:code',
+      },
+      {
+        title: 'Accessibility & Inclusive Design',
+        description:
+          'Applying WCAG standards and Universal Design for Learning principles across all instructional materials.',
+        icon: 'tabler:accessible',
+      },
+      {
+        title: 'Video Production',
+        description:
+          'Editing and publishing instructional video using Final Cut Pro, Loom, and YouTube — from screen recordings to polished portfolio content.',
+        icon: 'tabler:video',
+      },
+    ]}
+  />
+
+  <!-- Organizations -->
+  <Features3
+    tagline="Educator Experience"
+    title="Organizations I've Worked With"
+    subtitle="Eight years teaching the web to career changers, college students, and working professionals."
+    columns={3}
+    items={[
+      {
+        title: 'Udacity',
+        description: 'Web development mentorship and project feedback for career-track learners.',
+        icon: 'tabler:certificate',
+      },
+      {
+        title: 'Springboard',
+        description: 'One-on-one mentorship and curriculum support for tech career changers.',
+        icon: 'tabler:headset',
+      },
+      {
+        title: 'OpenClassrooms',
+        description: 'Jury Member evaluating student project defenses for online degree programs.',
+        icon: 'tabler:gavel',
+      },
+      {
+        title: 'Boeing',
+        description: 'Front-end web development contract for Creative Services.',
+        icon: 'tabler:plane',
+      },
+      {
+        title: 'Chegg Skills',
+        description: 'Web development certification content refined and produced through LearningMate.',
+        icon: 'tabler:clipboard-check',
+      },
+      {
+        title: 'LearningMate',
+        description: 'Software Development SME for web dev certification content and Loom demo production.',
+        icon: 'tabler:git-branch',
+      },
+      {
+        title: 'Masterschool',
+        description: 'Coding bootcamp instructor for tech career training and developer education programs.',
+        icon: 'tabler:device-laptop',
+      },
+      {
+        title: 'Upright Education',
+        description: 'Teaching assistant supporting coding bootcamp instruction and curriculum delivery.',
+        icon: 'tabler:users',
+      },
+      {
+        title: 'University of Washington',
+        description: 'Bootcamp web development instruction via Trilogy Education partnership.',
+        icon: 'tabler:building',
+      },
+      {
+        title: 'Tacoma Community College',
+        description: 'Web development and technology instruction in a community college setting.',
+        icon: 'tabler:school',
+      },
+      {
+        title: 'Nucamp',
+        description: 'Coding bootcamp instructor teaching web development fundamentals.',
+        icon: 'tabler:campfire',
+      },
+      {
+        title: 'BloomTech',
+        description: 'Career mentor supporting learners through tech job search and outcomes.',
+        icon: 'tabler:rocket',
+      },
+      { title: 'CodeWizardsHQ', description: 'Online coding classes for kids and teens.', icon: 'tabler:wand' },
+      {
+        title: 'DeepDive Learning Academy',
+        description: 'One-on-one apprenticeship approach to learning to code.',
+        icon: 'tabler:microscope',
+      },
+    ]}
+  />
+
+  <!-- Contract Work -->
+  <Features3
+    tagline="Expertise"
+    title="Built It, Not Just Taught It"
+    subtitle="Hands-on web development across contracts, freelance, and production environments."
+    columns={3}
+    items={[
+      {
+        title: 'Boeing',
+        description: 'Front-end web development contract for Creative Services.',
+        icon: 'tabler:plane',
+      },
+      {
+        title: 'NetMotion Software',
+        description: 'Developed a custom WordPress Gutenberg plugin using ReactJS.',
+        icon: 'tabler:plug',
+      },
+      {
+        title: 'Freeride Entertainment',
+        description:
+          'Front-end maintenance using Jekyll, HTML, CSS, JavaScript, jQuery, Bootstrap, Barba.js, and Plyr.js.',
+        icon: 'tabler:movie',
+      },
+      {
+        title: 'EssenceMediacom',
+        description:
+          'Serving major brand clients including Google and Target using a modern JavaScript development environment.',
+        icon: 'tabler:chart-bar',
+      },
+      { title: 'Udacity', description: 'Custom Chrome extension using JavaScript.', icon: 'tabler:puzzle' },
+      {
+        title: 'Copacino Fujikado',
+        description:
+          'Applied GreenSock Animation Platform (GSAP) to create smooth, high performance JavaScript animations.',
+        icon: 'tabler:keyframes',
+      },
+      {
+        title: 'Ascendent Demolition',
+        description: 'Developed WordPress theme using HTML, CSS, and JavaScript.',
+        icon: 'tabler:hammer',
+      },
+      {
+        title: 'Tonkin Architecture',
+        description: 'Developed WordPress theme using HTML, CSS, and JavaScript.',
+        icon: 'tabler:building',
+      },
+    ]}
+  />
+
+  <!-- Contact -->
+  <div id="contact" class="max-w-3xl mx-auto px-4 md:px-8 py-16 md:py-24 text-center">
+    <div class="w-full flex justify-center mb-6">
+      <img
+        src={profileImage.src}
+        alt="Jonathan Root"
+        class="w-28 h-28 rounded-full object-cover shadow-md border-4 border-white dark:border-gray-700"
+        style="object-position: 13px 20%;"
+      />
+    </div>
+    <p class="text-base text-secondary dark:text-blue-200 font-bold tracking-wide uppercase mb-2">Contact</p>
+    <h2 class="text-4xl md:text-5xl font-bold tracking-tighter font-heading mb-6">Let's Connect</h2>
+    <p class="text-xl text-muted mb-4">
+      Eight years building learning that moves the needle — for software developers, eLearning professionals, and
+      technical teams.
+    </p>
+    <p class="text-lg text-muted mb-8">Reach me on LinkedIn, by email, or request a tailored resume below.</p>
+    <div class="flex flex-col sm:flex-row gap-4 justify-center mb-4">
+      <a
+        href="https://www.linkedin.com/in/jonathanroot/"
+        target="_blank"
+        rel="noopener"
+        class="inline-flex items-center justify-center gap-2 bg-accent hover:bg-accent/90 text-white font-semibold px-8 py-4 rounded-lg transition-colors"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor"
+          ><path
+            d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
+          ></path></svg
+        >
+        Connect on LinkedIn
+      </a>
+      <a
+        href="mailto:jonroot@me.com"
+        class="inline-flex items-center justify-center gap-2 border-2 border-current text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-800 font-semibold px-8 py-4 rounded-lg transition-colors"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-5 w-5"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          ><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"
+          ></path></svg
+        >
+        Email Me
+      </a>
+    </div>
+
+    <!-- Resume request button -->
+    <button
+      id="resume-request-btn"
+      class="inline-flex items-center justify-center gap-2 border-2 border-accent text-accent hover:bg-accent hover:text-white font-semibold px-8 py-4 rounded-lg transition-colors"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="h-5 w-5"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        ><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"
+        ></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline
+          points="10 9 9 9 8 9"></polyline></svg
+      >
+      Request My Resume
+    </button>
+
+    <p class="mt-6 text-sm text-muted max-w-lg mx-auto text-left">
+      This site is built and maintained by me. Designed in Astro, version controlled in GitHub, deployed on Vercel, with
+      an AI-assisted development workflow. I believe the best learning designers understand how things are built, not
+      just how they are taught.
+    </p>
+  </div>
+
+  <!-- Resume Request Modal -->
+  <div
+    id="resume-modal"
+    class="fixed inset-0 z-50 flex items-center justify-center p-4"
+    style="display: none !important;"
+    aria-modal="true"
+    role="dialog"
+    aria-labelledby="modal-title"
+  >
+    <!-- Backdrop -->
+    <div id="modal-backdrop" class="absolute inset-0 bg-black/60 backdrop-blur-sm"></div>
+
+    <!-- Card -->
+    <div
+      class="relative bg-white dark:bg-gray-900 rounded-2xl shadow-2xl w-full max-w-md p-8 border border-gray-200 dark:border-gray-700"
+    >
+      <!-- Close button -->
+      <button
+        id="modal-close"
+        class="absolute top-4 right-4 text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 transition-colors"
+        aria-label="Close"
+      >
+        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+
+      <!-- Header -->
+      <div class="mb-6">
+        <h3 id="modal-title" class="text-2xl font-bold font-heading text-gray-900 dark:text-white mb-2">
+          Request My Resume
+        </h3>
+        <p class="text-sm text-muted">
+          I'll send you a version tailored to your role and company — usually within 24 hours.
+        </p>
+      </div>
+
+      <!-- Form -->
+      <form id="resume-form" novalidate>
+        <div class="space-y-4">
+          <div class="grid grid-cols-2 gap-3">
+            <div>
+              <label class="block text-xs font-semibold text-gray-700 dark:text-gray-300 mb-1" for="r-first-name"
+                >First Name <span class="text-accent">*</span></label
+              >
+              <input
+                id="r-first-name"
+                name="first_name"
+                type="text"
+                required
+                placeholder="Jane"
+                class="w-full px-3 py-2 text-sm rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent"
+              />
+            </div>
+            <div>
+              <label class="block text-xs font-semibold text-gray-700 dark:text-gray-300 mb-1" for="r-last-name"
+                >Last Name <span class="text-accent">*</span></label
+              >
+              <input
+                id="r-last-name"
+                name="last_name"
+                type="text"
+                required
+                placeholder="Smith"
+                class="w-full px-3 py-2 text-sm rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent"
+              />
+            </div>
+          </div>
+          <div>
+            <label class="block text-xs font-semibold text-gray-700 dark:text-gray-300 mb-1" for="r-email"
+              >Work Email <span class="text-accent">*</span></label
+            >
+            <input
+              id="r-email"
+              name="email"
+              type="email"
+              required
+              placeholder="jane@company.com"
+              class="w-full px-3 py-2 text-sm rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent"
+            />
+          </div>
+          <div>
+            <label class="block text-xs font-semibold text-gray-700 dark:text-gray-300 mb-1" for="r-company"
+              >Company <span class="text-accent">*</span></label
+            >
+            <input
+              id="r-company"
+              name="company"
+              type="text"
+              required
+              placeholder="Acme Corp"
+              class="w-full px-3 py-2 text-sm rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent"
+            />
+          </div>
+          <div>
+            <label class="block text-xs font-semibold text-gray-700 dark:text-gray-300 mb-1" for="r-title"
+              >Your Job Title <span class="text-accent">*</span></label
+            >
+            <input
+              id="r-title"
+              name="job_title"
+              type="text"
+              required
+              placeholder="Hiring Manager / Recruiter"
+              class="w-full px-3 py-2 text-sm rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent"
+            />
+          </div>
+          <div>
+            <label class="block text-xs font-semibold text-gray-700 dark:text-gray-300 mb-1" for="r-role"
+              >Role You're Hiring For <span class="text-muted font-normal">(optional)</span></label
+            >
+            <input
+              id="r-role"
+              name="role_hiring_for"
+              type="text"
+              placeholder="Customer Education Manager"
+              class="w-full px-3 py-2 text-sm rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent"
+            />
+          </div>
+        </div>
+
+        <!-- Honeypot -->
+        <input type="text" name="_gotcha" style="display:none" />
+
+        <!-- Submit -->
+        <button
+          type="submit"
+          id="resume-submit"
+          class="mt-6 w-full inline-flex items-center justify-center gap-2 bg-accent hover:bg-accent/90 text-white font-semibold px-6 py-3 rounded-lg transition-colors text-sm"
+        >
+          Send Request
+        </button>
+
+        <!-- Error message -->
+        <p id="resume-error" class="mt-3 text-sm text-red-500 text-center hidden">
+          Something went wrong. Please email me at <a href="mailto:jonroot@me.com" class="underline">jonroot@me.com</a>.
+        </p>
+      </form>
+
+      <!-- Success state -->
+      <div id="resume-success" class="hidden text-center py-4">
+        <div
+          class="w-14 h-14 rounded-full bg-green-100 dark:bg-green-900/30 flex items-center justify-center mx-auto mb-4"
+        >
+          <svg
+            class="w-7 h-7 text-green-600 dark:text-green-400"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <polyline points="20 6 9 17 4 12"></polyline>
+          </svg>
+        </div>
+        <h4 class="text-lg font-bold font-heading text-gray-900 dark:text-white mb-2">Request received!</h4>
+        <p class="text-sm text-muted">Thanks — I'll send you a tailored resume within 24 hours.</p>
+      </div>
+    </div>
+  </div>
+</Layout>
+
+<script>
+  function initResumeModal() {
+    const btn = document.getElementById('resume-request-btn');
+    const modal = document.getElementById('resume-modal');
+    const backdrop = document.getElementById('modal-backdrop');
+    const closeBtn = document.getElementById('modal-close');
+    const form = document.getElementById('resume-form') as HTMLFormElement | null;
+    const successEl = document.getElementById('resume-success');
+    const errorEl = document.getElementById('resume-error');
+    const submitBtn = document.getElementById('resume-submit');
+
+    if (!btn || !modal || !form) return;
+
+    const openModal = () => {
+      modal.style.removeProperty('display');
+      modal.classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+      document.getElementById('r-first-name')?.focus();
+    };
+
+    const closeModal = () => {
+      modal.style.display = 'none';
+      document.body.style.overflow = '';
+    };
+
+    btn.addEventListener('click', openModal);
+    backdrop?.addEventListener('click', closeModal);
+    closeBtn?.addEventListener('click', closeModal);
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeModal();
+    });
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      if (!submitBtn) return;
+
+      submitBtn.textContent = 'Sending…';
+      (submitBtn as HTMLButtonElement).disabled = true;
+      errorEl?.classList.add('hidden');
+
+      try {
+        const res = await fetch('https://formspree.io/f/maqkznkr', {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { Accept: 'application/json' },
+        });
+
+        if (res.ok) {
+          form.classList.add('hidden');
+          successEl?.classList.remove('hidden');
+        } else {
+          throw new Error('Formspree error');
+        }
+      } catch {
+        errorEl?.classList.remove('hidden');
+        submitBtn.textContent = 'Send Request';
+        (submitBtn as HTMLButtonElement).disabled = false;
+      }
+    });
+  }
+
+  document.addEventListener('astro:page-load', initResumeModal);
+</script>
