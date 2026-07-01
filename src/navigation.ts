@@ -8,11 +8,11 @@ export const headerData = {
     },
     {
       text: 'About',
-      href: getPermalink('/about'),
+      href: '/#contact',
     },
     {
       text: 'Contact',
-      href: '/about#contact',
+      href: '/#contact',
     },
   ],
   actions: [],
@@ -20,7 +20,7 @@ export const headerData = {
 
 export const footerData = {
   links: [],
-  secondaryLinks: [{ text: 'Contact', href: '/about#contact' }],
+  secondaryLinks: [{ text: 'Contact', href: '/#contact' }],
   socialLinks: [
     { ariaLabel: 'LinkedIn', icon: 'tabler:brand-linkedin', href: 'https://www.linkedin.com/in/jonathanroot/' },
   ],
