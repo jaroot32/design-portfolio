@@ -8,7 +8,7 @@ export const headerData = {
     },
     {
       text: 'About',
-      href: '/#contact',
+      href: '/#about',
     },
     {
       text: 'Contact',
