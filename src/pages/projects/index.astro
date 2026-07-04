@@ -240,7 +240,7 @@ const devOnlyIdItems = import.meta.env.DEV
 <Layout metadata={metadata}>
   <Hero tagline="Portfolio">
     <Fragment slot="bg">
-      <div class="absolute inset-0 overflow-hidden pointer-events-none">
+      <div class="absolute inset-0 overflow-hidden pointer-events-none" style="-webkit-mask-image: radial-gradient(ellipse 55% 55% at 50% 50%, transparent 0%, black 100%); mask-image: radial-gradient(ellipse 55% 55% at 50% 50%, transparent 0%, black 100%);">
         <!-- Lines SVG — renders behind orbs -->
         <svg
           class="block absolute inset-0 w-full h-full"
