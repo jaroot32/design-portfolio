@@ -3,6 +3,7 @@ import Layout from '~/layouts/PageLayout.astro';
 import Hero from '~/components/widgets/Hero.astro';
 import Features2 from '~/components/widgets/Features2.astro';
 import { Icon } from 'astro-icon/components';
+import facadeOffboarding from '~/assets/images/facade-offboarding.webp';
 
 const metadata = {
   title: 'Projects',
@@ -524,16 +525,22 @@ const devOnlyIdItems = import.meta.env.DEV
         JavaScript-generated audit report personalized to your exact decision path.
       </p>
       <div
-        class="relative w-full rounded-xl shadow-lg overflow-hidden border border-gray-200 dark:border-gray-700 mb-4"
+        class="iframe-launcher relative w-full rounded-xl shadow-lg overflow-hidden border border-gray-200 dark:border-gray-700 mb-4"
         style="padding-top: 62.5%;"
+        data-src="/high-risk-offboarding-content/story.html"
+        data-title="The High-Risk Offboarding — Storyline Branching Scenario"
       >
-        <iframe
-          class="absolute inset-0 w-full h-full"
-          src="/high-risk-offboarding-content/story.html"
-          title="The High-Risk Offboarding — Storyline Branching Scenario"
-          frameborder="0"
-          allowfullscreen
-     loading="lazy"></iframe>
+        <div class="absolute inset-0 cursor-pointer group select-none"
+             style={`background-image: url('${facadeOffboarding.src}'); background-size: cover; background-position: center;`}>
+          <div class="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-colors duration-200 flex items-center justify-center">
+            <div class="opacity-0 group-hover:opacity-100 transition-opacity duration-200 text-center">
+              <div class="w-16 h-16 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center mx-auto mb-3">
+                <svg class="w-8 h-8 text-white ml-1" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+              </div>
+              <p class="text-white font-semibold text-lg drop-shadow">Launch Course</p>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="flex flex-wrap gap-3">
         <a
@@ -973,6 +980,27 @@ const devOnlyIdItems = import.meta.env.DEV
     }
 
     document.addEventListener('astro:page-load', initScrollspy);
+  </script>
+
+  <script>
+    function initIframeLaunchers() {
+      document.querySelectorAll<HTMLElement>('.iframe-launcher').forEach((container) => {
+        container.addEventListener('click', () => {
+          const src = container.dataset.src;
+          const title = container.dataset.title ?? '';
+          if (!src) return;
+          const iframe = document.createElement('iframe');
+          iframe.src = src;
+          iframe.title = title;
+          iframe.className = 'absolute inset-0 w-full h-full';
+          iframe.setAttribute('frameborder', '0');
+          iframe.setAttribute('allowfullscreen', '');
+          container.innerHTML = '';
+          container.appendChild(iframe);
+        });
+      });
+    }
+    document.addEventListener('astro:page-load', initIframeLaunchers);
   </script>
 
   <style is:global>
