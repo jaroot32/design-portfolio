@@ -5,6 +5,8 @@ import P1 from '~/assets/images/P1.webp';
 import P3 from '~/assets/images/P3.webp';
 import profileImage from '~/assets/images/profile-bust.webp';
 import splashHero from '~/assets/images/splash-hero.webp';
+import facadeOffboarding from '~/assets/images/facade-offboarding.webp';
+import facadeGemini from '~/assets/images/facade-gemini.webp';
 
 const metadata = {
   title: 'Jonathan Root — Learning Experience Designer',
@@ -121,13 +123,15 @@ const metadata = {
           data-src="/high-risk-offboarding-content/story.html"
           data-title="The High-Risk Offboarding — Storyline Branching Scenario"
         >
-          <div class="absolute inset-0 flex flex-col items-center justify-center bg-gray-900 cursor-pointer group hover:bg-gray-800 transition-colors select-none">
-            <div class="text-center px-8">
-              <div class="w-16 h-16 rounded-full bg-white/10 flex items-center justify-center mx-auto mb-4 group-hover:bg-white/20 transition-colors">
-                <svg class="w-8 h-8 text-white ml-1" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+          <div class="absolute inset-0 cursor-pointer group select-none"
+               style={`background-image: url('${facadeOffboarding.src}'); background-size: cover; background-position: center;`}>
+            <div class="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-colors duration-200 flex items-center justify-center">
+              <div class="opacity-0 group-hover:opacity-100 transition-opacity duration-200 text-center">
+                <div class="w-16 h-16 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center mx-auto mb-3">
+                  <svg class="w-8 h-8 text-white ml-1" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                </div>
+                <p class="text-white font-semibold text-lg drop-shadow">Launch Course</p>
               </div>
-              <p class="text-white font-semibold text-lg mb-1">The High-Risk Offboarding</p>
-              <p class="text-gray-400 text-sm">Click to launch the branching scenario</p>
             </div>
           </div>
         </div>
@@ -153,13 +157,15 @@ const metadata = {
           data-src="/gemini-course"
           data-title="Work Smarter with Gemini — Rise 360 Course"
         >
-          <div class="absolute inset-0 flex flex-col items-center justify-center bg-gray-900 cursor-pointer group hover:bg-gray-800 transition-colors select-none">
-            <div class="text-center px-8">
-              <div class="w-16 h-16 rounded-full bg-white/10 flex items-center justify-center mx-auto mb-4 group-hover:bg-white/20 transition-colors">
-                <svg class="w-8 h-8 text-white ml-1" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+          <div class="absolute inset-0 cursor-pointer group select-none"
+               style={`background-image: url('${facadeGemini.src}'); background-size: cover; background-position: center;`}>
+            <div class="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-colors duration-200 flex items-center justify-center">
+              <div class="opacity-0 group-hover:opacity-100 transition-opacity duration-200 text-center">
+                <div class="w-16 h-16 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center mx-auto mb-3">
+                  <svg class="w-8 h-8 text-white ml-1" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                </div>
+                <p class="text-white font-semibold text-lg drop-shadow">Launch Course</p>
               </div>
-              <p class="text-white font-semibold text-lg mb-1">Work Smarter with Gemini</p>
-              <p class="text-gray-400 text-sm">Click to launch the Rise 360 course</p>
             </div>
           </div>
         </div>
