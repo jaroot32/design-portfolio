@@ -138,7 +138,7 @@ const metadata = {
       <h2 class="text-4xl md:text-5xl font-bold tracking-tighter font-heading">Published on Rumie-Learn</h2>
       <p class="text-lg text-muted mt-4">Free, globally distributed, under five minutes.</p>
     </div>
-    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+    <div class="flex flex-col sm:flex-row gap-4 justify-center mb-12">
       <a
         href="https://learn.rumie.org/jR/bytes/how-i-became-a-better-listener-in-3-steps/"
         target="_blank"
@@ -149,11 +149,47 @@ const metadata = {
         Take the Byte on Rumie-Learn
       </a>
       <a
+        href="/documents/how-i-became-a-better-listener-in-3-steps.pdf"
+        download
+        class="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 font-semibold text-base hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors"
+      >
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+          ><path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg
+        >
+        Download PDF
+      </a>
+      <a
         href="/projects/rumie-travel-anxiety-byte"
         class="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 font-semibold text-base hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors"
       >
         See my first Byte — Travel Anxiety
       </a>
+    </div>
+
+    <!-- PDF embed -->
+    <div class="rounded-xl border border-gray-200 dark:border-gray-700 overflow-hidden shadow-lg">
+      <div
+        class="bg-gray-100 dark:bg-gray-800 px-5 py-3 border-b border-gray-200 dark:border-gray-700 flex items-center justify-between"
+      >
+        <p class="text-sm font-semibold text-gray-700 dark:text-gray-300">
+          How I Became a Better Listener in 3 Steps — Byte PDF
+        </p>
+        <a
+          href="/documents/how-i-became-a-better-listener-in-3-steps.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-xs text-accent hover:underline">Open in new tab</a
+        >
+      </div>
+      <iframe
+        src="/documents/how-i-became-a-better-listener-in-3-steps.pdf"
+        class="w-full"
+        style="height: 700px;"
+        title="How I Became a Better Listener in 3 Steps — Rumie Byte PDF"
+        loading="lazy"></iframe>
     </div>
   </div>
 
