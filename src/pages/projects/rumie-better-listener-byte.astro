@@ -1,0 +1,222 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Content from '~/components/widgets/Content.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+
+const metadata = {
+  title: 'How I Became a Better Listener in 3 Steps — Rumie Microlearning Byte',
+};
+---
+
+<Layout metadata={metadata}>
+  <Hero tagline="Microlearning Design · Rumie-Learn · Global OER · Behavior Change">
+    <Fragment slot="title">
+      How I Became a Better Listener in 3 Steps —<br />
+      <span class="text-accent dark:text-white">Microlearning Byte for Rumie-Learn</span>
+    </Fragment>
+    <Fragment slot="subtitle">
+      My second published Byte for Rumie-Learn — a free global learning library reaching learners across 180+
+      countries. A 3-step, under-5-minute experience teaching active listening as a practiced skill, built around a
+      personal hook, research-backed framing, and two spaced knowledge checks.
+    </Fragment>
+  </Hero>
+
+  <!-- Project Overview -->
+  <Content tagline="The Project" title="Soft-skill behavior change in under five minutes" isReversed>
+    <Fragment slot="image">
+      <div class="flex items-center justify-center h-full py-12">
+        <div class="text-center space-y-6">
+          <div>
+            <p class="text-7xl font-bold font-heading text-accent leading-none">3</p>
+            <p class="text-xl text-muted mt-3">Steps · Under 5 Minutes</p>
+          </div>
+          <div class="mt-6 space-y-2 text-sm text-muted">
+            <p class="font-semibold text-gray-700 dark:text-gray-300">Rumie-Learn · Open Educational Resource</p>
+            <p>Global Distribution · 180+ Countries</p>
+            <p>Second Published Byte · Peer Reviewed</p>
+          </div>
+        </div>
+      </div>
+    </Fragment>
+    <Fragment slot="content">
+      <p class="mb-4">
+        Rumie is a nonprofit microlearning platform built on the belief that knowledge should be free and accessible to
+        everyone. Bytes are short, focused learning experiences distributed freely to learners worldwide, including
+        those in low-connectivity environments.
+      </p>
+      <p class="mb-4">
+        <em>How I Became a Better Listener in 3 Steps</em> tackles a soft skill nearly every adult believes they already
+        have — which makes it a harder design problem than it looks. The Byte opens with a personal moment of distracted
+        listening, grounds the problem in research, and then teaches three concrete, practicable strategies: listening
+        to understand rather than to respond, giving full attention, and asking one good question.
+      </p>
+      <p>
+        As my second published Byte, this project moved through Rumie's structured peer review process with the design
+        patterns from the first already proven — a faster build that demonstrates a repeatable microlearning workflow,
+        not a one-off success.
+      </p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 section-pattern-b"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Design Decisions -->
+  <Features3
+    tagline="Design Decisions"
+    title="Four intentional choices behind the Byte"
+    subtitle="Soft skills fail as content when they stay abstract — every choice pushed the Byte toward concrete, practicable behavior."
+    columns={2}
+    items={[
+      {
+        title: 'Problem-first hook: anecdote before advice',
+        description:
+          'The Byte opens with a relatable moment of distracted listening — not a definition of active listening. Learners see themselves in the problem before any strategy is offered, and research data then confirms the gap is universal, not personal failure.',
+        icon: 'tabler:message-report',
+      },
+      {
+        title: 'Three behaviors, not one concept',
+        description:
+          'Each step is a discrete, observable behavior a learner can try in their very next conversation — listen to understand, give full attention, ask one good question. No step requires the others to be useful, lowering the cost of partial adoption.',
+        icon: 'tabler:list-numbers',
+      },
+      {
+        title: 'Two spaced knowledge checks',
+        description:
+          'Rather than one end-of-Byte quiz, two checks are placed mid-flow — one on understanding vs. responding, one on how to react when someone shares a problem. Spaced retrieval strengthens retention even inside a five-minute experience.',
+        icon: 'tabler:checkbox',
+      },
+      {
+        title: 'First-person voice, global plain language',
+        description:
+          '"How I became" framing signals lived experience over lecture, consistent with Rumie\'s social-media-native design philosophy. Sentences stay short, active, and jargon-free for an audience where English is often a second language.',
+        icon: 'tabler:world',
+      },
+    ]}
+  />
+
+  <!-- Assessment Strategy -->
+  <div class="max-w-3xl mx-auto px-4 md:px-8 py-12 md:py-16">
+    <div class="text-center mb-10">
+      <p class="text-base text-secondary dark:text-blue-200 font-bold tracking-wide uppercase mb-2">
+        Assessment Design
+      </p>
+      <h2 class="text-4xl md:text-5xl font-bold tracking-tighter font-heading">Two Checks, Spaced and Applied</h2>
+      <p class="text-lg text-muted mt-4 max-w-2xl mx-auto">
+        Both knowledge checks ask the learner to choose what they would <em>do</em> — not to recall what a term means.
+      </p>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+      <div class="rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 shadow-sm p-6">
+        <p class="text-sm font-semibold text-accent uppercase tracking-wide mb-3">Check 1 — Mid-Byte</p>
+        <p class="font-semibold text-gray-800 dark:text-gray-200 mb-2">Understanding vs. responding</p>
+        <p class="text-sm text-muted leading-relaxed">
+          Placed immediately after the first strategy, this check tests whether the learner can distinguish listening
+          to comprehend from waiting for a turn to speak — the single most common listening failure the Byte names.
+        </p>
+      </div>
+      <div class="rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 shadow-sm p-6">
+        <p class="text-sm font-semibold text-accent uppercase tracking-wide mb-3">Check 2 — Applied Scenario</p>
+        <p class="font-semibold text-gray-800 dark:text-gray-200 mb-2">When someone shares a problem</p>
+        <p class="text-sm text-muted leading-relaxed">
+          The second check presents a realistic moment — a person opening up about a problem — and asks for the most
+          helpful first response, requiring the learner to apply the Byte's strategies rather than recite them.
+        </p>
+      </div>
+    </div>
+    <p class="text-xs text-muted mt-6 italic text-center max-w-2xl mx-auto">
+      Design note: splitting assessment into two spaced checks — one comprehension, one application — brings retrieval
+      practice into a sub-five-minute experience without breaking its momentum.
+    </p>
+  </div>
+
+  <!-- Live Byte -->
+  <div class="max-w-5xl mx-auto px-4 md:px-8 py-12 md:py-16">
+    <div class="text-center mb-10">
+      <p class="text-base text-secondary dark:text-blue-200 font-bold tracking-wide uppercase mb-2">The Byte</p>
+      <h2 class="text-4xl md:text-5xl font-bold tracking-tighter font-heading">Published on Rumie-Learn</h2>
+      <p class="text-lg text-muted mt-4">Free, globally distributed, under five minutes.</p>
+    </div>
+    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+      <a
+        href="https://learn.rumie.org/jR/bytes/how-i-became-a-better-listener-in-3-steps/"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg bg-accent text-white font-semibold text-base hover:bg-accent/90 transition-colors shadow-sm"
+      >
+        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg>
+        Take the Byte on Rumie-Learn
+      </a>
+      <a
+        href="/projects/rumie-travel-anxiety-byte"
+        class="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 font-semibold text-base hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors"
+      >
+        See my first Byte — Travel Anxiety
+      </a>
+    </div>
+  </div>
+
+  <!-- Skills Demonstrated -->
+  <Features3
+    tagline="What This Demonstrates"
+    title="Skills evidenced by this project"
+    columns={3}
+    items={[
+      {
+        title: 'Repeatable Microlearning Process',
+        description: 'Second published Byte — the workflow from the first, run again faster and cleaner.',
+        icon: 'tabler:repeat',
+      },
+      {
+        title: 'Behavior-Change Design',
+        description: 'Three discrete, observable behaviors a learner can apply in their next conversation.',
+        icon: 'tabler:arrow-guide',
+      },
+      {
+        title: 'Spaced Retrieval Practice',
+        description: 'Two knowledge checks placed mid-flow rather than end-loaded — retention inside 5 minutes.',
+        icon: 'tabler:checkbox',
+      },
+      {
+        title: 'Hook-First Narrative Structure',
+        description: 'Personal anecdote → research framing → strategies: problem before prescription.',
+        icon: 'tabler:timeline',
+      },
+      {
+        title: 'Global Audience Writing',
+        description: 'Plain language, active voice, no jargon — written for learners across 180+ countries.',
+        icon: 'tabler:world',
+      },
+      {
+        title: 'OER Contribution',
+        description: 'Published free on Rumie-Learn — open educational resource, globally accessible.',
+        icon: 'tabler:license',
+      },
+    ]}
+  />
+
+  <!-- Tags -->
+  <div class="max-w-4xl mx-auto px-4 md:px-8 pb-16">
+    <div class="flex flex-wrap gap-2">
+      {
+        [
+          'Rumie-Learn',
+          'Microlearning',
+          'OER',
+          'Soft Skills',
+          'Behavior Change',
+          'Spaced Retrieval',
+          'Active Listening',
+          'Global Audience',
+          'Plain Language',
+          'Instructional Design',
+        ].map((tag) => (
+          <span class="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-sm font-medium px-3 py-1 rounded-full">
+            {tag}
+          </span>
+        ))
+      }
+    </div>
+  </div>
+</Layout>
