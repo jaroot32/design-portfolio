@@ -39,7 +39,7 @@ h1 {
   margin: 0;
   padding: 0.5vh 0;
   font-family: 'Inter', sans-serif;
-  font-weight: 600;
+  font-weight: 500;
   font-size: clamp(18px, 3.5vw, 28px);
   text-align: center;
   flex-shrink: 0;
@@ -50,7 +50,7 @@ h2 {
   max-width: 800px;
   font-size: 20px;
   font-family: 'Inter', sans-serif;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 p {
@@ -78,7 +78,7 @@ p.center {
 
 a {
   font-family: 'Inter', sans-serif;
-  font-weight: 600;
+  font-weight: 500;
   text-decoration: none;
   color: var(--yellow);
 }
@@ -228,7 +228,7 @@ main {
 .group-link .title {
   font-family: 'Inter', sans-serif;
   font-size: 24px;
-  font-weight: 600;
+  font-weight: 500;
   display: block;
   margin-bottom: 8px;
   width: calc(100% - 10px);
@@ -286,7 +286,7 @@ main {
 
 .word {
   font-family: 'Inter', sans-serif;
-  font-weight: 600;
+  font-weight: 500;
   font-size: clamp(14px, min(2.8vw, 3.2vh), 21px);
   border-radius: 8px;
   background-color: var(--neutral-10);
@@ -335,7 +335,7 @@ main {
 .mistakes {
   color: black;
   font-family: 'Inter', sans-serif;
-  font-weight: 600;
+  font-weight: 500;
   margin: 0;
   padding: 0.3vh 0;
   display: flex !important;
@@ -445,7 +445,7 @@ button.btn {
   vertical-align: middle;
   border-radius: 20px;
   font-family: 'Inter', sans-serif;
-  font-weight: 600;
+  font-weight: 500;
   font-size: clamp(12px, 2.5vw, 18px);
   overflow: hidden;
   transition: all 0.15s;
@@ -551,7 +551,7 @@ button.btn {
 .ie-block-content .title {
   color: var(--yellow);
   font-family: 'Inter', sans-serif;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 18px;
 }
 
