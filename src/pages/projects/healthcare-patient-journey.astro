@@ -1,0 +1,321 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Content from '~/components/widgets/Content.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import coverImage from '~/assets/images/Health_Journey-Cover.png';
+
+const metadata = {
+  title: 'A Healthcare Patient Journey — Extending Storyline with JavaScript',
+  robots: {
+    index: false,
+    follow: false,
+  },
+};
+---
+
+<Layout metadata={metadata}>
+  <Hero tagline="Storyline 360 · JavaScript · GSAP · Designer Handoff">
+    <Fragment slot="title">
+      A Healthcare Patient Journey —<br />
+      <span class="text-accent dark:text-white">Extending Storyline with JavaScript</span>
+    </Fragment>
+    <Fragment slot="subtitle">
+      A five-slide Storyline 360 course built from a professional studio's Adobe Illustrator design files and custom
+      JavaScript template — popup layers, AI-generated narration, GSAP-powered 3D card flips, and an embedded
+      JavaScript word game.
+    </Fragment>
+  </Hero>
+
+  <!-- Context -->
+  <Content tagline="The Brief" title="A studio-grade designer-to-developer handoff" isReversed>
+    <Fragment slot="image">
+      <div class="flex items-center justify-center h-full py-12">
+        <div class="text-center">
+          <p class="text-7xl font-bold font-heading text-accent leading-none">5</p>
+          <p class="text-xl text-muted mt-3">Slides · 1 Week</p>
+          <div class="mt-8 space-y-2 text-sm text-muted">
+            <p class="font-semibold text-gray-700 dark:text-gray-300">Digital Learning Studio · Healthcare Client</p>
+            <p>Adobe Illustrator handoff · JS template system</p>
+            <p>Articulate Storyline 360 · GSAP · ElevenLabs</p>
+          </div>
+        </div>
+      </div>
+    </Fragment>
+    <Fragment slot="content">
+      <p class="mb-4">
+        A digital learning studio provided Adobe Illustrator design files, a Storyline template with custom JavaScript
+        patterns, and a five-slide specification — the kind of designer-to-developer handoff used in professional
+        studio pipelines.
+      </p>
+      <p class="mb-4">
+        The designs called for interactions Storyline doesn't support natively: CSS-style drop shadows, hover effects,
+        true 3D card flips, and an embedded JavaScript game — plus a ten-step interactive patient journey map with
+        popup layers, visited-state tracking, and AI-generated narration.
+      </p>
+      <p>
+        My job: deliver a pixel-accurate, fully interactive build matching the studio's design system, with every
+        interactive element constructed as a native Storyline object.
+      </p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 section-pattern-b"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Build Highlights -->
+  <Features3
+    tagline="The Build"
+    title="Five slides, five interaction patterns"
+    subtitle="Each slide required a different technique — from native states and layers to runtime-loaded JavaScript libraries."
+    columns={3}
+    items={[
+      {
+        title: 'Click-to-Reveal Introduction',
+        description:
+          'A blurred photo the learner clicks to unblur, which enables course navigation. Blur and shadow effects implemented with JavaScript triggers targeting elements through their accessibility names.',
+        icon: 'tabler:eye',
+      },
+      {
+        title: 'Interactive Journey Map',
+        description:
+          'Ten step buttons with visited-state tracking, popup layers with show/hide logic for underlying content, and category buttons whose selected states respond to the step being viewed.',
+        icon: 'tabler:map-pin',
+      },
+      {
+        title: 'Audio + Mute System',
+        description:
+          'AI-generated narration (ElevenLabs) on a popup layer, wired to a mute/unmute system driven by a shared IsMuted variable synchronized across slide and layer timelines.',
+        icon: 'tabler:volume',
+      },
+      {
+        title: '3D Card Flips with GSAP',
+        description:
+          'True perspective card flips using GSAP loaded at runtime — per-card animation locks, pointer-event management so only the visible face receives clicks, and completion tracking reported to Storyline variables.',
+        icon: 'tabler:cards',
+      },
+      {
+        title: 'Tabbed Content Panels',
+        description:
+          'Button-driven panel swapping managed with base-layer state changes — avoiding the click-blocking issues that layer-based approaches introduce.',
+        icon: 'tabler:layout-sidebar',
+      },
+      {
+        title: 'Embedded JavaScript Game',
+        description:
+          'A Connections-style word game (HTML/CSS/JS with GSAP animations) embedded as a Web Object — folder structure preserved so relative asset paths survive publishing.',
+        icon: 'tabler:puzzle',
+      },
+    ]}
+  />
+
+  <!-- Module Embed -->
+  <div class="max-w-5xl mx-auto px-4 md:px-8 py-12 md:py-16">
+    <div class="text-center mb-10">
+      <p class="text-base text-secondary dark:text-blue-200 font-bold tracking-wide uppercase mb-2">Storyline Module</p>
+      <h2 class="text-4xl md:text-5xl font-bold tracking-tighter font-heading">Explore the Course</h2>
+      <p class="text-lg text-muted mt-4">
+        Five slides following a patient's journey through a healthcare visit — from check-in to online access.
+      </p>
+    </div>
+    <div
+      class="iframe-launcher relative w-full rounded-lg shadow-lg overflow-hidden border border-gray-200 dark:border-gray-700"
+      style="padding-top: 56.25%;"
+      data-src="/Health%20Journey/story.html"
+      data-title="A Healthcare Patient Journey — Storyline 360 Course"
+    >
+      <div
+        class="absolute inset-0 cursor-pointer group select-none"
+        style={`background-image: url('${coverImage.src}'); background-size: cover; background-position: center;`}
+      >
+        <div
+          class="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-colors duration-200 flex items-center justify-center"
+        >
+          <div class="opacity-0 group-hover:opacity-100 transition-opacity duration-200 text-center">
+            <div class="w-16 h-16 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center mx-auto mb-3">
+              <svg class="w-8 h-8 text-white ml-1" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg>
+            </div>
+            <p class="text-white font-semibold text-lg drop-shadow">Launch Course</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function initIframeLaunchers() {
+      document.querySelectorAll<HTMLElement>('.iframe-launcher').forEach((container) => {
+        container.addEventListener('click', () => {
+          const src = container.dataset.src;
+          const title = container.dataset.title ?? '';
+          if (!src) return;
+          const iframe = document.createElement('iframe');
+          iframe.src = src;
+          iframe.title = title;
+          iframe.className = 'absolute inset-0 w-full h-full';
+          iframe.setAttribute('frameborder', '0');
+          iframe.setAttribute('allowfullscreen', '');
+          container.innerHTML = '';
+          container.appendChild(iframe);
+        });
+      });
+    }
+    document.addEventListener('astro:page-load', initIframeLaunchers);
+  </script>
+
+  <!-- Design Translation -->
+  <Content tagline="Process" title="From Illustrator to interactive objects" isReversed>
+    <Fragment slot="image">
+      <div class="flex items-center justify-center h-full py-12 px-6">
+        <div class="w-full max-w-xs space-y-3">
+          {
+            [
+              {
+                label: 'Inspect the design files',
+                detail: 'Exact colors, fonts, corner radii, gradients',
+                color: 'blue',
+              },
+              { label: 'Rebuild interactivity natively', detail: 'Buttons, states, triggers in Storyline', color: 'green' },
+              { label: 'Export static artwork', detail: 'Backgrounds and imagery as transparent PNGs', color: 'purple' },
+              { label: 'Extend with JavaScript', detail: 'Shadows, hovers, flips beyond native limits', color: 'orange' },
+            ].map(({ label, detail, color }) => (
+              <div
+                class={`flex items-start gap-3 p-2.5 rounded-lg border ${color === 'blue' ? 'border-blue-200 dark:border-blue-800 bg-blue-50 dark:bg-blue-900/20' : color === 'green' ? 'border-green-200 dark:border-green-800 bg-green-50 dark:bg-green-900/20' : color === 'purple' ? 'border-purple-200 dark:border-purple-800 bg-purple-50 dark:bg-purple-900/20' : 'border-orange-200 dark:border-orange-800 bg-orange-50 dark:bg-orange-900/20'}`}
+              >
+                <div>
+                  <p class="text-sm font-semibold text-gray-800 dark:text-gray-200">{label}</p>
+                  <p class="text-xs text-muted mt-0.5">{detail}</p>
+                </div>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </Fragment>
+    <Fragment slot="content">
+      <p class="mb-4">
+        The client required every interactive element to exist as a native Storyline object — no baked-in interactivity
+        inside image exports. That meant reading exact colors, fonts, corner radii, and gradients out of the Illustrator
+        files, then rebuilding each button, circle, and panel natively with full state control (normal, hover, visited,
+        selected, disabled).
+      </p>
+      <p class="mb-4">
+        Static artwork — backgrounds, photography, headings with gradient text Storyline can't reproduce — was exported
+        as transparent PNGs and positioned to match the source layouts.
+      </p>
+      <p>
+        Where the design exceeded Storyline's native capabilities, JavaScript triggers filled the gap: drop shadows and
+        hover effects applied through DOM selectors, and GSAP loaded at runtime for the 3D card flip interaction.
+      </p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 section-pattern"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Technical Deep Dive -->
+  <div class="max-w-5xl mx-auto px-4 md:px-8 py-12 md:py-16">
+    <div class="text-center mb-10">
+      <p class="text-base text-secondary dark:text-blue-200 font-bold tracking-wide uppercase mb-2">Technical Design</p>
+      <h2 class="text-4xl md:text-5xl font-bold tracking-tighter font-heading">The 3D Card Flip</h2>
+      <p class="text-lg text-muted mt-4 max-w-2xl mx-auto">
+        Storyline has no native 3D flip. This build loads GSAP at runtime, targets each card face in the published DOM,
+        and animates synchronized rotateY transforms — with pointer-event management so only the visible face receives
+        clicks.
+      </p>
+    </div>
+    <div class="rounded-lg border border-gray-200 dark:border-gray-700 bg-gray-900 p-6">
+      <p class="text-xs text-gray-400 font-mono mb-3">// Flip trigger — both faces animate in a synchronized timeline</p>
+      <pre
+        class="text-sm text-green-400 font-mono overflow-x-auto"><code>{`gsap.set(frontEl, { rotateY: 0, force3D: true });
+gsap.set(backEl,  { rotateY: -180, force3D: true });
+backEl.style.pointerEvents = 'none';
+
+function flipCard() {
+  if (isAnimating) return;
+  isAnimating = true;
+
+  gsap.timeline({
+    onComplete: () => {
+      isAnimating = false;
+      flipped = !flipped;
+      // only the visible face is clickable
+      frontEl.style.pointerEvents = flipped ? 'none' : 'auto';
+      backEl.style.pointerEvents  = flipped ? 'auto' : 'none';
+      player.SetVar(varName, true); // report to Storyline
+    }
+  })
+    .to(frontEl, { rotateY: flipped ? 0 : 180,  duration: 0.6, ease: 'power2.inOut' }, 0)
+    .to(backEl,  { rotateY: flipped ? -180 : 0, duration: 0.6, ease: 'power2.inOut' }, 0);
+}`}</code></pre>
+    </div>
+    <p class="text-sm text-muted mt-6 max-w-3xl mx-auto text-center">
+      A debugging lesson worth documenting: Storyline regenerates <span class="font-mono text-xs">data-model-id</span>
+      attributes on every publish, which silently breaks DOM-targeting JavaScript. Working in browser dev tools against
+      the published output, I traced each failure to its element and confirmed that grouped objects expose a stable
+      container the animation can target as a single unit.
+    </p>
+  </div>
+
+  <!-- Outcome -->
+  <Content tagline="Outcome" title="Delivered on deadline, patterns kept for good">
+    <Fragment slot="image">
+      <div class="flex items-center justify-center h-full py-12">
+        <div class="text-center space-y-6">
+          <div>
+            <p class="text-5xl font-bold font-heading text-accent leading-none">2</p>
+            <p class="text-base text-muted mt-2">Deliverables — Review 360 link + source .story file</p>
+          </div>
+          <div>
+            <p class="text-5xl font-bold font-heading text-accent leading-none">6</p>
+            <p class="text-base text-muted mt-2">Interaction patterns added to my toolkit</p>
+          </div>
+        </div>
+      </div>
+    </Fragment>
+    <Fragment slot="content">
+      <p class="mb-4">
+        The finished course shipped as a Review 360 link and packaged source file — five slides matching the studio's
+        design system, with every interactive element built as a native, editable Storyline object.
+      </p>
+      <p class="mb-4">
+        Beyond the deliverable, this project deepened my toolkit for extending Storyline past its native capabilities:
+        JavaScript-driven visual effects, runtime library loading, variable-bridged communication between custom code
+        and Storyline triggers, and Web Object embedding for full custom interactions.
+      </p>
+      <p>
+        These are patterns I now bring to client work where standard authoring-tool interactions aren't enough to match
+        a design vision.
+      </p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 section-pattern-b"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Tags -->
+  <div class="max-w-4xl mx-auto px-4 md:px-8 pb-16">
+    <div class="flex flex-wrap gap-2">
+      {
+        [
+          'Articulate Storyline 360',
+          'JavaScript',
+          'GSAP',
+          'Web Objects',
+          'AI-Generated Audio',
+          'ElevenLabs',
+          'Adobe Illustrator',
+          'Designer Handoff',
+          'Healthcare',
+          'Layers + States',
+          'Variables + Triggers',
+          'eLearning Development',
+        ].map((tag) => (
+          <span class="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-sm font-medium px-3 py-1 rounded-full">
+            {tag}
+          </span>
+        ))
+      }
+    </div>
+  </div>
+</Layout>
