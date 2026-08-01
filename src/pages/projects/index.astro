@@ -10,221 +10,16 @@ const metadata = {
   title: 'Projects',
 };
 
-const liveInstruction = [
-  {
-    icon: 'tabler:layout-columns',
-    title: 'Personal Blog Project Walkthrough — Masterschool',
-    description:
-      'A live project walkthrough and Q&A session for Masterschool students on the Udacity Personal Blog project — covering CSS architecture, mobile-first responsive design, CSS Grid, and Flexbox with real-time student questions throughout.',
-    href: '/projects/masterschool-personal-blog',
-    tags: ['css', 'projects'],
-    group: 'project',
-  },
-  {
-    icon: 'tabler:layout-columns',
-    title: 'CSS Flexbox & Responsive Design — Masterschool',
-    description:
-      'A live 57-minute session teaching career-changers how to build responsive layouts with CSS Flexbox — covering every major parent and child property, mobile-first design thinking, and media queries through live CodePen demos with active student Q&A.',
-    href: '/projects/masterschool-css-flexbox',
-    tags: ['css'],
-    group: 'open-gym',
-  },
-  {
-    icon: 'tabler:test-pipe',
-    title: 'Testing in JavaScript — Live Coding Session with Jest',
-    description:
-      'A live group session introducing Masterschool students to test-driven development — covering the red/green/refactor cycle, unit vs. integration tests, and a hands-on code-along building and passing a Jest test from scratch before the React/Redux capstone.',
-    href: '/projects/masterschool-testing-javascript',
-    tags: ['javascript'],
-    group: 'deep-dive',
-  },
-  {
-    icon: 'tabler:brand-css3',
-    title: 'CSS Selectors and the Cascade — Masterschool',
-    description:
-      "A live one-hour session introducing an international bootcamp cohort to CSS selectors, specificity, and the cascade — taught with real-time Slido polls, live Replit demos, and a chat full of students answering each other's questions.",
-    href: '/projects/masterschool-css-selectors',
-    tags: ['css'],
-    group: 'deep-dive',
-  },
-  {
-    icon: 'tabler:layout-navbar',
-    title: 'Landing Page Project — JavaScript DOM & Scroll Events',
-    description:
-      'A live open gym session on the Udacity Landing Page project — covering dynamic nav generation, getBoundingClientRect() for viewport detection, scrollIntoView() for smooth scrolling, and toggling active state classes as sections come into view.',
-    href: '/projects/masterschool-landing-page',
-    tags: ['javascript', 'projects'],
-    group: 'project',
-  },
-  {
-    icon: 'tabler:puzzle',
-    title: 'JavaScript Brain Teasers — Catchup Week Open Gym | Masterschool',
-    description:
-      'A live open gym session covering JavaScript prototypes in response to a student question, then working through two interview-style brain teasers live: a vowel frequency counter and a total uppercase letter counter, with full student participation throughout.',
-    href: '/projects/masterschool-brain-teasers',
-    tags: ['javascript'],
-    group: 'open-gym',
-  },
-  {
-    icon: 'tabler:circles-relation',
-    title: 'Object-Oriented JavaScript — Prototypes, Closures & the Revealing Module Pattern | Masterschool',
-    description:
-      'A live group session covering four ways to create objects (object literals, factory functions, Object.create(), constructor functions, and ES6 class syntax), prototypical inheritance, scope, closures via IIFEs, and the Revealing Module Pattern — closing with a direct connection to React class components.',
-    href: '/projects/masterschool-oop-javascript',
-    tags: ['javascript'],
-    group: 'deep-dive',
-  },
-  {
-    icon: 'tabler:brackets',
-    title: 'JavaScript Closures — Live Practice Session',
-    description:
-      'A live Q&A and coding session working through JavaScript closures — from functions returning functions to a DOM font-size demo, and fixing the classic setTimeout loop bug using closures and IIFEs. Audience participation throughout.',
-    href: '/projects/masterschool-closures',
-    tags: ['javascript'],
-    group: 'open-gym',
-  },
-  {
-    icon: 'tabler:user',
-    title: 'JavaScript Closures — One-on-One Practice Session | Masterschool',
-    description:
-      'A one-on-one Masterschool session working through six closure practice problems live: createFunction, createFunctionWithInput, a counter with separate IIFE instances, addByX, the complex saveOutput cache with password gating, and deDup with a live debugging moment.',
-    href: '/projects/masterschool-closures-practice',
-    tags: ['javascript'],
-    group: 'open-gym',
-  },
-  {
-    icon: 'tabler:bolt',
-    title: 'ES6 Features Open Gym — Masterschool',
-    description:
-      'Two live open gym sessions covering the core ES6 feature set: destructuring, spread, rest parameters, for...of loops, arrow functions, default parameters, and template literals with live coding and real-time student Q&A.',
-    href: '/projects/masterschool-es6',
-    tags: ['javascript'],
-    group: 'open-gym',
-  },
-  {
-    icon: 'tabler:bolt',
-    title: 'ES6 Exercises — Destructuring, Ternary, and Defensive Programming | Masterschool',
-    description:
-      'A live exercise session working through ES6 problems with students presenting answers live — object and array destructuring, arrow function shorthand, default parameters, rest and spread, the ternary operator, and the nullish coalescing operator, with a React preview at the close.',
-    href: '/projects/masterschool-es6-exercises',
-    tags: ['javascript'],
-    group: 'open-gym',
-  },
-  {
-    icon: 'tabler:package',
-    title: 'Node, npm, and Higher-Order Functions — Live Coding Session | Masterschool',
-    description:
-      'A live session covering Node.js, npm, and module loading — then rebuilding map, forEach, filter, and reduce from scratch using plain for loops and callbacks, as preparation for understanding promises and async/await.',
-    href: '/projects/masterschool-npm-higher-order',
-    tags: ['javascript', 'node'],
-    group: 'deep-dive',
-  },
-  {
-    icon: 'tabler:clock-pause',
-    title: 'JavaScript Async — Promises, .then/.catch, and Promise.all | Masterschool',
-    description:
-      'A live open gym session working through JavaScript async patterns — promise states, executor functions, handling success and failure with .then and .catch, and running concurrent promises with Promise.all, with real-time student Q&A and live code.',
-    href: '/projects/masterschool-async-promises',
-    tags: ['javascript'],
-    group: 'open-gym',
-  },
-  {
-    icon: 'tabler:layout-grid',
-    title: 'Dinosaur Infographic Project Intro — OOP, Constructor Functions & DOM Integration | Masterschool',
-    description:
-      'A live project kickoff session for the Udacity Dinosaur Infographic assignment — demoing the finished app, walking the rubric, and mapping the build strategy to OOP concepts. Covers loading JSON via import vs. Fetch API, constructor functions vs. ES6 classes, IIFE and the Revealing Module Pattern, three comparison methods, tile generation, and version control with GitHub.',
-    href: '/projects/masterschool-dino-intro',
-    tags: ['javascript', 'projects'],
-    group: 'project',
-  },
-  {
-    icon: 'tabler:bug',
-    title: 'Dinosaur Infographic — Live Debugging and OOP Walkthrough | Masterschool',
-    description:
-      'A small-group support session for students blocked on the Udacity Dinosaur Infographic project — working through two methods for loading JSON data, building the Dino constructor live, implementing the IIFE pattern for form handling, and debugging with the Chrome debugger as students watched in real time.',
-    href: '/projects/masterschool-dino-infographic',
-    tags: ['javascript', 'projects'],
-    group: 'project',
-  },
-  {
-    icon: 'tabler:server',
-    title: 'Teaching Node and Express — Masterschool',
-    description:
-      'A live 32-minute session introducing career-changers to server-side development with Node.js and Express — the hardest conceptual shift in the bootcamp curriculum, taught with scaffolded mental models, live code demos, and real-time student interaction.',
-    href: '/projects/masterschool-node-express',
-    tags: ['node'],
-    group: 'deep-dive',
-  },
-  {
-    icon: 'tabler:brand-react',
-    title: 'Intro to Epic React — Live Group Session',
-    description:
-      "A live one-hour group onboarding session for Masterschool students — watching Kent C. Dodds' welcome video together and completing every setup step live, so no one hit a wall before the first exercise.",
-    href: '/projects/masterschool-epic-react-intro',
-    tags: ['react'],
-    group: 'project',
-  },
-  {
-    icon: 'tabler:book',
-    title: 'myReads Book Tracker — React Project Intro',
-    description:
-      'A live session introducing Masterschool students to the myReads React project — demoing the finished app first, walking the rubric, and mapping each feature to the specific React concept needed to build it.',
-    href: '/projects/masterschool-myreads-book-tracker',
-    tags: ['react', 'projects'],
-    group: 'project',
-  },
-  {
-    icon: 'tabler:brand-react',
-    title: 'React Fundamentals Review — Virtual DOM, JSX, Props, and Component Design | Masterschool',
-    description:
-      'A review week session using breakout rooms and full-group debrief to cover core React concepts — virtual DOM, composition, one-way data flow, JSX, Babel, and declarative vs imperative code, with fill-in-the-blank exercises on props, conditional rendering, list keys, and className.',
-    href: '/projects/masterschool-react-fundamentals',
-    tags: ['react'],
-    group: 'deep-dive',
-  },
-  {
-    icon: 'tabler:rocket',
-    title: 'UdaciRacer Project Walkthrough — Masterschool',
-    description:
-      'A live project walkthrough and Q&A session for Masterschool students on the UdaciRacer JavaScript racing game — covering async programming, the Fetch API, DOM manipulation, and working with a Node.js server.',
-    href: '/projects/masterschool-udaciracer',
-    tags: ['javascript', 'projects'],
-    group: 'project',
-  },
-  {
-    icon: 'tabler:box',
-    title: 'Redux and State Management — Group Review and Q&A | Masterschool',
-    description:
-      'A group review session covering Redux fundamentals — the three core principles, the full action/dispatch/reducer flow, middleware, useReducer, and the Context API — using breakout rooms for collaborative Q&A followed by a full-group debrief.',
-    href: '/projects/masterschool-redux',
-    tags: ['react'],
-    group: 'deep-dive',
-  },
-  {
-    icon: 'tabler:shield-lock',
-    title: 'Common Security Attacks — Securing Web Apps with OWASP | Masterschool',
-    description:
-      'A live webinar introducing Masterschool students to the OWASP Top Ten — injection, broken authentication, XSS/CSRF, broken access control, data exposure, and three new 2021 categories — with a business-case framing using the ALE risk formula and hands-on exploration via hacksplaining.com.',
-    href: '/projects/masterschool-web-security',
-    tags: ['security'],
-    group: 'deep-dive',
-  },
-];
+import { liveInstruction, groupMeta } from '~/data/live-instruction';
 
-const groupMeta: Record<string, { label: string; style: string }> = {
-  'open-gym': {
-    label: 'Open Gym Practice & Review',
-    style: 'bg-amber-500 dark:bg-amber-600 text-white font-semibold',
-  },
-  project: {
-    label: 'Project Walkthroughs',
-    style: 'bg-emerald-600 dark:bg-emerald-700 text-white font-semibold',
-  },
-  'deep-dive': {
-    label: 'Concept Introduction & Deep Dive',
-    style: 'bg-violet-700 dark:bg-violet-800 text-white font-semibold',
-  },
-};
+// The four sessions aimed at professional-level practice rather than
+// career-changer fundamentals. Full catalog lives at /projects/live-instruction.
+const FEATURED_SESSIONS = [
+  '/projects/masterschool-web-security',
+  '/projects/masterschool-node-express',
+  '/projects/masterschool-testing-javascript',
+  '/projects/masterschool-redux',
+];
 
 const devOnlyIdItems = import.meta.env.DEV
   ? [
@@ -242,7 +37,7 @@ const devOnlyIdItems = import.meta.env.DEV
 <Layout metadata={metadata}>
   <Hero tagline="Portfolio">
     <Fragment slot="bg">
-      <div class="absolute inset-0 overflow-hidden pointer-events-none" style="-webkit-mask-image: radial-gradient(ellipse 55% 55% at 50% 50%, transparent 0%, black 100%); mask-image: radial-gradient(ellipse 55% 55% at 50% 50%, transparent 0%, black 100%);">
+      <div class="absolute inset-0 overflow-hidden pointer-events-none hidden md:block" style="-webkit-mask-image: radial-gradient(ellipse 85% 72% at 50% 50%, transparent 0%, transparent 58%, black 100%); mask-image: radial-gradient(ellipse 85% 72% at 50% 50%, transparent 0%, transparent 58%, black 100%);">
         <!-- Lines SVG — renders behind orbs -->
         <svg
           class="block absolute inset-0 w-full h-full"
@@ -282,27 +77,27 @@ const devOnlyIdItems = import.meta.env.DEV
             <animate attributeName="stroke-dashoffset" values="60;0" dur="9s" repeatCount="indefinite"></animate>
           </path>
           <path
-            d="M64 30 L72 23 L83 15 L90 9 L94 4"
+            d="M72 23 L83 15 L90 9 L94 4"
             fill="none"
             stroke="url(#comet)"
             stroke-width="0.12"
             stroke-linecap="round"
             stroke-linejoin="round"
-            stroke-dasharray="26 36"
+            stroke-dasharray="19 27"
             opacity="0.9"
           >
-            <animate attributeName="stroke-dashoffset" values="66;-8" dur="11s" repeatCount="indefinite"></animate>
+            <animate attributeName="stroke-dashoffset" values="48;-6" dur="11s" repeatCount="indefinite"></animate>
           </path>
           <path
-            d="M64 30 L72 23 L83 15 L90 9 L94 4"
+            d="M72 23 L83 15 L90 9 L94 4"
             fill="none"
             stroke="url(#comet)"
             stroke-width="0.12"
             stroke-linecap="round"
             stroke-linejoin="round"
-            stroke-dasharray="14 48"
+            stroke-dasharray="10 35"
           >
-            <animate attributeName="stroke-dashoffset" values="62;0" dur="11s" repeatCount="indefinite"></animate>
+            <animate attributeName="stroke-dashoffset" values="45;0" dur="11s" repeatCount="indefinite"></animate>
           </path>
           <path
             d="M6 46 L11 40 L17 45 L21 40"
@@ -460,6 +255,11 @@ const devOnlyIdItems = import.meta.env.DEV
           class="inline-block bg-accent/25 text-accent hover:bg-accent hover:text-white text-sm font-semibold px-4 py-2 rounded-md transition-colors duration-200"
           >Speaking & Guest Expertise</a
         >
+        <a
+          href="#graduate-work"
+          class="inline-block bg-accent/25 text-accent hover:bg-accent hover:text-white text-sm font-semibold px-4 py-2 rounded-md transition-colors duration-200"
+          >Graduate Work</a
+        >
       </div>
     </Fragment>
   </Hero>
@@ -500,6 +300,12 @@ const devOnlyIdItems = import.meta.env.DEV
         href="#speaking"
         class="section-spy-btn inline-block border border-gray-400 dark:border-gray-500 text-gray-600 dark:text-gray-400 text-xs font-medium px-3 py-1 rounded-md transition-colors duration-200"
         >Speaking & Guest Expertise</a
+      >
+      <a
+        data-section="graduate-work"
+        href="#graduate-work"
+        class="section-spy-btn inline-block border border-gray-400 dark:border-gray-500 text-gray-600 dark:text-gray-400 text-xs font-medium px-3 py-1 rounded-md transition-colors duration-200"
+        >Graduate Work</a
       >
     </div>
   </div>
@@ -725,149 +531,74 @@ const devOnlyIdItems = import.meta.env.DEV
       <p class="text-sm font-bold uppercase tracking-widest text-accent mb-2">Masterschool · Udacity Curriculum</p>
       <h2 class="text-3xl md:text-4xl font-bold font-heading tracking-tighter">Remote Live Instruction</h2>
       <p class="text-muted mt-3 text-lg max-w-2xl mx-auto">
-        22 recorded sessions across JavaScript, CSS, React, Node, and web security — taught live to international
-        bootcamp cohorts.
+        22 recorded sessions taught live to international bootcamp cohorts. A few that go deepest on technical
+        practice:
       </p>
     </div>
 
-    <!-- Filter buttons -->
-    <div class="flex flex-wrap gap-2 justify-center mb-3">
+    <div class="grid md:grid-cols-2 gap-6">
       {
-        [
-          { label: 'All', value: 'all', type: 'all' },
-          { label: 'JavaScript', value: 'javascript', type: 'topic' },
-          { label: 'CSS', value: 'css', type: 'topic' },
-          { label: 'React', value: 'react', type: 'topic' },
-          { label: 'Node & Backend', value: 'node', type: 'topic' },
-          { label: 'Projects', value: 'projects', type: 'topic' },
-          { label: 'Security', value: 'security', type: 'topic' },
-        ].map((f) => (
-          <button
-            data-filter={f.value}
-            data-type={f.type}
-            class={`filter-btn px-4 py-1.5 rounded-md text-sm font-semibold border transition-colors duration-200 ${f.value === 'all' ? 'bg-accent text-white border-accent hover:text-white' : 'border-gray-300 dark:border-gray-600 text-gray-600 dark:text-gray-400 hover:border-accent hover:text-accent'}`}
-          >
-            {f.label}
-          </button>
-        ))
+        liveInstruction
+          .filter((item) => FEATURED_SESSIONS.includes(item.href))
+          .sort((a, b) => FEATURED_SESSIONS.indexOf(a.href) - FEATURED_SESSIONS.indexOf(b.href))
+          .map((item) => {
+            const gm = groupMeta[item.group];
+            return (
+              <a
+                href={item.href}
+                class="group relative flex flex-col p-6 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-accent dark:hover:border-accent transition-all duration-200 shadow-sm hover:shadow-lg"
+              >
+                <span class={`absolute top-4 right-4 text-xs font-semibold px-2.5 py-1 rounded-full ${gm.style}`}>
+                  {gm.label}
+                </span>
+                <div class="w-11 h-11 rounded-lg bg-accent/20 dark:bg-accent/40 flex items-center justify-center mb-5 shrink-0 -mt-2">
+                  <Icon name={item.icon} class="w-6 h-6 text-accent" />
+                </div>
+                <h3 class="text-base font-bold font-heading leading-snug mb-3 pr-16 group-hover:text-accent transition-colors duration-200">
+                  {item.title}
+                </h3>
+                <p class="text-sm text-muted leading-relaxed flex-1">{item.description}</p>
+                <div class="mt-5 inline-flex items-center gap-1 text-sm font-medium text-accent">
+                  View Case Study
+                  <svg
+                    class="w-3.5 h-3.5 transition-transform duration-200 group-hover:translate-x-0.5"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M5 12h14M12 5l7 7-7 7" />
+                  </svg>
+                </div>
+              </a>
+            );
+          })
       }
     </div>
 
-    <!-- Format filter buttons -->
-    <div class="flex flex-wrap gap-2 justify-center mb-10">
-      {
-        [
-          { label: 'Open Gym Practice & Review', value: 'open-gym', type: 'group' },
-          { label: 'Project Walkthroughs', value: 'project', type: 'group' },
-          { label: 'Concept Introduction & Deep Dive', value: 'deep-dive', type: 'group' },
-        ].map((f) => (
-          <button
-            data-filter={f.value}
-            data-type={f.type}
-            class="filter-btn px-4 py-1.5 rounded-md text-sm font-semibold border transition-colors duration-200 border-gray-300 dark:border-gray-600 text-gray-600 dark:text-gray-400 hover:border-accent hover:text-accent"
-          >
-            {f.label}
-          </button>
-        ))
-      }
+    <div class="mt-8 text-center">
+      <a
+        href="/projects/live-instruction"
+        class="inline-flex items-center gap-2 border-2 border-gray-300 dark:border-gray-600 text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-800 font-semibold px-5 py-2.5 rounded-lg transition-colors text-sm"
+      >
+        View all 22 sessions
+        <svg
+          class="w-3.5 h-3.5"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2.5"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="M5 12h14M12 5l7 7-7 7"></path>
+        </svg>
+      </a>
     </div>
-
-    <!-- Card grid -->
-    <div id="live-grid" class="grid md:grid-cols-2 gap-6">
-      {
-        liveInstruction.map((item) => {
-          const gm = groupMeta[item.group];
-          return (
-            <a
-              href={item.href}
-              data-tags={item.tags.join(' ')}
-              data-group={item.group}
-              class="live-card group relative flex flex-col p-6 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-accent dark:hover:border-accent transition-all duration-200 shadow-sm hover:shadow-lg"
-            >
-              <span class={`absolute top-4 right-4 text-xs font-semibold px-2.5 py-1 rounded-full ${gm.style}`}>
-                {gm.label}
-              </span>
-              <div class="w-11 h-11 rounded-lg bg-accent/20 dark:bg-accent/40 flex items-center justify-center mb-5 shrink-0 -mt-2">
-                <Icon name={item.icon} class="w-6 h-6 text-accent" />
-              </div>
-              <h3 class="text-base font-bold font-heading leading-snug mb-3 pr-16 group-hover:text-accent transition-colors duration-200">
-                {item.title}
-              </h3>
-              <p class="text-sm text-muted leading-relaxed flex-1">{item.description}</p>
-              <div class="mt-5 inline-flex items-center gap-1 text-sm font-medium text-accent">
-                View Case Study
-                <svg
-                  class="w-3.5 h-3.5 transition-transform duration-200 group-hover:translate-x-0.5"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path d="M5 12h14M12 5l7 7-7 7" />
-                </svg>
-              </div>
-            </a>
-          );
-        })
-      }
-    </div>
-
-    <!-- Empty state -->
-    <p id="live-empty" class="hidden text-center text-muted py-12">No sessions match that filter.</p>
   </section>
 
-  <script>
-    function initLiveFilter() {
-      const allBtns = document.querySelectorAll<HTMLButtonElement>('.filter-btn');
-      const cards = document.querySelectorAll<HTMLElement>('.live-card');
-      const empty = document.getElementById('live-empty');
-
-      const activeClasses = ['bg-accent', 'text-white', 'border-accent', 'hover:text-white'];
-      const inactiveClasses = [
-        'border-gray-300',
-        'dark:border-gray-600',
-        'text-gray-600',
-        'dark:text-gray-400',
-        'hover:text-accent',
-      ];
-
-      allBtns.forEach((btn) => {
-        btn.addEventListener('click', () => {
-          const filter = btn.dataset.filter ?? 'all';
-          const type = btn.dataset.type ?? 'all';
-
-          // Deactivate every button, then activate just this one
-          allBtns.forEach((b) => {
-            b.classList.remove(...activeClasses);
-            b.classList.add(...inactiveClasses);
-          });
-          btn.classList.add(...activeClasses);
-          btn.classList.remove(...inactiveClasses);
-
-          // Show/hide cards
-          let visible = 0;
-          cards.forEach((card) => {
-            let show = false;
-            if (filter === 'all') {
-              show = true;
-            } else if (type === 'topic') {
-              show = (card.dataset.tags ?? '').includes(filter);
-            } else if (type === 'group') {
-              show = (card.dataset.group ?? '') === filter;
-            }
-            card.style.display = show ? '' : 'none';
-            if (show) visible++;
-          });
-
-          if (empty) empty.classList.toggle('hidden', visible > 0);
-        });
-      });
-    }
-
-    document.addEventListener('astro:page-load', initLiveFilter);
-  </script>
 
   <div id="teaching"></div>
   <Features2
@@ -982,10 +713,39 @@ const devOnlyIdItems = import.meta.env.DEV
       },
     ]}
   />
+
+  <div id="graduate-work"></div>
+  <Features2
+    title="Graduate Work — M.S. Learning Design & Technology"
+    columns={2}
+    items={[
+      {
+        title: 'ChatGPT as an AI-Powered Learning Tool',
+        description:
+          'An evaluation of ChatGPT as a learning technology — examining instructional use cases, limitations, and the conditions under which generative AI supports rather than short-circuits learning. Coursework for LDTC 620 at UMGC.',
+        icon: 'tabler:sparkles',
+        callToAction: { text: 'View Project', href: '/projects/ldtc620-chatgpt-ai-tool' },
+      },
+      {
+        title: 'Social & Collaborative Learning Spaces',
+        description:
+          'An analysis of technologies that support social and collaborative learning — mapping tool affordances to the collaboration behaviors they actually enable. Coursework for LDTC 620 at UMGC.',
+        icon: 'tabler:users-group',
+        callToAction: { text: 'View Project', href: '/projects/ldtc620-social-learning-tech' },
+      },
+      {
+        title: 'Learning Technology Infographic',
+        description:
+          'A visual synthesis of the learning technology landscape, designed as a single-page reference — practice in condensing a broad research area into an accessible visual artifact. Coursework for LDTC 620 at UMGC.',
+        icon: 'tabler:chart-infographic',
+        callToAction: { text: 'View Project', href: '/projects/ldtc620-infographic' },
+      },
+    ]}
+  />
   <script>
     function initScrollspy() {
       const stickyNav = document.getElementById('section-nav') as HTMLElement | null;
-      const sectionIds = ['instructional-design', 'live-instruction', 'teaching', 'one-on-one', 'speaking'];
+      const sectionIds = ['instructional-design', 'live-instruction', 'teaching', 'one-on-one', 'speaking', 'graduate-work'];
       const heroThreshold = 320;
 
       // Position below the sticky header (including the progress bar at its bottom)

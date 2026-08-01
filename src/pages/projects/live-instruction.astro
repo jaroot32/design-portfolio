@@ -1,0 +1,176 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import { Icon } from 'astro-icon/components';
+import { liveInstruction, groupMeta } from '~/data/live-instruction';
+
+const metadata = {
+  title: 'Remote Live Instruction — Session Archive',
+};
+---
+
+<Layout metadata={metadata}>
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 py-12 md:py-16">
+    <a
+      href="/projects"
+      class="inline-flex items-center gap-1 text-sm font-medium text-accent hover:underline mb-8"
+    >
+      <svg
+        class="w-3.5 h-3.5"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2.5"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path d="M19 12H5M12 19l-7-7 7-7"></path>
+      </svg>
+      All Projects
+    </a>
+
+    <div class="mb-8 text-center">
+      <p class="text-sm font-bold uppercase tracking-widest text-accent mb-2">Masterschool · Udacity Curriculum</p>
+      <h1 class="text-3xl md:text-4xl font-bold font-heading tracking-tighter">Remote Live Instruction Archive</h1>
+      <p class="text-muted mt-3 text-lg max-w-2xl mx-auto">
+        22 recorded sessions across JavaScript, CSS, React, Node, and web security — taught live to international
+        bootcamp cohorts of career-changing adult learners.
+      </p>
+    </div>
+
+    <!-- Filter buttons -->
+    <div class="flex flex-wrap gap-2 justify-center mb-3">
+      {
+        [
+          { label: 'All', value: 'all', type: 'all' },
+          { label: 'JavaScript', value: 'javascript', type: 'topic' },
+          { label: 'CSS', value: 'css', type: 'topic' },
+          { label: 'React', value: 'react', type: 'topic' },
+          { label: 'Node & Backend', value: 'node', type: 'topic' },
+          { label: 'Projects', value: 'projects', type: 'topic' },
+          { label: 'Security', value: 'security', type: 'topic' },
+        ].map((f) => (
+          <button
+            data-filter={f.value}
+            data-type={f.type}
+            class={`filter-btn px-4 py-1.5 rounded-md text-sm font-semibold border transition-colors duration-200 ${f.value === 'all' ? 'bg-accent text-white border-accent hover:text-white' : 'border-gray-300 dark:border-gray-600 text-gray-600 dark:text-gray-400 hover:border-accent hover:text-accent'}`}
+          >
+            {f.label}
+          </button>
+        ))
+      }
+    </div>
+
+    <!-- Format filter buttons -->
+    <div class="flex flex-wrap gap-2 justify-center mb-10">
+      {
+        [
+          { label: 'Open Gym Practice & Review', value: 'open-gym', type: 'group' },
+          { label: 'Project Walkthroughs', value: 'project', type: 'group' },
+          { label: 'Concept Introduction & Deep Dive', value: 'deep-dive', type: 'group' },
+        ].map((f) => (
+          <button
+            data-filter={f.value}
+            data-type={f.type}
+            class="filter-btn px-4 py-1.5 rounded-md text-sm font-semibold border transition-colors duration-200 border-gray-300 dark:border-gray-600 text-gray-600 dark:text-gray-400 hover:border-accent hover:text-accent"
+          >
+            {f.label}
+          </button>
+        ))
+      }
+    </div>
+
+    <!-- Card grid -->
+    <div id="live-grid" class="grid md:grid-cols-2 gap-6">
+      {
+        liveInstruction.map((item) => {
+          const gm = groupMeta[item.group];
+          return (
+            <a
+              href={item.href}
+              data-tags={item.tags.join(' ')}
+              data-group={item.group}
+              class="live-card group relative flex flex-col p-6 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-accent dark:hover:border-accent transition-all duration-200 shadow-sm hover:shadow-lg"
+            >
+              <span class={`absolute top-4 right-4 text-xs font-semibold px-2.5 py-1 rounded-full ${gm.style}`}>
+                {gm.label}
+              </span>
+              <div class="w-11 h-11 rounded-lg bg-accent/20 dark:bg-accent/40 flex items-center justify-center mb-5 shrink-0 -mt-2">
+                <Icon name={item.icon} class="w-6 h-6 text-accent" />
+              </div>
+              <h3 class="text-base font-bold font-heading leading-snug mb-3 pr-16 group-hover:text-accent transition-colors duration-200">
+                {item.title}
+              </h3>
+              <p class="text-sm text-muted leading-relaxed flex-1">{item.description}</p>
+              <div class="mt-5 inline-flex items-center gap-1 text-sm font-medium text-accent">
+                View Case Study
+                <svg
+                  class="w-3.5 h-3.5 transition-transform duration-200 group-hover:translate-x-0.5"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M5 12h14M12 5l7 7-7 7" />
+                </svg>
+              </div>
+            </a>
+          );
+        })
+      }
+    </div>
+
+    <!-- Empty state -->
+    <p id="live-empty" class="hidden text-center text-muted py-12">No sessions match that filter.</p>
+  </section>
+
+  <script>
+    function initLiveFilter() {
+      const allBtns = document.querySelectorAll<HTMLButtonElement>('.filter-btn');
+      const cards = document.querySelectorAll<HTMLElement>('.live-card');
+      const empty = document.getElementById('live-empty');
+
+      const activeClasses = ['bg-accent', 'text-white', 'border-accent', 'hover:text-white'];
+      const inactiveClasses = [
+        'border-gray-300',
+        'dark:border-gray-600',
+        'text-gray-600',
+        'dark:text-gray-400',
+        'hover:text-accent',
+      ];
+
+      allBtns.forEach((btn) => {
+        btn.addEventListener('click', () => {
+          const filter = btn.dataset.filter ?? 'all';
+          const type = btn.dataset.type ?? 'all';
+
+          allBtns.forEach((b) => {
+            b.classList.remove(...activeClasses);
+            b.classList.add(...inactiveClasses);
+          });
+          btn.classList.add(...activeClasses);
+          btn.classList.remove(...inactiveClasses);
+
+          let visible = 0;
+          cards.forEach((card) => {
+            let show = false;
+            if (filter === 'all') {
+              show = true;
+            } else if (type === 'topic') {
+              show = (card.dataset.tags ?? '').includes(filter);
+            } else if (type === 'group') {
+              show = (card.dataset.group ?? '') === filter;
+            }
+            card.style.display = show ? '' : 'none';
+            if (show) visible++;
+          });
+
+          if (empty) empty.classList.toggle('hidden', visible > 0);
+        });
+      });
+    }
+
+    document.addEventListener('astro:page-load', initLiveFilter);
+  </script>
+</Layout>
