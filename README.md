@@ -1,72 +1,36 @@
-# Jonathan Root — Learning Experience Designer Portfolio
+# Jonathan Root — Learning Experience Designer
 
-Live site: [jonathanrootdesign.com](https://www.jonathanrootdesign.com)
+**Live site: [jonathanrootdesign.com](https://jonathanrootdesign.com)**
 
-## About
+I make technical things learnable. Most instructional designers stop at what an authoring
+tool does natively; I extend Articulate Storyline with custom HTML, CSS, and JavaScript —
+and debug it in the published output when it breaks.
 
-This is my professional portfolio as a Learning Experience Designer and technical educator with 8+ years designing and delivering enablement content for software developers. It documents my work across instructional design, eLearning development, live instruction, and customer education.
+This repo is the portfolio site itself: Astro, TypeScript, and Tailwind on Vercel, serving
+five published Storyline and Rise course builds from my own domain.
 
-I built and maintain this site as a working developer — not just someone who talks about technical content, but someone who ships it.
+## Selected work
 
-## What's Here
+| Project | What it demonstrates |
+|---|---|
+| [A Healthcare Patient Journey](https://jonathanrootdesign.com/projects/healthcare-patient-journey) | Storyline 360 built from a design studio's Illustrator handoff — custom JavaScript, GSAP 3D animation, an embedded JS game running as a Web Object. Every element a native, editable Storyline object. [Build walkthrough](https://youtu.be/iT0Bw3qHh6Q) |
+| [The High-Risk Offboarding](https://jonathanrootdesign.com/projects/high-risk-offboarding-storyline) | Branching compliance scenario — needs analysis through evaluation, three tracked decision points, and a JavaScript-generated audit report personalized to the learner's path |
+| [Rumie-Learn Microlearning](https://jonathanrootdesign.com/projects/rumie-better-listener-byte) | Two Bytes published on a global OER platform, distributed across 180+ countries, each through a two-tier peer review |
+| [Work Smarter with Gemini](https://jonathanrootdesign.com/projects/gemini-rise-course) | Rise 360 course on AI adoption for a large health organization, scoped around repeatable workflows and documented with a Kirkpatrick measurement plan |
 
-**Instructional Design**
+## How it's built
 
-- Rise 360 course: Work Smarter with Gemini (AI tool adoption for a healthcare organization)
-- JavaScript & xAPI for eLearning (UMGC graduate capstone)
-- ChatGPT as an AI-Powered Learning Tool (research-backed implementation strategy)
-- Social & Collaborative Learning Spaces (applied analysis across GitHub, Slack, Discord, and AI tools)
-- Learning Technology Infographic (SAMR, Hype Cycle, Articulate Rise 360)
+- **Astro** + TypeScript + Tailwind, statically generated
+- **Vercel**, auto-deploying from `main`, custom domain
+- Published Storyline and Rise builds served from `public/`, embedded through a lazy-loading
+  iframe facade so multi-megabyte courses don't block page load
+- Generated SEO metadata and Open Graph images
 
-**Live Instruction — Masterschool Coding Bootcamp**
+## Background
 
-- CSS Selectors and the Cascade
-- Intro to Epic React
-- Node.js and Express
-- JavaScript Closures (two sessions)
-- Landing Page Project — DOM & Scroll Events
-- myReads Book Tracker — React Project Intro
-- UdaciRacer JavaScript Project Walkthrough
-- Personal Blog Project Walkthrough
-- Build a Shopping Cart Walkthrough
-- Pair Programming with Epic React
+Eight years teaching technical content to adult learners — Masterschool, Udacity, Springboard,
+Chegg — plus front-end contract development for NetMotion Software, Boeing, and Freeride
+Entertainment. Currently SME on a web development certification program at LearningMate and
+completing an M.S. in Learning Design & Technology.
 
-**Speaking & Guest Expertise**
-
-- OpenClassrooms: CSS and SASS Webinar
-- OpenClassrooms: Modern Animations with SCSS/SASS
-- OpenClassrooms: Mentoring Students with Disabilities
-- OpenClassrooms: Work with Clients Open Study
-
-**Teaching & Instruction**
-
-- University of Washington Web Development Bootcamp
-- Chegg Skills / Thinkful Technical Expert
-- Udacity & OneTen Scholarship Instructor
-
-## Tech Stack
-
-- [Astro 5.0](https://astro.build/) — static site framework
-- [Tailwind CSS](https://tailwindcss.com/) — styling
-- [AstroWind](https://github.com/arthelokyo/astrowind) — base theme
-- Deployed on [Vercel](https://vercel.com) with automatic deploys on push to main
-
-## Running Locally
-
-```bash
-npm install
-npm run dev
-```
-
-Dev server starts at `localhost:4321`.
-
-```bash
-npm run build    # Production build
-npm run preview  # Preview production build locally
-npm run fix      # Run ESLint and Prettier
-```
-
-## Contact
-
-- LinkedIn: [linkedin.com/in/jonathanroot](https://www.linkedin.com/in/jonathanroot/)
-- Email: jonroot@me.com
+📍 New York · [Portfolio](https://jonathanrootdesign.com) · [LinkedIn](https://linkedin.com/in/jonathanroot)
