@@ -1,6 +1,6 @@
 # Jonathan Root — Learning Experience Designer Portfolio
 
-Live site: [design-portfolio-jaroot32.vercel.app](https://www.jonathanrootdesign.com)
+Live site: [jonathanrootdesign.com](https://www.jonathanrootdesign.com)
 
 ## About
 
