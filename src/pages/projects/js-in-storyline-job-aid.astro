@@ -1,0 +1,118 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Content from '~/components/widgets/Content.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'Job Aid: Extending Storyline with JavaScript',
+  description:
+    'A one-page quick reference for Articulate Storyline developers on when and how to extend Storyline with custom JavaScript, including the data-model-id republish gotcha.',
+};
+---
+
+<Layout metadata={metadata}>
+  <Hero tagline="Job Aid · Performance Support · Articulate Storyline 360">
+    <Fragment slot="title">
+      Extending Storyline<br />
+      <span class="text-accent dark:text-white">with JavaScript</span>
+    </Fragment>
+    <Fragment slot="subtitle">
+      A one-page quick reference for Storyline developers: when to reach for JavaScript, how to target elements, the
+      republish gotcha that breaks builds silently, and a debugging workflow.
+    </Fragment>
+  </Hero>
+
+  <Content tagline="The Job Aid" title="One page, built to be used mid-build" isReversed>
+    <Fragment slot="content">
+      <p class="mb-4">
+        Custom JavaScript in Storyline is powerful, but the documentation for it is thin, and the failure modes are
+        quiet. This job aid condenses what I learned building two published courses into a single page a developer can
+        keep open while working.
+      </p>
+      <p class="mb-4">
+        The most useful part is the callout on <code>data-model-id</code>: Storyline can regenerate these IDs when you
+        republish, so JavaScript that hard-codes one can stop working with no error message. The aid turns that into a
+        required QA step.
+      </p>
+      <div class="mt-6 flex flex-wrap gap-3">
+        <a
+          class="btn btn-primary"
+          href="/downloads/JS_in_Storyline_Job_Aid_JonathanRoot.pdf"
+          download
+          aria-label="Download the job aid as a PDF">Download the PDF</a
+        >
+      </div>
+    </Fragment>
+    <Fragment slot="image">
+      <div class="flex items-center justify-center h-full py-8">
+        <img
+          src="/downloads/js-in-storyline-job-aid-preview.png"
+          alt="Preview of the one-page job aid. Sections cover when to use JavaScript, targeting elements, the data-model-id republish warning, four common patterns, and a five-step debugging workflow."
+          class="w-full max-w-md rounded-lg shadow-md border border-gray-200 dark:border-gray-700"
+          loading="lazy"
+        />
+      </div>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 section-pattern-b"></div>
+    </Fragment>
+  </Content>
+
+  <Features3
+    tagline="What It Covers"
+    title="Five sections, one page"
+    columns={3}
+    items={[
+      {
+        title: 'When to use JavaScript',
+        description:
+          'A short checklist and a rule of thumb: if you are about to build 8+ duplicate slides to cover permutations of a few variables, write one JavaScript block instead.',
+        icon: 'tabler:checklist',
+      },
+      {
+        title: 'Targeting elements',
+        description:
+          'How Storyline exposes objects in the DOM, and how GetPlayer() and GetVar() bridge Storyline variables into custom code.',
+        icon: 'tabler:target',
+      },
+      {
+        title: 'The republish gotcha',
+        description:
+          'Why hard-coded data-model-id values break silently after republishing, and the QA habit that prevents it.',
+        icon: 'tabler:alert-triangle',
+      },
+      {
+        title: 'Common patterns',
+        description:
+          'Hover styling, GSAP animation, the variable bridge, and Web Object wrappers, each in a compact card.',
+        icon: 'tabler:layout-cards',
+      },
+      {
+        title: 'Debugging workflow',
+        description:
+          'Five steps, from publishing to Review 360 through isolating whether the fault is in Storyline or in the script.',
+        icon: 'tabler:bug',
+      },
+      {
+        title: 'Built from real work',
+        description:
+          'Drawn from The High-Risk Offboarding and A Healthcare Patient Journey, both published in this portfolio.',
+        icon: 'tabler:briefcase',
+      },
+    ]}
+  />
+
+  <CallToAction
+    actions={[
+      { variant: 'primary', text: 'View All Projects', href: '/projects' },
+      { text: 'Get in Touch', href: '/about#contact' },
+    ]}
+  >
+    <Fragment slot="title">Interested in working together?</Fragment>
+    <Fragment slot="subtitle"
+      >I'm currently available for remote instructional design and eLearning development work.</Fragment
+    >
+  </CallToAction>
+</Layout>
