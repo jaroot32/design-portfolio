@@ -1,0 +1,112 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Content from '~/components/widgets/Content.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'Job Aid: Evaluating AI-Generated Content',
+  description:
+    'A structured, repeatable framework for judging AI-drafted content against explicit criteria, with a rationale-writing method and a worked example.',
+};
+---
+
+<Layout metadata={metadata}>
+  <Hero tagline="Job Aid · AI Content Evaluation · Editorial Judgment">
+    <Fragment slot="title">
+      Evaluating<br />
+      <span class="text-accent dark:text-white">AI-Generated Content</span>
+    </Fragment>
+    <Fragment slot="subtitle">
+      A one-page framework for judging AI-drafted content against explicit criteria, writing a rationale that holds
+      up, and catching what a fluent-sounding draft can still get wrong.
+    </Fragment>
+  </Hero>
+
+  <Content tagline="The Job Aid" title="Turning judgment into a repeatable system" isReversed>
+    <Fragment slot="content">
+      <p class="mb-4">
+        Using AI to draft content is routine now. The differentiator is whether the person directing it can tell good
+        output from confident-sounding output, and say precisely why, before it ships rather than after.
+      </p>
+      <p class="mb-4">
+        This job aid formalizes how I review AI-drafted content: four criteria in priority order, a checklist for
+        catching what a fluent read misses, and a method for writing a rationale that leads with the decisive factor
+        instead of building up to it.
+      </p>
+      <div class="mt-6 flex flex-wrap gap-3">
+        <a
+          class="btn btn-primary"
+          href="/downloads/AI_Content_Evaluation_Job_Aid_JonathanRoot.pdf"
+          download
+          aria-label="Download the job aid as a PDF">Download the PDF</a
+        >
+      </div>
+    </Fragment>
+    <Fragment slot="image">
+      <div class="flex items-center justify-center h-full py-8">
+        <img
+          src="/downloads/ai-content-evaluation-job-aid-preview.png"
+          alt="Preview of the one-page job aid. Sections cover why this matters, four evaluation criteria in priority order, a repeatable checklist, a rationale-writing method, and a worked example comparing two draft responses."
+          class="w-full max-w-md rounded-lg shadow-md border border-gray-200 dark:border-gray-700"
+          loading="lazy"
+        />
+      </div>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 section-pattern-b"></div>
+    </Fragment>
+  </Content>
+
+  <Features3
+    tagline="What It Covers"
+    title="Five sections, one page"
+    columns={3}
+    items={[
+      {
+        title: 'Why it matters',
+        description: 'The case for critical review over accepting a fluent first draft.',
+        icon: 'tabler:bulb',
+      },
+      {
+        title: 'Four criteria, ranked',
+        description:
+          'Accuracy and instruction adherence come first and override clarity and consistency when content fails either.',
+        icon: 'tabler:list-numbers',
+      },
+      {
+        title: 'A repeatable checklist',
+        description: 'Terminology, transitions, unstated assumptions, references, and constraint compliance.',
+        icon: 'tabler:checklist',
+      },
+      {
+        title: 'Rationale method',
+        description: 'Lead with the decisive factor, one piece of evidence, then stop. Write to the limit, not under it.',
+        icon: 'tabler:message-2',
+      },
+      {
+        title: 'Worked example',
+        description: 'Two draft responses compared against the criteria, with a properly constrained rationale.',
+        icon: 'tabler:briefcase',
+      },
+      {
+        title: 'Built from real practice',
+        description: 'Formalized from reviewing AI-drafted instructional content at LearningMate and in portfolio work.',
+        icon: 'tabler:tool',
+      },
+    ]}
+  />
+
+  <CallToAction
+    actions={[
+      { variant: 'primary', text: 'View All Projects', href: '/projects' },
+      { text: 'Get in Touch', href: '/about#contact' },
+    ]}
+  >
+    <Fragment slot="title">Interested in working together?</Fragment>
+    <Fragment slot="subtitle"
+      >I'm currently available for remote instructional design and eLearning development work.</Fragment
+    >
+  </CallToAction>
+</Layout>
