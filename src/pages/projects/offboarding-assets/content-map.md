@@ -1,4 +1,4 @@
-# The High-Risk Offboarding — Content Map
+# The High-Risk Offboarding, Content Map
 
 ## Project Overview
 
@@ -33,7 +33,7 @@ By the end of this module, the learner will be able to:
 
 ## Slide Structure
 
-### SLIDE 1 — Title / Stakes
+### SLIDE 1, Title / Stakes
 
 **Layout:** Title  
 **Content:**
@@ -45,7 +45,7 @@ By the end of this module, the learner will be able to:
 
 ---
 
-### SLIDE 2 — Meet Marcus Webb
+### SLIDE 2, Meet Marcus Webb
 
 **Layout:** Title Left with Large Image  
 **Content:**
@@ -55,7 +55,7 @@ By the end of this module, the learner will be able to:
 
 ---
 
-### SLIDE 3 — Decision Point 1: Access Timing
+### SLIDE 3, Decision Point 1: Access Timing
 
 **Layout:** Text Question  
 **Prompt:** It's 9:00 AM. The termination meeting is at 9:30 AM. What do you do first?
@@ -68,19 +68,19 @@ By the end of this module, the learner will be able to:
 
 ---
 
-### SLIDE 4 — Consequence: Data Breach
+### SLIDE 4, Consequence: Data Breach
 
 **Layout:** Full Picture or Text Question  
 **Trigger:** riskScore += 50, isAccessRevoked = false  
 **Content:**
 
 - At 9:18 AM, Marcus receives a Slack notification about an unusual calendar invite. He forks 47 proprietary repositories to a personal GitHub account from his phone.
-- DATA BREACH ALERT — Average cost of a malicious insider breach: $4.99 million. Containment will take an average of 292 days.
+- DATA BREACH ALERT, Average cost of a malicious insider breach: $4.99 million. Containment will take an average of 292 days.
 - Button: Try Again → Slide 3
 
 ---
 
-### SLIDE 5 — Consequence: Email Warning
+### SLIDE 5, Consequence: Email Warning
 
 **Layout:** Text Question  
 **Trigger:** riskScore += 20  
@@ -91,7 +91,7 @@ By the end of this module, the learner will be able to:
 
 ---
 
-### SLIDE 6 — Access Synchronized (Correct)
+### SLIDE 6, Access Synchronized (Correct)
 
 **Layout:** Text Question  
 **Content:**
@@ -102,32 +102,32 @@ By the end of this module, the learner will be able to:
 
 ---
 
-### SLIDE 7 — Decision Point 2: The Conversation
+### SLIDE 7, Decision Point 2: The Conversation
 
 **Layout:** Text Question  
 **Prompt:** Marcus enters the room. He's tense. How do you open the conversation?
 
 **Choices:**
 
-- A: "Marcus, I'll be direct — your position has been eliminated effective today." → Slide 8 _(conversationTone = 2, riskScore += 40)_
+- A: "Marcus, I'll be direct, your position has been eliminated effective today." → Slide 8 _(conversationTone = 2, riskScore += 40)_
 - B: "Marcus, we have made the decision to separate your employment, effective immediately. This is a final decision. We want to support your transition." → Slide 9 _(correct, conversationTone = 0)_
 - C: "Marcus, I… this is really difficult to say…" [apologetic, unclear about finality] → Slide 10 _(conversationTone = 1, riskScore += 15)_
 
 ---
 
-### SLIDE 8 — Consequence: Legal Retaliation
+### SLIDE 8, Consequence: Legal Retaliation
 
 **Layout:** Text Question  
 **Trigger:** conversationTone = 2, riskScore += 40  
 **Content:**
 
 - Marcus responds: "Is this about the Hendricks project? Because I have emails showing I flagged those issues." You have no documentation proving the termination was performance-neutral. Vague or shifting justifications can be viewed as pretext for discrimination.
-- ATTORNEY LETTER — Wrongful termination claim filed. Estimated legal cost: $180,000.
+- ATTORNEY LETTER, Wrongful termination claim filed. Estimated legal cost: $180,000.
 - Button: Try Again → Slide 7
 
 ---
 
-### SLIDE 9 — Correct: Compliant Conversation
+### SLIDE 9, Correct: Compliant Conversation
 
 **Layout:** Text Question  
 **Content:**
@@ -137,7 +137,7 @@ By the end of this module, the learner will be able to:
 
 ---
 
-### SLIDE 10 — Warning: Ambiguity Risk
+### SLIDE 10, Warning: Ambiguity Risk
 
 **Layout:** Text Question  
 **Trigger:** conversationTone = 1, riskScore += 15  
@@ -148,7 +148,7 @@ By the end of this module, the learner will be able to:
 
 ---
 
-### SLIDE 11 — Decision Point 3: Hardware Retrieval
+### SLIDE 11, Decision Point 3: Hardware Retrieval
 
 **Layout:** Text Question  
 **Prompt:** Marcus says he left his laptop at his desk.
@@ -156,11 +156,11 @@ By the end of this module, the learner will be able to:
 **Choices:**
 
 - A: "I'll need you to retrieve it now, with HR present to escort you." → Slide 12 _(correct, hardwareSecured = true)_
-- B: "That's fine — you can drop it off tomorrow." → Slide 13 _(hardwareSecured = false, riskScore += 25)_
+- B: "That's fine, you can drop it off tomorrow." → Slide 13 _(hardwareSecured = false, riskScore += 25)_
 
 ---
 
-### SLIDE 12 — Hardware Secured (Correct)
+### SLIDE 12, Hardware Secured (Correct)
 
 **Layout:** Text Question  
 **Content:**
@@ -170,7 +170,7 @@ By the end of this module, the learner will be able to:
 
 ---
 
-### SLIDE 13 — Consequence: Chain of Custody Broken
+### SLIDE 13, Consequence: Chain of Custody Broken
 
 **Layout:** Text Question  
 **Trigger:** hardwareSecured = false, riskScore += 25  
@@ -181,7 +181,7 @@ By the end of this module, the learner will be able to:
 
 ---
 
-### SLIDE 14 — Results: Offboarding Audit Report
+### SLIDE 14, Results: Offboarding Audit Report
 
 **Layout:** Title Content  
 **JavaScript trigger reads all four variables and outputs:**
@@ -193,7 +193,7 @@ By the end of this module, the learner will be able to:
 
 ---
 
-## JavaScript — Audit Report Trigger
+## JavaScript, Audit Report Trigger
 
 ```javascript
 var player = GetPlayer();
@@ -202,6 +202,6 @@ var tone = player.GetVar('conversationTone');
 var hardware = player.GetVar('hardwareSecured');
 var risk = player.GetVar('riskScore');
 
-// Output logic goes here — write to a text variable or manipulate DOM
+// Output logic goes here - write to a text variable or manipulate DOM
 // Display risk level, decision log, and financial exposure
 ```

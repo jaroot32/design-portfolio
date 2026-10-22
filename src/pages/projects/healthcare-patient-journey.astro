@@ -6,19 +6,19 @@ import Features3 from '~/components/widgets/Features3.astro';
 import coverImage from '~/assets/images/Health_Journey-Cover.png';
 
 const metadata = {
-  title: 'A Healthcare Patient Journey — Extending Storyline with JavaScript',
+  title: 'A Healthcare Patient Journey: Extending Storyline with JavaScript',
 };
 ---
 
 <Layout metadata={metadata}>
   <Hero tagline="Storyline 360 · JavaScript · GSAP · Designer Handoff">
     <Fragment slot="title">
-      A Healthcare Patient Journey —<br />
+      A Healthcare Patient Journey:<br />
       <span class="text-accent dark:text-white">Extending Storyline with JavaScript</span>
     </Fragment>
     <Fragment slot="subtitle">
       A five-slide Storyline 360 course built from a professional studio's Adobe Illustrator design files and custom
-      JavaScript template — popup layers, AI-generated narration, GSAP-powered 3D card flips, and an embedded
+      JavaScript template, popup layers, AI-generated narration, GSAP-powered 3D card flips, and an embedded
       JavaScript word game.
     </Fragment>
   </Hero>
@@ -41,12 +41,12 @@ const metadata = {
     <Fragment slot="content">
       <p class="mb-4">
         A digital learning studio provided Adobe Illustrator design files, a Storyline template with custom JavaScript
-        patterns, and a five-slide specification — the kind of designer-to-developer handoff used in professional
+        patterns, and a five-slide specification, the kind of designer-to-developer handoff used in professional
         studio pipelines.
       </p>
       <p class="mb-4">
         The designs called for interactions Storyline doesn't support natively: CSS-style drop shadows, hover effects,
-        true 3D card flips, and an embedded JavaScript game — plus a ten-step interactive patient journey map with
+        true 3D card flips, and an embedded JavaScript game, plus a ten-step interactive patient journey map with
         popup layers, visited-state tracking, and AI-generated narration.
       </p>
       <p>
@@ -63,7 +63,7 @@ const metadata = {
   <Features3
     tagline="The Build"
     title="Five slides, five interaction patterns"
-    subtitle="Each slide required a different technique — from native states and layers to runtime-loaded JavaScript libraries."
+    subtitle="Each slide required a different technique: from native states and layers to runtime-loaded JavaScript libraries."
     columns={3}
     items={[
       {
@@ -87,19 +87,19 @@ const metadata = {
       {
         title: '3D Card Flips with GSAP',
         description:
-          'True perspective card flips using GSAP loaded at runtime — per-card animation locks, pointer-event management so only the visible face receives clicks, and completion tracking reported to Storyline variables.',
+          'True perspective card flips using GSAP loaded at runtime, per-card animation locks, pointer-event management so only the visible face receives clicks, and completion tracking reported to Storyline variables.',
         icon: 'tabler:cards',
       },
       {
         title: 'Tabbed Content Panels',
         description:
-          'Button-driven panel swapping managed with base-layer state changes — avoiding the click-blocking issues that layer-based approaches introduce.',
+          'Button-driven panel swapping managed with base-layer state changes, avoiding the click-blocking issues that layer-based approaches introduce.',
         icon: 'tabler:layout-sidebar',
       },
       {
         title: 'Embedded JavaScript Game',
         description:
-          'A Connections-style word game (HTML/CSS/JS with GSAP animations) embedded as a Web Object — folder structure preserved so relative asset paths survive publishing.',
+          'A Connections-style word game (HTML/CSS/JS with GSAP animations) embedded as a Web Object, folder structure preserved so relative asset paths survive publishing.',
         icon: 'tabler:puzzle',
       },
     ]}
@@ -111,7 +111,7 @@ const metadata = {
       <p class="text-base text-secondary dark:text-blue-200 font-bold tracking-wide uppercase mb-2">Walkthrough</p>
       <h2 class="text-4xl md:text-5xl font-bold tracking-tighter font-heading">A Guided Tour of the Build</h2>
       <p class="text-lg text-muted mt-4">
-        A slide-by-slide walkthrough of the interactions — blur reveal and state persistence, JavaScript hover and
+        A slide-by-slide walkthrough of the interactions, blur reveal and state persistence, JavaScript hover and
         shadow effects, AI-generated narration with custom mute controls, GSAP 3D card flips, and the embedded
         JavaScript connection game.
       </p>
@@ -123,7 +123,7 @@ const metadata = {
       <iframe
         class="absolute inset-0 w-full h-full"
         src="https://www.youtube.com/embed/iT0Bw3qHh6Q"
-        title="A Healthcare Patient Journey — Build Walkthrough"
+        title="A Healthcare Patient Journey: Build Walkthrough"
         frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         allowfullscreen
@@ -137,14 +137,14 @@ const metadata = {
       <p class="text-base text-secondary dark:text-blue-200 font-bold tracking-wide uppercase mb-2">Storyline Module</p>
       <h2 class="text-4xl md:text-5xl font-bold tracking-tighter font-heading">Explore the Course</h2>
       <p class="text-lg text-muted mt-4">
-        Five slides following a patient's journey through a healthcare visit — from check-in to online access.
+        Five slides following a patient's journey through a healthcare visit, from check-in to online access.
       </p>
     </div>
     <div
       class="iframe-launcher relative w-full rounded-lg shadow-lg overflow-hidden border border-gray-200 dark:border-gray-700"
       style="padding-top: 56.25%;"
       data-src="/Health%20Journey/story.html"
-      data-title="A Healthcare Patient Journey — Storyline 360 Course"
+      data-title="A Healthcare Patient Journey: Storyline 360 Course"
     >
       <div
         class="absolute inset-0 cursor-pointer group select-none"
@@ -216,13 +216,13 @@ const metadata = {
     </Fragment>
     <Fragment slot="content">
       <p class="mb-4">
-        The client required every interactive element to exist as a native Storyline object — no baked-in interactivity
+        The client required every interactive element to exist as a native Storyline object, no baked-in interactivity
         inside image exports. That meant reading exact colors, fonts, corner radii, and gradients out of the Illustrator
         files, then rebuilding each button, circle, and panel natively with full state control (normal, hover, visited,
         selected, disabled).
       </p>
       <p class="mb-4">
-        Static artwork — backgrounds, photography, headings with gradient text Storyline can't reproduce — was exported
+        Static artwork, backgrounds, photography, headings with gradient text Storyline can't reproduce, was exported
         as transparent PNGs and positioned to match the source layouts.
       </p>
       <p>
@@ -242,12 +242,12 @@ const metadata = {
       <h2 class="text-4xl md:text-5xl font-bold tracking-tighter font-heading">The 3D Card Flip</h2>
       <p class="text-lg text-muted mt-4 max-w-2xl mx-auto">
         Storyline has no native 3D flip. This build loads GSAP at runtime, targets each card face in the published DOM,
-        and animates synchronized rotateY transforms — with pointer-event management so only the visible face receives
+        and animates synchronized rotateY transforms, with pointer-event management so only the visible face receives
         clicks.
       </p>
     </div>
     <div class="rounded-lg border border-gray-200 dark:border-gray-700 bg-gray-900 p-6">
-      <p class="text-xs text-gray-400 font-mono mb-3">// Flip trigger — both faces animate in a synchronized timeline</p>
+      <p class="text-xs text-gray-400 font-mono mb-3">// Flip trigger, both faces animate in a synchronized timeline</p>
       <pre
         class="text-sm text-green-400 font-mono overflow-x-auto"><code>{`gsap.set(frontEl, { rotateY: 0, force3D: true });
 gsap.set(backEl,  { rotateY: -180, force3D: true });
@@ -286,7 +286,7 @@ function flipCard() {
         <div class="text-center space-y-6">
           <div>
             <p class="text-5xl font-bold font-heading text-accent leading-none">2</p>
-            <p class="text-base text-muted mt-2">Deliverables — Review 360 link + source .story file</p>
+            <p class="text-base text-muted mt-2">Deliverables, Review 360 link + source .story file</p>
           </div>
           <div>
             <p class="text-5xl font-bold font-heading text-accent leading-none">6</p>
@@ -297,7 +297,7 @@ function flipCard() {
     </Fragment>
     <Fragment slot="content">
       <p class="mb-4">
-        The finished course shipped as a Review 360 link and packaged source file — five slides matching the studio's
+        The finished course shipped as a Review 360 link and packaged source file, five slides matching the studio's
         design system, with every interactive element built as a native, editable Storyline object.
       </p>
       <p class="mb-4">

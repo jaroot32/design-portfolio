@@ -6,7 +6,7 @@ import Features3 from '~/components/widgets/Features3.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 
 const metadata = {
-  title: 'CSS Responsive Design — OpenClassrooms 1:1 Guild Mentoring',
+  title: 'CSS Responsive Design: OpenClassrooms 1:1 Guild Mentoring',
 };
 
 const sessions = [
@@ -16,7 +16,7 @@ const sessions = [
     typeColor: 'bg-teal-100 dark:bg-teal-900 text-teal-800 dark:text-teal-200',
     title: 'CSS Responsive Design: Flexbox & Media Queries',
     description:
-      'Flexbox wrap behavior, desktop-first media queries, and a mobile layout built from scratch the night before a project review — with live DevTools debugging throughout.',
+      'Flexbox wrap behavior, desktop-first media queries, and a mobile layout built from scratch the night before a project review, with live DevTools debugging throughout.',
   },
   {
     id: '9yzL3Ays6rM',
@@ -24,7 +24,7 @@ const sessions = [
     typeColor: 'bg-teal-100 dark:bg-teal-900 text-teal-800 dark:text-teal-200',
     title: 'Cart Delete: Event Delegation, getAttribute & Local Storage Splice',
     description:
-      'Debugged a shopping cart delete button that removed items from the DOM but not from local storage — working through event delegation, why dot notation fails on data attributes, getAttribute() as the fix, and using splice() to remove the matched item from the local storage cart array.',
+      'Debugged a shopping cart delete button that removed items from the DOM but not from local storage, working through event delegation, why dot notation fails on data attributes, getAttribute() as the fix, and using splice() to remove the matched item from the local storage cart array.',
   },
 ];
 
@@ -35,11 +35,11 @@ const gallerySessions = sessions.slice(1);
 <Layout metadata={metadata}>
   <Hero tagline="1:1 Mentoring · CSS · Responsive Design · OpenClassrooms · Guild Education">
     <Fragment slot="title">
-      OpenClassrooms 1:1 Mentoring —<br />
+      OpenClassrooms 1:1 Mentoring:<br />
       <span class="text-accent dark:text-white">Guild Education Students</span>
     </Fragment>
     <Fragment slot="subtitle">
-      Live one-on-one mentoring sessions with working adults enrolled in OpenClassrooms through Guild Education —
+      Live one-on-one mentoring sessions with working adults enrolled in OpenClassrooms through Guild Education, 
       helping students through real project blockers, from CSS layout issues to responsive design, the night before a
       project review.
     </Fragment>
@@ -62,19 +62,19 @@ const gallerySessions = sessions.slice(1);
     </Fragment>
     <Fragment slot="content">
       <p class="mb-4">
-        Guild Education partners with employers to offer education benefits to their workforce — giving working adults
+        Guild Education partners with employers to offer education benefits to their workforce, giving working adults
         access to degree programs, certificates, and bootcamps tuition-free through their employer. OpenClassrooms was
         one of those partners. The students I mentored were employees at companies like Walmart, Chipotle, and Disney
         who were upskilling into web development while working full-time.
       </p>
       <p class="mb-4">
         That context matters. These weren't traditional students with unlimited time to iterate. They were balancing
-        shifts, family, and a structured program with real project review deadlines — often reaching out the night
+        shifts, family, and a structured program with real project review deadlines, often reaching out the night
         before a submission because something wasn't working and they needed it solved now. The sessions had to be
         direct, efficient, and leave students capable of finishing the work themselves.
       </p>
       <p>
-        As a Web Developer Mentor at OpenClassrooms, I held regular 1:1 sessions with each student — reviewing their
+        As a Web Developer Mentor at OpenClassrooms, I held regular 1:1 sessions with each student, reviewing their
         code, unblocking technical issues, and coaching them through the concepts they'd need to pass their project
         reviews.
       </p>
@@ -88,25 +88,25 @@ const gallerySessions = sessions.slice(1);
   <Features3
     tagline="The Work"
     title="What 1:1 mentoring sessions involved"
-    subtitle="Real project blockers, live in the browser — from flexbox layout to responsive breakpoints, solved together."
+    subtitle="Real project blockers, live in the browser: from flexbox layout to responsive breakpoints, solved together."
     columns={3}
     items={[
       {
         title: 'Live Code Review',
         description:
-          'Reviewed student code in real time — opening their project in the browser, inspecting the CSS in DevTools, and identifying exactly what was causing the layout to break before writing a single line of fix.',
+          'Reviewed student code in real time, opening their project in the browser, inspecting the CSS in DevTools, and identifying exactly what was causing the layout to break before writing a single line of fix.',
         icon: 'tabler:code',
       },
       {
         title: 'Flexbox Layout',
         description:
-          'Explained flex-wrap behavior and why child element widths must exceed 100% to trigger row wrapping — then applied flex-direction column to restack accommodation and activity card grids for mobile.',
+          'Explained flex-wrap behavior and why child element widths must exceed 100% to trigger row wrapping, then applied flex-direction column to restack accommodation and activity card grids for mobile.',
         icon: 'tabler:layout-columns',
       },
       {
         title: 'Media Query Strategy',
         description:
-          'Walked through desktop-first max-width media queries — explaining breakpoint logic, why you only specify width (not height), and how to layer mobile, larger-phone, and tablet targets inside separate query blocks.',
+          'Walked through desktop-first max-width media queries, explaining breakpoint logic, why you only specify width (not height), and how to layer mobile, larger-phone, and tablet targets inside separate query blocks.',
         icon: 'tabler:devices',
       },
       {
@@ -118,13 +118,13 @@ const gallerySessions = sessions.slice(1);
       {
         title: 'Project Review Coaching',
         description:
-          "Helped students understand what the reviewer was looking for — not pixel-perfect cross-device support, but demonstrated understanding of the concept. Coached how to present work confidently with what they'd built.",
+          "Helped students understand what the reviewer was looking for, not pixel-perfect cross-device support, but demonstrated understanding of the concept. Coached how to present work confidently with what they'd built.",
         icon: 'tabler:presentation',
       },
       {
         title: 'CSS Naming Conventions',
         description:
-          "Flagged lowercase file naming as a developer convention worth following — the kind of detail some reviewers notice and others don't, but that signals professional awareness regardless.",
+          "Flagged lowercase file naming as a developer convention worth following, the kind of detail some reviewers notice and others don't, but that signals professional awareness regardless.",
         icon: 'tabler:typography',
       },
     ]}
@@ -143,13 +143,13 @@ const gallerySessions = sessions.slice(1);
                 detail: 'Resize in DevTools → read the pixel width → set max-width',
               },
               { step: '02', label: 'Stack the cards', detail: 'flex-direction: column inside the media query' },
-              { step: '03', label: 'Reset the widths', detail: 'width: 100% on child elements — remove fixed widths' },
-              { step: '04', label: 'Clean up spacing', detail: 'margin: 0, padding: 0 — strip what breaks the column' },
+              { step: '03', label: 'Reset the widths', detail: 'width: 100% on child elements: remove fixed widths' },
+              { step: '04', label: 'Clean up spacing', detail: 'margin: 0, padding: 0: strip what breaks the column' },
               { step: '05', label: 'Add the next breakpoint', detail: 'min-width: 321px up to 768px → tablet layout' },
               {
                 step: '06',
                 label: 'Coach the presentation',
-                detail: 'Demo each view — show you understand the concept',
+                detail: 'Demo each view, show you understand the concept',
               },
             ].map((item) => (
               <div class="flex items-start gap-4 p-3 rounded-lg border border-gray-200 dark:border-gray-700">
@@ -166,20 +166,20 @@ const gallerySessions = sessions.slice(1);
     </Fragment>
     <Fragment slot="content">
       <p class="mb-4">
-        The session recorded here was a typical Guild mentoring call — a student had a project review at noon the next
+        The session recorded here was a typical Guild mentoring call, a student had a project review at noon the next
         day and had just realized responsive design wasn't done. They'd watched the one OpenClassrooms video on media
         queries, tried to follow W3Schools, and found the two explanations contradictory. They weren't wrong: the
         approaches are different, and the course hadn't given them enough to connect the dots.
       </p>
       <p class="mb-4">
         Rather than explain it abstractly, we opened their project, found the breakpoint where the layout collapsed, and
-        wrote the first media query together — live, in their stylesheet. Twenty lines of CSS later, they had a working
+        wrote the first media query together, live, in their stylesheet. Twenty lines of CSS later, they had a working
         mobile layout. The session closed with a walkthrough of how to present it to the reviewer: click through each
         view, explain what you did and why, and demonstrate that you understand the concept even if every device size
         isn't covered.
       </p>
       <p>
-        That reframe — from "I need to cover every device" to "I need to demonstrate I understand the concept" — is
+        That reframe, from "I need to cover every device" to "I need to demonstrate I understand the concept", is
         often the most valuable thing a mentor can offer the night before a deadline.
       </p>
     </Fragment>
@@ -374,14 +374,14 @@ const gallerySessions = sessions.slice(1);
     <Fragment slot="content">
       <p class="mb-4">
         Guild Education students are different from traditional coding bootcamp students in one important way: they
-        already have jobs. The stakes of failing a project review aren't just academic — for many of them, this
+        already have jobs. The stakes of failing a project review aren't just academic, for many of them, this
         education is tied to employer support, career advancement goals, and a significant personal investment of time
         outside of work hours. That changes what good mentoring looks like.
       </p>
       <p class="mb-4">
         It means being direct about what the reviewer actually cares about versus what the student is anxious about. It
         means solving the specific problem in front of you instead of teaching the full topic. It means giving students
-        language to talk about their work confidently — "I understand the concept, here's how I applied it" — rather
+        language to talk about their work confidently, "I understand the concept, here's how I applied it", rather
         than leaving them to guess how a reviewer will interpret incomplete coverage.
       </p>
       <div class="mt-6 flex flex-wrap gap-2">

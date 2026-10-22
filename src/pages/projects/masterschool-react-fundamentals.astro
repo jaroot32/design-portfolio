@@ -8,18 +8,18 @@ import RelatedContent from '~/components/widgets/RelatedContent.astro';
 import YouTubeEmbed from '~/components/widgets/YouTubeEmbed.astro';
 
 const metadata = {
-  title: 'React Fundamentals Review — Virtual DOM, JSX, Props, and Component Design | Masterschool',
+  title: 'React Fundamentals Review: Virtual DOM, JSX, Props, and Component Design | Masterschool',
 };
 ---
 
 <Layout metadata={metadata}>
   <Hero tagline="Live Instruction · React · JavaScript · Masterschool">
     <Fragment slot="title">
-      React Fundamentals Review —<br />
+      React Fundamentals Review:<br />
       <span class="text-accent dark:text-white">Virtual DOM, JSX, Props, and Component Design</span>
     </Fragment>
     <Fragment slot="subtitle">
-      A review week session using breakout rooms and full-group debrief to cover core React concepts — virtual DOM,
+      A review week session using breakout rooms and full-group debrief to cover core React concepts, virtual DOM,
       composition, one-way data flow, JSX, Babel, and declarative vs imperative code, with fill-in-the-blank exercises
       on props, conditional rendering, list keys, and className, and a live React 18 API discovery mid-session.
     </Fragment>
@@ -43,19 +43,19 @@ const metadata = {
     <Fragment slot="content">
       <p class="mb-4">
         Review weeks work best when students do the thinking, not just receive more content. This session opened with
-        breakout rooms — students worked in groups on a set of concept questions covering the React fundamentals they'd
+        breakout rooms, students worked in groups on a set of concept questions covering the React fundamentals they'd
         been introduced to, and then each group brought their answers back to the full session for debrief.
       </p>
       <p class="mb-4">
         The debrief format meant students heard their peers' explanations first, which are often the most useful. When
         Nico's group described the virtual DOM as a parallel copy of the DOM that React uses to compare and patch only
-        what changed, that framing was ready to build on — the GitHub diff analogy landed because the concept was
+        what changed, that framing was ready to build on, the GitHub diff analogy landed because the concept was
         already in the room.
       </p>
       <p>
         The second half of the session moved into fill-in-the-blank syntax exercises covering JSX, props, conditional
         rendering, list keys, and className. A student flagged mid-session that ReactDOM.render had been deprecated in
-        React 18 — that turned into a live look at the updated API, a good reminder that staying current is part of the
+        React 18, that turned into a live look at the updated API, a good reminder that staying current is part of the
         job.
       </p>
     </Fragment>
@@ -74,25 +74,25 @@ const metadata = {
       {
         title: 'Virtual DOM',
         description:
-          "Students defined the virtual DOM as a parallel JavaScript copy of the real DOM that React uses to compare versions and patch only what changed — keeping the UI fast without re-rendering the entire browser. Expanded with the GitHub diff analogy and connected it to why React was built at Facebook's scale.",
+          "Students defined the virtual DOM as a parallel JavaScript copy of the real DOM that React uses to compare versions and patch only what changed, keeping the UI fast without re-rendering the entire browser. Expanded with the GitHub diff analogy and connected it to why React was built at Facebook's scale.",
         icon: 'tabler:layers-difference',
       },
       {
         title: 'Composition',
         description:
-          'Covered composition as the pattern of building an application from small, reusable components — each with a single purpose — that get assembled together. Connected it to the practical value of building a personal component library that travels across projects and jobs.',
+          'Covered composition as the pattern of building an application from small, reusable components, each with a single purpose, that get assembled together. Connected it to the practical value of building a personal component library that travels across projects and jobs.',
         icon: 'tabler:puzzle',
       },
       {
         title: 'Component-Based Design',
         description:
-          "Defined components as modular, reusable pieces of UI — contrasting with the older model of separate HTML, CSS, and JavaScript files. Introduced the idea of 'thinking in React': designing the UI as a tree of components first, then building each one.",
+          "Defined components as modular, reusable pieces of UI, contrasting with the older model of separate HTML, CSS, and JavaScript files. Introduced the idea of 'thinking in React': designing the UI as a tree of components first, then building each one.",
         icon: 'tabler:components',
       },
       {
         title: 'Imperative vs Declarative',
         description:
-          'Walked through the distinction between imperative code (step-by-step instructions — addEventListener, which function to run) and declarative code (tell the system what you want, let it handle the steps). Placed React, HTML, and CSS on the declarative side, and noted that JavaScript can be both depending on how you use it.',
+          'Walked through the distinction between imperative code (step-by-step instructions, addEventListener, which function to run) and declarative code (tell the system what you want, let it handle the steps). Placed React, HTML, and CSS on the declarative side, and noted that JavaScript can be both depending on how you use it.',
         icon: 'tabler:code',
       },
       {
@@ -104,7 +104,7 @@ const metadata = {
       {
         title: 'JSX and Babel',
         description:
-          'Covered JSX as HTML-like syntax that lives inside JavaScript files — allowing components to return markup directly without separating concerns across files. Nico explained why Babel is necessary: JSX is not valid JavaScript that browsers can read, so Babel transpiles it. Babel ships bundled inside create-react-app.',
+          'Covered JSX as HTML-like syntax that lives inside JavaScript files, allowing components to return markup directly without separating concerns across files. Nico explained why Babel is necessary: JSX is not valid JavaScript that browsers can read, so Babel transpiles it. Babel ships bundled inside create-react-app.',
         icon: 'tabler:brand-javascript',
       },
       {
@@ -116,13 +116,13 @@ const metadata = {
       {
         title: 'Conditional Rendering',
         description:
-          'Covered short-circuit evaluation with && as the React pattern for conditional rendering — if the left side is falsy, the right side never evaluates and nothing renders. Used the isLoggedIn && Profile example to show how it maps to real UI logic without needing a full if/else.',
+          'Covered short-circuit evaluation with && as the React pattern for conditional rendering, if the left side is falsy, the right side never evaluates and nothing renders. Used the isLoggedIn && Profile example to show how it maps to real UI logic without needing a full if/else.',
         icon: 'tabler:git-branch',
       },
       {
         title: 'React 18 API Discovery',
         description:
-          'A student flagged mid-session that ReactDOM.render was showing a deprecation warning in React 18. Pulled up the React docs live and walked through the updated API — ReactDOM.createRoot(element).render() — noting that the docs themselves were still in the middle of being updated, a real example of how fast the ecosystem moves.',
+          'A student flagged mid-session that ReactDOM.render was showing a deprecation warning in React 18. Pulled up the React docs live and walked through the updated API, ReactDOM.createRoot(element).render(), noting that the docs themselves were still in the middle of being updated, a real example of how fast the ecosystem moves.',
         icon: 'tabler:refresh',
       },
     ]}
@@ -161,14 +161,14 @@ const metadata = {
       <p class="mb-4">
         The breakout room format puts the cognitive work on students before the debrief begins. Rather than hearing a
         definition and being asked to confirm it, students had to construct their own answers in groups first. That
-        process surfaces real gaps and produces better questions — by the time the full group came back together, the
+        process surfaces real gaps and produces better questions, by the time the full group came back together, the
         concepts had already been wrestled with once.
       </p>
       <p class="mb-4">
         The debrief structure kept things efficient: call on a group, let them present, then add what's missing or give
         the concept somewhere further to go. When Dominic's group had the one-way data flow answer down cold, there was
-        no need to re-explain it — just connect it to what's coming next. Lifting state up, Context, sibling
-        communication — all of that has a cleaner landing when the foundation is already student-built.
+        no need to re-explain it, just connect it to what's coming next. Lifting state up, Context, sibling
+        communication, all of that has a cleaner landing when the foundation is already student-built.
       </p>
       <p class="mb-4">
         The React 18 deprecation moment is worth noting as an instructional choice: rather than glossing over the
@@ -176,7 +176,7 @@ const metadata = {
         ecosystem changes, the docs lag sometimes, and staying current is a skill in itself.
       </p>
       <p>
-        The session closed with a preview of Epic React — the next phase of the curriculum — and a Friday setup session
+        The session closed with a preview of Epic React, the next phase of the curriculum, and a Friday setup session
         to get everyone onboarded before the first exercise. Ending with what comes next keeps the momentum going rather
         than leaving students with just a review.
       </p>
@@ -194,12 +194,12 @@ const metadata = {
       </p>
       <h2 class="text-4xl md:text-5xl font-bold tracking-tighter font-heading">Watch the Session</h2>
       <p class="text-lg text-muted mt-4">
-        Review week React fundamentals — breakout rooms, full-group debrief, and fill-in-the-blank syntax exercises.
+        Review week React fundamentals, breakout rooms, full-group debrief, and fill-in-the-blank syntax exercises.
       </p>
     </div>
     <YouTubeEmbed
       id="FI98zQwzfZk"
-      title="React Fundamentals Review — Virtual DOM, JSX, Props, and Component Design | Masterschool"
+      title="React Fundamentals Review: Virtual DOM, JSX, Props, and Component Design | Masterschool"
     />
   </div>
 
@@ -220,7 +220,7 @@ const metadata = {
     </Fragment>
     <Fragment slot="content">
       <p class="mb-4">
-        Review weeks are easy to run as re-lectures — the same content, delivered again, to students who already heard
+        Review weeks are easy to run as re-lectures, the same content, delivered again, to students who already heard
         it once. The breakout format avoids that by making students do the work before the debrief starts. The quality
         of the answers that came back confirmed what was solid and pointed directly at what still needed reinforcement.
       </p>
@@ -269,9 +269,9 @@ const metadata = {
     items={[
       {
         tagline: 'React Project Session',
-        title: 'myReads Book Tracker — React Project Intro',
+        title: 'myReads Book Tracker: React Project Intro',
         description:
-          'The project session that puts these fundamentals to use: orienting students to the myReads book tracking app — component architecture, state management, and the Udacity project requirements — before they start building.',
+          'The project session that puts these fundamentals to use: orienting students to the myReads book tracking app, component architecture, state management, and the Udacity project requirements, before they start building.',
         href: '/projects/masterschool-myreads-book-tracker',
       },
     ]}

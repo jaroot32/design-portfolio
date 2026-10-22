@@ -10,18 +10,18 @@ import { Image } from 'astro:assets';
 import YouTubeEmbed from '~/components/widgets/YouTubeEmbed.astro';
 
 const metadata = {
-  title: 'Chrome Extension — Udacity Career Materials Reviewer',
+  title: 'Chrome Extension: Udacity Career Materials Reviewer',
 };
 ---
 
 <Layout metadata={metadata}>
   <Hero tagline="JavaScript · Chrome Extension API · Developer Tools">
     <Fragment slot="title">
-      Chrome Extension —<br />
+      Chrome Extension:<br />
       <span class="text-accent dark:text-white">Udacity Career Materials Reviewer</span>
     </Fragment>
     <Fragment slot="subtitle">
-      A custom-built Chrome extension that cut average review time from about one hour per submission to roughly twenty minutes — by
+      A custom-built Chrome extension that cut average review time from about one hour per submission to roughly twenty minutes, by
       automating repetitive form entry for learner career material feedback.
     </Fragment>
   </Hero>
@@ -30,8 +30,8 @@ const metadata = {
   <Content tagline="The Problem" title="Repetitive data entry at scale" isReversed>
     <Fragment slot="content">
       <p class="mb-4">
-        As a Career and Technical Instructor at Udacity, I reviewed hundreds of learner career materials — resumes,
-        LinkedIn profiles, and cover letters — providing structured written feedback through a multi-field review form.
+        As a Career and Technical Instructor at Udacity, I reviewed hundreds of learner career materials, resumes,
+        LinkedIn profiles, and cover letters, providing structured written feedback through a multi-field review form.
       </p>
       <p>
         Every review required manually filling out a series of input fields and selecting radio buttons with the same
@@ -79,20 +79,20 @@ const metadata = {
       <div class="flex items-center justify-center h-full px-6 py-8">
         <Image
           src={annotationImg}
-          alt="Chrome extension annotation — review form automation"
+          alt="Chrome extension annotation: review form automation"
           class="w-full rounded-lg shadow-md border border-gray-200 dark:border-gray-700"
         />
       </div>
     </Fragment>
     <Fragment slot="content">
       <p class="mb-4">
-        I coded a Chrome extension in JavaScript featuring three buttons — one for each career material type. When a
+        I coded a Chrome extension in JavaScript featuring three buttons, one for each career material type. When a
         reviewer clicks the appropriate button, the extension loops through the entire review form, programmatically
         selects the correct radio buttons, and populates every input field with the matching boilerplate feedback
         template instantly.
       </p>
       <p>
-        The reviewer then personalizes and deepens the feedback for each individual learner — without wasting time on
+        The reviewer then personalizes and deepens the feedback for each individual learner, without wasting time on
         repetitive data entry. I also annotated each cover letter and resume directly with custom, hand-written feedback
         to give learners specific, actionable guidance alongside the form review.
       </p>
@@ -103,7 +103,7 @@ const metadata = {
   <Features3
     tagline="The Outcome"
     title="From an hour to twenty minutes"
-    subtitle="Built and deployed independently — then adopted platform-wide by Udacity's internal team."
+    subtitle="Built and deployed independently: then adopted platform-wide by Udacity's internal team."
     columns={3}
     items={[
       {
@@ -132,7 +132,7 @@ const metadata = {
       <p class="text-base text-secondary dark:text-blue-200 font-bold tracking-wide uppercase mb-2">Demo</p>
       <h2 class="text-4xl md:text-5xl font-bold tracking-tighter font-heading">See It in Action</h2>
     </div>
-    <YouTubeEmbed id="r4e8BA6eiRU" title="Chrome Extension — Udacity Career Materials Reviewer Demo" />
+    <YouTubeEmbed id="r4e8BA6eiRU" title="Chrome Extension: Udacity Career Materials Reviewer Demo" />
   </div>
 
   <!-- What This Demonstrates -->
@@ -142,7 +142,7 @@ const metadata = {
         <div class="w-full max-w-sm">
           <Image
             src={certImage}
-            alt="Udacity Mentorship Nanodegree Certificate — Jonathan Root, October 2020"
+            alt="Udacity Mentorship Nanodegree Certificate: Jonathan Root, October 2020"
             class="w-full rounded-lg shadow-md border border-gray-200 dark:border-gray-700"
           />
           <p class="text-center text-sm text-muted mt-3">Udacity Mentorship Nanodegree · October 2020</p>
@@ -151,7 +151,7 @@ const metadata = {
     </Fragment>
     <Fragment slot="content">
       <p class="mb-4">
-        This project reflects how I approach instructional support work — not just as a content problem but as a systems
+        This project reflects how I approach instructional support work, not just as a content problem but as a systems
         problem. When a workflow has friction, I look for ways to engineer it out.
       </p>
       <p class="mb-4">

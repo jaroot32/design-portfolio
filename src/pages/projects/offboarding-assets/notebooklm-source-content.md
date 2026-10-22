@@ -1,4 +1,4 @@
-# NotebookLM Source Content — High-Risk Offboarding Scenario
+# NotebookLM Source Content, High-Risk Offboarding Scenario
 
 _Synthesized from IBM Cost of a Data Breach Report 2024 and SHRM employment law guidelines_
 
@@ -19,13 +19,13 @@ For a senior engineer with root access, the most relevant metric is the cost of 
 
 For high-risk roles, deprovisioning should be pre-scheduled to occur just before or during the separation meeting. Prioritize "single point of failure" systems:
 
-1. **Identity Provider (IdP) and SSO** — Disable primary identity (Okta, Azure AD, Google Workspace) to force immediate logout from all connected cloud applications
-2. **Cloud Production Environments (AWS/GCP)** — Revoke root/admin roles, superuser privileges, and database access
-3. **Code Repositories and CI/CD (GitHub/GitLab)** — Revoke access and deprovision from CI/CD pipeline to prevent malicious commits
-4. **VPN and Remote Access (SSH/RDP)** — Terminate active VPN sessions and invalidate SSH keys/certificates
-5. **Administrative Credentials and Secrets** — Rotate shared credentials, API tokens, and encryption secrets in password vaults
-6. **Communication Tools (Slack/Email)** — Disable Slack and email; convert mailbox to shared resource for continuity
-7. **Physical Access** — Deactivate building badges, door codes, and server room credentials
+1. **Identity Provider (IdP) and SSO**, Disable primary identity (Okta, Azure AD, Google Workspace) to force immediate logout from all connected cloud applications
+2. **Cloud Production Environments (AWS/GCP)**, Revoke root/admin roles, superuser privileges, and database access
+3. **Code Repositories and CI/CD (GitHub/GitLab)**, Revoke access and deprovision from CI/CD pipeline to prevent malicious commits
+4. **VPN and Remote Access (SSH/RDP)**, Terminate active VPN sessions and invalidate SSH keys/certificates
+5. **Administrative Credentials and Secrets**, Rotate shared credentials, API tokens, and encryption secrets in password vaults
+6. **Communication Tools (Slack/Email)**, Disable Slack and email; convert mailbox to shared resource for continuity
+7. **Physical Access**, Deactivate building badges, door codes, and server room credentials
 
 ---
 

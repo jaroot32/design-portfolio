@@ -8,18 +8,18 @@ import YouTubeEmbed from '~/components/widgets/YouTubeEmbed.astro';
 import RelatedContent from '~/components/widgets/RelatedContent.astro';
 
 const metadata = {
-  title: 'JavaScript Closures — One-on-One Practice Session | Masterschool',
+  title: 'JavaScript Closures: One-on-One Practice Session | Masterschool',
 };
 ---
 
 <Layout metadata={metadata}>
   <Hero tagline="Live Instruction · JavaScript · Closures · Masterschool">
     <Fragment slot="title">
-      JavaScript Closures —<br />
+      JavaScript Closures:<br />
       <span class="text-accent dark:text-white">One-on-One Practice Session</span>
     </Fragment>
     <Fragment slot="subtitle">
-      A one-on-one Masterschool session working through six JavaScript closure practice problems live — from the
+      A one-on-one Masterschool session working through six JavaScript closure practice problems live, from the
       simplest possible closure to a complex cache function with password gating, with a live debugging moment and a
       discussion of real-world applications like game save states.
     </Fragment>
@@ -44,17 +44,17 @@ const metadata = {
       <p class="mb-4">
         Post-catchup week sessions sometimes run light on attendance. This one was just Francisco. Rather than a
         compressed group session, that meant a full one-on-one working through six closure practice problems from the
-        Udacity curriculum — at whatever pace made sense, with space to stop, debug, and go deeper on anything that
+        Udacity curriculum, at whatever pace made sense, with space to stop, debug, and go deeper on anything that
         wasn't landing.
       </p>
       <p class="mb-4">
         The problems were sequenced to build on each other: a function that returns "Hello World," a function that
         returns a function with an argument, a counter using IIFE to demonstrate separate instances, a closure over an
-        addByX value, the complex saveOutput problem with a cache object and password gating, and finally deDup — which
+        addByX value, the complex saveOutput problem with a cache object and password gating, and finally deDup, which
         hit a live debugging moment that turned into a useful teaching opportunity.
       </p>
       <p>
-        The session closed with a look at real-world applications — game save states, callback queues — and a preview of
+        The session closed with a look at real-world applications, game save states, callback queues, and a preview of
         OOP JavaScript coming up in the curriculum. The one-on-one format let the session go exactly as deep as the
         student needed on each problem.
       </p>
@@ -68,7 +68,7 @@ const metadata = {
   <Features3
     tagline="The Content"
     title="What the session covered"
-    subtitle="Six closure problems built live — from a single return statement to stateful caches, first-class functions, and duplicate detection."
+    subtitle="Six closure problems built live: from a single return statement to stateful caches, first-class functions, and duplicate detection."
     columns={3}
     items={[
       {
@@ -80,19 +80,19 @@ const metadata = {
       {
         title: 'createFunctionWithInput',
         description:
-          'Extended the first problem to capture an outer argument — the returned function closes over the input and returns it when called. Made lexical scope visible: the inner function retained access to the outer variable after the outer function returned.',
+          'Extended the first problem to capture an outer argument, the returned function closes over the input and returns it when called. Made lexical scope visible: the inner function retained access to the outer variable after the outer function returned.',
         icon: 'tabler:variable',
       },
       {
         title: 'Counter with IIFE',
         description:
-          "Built a counter using an IIFE to demonstrate that each invocation creates its own independent closure. Created Will's counter and Jazz's counter as separate instances — incrementing one had no effect on the other, showing scope preservation in action.",
+          "Built a counter using an IIFE to demonstrate that each invocation creates its own independent closure. Created Will's counter and Jazz's counter as separate instances, incrementing one had no effect on the other, showing scope preservation in action.",
         icon: 'tabler:123',
       },
       {
         title: 'addByX',
         description:
-          'A closure that closes over an X value and returns a function that adds X to any argument passed in. Two layers of input — one captured at creation, one passed at call time. Used to reinforce how closures hold onto outer scope across multiple calls.',
+          'A closure that closes over an X value and returns a function that adds X to any argument passed in. Two layers of input, one captured at creation, one passed at call time. Used to reinforce how closures hold onto outer scope across multiple calls.',
         icon: 'tabler:math-function',
       },
       {
@@ -102,21 +102,21 @@ const metadata = {
         icon: 'tabler:database',
       },
       {
-        title: 'deDup — Live Debugging',
+        title: 'deDup: Live Debugging',
         description:
-          "Built a deDup function that removes duplicates from an array using an object as a tracker. Hit a live debugging moment when the output wasn't matching expectations — walked through the logic step by step until the issue was found and fixed.",
+          "Built a deDup function that removes duplicates from an array using an object as a tracker. Hit a live debugging moment when the output wasn't matching expectations, walked through the logic step by step until the issue was found and fixed.",
         icon: 'tabler:bug',
       },
       {
         title: 'Separate Closure Instances',
         description:
-          "The counter example made a key concept concrete: calling the outer function twice produces two independent closures, each with its own internal state. Will's counter and Jazz's counter don't share anything — the closure owns its scope.",
+          "The counter example made a key concept concrete: calling the outer function twice produces two independent closures, each with its own internal state. Will's counter and Jazz's counter don't share anything, the closure owns its scope.",
         icon: 'tabler:copy',
       },
       {
         title: 'First-Class Functions as Arguments',
         description:
-          'The saveOutput problem required passing a function as an argument to another function — reinforcing first-class functions in a stateful context. The outer function stored the passed-in function and called it when needed.',
+          'The saveOutput problem required passing a function as an argument to another function, reinforcing first-class functions in a stateful context. The outer function stored the passed-in function and called it when needed.',
         icon: 'tabler:function',
       },
       {
@@ -157,7 +157,7 @@ const metadata = {
     <Fragment slot="content">
       <p class="mb-4">
         One-on-one sessions allow for a different pacing than group open gym. With a single student, it's possible to
-        slow down on any problem that isn't clicking and move quickly through what's already solid — something that a
+        slow down on any problem that isn't clicking and move quickly through what's already solid, something that a
         group format can't do without losing half the room. This session ran at Francisco's pace throughout.
       </p>
       <p class="mb-4">
@@ -167,13 +167,13 @@ const metadata = {
       </p>
       <p class="mb-4">
         The live debugging moment in deDup was unplanned but useful. When code doesn't produce the expected output,
-        walking through the logic line by line — asking what should happen here, what's actually happening, where the
-        two diverge — is a more durable learning experience than just showing the working solution. Francisco found the
+        walking through the logic line by line, asking what should happen here, what's actually happening, where the
+        two diverge, is a more durable learning experience than just showing the working solution. Francisco found the
         issue by tracing through it.
       </p>
       <p>
         The session closed with real-world framing because abstract problems land better when they have concrete
-        analogues. Closures as game save states, closures as callback holders — those connections give students
+        analogues. Closures as game save states, closures as callback holders, those connections give students
         somewhere to put the concept before they need it on the job.
       </p>
     </Fragment>
@@ -193,7 +193,7 @@ const metadata = {
         One-on-one closure practice working through six problems live, including a debugging moment on deDup.
       </p>
     </div>
-    <YouTubeEmbed id="6HfdLFqk1-w" title="JavaScript Closures — One-on-One Practice Session | Masterschool" />
+    <YouTubeEmbed id="6HfdLFqk1-w" title="JavaScript Closures: One-on-One Practice Session | Masterschool" />
   </div>
 
   <!-- Reflection -->
@@ -215,7 +215,7 @@ const metadata = {
     </Fragment>
     <Fragment slot="content">
       <p class="mb-4">
-        The deDup debugging moment is worth noting specifically because it's what happens in real development — code
+        The deDup debugging moment is worth noting specifically because it's what happens in real development, code
         runs, produces the wrong result, and you have to figure out why. Modeling the debugging process out loud, in
         front of a student, is different from showing a working solution. It demonstrates that confusion is a normal
         part of coding, not a signal that something is wrong.
@@ -223,7 +223,7 @@ const metadata = {
       <p class="mb-4">
         The saveOutput problem is the most instructionally dense in the set. It requires three things at once: a closure
         over a cache object, a first-class function passed as an argument, and password-gating logic. Walking through
-        each piece in isolation before assembling them made it tractable — and Francisco had enough context from the
+        each piece in isolation before assembling them made it tractable, and Francisco had enough context from the
         earlier problems to follow each step.
       </p>
       <div class="mt-6 flex flex-wrap gap-2">
@@ -261,9 +261,9 @@ const metadata = {
     items={[
       {
         tagline: 'Live Group Session',
-        title: 'JavaScript Closures — Live Practice Session',
+        title: 'JavaScript Closures: Live Practice Session',
         description:
-          'The group session version: from functions returning functions to a DOM font-size demo, then fixing the classic setTimeout loop bug using closures and IIFEs — with full audience participation throughout.',
+          'The group session version: from functions returning functions to a DOM font-size demo, then fixing the classic setTimeout loop bug using closures and IIFEs, with full audience participation throughout.',
         href: '/projects/masterschool-closures',
       },
     ]}

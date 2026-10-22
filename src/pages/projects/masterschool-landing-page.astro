@@ -8,25 +8,25 @@ import RelatedContent from '~/components/widgets/RelatedContent.astro';
 import YouTubeEmbed from '~/components/widgets/YouTubeEmbed.astro';
 
 const metadata = {
-  title: 'Landing Page Project — JavaScript DOM & Scroll Events | Masterschool',
+  title: 'Landing Page Project: JavaScript DOM & Scroll Events | Masterschool',
 };
 ---
 
 <Layout metadata={metadata}>
   <Hero tagline="Live Instruction · JavaScript · DOM · Scroll Events · Masterschool">
     <Fragment slot="title">
-      Landing Page Project —<br />
+      Landing Page Project:<br />
       <span class="text-accent dark:text-white">JavaScript DOM, Scroll Events & Active States</span>
     </Fragment>
     <Fragment slot="subtitle">
-      A live ~32-minute open gym session with Masterschool students on the Udacity Landing Page project — covering
+      A live ~32-minute open gym session with Masterschool students on the Udacity Landing Page project, covering
       dynamic nav generation with JavaScript, getBoundingClientRect() for viewport detection, scrollIntoView() for
       smooth scrolling, and toggling active state classes as sections come into view.
     </Fragment>
   </Hero>
 
   <!-- Context -->
-  <Content tagline="The Session" title="Open gym — bring your questions" isReversed>
+  <Content tagline="The Session" title="Open gym: bring your questions" isReversed>
     <Fragment slot="image">
       <div class="flex items-center justify-center h-full py-12">
         <div class="text-center">
@@ -43,14 +43,14 @@ const metadata = {
     <Fragment slot="content">
       <p class="mb-4">
         The Udacity Landing Page project is the point in the curriculum where JavaScript stops being abstract and starts
-        being something students have to wire up themselves. The requirement sounds straightforward — build a navigation
-        menu dynamically, scroll to sections on click, highlight the active section as you scroll — but it pulls
+        being something students have to wire up themselves. The requirement sounds straightforward, build a navigation
+        menu dynamically, scroll to sections on click, highlight the active section as you scroll, but it pulls
         together DOM manipulation, event listeners, viewport detection, and CSS class toggling all at once.
       </p>
       <p class="mb-4">
         This session ran as an open gym: no fixed agenda, students could bring whatever they were stuck on. I came with
         content ready to share but made space for questions first. When it became clear students were just starting to
-        look at the project, I walked through the key concepts live — querying the DOM, building the nav with JavaScript
+        look at the project, I walked through the key concepts live, querying the DOM, building the nav with JavaScript
         the same way they had built the pixel art grid, and then demoing scrollIntoView() and getBoundingClientRect() in
         VS Code with the browser console open.
       </p>
@@ -69,43 +69,43 @@ const metadata = {
   <Features3
     tagline="The Content"
     title="What the session covered"
-    subtitle="Project orientation, live code demos, and Q&A — from data attributes to scroll event listeners."
+    subtitle="Project orientation, live code demos, and Q&A: from data attributes to scroll event listeners."
     columns={3}
     items={[
       {
         title: 'HTML5 Data Attributes',
         description:
-          'Explained the role of data attributes in the project — how they serve as unique identifiers for section elements, connecting JavaScript to specific parts of the page without relying solely on IDs.',
+          'Explained the role of data attributes in the project, how they serve as unique identifiers for section elements, connecting JavaScript to specific parts of the page without relying solely on IDs.',
         icon: 'tabler:code',
       },
       {
         title: 'Dynamic Nav Generation',
         description:
-          'Walked through building the navigation menu with JavaScript — selecting the UL element, adding a click event listener, and connecting nav items to page sections the same way students built the pixel art grid.',
+          'Walked through building the navigation menu with JavaScript, selecting the UL element, adding a click event listener, and connecting nav items to page sections the same way students built the pixel art grid.',
         icon: 'tabler:list',
       },
       {
         title: 'getBoundingClientRect()',
         description:
-          'Demonstrated this built-in function for detecting whether a section is in the viewport — checking top, left, right, and bottom values against window.innerWidth and innerHeight to determine what the user can currently see.',
+          'Demonstrated this built-in function for detecting whether a section is in the viewport, checking top, left, right, and bottom values against window.innerWidth and innerHeight to determine what the user can currently see.',
         icon: 'tabler:viewport-wide',
       },
       {
         title: 'scrollIntoView()',
         description:
-          'Showed how to wire up click events to scroll the page to a specific section — extracting the section number from the nav item text, getting the element by ID, and calling scrollIntoView() to trigger the animation.',
+          'Showed how to wire up click events to scroll the page to a specific section, extracting the section number from the nav item text, getting the element by ID, and calling scrollIntoView() to trigger the animation.',
         icon: 'tabler:arrows-down',
       },
       {
         title: 'Active State Class Toggling',
         description:
-          'Explained the add/remove active class pattern — looping through all section and nav elements, removing the active class from everything, then adding it to whichever element is currently in the viewport.',
+          'Explained the add/remove active class pattern, looping through all section and nav elements, removing the active class from everything, then adding it to whichever element is currently in the viewport.',
         icon: 'tabler:toggle-right',
       },
       {
         title: 'Scroll Event Listener & position: sticky',
         description:
-          'Added a scroll event listener to the document and debugged position: sticky live — working through why the WebKit prefix was needed and how the scroll callback ties viewport detection to the active state logic.',
+          'Added a scroll event listener to the document and debugged position: sticky live, working through why the WebKit prefix was needed and how the scroll callback ties viewport detection to the active state logic.',
         icon: 'tabler:refresh',
       },
     ]}
@@ -138,20 +138,20 @@ const metadata = {
     </Fragment>
     <Fragment slot="content">
       <p class="mb-4">
-        Open gym sessions work differently from structured walkthroughs. Students show up at different stages — some
+        Open gym sessions work differently from structured walkthroughs. Students show up at different stages, some
         just finished the previous project, some haven't opened the starter code yet, some are already stuck on
         something specific. The goal is to be useful to all of them without lecturing at anyone.
       </p>
       <p class="mb-4">
         I started by asking what students were working on and where they were in the curriculum. Once it was clear most
         were just starting to look at the Landing Page project, I shared my screen and walked through the key mechanics
-        — not the whole project, but the parts most likely to cause confusion: how getBoundingClientRect() works, why
+       , not the whole project, but the parts most likely to cause confusion: how getBoundingClientRect() works, why
         scrollIntoView() needs the element reference first, and how the active class pattern replaces direct style
         manipulation.
       </p>
       <p class="mb-4">
-        The live debugging moment — working through why position: sticky wasn't sticking until the WebKit prefix was
-        added — was unplanned but useful. That kind of real-time troubleshooting is exactly what students need to see:
+        The live debugging moment, working through why position: sticky wasn't sticking until the WebKit prefix was
+        added, was unplanned but useful. That kind of real-time troubleshooting is exactly what students need to see:
         not a perfect demo, but how to read what the browser is telling you and iterate until it works.
       </p>
       <p>
@@ -177,7 +177,7 @@ const metadata = {
     </div>
     <YouTubeEmbed
       id="xpYDyu_ry_A"
-      title="Landing Page Project — JavaScript DOM, Scroll Events & Active States | Masterschool"
+      title="Landing Page Project: JavaScript DOM, Scroll Events & Active States | Masterschool"
     />
   </div>
 
@@ -201,14 +201,14 @@ const metadata = {
     <Fragment slot="content">
       <p class="mb-4">
         The Landing Page project asks students to coordinate more browser APIs at once than any project before it. Each
-        one is documented — getBoundingClientRect(), scrollIntoView(), classList.add() and classList.remove() — but the
+        one is documented, getBoundingClientRect(), scrollIntoView(), classList.add() and classList.remove(), but the
         documentation doesn't tell you how they fit together. That's what the session was for.
       </p>
       <p class="mb-4">
         The unplanned debugging moment with position: sticky ended up being one of the most useful parts. I tried it, it
         didn't work, I talked through what might be happening, added the WebKit prefix, and it worked. Students who only
         ever see clean demos can come to believe that experienced developers just know the right answer. Watching the
-        troubleshooting process — reading what the browser does, forming a hypothesis, testing it — is a more accurate
+        troubleshooting process, reading what the browser does, forming a hypothesis, testing it, is a more accurate
         picture of how the work actually goes.
       </p>
       <div class="mt-6 flex flex-wrap gap-2">
@@ -245,9 +245,9 @@ const metadata = {
     items={[
       {
         tagline: 'CSS & Responsive Design',
-        title: 'Personal Blog Project Walkthrough — Masterschool',
+        title: 'Personal Blog Project Walkthrough: Masterschool',
         description:
-          'The other major Udacity frontend project: a live walkthrough covering CSS architecture, mobile-first responsive design, CSS Grid, and Flexbox — with real-time student questions throughout.',
+          'The other major Udacity frontend project: a live walkthrough covering CSS architecture, mobile-first responsive design, CSS Grid, and Flexbox, with real-time student questions throughout.',
         href: '/projects/masterschool-personal-blog',
       },
     ]}

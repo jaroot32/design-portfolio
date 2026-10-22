@@ -8,19 +8,19 @@ import RelatedContent from '~/components/widgets/RelatedContent.astro';
 import YouTubeEmbed from '~/components/widgets/YouTubeEmbed.astro';
 
 const metadata = {
-  title: 'ES6 Exercises — Destructuring, Ternary, and Defensive Programming | Masterschool',
+  title: 'ES6 Exercises: Destructuring, Ternary, and Defensive Programming | Masterschool',
 };
 ---
 
 <Layout metadata={metadata}>
   <Hero tagline="Live Instruction · JavaScript · ES6 · Masterschool">
     <Fragment slot="title">
-      ES6 Exercises —<br />
+      ES6 Exercises:<br />
       <span class="text-accent dark:text-white">Destructuring, Ternary, and Defensive Programming</span>
     </Fragment>
     <Fragment slot="subtitle">
-      A live exercise session working through the core ES6 feature set — object and array destructuring, arrow function
-      shorthand, default parameters, rest and spread, the ternary operator, and the nullish coalescing operator — with
+      A live exercise session working through the core ES6 feature set, object and array destructuring, arrow function
+      shorthand, default parameters, rest and spread, the ternary operator, and the nullish coalescing operator, with
       students presenting answers live and a React preview at the close.
     </Fragment>
   </Hero>
@@ -43,7 +43,7 @@ const metadata = {
     <Fragment slot="content">
       <p class="mb-4">
         Students came to this session having already worked through a set of ES6 exercises on their own. The open gym
-        format put the answers in their hands first — the debrief was a chance to compare, correct, and extend what
+        format put the answers in their hands first, the debrief was a chance to compare, correct, and extend what
         they'd built, not hear it for the first time.
       </p>
       <p class="mb-4">
@@ -53,7 +53,7 @@ const metadata = {
         up as a natural extension of the ternary discussion.
       </p>
       <p>
-        Throughout, students were called on to present their answers live — which surfaced real questions, including a
+        Throughout, students were called on to present their answers live, which surfaced real questions, including a
         student's alternative approach to nested destructuring that turned into a live investigation. The session closed
         with an introduction to Epic React and Kent C. Dodds, the next phase of the curriculum.
       </p>
@@ -67,19 +67,19 @@ const metadata = {
   <Features3
     tagline="The Content"
     title="What the session covered"
-    subtitle="Nine ES6 exercises debriefed live — students presented answers, instructor added context and connected each concept to React."
+    subtitle="Nine ES6 exercises debriefed live: students presented answers, instructor added context and connected each concept to React."
     columns={3}
     items={[
       {
         title: 'Object Destructuring',
         description:
-          'Framed destructuring as removing repetitive syntax — instead of writing user.name and user.age repeatedly, you extract the values once and work with them directly. Connected to readability: as React applications grow, less visual noise matters more.',
+          'Framed destructuring as removing repetitive syntax, instead of writing user.name and user.age repeatedly, you extract the values once and work with them directly. Connected to readability: as React applications grow, less visual noise matters more.',
         icon: 'tabler:braces',
       },
       {
         title: 'Arrow Function Shorthand',
         description:
-          "Covered removing the function keyword from method definitions — the parentheses and curly braces already signal that it's a function, so the keyword is redundant. Showed the before and after with a method that had no body, making the change concrete.",
+          "Covered removing the function keyword from method definitions, the parentheses and curly braces already signal that it's a function, so the keyword is redundant. Showed the before and after with a method that had no body, making the change concrete.",
         icon: 'tabler:arrow-right',
       },
       {
@@ -91,37 +91,37 @@ const metadata = {
       {
         title: 'Nested Object Destructuring',
         description:
-          "Worked through destructuring an object inside an object — pointing first to the outer key, then destructuring the inner object. A student proposed an alternative approach live, which turned into a real investigation: it was a valid technique, but the exact syntax wasn't resolving as expected, so it was flagged for the answer sheet.",
+          "Worked through destructuring an object inside an object, pointing first to the outer key, then destructuring the inner object. A student proposed an alternative approach live, which turned into a real investigation: it was a valid technique, but the exact syntax wasn't resolving as expected, so it was flagged for the answer sheet.",
         icon: 'tabler:layers-intersect',
       },
       {
         title: 'Array Destructuring and Rest',
         description:
-          'Showed array destructuring as the counterpart to object destructuring — const [a, b, c] = source gives you the first three elements by position, with any name you choose. Extended it with rest syntax to capture remaining elements, connecting it to the behavior of .slice() but with three dots instead.',
+          'Showed array destructuring as the counterpart to object destructuring, const [a, b, c] = source gives you the first three elements by position, with any name you choose. Extended it with rest syntax to capture remaining elements, connecting it to the behavior of .slice() but with three dots instead.',
         icon: 'tabler:list-numbers',
       },
       {
         title: 'Default Function Parameters',
         description:
-          'Used the increment function to show why defaults matter: without a default value for the second parameter, calling increment(5) produces NaN — a bug. Adding value = 1 as the default makes the function safe to call with or without an argument. Showed both the broken and working versions.',
+          'Used the increment function to show why defaults matter: without a default value for the second parameter, calling increment(5) produces NaN, a bug. Adding value = 1 as the default makes the function safe to call with or without an argument. Showed both the broken and working versions.',
         icon: 'tabler:settings-2',
       },
       {
         title: 'Spread with Math.max',
         description:
-          'Demonstrated spreading an array into Math.max — which expects individual numbers, not an array. Showed that passing the array directly produces NaN, because Math.max reads the documentation contract: a set of numbers, not a data structure. The spread operator unpacks the array before the function sees it.',
+          'Demonstrated spreading an array into Math.max, which expects individual numbers, not an array. Showed that passing the array directly produces NaN, because Math.max reads the documentation contract: a set of numbers, not a data structure. The spread operator unpacks the array before the function sees it.',
         icon: 'tabler:arrows-maximize',
       },
       {
         title: 'Object Spread',
         description:
-          'Covered merging two objects using spread syntax — { ...obj1, ...obj2 } — as an alternative to Object.assign. Live discovery moment: when both objects share a key, the second object wins and overwrites the first. Noted that students would see Object.assign again in the Udacity Redux curriculum.',
+          'Covered merging two objects using spread syntax, { ...obj1, ...obj2 }, as an alternative to Object.assign. Live discovery moment: when both objects share a key, the second object wins and overwrites the first. Noted that students would see Object.assign again in the Udacity Redux curriculum.',
         icon: 'tabler:circles-relation',
       },
       {
         title: 'Ternary and Nullish Coalescing',
         description:
-          'Converted an if/else block to a ternary live — emphasizing that the return is implicit in a ternary, unlike an if statement. Extended into the nullish coalescing operator (??): if a value is null or undefined, fall back to a default. Introduced the term "defensive programming" and connected it to API data that arrives incomplete or unformatted.',
+          'Converted an if/else block to a ternary live, emphasizing that the return is implicit in a ternary, unlike an if statement. Extended into the nullish coalescing operator (??): if a value is null or undefined, fall back to a default. Introduced the term "defensive programming" and connected it to API data that arrives incomplete or unformatted.',
         icon: 'tabler:question-mark',
       },
     ]}
@@ -140,7 +140,7 @@ const metadata = {
               {
                 step: '04',
                 label: 'Investigate Live',
-                detail: 'Real questions get real answers — or go on the answer sheet',
+                detail: 'Real questions get real answers, or go on the answer sheet',
               },
               { step: '05', label: 'React Preview', detail: 'Epic React intro · Kent C. Dodds · next week' },
             ].map((item) => (
@@ -158,13 +158,13 @@ const metadata = {
     </Fragment>
     <Fragment slot="content">
       <p class="mb-4">
-        The exercise-first format changes what the session is for. Students aren't receiving new information — they're
+        The exercise-first format changes what the session is for. Students aren't receiving new information, they're
         checking and extending what they already built. That shifts the dynamic: they come in with something to defend
         or revise, which is a more active relationship with the material than passive listening.
       </p>
       <p class="mb-4">
-        The nested destructuring moment is worth noting. A student proposed an alternative approach — putting the inner
-        key directly inside the curly braces — and it didn't resolve the way they expected. Rather than moving past it,
+        The nested destructuring moment is worth noting. A student proposed an alternative approach, putting the inner
+        key directly inside the curly braces, and it didn't resolve the way they expected. Rather than moving past it,
         the live investigation confirmed that the technique was valid but the specific syntax needed checking. Flagging
         it for the answer sheet is the honest move: it keeps the session moving while promising a real resolution.
       </p>
@@ -193,12 +193,12 @@ const metadata = {
       </p>
       <h2 class="text-4xl md:text-5xl font-bold tracking-tighter font-heading">Watch the Session</h2>
       <p class="text-lg text-muted mt-4">
-        Live ES6 exercise debrief — destructuring, ternary, defensive programming, and a React preview.
+        Live ES6 exercise debrief, destructuring, ternary, defensive programming, and a React preview.
       </p>
     </div>
     <YouTubeEmbed
       id="_hGk6atL7RQ"
-      title="ES6 Exercises — Destructuring, Ternary, and Defensive Programming | Masterschool"
+      title="ES6 Exercises: Destructuring, Ternary, and Defensive Programming | Masterschool"
     />
   </div>
 
@@ -220,14 +220,14 @@ const metadata = {
     <Fragment slot="content">
       <p class="mb-4">
         The NaN output is one of the more useful things you can produce in a session on default parameters. It appears
-        specifically because something is missing — the function received undefined where it expected a number — and it
+        specifically because something is missing, the function received undefined where it expected a number, and it
         tells you exactly what kind of problem to solve. Triggering it on purpose, before adding the default, gives
         students a real error to recognize rather than an abstract rule to memorize.
       </p>
       <p class="mb-4">
         The object spread key collision discovery worked the same way. The merged object came back without the expected
         value from the first object, which opened a real question: what happens when both objects share a key? That's
-        not a gotcha — it's the actual behavior, and finding it live is more durable than reading about it in docs.
+        not a gotcha, it's the actual behavior, and finding it live is more durable than reading about it in docs.
       </p>
       <div class="mt-6 flex flex-wrap gap-2">
         {
@@ -269,9 +269,9 @@ const metadata = {
     items={[
       {
         tagline: 'Open Gym Session',
-        title: 'ES6 Features Open Gym — Masterschool',
+        title: 'ES6 Features Open Gym: Masterschool',
         description:
-          'The session that introduced the feature set: destructuring, spread, rest, for...of loops, arrow functions, default parameters, and template literals — taught live with real-time student Q&A before the exercises.',
+          'The session that introduced the feature set: destructuring, spread, rest, for...of loops, arrow functions, default parameters, and template literals, taught live with real-time student Q&A before the exercises.',
         href: '/projects/masterschool-es6',
       },
     ]}

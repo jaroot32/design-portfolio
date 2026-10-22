@@ -8,18 +8,18 @@ import RelatedContent from '~/components/widgets/RelatedContent.astro';
 import YouTubeEmbed from '~/components/widgets/YouTubeEmbed.astro';
 
 const metadata = {
-  title: 'Node, npm, and Higher-Order Functions — Live Coding Session | Masterschool',
+  title: 'Node, npm, and Higher-Order Functions: Live Coding Session | Masterschool',
 };
 ---
 
 <Layout metadata={metadata}>
   <Hero tagline="Live Instruction · JavaScript · Node.js · npm · Callbacks · Masterschool">
     <Fragment slot="title">
-      Node, npm, and Higher-Order Functions —<br />
+      Node, npm, and Higher-Order Functions:<br />
       <span class="text-accent dark:text-white">Live Coding Session</span>
     </Fragment>
     <Fragment slot="subtitle">
-      A live session covering Node.js, npm, and module loading — followed by rebuilding the core JavaScript array
+      A live session covering Node.js, npm, and module loading, followed by rebuilding the core JavaScript array
       methods from scratch. Students worked through recreating map, forEach, filter, and reduce using plain for loops
       and callback functions, as preparation for understanding promises and async/await.
     </Fragment>
@@ -42,20 +42,20 @@ const metadata = {
     </Fragment>
     <Fragment slot="content">
       <p class="mb-4">
-        The session opened at the transition point in the Masterschool curriculum — moving from front-end JavaScript
+        The session opened at the transition point in the Masterschool curriculum, moving from front-end JavaScript
         into back-end work with Node.js, before looping back to React. That context mattered: students needed to
         understand what Node is, what npm does, and how modules get loaded before any of the back-end curriculum would
         make sense.
       </p>
       <p class="mb-4">
-        After the conceptual intro — npm framed as "the developer app store," Express as a first package, require versus
-        import — the session moved into live coding. The goal was to rebuild map, forEach, filter, and reduce using
+        After the conceptual intro, npm framed as "the developer app store," Express as a first package, require versus
+        import, the session moved into live coding. The goal was to rebuild map, forEach, filter, and reduce using
         nothing but for loops and callback functions. Students contributed answers via chat and unmute throughout.
       </p>
       <p>
         The Pomodoro technique structured the coding work: a focused stretch, a five-minute break, then back in. The
         closing framing was explicit: understanding how callbacks work inside these methods is what makes promises and
-        async/await easier to pick up — they solve the same problem with cleaner syntax.
+        async/await easier to pick up, they solve the same problem with cleaner syntax.
       </p>
     </Fragment>
     <Fragment slot="bg">
@@ -67,61 +67,61 @@ const metadata = {
   <Features3
     tagline="The Content"
     title="What the session covered"
-    subtitle="From npm as a developer app store to rebuilding reduce — two halves with a Pomodoro break in between."
+    subtitle="From npm as a developer app store to rebuilding reduce: two halves with a Pomodoro break in between."
     columns={3}
     items={[
       {
-        title: 'Node.js and npm — The Developer App Store',
+        title: 'Node.js and npm: The Developer App Store',
         description:
-          'Introduced Node.js as a prerequisite for npm, and npm as the developer equivalent of an app store — instead of clicking to download, you run npm install [package-name] from the command line. Covered what happens when you install: a progress bar, the node_modules folder, and the code for the package sitting there and ready to be loaded.',
+          'Introduced Node.js as a prerequisite for npm, and npm as the developer equivalent of an app store, instead of clicking to download, you run npm install [package-name] from the command line. Covered what happens when you install: a progress bar, the node_modules folder, and the code for the package sitting there and ready to be loaded.',
         icon: 'tabler:package',
       },
       {
-        title: 'package.json — Tracking Dependencies',
+        title: 'package.json: Tracking Dependencies',
         description:
-          "Explained package.json as the file that keeps track of every dependency installed in the project — including the version number. When a library releases an update, you change the version in package.json and run npm install again. Framed it as the project's manifest: what it depends on, and which versions are in use.",
+          "Explained package.json as the file that keeps track of every dependency installed in the project, including the version number. When a library releases an update, you change the version in package.json and run npm install again. Framed it as the project's manifest: what it depends on, and which versions are in use.",
         icon: 'tabler:file-description',
       },
       {
-        title: 'Express — A First npm Package',
+        title: 'Express: A First npm Package',
         description:
-          "Used Express as the concrete example throughout — pulled it up on npmjs.com, showed the description (fast, unopinionated, minimalist web framework for Node), and walked through how it's used: require('express') or import, call the express function, store the result in app, then use dot notation to write routes — app.get, app.post, app.listen.",
+          "Used Express as the concrete example throughout, pulled it up on npmjs.com, showed the description (fast, unopinionated, minimalist web framework for Node), and walked through how it's used: require('express') or import, call the express function, store the result in app, then use dot notation to write routes, app.get, app.post, app.listen.",
         icon: 'tabler:server-2',
       },
       {
-        title: 'require() vs import — Two Ways to Load Modules',
+        title: 'require() vs import: Two Ways to Load Modules',
         description:
-          'Covered both approaches side by side. require() is the CommonJS way — older, still widely used, still what Express documentation shows. import is the ES6 way, available since Node version 12. Showed the tradeoffs from a real comparison article: both are valid, the Udacity curriculum stays with require, and students will see both in the wild.',
+          'Covered both approaches side by side. require() is the CommonJS way, older, still widely used, still what Express documentation shows. import is the ES6 way, available since Node version 12. Showed the tradeoffs from a real comparison article: both are valid, the Udacity curriculum stays with require, and students will see both in the wild.',
         icon: 'tabler:arrows-exchange',
       },
       {
         title: 'APIs and Third-Party Data Sources',
         description:
-          "Introduced APIs as application programming interfaces — the mechanism by which one application pulls data from another. Used Facebook's GIF search as the example: Facebook doesn't store those images, they request them from a third-party API in real time. Covered API keys, rate limiting, and how API access is sold as a service — connecting back to the SaaS business model.",
+          "Introduced APIs as application programming interfaces, the mechanism by which one application pulls data from another. Used Facebook's GIF search as the example: Facebook doesn't store those images, they request them from a third-party API in real time. Covered API keys, rate limiting, and how API access is sold as a service, connecting back to the SaaS business model.",
         icon: 'tabler:api',
       },
       {
-        title: 'Recreating pluralize — For Loops and Push',
+        title: 'Recreating pluralize: For Loops and Push',
         description:
-          'Started with the simplest challenge: a pluralize function that takes an array of strings and returns a new array with an S added to each string. Walked through the setup — declare function, set parameter, initialize empty output array, write the for loop, push each string + "s" on each iteration, return the new array. Students contributed steps live.',
+          'Started with the simplest challenge: a pluralize function that takes an array of strings and returns a new array with an S added to each string. Walked through the setup, declare function, set parameter, initialize empty output array, write the for loop, push each string + "s" on each iteration, return the new array. Students contributed steps live.',
         icon: 'tabler:letter-s',
       },
       {
-        title: 'Recreating map — Callbacks as First-Class Functions',
+        title: 'Recreating map: Callbacks as First-Class Functions',
         description:
-          'Built a subtract2 function as the callback, then built a custom map function that takes an array and a callback as arguments — looping through, calling the callback on each element, pushing the result, and returning the new array. Demonstrated that the callback (subtract2) gets passed in as a function reference and called on each element inside the loop.',
+          'Built a subtract2 function as the callback, then built a custom map function that takes an array and a callback as arguments, looping through, calling the callback on each element, pushing the result, and returning the new array. Demonstrated that the callback (subtract2) gets passed in as a function reference and called on each element inside the loop.',
         icon: 'tabler:function',
       },
       {
-        title: 'Recreating filter — Modulo and Conditional Logic',
+        title: 'Recreating filter: Modulo and Conditional Logic',
         description:
-          'Created a filter function with two separate callbacks — isEven and isOdd — using the modulo operator to check whether a number has a remainder of zero. Inside the loop: if the callback returns true, push the element to the output array. Connected the modulo operator to its real-world meaning: dividing by 2 to check for a remainder.',
+          'Created a filter function with two separate callbacks, isEven and isOdd, using the modulo operator to check whether a number has a remainder of zero. Inside the loop: if the callback returns true, push the element to the output array. Connected the modulo operator to its real-world meaning: dividing by 2 to check for a remainder.',
         icon: 'tabler:filter',
       },
       {
-        title: 'Recreating reduce — The Accumulator Pattern',
+        title: 'Recreating reduce: The Accumulator Pattern',
         description:
-          'Built a custom reduce function that takes an array, a callback, and an initial accumulator value. Each loop iteration calls the callback with the current accumulator and the current element — the return value becomes the new accumulator. Student Q&A surfaced the core insight: every callback passed to reduce always takes two parameters — accumulator first, current element second. Reduced [4, 1, 3] down to 8 live.',
+          'Built a custom reduce function that takes an array, a callback, and an initial accumulator value. Each loop iteration calls the callback with the current accumulator and the current element, the return value becomes the new accumulator. Student Q&A surfaced the core insight: every callback passed to reduce always takes two parameters, accumulator first, current element second. Reduced [4, 1, 3] down to 8 live.',
         icon: 'tabler:stack-push',
       },
     ]}
@@ -156,24 +156,24 @@ const metadata = {
       <p class="mb-4">
         The npm-as-app-store framing is worth defending. It's not technically precise, but it's the right level of
         abstraction for students who have spent weeks in the browser and are now encountering a package ecosystem for
-        the first time. Once the mental model is in place — you search for what you need, you install it, you load it —
+        the first time. Once the mental model is in place, you search for what you need, you install it, you load it, 
         the specific commands make sense.
       </p>
       <p class="mb-4">
         Rebuilding the built-in array methods is a deliberate instructional choice. Students have been using .map() and
-        .filter() as black boxes. Writing them from scratch — initializing an empty array, writing a for loop, calling a
-        callback on each element, pushing the result, returning the new array — makes the callback pattern explicit.
+        .filter() as black boxes. Writing them from scratch, initializing an empty array, writing a for loop, calling a
+        callback on each element, pushing the result, returning the new array, makes the callback pattern explicit.
         When they see a higher-order function, they now know what's happening inside it.
       </p>
       <p class="mb-4">
         The reduce exercise surfaced the most useful student question of the session: does the callback always take two
-        parameters? Yes — accumulator and current element. That question can't be answered from documentation alone. It
+        parameters? Yes, accumulator and current element. That question can't be answered from documentation alone. It
         comes from writing the function and noticing what you're passing in.
       </p>
       <p>
         Closing the session by connecting callbacks to promises was the right throughline. Students were about to learn
         async patterns, and having already written custom callbacks made the framing clear: promises don't replace
-        callbacks, they solve callback hell — which you can only appreciate if you've already felt the shape of the
+        callbacks, they solve callback hell, which you can only appreciate if you've already felt the shape of the
         problem.
       </p>
     </Fragment>
@@ -190,10 +190,10 @@ const metadata = {
       </p>
       <h2 class="text-4xl md:text-5xl font-bold tracking-tighter font-heading">Watch the Session</h2>
       <p class="text-lg text-muted mt-4">
-        Node, npm, and module loading — then rebuilding map, filter, forEach, and reduce from scratch with callbacks.
+        Node, npm, and module loading, then rebuilding map, filter, forEach, and reduce from scratch with callbacks.
       </p>
     </div>
-    <YouTubeEmbed id="obl6ZZnAdZI" title="Node, npm, and Higher-Order Functions — Live Coding Session | Masterschool" />
+    <YouTubeEmbed id="obl6ZZnAdZI" title="Node, npm, and Higher-Order Functions: Live Coding Session | Masterschool" />
   </div>
 
   <!-- Reflection -->
@@ -213,14 +213,14 @@ const metadata = {
     </Fragment>
     <Fragment slot="content">
       <p class="mb-4">
-        The reduce question was the standout moment. A student asked whether the callback always takes two parameters —
+        The reduce question was the standout moment. A student asked whether the callback always takes two parameters, 
         accumulator and current element. That question is a sign that someone is actually reading the function signature
-        they just wrote, not just watching the output. It led to a precise answer: yes, always — and the why is that the
+        they just wrote, not just watching the output. It led to a precise answer: yes, always, and the why is that the
         accumulator is what gets passed forward each time, and the current element is what you're operating on.
       </p>
       <p class="mb-4">
         The "developer app store" framing for npm is a teaching shortcut, but it's a useful one. It gives students a
-        mental model they already understand — download, install, use — before introducing the command-line mechanics.
+        mental model they already understand, download, install, use, before introducing the command-line mechanics.
         The require versus import distinction, by contrast, was kept honest: both exist, both appear in documentation
         and production code, and there's no universally right answer. Students were told what the curriculum uses and
         pointed to a comparison article for the rest.
@@ -267,7 +267,7 @@ const metadata = {
         tagline: 'Next Step: Express',
         title: 'Teaching Node and Express at Masterschool',
         description:
-          'The session that builds on this one: taking the Node fundamentals and higher-order functions into Express — routing, middleware, request/response cycles, and building a basic REST API live with students.',
+          'The session that builds on this one: taking the Node fundamentals and higher-order functions into Express, routing, middleware, request/response cycles, and building a basic REST API live with students.',
         href: '/projects/masterschool-node-express',
       },
     ]}

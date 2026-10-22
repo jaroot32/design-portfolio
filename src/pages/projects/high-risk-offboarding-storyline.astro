@@ -5,24 +5,24 @@ import Content from '~/components/widgets/Content.astro';
 import Features3 from '~/components/widgets/Features3.astro';
 
 const metadata = {
-  title: 'The High-Risk Offboarding — Storyline Branching Scenario',
+  title: 'The High-Risk Offboarding: Storyline Branching Scenario',
 };
 ---
 
 <Layout metadata={metadata}>
   <Hero tagline="Instructional Design · Articulate Storyline 360 · Branching Scenario · JavaScript Integration">
     <Fragment slot="title">
-      The High-Risk Offboarding —<br />
+      The High-Risk Offboarding:<br />
       <span class="text-accent dark:text-white">A Compliance Scenario for HR & IT Leaders</span>
     </Fragment>
     <Fragment slot="subtitle">
-      A corporate instructional design portfolio piece following the full design process — needs analysis, learning
+      A corporate instructional design portfolio piece following the full design process, needs analysis, learning
       objectives, content map, and a Storyline 360 branching scenario with custom JavaScript-generated audit reporting.
     </Fragment>
   </Hero>
 
   <!-- Context -->
-  <Content tagline="The Problem" title="One misstep costs millions — and most teams don't train for it" isReversed>
+  <Content tagline="The Problem" title="One misstep costs millions: and most teams don't train for it" isReversed>
     <Fragment slot="image">
       <div class="flex items-center justify-center h-full py-12">
         <div class="text-center">
@@ -40,15 +40,15 @@ const metadata = {
       <p class="mb-4">
         When a senior employee with privileged system access is terminated, organizations face two simultaneous threats:
         a data security window and a legal liability window. Most compliance training addresses these as separate policy
-        topics — a list of steps to memorize, not decisions to practice.
+        topics, a list of steps to memorize, not decisions to practice.
       </p>
       <p class="mb-4">
         The cost of getting it wrong is measurable. A malicious insider breach costs an average of $4.99 million and
         takes 292 days to contain. A single mishandled conversation can trigger wrongful termination litigation worth
-        hundreds of thousands in legal fees — before a verdict is reached.
+        hundreds of thousands in legal fees, before a verdict is reached.
       </p>
       <p>
-        This module was designed to close that gap — placing HR Managers and IT Directors inside a high-stakes
+        This module was designed to close that gap, placing HR Managers and IT Directors inside a high-stakes
         offboarding scenario where every decision has a tracked, realistic consequence.
       </p>
     </Fragment>
@@ -61,43 +61,43 @@ const metadata = {
   <Features3
     tagline="Design Process"
     title="From business problem to branching scenario"
-    subtitle="Following the full instructional design process — analysis, objectives, content map, build, and evaluation planning."
+    subtitle="Following the full instructional design process: analysis, objectives, content map, build, and evaluation planning."
     columns={3}
     items={[
       {
         title: 'Needs Analysis',
         description:
-          'Identified the performance gap and root cause before writing a single objective. The financial and legal exposure from poor offboarding execution is a knowledge and skill gap — not a policy awareness problem. Scenario-based practice was the right intervention.',
+          'Identified the performance gap and root cause before writing a single objective. The financial and legal exposure from poor offboarding execution is a knowledge and skill gap, not a policy awareness problem. Scenario-based practice was the right intervention.',
         icon: 'tabler:search',
       },
       {
         title: 'Learning Objectives',
         description:
-          "Four objectives written to Bloom's Taxonomy — progressing from sequencing access revocation (Application) through applying compliant conversation techniques (Application) to interpreting a dynamic audit report (Analysis).",
+          "Four objectives written to Bloom's Taxonomy, progressing from sequencing access revocation (Application) through applying compliant conversation techniques (Application) to interpreting a dynamic audit report (Analysis).",
         icon: 'tabler:target',
       },
       {
         title: 'Content Map',
         description:
-          'A full 14-slide content map documented before building — mapping each decision point, branching path, variable trigger, consequence screen, and debrief to specific learning objectives.',
+          'A full 14-slide content map documented before building, mapping each decision point, branching path, variable trigger, consequence screen, and debrief to specific learning objectives.',
         icon: 'tabler:layout-board',
       },
       {
         title: 'Branching Architecture',
         description:
-          'Three decision points track distinct risk categories: data security (access timing), legal compliance (conversation tone), and chain of custody (hardware retrieval). Wrong answers produce realistic consequence screens with sourced financial data — not grade penalties.',
+          'Three decision points track distinct risk categories: data security (access timing), legal compliance (conversation tone), and chain of custody (hardware retrieval). Wrong answers produce realistic consequence screens with sourced financial data, not grade penalties.',
         icon: 'tabler:git-branch',
       },
       {
         title: 'JavaScript Integration',
         description:
-          "Four Storyline variables — isAccessRevoked, conversationTone, hardwareSecured, and riskScore — are read by a custom JavaScript trigger at the end of the module. The trigger generates a dynamic, personalized Offboarding Audit Report based on the learner's exact decision path.",
+          "Four Storyline variables, isAccessRevoked, conversationTone, hardwareSecured, and riskScore, are read by a custom JavaScript trigger at the end of the module. The trigger generates a dynamic, personalized Offboarding Audit Report based on the learner's exact decision path.",
         icon: 'tabler:code',
       },
       {
         title: 'Source Content Synthesis',
         description:
-          'Consequence screens and dialogue are grounded in real industry data synthesized via NotebookLM — IBM breach cost figures, SHRM employment law guidelines, and IT security deprovisioning protocols. The $4.99M figure and 292-day containment timeline are sourced, not invented.',
+          'Consequence screens and dialogue are grounded in real industry data synthesized via NotebookLM, IBM breach cost figures, SHRM employment law guidelines, and IT security deprovisioning protocols. The $4.99M figure and 292-day containment timeline are sourced, not invented.',
         icon: 'tabler:database',
       },
     ]}
@@ -109,7 +109,7 @@ const metadata = {
       <p class="text-base text-secondary dark:text-blue-200 font-bold tracking-wide uppercase mb-2">Storyline Module</p>
       <h2 class="text-4xl md:text-5xl font-bold tracking-tighter font-heading">Take the Scenario</h2>
       <p class="text-lg text-muted mt-4">
-        A branching Storyline 360 scenario — three decisions, real consequences, and a JavaScript-generated audit report
+        A branching Storyline 360 scenario, three decisions, real consequences, and a JavaScript-generated audit report
         personalized to your exact decision path.
       </p>
     </div>
@@ -120,7 +120,7 @@ const metadata = {
       <iframe
         class="absolute inset-0 w-full h-full"
         src="/high-risk-offboarding-content/story.html"
-        title="The High-Risk Offboarding — Branching Scenario"
+        title="The High-Risk Offboarding: Branching Scenario"
         frameborder="0"
         allowfullscreen
      loading="lazy"></iframe>
@@ -136,22 +136,22 @@ const metadata = {
             [
               {
                 label: 'Sequence access revocation and meeting timing',
-                detail: 'Application — prevent the data exfiltration window',
+                detail: 'Application, prevent the data exfiltration window',
                 color: 'blue',
               },
               {
                 label: 'Apply legally compliant conversation techniques',
-                detail: 'Application — reduce wrongful termination exposure',
+                detail: 'Application, reduce wrongful termination exposure',
                 color: 'green',
               },
               {
                 label: 'Execute hardware retrieval protocol',
-                detail: 'Application — maintain chain of custody',
+                detail: 'Application, maintain chain of custody',
                 color: 'purple',
               },
               {
                 label: 'Interpret a post-offboarding risk audit',
-                detail: 'Analysis — evaluate decision quality and financial exposure',
+                detail: 'Analysis, evaluate decision quality and financial exposure',
                 color: 'orange',
               },
             ].map(({ label, detail, color }) => (
@@ -170,18 +170,18 @@ const metadata = {
     </Fragment>
     <Fragment slot="content">
       <p class="mb-4">
-        The four learning objectives follow a deliberate Bloom's Taxonomy progression — three at the Application level
+        The four learning objectives follow a deliberate Bloom's Taxonomy progression, three at the Application level
         (sequencing, communicating, executing) and one at Analysis (interpreting the audit report output). All four tie
         directly to measurable on-the-job performance, not policy recall.
       </p>
       <p class="mb-4">
-        The most common failure mode in high-risk offboarding isn't ignorance of policy — it's sequence and tone. HR
+        The most common failure mode in high-risk offboarding isn't ignorance of policy, it's sequence and tone. HR
         Managers know they need to revoke access. They don't always know that the 15-minute window before the meeting is
         when the breach happens. Decisions 1 and 2 are designed specifically to build that judgment.
       </p>
       <p>
         The JavaScript audit report at the end of the module connects all three decisions to a single financial exposure
-        figure — making the consequence of each choice concrete and cumulative.
+        figure, making the consequence of each choice concrete and cumulative.
       </p>
     </Fragment>
     <Fragment slot="bg">
@@ -236,7 +236,7 @@ const metadata = {
         <!-- DECISION 1 -->
         <rect x="285" y="80" width="250" height="48" rx="8" fill="#1e3a5f"></rect>
         <text x="410" y="99" text-anchor="middle" fill="white" font-size="11" font-weight="bold"
-          >DECISION 1 — SLIDE 3</text
+          >DECISION 1, SLIDE 3</text
         >
         <text x="410" y="116" text-anchor="middle" fill="#93c5fd" font-size="10">Access Timing</text>
         <line x1="285" y1="104" x2="130" y2="104" stroke="#dc2626" stroke-width="1.5"></line>
@@ -280,7 +280,7 @@ const metadata = {
         <!-- DECISION 2 -->
         <rect x="285" y="270" width="250" height="48" rx="8" fill="#1e3a5f"></rect>
         <text x="410" y="289" text-anchor="middle" fill="white" font-size="11" font-weight="bold"
-          >DECISION 2 — SLIDE 7</text
+          >DECISION 2, SLIDE 7</text
         >
         <text x="410" y="306" text-anchor="middle" fill="#93c5fd" font-size="10">Conversation Tone</text>
         <line x1="285" y1="294" x2="130" y2="294" stroke="#dc2626" stroke-width="1.5"></line>
@@ -326,7 +326,7 @@ const metadata = {
         <!-- DECISION 3 -->
         <rect x="285" y="460" width="250" height="48" rx="8" fill="#1e3a5f"></rect>
         <text x="410" y="479" text-anchor="middle" fill="white" font-size="11" font-weight="bold"
-          >DECISION 3 — SLIDE 11</text
+          >DECISION 3, SLIDE 11</text
         >
         <text x="410" y="496" text-anchor="middle" fill="#93c5fd" font-size="10">Hardware Retrieval</text>
         <line x1="535" y1="484" x2="620" y2="484" stroke="#16a34a" stroke-width="1.5"></line>
@@ -356,7 +356,7 @@ const metadata = {
         <!-- AUDIT REPORT -->
         <rect x="310" y="590" width="200" height="26" rx="6" fill="#7c3aed"></rect>
         <text x="410" y="608" text-anchor="middle" fill="white" font-size="11" font-weight="bold"
-          >AUDIT REPORT — SLIDE 14</text
+          >AUDIT REPORT, SLIDE 14</text
         >
         <!-- LEGEND -->
         <rect x="10" y="10" width="130" height="80" rx="6" fill="none" stroke="#e5e7eb" stroke-width="1"></rect>
@@ -383,7 +383,7 @@ const metadata = {
         14 Slides. 3 Decisions. 1 Audit Report.
       </h2>
       <p class="text-lg text-muted mt-4 max-w-2xl mx-auto">
-        Each slide maps to a deliberate phase — Hook, Setup, Decision, Consequence, or Debrief — moving the learner from
+        Each slide maps to a deliberate phase, Hook, Setup, Decision, Consequence, or Debrief, moving the learner from
         framing to action to personalized reflection.
       </p>
     </div>
@@ -425,7 +425,7 @@ const metadata = {
                 title: 'Decision 1: Access Timing',
                 content:
                   "It's 9:00 AM. Meeting at 9:30. What do you do first? Three choices: conference room, email IT, or coordinate simultaneous revocation.",
-                interaction: 'Branching multiple choice — sets isAccessRevoked + riskScore',
+                interaction: 'Branching multiple choice, sets isAccessRevoked + riskScore',
               },
               {
                 num: '4',
@@ -433,8 +433,8 @@ const metadata = {
                 phaseColor: 'text-red-600 dark:text-red-400',
                 title: 'Consequence: Data Breach',
                 content:
-                  'Marcus forks 47 repos from his phone during the meeting. DATA BREACH ALERT — $4.99M average cost, 292-day containment.',
-                interaction: 'Consequence screen — Try Again',
+                  'Marcus forks 47 repos from his phone during the meeting. DATA BREACH ALERT, $4.99M average cost, 292-day containment.',
+                interaction: 'Consequence screen, Try Again',
               },
               {
                 num: '5',
@@ -442,7 +442,7 @@ const metadata = {
                 phaseColor: 'text-yellow-600 dark:text-yellow-400',
                 title: 'Consequence: Email Warning',
                 content: 'IT email unread. Access window stays open through the meeting.',
-                interaction: 'Warning screen — proceed with elevated riskScore',
+                interaction: 'Warning screen, proceed with elevated riskScore',
               },
               {
                 num: '6',
@@ -451,7 +451,7 @@ const metadata = {
                 title: 'Access Synchronized',
                 content:
                   'IT confirms 9:30 AM revocation. Correct deprovisioning order displayed: IdP/SSO → AWS → GitHub → VPN → API tokens → Slack/Email → Badge.',
-                interaction: 'Confirmation screen — proceed',
+                interaction: 'Confirmation screen, proceed',
               },
               {
                 num: '7',
@@ -459,8 +459,8 @@ const metadata = {
                 phaseColor: 'text-green-600 dark:text-green-400',
                 title: 'Decision 2: The Conversation',
                 content:
-                  "Marcus enters. He's tense. Three conversation openers — aggressive, legally compliant, or vague and reversible.",
-                interaction: 'Branching multiple choice — sets conversationTone + riskScore',
+                  "Marcus enters. He's tense. Three conversation openers, aggressive, legally compliant, or vague and reversible.",
+                interaction: 'Branching multiple choice, sets conversationTone + riskScore',
               },
               {
                 num: '8',
@@ -468,8 +468,8 @@ const metadata = {
                 phaseColor: 'text-red-600 dark:text-red-400',
                 title: 'Consequence: Legal Retaliation',
                 content:
-                  'Marcus challenges the reason. No documentation exists. Vague justification reads as pretext. ATTORNEY LETTER — $180,000 claim.',
-                interaction: 'Consequence screen — Try Again',
+                  'Marcus challenges the reason. No documentation exists. Vague justification reads as pretext. ATTORNEY LETTER, $180,000 claim.',
+                interaction: 'Consequence screen, Try Again',
               },
               {
                 num: '9',
@@ -477,7 +477,7 @@ const metadata = {
                 phaseColor: 'text-green-600 dark:text-green-400',
                 title: 'Correct: Compliant Conversation',
                 content: 'Marcus is upset but composed. Severance signed.',
-                interaction: 'Confirmation screen — proceed',
+                interaction: 'Confirmation screen, proceed',
               },
               {
                 num: '10',
@@ -485,7 +485,7 @@ const metadata = {
                 phaseColor: 'text-yellow-600 dark:text-yellow-400',
                 title: 'Consequence: Ambiguity Risk',
                 content: 'Marcus leaves uncertain. No severance signed. Attorney follow-up three days later.',
-                interaction: 'Warning screen — proceed with elevated riskScore',
+                interaction: 'Warning screen, proceed with elevated riskScore',
               },
               {
                 num: '11',
@@ -493,7 +493,7 @@ const metadata = {
                 phaseColor: 'text-green-600 dark:text-green-400',
                 title: 'Decision 3: Hardware Retrieval',
                 content: 'Marcus says he left his laptop at his desk. Collect now or allow drop-off tomorrow?',
-                interaction: 'Branching multiple choice — sets hardwareSecured + riskScore',
+                interaction: 'Branching multiple choice, sets hardwareSecured + riskScore',
               },
               {
                 num: '12',
@@ -501,7 +501,7 @@ const metadata = {
                 phaseColor: 'text-green-600 dark:text-green-400',
                 title: 'Hardware Secured',
                 content: 'Device collected, serial numbers documented, forensic hold initiated for 90 days.',
-                interaction: 'Confirmation screen — proceed to audit',
+                interaction: 'Confirmation screen, proceed to audit',
               },
               {
                 num: '13',
@@ -510,7 +510,7 @@ const metadata = {
                 title: 'Consequence: Chain of Custody Broken',
                 content:
                   'Laptop returned next day. Forensic imaging inadmissible. Evidence of exfiltration cannot be used in legal proceedings.',
-                interaction: 'Consequence screen — proceed to audit',
+                interaction: 'Consequence screen, proceed to audit',
               },
               {
                 num: '14',
@@ -518,8 +518,8 @@ const metadata = {
                 phaseColor: 'text-orange-600 dark:text-orange-400',
                 title: 'Offboarding Audit Report',
                 content:
-                  'JavaScript reads all four variables and generates a personalized audit report — color-coded risk level, decision log, financial exposure estimate, and pass/fail per category.',
-                interaction: 'JavaScript trigger — dynamic output',
+                  'JavaScript reads all four variables and generates a personalized audit report, color-coded risk level, decision log, financial exposure estimate, and pass/fail per category.',
+                interaction: 'JavaScript trigger, dynamic output',
               },
             ].map(({ num, phase, phaseColor, title, content, interaction }) => (
               <tr class="bg-white dark:bg-gray-900 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
@@ -543,7 +543,7 @@ const metadata = {
       <h2 class="text-4xl md:text-5xl font-bold tracking-tighter font-heading">Variables + JavaScript</h2>
       <p class="text-lg text-muted mt-4 max-w-2xl mx-auto">
         Four Storyline variables track every decision. A custom JavaScript trigger reads them at the end and generates a
-        dynamic audit report — no two learners see the same output.
+        dynamic audit report, no two learners see the same output.
       </p>
     </div>
     <div class="overflow-x-auto rounded-lg border border-gray-200 dark:border-gray-700 shadow-sm mb-8">
@@ -581,7 +581,7 @@ const metadata = {
                 name: 'riskScore',
                 type: 'Number',
                 default: '0',
-                tracks: 'Cumulative risk score — increments at each wrong decision',
+                tracks: 'Cumulative risk score, increments at each wrong decision',
               },
             ].map(({ name, type, default: def, tracks }) => (
               <tr class="bg-white dark:bg-gray-900 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
@@ -596,7 +596,7 @@ const metadata = {
       </table>
     </div>
     <div class="rounded-lg border border-gray-200 dark:border-gray-700 bg-gray-900 p-6">
-      <p class="text-xs text-gray-400 font-mono mb-3">// Audit Report trigger — fires on Slide 14 timeline start</p>
+      <p class="text-xs text-gray-400 font-mono mb-3">// Audit Report trigger, fires on Slide 14 timeline start</p>
       <pre
         class="text-sm text-green-400 font-mono overflow-x-auto"><code>{`const player = GetPlayer();
 const accessRevoked = player.GetVar("isAccessRevoked");
@@ -616,7 +616,7 @@ const risk = player.GetVar("riskScore");
       </p>
       <h2 class="text-4xl md:text-5xl font-bold tracking-tighter font-heading">Full ID Process. Documented.</h2>
       <p class="text-lg text-muted mt-4 max-w-2xl mx-auto">
-        This project follows a complete instructional design process — analysis through evaluation. Download the
+        This project follows a complete instructional design process, analysis through evaluation. Download the
         artifacts below.
       </p>
     </div>
@@ -726,7 +726,7 @@ const risk = player.GetVar("riskScore");
           <li class="flex gap-3">
             <span class="text-accent font-bold mt-0.5">01</span>
             <p>
-              Completed a full end-to-end portfolio piece — needs analysis through deployed Storyline module — without a
+              Completed a full end-to-end portfolio piece, needs analysis through deployed Storyline module, without a
               client brief, demonstrating independent design judgment.
             </p>
           </li>
@@ -768,7 +768,7 @@ const risk = player.GetVar("riskScore");
           <li class="flex gap-3">
             <span class="text-accent font-bold mt-0.5">02</span>
             <p>
-              JavaScript in Storyline requires careful variable scoping — early builds had audit report inconsistencies
+              JavaScript in Storyline requires careful variable scoping, early builds had audit report inconsistencies
               when variables weren't reset between attempts. Solved with explicit reset triggers on slide entry.
             </p>
           </li>

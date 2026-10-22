@@ -5,25 +5,25 @@ import Content from '~/components/widgets/Content.astro';
 import Features3 from '~/components/widgets/Features3.astro';
 
 const metadata = {
-  title: 'Your First API Call — A Developer Onboarding Simulation',
+  title: 'Your First API Call: A Developer Onboarding Simulation',
 };
 ---
 
 <Layout metadata={metadata}>
   <Hero tagline="Instructional Design · Articulate Storyline 360 · Software Simulation · JavaScript Integration">
     <Fragment slot="title">
-      Your First API Call —<br />
+      Your First API Call:<br />
       <span class="text-accent dark:text-white">A Developer Onboarding Simulation</span>
     </Fragment>
     <Fragment slot="subtitle">
-      A technical instructional design portfolio piece targeting developer audiences — needs analysis, learning
+      A technical instructional design portfolio piece targeting developer audiences, needs analysis, learning
       objectives, content map, and a Storyline 360 software simulation with custom JavaScript-generated integration
       audit reporting.
     </Fragment>
   </Hero>
 
   <!-- Context -->
-  <Content tagline="The Problem" title="Most developers learn API integration the hard way — in production" isReversed>
+  <Content tagline="The Problem" title="Most developers learn API integration the hard way: in production" isReversed>
     <Fragment slot="image">
       <div class="flex items-center justify-center h-full py-12">
         <div class="text-center">
@@ -41,7 +41,7 @@ const metadata = {
     </Fragment>
     <Fragment slot="content">
       <p class="mb-4">
-        New developers joining technical teams spend their first weeks reading API documentation — passively absorbing
+        New developers joining technical teams spend their first weeks reading API documentation, passively absorbing
         endpoint references, authentication schemas, and rate limit tables. No one practices the actual decisions. The
         first time they encounter a 401 Unauthorized or a 429 Too Many Requests, it's in production, with real
         consequences.
@@ -53,7 +53,7 @@ const metadata = {
         entire integration pipelines.
       </p>
       <p>
-        This module places developers inside a realistic first-day integration scenario — three decisions, real
+        This module places developers inside a realistic first-day integration scenario, three decisions, real
         technical consequences, and a JavaScript-generated audit report tied to their exact choices.
       </p>
     </Fragment>
@@ -66,43 +66,43 @@ const metadata = {
   <Features3
     tagline="Design Process"
     title="From performance gap to developer simulation"
-    subtitle="Following the full instructional design process — analysis, objectives, content map, build, and evaluation planning."
+    subtitle="Following the full instructional design process: analysis, objectives, content map, build, and evaluation planning."
     columns={3}
     items={[
       {
         title: 'Needs Analysis',
         description:
-          'Identified the root cause before writing a single objective. Developer onboarding failures are not a documentation problem — they are a decision-making gap. New engineers know what an API key is; they do not know which authentication pattern to use or why it matters. Simulation-based practice was the right intervention.',
+          'Identified the root cause before writing a single objective. Developer onboarding failures are not a documentation problem, they are a decision-making gap. New engineers know what an API key is; they do not know which authentication pattern to use or why it matters. Simulation-based practice was the right intervention.',
         icon: 'tabler:search',
       },
       {
         title: 'Learning Objectives',
         description:
-          "Four objectives written to Bloom's Taxonomy — progressing from selecting a secure authentication method (Application) through implementing error handling (Application) to evaluating a rate-limit response strategy (Analysis) and interpreting a personalized integration audit (Evaluation).",
+          "Four objectives written to Bloom's Taxonomy, progressing from selecting a secure authentication method (Application) through implementing error handling (Application) to evaluating a rate-limit response strategy (Analysis) and interpreting a personalized integration audit (Evaluation).",
         icon: 'tabler:target',
       },
       {
         title: 'Content Map',
         description:
-          'A full 14-slide content map documented before building — mapping each decision point, branching path, variable trigger, consequence screen, and debrief to specific learning objectives and real-world developer failure modes sourced from the Salt Security and OWASP API Security Top 10.',
+          'A full 14-slide content map documented before building, mapping each decision point, branching path, variable trigger, consequence screen, and debrief to specific learning objectives and real-world developer failure modes sourced from the Salt Security and OWASP API Security Top 10.',
         icon: 'tabler:layout-board',
       },
       {
         title: 'Branching Architecture',
         description:
-          'Three decision points track distinct API security and reliability categories: credential handling (authentication method), resilience (error handling), and rate limit strategy. Wrong answers produce technical consequence screens grounded in real failure data — not grade penalties.',
+          'Three decision points track distinct API security and reliability categories: credential handling (authentication method), resilience (error handling), and rate limit strategy. Wrong answers produce technical consequence screens grounded in real failure data, not grade penalties.',
         icon: 'tabler:git-branch',
       },
       {
         title: 'JavaScript Integration',
         description:
-          "Four Storyline variables — authMethod, errorHandling, rateLimitStrategy, and integrationScore — are read by a custom JavaScript trigger at the end of the module. The trigger generates a personalized API Integration Audit Report based on the developer's exact decision path.",
+          "Four Storyline variables, authMethod, errorHandling, rateLimitStrategy, and integrationScore, are read by a custom JavaScript trigger at the end of the module. The trigger generates a personalized API Integration Audit Report based on the developer's exact decision path.",
         icon: 'tabler:code',
       },
       {
         title: 'Source Content Synthesis',
         description:
-          'Consequence screens are grounded in real industry data synthesized via NotebookLM — Salt Security breach cost figures, OWASP API Security Top 10 findings, and AWS rate-limiting best practices. The 68% credential mishandling figure and $6.1M average breach cost are sourced, not invented.',
+          'Consequence screens are grounded in real industry data synthesized via NotebookLM, Salt Security breach cost figures, OWASP API Security Top 10 findings, and AWS rate-limiting best practices. The 68% credential mishandling figure and $6.1M average breach cost are sourced, not invented.',
         icon: 'tabler:database',
       },
     ]}
@@ -114,7 +114,7 @@ const metadata = {
       <p class="text-base text-secondary dark:text-blue-200 font-bold tracking-wide uppercase mb-2">Storyline Module</p>
       <h2 class="text-4xl md:text-5xl font-bold tracking-tighter font-heading">Take the Simulation</h2>
       <p class="text-lg text-muted mt-4">
-        A Storyline 360 developer simulation — three API integration decisions, real technical consequences, and a
+        A Storyline 360 developer simulation, three API integration decisions, real technical consequences, and a
         JavaScript-generated audit report personalized to your exact decision path.
       </p>
     </div>
@@ -125,7 +125,7 @@ const metadata = {
       <iframe
         class="absolute inset-0 w-full h-full"
         src="/rest-api-simulation-content/story.html"
-        title="Your First API Call — Developer Onboarding Simulation"
+        title="Your First API Call: Developer Onboarding Simulation"
         frameborder="0"
         allowfullscreen
      loading="lazy"></iframe>
@@ -141,22 +141,22 @@ const metadata = {
             [
               {
                 label: 'Select a secure API authentication method',
-                detail: 'Application — prevent credential exposure and unauthorized access',
+                detail: 'Application, prevent credential exposure and unauthorized access',
                 color: 'blue',
               },
               {
                 label: 'Implement error handling for API responses',
-                detail: 'Application — prevent silent failures and production crashes',
+                detail: 'Application, prevent silent failures and production crashes',
                 color: 'green',
               },
               {
                 label: 'Evaluate a rate-limit response strategy',
-                detail: 'Analysis — choose exponential backoff over tight retry loops',
+                detail: 'Analysis, choose exponential backoff over tight retry loops',
                 color: 'purple',
               },
               {
                 label: 'Interpret an API integration audit report',
-                detail: 'Evaluation — assess decision quality and production risk',
+                detail: 'Evaluation, assess decision quality and production risk',
                 color: 'orange',
               },
             ].map(({ label, detail, color }) => (
@@ -175,18 +175,18 @@ const metadata = {
     </Fragment>
     <Fragment slot="content">
       <p class="mb-4">
-        The four learning objectives follow a deliberate Bloom's Taxonomy progression — two at Application (selecting,
+        The four learning objectives follow a deliberate Bloom's Taxonomy progression, two at Application (selecting,
         implementing), one at Analysis (evaluating a strategy), and one at Evaluation (interpreting the audit output).
         All four tie directly to measurable developer performance on the first day of API integration work.
       </p>
       <p class="mb-4">
-        The most common failure mode for new developers is not ignorance of REST conventions — they know what GET and
+        The most common failure mode for new developers is not ignorance of REST conventions, they know what GET and
         POST mean. The gap is judgment: which authentication pattern is actually secure, what happens when you ignore a
         500 error, and why retrying 200 times in two seconds is worse than waiting. Decisions 1 through 3 are designed
         to build exactly that judgment.
       </p>
       <p>
-        The JavaScript audit report at the end of the module connects all three decisions to a production-risk rating —
+        The JavaScript audit report at the end of the module connects all three decisions to a production-risk rating, 
         making the consequence of each choice concrete before the developer faces it in a real codebase.
       </p>
     </Fragment>
@@ -242,7 +242,7 @@ const metadata = {
         <!-- DECISION 1 -->
         <rect x="285" y="80" width="250" height="48" rx="8" fill="#134e4a"></rect>
         <text x="410" y="99" text-anchor="middle" fill="white" font-size="11" font-weight="bold"
-          >DECISION 1 — SLIDE 3</text
+          >DECISION 1, SLIDE 3</text
         >
         <text x="410" y="116" text-anchor="middle" fill="#99f6e4" font-size="10">Authentication Method</text>
         <line x1="285" y1="104" x2="130" y2="104" stroke="#dc2626" stroke-width="1.5"></line>
@@ -288,7 +288,7 @@ const metadata = {
         <!-- DECISION 2 -->
         <rect x="285" y="270" width="250" height="48" rx="8" fill="#134e4a"></rect>
         <text x="410" y="289" text-anchor="middle" fill="white" font-size="11" font-weight="bold"
-          >DECISION 2 — SLIDE 7</text
+          >DECISION 2, SLIDE 7</text
         >
         <text x="410" y="306" text-anchor="middle" fill="#99f6e4" font-size="10">Error Handling Strategy</text>
         <line x1="285" y1="294" x2="130" y2="294" stroke="#dc2626" stroke-width="1.5"></line>
@@ -332,7 +332,7 @@ const metadata = {
         <!-- DECISION 3 -->
         <rect x="285" y="460" width="250" height="48" rx="8" fill="#134e4a"></rect>
         <text x="410" y="479" text-anchor="middle" fill="white" font-size="11" font-weight="bold"
-          >DECISION 3 — SLIDE 11</text
+          >DECISION 3, SLIDE 11</text
         >
         <text x="410" y="496" text-anchor="middle" fill="#99f6e4" font-size="10">Rate Limit Response</text>
         <line x1="535" y1="484" x2="620" y2="484" stroke="#16a34a" stroke-width="1.5"></line>
@@ -360,7 +360,7 @@ const metadata = {
         <!-- AUDIT REPORT -->
         <rect x="310" y="590" width="200" height="26" rx="6" fill="#0f766e"></rect>
         <text x="410" y="608" text-anchor="middle" fill="white" font-size="11" font-weight="bold"
-          >AUDIT REPORT — SLIDE 14</text
+          >AUDIT REPORT, SLIDE 14</text
         >
         <!-- LEGEND -->
         <rect x="10" y="10" width="130" height="80" rx="6" fill="none" stroke="#e5e7eb" stroke-width="1"></rect>
@@ -387,7 +387,7 @@ const metadata = {
         14 Slides. 3 Decisions. 1 Audit Report.
       </h2>
       <p class="text-lg text-muted mt-4 max-w-2xl mx-auto">
-        Each slide maps to a deliberate phase — Hook, Setup, Decision, Consequence, or Debrief — moving the developer
+        Each slide maps to a deliberate phase, Hook, Setup, Decision, Consequence, or Debrief, moving the developer
         from framing to action to personalized reflection.
       </p>
     </div>
@@ -430,7 +430,7 @@ const metadata = {
                 title: 'Decision 1: Authentication',
                 content:
                   'You have the API key. Three ways to pass it: as a URL query parameter, hard-coded in the source file, or in an Authorization header via environment variable.',
-                interaction: 'Branching multiple choice — sets authMethod + integrationScore',
+                interaction: 'Branching multiple choice, sets authMethod + integrationScore',
               },
               {
                 num: '4',
@@ -438,8 +438,8 @@ const metadata = {
                 phaseColor: 'text-red-600 dark:text-red-400',
                 title: 'Consequence: Key Exposed in Logs',
                 content:
-                  'URL query parameters are logged by every proxy, load balancer, and browser history tool in the stack. The key appears in three separate server logs within 30 seconds. SECURITY INCIDENT — $6.1M average API breach cost.',
-                interaction: 'Consequence screen — Try Again',
+                  'URL query parameters are logged by every proxy, load balancer, and browser history tool in the stack. The key appears in three separate server logs within 30 seconds. SECURITY INCIDENT, $6.1M average API breach cost.',
+                interaction: 'Consequence screen, Try Again',
               },
               {
                 num: '5',
@@ -448,7 +448,7 @@ const metadata = {
                 title: 'Consequence: Key in Source Code',
                 content:
                   'Hard-coded credentials committed to the shared repo. One git push and the key is in version history forever. integrationScore +20.',
-                interaction: 'Warning screen — proceed with elevated integrationScore',
+                interaction: 'Warning screen, proceed with elevated integrationScore',
               },
               {
                 num: '6',
@@ -457,7 +457,7 @@ const metadata = {
                 title: 'Secure Header Auth',
                 content:
                   'Authorization: Bearer stored in an environment variable. Key never touches source code or URLs. Correct authentication pattern confirmed with security checklist.',
-                interaction: 'Confirmation screen — proceed',
+                interaction: 'Confirmation screen, proceed',
               },
               {
                 num: '7',
@@ -466,7 +466,7 @@ const metadata = {
                 title: 'Decision 2: Error Handling',
                 content:
                   "First test call returns a 500 Internal Server Error. Three choices: no error handling (assume it was a fluke), log errors but don't handle them, or implement try/catch with status code checks.",
-                interaction: 'Branching multiple choice — sets errorHandling + integrationScore',
+                interaction: 'Branching multiple choice, sets errorHandling + integrationScore',
               },
               {
                 num: '8',
@@ -474,8 +474,8 @@ const metadata = {
                 phaseColor: 'text-red-600 dark:text-red-400',
                 title: 'Consequence: Production Crash',
                 content:
-                  'No error handling means the next 500 crashes the entire checkout flow. Unhandled promise rejection takes down the pipeline. CRITICAL ERROR — 3 hours of downtime.',
-                interaction: 'Consequence screen — Try Again',
+                  'No error handling means the next 500 crashes the entire checkout flow. Unhandled promise rejection takes down the pipeline. CRITICAL ERROR, 3 hours of downtime.',
+                interaction: 'Consequence screen, Try Again',
               },
               {
                 num: '9',
@@ -484,7 +484,7 @@ const metadata = {
                 title: 'Resilient Error Handling',
                 content:
                   'Try/catch with specific status code checks: 401 triggers token refresh, 429 triggers backoff, 5xx triggers retry with limit. Integration stays stable under failure conditions.',
-                interaction: 'Confirmation screen — proceed',
+                interaction: 'Confirmation screen, proceed',
               },
               {
                 num: '10',
@@ -493,7 +493,7 @@ const metadata = {
                 title: 'Consequence: Silent Failure',
                 content:
                   'Errors are logged but not handled. The integration appears to work, but 12% of requests silently fail. Nobody knows until a user complains three days later.',
-                interaction: 'Warning screen — proceed with elevated integrationScore',
+                interaction: 'Warning screen, proceed with elevated integrationScore',
               },
               {
                 num: '11',
@@ -502,7 +502,7 @@ const metadata = {
                 title: 'Decision 3: Rate Limit Response',
                 content:
                   'The API returns a 429 Too Many Requests. Two choices: retry immediately in a loop until it succeeds, or implement exponential backoff with a Retry-After header check.',
-                interaction: 'Branching multiple choice — sets rateLimitStrategy + integrationScore',
+                interaction: 'Branching multiple choice, sets rateLimitStrategy + integrationScore',
               },
               {
                 num: '12',
@@ -511,7 +511,7 @@ const metadata = {
                 title: 'Exponential Backoff Implemented',
                 content:
                   'Retry-After header parsed, backoff intervals set at 1s, 2s, 4s. Pipeline stays within rate limits and integration passes API gateway validation.',
-                interaction: 'Confirmation screen — proceed to audit',
+                interaction: 'Confirmation screen, proceed to audit',
               },
               {
                 num: '13',
@@ -520,7 +520,7 @@ const metadata = {
                 title: 'Consequence: IP Banned',
                 content:
                   'Tight retry loop fires 300 requests in 10 seconds. API gateway flags the IP for abuse. Team is locked out of the payment API for 24 hours. integrationScore +25.',
-                interaction: 'Consequence screen — proceed to audit',
+                interaction: 'Consequence screen, proceed to audit',
               },
               {
                 num: '14',
@@ -528,8 +528,8 @@ const metadata = {
                 phaseColor: 'text-orange-600 dark:text-orange-400',
                 title: 'API Integration Audit Report',
                 content:
-                  "JavaScript reads all four variables and generates a personalized report — color-coded production risk rating, decision log, security assessment, and recommended remediation steps based on the developer's exact decision path.",
-                interaction: 'JavaScript trigger — dynamic output',
+                  "JavaScript reads all four variables and generates a personalized report, color-coded production risk rating, decision log, security assessment, and recommended remediation steps based on the developer's exact decision path.",
+                interaction: 'JavaScript trigger, dynamic output',
               },
             ].map(({ num, phase, phaseColor, title, content, interaction }) => (
               <tr class="bg-white dark:bg-gray-900 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
@@ -553,7 +553,7 @@ const metadata = {
       <h2 class="text-4xl md:text-5xl font-bold tracking-tighter font-heading">Variables + JavaScript</h2>
       <p class="text-lg text-muted mt-4 max-w-2xl mx-auto">
         Four Storyline variables track every decision. A custom JavaScript trigger reads them at the end and generates a
-        dynamic API Integration Audit Report — no two developers see the same output.
+        dynamic API Integration Audit Report, no two developers see the same output.
       </p>
     </div>
     <div class="overflow-x-auto rounded-lg border border-gray-200 dark:border-gray-700 shadow-sm mb-8">
@@ -591,7 +591,7 @@ const metadata = {
                 name: 'integrationScore',
                 type: 'Number',
                 default: '0',
-                tracks: 'Cumulative risk score — increments at each suboptimal decision',
+                tracks: 'Cumulative risk score, increments at each suboptimal decision',
               },
             ].map(({ name, type, default: def, tracks }) => (
               <tr class="bg-white dark:bg-gray-900 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
@@ -606,7 +606,7 @@ const metadata = {
       </table>
     </div>
     <div class="rounded-lg border border-gray-200 dark:border-gray-700 bg-gray-900 p-6">
-      <p class="text-xs text-gray-400 font-mono mb-3">// Audit Report trigger — fires on Slide 14 timeline start</p>
+      <p class="text-xs text-gray-400 font-mono mb-3">// Audit Report trigger, fires on Slide 14 timeline start</p>
       <pre
         class="text-sm text-green-400 font-mono overflow-x-auto"><code>{`const player = GetPlayer();
 const auth = player.GetVar("authMethod");
@@ -626,7 +626,7 @@ const score = player.GetVar("integrationScore");
       </p>
       <h2 class="text-4xl md:text-5xl font-bold tracking-tighter font-heading">Full ID Process. Documented.</h2>
       <p class="text-lg text-muted mt-4 max-w-2xl mx-auto">
-        This project follows a complete instructional design process — analysis through evaluation. Download the
+        This project follows a complete instructional design process, analysis through evaluation. Download the
         artifacts below.
       </p>
     </div>
@@ -735,8 +735,8 @@ const score = player.GetVar("integrationScore");
           <li class="flex gap-3">
             <span class="text-accent font-bold mt-0.5">01</span>
             <p>
-              Completed a full end-to-end portfolio piece targeting developer audiences — needs analysis through
-              deployed Storyline module — demonstrating technical ID capability beyond HR and compliance content.
+              Completed a full end-to-end portfolio piece targeting developer audiences, needs analysis through
+              deployed Storyline module, demonstrating technical ID capability beyond HR and compliance content.
             </p>
           </li>
           <li class="flex gap-3">
@@ -756,7 +756,7 @@ const score = player.GetVar("integrationScore");
           <li class="flex gap-3">
             <span class="text-accent font-bold mt-0.5">04</span>
             <p>
-              Module directly addresses the developer onboarding gap identified in CapeTalent technical assessment —
+              Module directly addresses the developer onboarding gap identified in CapeTalent technical assessment, 
               moving from documentation-first to decision-practice-first learning design.
             </p>
           </li>
@@ -768,7 +768,7 @@ const score = player.GetVar("integrationScore");
           <li class="flex gap-3">
             <span class="text-accent font-bold mt-0.5">01</span>
             <p>
-              Developer audiences respond to consequence realism at a technical level — the "key in logs" consequence
+              Developer audiences respond to consequence realism at a technical level, the "key in logs" consequence
               needed to be specific (which logs, how fast, what an attacker can do with it) to land as a real threat.
             </p>
           </li>
@@ -782,7 +782,7 @@ const score = player.GetVar("integrationScore");
           <li class="flex gap-3">
             <span class="text-accent font-bold mt-0.5">03</span>
             <p>
-              Next iteration would add a live code editor interaction on Decision 2 — learners write the actual
+              Next iteration would add a live code editor interaction on Decision 2, learners write the actual
               try/catch block rather than selecting from multiple choice options.
             </p>
           </li>

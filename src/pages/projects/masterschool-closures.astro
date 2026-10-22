@@ -8,18 +8,18 @@ import YouTubeEmbed from '~/components/widgets/YouTubeEmbed.astro';
 import RelatedContent from '~/components/widgets/RelatedContent.astro';
 
 const metadata = {
-  title: 'JavaScript Closures — Live Practice Session | Masterschool',
+  title: 'JavaScript Closures: Live Practice Session | Masterschool',
 };
 ---
 
 <Layout metadata={metadata}>
   <Hero tagline="Live Instruction · JavaScript · Closures · Masterschool">
     <Fragment slot="title">
-      JavaScript Closures —<br />
+      JavaScript Closures:<br />
       <span class="text-accent dark:text-white">Live Practice Session</span>
     </Fragment>
     <Fragment slot="subtitle">
-      Two live sessions working through JavaScript closures — from functions returning functions and the setTimeout loop
+      Two live sessions working through JavaScript closures, from functions returning functions and the setTimeout loop
       bug, to advanced stateful problems: a Hobby Tracker with cumulative cache and a Censor function that swaps words
       in any sentence. Audience participation throughout.
     </Fragment>
@@ -43,20 +43,20 @@ const metadata = {
     <Fragment slot="content">
       <p class="mb-4">
         Closures are one of those JavaScript concepts that students hear about constantly before they understand them.
-        The word shows up in interviews, documentation, and error messages — but until you write a few yourself and
+        The word shows up in interviews, documentation, and error messages, but until you write a few yourself and
         watch them work, the mental model doesn't stick. These two sessions were built around doing exactly that:
         writing closures live, together, with increasing complexity, and pausing to explain what was actually happening
         at each step.
       </p>
       <p class="mb-4">
         The first session started with the simplest possible closure and progressed through DOM events and the classic
-        setTimeout loop bug. The second session went further — two open gym problems that required closures to do real
+        setTimeout loop bug. The second session went further, two open gym problems that required closures to do real
         stateful work: a Hobby Tracker that accumulates hours per hobby in a cache object and resets on demand, and a
         Censor function that stores word replacement pairs and swaps them in any sentence using Object.keys() and
         String.replace().
       </p>
       <p>
-        Students participated via chat throughout — raising their hands, asking questions about syntax, and testing the
+        Students participated via chat throughout, raising their hands, asking questions about syntax, and testing the
         code live. The first session ran with the Pomodoro technique; the second was open gym format with two structured
         problems.
       </p>
@@ -70,53 +70,53 @@ const metadata = {
   <Features3
     tagline="The Content"
     title="What the sessions covered"
-    subtitle="Six live coding problems across two sessions — from basic closures to stateful cache objects and string replacement."
+    subtitle="Six live coding problems across two sessions: from basic closures to stateful cache objects and string replacement."
     columns={3}
     items={[
       {
         title: 'First-Class Functions',
         description:
-          'Established the conceptual foundation — in JavaScript, functions can accept other functions as parameters or return them as results. Used the term "first-class functions" and connected it to why closures are possible in the first place.',
+          'Established the conceptual foundation, in JavaScript, functions can accept other functions as parameters or return them as results. Used the term "first-class functions" and connected it to why closures are possible in the first place.',
         icon: 'tabler:function',
       },
       {
         title: 'Closures: Return a Function',
         description:
-          'Started with the simplest closure — a function that creates and returns another function that returns "hello world." Walked through the syntax live with student input, then called and logged the result to confirm it worked.',
+          'Started with the simplest closure, a function that creates and returns another function that returns "hello world." Walked through the syntax live with student input, then called and logged the result to confirm it worked.',
         icon: 'tabler:box',
       },
       {
         title: 'Closures with Input',
         description:
-          "Extended the first example to accept a string argument — showing how the inner function retains access to the outer function's scope even after the outer function has returned. The core mechanic of closures made visible.",
+          "Extended the first example to accept a string argument, showing how the inner function retains access to the outer function's scope even after the outer function has returned. The core mechanic of closures made visible.",
         icon: 'tabler:variable',
       },
       {
         title: 'DOM Manipulation with Closures',
         description:
-          'Wired closures to click events to change font size dynamically — toggling between sizes 24, 44, and 56 — demonstrating how closures can remember and manage state in a real browser context.',
+          'Wired closures to click events to change font size dynamically, toggling between sizes 24, 44, and 56, demonstrating how closures can remember and manage state in a real browser context.',
         icon: 'tabler:click',
       },
       {
         title: 'The setTimeout Loop Bug',
         description:
-          'Demonstrated the classic setTimeout loop problem — where every iteration logs the same value because the loop finishes before the callbacks fire. Fixed it first with a closure, then refactored to an IIFE and explained the difference.',
+          'Demonstrated the classic setTimeout loop problem, where every iteration logs the same value because the loop finishes before the callbacks fire. Fixed it first with a closure, then refactored to an IIFE and explained the difference.',
         icon: 'tabler:clock',
       },
       {
         title: 'Lexical Environment & IIFEs',
         description:
-          'Explained lexical environment in plain terms — the inner function captures the value of i at the moment the outer function runs, not when the callback fires. Connected IIFEs as an alternative syntax for encapsulating that scope.',
+          'Explained lexical environment in plain terms, the inner function captures the value of i at the moment the outer function runs, not when the callback fires. Connected IIFEs as an alternative syntax for encapsulating that scope.',
         icon: 'tabler:layers-intersect',
       },
       {
-        title: 'Hobby Tracker — Cache & Accumulation',
+        title: 'Hobby Tracker: Cache & Accumulation',
         description:
           'Built a closure that takes an array of hobbies, initializes a cache object with each as a key set to zero, and returns a function that accumulates hours per hobby. Calling it with no arguments resets all values and returns a confirmation string.',
         icon: 'tabler:chart-bar',
       },
       {
-        title: 'Censor — Stored Replacement Pairs',
+        title: 'Censor: Stored Replacement Pairs',
         description:
           'Built a closure that stores word replacement pairs (dogs→cats, quick→slow) in an internal object. When called with a sentence, it loops through stored keys using Object.keys() and forEach, applying String.replace() for each pair.',
         icon: 'tabler:replace',
@@ -124,7 +124,7 @@ const metadata = {
       {
         title: 'Stateful Closures in Practice',
         description:
-          'Both problems in the second session demonstrated the same core pattern — a closure holding onto private state (a cache object) that persists across multiple calls. The inner function reads and mutates that state without exposing it.',
+          'Both problems in the second session demonstrated the same core pattern, a closure holding onto private state (a cache object) that persists across multiple calls. The inner function reads and mutates that state without exposing it.',
         icon: 'tabler:lock',
       },
     ]}
@@ -158,24 +158,24 @@ const metadata = {
     <Fragment slot="content">
       <p class="mb-4">
         The session was deliberately structured to build toward complexity rather than introduce it all at once.
-        Closures are easy to define and hard to internalize — the definition ("a function that retains access to its
+        Closures are easy to define and hard to internalize, the definition ("a function that retains access to its
         outer scope") doesn't land until you've seen the behavior. Starting with the simplest possible example and then
         asking students to predict what happens next gives the concept somewhere to attach.
       </p>
       <p class="mb-4">
         Student participation was built into the structure. Instead of walking through each solution, I read out the
         problem, gave students time to think, and invited responses via chat and raised hands. When a student started
-        answering correctly — "create function, parentheses, curly braces" — I coded exactly what they said, live, which
+        answering correctly, "create function, parentheses, curly braces", I coded exactly what they said, live, which
         kept the session collaborative rather than a lecture.
       </p>
       <p class="mb-4">
         The setTimeout example is the most important one in the set. It's the problem that makes closures click for most
-        students because it's a real bug that has a real consequence — and fixing it requires understanding what
+        students because it's a real bug that has a real consequence, and fixing it requires understanding what
         closures actually do. Walking through the broken version first, then diagnosing it, then fixing it with a
         closure, and then refactoring to an IIFE gives students three different views of the same concept.
       </p>
       <p>
-        The session closed with a look ahead — upcoming sessions would include a test suite so students could work
+        The session closed with a look ahead, upcoming sessions would include a test suite so students could work
         through problems in pairs and verify their own solutions, moving the format closer to a workshop.
       </p>
     </Fragment>
@@ -188,28 +188,28 @@ const metadata = {
   <div class="max-w-4xl mx-auto px-4 md:px-8 py-12 md:py-16">
     <div class="text-center mb-8">
       <p class="text-base text-secondary dark:text-blue-200 font-bold tracking-wide uppercase mb-2">
-        Session Recording — Part 1
+        Session Recording, Part 1
       </p>
       <h2 class="text-4xl md:text-5xl font-bold tracking-tighter font-heading">First-Class Functions to setTimeout</h2>
       <p class="text-lg text-muted mt-4">
         Basic closures, DOM events, and fixing the classic setTimeout loop bug with closures and IIFEs.
       </p>
     </div>
-    <YouTubeEmbed id="W3NOCVTVrZM" title="JavaScript Closures — Live Practice Session Part 1 | Masterschool" />
+    <YouTubeEmbed id="W3NOCVTVrZM" title="JavaScript Closures: Live Practice Session Part 1 | Masterschool" />
   </div>
 
   <!-- Video Part 2 -->
   <div class="max-w-4xl mx-auto px-4 md:px-8 pb-12 md:pb-16">
     <div class="text-center mb-8">
       <p class="text-base text-secondary dark:text-blue-200 font-bold tracking-wide uppercase mb-2">
-        Session Recording — Part 2
+        Session Recording, Part 2
       </p>
       <h2 class="text-4xl md:text-5xl font-bold tracking-tighter font-heading">Hobby Tracker & Censor</h2>
       <p class="text-lg text-muted mt-4">
-        Two advanced open gym problems — stateful cache objects and string replacement with stored closure pairs.
+        Two advanced open gym problems, stateful cache objects and string replacement with stored closure pairs.
       </p>
     </div>
-    <YouTubeEmbed id="1rkITJKaYfA" title="JavaScript Closures — Hobby Tracker & Censor | Masterschool Open Gym" />
+    <YouTubeEmbed id="1rkITJKaYfA" title="JavaScript Closures: Hobby Tracker & Censor | Masterschool Open Gym" />
   </div>
 
   <!-- Reflection -->
@@ -229,13 +229,13 @@ const metadata = {
     </Fragment>
     <Fragment slot="content">
       <p class="mb-4">
-        The pattern I kept coming back to in this session — show the broken version before the fix — is one of the most
+        The pattern I kept coming back to in this session, show the broken version before the fix, is one of the most
         effective things you can do when teaching a concept that's easy to memorize and hard to understand. If students
         only ever see working closure code, they don't develop an intuition for why closures exist. The setTimeout bug
         is a perfect teaching case because the broken behavior is surprising and the fix is satisfying.
       </p>
       <p class="mb-4">
-        What this session reinforced is that closures aren't really a single concept — they're a cluster of related
+        What this session reinforced is that closures aren't really a single concept, they're a cluster of related
         ideas (scope, first-class functions, lexical environment, IIFE syntax) that only make sense together.
         Introducing them through a sequence of problems, rather than a definition followed by examples, lets students
         build the mental model piece by piece.
@@ -274,9 +274,9 @@ const metadata = {
     items={[
       {
         tagline: '1:1 Practice Session',
-        title: 'JavaScript Closures — One-on-One Practice Session',
+        title: 'JavaScript Closures: One-on-One Practice Session',
         description:
-          'Six closure exercises worked through live in a 1:1 session: createFunction, createFunctionWithInput, counter instances, addByX, saveOutput with password gating, and deDup — including a real debugging moment mid-session.',
+          'Six closure exercises worked through live in a 1:1 session: createFunction, createFunctionWithInput, counter instances, addByX, saveOutput with password gating, and deDup, including a real debugging moment mid-session.',
         href: '/projects/masterschool-closures-practice',
       },
     ]}
