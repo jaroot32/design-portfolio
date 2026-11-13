@@ -232,22 +232,32 @@ const devOnlyIdItems = import.meta.env.DEV
         <a
           href="#elearning"
           class="inline-block bg-accent/25 text-accent hover:bg-accent hover:text-white text-sm font-semibold px-4 py-2 rounded-md transition-colors duration-200"
-          >eLearning &amp; Design Work</a
+          >eLearning</a
+        >
+        <a
+          href="#design-documents"
+          class="inline-block bg-accent/25 text-accent hover:bg-accent hover:text-white text-sm font-semibold px-4 py-2 rounded-md transition-colors duration-200"
+          >Design Documents</a
+        >
+        <a
+          href="#microlearning"
+          class="inline-block bg-accent/25 text-accent hover:bg-accent hover:text-white text-sm font-semibold px-4 py-2 rounded-md transition-colors duration-200"
+          >Microlearning</a
+        >
+        <a
+          href="#technical-builds"
+          class="inline-block bg-accent/25 text-accent hover:bg-accent hover:text-white text-sm font-semibold px-4 py-2 rounded-md transition-colors duration-200"
+          >Technical &amp; AI Builds</a
         >
         <a
           href="#live-instruction"
           class="inline-block bg-accent/25 text-accent hover:bg-accent hover:text-white text-sm font-semibold px-4 py-2 rounded-md transition-colors duration-200"
-          >Remote Live Instruction</a
+          >Live Instruction</a
         >
         <a
           href="#teaching"
           class="inline-block bg-accent/25 text-accent hover:bg-accent hover:text-white text-sm font-semibold px-4 py-2 rounded-md transition-colors duration-200"
-          >Teaching & Instruction</a
-        >
-        <a
-          href="#one-on-one"
-          class="inline-block bg-accent/25 text-accent hover:bg-accent hover:text-white text-sm font-semibold px-4 py-2 rounded-md transition-colors duration-200"
-          >One on One Skills Training</a
+          >Teaching &amp; Mentoring</a
         >
         <a
           href="#speaking"
@@ -294,23 +304,18 @@ const devOnlyIdItems = import.meta.env.DEV
         class="section-spy-btn inline-block border border-gray-400 dark:border-gray-500 text-gray-600 dark:text-gray-400 text-xs font-medium px-3 py-1 rounded-md transition-colors duration-200"
         >Technical & AI Builds</a
       >
+      <span class="hidden sm:inline-block w-px h-5 bg-gray-300 dark:bg-gray-600 self-center mx-1" aria-hidden="true"></span>
       <a
         data-section="live-instruction"
         href="#live-instruction"
         class="section-spy-btn inline-block border border-gray-400 dark:border-gray-500 text-gray-600 dark:text-gray-400 text-xs font-medium px-3 py-1 rounded-md transition-colors duration-200"
-        >Remote Live Instruction</a
+        >Live Instruction</a
       >
       <a
         data-section="teaching"
         href="#teaching"
         class="section-spy-btn inline-block border border-gray-400 dark:border-gray-500 text-gray-600 dark:text-gray-400 text-xs font-medium px-3 py-1 rounded-md transition-colors duration-200"
-        >Teaching & Instruction</a
-      >
-      <a
-        data-section="one-on-one"
-        href="#one-on-one"
-        class="section-spy-btn inline-block border border-gray-400 dark:border-gray-500 text-gray-600 dark:text-gray-400 text-xs font-medium px-3 py-1 rounded-md transition-colors duration-200"
-        >One on One Skills Training</a
+        >Teaching &amp; Mentoring</a
       >
       <a
         data-section="speaking"
@@ -573,11 +578,20 @@ const devOnlyIdItems = import.meta.env.DEV
     ]}
   />
 
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 pt-12 pb-2">
+    <div class="text-center border-t border-gray-200 dark:border-gray-700 pt-10">
+      <p class="text-sm font-bold uppercase tracking-widest text-accent mb-2">Teaching and background</p>
+      <p class="text-muted text-lg max-w-2xl mx-auto">
+        Live teaching, mentoring, speaking, and graduate work that sit behind the design projects above.
+      </p>
+    </div>
+  </section>
+
   <div id="live-instruction"></div>
   <section class="max-w-7xl mx-auto px-4 sm:px-6 py-12 md:py-16">
     <div class="mb-8 text-center">
       <p class="text-sm font-bold uppercase tracking-widest text-accent mb-2">Masterschool · Udacity Curriculum</p>
-      <h2 class="text-3xl md:text-4xl font-bold font-heading tracking-tighter">Remote Live Instruction</h2>
+      <h2 class="text-3xl md:text-4xl font-bold font-heading tracking-tighter">Live Instruction</h2>
       <p class="text-muted mt-3 text-lg max-w-2xl mx-auto">
         22 recorded sessions taught live to international bootcamp cohorts. A few that go deepest on technical
         practice:
@@ -786,7 +800,7 @@ const devOnlyIdItems = import.meta.env.DEV
   <script>
     function initScrollspy() {
       const stickyNav = document.getElementById('section-nav') as HTMLElement | null;
-      const sectionIds = ['elearning', 'design-documents', 'microlearning', 'technical-builds', 'live-instruction', 'teaching', 'one-on-one', 'speaking', 'graduate-work'];
+      const sectionIds = ['elearning', 'design-documents', 'microlearning', 'technical-builds', 'live-instruction', 'teaching', 'speaking', 'graduate-work'];
       const heroThreshold = 320;
 
       // Position below the sticky header (including the progress bar at its bottom)
