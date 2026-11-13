@@ -250,19 +250,9 @@ const devOnlyIdItems = import.meta.env.DEV
           >Technical &amp; AI Builds</a
         >
         <a
-          href="#live-instruction"
+          href="#teaching-background"
           class="inline-block bg-accent/25 text-accent hover:bg-accent hover:text-white text-sm font-semibold px-4 py-2 rounded-md transition-colors duration-200"
-          >Live Instruction</a
-        >
-        <a
-          href="#teaching"
-          class="inline-block bg-accent/25 text-accent hover:bg-accent hover:text-white text-sm font-semibold px-4 py-2 rounded-md transition-colors duration-200"
-          >Teaching &amp; Mentoring</a
-        >
-        <a
-          href="#speaking"
-          class="inline-block bg-accent/25 text-accent hover:bg-accent hover:text-white text-sm font-semibold px-4 py-2 rounded-md transition-colors duration-200"
-          >Speaking & Guest Expertise</a
+          >Teaching &amp; Background</a
         >
         <a
           href="#graduate-work"
@@ -306,22 +296,10 @@ const devOnlyIdItems = import.meta.env.DEV
       >
       <span class="hidden sm:inline-block w-px h-5 bg-gray-300 dark:bg-gray-600 self-center mx-1" aria-hidden="true"></span>
       <a
-        data-section="live-instruction"
-        href="#live-instruction"
+        data-section="teaching-background"
+        href="#teaching-background"
         class="section-spy-btn inline-block border border-gray-400 dark:border-gray-500 text-gray-600 dark:text-gray-400 text-xs font-medium px-3 py-1 rounded-md transition-colors duration-200"
-        >Live Instruction</a
-      >
-      <a
-        data-section="teaching"
-        href="#teaching"
-        class="section-spy-btn inline-block border border-gray-400 dark:border-gray-500 text-gray-600 dark:text-gray-400 text-xs font-medium px-3 py-1 rounded-md transition-colors duration-200"
-        >Teaching &amp; Mentoring</a
-      >
-      <a
-        data-section="speaking"
-        href="#speaking"
-        class="section-spy-btn inline-block border border-gray-400 dark:border-gray-500 text-gray-600 dark:text-gray-400 text-xs font-medium px-3 py-1 rounded-md transition-colors duration-200"
-        >Speaking & Guest Expertise</a
+        >Teaching &amp; Background</a
       >
       <a
         data-section="graduate-work"
@@ -578,14 +556,17 @@ const devOnlyIdItems = import.meta.env.DEV
     ]}
   />
 
-  <section class="max-w-7xl mx-auto px-4 sm:px-6 pt-12 pb-2">
-    <div class="text-center border-t border-gray-200 dark:border-gray-700 pt-10">
+  <details id="teaching-background" class="group border-t border-gray-200 dark:border-gray-700 mt-8">
+    <summary class="max-w-7xl mx-auto px-4 sm:px-6 py-8 cursor-pointer list-none text-center">
       <p class="text-sm font-bold uppercase tracking-widest text-accent mb-2">Teaching and background</p>
       <p class="text-muted text-lg max-w-2xl mx-auto">
-        Live teaching, mentoring, speaking, and graduate work that sit behind the design projects above.
+        Live teaching, mentoring, and speaking that sit behind the design projects above.
       </p>
-    </div>
-  </section>
+      <p class="mt-3 text-sm font-semibold text-accent">
+        <span class="group-open:hidden">Show teaching and background</span>
+        <span class="hidden group-open:inline">Hide teaching and background</span>
+      </p>
+    </summary>
 
   <div id="live-instruction"></div>
   <section class="max-w-7xl mx-auto px-4 sm:px-6 py-12 md:py-16">
@@ -720,6 +701,8 @@ const devOnlyIdItems = import.meta.env.DEV
     ]}
   />
 
+    </details>
+
   <div id="graduate-work"></div>
   <Features2
     title="Graduate Work: M.S. Learning Design & Technology"
@@ -750,8 +733,17 @@ const devOnlyIdItems = import.meta.env.DEV
   />
   <script>
     function initScrollspy() {
+      const teachingDetails = document.getElementById('teaching-background') as HTMLDetailsElement | null;
+      const openTeaching = () => {
+        if (teachingDetails) teachingDetails.open = true;
+      };
+      document.querySelectorAll('a[href="#teaching-background"]').forEach((a) => a.addEventListener('click', openTeaching));
+      window.addEventListener('hashchange', () => {
+        if (location.hash === '#teaching-background') openTeaching();
+      });
+      if (location.hash === '#teaching-background') openTeaching();
       const stickyNav = document.getElementById('section-nav') as HTMLElement | null;
-      const sectionIds = ['elearning', 'design-documents', 'microlearning', 'technical-builds', 'live-instruction', 'teaching', 'speaking', 'graduate-work'];
+      const sectionIds = ['elearning', 'design-documents', 'microlearning', 'technical-builds', 'teaching-background', 'graduate-work'];
       const heroThreshold = 320;
 
       // Position below the sticky header (including the progress bar at its bottom)
