@@ -230,9 +230,9 @@ const devOnlyIdItems = import.meta.env.DEV
       >
       <div class="flex flex-wrap justify-center gap-3 mt-8">
         <a
-          href="#instructional-design"
+          href="#elearning"
           class="inline-block bg-accent/25 text-accent hover:bg-accent hover:text-white text-sm font-semibold px-4 py-2 rounded-md transition-colors duration-200"
-          >Instructional Design & eLearning</a
+          >eLearning &amp; Design Work</a
         >
         <a
           href="#live-instruction"
@@ -271,10 +271,28 @@ const devOnlyIdItems = import.meta.env.DEV
   >
     <div class="max-w-7xl mx-auto px-4 sm:px-6 py-2 flex flex-wrap gap-2 justify-center">
       <a
-        data-section="instructional-design"
-        href="#instructional-design"
+        data-section="elearning"
+        href="#elearning"
         class="section-spy-btn inline-block border border-gray-400 dark:border-gray-500 text-gray-600 dark:text-gray-400 text-xs font-medium px-3 py-1 rounded-md transition-colors duration-200"
-        >Instructional Design & eLearning</a
+        >eLearning</a
+      >
+      <a
+        data-section="design-documents"
+        href="#design-documents"
+        class="section-spy-btn inline-block border border-gray-400 dark:border-gray-500 text-gray-600 dark:text-gray-400 text-xs font-medium px-3 py-1 rounded-md transition-colors duration-200"
+        >Design Documents</a
+      >
+      <a
+        data-section="microlearning"
+        href="#microlearning"
+        class="section-spy-btn inline-block border border-gray-400 dark:border-gray-500 text-gray-600 dark:text-gray-400 text-xs font-medium px-3 py-1 rounded-md transition-colors duration-200"
+        >Microlearning</a
+      >
+      <a
+        data-section="technical-builds"
+        href="#technical-builds"
+        class="section-spy-btn inline-block border border-gray-400 dark:border-gray-500 text-gray-600 dark:text-gray-400 text-xs font-medium px-3 py-1 rounded-md transition-colors duration-200"
+        >Technical & AI Builds</a
       >
       <a
         data-section="live-instruction"
@@ -459,9 +477,9 @@ const devOnlyIdItems = import.meta.env.DEV
     </div>
   </section>
 
-  <div id="instructional-design"></div>
+  <div id="elearning"></div>
   <Features2
-    title="Instructional Design & eLearning"
+    title="eLearning"
     columns={2}
     items={[
       {
@@ -479,33 +497,21 @@ const devOnlyIdItems = import.meta.env.DEV
         callToAction: { text: 'View Case Study', href: '/projects/healthcare-patient-journey' },
       },
       {
-        title: 'SME: Chegg Skills Web Development Certification',
-        description:
-          'An ongoing SME contract with LearningMate reviewing and validating course design documents, module manifests, scripts, storyboards, and assessments, for a Git and GitHub certification program at Chegg Skills, bringing both technical and instructional design judgment to content before it enters Rise 360 production.',
-        icon: 'tabler:git-branch',
-        callToAction: { text: 'View Case Study', href: '/projects/learningmate-chegg-skills-sme' },
-      },
-      {
-        title: 'How I Dealt with Travel Anxiety: Rumie Microlearning Byte',
-        description:
-          'A published microlearning Byte on Rumie-Learn, a free global OER platform reaching learners across 180+ countries. A 4-step, under-10-minute experience built for a mixed-literacy global audience and refined through a structured two-tier peer review process.',
-        icon: 'tabler:world',
-        callToAction: { text: 'View Project', href: '/projects/rumie-travel-anxiety-byte' },
-      },
-      {
-        title: 'How I Became a Better Listener in 3 Steps: Rumie Microlearning Byte',
-        description:
-          'My second published Byte on Rumie-Learn, a 3-step, under-5-minute soft-skill experience teaching active listening as practiced behavior, built with a problem-first hook, research-backed framing, and two spaced knowledge checks.',
-        icon: 'tabler:ear',
-        callToAction: { text: 'View Project', href: '/projects/rumie-better-listener-byte' },
-      },
-      {
         title: 'Work Smarter with Gemini: Rise 360 Portfolio Course',
         description:
           'A self-paced Rise 360 course built as a portfolio piece, a practical, focused guide to creating Gemini Gems for employees at a large health organization, developed after completing Gemini Gem creation training at LearningMate.',
         icon: 'tabler:sparkles',
         callToAction: { text: 'View Project', href: '/projects/gemini-rise-course' },
       },
+      ...devOnlyIdItems,
+    ]}
+  />
+
+  <div id="design-documents"></div>
+  <Features2
+    title="Design Documents & Storyboards"
+    columns={2}
+    items={[
       {
         title: 'Job Aid: Extending Storyline with JavaScript',
         description:
@@ -521,13 +527,49 @@ const devOnlyIdItems = import.meta.env.DEV
         callToAction: { text: 'View Job Aid', href: '/projects/ai-content-evaluation-framework' },
       },
       {
+        title: 'SME: Chegg Skills Web Development Certification',
+        description:
+          'An SME contract with LearningMate (Dec 2025 to Sep 2026) reviewing and validating course design documents, module manifests, scripts, storyboards, and assessments, for a Git and GitHub certification program at Chegg Skills, bringing both technical and instructional design judgment to content before it enters Rise 360 production.',
+        icon: 'tabler:git-branch',
+        callToAction: { text: 'View Case Study', href: '/projects/learningmate-chegg-skills-sme' },
+      },
+    ]}
+  />
+
+  <div id="microlearning"></div>
+  <Features2
+    title="Microlearning"
+    columns={2}
+    items={[
+      {
+        title: 'How I Dealt with Travel Anxiety: Rumie Microlearning Byte',
+        description:
+          'A published microlearning Byte on Rumie-Learn, a free global OER platform reaching learners across 180+ countries. A 4-step, under-10-minute experience built for a mixed-literacy global audience and refined through a structured two-tier peer review process.',
+        icon: 'tabler:world',
+        callToAction: { text: 'View Project', href: '/projects/rumie-travel-anxiety-byte' },
+      },
+      {
+        title: 'How I Became a Better Listener in 3 Steps: Rumie Microlearning Byte',
+        description:
+          'My second published Byte on Rumie-Learn, a 3-step, under-5-minute soft-skill experience teaching active listening as practiced behavior, built with a problem-first hook, research-backed framing, and two spaced knowledge checks.',
+        icon: 'tabler:ear',
+        callToAction: { text: 'View Project', href: '/projects/rumie-better-listener-byte' },
+      },
+    ]}
+  />
+
+  <div id="technical-builds"></div>
+  <Features2
+    title="Technical & AI Builds"
+    columns={2}
+    items={[
+      {
         title: 'Chrome Extension: Udacity Career Materials Reviewer',
         description:
           'A custom-built Chrome extension that cut average career materials review from about an hour per submission to roughly twenty minutes by automating repetitive form entry at Udacity.',
         icon: 'tabler:puzzle',
         callToAction: { text: 'View Case Study', href: '/projects/chrome-extension-udacity' },
       },
-      ...devOnlyIdItems,
     ]}
   />
 
@@ -744,7 +786,7 @@ const devOnlyIdItems = import.meta.env.DEV
   <script>
     function initScrollspy() {
       const stickyNav = document.getElementById('section-nav') as HTMLElement | null;
-      const sectionIds = ['instructional-design', 'live-instruction', 'teaching', 'one-on-one', 'speaking', 'graduate-work'];
+      const sectionIds = ['elearning', 'design-documents', 'microlearning', 'technical-builds', 'live-instruction', 'teaching', 'one-on-one', 'speaking', 'graduate-work'];
       const heroThreshold = 320;
 
       // Position below the sticky header (including the progress bar at its bottom)
