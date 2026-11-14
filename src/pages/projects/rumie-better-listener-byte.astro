@@ -1,6 +1,7 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
 import Hero from '~/components/widgets/Hero.astro';
+import TestimonialFull from '~/components/ui/TestimonialFull.astro';
 import Content from '~/components/widgets/Content.astro';
 import Features3 from '~/components/widgets/Features3.astro';
 
@@ -255,4 +256,12 @@ const metadata = {
       }
     </div>
   </div>
-</Layout>
+  <TestimonialFull
+    paragraphs={["I had the chance to supervise Jonathan for a few months at Rumie, a not-for-profit in the ed-tech space. As a content contributor, Jonathan authored \"Bytes\", short microlearning lessons on career and life skills for a global youth audience. Jonathan created engaging lessons on communication skills and stress management, providing valuable real-world techniques and strategies that our learners can put into practice immediately. His clear, efficient, and impactful writing is well-suited for modern learners.", "Jonathan was also highly professional in his approach to our peer review process. He worked hard to incorporate the feedback of his peers, while offering constructive and useful feedback to colleagues.", "I highly recommend Jonathan to any organization that requires an experienced hand to join their learning or content development teams."]}
+    name="Steve Birek"
+    title="eLearning Content Strategist"
+    context="Managed Jonathan directly at Rumie. LinkedIn recommendation, August 20, 2026."
+    url="https://www.linkedin.com/in/stevebirek/"
+  />
+
+  </Layout>
