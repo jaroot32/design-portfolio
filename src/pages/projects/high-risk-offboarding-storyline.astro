@@ -1,6 +1,7 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
 import Hero from '~/components/widgets/Hero.astro';
+import CaseStudyGlance from '~/components/ui/CaseStudyGlance.astro';
 import Content from '~/components/widgets/Content.astro';
 import Features3 from '~/components/widgets/Features3.astro';
 
@@ -20,6 +21,19 @@ const metadata = {
       objectives, content map, and a Storyline 360 branching scenario with custom JavaScript-generated audit reporting.
     </Fragment>
   </Hero>
+
+  <CaseStudyGlance
+    items={[
+      { label: 'Type', text: 'Branching scenario, Articulate Storyline 360 with custom JavaScript. Portfolio piece following the full design process.' },
+      { label: 'Audience', text: 'HR managers and HR business partners (primary); IT directors and security leads (secondary). Mid to senior level, self-paced, desktop browser.' },
+      { label: 'Business problem', text: 'A senior employee\'s termination opens a data security window and a legal liability window at the same time. Most training treats them as policy topics to memorize, not decisions to practice. A malicious insider breach averages $4.99 million and takes 292 days to contain (IBM Cost of a Data Breach Report 2024).', wide: true },
+      { label: 'Solution', text: 'A branching scenario with three decisions, tracked consequences, and a JavaScript-generated audit report that ties the choices to one financial exposure figure. Four learning objectives follow Bloom\'s Taxonomy: three at Application and one at Analysis.', wide: true },
+      { label: 'Evaluation plan', text: 'Kirkpatrick model, specified in the Design Document. Level 1: a confidence rating. Level 2: decision accuracy tracked with a riskScore variable (above 40 recommends remediation). Levels 3 and 4 are planned: a 30-day manager observation and reductions in breach incidents and wrongful termination claims.', wide: true },
+      { label: 'Status', text: 'Portfolio piece, not deployed to a learner population, so no Level 3 or Level 4 results exist.' },
+      { label: 'Tools', text: 'Articulate Storyline 360, JavaScript, NotebookLM, IBM and SHRM source material' },
+      { label: 'Deliverables', text: 'Live module, Design Document, Storyboard, and Style Guide (downloads below)', wide: true },
+    ]}
+  />
 
   <!-- Context -->
   <Content tagline="The Problem" title="One misstep costs millions: and most teams don't train for it" isReversed>

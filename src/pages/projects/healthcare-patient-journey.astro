@@ -1,6 +1,7 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
 import Hero from '~/components/widgets/Hero.astro';
+import CaseStudyGlance from '~/components/ui/CaseStudyGlance.astro';
 import Content from '~/components/widgets/Content.astro';
 import Features3 from '~/components/widgets/Features3.astro';
 import coverImage from '~/assets/images/Health_Journey-Cover.png';
@@ -22,6 +23,18 @@ const metadata = {
       JavaScript word game.
     </Fragment>
   </Hero>
+
+  <CaseStudyGlance
+    items={[
+      { label: 'Type', text: 'eLearning module, Articulate Storyline 360. Technical build.' },
+      { label: 'My role', text: 'Storyline developer. I built the course from a studio\'s design files and specification, and wrote the JavaScript that extended Storyline where the design needed more than it offers natively.' },
+      { label: 'The challenge', text: 'The designs called for interactions Storyline does not support natively (drop shadows, hover effects, true 3D card flips, an embedded game, and a ten-step journey map), while every interactive element had to stay a native, editable Storyline object.', wide: true },
+      { label: 'The solution', text: 'I rebuilt the designs to match the studio\'s design system, then extended Storyline with JavaScript through DOM selectors, GSAP loaded at runtime for the 3D flip, and a Web Object for the game. Variables bridge the custom code and Storyline triggers.', wide: true },
+      { label: 'Definition of done', text: 'A pixel-accurate match to the design files, every interactive element native and editable, delivered as a Review 360 link and a source file.', wide: true },
+      { label: 'Tools', text: 'Articulate Storyline 360, JavaScript, GSAP 3, ElevenLabs (AI narration)' },
+      { label: 'Deliverables', text: 'Storyline course, Review 360 link, source .story file, build-walkthrough video' },
+    ]}
+  />
 
   <!-- Context -->
   <Content tagline="The Brief" title="A studio-grade designer-to-developer handoff" isReversed>

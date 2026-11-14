@@ -1,6 +1,7 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
 import Hero from '~/components/widgets/Hero.astro';
+import CaseStudyGlance from '~/components/ui/CaseStudyGlance.astro';
 import Content from '~/components/widgets/Content.astro';
 import Features3 from '~/components/widgets/Features3.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
@@ -21,6 +22,20 @@ const metadata = {
       employees at a large health organization, developed after completing Gemini Gem creation training at LearningMate.
     </Fragment>
   </Hero>
+
+  <CaseStudyGlance
+    items={[
+      { label: 'Type', text: 'Self-paced eLearning course, Articulate Rise 360. Portfolio piece.' },
+      { label: 'My role', text: 'Instructional design, Rise 360 build, and content curation. Designed and built independently.' },
+      { label: 'Audience', text: 'Designed for employees at a large health organization: a compliance-aware workplace with a high documentation load and recurring administrative tasks.' },
+      { label: 'Business problem', text: 'General AI training teaches the whole tool without changing behavior. This course targets one behavior: building and using a Gemini Gem for a task the learner does every week.', wide: true },
+      { label: 'Solution', text: 'One tool, one use case, one real deliverable. Every lesson follows the same pattern (concept, interactive element, applied context, knowledge check), and the capstone asks learners to use their Gem on their own real work instead of taking a final quiz.', wide: true },
+      { label: 'Evaluation plan', text: 'Kirkpatrick model, planned if deployed (details below). Level 1 baseline target: 80% of learners rating their confidence at 4 out of 5 or higher.', wide: true },
+      { label: 'Status', text: 'Portfolio piece, not deployed inside an organization, so there are no Level 3 or Level 4 results.' },
+      { label: 'Tools', text: 'Articulate Rise 360, Google Gemini' },
+      { label: 'Deliverables', text: 'Self-paced Rise 360 course and evaluation plan' },
+    ]}
+  />
 
   <!-- Context -->
   <Content tagline="The Project" title="From internal training to portfolio artifact" isReversed>
