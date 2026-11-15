@@ -2,6 +2,7 @@
 import Layout from '~/layouts/PageLayout.astro';
 import Hero from '~/components/widgets/Hero.astro';
 import CaseStudyGlance from '~/components/ui/CaseStudyGlance.astro';
+import DocButtons from '~/components/ui/DocButtons.astro';
 import Content from '~/components/widgets/Content.astro';
 import Features3 from '~/components/widgets/Features3.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
@@ -33,7 +34,15 @@ const metadata = {
       { label: 'Evaluation plan', text: 'Kirkpatrick model, planned if deployed (details below). Level 1 baseline target: 80% of learners rating their confidence at 4 out of 5 or higher.', wide: true },
       { label: 'Status', text: 'Portfolio piece, not deployed inside an organization, so there are no Level 3 or Level 4 results.' },
       { label: 'Tools', text: 'Articulate Rise 360, Google Gemini' },
-      { label: 'Deliverables', text: 'Self-paced Rise 360 course and evaluation plan' },
+      { label: 'Deliverables', text: 'Self-paced Rise 360 course, evaluation plan, and a Design Document and Storyboard written after the build (downloads below)', wide: true },
+    ]}
+  />
+
+  <DocButtons
+    title="Design deliverables (written after the build)"
+    docs={[
+      { label: 'Design Document', href: '/docs/Work-Smarter-with-Gemini-Design-Document.docx' },
+      { label: 'Storyboard', href: '/docs/Work-Smarter-with-Gemini-Storyboard.docx' },
     ]}
   />
 
