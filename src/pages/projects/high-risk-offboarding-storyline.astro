@@ -2,6 +2,7 @@
 import Layout from '~/layouts/PageLayout.astro';
 import Hero from '~/components/widgets/Hero.astro';
 import CaseStudyGlance from '~/components/ui/CaseStudyGlance.astro';
+import DocButtons from '~/components/ui/DocButtons.astro';
 import Content from '~/components/widgets/Content.astro';
 import Features3 from '~/components/widgets/Features3.astro';
 
@@ -32,6 +33,14 @@ const metadata = {
       { label: 'Status', text: 'Portfolio piece, not deployed to a learner population, so no Level 3 or Level 4 results exist.' },
       { label: 'Tools', text: 'Articulate Storyline 360, JavaScript, NotebookLM, IBM and SHRM source material' },
       { label: 'Deliverables', text: 'Live module, Design Document, Storyboard, and Style Guide (downloads below)', wide: true },
+    ]}
+  />
+
+  <DocButtons
+    docs={[
+      { label: 'Design Document', href: '/docs/High-Risk-Offboarding-Design-Document.docx' },
+      { label: 'Storyboard', href: '/docs/High-Risk-Offboarding-Storyboard.docx' },
+      { label: 'Style Guide', href: '/docs/High-Risk-Offboarding-Style-Guide.docx' },
     ]}
   />
 

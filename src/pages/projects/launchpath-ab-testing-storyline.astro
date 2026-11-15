@@ -3,6 +3,7 @@ import Layout from '~/layouts/PageLayout.astro';
 import Hero from '~/components/widgets/Hero.astro';
 import Content from '~/components/widgets/Content.astro';
 import Features3 from '~/components/widgets/Features3.astro';
+import DocButtons from '~/components/ui/DocButtons.astro';
 
 const metadata = {
   title: 'The Enrollment Drop-Off Problem: Storyline Branching Scenario',
@@ -20,6 +21,14 @@ const metadata = {
       objectives, storyboard, and a Storyline 360 branching scenario built around A/B testing with GrowthBook SDK.
     </Fragment>
   </Hero>
+
+  <DocButtons
+    docs={[
+      { label: 'Design Document', href: '/docs/Enrollment-Drop-Off-Design-Document.docx' },
+      { label: 'Storyboard', href: '/docs/Enrollment-Drop-Off-Storyboard.docx' },
+      { label: 'Style Guide', href: '/docs/Enrollment-Drop-Off-Style-Guide.docx' },
+    ]}
+  />
 
   <!-- Context -->
   <Content tagline="The Problem" title="34% of learners never complete enrollment" isReversed>
