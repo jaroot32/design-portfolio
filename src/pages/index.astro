@@ -114,29 +114,6 @@ const metadata = {
   <!-- Featured Project -->
   <div id="featured" class="py-16 md:py-20 scroll-mt-20">
     <div class="mx-auto max-w-7xl px-4 md:px-8">
-      <div class="mb-14">
-        <div class="text-center mb-6">
-          <p class="text-base text-secondary dark:text-blue-200 font-bold tracking-wide uppercase mb-2">Hiring managers, start here</p>
-          <h2 class="text-2xl md:text-3xl font-bold tracking-tighter font-heading">Three pieces, three skills</h2>
-        </div>
-        <div class="grid md:grid-cols-3 gap-6">
-          <a href="/projects/healthcare-patient-journey" class="group flex flex-col p-6 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-accent dark:hover:border-accent transition-all duration-200">
-            <h3 class="text-base font-bold font-heading mb-2 group-hover:text-accent transition-colors duration-200">A Healthcare Patient Journey</h3>
-            <p class="text-sm text-muted leading-relaxed flex-1"><strong>Technical build.</strong> A Storyline course with custom JavaScript, GSAP animation, and an embedded game.</p>
-            <span class="mt-4 text-sm font-medium text-accent">View case study &rarr;</span>
-          </a>
-          <a href="/projects/high-risk-offboarding-storyline" class="group flex flex-col p-6 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-accent dark:hover:border-accent transition-all duration-200">
-            <h3 class="text-base font-bold font-heading mb-2 group-hover:text-accent transition-colors duration-200">The High-Risk Offboarding</h3>
-            <p class="text-sm text-muted leading-relaxed flex-1"><strong>Design process.</strong> Needs analysis, branching decisions, and a personalized audit report.</p>
-            <span class="mt-4 text-sm font-medium text-accent">View case study &rarr;</span>
-          </a>
-          <a href="/projects/chrome-extension-udacity" class="group flex flex-col p-6 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-accent dark:hover:border-accent transition-all duration-200">
-            <h3 class="text-base font-bold font-heading mb-2 group-hover:text-accent transition-colors duration-200">Chrome Extension, Udacity</h3>
-            <p class="text-sm text-muted leading-relaxed flex-1"><strong>Tools that save time.</strong> Cut a recurring review from about an hour to about 20 minutes, later adopted platform-wide.</p>
-            <span class="mt-4 text-sm font-medium text-accent">View case study &rarr;</span>
-          </a>
-        </div>
-      </div>
       <TestimonialQuotes
         items={[
       {"quote": "...the recordings were so on-point that, even with a demanding project schedule, I rarely had to spend much time reviewing them or asking for changes.", "name": "Turna Bakshi", "title": "Instructional Designer", "context": "Worked with Jonathan on the same team at LearningMate. LinkedIn recommendation, September 30, 2026.", "url": "https://www.linkedin.com/in/turna-bakshi-187741207/"},
@@ -403,42 +380,6 @@ const metadata = {
     </div>
   </div>
 
-  <!-- Why Technical Learning -->
-  <div class="mx-auto max-w-7xl px-4 md:px-8 py-12 md:py-16 border-t border-gray-200 dark:border-gray-800">
-    <div class="text-center max-w-2xl mx-auto mb-12">
-      <h2 class="text-3xl md:text-4xl font-bold font-heading mb-4 text-gray-900 dark:text-white">
-        Why technical learning?
-      </h2>
-      <p class="text-lg text-gray-700 dark:text-gray-300">
-        I started in software development and spent years teaching people how to build software. Today, I bring
-        that technical depth into instructional design.
-      </p>
-    </div>
-    <div class="grid md:grid-cols-3 gap-8">
-      {
-        [
-          {
-            title: 'I understand the technology',
-            body: 'APIs, JavaScript, developer tools, software workflows, web technologies.',
-          },
-          {
-            title: 'I understand the learner',
-            body: '8+ years working with career changers, developers, college students, and working professionals.',
-          },
-          {
-            title: 'I can build the experience',
-            body: 'Rise, Storyline, JavaScript, video, interactive web experiences.',
-          },
-        ].map(({ title, body }) => (
-          <div class="text-center md:text-left">
-            <h3 class="text-lg font-bold font-heading mb-2 text-gray-900 dark:text-white">{title}</h3>
-            <p class="text-base text-gray-700 dark:text-gray-300">{body}</p>
-          </div>
-        ))
-      }
-    </div>
-  </div>
-
   <!-- Areas of Expertise -->
   <Features3
     tagline="Skill Set"
@@ -469,36 +410,6 @@ const metadata = {
         description:
           'Applying WCAG standards and Universal Design for Learning principles across all instructional materials.',
         icon: 'tabler:accessible',
-      },
-    ]}
-  />
-
-  <!-- Organizations: Technical Education & Mentorship era -->
-  <Features3
-    tagline="2018–2025 · Technical Education & Mentorship"
-    title="Organizations I've Worked With"
-    subtitle="8+ years teaching the web to career changers, college students, and working professionals."
-    columns={3}
-    items={[
-      {
-        title: 'Udacity',
-        description: 'Web development mentorship and project feedback for career-track learners.',
-        icon: 'tabler:certificate',
-      },
-      {
-        title: 'Springboard',
-        description: 'One-on-one mentorship and curriculum support for tech career changers.',
-        icon: 'tabler:headset',
-      },
-      {
-        title: 'OpenClassrooms',
-        description: 'Jury Member evaluating student project defenses for online degree programs.',
-        icon: 'tabler:gavel',
-      },
-      {
-        title: 'Tacoma Community College',
-        description: 'Web development and technology instruction in a community college setting.',
-        icon: 'tabler:school',
       },
     ]}
   />
