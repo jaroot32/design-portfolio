@@ -73,15 +73,6 @@ export const liveInstruction = [
     group: 'open-gym',
   },
   {
-    icon: 'tabler:user',
-    title: 'JavaScript Closures: One-on-One Practice Session | Masterschool',
-    description:
-      'A one-on-one Masterschool session working through six closure practice problems live: createFunction, createFunctionWithInput, a counter with separate IIFE instances, addByX, the complex saveOutput cache with password gating, and deDup with a live debugging moment.',
-    href: '/projects/masterschool-closures-practice',
-    tags: ['javascript'],
-    group: 'open-gym',
-  },
-  {
     icon: 'tabler:bolt',
     title: 'ES6 Features Open Gym: Masterschool',
     description:
